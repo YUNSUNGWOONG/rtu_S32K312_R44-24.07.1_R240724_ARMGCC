@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="6b531b4a-9359-4b53-b982-5d0cd4be1a77">
+      <SHORT-NAME>Bsw_Crc</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="543279aa-8f8e-46f4-b6e4-0eca91f0b5a2">
+          <SHORT-NAME>BswImplementation_Crc</SHORT-NAME>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>1.0.3</SW-VERSION>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_Crc/BswModuleDescription_Crc/BswInternalBehavior_Crc</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION UUID="398f7422-03f0-427b-a05c-66df688b848d">
+          <SHORT-NAME>BswModuleDescription_Crc</SHORT-NAME>
+          <CATEGORY>BSW_MODULE</CATEGORY>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="_conversion">
+                <SDG GID="IMPLEMENTED-ENTRYS">
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_Crc/Crc_CalculateCRC16</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed">
+					</SD>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_Crc/Crc_CalculateCRC16ARC</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed">
+					</SD>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_Crc/Crc_CalculateCRC32</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed">
+					</SD>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_Crc/Crc_CalculateCRC32P4</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed">
+					</SD>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_Crc/Crc_CalculateCRC64</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed">
+					</SD>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_Crc/Crc_CalculateCRC8</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed">
+					</SD>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_Crc/Crc_CalculateCRC8H2F</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed">
+					</SD>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_Crc/Crc_GetVersionInfo</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed">
+					</SD>
+                  </SDG>
+                  <SD GID="_mixed">
+				  </SD>
+                </SDG>
+                <SD GID="_path">IMPLEMENTED-ENTRYS@3/</SD>
+                <SD GID="_target">org.artop.aal.autosar430</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <MODULE-ID>201</MODULE-ID>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR UUID="cc268162-b923-407b-90ba-15c687c55848">
+              <SHORT-NAME>BswInternalBehavior_Crc</SHORT-NAME>
+              <DISTINGUISHED-PARTITIONS>
+                <BSW-DISTINGUISHED-PARTITION>
+                  <SHORT-NAME>BswDistinguishedPartition_Crc</SHORT-NAME>
+                </BSW-DISTINGUISHED-PARTITION>
+              </DISTINGUISHED-PARTITIONS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crc_CalculateCRC16</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crc_CalculateCRC16</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This service makes a CRC16 calculation on Crc_Length data bytes.</L-2>
+          </DESC>
+          <!--ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="BSW-ENTRY-KIND"><SD GID="_mixed">CONCRETE</SD></SDG><SD GID="_path">BSW-ENTRY-KIND@10/</SD><SD GID="_target">org.artop.aal.autosar430</SD></SDG></SDGS></ADMIN-DATA><SERVICE-ID>0x02</SERVICE-ID-->
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          
+          <RETURN-TYPE>
+            <SHORT-NAME>uint16</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_DataPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_DataPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to start address of data block to be calculated.</L-2>
+              </DESC>
+              <CATEGORY>DATA_REFERENCE</CATEGORY>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-POINTER-TARGET-PROPS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-POINTER-TARGET-PROPS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_Length</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_Length</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Length of data block to be calculated in bytes.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_StartValue16</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_StartValue16</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Start value when the algorithm starts.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_IsFirstCall</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_IsFirstCall</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">TRUE: First call in a sequence or individual CRC calculation; start from initial value, ignore Crc_StartValue16.
+	FALSE: Subsequent call in a call sequence; Crc_StartValue16 is interpreted to be the return value of the previous function call.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crc_CalculateCRC16ARC</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crc_CalculateCRC16ARC</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This service makes a CRC16 calculation on Crc_Length data bytes, using the polynomial 0x8005.</L-2>
+          </DESC>
+          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="BSW-ENTRY-KIND"><SD GID="_mixed">CONCRETE</SD></SDG><SD GID="_path">BSW-ENTRY-KIND@10/</SD><SD GID="_target">org.artop.aal.autosar430</SD></SDG></SDGS></ADMIN-DATA><SERVICE-ID>0x08</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          
+          <RETURN-TYPE>
+            <SHORT-NAME>uint16</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_DataPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_DataPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to start address of data block to be calculated.</L-2>
+              </DESC>
+              <CATEGORY>DATA_REFERENCE</CATEGORY>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-POINTER-TARGET-PROPS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-POINTER-TARGET-PROPS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_Length</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_Length</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Length of data block to be calculated in bytes.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_StartValue16</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_StartValue16</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Start value when the algorithm starts.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_IsFirstCall</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_IsFirstCall</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">TRUE: First call in a sequence or individual CRC calculation; start from initial value, ignore Crc_StartValue16.
+	FALSE: Subsequent call in a call sequence; Crc_StartValue16 is interpreted to be the return value of the previous function call.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crc_CalculateCRC32</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crc_CalculateCRC32</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This service makes a CRC32 calculation on Crc_Length data bytes.</L-2>
+          </DESC>
+          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="BSW-ENTRY-KIND"><SD GID="_mixed">CONCRETE</SD></SDG><SD GID="_path">BSW-ENTRY-KIND@10/</SD><SD GID="_target">org.artop.aal.autosar430</SD></SDG></SDGS></ADMIN-DATA><SERVICE-ID>0x03</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          
+          <RETURN-TYPE>
+            <SHORT-NAME>uint32</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_DataPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_DataPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to start address of data block to be calculated.</L-2>
+              </DESC>
+              <CATEGORY>DATA_REFERENCE</CATEGORY>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-POINTER-TARGET-PROPS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-POINTER-TARGET-PROPS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_Length</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_Length</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Length of data block to be calculated in bytes.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_StartValue32</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_StartValue32</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Start value when the algorithm starts.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_IsFirstCall</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_IsFirstCall</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">TRUE: First call in a sequence or individual CRC calculation; start from initial value, ignore Crc_StartValue32.
+	FALSE: Subsequent call in a call sequence; Crc_StartValue32 is interpreted to be the return value of the previous function call.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crc_CalculateCRC32P4</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crc_CalculateCRC32P4</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This service makes a CRC32 calculation on Crc_Length data bytes, using the polynomial  0xF4ACFB13.</L-2>
+          </DESC>
+          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="BSW-ENTRY-KIND"><SD GID="_mixed">CONCRETE</SD></SDG><SD GID="_path">BSW-ENTRY-KIND@11/</SD><SD GID="_target">org.artop.aal.autosar430</SD></SDG></SDGS></ADMIN-DATA><INTRODUCTION>
+            <P>
+              <L-1 L="EN">This CRC routine is used by E2E Profile 4.</L-1>
+            </P>
+          </INTRODUCTION>
+          <SERVICE-ID>0x06</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          
+          <RETURN-TYPE>
+            <SHORT-NAME>uint32</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_DataPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_DataPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to start address of data block to be calculated.</L-2>
+              </DESC>
+              <CATEGORY>DATA_REFERENCE</CATEGORY>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-POINTER-TARGET-PROPS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-POINTER-TARGET-PROPS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_Length</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_Length</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Length of data block to be calculated in bytes.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_StartValue32</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_StartValue32</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Start value when the algorithm starts.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_IsFirstCall</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_IsFirstCall</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">TRUE: First call in a sequence or individual CRC calculation; start from initial value, ignore Crc_StartValue32.
+	FALSE: Subsequent call in a call sequence; Crc_StartValue32 is interpreted to be the return value of the previous function call.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crc_CalculateCRC64</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crc_CalculateCRC64</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This service makes a CRC64 calculation on Crc_Length data bytes, using the polynomial 0x42F0E1EBA9EA3693.</L-2>
+          </DESC>
+          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="BSW-ENTRY-KIND"><SD GID="_mixed">CONCRETE</SD></SDG><SD GID="_path">BSW-ENTRY-KIND@11/</SD><SD GID="_target">org.artop.aal.autosar430</SD></SDG></SDGS></ADMIN-DATA><INTRODUCTION>
+            <P>
+              <L-1 L="EN">This CRC routine is used by E2E Profile 7.</L-1>
+            </P>
+          </INTRODUCTION>
+          <SERVICE-ID>0x07</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          
+          <RETURN-TYPE>
+            <SHORT-NAME>uint64</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint64</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_DataPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_DataPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to start address of data block to be calculated.</L-2>
+              </DESC>
+              <CATEGORY>DATA_REFERENCE</CATEGORY>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-POINTER-TARGET-PROPS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-POINTER-TARGET-PROPS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_Length</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_Length</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Length of data block to be calculated in bytes.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_StartValue64</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_StartValue64</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Start value when the algorithm starts.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint64</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_IsFirstCall</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_IsFirstCall</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">TRUE: First call in a sequence or individual CRC calculation; start from initial value, ignore Crc_StartValue64.
+	FALSE: Subsequent call in a call sequence; Crc_StartValue64 is interpreted to be the return value of the previous function call.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crc_CalculateCRC8</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crc_CalculateCRC8</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This service makes a CRC8 calculation on Crc_Length data bytes, with SAE J1850 parameters</L-2>
+          </DESC>
+          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="BSW-ENTRY-KIND"><SD GID="_mixed">CONCRETE</SD></SDG><SD GID="_path">BSW-ENTRY-KIND@10/</SD><SD GID="_target">org.artop.aal.autosar430</SD></SDG></SDGS></ADMIN-DATA><SERVICE-ID>0x01</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          
+          <RETURN-TYPE>
+            <SHORT-NAME>uint8</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_DataPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_DataPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to start address of data block to be calculated.</L-2>
+              </DESC>
+              <CATEGORY>DATA_REFERENCE</CATEGORY>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-POINTER-TARGET-PROPS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-POINTER-TARGET-PROPS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_Length</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_Length</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Length of data block to be calculated in bytes.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_StartValue8</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_StartValue8</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Start value when the algorithm starts.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_IsFirstCall</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_IsFirstCall</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">TRUE: First call in a sequence or individual CRC calculation; start from initial value, ignore Crc_StartValue8.
+	FALSE: Subsequent call in a call sequence; Crc_StartValue8 is interpreted to be the return value of the previous function call.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crc_CalculateCRC8H2F</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crc_CalculateCRC8H2F</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This service makes a CRC8 calculation with the Polynomial 0x2F on Crc_Length</L-2>
+          </DESC>
+          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="BSW-ENTRY-KIND"><SD GID="_mixed">CONCRETE</SD></SDG><SD GID="_path">BSW-ENTRY-KIND@10/</SD><SD GID="_target">org.artop.aal.autosar430</SD></SDG></SDGS></ADMIN-DATA><SERVICE-ID>0x05</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          
+          <RETURN-TYPE>
+            <SHORT-NAME>uint8</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_DataPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_DataPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to start address of data block to be calculated.</L-2>
+              </DESC>
+              <CATEGORY>DATA_REFERENCE</CATEGORY>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-POINTER-TARGET-PROPS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-POINTER-TARGET-PROPS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_Length</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_Length</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Length of data block to be calculated in bytes.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_StartValue8H2F</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_StartValue8H2F</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Start value when the algorithm starts.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Crc_IsFirstCall</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Crc_IsFirstCall</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">TRUE: First call in a sequence or individual CRC calculation; start from initial value, ignore Crc_StartValue8H2F.
+	FALSE: Subsequent call in a call sequence; Crc_StartValue8H2F is interpreted to be the return value of the previous function call.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crc_GetVersionInfo</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crc_GetVersionInfo</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This service returns the version information of this module.</L-2>
+          </DESC>
+          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="BSW-ENTRY-KIND"><SD GID="_mixed">CONCRETE</SD></SDG><SD GID="_path">BSW-ENTRY-KIND@10/</SD><SD GID="_target">org.artop.aal.autosar430</SD></SDG></SDGS></ADMIN-DATA><SERVICE-ID>0x04</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Versioninfo</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Versioninfo</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to where to store the version information of this module.</L-2>
+              </DESC>
+              <CATEGORY>DATA_REFERENCE</CATEGORY>
+              <DIRECTION>OUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-POINTER-TARGET-PROPS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Std/ImplementationDataTypes/Std_VersionInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-POINTER-TARGET-PROPS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,225 @@
+; --------------------------------------------------------------------------------
+; @Title: Flash declaration for NXP S32K3 internal flash
+; @Description:
+;   Script arguments:
+;     DO s32k3 [PREPAREONLY] [CPU=<cpu>] [DUALPORT=<0|1>]
+;       PREPAREONLY    only declares flash but does not execute flash programming
+;       CPU=<cpu>      selects CPU derivative <cpu>
+;       DUALPORT=<0|1> use dual port memory access, default 1
+;   Example:
+;     DO D:\OJT\Project\T32_202109_ARM PREPAREONLY
+;   Note:
+;     This file must NOT be modified.
+;     This file is intended to stay within TRACE32 installation.
+;     Usage examples are available in the ~~/demo/arm/hardware/... subdirectories.
+;
+; List of S32K3xx derivatives and their configuration:
+;    CPU-Type       PFlash   DFlash   UTest   RamSize  SectorSize
+;                    [KB]     [KB]    [KB]    [KB]       [KB]
+; --------------------------------------------------------------------------------
+;   S32K3X1          1024      64      8      128         8
+;   S32K312          2048     128      8      192         8
+;   S32K322          2048     128      8      256         8
+;   S32K342          2048     128      8      256         8
+;   S32K3x4          4096     128      8      512         8
+;
+; @Chip: S32K3*
+; @Author: MAM
+; @Copyright: (C) 1989-2021 Lauterbach GmbH, licensed for use with TRACE32(R) only
+; --------------------------------------------------------------------------------
+; $Rev: 10340 $
+; $Id: s32k3.cmm 10340 2021-12-16 09:07:32Z skrausse $
+
+
+LOCAL &lPath &lCmd &lMode                           ; lPath, elf file path ; lCmd, system state flag ; lMode, if lMode"=="ERASE_ALL", FLASH.ERASE ALL
+LOCAL &FlashDriver &CodeFlashSize &DataFlashSize
+LOCAL &parameters &param_prepareonly &param_cpu &param_masserase &param_dualport &param_path &param_cmd
+ENTRY %LINE &parameters
+
+&gCmmRootPath=OS.PPD()
+&param_prepareonly=(STRing.SCAN(STRing.UPpeR("&parameters"),"PREPAREONLY",0)!=-1)
+&param_cpu=STRing.SCANAndExtract(STRing.UPpeR("&parameters"),"CPU=","")
+&param_masserase=(STRing.SCAN(STRing.UPpeR("&parameters"),"MASSERASE",0)!=-1)
+&param_dualport=STRing.SCANAndExtract(STRing.UPpeR("&parameters"),"DUALPORT=","1")
+PRINT "  [S32K3X Flash.cmm] param_prepareonly:&param_prepareonly  param_cpu:&param_cpu  param_masserase:&param_masserase  param_dualport:&param_dualport gEnableDUALM:&gEnableDUALM"
+
+;Do main only
+gosub main
+GO
+;QUIT
+ENDDO
+
+main:
+(
+
+  ; #1. Up
+  gosub FlashUp
+  
+  ; #2. Initialize for Flash Programming
+  gosub FlashInit
+  
+  ; #3. Set each flash parameter depending on each MCU
+  gosub FlashGetParam
+
+  ; #4. Set Flash List such as Target or Nop
+  gosub FlashSetConfig
+  
+  ; #5. Do Flash Erase / Programming
+  gosub FlashProgramming 
+  
+  return
+)
+FlashUp:
+(
+  &gDoCmd &gCmmCommonPath\CommonCmd.cmm CMD=UP      ; selected gDebugType
+  return
+)
+
+FlashInit:
+(
+  ; Enable DMA
+  Data.set ASD:0x402DC330 %Long 0yXXXXxxxxXXXXxxxxXXXXxxxxXXX11xxx  ; Pogram partition 1 COFB bit 3 and 4
+  Data.set ASD:0x402DC304 %Long 0x1                                 ; Program Partition Update
+
+  Data.Set ASD:0x402DC000 %Long 0x00005AF0                          ; MC_ME.MC_ME_CTL_KEY.R
+  Data.Set ASD:0x402DC000 %Long 0x0000A50F                          ; MC_ME.MC_ME_CTL_KEY.R
+  WAIT (Data.Long(ASD:0x402DC304)&0x00000001)==0x00000000
+
+  ;DMA SRAM Init
+  Data.Set SD:0x40210020 %LE %LONG 0x402AC300               ; SADDR
+  Data.Set SD:0x40210030 %LE %LONG 0x20400000               ; DADDR
+  Data.Set SD:0x40210024 %LE %LONG 0x03030000               ; SSIZE 3, DSIZE 3, SOFF 0
+  Data.Set SD:0x40210028 %LE %LONG 0x00018000               ; Nbytes
+  Data.Set SD:0x4021002C %LE %LONG 0x00000000               ; SLAST
+  Data.Set SD:0x40210034 %LE %LONG 0x00080008               ; CITER 8, DOFF 8
+  Data.Set SD:0x40210038 %LE %LONG 0xFFF40000               ; DLASTSGA = -NBYTES
+  Data.Set SD:0x4021003C %LE %LONG 0x00000001               ; Start
+
+  WAIT (Data.Long(ASD:0x40210000)&0x80000000)==0x00000000   ; Wait for EDMA.CSR[ACTIVE]=0
+
+  Data.Set SD:0x40210000 %LE %LONG 0x40000000
+
+  return
+)
+FlashGetParam:
+(
+  &FlashDriver="s32k3x4.bin"
+
+  IF CPUIS(S32K3?1*)
+  (	
+    &CodeFlashSize=0x100000
+    &DataFlashSize=0x10000
+    IF CPUIS(S32K311)
+    (
+      ;BAF code 0x004F4000-0x004FFFFF
+      &&CodeFlashSize=&CodeFlashSize-0xc000
+    )
+  )
+  ELSE IF CPUIS(S32K3?2*)
+  (
+    &CodeFlashSize=0x200000
+  	&DataFlashSize=0x20000
+  	&FlashDriver="s32k3x2.bin"
+    ;BAF code 0x005F4000-0x005FFFFF
+    &&CodeFlashSize=&CodeFlashSize-0xc000
+  )
+  ELSE IF CPUIS(S32K3?4*)
+  (
+    &CodeFlashSize=0x400000
+    &DataFlashSize=0x20000
+    &FlashDriver="s32k3x4.bin"
+    ;BAF code 0x007F4000-0x007FFFFF
+    &&CodeFlashSize=&CodeFlashSize-0xc000
+  )
+  ELSE IF CPUIS(S32K310)
+  (
+    &CodeFlashSize=0x80000
+    &DataFlashSize=0x10000
+    ;&FlashDriver=""
+  )
+  ELSE IF CPUIS(S32K3?8*)
+  (
+    &CodeFlashSize=0x800000
+    &DataFlashSize=0x20000
+    ;&FlashDriver=""
+    IF CPUIS(S32K358)
+    (
+      ;BAF code 0x007F4000-0x007FFFFF
+      &&CodeFlashSize=&CodeFlashSize-0xc000
+    )
+  )
+  ELSE
+  (
+    PRINT %ERROR "CFLASH size of CPU type is not supported by the script"
+    ENDDO
+  )
+  return
+)
+FlashSetConfig:
+(
+  FLASH.RESet
+  FLASH.Create 1. 0x00400000++(&CodeFlashSize-1) 0x2000 TARGET long
+  FLASH.Create 2. 0x10000000++(&DataFlashSize-1) 0x2000 TARGET long
+  FLASH.Create 3. 0x1B000000++0x1FFF             0x2000 TARGET long /OTP /INFO "UTEST sector"
+  
+  ; Disable following address ranges for all slave cores
+  IF !CPUIS(*HSE)
+  (
+    IF CPUIS(S32K3?1*)
+    (
+      FLASH.ChangeType 0x004D4000--0x004FFFFF NOP // HSE-B Firmware Reference Manual V2.1 Page 219 176KB
+      FLASH.ChangeType 0x10016000--0x1001FFFF NOP
+    )    
+    ELSE IF CPUIS(S32K3?2*)
+    (
+      IF("&gEnableDUALM"=="DUALM_ON")
+      (
+        FLASH.ChangeType 0x004D4000--0x004FFFFF NOP
+      )
+      FLASH.ChangeType 0x005D4000--0x005FFFFF NOP
+      FLASH.ChangeType 0x10016000--0x1001FFFF NOP
+    )
+    ELSE IF CPUIS(S32K3?4*)
+    (
+      IF("&gEnableDUALM"=="DUALM_ON")
+      (
+        FLASH.ChangeType 0x005D4000--0x005FFFFF NOP
+      )
+      FLASH.ChangeType 0x007D4000--0x007FFFFF NOP
+      FLASH.ChangeType 0x10016000--0x1001FFFF NOP
+    )
+  )
+
+  IF (("&param_dualport"!="1")||SYStem.ACCESS.DENIED())
+    FLASH.TARGET 0x20400000 0x20401000 0x1000 ~~/demo/arm/flash/long/&FlashDriver
+  ELSE
+    FLASH.TARGET E:0x20400000 E:0x20401000 0x1000 ~~/demo/arm/flash/long/&FlashDriver /DualPort
+  
+  return
+)
+FlashProgramming:
+(
+  IF ("&lMode"=="ERASE_ALL")
+  (
+    PRINT "  [MPC560XB Flash.cmm] ERASE_ALL"
+    FLASH.ERASE ALL
+  )
+  ELSE
+  (
+    FLASH.ReProgram ALL
+
+    ChDir &gCmmRootPath
+    Data.LOAD.Elf "..\..\rtu_S32K314_R44_fbl\Debug\rtu_S32K314_R44-24.05.1_fbl.elf" /NOCLEAR
+    Data.LOAD.Elf "..\Debug\rtu_S32K314_R44-24.03.1.elf" /NOCLEAR
+
+    FLASH.ReProgram OFF
+
+
+    Data.LOAD.Elf "..\Debug\rtu_S32K314_R44-24.05.1.elf" /NOCODE
+
+    ; Reset device
+    SYStem.Down
+    SYStem.Up
+  )
+  return
+)

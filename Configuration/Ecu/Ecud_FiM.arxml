@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="72a06213-9b06-4033-986d-34a90e11b869">
+      <SHORT-NAME>AUTRON</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="0141a09f-1c82-4ef6-a95b-b38090d20a03">
+          <SHORT-NAME>FiM</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTRON/FiM</DEFINITION-REF>
+          <ECUC-DEF-EDITION>4.4.0</ECUC-DEF-EDITION>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/Bsw_FiM/BswImplementation_FiM</MODULE-DESCRIPTION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="03f35955-bdf1-430d-87eb-6cd6a09a89a0">
+              <SHORT-NAME>FiMConfigSet</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/FiM/FiMConfigSet</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="86d4f384-1fd7-44ae-9642-88fab7841f11">
+                  <SHORT-NAME>FiMFID0</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2020-06-30T11:05:11Z" GID="FiMFunctionId">0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/FiM/FiMConfigSet/FiMFID</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/FiM/FiMConfigSet/FiMFID/FiMFunctionId</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="a5c2dc62-bc43-4f87-84b8-cd96261598c2">
+                  <SHORT-NAME>FiMFID1</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2020-06-30T11:05:19Z" GID="FiMFunctionId">1</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/FiM/FiMConfigSet/FiMFID</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/FiM/FiMConfigSet/FiMFID/FiMFunctionId</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="46b7333a-4669-474b-be45-9b68da17b044">
+                  <SHORT-NAME>FiMInhibitionConfiguration0</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2020-07-16T11:03:41Z" GID="FiMInhInhibitionMask">FIM_NOT_TESTED</SD>
+                        <SD T="2020-06-30T11:07:01Z" GID="FiMInhEventRef">/AUTOSAR/Dem/DemConfigSet/DEM_E_TEST_EVENT1</SD>
+                        <SD T="2020-06-17T15:35:36Z" GID="FiMInhFunctionIdRef">/AUTRON/FiM/FiMConfigSet/FiMFID0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/FiM/FiMConfigSet/FiMInhibitionConfiguration</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/FiM/FiMConfigSet/FiMInhibitionConfiguration/FiMInhInhibitionMask</DEFINITION-REF>
+                      <VALUE>FIM_NOT_TESTED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/FiM/FiMConfigSet/FiMInhibitionConfiguration/FiMInhFunctionIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/FiM/FiMConfigSet/FiMFID0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/FiM/FiMConfigSet/FiMInhibitionConfiguration/FiMInhEventRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Dem/DemConfigSet/DEM_E_TEST_EVENT1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="47b9b8d3-7e2a-4869-a90a-777323b38a08">
+                  <SHORT-NAME>FiMInhibitionConfiguration1</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2020-06-30T11:07:06Z" GID="FiMInhSumRef">/AUTRON/FiM/FiMConfigSet/FiMSummaryEvent0</SD>
+                        <SD T="2020-06-01T11:34:30Z" GID="FiMInhInhibitionMask">FIM_TESTED_AND_FAILED</SD>
+                        <SD T="2020-06-30T10:45:26Z" GID="FiMInhFunctionIdRef">/AUTRON/FiM/FiMConfigSet/FiMFID1</SD>
+                        <SD T="2020-08-31T10:53:36Z" GID="FiMInhComponentRef">/AUTOSAR/Dem/DemConfigSet/DemComponent0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/FiM/FiMConfigSet/FiMInhibitionConfiguration</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/FiM/FiMConfigSet/FiMInhibitionConfiguration/FiMInhInhibitionMask</DEFINITION-REF>
+                      <VALUE>FIM_TESTED_AND_FAILED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/FiM/FiMConfigSet/FiMInhibitionConfiguration/FiMInhFunctionIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/FiM/FiMConfigSet/FiMFID1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/FiM/FiMConfigSet/FiMInhibitionConfiguration/FiMInhSumRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/FiM/FiMConfigSet/FiMSummaryEvent0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/FiM/FiMConfigSet/FiMInhibitionConfiguration/FiMInhComponentRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Dem/DemConfigSet/DemComponent1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="d8904088-bc39-4158-8bdc-10fc5f219089">
+                  <SHORT-NAME>FiMSummaryEvent0</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2020-06-30T11:03:13Z" GID="FiMInputEventRef">/AUTOSAR/Dem/DemConfigSet/DEM_E_TEST_EVENT1,/AUTOSAR/Dem/DemConfigSet/DEM_E_TEST_EVENT2</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/FiM/FiMConfigSet/FiMSummaryEvent</DEFINITION-REF>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/FiM/FiMConfigSet/FiMSummaryEvent/FiMInputEventRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Dem/DemConfigSet/DEM_E_TEST_EVENT1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/FiM/FiMConfigSet/FiMSummaryEvent/FiMInputEventRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Dem/DemConfigSet/DEM_E_TEST_EVENT2</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="eca1d72d-83d2-43de-93fc-5a0408f516bc">
+              <SHORT-NAME>FiMGeneral</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2020-07-13T16:26:13Z" GID="FiMAvailabilitySupport">1</SD>
+                    <SD T="2020-03-18T16:13:08Z" GID="FiMDevErrorDetect">1</SD>
+                    <SD T="2020-07-15T16:04:58Z" GID="FiMEventUpdateTriggeredByDem">0</SD>
+                    <SD T="2020-07-21T16:17:46Z" GID="FiMMainFunctionPeriod">0.01</SD>
+                    <SD T="2020-06-30T11:07:40Z" GID="FiMMaxEventsPerFidInhibitionConfiguration">5</SD>
+                    <SD T="2020-05-20T15:51:17Z" GID="FiMMaxFiMInhibitionConfigurations">5</SD>
+                    <SD T="2020-06-30T09:21:45Z" GID="FiMMaxInputEventsPerSummaryEvents">3</SD>
+                    <SD T="2020-06-30T09:21:50Z" GID="FiMMaxSumEventsPerFidInhibitionConfiguration">3</SD>
+                    <SD T="2020-06-30T09:22:01Z" GID="FiMMaxSummaryEvents">3</SD>
+                    <SD T="2020-04-23T17:01:55Z" GID="FiMVersionInfoApi">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/FiM/FiMGeneral</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/FiM/FiMGeneral/FiMDevErrorDetect</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/FiM/FiMGeneral/FiMMainFunctionPeriod</DEFINITION-REF>
+                  <VALUE>0.01</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/FiM/FiMGeneral/FiMMaxEventsPerFidInhibitionConfiguration</DEFINITION-REF>
+                  <VALUE>5</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/FiM/FiMGeneral/FiMMaxFiMInhibitionConfigurations</DEFINITION-REF>
+                  <VALUE>5</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/FiM/FiMGeneral/FiMMaxInputEventsPerSummaryEvents</DEFINITION-REF>
+                  <VALUE>3</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/FiM/FiMGeneral/FiMMaxSumEventsPerFidInhibitionConfiguration</DEFINITION-REF>
+                  <VALUE>3</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/FiM/FiMGeneral/FiMMaxSummaryEvents</DEFINITION-REF>
+                  <VALUE>3</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/FiM/FiMGeneral/FiMVersionInfoApi</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/FiM/FiMGeneral/FiMAvailabilitySupport</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/FiM/FiMGeneral/FiMEventUpdateTriggeredByDem</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

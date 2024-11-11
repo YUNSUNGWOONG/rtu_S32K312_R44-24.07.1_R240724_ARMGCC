@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*******************************************************************************
+**                                                                            **
+**  (C) 2021 HYUNDAI AUTOEVER Corp.                                           **
+**  Confidential Proprietary Information. Distribution Limited.               **
+**  Do Not Copy Without Prior Permission                                      **
+**                                                                            **
+**  PRODUCT   :    CanCM                                                      **
+**                                                                            **
+**  PURPOSE   :    Definition of Configuration Parameters                     **
+**                                                                            **
+*******************************************************************************/
+
+/*******************************************************************************
+**                      Revision History                                      **
+********************************************************************************
+** Revision  Date          By          Description                            **
+********************************************************************************
+** 1.0.6     04-11-2022    JW OH       CP44-752                               **
+** 1.0.2     22-09-2021    HieuTM8     Initial version                        **
+*******************************************************************************/
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <REVISION-LABEL>4.4.0</REVISION-LABEL>
+        <ISSUED-BY>AUTOSAR</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="ECUC:ECUCDEFS">
+      <SHORT-NAME>AUTRON</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-DEFINITION-COLLECTION UUID="ECUC:4c30de73-30fc-53b3-a1b3-e74211eedff5">
+          <SHORT-NAME>ParameterDefinition_CanCM</SHORT-NAME>
+          <MODULE-REFS>
+            <MODULE-REF DEST="ECUC-MODULE-DEF">/AUTRON/CanCM</MODULE-REF>
+          </MODULE-REFS>
+        </ECUC-DEFINITION-COLLECTION>
+        <ECUC-MODULE-DEF UUID="ECUC:8a83c6f1-5852-55b3-8852-d4ae2de240fa">
+          <SHORT-NAME>CanCM</SHORT-NAME>
+          <DESC>
+            <L-2 L="EN">Configuration Parameters for the CanCM module.</L-2>
+          </DESC>
+          <CATEGORY>STANDARDIZED_MODULE_DEFINITION</CATEGORY>
+          <ADMIN-DATA>
+            <DOC-REVISIONS>
+              <DOC-REVISION>
+                <REVISION-LABEL>4.4.0</REVISION-LABEL>
+                <ISSUED-BY>AUTOSAR</ISSUED-BY>
+              </DOC-REVISION>
+            </DOC-REVISIONS>
+          </ADMIN-DATA>
+          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+          <API-SERVICE-PREFIX>CanCM</API-SERVICE-PREFIX>
+          <POST-BUILD-VARIANT-SUPPORT>true</POST-BUILD-VARIANT-SUPPORT>
+          <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Cdd</REFINED-MODULE-DEF-REF>
+          <SUPPORTED-CONFIG-VARIANTS>
+            <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+            <SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD</SUPPORTED-CONFIG-VARIANT>
+            <SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</SUPPORTED-CONFIG-VARIANT>
+          </SUPPORTED-CONFIG-VARIANTS>
+          <CONTAINERS>
+            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:5adfcc42-72f3-5b31-8817-31cc191594a1">
+              <SHORT-NAME>CanCMGlobalConfig</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">This container contains the global configuration parameter of the CanCM.</L-2>
+              </DESC>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="_conversion">
+                    <SD GID="_path">P@0/INTRODUCTION@3</SD>
+                    <SD GID="_target">org.artop.aal.autosar430</SD>
+                    <SDG GID="P">
+                      <SD GID="_mixed" />
+                      <SDG GID="L-1">
+                        <SD GID="_mixed">This container is a MultipleConfigurationContainer (only for variant 3), i.e. this container and its sub-containers exit once per configuration set.</SD>
+                        <SD GID="L">EN</SD>
+                      </SDG>
+                    </SDG>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <INTRODUCTION />
+              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+              <MULTIPLE-CONFIGURATION-CONTAINER>true</MULTIPLE-CONFIGURATION-CONTAINER>
+              <PARAMETERS>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:f27f1a40-1ef7-565f-b7a8-018baec9ac72">
+                  <SHORT-NAME>CanCMVersionInfoApi</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Enabling Version Info API</L-2>
+                  </DESC>
+                  <CATEGORY />
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@4</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">Enabling Version Info API</SD>
+                            <SD GID="L">EN</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:0c6b4279-9da7-511f-92da-bbe845e27408">
+                  <SHORT-NAME>CanCMDevErrorDetect</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pre-processor switch for enabling development error detection support.</L-2>
+                  </DESC>
+                  <CATEGORY />
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@4</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">true:API parameter checking is enabled. false:API parameter checking is disabled.</SD>
+                            <SD GID="L">EN</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-FLOAT-PARAM-DEF UUID="ECUC:6fc20523-5f6d-5f5e-894e-29a40e3efbc7">
+                  <SHORT-NAME>CanCMMainFunctionPeriod</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Period of invoking CanCM_MainFunction in seconds .</L-2>
+                  </DESC>
+                  <CATEGORY />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <DEFAULT-VALUE>0.005</DEFAULT-VALUE>
+                  <MAX>1</MAX>
+                  <MIN>0.001</MIN>
+                </ECUC-FLOAT-PARAM-DEF>
+                <ECUC-BOOLEAN-PARAM-DEF>
+                  <SHORT-NAME>CanCMDemStatusReport</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="FOR-ALL">Precompile option for voltage status reporting to Dem</L-2>
+                  </DESC>
+                  <CATEGORY />
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@4</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">Precompile option for voltage status reporting to Dem</SD>
+                            <SD GID="L">FOR-ALL</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="85194444-d2c1-4f5c-b650-af54231b0ce2">
+                  <SHORT-NAME>CanCMDisableDMOnAbnormalVoltage</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="FOR-ALL">Precompile option to disable deadline monitoring on abnormal voltage in order to prevent recording DTC by signal timeout</L-2>
+                  </DESC>
+                  <CATEGORY />
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@4</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">Precompile option to disable deadline monitoring on abnormal voltage in order to prevent recording DTC by signal timeout</SD>
+                            <SD GID="L">FOR-ALL</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="647f06cd-f59a-4a81-af29-30cb52b50eab">
+                  <SHORT-NAME>CanCMWakeupSupport</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="FOR-ALL">Precompile option for wake-up support to check port pin assigned as wake-up source</L-2>
+                  </DESC>
+                  <CATEGORY />
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@4</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">Precompile option for wake-up support to check port pin assigned as wake-up source</SD>
+                            <SD GID="L">FOR-ALL</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="54a4d168-a171-4370-819e-d958bcadbfb4">
+                  <SHORT-NAME>CanCMHysteresisSupport</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="FOR-ALL">Precompile option for hysteresis support to decide recovery from voltage error</L-2>
+                  </DESC>
+                  <CATEGORY />
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@4</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">Precompile option for hysteresis support to decide recovery from voltage error</SD>
+                            <SD GID="L">FOR-ALL</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-INTEGER-PARAM-DEF UUID="786bcc1f-e518-4b24-af67-8e3db2cead6a">
+                  <SHORT-NAME>CanCMFilteringConstant</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="FOR-ALL">Link-time option for filtering Adc value for battery voltage</L-2>
+                  </DESC>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@3</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed" />
+                            <SD GID="L">FOR-ALL</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <DEFAULT-VALUE>128</DEFAULT-VALUE>
+                  <MAX>255</MAX>
+                  <MIN>0</MIN>
+                </ECUC-INTEGER-PARAM-DEF>
+              </PARAMETERS>
+            </ECUC-PARAM-CONF-CONTAINER-DEF>
+            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:5adfcc42-72f3-5b31-8817-31cc191594a1">
+              <SHORT-NAME>CanCMChannelConfig</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">This container contains the global configuration parameter of the CanCM.</L-2>
+              </DESC>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="_conversion">
+                    <SD GID="_path">P@0/INTRODUCTION@3</SD>
+                    <SD GID="_target">org.artop.aal.autosar430</SD>
+                    <SDG GID="P">
+                      <SD GID="_mixed" />
+                      <SDG GID="L-1">
+                        <SD GID="_mixed">This container is a MultipleConfigurationContainer (only for variant 3), i.e. this container and its sub-containers exit once per configuration set.</SD>
+                        <SD GID="L">EN</SD>
+                      </SDG>
+                    </SDG>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <INTRODUCTION />
+              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+              <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+              <MULTIPLE-CONFIGURATION-CONTAINER>true</MULTIPLE-CONFIGURATION-CONTAINER>
+              <PARAMETERS>
+                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:e1a8b761-2721-55c0-9c76-eb3000e571c8">
+                  <SHORT-NAME>CanCMChannelId</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Channel Identifier.</L-2>
+                  </DESC>
+                  <CATEGORY />
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@4</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">This parameter specifies channel identifier</SD>
+                            <SD GID="L">EN</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <MAX>255</MAX>
+                  <MIN>0</MIN>
+                </ECUC-INTEGER-PARAM-DEF>
+                <ECUC-FLOAT-PARAM-DEF UUID="ECUC:be191aab-c6f6-5a39-903f-af140f5b0339">
+                  <SHORT-NAME>CanCMNetworkActivationTime</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Time interval between Network Start-up and Network Activation specified in seconds.</L-2>
+                  </DESC>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@3</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">This parameter specifies time interval between Network Start-up and Network Activation.</SD>
+                            <SD GID="L">EN</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <MAX>60</MAX>
+                  <MIN>0.001</MIN>
+                </ECUC-FLOAT-PARAM-DEF>
+                <ECUC-FLOAT-PARAM-DEF UUID="ECUC:21645185-edee-513f-a98d-d2d27b5439f9">
+                  <SHORT-NAME>CanCMVoltageErrorDelayTime</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Time which the CanCM shall wait 
+before voltage mode transition from voltage critical to voltage non-critical 
+ specified in seconds.</L-2>
+                  </DESC>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@3</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">This parameter specifies the time which the CanCM shall wait 
+before voltage mode transition from voltage critical to voltage non-critical 
+ in seconds.</SD>
+                            <SD GID="L">EN</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <MAX>60</MAX>
+                  <MIN>0.001</MIN>
+                </ECUC-FLOAT-PARAM-DEF>
+                <ECUC-FLOAT-PARAM-DEF UUID="ECUC:21645185-edee-513f-a98d-d2d27b5439f9">
+                  <SHORT-NAME>CanCMTimeoutMonitoringStartTime</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Time(in seconds) which the CanCM shall wait 
+before starting Reception DM of the Com module</L-2>
+                  </DESC>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@3</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">This parameter specifies the time which the CanCM shall wait 
+before starting Reception Deadline Monitoring of the Com module</SD>
+                            <SD GID="L">EN</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <MAX>60</MAX>
+                  <MIN>0.001</MIN>
+                </ECUC-FLOAT-PARAM-DEF>
+                <ECUC-FLOAT-PARAM-DEF UUID="ECUC:21645185-edee-513f-a9ca-d2d27b5439f9">
+                  <SHORT-NAME>CanCMVoltageAbnormalUpper</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">upper limit of abnormal voltage range</L-2>
+                  </DESC>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@3</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">This parameter specifies upper limit of abnormal voltage range.</SD>
+                            <SD GID="L">EN</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <MAX>4096</MAX>
+                  <MIN>0</MIN>
+                </ECUC-FLOAT-PARAM-DEF>
+                <ECUC-FLOAT-PARAM-DEF UUID="ECUC:21645185-edaa-513f-a9ca-d2d27b5439f9">
+                  <SHORT-NAME>CanCMVoltageAbnormalLower</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">lower limit of abnormal voltage range</L-2>
+                  </DESC>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@3</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">This parameter specifies lower limit of abnormal voltage range.</SD>
+                            <SD GID="L">EN</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <MAX>4096</MAX>
+                  <MIN>0</MIN>
+                </ECUC-FLOAT-PARAM-DEF>
+                <ECUC-FLOAT-PARAM-DEF UUID="ECUC:21645144-edaa-513f-a9ca-d2d27b5439f9">
+                  <SHORT-NAME>CanCMVoltageCriticalUpper</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">upper limit of critical voltage range</L-2>
+                  </DESC>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@3</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">This parameter specifies upper limit of critical voltage range.</SD>
+                            <SD GID="L">EN</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <MAX>4096</MAX>
+                  <MIN>0</MIN>
+                </ECUC-FLOAT-PARAM-DEF>
+                <ECUC-FLOAT-PARAM-DEF UUID="ECUC:21645144-edaa-513f-abca-c2d27c5439f9">
+                  <SHORT-NAME>CanCMVoltageCriticalLower</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">lower limit of critical voltage range</L-2>
+                  </DESC>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@3</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">This parameter specifies lowerlimit of critical voltage range.</SD>
+                            <SD GID="L">EN</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <MAX>4096</MAX>
+                  <MIN>0</MIN>
+                </ECUC-FLOAT-PARAM-DEF>
+                <ECUC-FLOAT-PARAM-DEF UUID="0f77255f-93a7-4de5-aff2-4277b356f777">
+                  <SHORT-NAME>CanCMVoltageHysteresis</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Hysteresis value</L-2>
+                  </DESC>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@3</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">This parameter specifies hysteresis value to decide voltage recovery.</SD>
+                            <SD GID="L">EN</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                  <MAX>4096</MAX>
+                  <MIN>0</MIN>
+                </ECUC-FLOAT-PARAM-DEF>
+              </PARAMETERS>
+              <REFERENCES>
+                <ECUC-REFERENCE-DEF UUID="ECUC:b847294c-efa1-5c3b-b141-9ccc994928ba">
+                  <SHORT-NAME>CanCMComMChannelId</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Reference to the ComM channel  that is mapped to this CanCMChannel instance.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+                </ECUC-REFERENCE-DEF>
+              </REFERENCES>
+              <SUB-CONTAINERS>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>CanCMDemEventParameterRefs</SHORT-NAME>
+                  <CATEGORY />
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <SCOPE>ECU</SCOPE>
+                  <REFERENCES>
+                    <ECUC-REFERENCE-DEF>
+                      <SHORT-NAME>CANCM_E_BAT_FAIL</SHORT-NAME>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                    </ECUC-REFERENCE-DEF>
+                  </REFERENCES>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF UUID="f0d4e9e9-4954-45a4-87ed-d6c42df76a43">
+                  <SHORT-NAME>CanCMWakeupParameterRefs</SHORT-NAME>
+                  <CATEGORY />
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <REFERENCES>
+                    <ECUC-REFERENCE-DEF UUID="80e7baad-32a8-434a-83be-e82988ff4724">
+                      <SHORT-NAME>CanCMEcuMWakeupSourceRef</SHORT-NAME>
+                      <CATEGORY />
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource</DESTINATION-REF>
+                    </ECUC-REFERENCE-DEF>
+                    <ECUC-REFERENCE-DEF UUID="2d745395-2039-423b-9558-f998a97285e5">
+                      <SHORT-NAME>CanCMIoHwAbWakeupPinNameRef</SHORT-NAME>
+                      <CATEGORY />
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDigitalDirect/IoHwAbDigitalDirectLogical</DESTINATION-REF>
+                    </ECUC-REFERENCE-DEF>
+                  </REFERENCES>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </SUB-CONTAINERS>
+            </ECUC-PARAM-CONF-CONTAINER-DEF>
+            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="1ed9562d-ac5b-4541-8755-4490775f0d41">
+              <SHORT-NAME>CanCMBatMonConfig</SHORT-NAME>
+              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>10</UPPER-MULTIPLICITY>
+              <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+              <MULTIPLE-CONFIGURATION-CONTAINER>true</MULTIPLE-CONFIGURATION-CONTAINER>
+              <PARAMETERS>
+                <ECUC-INTEGER-PARAM-DEF UUID="0546174d-4fc1-4251-9ea0-82c02812ee7a">
+                  <SHORT-NAME>CanCMAdcDefault</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="FOR-ALL">Initial value for ADC buffer saving battery voltage</L-2>
+                  </DESC>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SD GID="_path">P@0/INTRODUCTION@3</SD>
+                        <SD GID="_target">org.artop.aal.autosar430</SD>
+                        <SDG GID="P">
+                          <SD GID="_mixed" />
+                          <SDG GID="L-1">
+                            <SD GID="_mixed">ADC buffer saving battery voltage shall be initialized with this value</SD>
+                            <SD GID="L">FOR-ALL</SD>
+                          </SDG>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <INTRODUCTION />
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <DEFAULT-VALUE>500</DEFAULT-VALUE>
+                  <MAX>65535</MAX>
+                  <MIN>0</MIN>
+                </ECUC-INTEGER-PARAM-DEF>
+              </PARAMETERS>
+              <REFERENCES>
+                <ECUC-REFERENCE-DEF UUID="1c511bac-51f6-42bf-a515-d232d93c25f5">
+                  <SHORT-NAME>CanCMBatAnalogInputRef</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Reference to AdcGroup container that is used for battery voltage acquisition</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbAnalogInputDirect/IoHwAbAnalogInputDirectLogical</DESTINATION-REF>
+                </ECUC-REFERENCE-DEF>
+              </REFERENCES>
+            </ECUC-PARAM-CONF-CONTAINER-DEF>
+          </CONTAINERS>
+        </ECUC-MODULE-DEF>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

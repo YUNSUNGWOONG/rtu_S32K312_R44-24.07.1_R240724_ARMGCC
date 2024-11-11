@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="02137a27-d5b6-43a5-888b-f8397da48e76">
+      <SHORT-NAME>Os</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>CompositionSwComponentTypes</SHORT-NAME>
+          <ELEMENTS>
+            <COMPOSITION-SW-COMPONENT-TYPE UUID="c11fc053-979c-4d0b-a60a-d67a1e993e67">
+              <SHORT-NAME>CSwc_Os</SHORT-NAME>
+              <COMPONENTS>
+                <SW-COMPONENT-PROTOTYPE UUID="1e61b210-22c9-4647-9521-a79d5e4df71d">
+                  <SHORT-NAME>Os_Master</SHORT-NAME>
+                  <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/Os/ServiceSwComponentTypes/Os_Master</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE>
+                  <SHORT-NAME>Os_Slave1</SHORT-NAME>
+                  <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/Os/ServiceSwComponentTypes/Os_Slave1</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE UUID="19713c8c-faa6-4766-b137-61d9eb2bab6d">
+                  <SHORT-NAME>Os_Slave2</SHORT-NAME>
+                  <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/Os/ServiceSwComponentTypes/Os_Slave2</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE UUID="65a3102a-d181-4572-b17b-839e5df97792">
+                  <SHORT-NAME>Os_Slave3</SHORT-NAME>
+                  <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/Os/ServiceSwComponentTypes/Os_Slave3</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE UUID="3a8783d3-e4da-48cd-8f7e-2fc44f3dfb2b">
+                  <SHORT-NAME>Os_Slave4</SHORT-NAME>
+                  <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/Os/ServiceSwComponentTypes/Os_Slave4</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE UUID="6269ed01-02a4-4ba7-9bc0-de99095f7447">
+                  <SHORT-NAME>Os_Slave5</SHORT-NAME>
+                  <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/Os/ServiceSwComponentTypes/Os_Slave5</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+              </COMPONENTS>
+            </COMPOSITION-SW-COMPONENT-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="c6d81824-ee00-461e-92e6-5c4e2f7a2e30">
+          <SHORT-NAME>ServiceSwComponentTypes</SHORT-NAME>
+          <ELEMENTS>
+            <SERVICE-SW-COMPONENT-TYPE>
+              <SHORT-NAME>Os_Master</SHORT-NAME>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>SwcIB_Os_Master</SHORT-NAME>
+                  <EVENTS>
+                    <TIMING-EVENT>
+                      <SHORT-NAME>Os_TE_10ms_Master</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Os/ServiceSwComponentTypes/Os_Master/SwcIB_Os_Master/Os_MeasureCPULoad0</START-ON-EVENT-REF>
+                      <PERIOD>0.01</PERIOD>
+                    </TIMING-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>Os_MeasureCPULoad0</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>Os_MeasureCPULoad</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </SERVICE-SW-COMPONENT-TYPE>
+            <SERVICE-SW-COMPONENT-TYPE UUID="61d8cd96-a053-48fe-9e8d-70ea1b12ea25">
+              <SHORT-NAME>Os_Slave1</SHORT-NAME>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>SwcIB_Os_Slave1</SHORT-NAME>
+                  <EVENTS>
+                    <TIMING-EVENT>
+                      <SHORT-NAME>Os_TE_10ms_Slave1</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Os/ServiceSwComponentTypes/Os_Slave1/SwcIB_Os_Slave1/Os_MeasureCPULoad1</START-ON-EVENT-REF>
+                      <PERIOD>0.01</PERIOD>
+                    </TIMING-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>Os_MeasureCPULoad1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>Os_MeasureCPULoadSlave1</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </SERVICE-SW-COMPONENT-TYPE>
+            <SERVICE-SW-COMPONENT-TYPE UUID="a010f7a6-b1d4-4197-9a5b-1843974c3718">
+              <SHORT-NAME>Os_Slave2</SHORT-NAME>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>SwcIB_Os_Slave2</SHORT-NAME>
+                  <EVENTS>
+                    <TIMING-EVENT UUID="7a092149-d339-4a8e-894e-0685f4eb1573">
+                      <SHORT-NAME>Os_TE_10ms_Slave2</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Os/ServiceSwComponentTypes/Os_Slave2/SwcIB_Os_Slave2/Os_MeasureCPULoad2</START-ON-EVENT-REF>
+                      <PERIOD>0.01</PERIOD>
+                    </TIMING-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="100f2124-2335-409c-8bcc-483d5962de8c">
+                      <SHORT-NAME>Os_MeasureCPULoad2</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>Os_MeasureCPULoadSlave2</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </SERVICE-SW-COMPONENT-TYPE>
+            <SERVICE-SW-COMPONENT-TYPE UUID="a2d3faf9-f974-4035-a7c9-b13f98e39331">
+              <SHORT-NAME>Os_Slave3</SHORT-NAME>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>SwcIB_Os_Slave3</SHORT-NAME>
+                  <EVENTS>
+                    <TIMING-EVENT UUID="7a092149-d339-4a8e-894e-0685f4eb1573">
+                      <SHORT-NAME>Os_TE_10ms_Slave3</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Os/ServiceSwComponentTypes/Os_Slave3/SwcIB_Os_Slave3/Os_MeasureCPULoad3</START-ON-EVENT-REF>
+                      <PERIOD>0.01</PERIOD>
+                    </TIMING-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="100f2124-2335-409c-8bcc-483d5962de8c">
+                      <SHORT-NAME>Os_MeasureCPULoad3</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>Os_MeasureCPULoadSlave3</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </SERVICE-SW-COMPONENT-TYPE>
+            <SERVICE-SW-COMPONENT-TYPE UUID="0c05fe43-b85f-4726-8314-52cb512256e7">
+              <SHORT-NAME>Os_Slave4</SHORT-NAME>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>SwcIB_Os_Slave4</SHORT-NAME>
+                  <EVENTS>
+                    <TIMING-EVENT UUID="7a092149-d339-4a8e-894e-0685f4eb1573">
+                      <SHORT-NAME>Os_TE_10ms_Slave4</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Os/ServiceSwComponentTypes/Os_Slave4/SwcIB_Os_Slave4/Os_MeasureCPULoad4</START-ON-EVENT-REF>
+                      <PERIOD>0.01</PERIOD>
+                    </TIMING-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="100f2124-2335-409c-8bcc-483d5962de8c">
+                      <SHORT-NAME>Os_MeasureCPULoad4</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>Os_MeasureCPULoadSlave4</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </SERVICE-SW-COMPONENT-TYPE>
+            <SERVICE-SW-COMPONENT-TYPE UUID="9d3cb6d5-dfff-408b-bf15-a2e5e59b0c04">
+              <SHORT-NAME>Os_Slave5</SHORT-NAME>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>SwcIB_Os_Slave5</SHORT-NAME>
+                  <EVENTS>
+                    <TIMING-EVENT UUID="7a092149-d339-4a8e-894e-0685f4eb1573">
+                      <SHORT-NAME>Os_TE_10ms_Slave5</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Os/ServiceSwComponentTypes/Os_Slave5/SwcIB_Os_Slave5/Os_MeasureCPULoad5</START-ON-EVENT-REF>
+                      <PERIOD>0.01</PERIOD>
+                    </TIMING-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="100f2124-2335-409c-8bcc-483d5962de8c">
+                      <SHORT-NAME>Os_MeasureCPULoad5</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>Os_MeasureCPULoadSlave5</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </SERVICE-SW-COMPONENT-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

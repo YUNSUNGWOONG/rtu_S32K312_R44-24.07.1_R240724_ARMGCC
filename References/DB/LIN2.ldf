@@ -1,0 +1,1066 @@
+/****************************************************************************/
+        /*                                                                          */
+        /* Description:                                                           */
+        /* Created:     Fri Feb 12 16:06:43 KJH 2016                      */
+        /* Author:                                                                  */
+        /* Version:     0.1                                                         */
+        /* Project:                                                                 */
+        /*                                                                          */
+        /****************************************************************************/
+
+        // Global Definitions
+
+LIN_description_file;
+LIN_protocol_version = "2.1";
+LIN_language_version = "2.1";
+LIN_speed = 19.2 kbps;
+
+Nodes {
+  Master: IBU, 5 ms, 0 ms ;
+  Slaves: FL, FCL, FCR, FR, RL, RCL, RCR, RR ;
+}
+
+Signals {
+  NAD: 8, 255, IBU, FL, FCL, FCR, FR, RL, RCL, RCR, RR ;
+  PCI_Type: 8, 3, IBU, FL, FCL, FCR, FR, RL, RCL, RCR, RR ;
+  SID: 8, 0, IBU, FL, FCL, FCR, FR, RL, RCL, RCR, RR ;
+  RL_Sensor_Tx: 1, 0, IBU, RL ;
+  RCL_Sensor_Tx: 1, 0, IBU, RCL ;
+  RCR_Sensor_Tx: 1, 0, IBU, RCR ;
+  RR_Sensor_Tx: 1, 0, IBU, RR ;
+  FL_Sensor_Tx: 1, 0, IBU, FL ;
+  FCL_Sensor_Tx: 1, 0, IBU, FCL ;
+  FCR_Sensor_Tx: 1, 0, IBU, FCR ;
+  FR_Sensor_Tx: 1, 0, IBU, FR ;
+  RL_Sensor_Rx: 1, 0, IBU, RL ;
+  RCL_Sensor_Rx: 1, 0, IBU, RCL ;
+  RCR_Sensor_Rx: 1, 0, IBU, RCR ;
+  RR_Sensor_Rx: 1, 0, IBU, RR ;
+  FL_Sensor_Rx: 1, 0, IBU, FL ;
+  FCL_Sensor_Rx: 1, 0, IBU, FCL ;
+  FCR_Sensor_Rx: 1, 0, IBU, FCR ;
+  FR_Sensor_Rx: 1, 0, IBU, FR ;
+  FL_TOF: 10, 0, FL, IBU ;
+  FL_Sensor_Status_0: 1, 0, FL, IBU ;
+  FL_Sensor_Status_1: 1, 0, FL, IBU ;
+  FL_Sensor_Status_2: 1, 0, FL, IBU ;
+  FL_Sensor_Status_3: 1, 0, FL, IBU ;
+  FL_Sensor_Status_4: 1, 0, FL, IBU ;
+  FL_Sensor_Status_5: 1, 0, FL, IBU ;
+  FL_Sensor_Status_6: 1, 0, FL, IBU ;
+  FL_Sensor_Status_7: 1, 0, FL, IBU ;
+  FL_CRC: 8, 0, FL, IBU ;
+  FL_Ringtime: 8, 0, FL, IBU ;
+  FCL_TOF: 10, 0, FCL, IBU ;
+  FCL_Sensor_Status_0: 1, 0, FCL, IBU ;
+  FCL_Sensor_Status_1: 1, 0, FCL, IBU ;
+  FCL_Sensor_Status_2: 1, 0, FCL, IBU ;
+  FCL_Sensor_Status_3: 1, 0, FCL, IBU ;
+  FCL_Sensor_Status_4: 1, 0, FCL, IBU ;
+  FCL_Sensor_Status_5: 1, 0, FCL, IBU ;
+  FCL_Sensor_Status_6: 1, 0, FCL, IBU ;
+  FCL_Sensor_Status_7: 1, 0, FCL, IBU ;
+  FCL_CRC: 8, 0, FCL, IBU ;
+  FCL_Ringtime: 8, 0, FCL, IBU ;
+  FCR_TOF: 10, 0, FCR, IBU ;
+  FCR_Sensor_Status_0: 1, 0, FCR, IBU ;
+  FCR_Sensor_Status_1: 1, 0, FCR, IBU ;
+  FCR_Sensor_Status_2: 1, 0, FCR, IBU ;
+  FCR_Sensor_Status_3: 1, 0, FCR, IBU ;
+  FCR_Sensor_Status_4: 1, 0, FCR, IBU ;
+  FCR_Sensor_Status_5: 1, 0, FCR, IBU ;
+  FCR_Sensor_Status_6: 1, 0, FCR, IBU ;
+  FCR_Sensor_Status_7: 1, 0, FCR, IBU ;
+  FCR_CRC: 8, 0, FCR, IBU ;
+  FCR_Ringtime: 8, 0, FCR, IBU ;
+  FR_TOF: 10, 0, FR, IBU ;
+  FR_Sensor_Status_0: 1, 0, FR, IBU ;
+  FR_Sensor_Status_1: 1, 0, FR, IBU ;
+  FR_Sensor_Status_2: 1, 0, FR, IBU ;
+  FR_Sensor_Status_3: 1, 0, FR, IBU ;
+  FR_Sensor_Status_4: 1, 0, FR, IBU ;
+  FR_Sensor_Status_5: 1, 0, FR, IBU ;
+  FR_Sensor_Status_6: 1, 0, FR, IBU ;
+  FR_Sensor_Status_7: 1, 0, FR, IBU ;
+  FR_CRC: 8, 0, FR, IBU ;
+  FR_Ringtime: 8, 0, FR, IBU ;
+  RL_TOF: 10, 0, RL, IBU ;
+  RL_Sensor_Status_0: 1, 0, RL, IBU ;
+  RL_Sensor_Status_1: 1, 0, RL, IBU ;
+  RL_Sensor_Status_2: 1, 0, RL, IBU ;
+  RL_Sensor_Status_3: 1, 0, RL, IBU ;
+  RL_Sensor_Status_4: 1, 0, RL, IBU ;
+  RL_Sensor_Status_5: 1, 0, RL, IBU ;
+  RL_Sensor_Status_6: 1, 0, RL, IBU ;
+  RL_Sensor_Status_7: 1, 0, RL, IBU ;
+  RL_CRC: 8, 0, RL, IBU ;
+  RL_Ringtime: 8, 0, RL, IBU ;
+  RCL_TOF: 10, 0, RCL, IBU ;
+  RCL_Sensor_Status_0: 1, 0, RCL, IBU ;
+  RCL_Sensor_Status_1: 1, 0, RCL, IBU ;
+  RCL_Sensor_Status_2: 1, 0, RCL, IBU ;
+  RCL_Sensor_Status_3: 1, 0, RCL, IBU ;
+  RCL_Sensor_Status_4: 1, 0, RCL, IBU ;
+  RCL_Sensor_Status_5: 1, 0, RCL, IBU ;
+  RCL_Sensor_Status_6: 1, 0, RCL, IBU ;
+  RCL_Sensor_Status_7: 1, 0, RCL, IBU ;
+  RCL_CRC: 8, 0, RCL, IBU ;
+  RCL_Ringtime: 8, 0, RCL, IBU ;
+  RCR_TOF: 10, 0, RCR, IBU ;
+  RCR_Sensor_Status_0: 1, 0, RCR, IBU ;
+  RCR_Sensor_Status_1: 1, 0, RCR, IBU ;
+  RCR_Sensor_Status_2: 1, 0, RCR, IBU ;
+  RCR_Sensor_Status_3: 1, 0, RCR, IBU ;
+  RCR_Sensor_Status_4: 1, 0, RCR, IBU ;
+  RCR_Sensor_Status_5: 1, 0, RCR, IBU ;
+  RCR_Sensor_Status_6: 1, 0, RCR, IBU ;
+  RCR_Sensor_Status_7: 1, 0, RCR, IBU ;
+  RCR_CRC: 8, 0, RCR, IBU ;
+  RCR_Ringtime: 8, 0, RCR, IBU ;
+  RR_TOF: 10, 0, RR, IBU ;
+  RR_Sensor_Status_0: 1, 0, RR, IBU ;
+  RR_Sensor_Status_1: 1, 0, RR, IBU ;
+  RR_Sensor_Status_2: 1, 0, RR, IBU ;
+  RR_Sensor_Status_3: 1, 0, RR, IBU ;
+  RR_Sensor_Status_4: 1, 0, RR, IBU ;
+  RR_Sensor_Status_5: 1, 0, RR, IBU ;
+  RR_Sensor_Status_6: 1, 0, RR, IBU ;
+  RR_Sensor_Status_7: 1, 0, RR, IBU ;
+  RR_CRC: 8, 0, RR, IBU ;
+  RR_Ringtime: 8, 0, RR, IBU ;
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0x80 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0x80 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+
+Frames {
+  Master_Cmd: 8, IBU, 5 {
+    NAD, 0 ;
+    PCI_Type, 8 ;
+    SID, 16 ;
+    RL_Sensor_Tx, 24 ;
+    RCL_Sensor_Tx, 25 ;
+    RCR_Sensor_Tx, 26 ;
+    RR_Sensor_Tx, 27 ;
+    FL_Sensor_Tx, 28 ;
+    FCL_Sensor_Tx, 29 ;
+    FCR_Sensor_Tx, 30 ;
+    FR_Sensor_Tx, 31 ;
+    RL_Sensor_Rx, 32 ;
+    RCL_Sensor_Rx, 33 ;
+    RCR_Sensor_Rx, 34 ;
+    RR_Sensor_Rx, 35 ;
+    FL_Sensor_Rx, 36 ;
+    FCL_Sensor_Rx, 37 ;
+    FCR_Sensor_Rx, 38 ;
+    FR_Sensor_Rx, 39 ;
+  }
+  FL_Sensor_Status: 4, FL, 6 {
+    FL_TOF, 0 ;
+    FL_Sensor_Status_0, 24 ;
+    FL_Sensor_Status_1, 25 ;
+    FL_Sensor_Status_2, 26 ;
+    FL_Sensor_Status_3, 27 ;
+    FL_Sensor_Status_4, 28 ;
+    FL_Sensor_Status_5, 29 ;
+    FL_Sensor_Status_6, 30 ;
+    FL_Sensor_Status_7, 31 ;
+    FL_CRC, 32 ;
+    FL_Ringtime, 40 ;
+  }
+  FCL_Sensor_Status: 5, FCL, 6 {
+    FCL_TOF, 0 ;
+    FCL_Sensor_Status_0, 24 ;
+    FCL_Sensor_Status_1, 25 ;
+    FCL_Sensor_Status_2, 26 ;
+    FCL_Sensor_Status_3, 27 ;
+    FCL_Sensor_Status_4, 28 ;
+    FCL_Sensor_Status_5, 29 ;
+    FCL_Sensor_Status_6, 30 ;
+    FCL_Sensor_Status_7, 31 ;
+    FCL_CRC, 32 ;
+    FCL_Ringtime, 40 ;
+  }
+  FCR_Sensor_Status: 6, FCR, 6 {
+    FCR_TOF, 0 ;
+    FCR_Sensor_Status_0, 24 ;
+    FCR_Sensor_Status_1, 25 ;
+    FCR_Sensor_Status_2, 26 ;
+    FCR_Sensor_Status_3, 27 ;
+    FCR_Sensor_Status_4, 28 ;
+    FCR_Sensor_Status_5, 29 ;
+    FCR_Sensor_Status_6, 30 ;
+    FCR_Sensor_Status_7, 31 ;
+    FCR_CRC, 32 ;
+    FCR_Ringtime, 40 ;
+  }
+  FR_Sensor_Status: 7, FR, 6 {
+    FR_TOF, 0 ;
+    FR_Sensor_Status_0, 24 ;
+    FR_Sensor_Status_1, 25 ;
+    FR_Sensor_Status_2, 26 ;
+    FR_Sensor_Status_3, 27 ;
+    FR_Sensor_Status_4, 28 ;
+    FR_Sensor_Status_5, 29 ;
+    FR_Sensor_Status_6, 30 ;
+    FR_Sensor_Status_7, 31 ;
+    FR_CRC, 32 ;
+    FR_Ringtime, 40 ;
+  }
+  RL_Sensor_Status: 0, RL, 6 {
+    RL_TOF, 0 ;
+    RL_Sensor_Status_0, 24 ;
+    RL_Sensor_Status_1, 25 ;
+    RL_Sensor_Status_2, 26 ;
+    RL_Sensor_Status_3, 27 ;
+    RL_Sensor_Status_4, 28 ;
+    RL_Sensor_Status_5, 29 ;
+    RL_Sensor_Status_6, 30 ;
+    RL_Sensor_Status_7, 31 ;
+    RL_CRC, 32 ;
+    RL_Ringtime, 40 ;
+  }
+  RCL_Sensor_Status: 1, RCL, 6 {
+    RCL_TOF, 0 ;
+    RCL_Sensor_Status_0, 24 ;
+    RCL_Sensor_Status_1, 25 ;
+    RCL_Sensor_Status_2, 26 ;
+    RCL_Sensor_Status_3, 27 ;
+    RCL_Sensor_Status_4, 28 ;
+    RCL_Sensor_Status_5, 29 ;
+    RCL_Sensor_Status_6, 30 ;
+    RCL_Sensor_Status_7, 31 ;
+    RCL_CRC, 32 ;
+    RCL_Ringtime, 40 ;
+  }
+  RCR_Sensor_Status: 2, RCR, 6 {
+    RCR_TOF, 0 ;
+    RCR_Sensor_Status_0, 24 ;
+    RCR_Sensor_Status_1, 25 ;
+    RCR_Sensor_Status_2, 26 ;
+    RCR_Sensor_Status_3, 27 ;
+    RCR_Sensor_Status_4, 28 ;
+    RCR_Sensor_Status_5, 29 ;
+    RCR_Sensor_Status_6, 30 ;
+    RCR_Sensor_Status_7, 31 ;
+    RCR_CRC, 32 ;
+    RCR_Ringtime, 40 ;
+  }
+  RR_Sensor_Status: 3, RR, 6 {
+    RR_TOF, 0 ;
+    RR_Sensor_Status_0, 24 ;
+    RR_Sensor_Status_1, 25 ;
+    RR_Sensor_Status_2, 26 ;
+    RR_Sensor_Status_3, 27 ;
+    RR_Sensor_Status_4, 28 ;
+    RR_Sensor_Status_5, 29 ;
+    RR_Sensor_Status_6, 30 ;
+    RR_Sensor_Status_7, 31 ;
+    RR_CRC, 32 ;
+    RR_Ringtime, 40 ;
+  }
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  FL{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x84 ;
+    initial_NAD = 0x1 ;
+    product_id = 0x1, 0x1, 1 ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      FL_Sensor_Status ;
+      Master_Cmd ;
+    }
+  }
+  FCL{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x85 ;
+    initial_NAD = 0x1 ;
+    product_id = 0x1, 0x1, 1 ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      FCL_Sensor_Status ;
+      Master_Cmd ;
+    }
+  }
+  FCR{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x86 ;
+    initial_NAD = 0x1 ;
+    product_id = 0x1, 0x1, 1 ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      FCR_Sensor_Status ;
+      Master_Cmd ;
+    }
+  }
+  FR{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x87 ;
+    initial_NAD = 0x1 ;
+    product_id = 0x1, 0x1, 1 ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      FR_Sensor_Status ;
+      Master_Cmd ;
+    }
+  }
+  RL{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x80 ;
+    initial_NAD = 0x1 ;
+    product_id = 0x1, 0x1, 1 ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      RL_Sensor_Status ;
+      Master_Cmd ;
+    }
+  }
+  RCL{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x81 ;
+    initial_NAD = 0x1 ;
+    product_id = 0x1, 0x1, 1 ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      RCL_Sensor_Status ;
+      Master_Cmd ;
+    }
+  }
+  RCR{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x82 ;
+    initial_NAD = 0x1 ;
+    product_id = 0x1, 0x1, 1 ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      RCR_Sensor_Status ;
+      Master_Cmd ;
+    }
+  }
+  RR{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x83 ;
+    initial_NAD = 0x1 ;
+    product_id = 0x1, 0x1, 1 ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      RR_Sensor_Status ;
+      Master_Cmd ;
+    }
+  }
+}
+
+Schedule_tables {
+ SCHEDULER_RPAS_NORMAL {
+    Master_Cmd delay 80 ms ;
+    RL_Sensor_Status delay 10 ms ;
+    Master_Cmd delay 80 ms ;
+    RR_Sensor_Status delay 10 ms ;
+    Master_Cmd delay 80 ms ;
+    RL_Sensor_Status delay 10 ms ;
+    RCL_Sensor_Status delay 10 ms ;
+    RCR_Sensor_Status delay 10 ms ;
+    Master_Cmd delay 80 ms ;
+    RCL_Sensor_Status delay 10 ms ;
+    RCR_Sensor_Status delay 10 ms ;
+    RR_Sensor_Status delay 10 ms ;
+  }
+ SCHEDULER_RPAS_CRC_COMPARE {
+    Master_Cmd delay 20 ms ;
+    RL_Sensor_Status delay 10 ms ;
+    RCL_Sensor_Status delay 10 ms ;
+    RCR_Sensor_Status delay 10 ms ;
+    RR_Sensor_Status delay 10 ms ;
+  }
+ SCHEDULER_PAS_NORMAL {
+    Master_Cmd delay 80 ms ;
+    RL_Sensor_Status delay 10 ms ;
+    FR_Sensor_Status delay 10 ms ;
+    Master_Cmd delay 80 ms ;
+    RR_Sensor_Status delay 10 ms ;
+    FL_Sensor_Status delay 10 ms ;
+    Master_Cmd delay 80 ms ;
+    RL_Sensor_Status delay 10 ms ;
+    RCL_Sensor_Status delay 10 ms ;
+    RCR_Sensor_Status delay 10 ms ;
+    Master_Cmd delay 80 ms ;
+    RCL_Sensor_Status delay 10 ms ;
+    RCR_Sensor_Status delay 10 ms ;
+    RR_Sensor_Status delay 10 ms ;
+  }
+ SCHEDULER_PAS_CRC_COMPARE {
+    Master_Cmd delay 20 ms ;
+    RL_Sensor_Status delay 10 ms ;
+    RCL_Sensor_Status delay 10 ms ;
+    RCR_Sensor_Status delay 10 ms ;
+    RR_Sensor_Status delay 10 ms ;
+    FL_Sensor_Status delay 10 ms ;
+    FCL_Sensor_Status delay 10 ms ;
+    FCR_Sensor_Status delay 10 ms ;
+    FR_Sensor_Status delay 10 ms ;
+  }
+ SCHEDULER_FRONT_PAS_NORMAL {
+    Master_Cmd delay 80 ms ;
+    FL_Sensor_Status delay 10 ms ;
+    Master_Cmd delay 80 ms ;
+    FR_Sensor_Status delay 10 ms ;
+    Master_Cmd delay 80 ms ;
+    FL_Sensor_Status delay 10 ms ;
+    FCL_Sensor_Status delay 10 ms ;
+    FCR_Sensor_Status delay 10 ms ;
+    Master_Cmd delay 80 ms ;
+    FCL_Sensor_Status delay 10 ms ;
+    FCR_Sensor_Status delay 10 ms ;
+    FR_Sensor_Status delay 10 ms ;
+  }
+ SCHEDULER_PAS_DIAG_IBU {
+    Master_Cmd delay 10 ms ;
+  }
+ SCHEDULER_PAS_DIAG_FL {
+    FL_Sensor_Status delay 10 ms ;
+  }
+ SCHEDULER_PAS_DIAG_FCL {
+    FCL_Sensor_Status delay 10 ms ;
+  }
+ SCHEDULER_PAS_DIAG_FCR {
+    FCR_Sensor_Status delay 10 ms ;
+  }
+ SCHEDULER_PAS_DIAG_FR {
+    FR_Sensor_Status delay 10 ms ;
+  }
+ SCHEDULER_PAS_DIAG_RL {
+    RL_Sensor_Status delay 10 ms ;
+  }
+ SCHEDULER_PAS_DIAG_RCL {
+    RCL_Sensor_Status delay 10 ms ;
+  }
+ SCHEDULER_PAS_DIAG_RCR {
+    RCR_Sensor_Status delay 10 ms ;
+  }
+ SCHEDULER_PAS_DIAG_RR {
+    RR_Sensor_Status delay 10 ms ;
+  }
+ SCHEDULER_RPAS_VER_CHECK {
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+  }
+ SCHEDULER_FPAS_VER_CHECK {
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+  }
+ SCHEDULER_RPAS_TUNNING_WRITE {
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+  }
+ SCHEDULER_RPAS_TEMP_COMP {
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+  }
+ SCHEDULER_FPAS_TUNNING_WRITE {
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+  }
+ SCHEDULER_PAS_TEMP_COMP {
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+    MasterReq delay 15 ms ;
+  }
+ SCHEDULER_PAS_DIAG {
+    MasterReq delay 15 ms ;
+    SlaveResp delay 15 ms ;
+  }
+ SCHEDULER_PAS_SENSOR_REQUEST {
+    MasterReq delay 15 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  FCL_CRC_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  FCL_Ringtime_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  FCL_Sensor_Rx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCL_Sensor_Status_0_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCL_Sensor_Status_1_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCL_Sensor_Status_2_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCL_Sensor_Status_3_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCL_Sensor_Status_4_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCL_Sensor_Status_5_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCL_Sensor_Status_6_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCL_Sensor_Status_7_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCL_Sensor_Tx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCL_TOF_Sig_Type {
+    physical_value, 0, 1023, 1, 0 ;
+  }
+  FCR_CRC_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  FCR_Ringtime_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  FCR_Sensor_Rx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCR_Sensor_Status_0_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCR_Sensor_Status_1_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCR_Sensor_Status_2_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCR_Sensor_Status_3_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCR_Sensor_Status_4_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCR_Sensor_Status_5_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCR_Sensor_Status_6_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCR_Sensor_Status_7_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCR_Sensor_Tx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FCR_TOF_Sig_Type {
+    physical_value, 0, 1023, 1, 0 ;
+  }
+  FL_CRC_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  FL_Ringtime_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  FL_Sensor_Rx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FL_Sensor_Status_0_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FL_Sensor_Status_1_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FL_Sensor_Status_2_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FL_Sensor_Status_3_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FL_Sensor_Status_4_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FL_Sensor_Status_5_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FL_Sensor_Status_6_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FL_Sensor_Status_7_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FL_Sensor_Tx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FL_TOF_Sig_Type {
+    physical_value, 0, 1023, 1, 0 ;
+  }
+  FR_CRC_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  FR_Ringtime_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  FR_Sensor_Rx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FR_Sensor_Status_0_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FR_Sensor_Status_1_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FR_Sensor_Status_2_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FR_Sensor_Status_3_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FR_Sensor_Status_4_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FR_Sensor_Status_5_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FR_Sensor_Status_6_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FR_Sensor_Status_7_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FR_Sensor_Tx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  FR_TOF_Sig_Type {
+    physical_value, 0, 1023, 1, 0 ;
+  }
+  NAD_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  PCI_Type_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  RCL_CRC_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  RCL_Ringtime_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  RCL_Sensor_Rx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCL_Sensor_Status_0_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCL_Sensor_Status_1_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCL_Sensor_Status_2_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCL_Sensor_Status_3_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCL_Sensor_Status_4_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCL_Sensor_Status_5_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCL_Sensor_Status_6_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCL_Sensor_Status_7_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCL_Sensor_Tx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCL_TOF_Sig_Type {
+    physical_value, 0, 1023, 1, 0 ;
+  }
+  RCR_CRC_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  RCR_Ringtime_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  RCR_Sensor_Rx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCR_Sensor_Status_0_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCR_Sensor_Status_1_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCR_Sensor_Status_2_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCR_Sensor_Status_3_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCR_Sensor_Status_4_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCR_Sensor_Status_5_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCR_Sensor_Status_6_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCR_Sensor_Status_7_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCR_Sensor_Tx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RCR_TOF_Sig_Type {
+    physical_value, 0, 1023, 1, 0 ;
+  }
+  RL_CRC_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  RL_Ringtime_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  RL_Sensor_Rx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RL_Sensor_Status_0_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RL_Sensor_Status_1_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RL_Sensor_Status_2_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RL_Sensor_Status_3_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RL_Sensor_Status_4_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RL_Sensor_Status_5_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RL_Sensor_Status_6_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RL_Sensor_Status_7_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RL_Sensor_Tx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RL_TOF_Sig_Type {
+    physical_value, 0, 1023, 1, 0 ;
+  }
+  RR_CRC_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  RR_Ringtime_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  RR_Sensor_Rx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RR_Sensor_Status_0_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RR_Sensor_Status_1_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RR_Sensor_Status_2_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RR_Sensor_Status_3_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RR_Sensor_Status_4_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RR_Sensor_Status_5_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RR_Sensor_Status_6_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RR_Sensor_Status_7_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RR_Sensor_Tx_Sig_Type {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  RR_TOF_Sig_Type {
+    physical_value, 0, 1023, 1, 0 ;
+  }
+  SID_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+}
+
+Signal_representation {
+  FCL_CRC_Sig_Type: FCL_CRC ;
+  FCL_Ringtime_Sig_Type: FCL_Ringtime ;
+  FCL_Sensor_Rx_Sig_Type: FCL_Sensor_Rx ;
+  FCL_Sensor_Status_0_Sig_Type: FCL_Sensor_Status_0 ;
+  FCL_Sensor_Status_1_Sig_Type: FCL_Sensor_Status_1 ;
+  FCL_Sensor_Status_2_Sig_Type: FCL_Sensor_Status_2 ;
+  FCL_Sensor_Status_3_Sig_Type: FCL_Sensor_Status_3 ;
+  FCL_Sensor_Status_4_Sig_Type: FCL_Sensor_Status_4 ;
+  FCL_Sensor_Status_5_Sig_Type: FCL_Sensor_Status_5 ;
+  FCL_Sensor_Status_6_Sig_Type: FCL_Sensor_Status_6 ;
+  FCL_Sensor_Status_7_Sig_Type: FCL_Sensor_Status_7 ;
+  FCL_Sensor_Tx_Sig_Type: FCL_Sensor_Tx ;
+  FCL_TOF_Sig_Type: FCL_TOF ;
+  FCR_CRC_Sig_Type: FCR_CRC ;
+  FCR_Ringtime_Sig_Type: FCR_Ringtime ;
+  FCR_Sensor_Rx_Sig_Type: FCR_Sensor_Rx ;
+  FCR_Sensor_Status_0_Sig_Type: FCR_Sensor_Status_0 ;
+  FCR_Sensor_Status_1_Sig_Type: FCR_Sensor_Status_1 ;
+  FCR_Sensor_Status_2_Sig_Type: FCR_Sensor_Status_2 ;
+  FCR_Sensor_Status_3_Sig_Type: FCR_Sensor_Status_3 ;
+  FCR_Sensor_Status_4_Sig_Type: FCR_Sensor_Status_4 ;
+  FCR_Sensor_Status_5_Sig_Type: FCR_Sensor_Status_5 ;
+  FCR_Sensor_Status_6_Sig_Type: FCR_Sensor_Status_6 ;
+  FCR_Sensor_Status_7_Sig_Type: FCR_Sensor_Status_7 ;
+  FCR_Sensor_Tx_Sig_Type: FCR_Sensor_Tx ;
+  FCR_TOF_Sig_Type: FCR_TOF ;
+  FL_CRC_Sig_Type: FL_CRC ;
+  FL_Ringtime_Sig_Type: FL_Ringtime ;
+  FL_Sensor_Rx_Sig_Type: FL_Sensor_Rx ;
+  FL_Sensor_Status_0_Sig_Type: FL_Sensor_Status_0 ;
+  FL_Sensor_Status_1_Sig_Type: FL_Sensor_Status_1 ;
+  FL_Sensor_Status_2_Sig_Type: FL_Sensor_Status_2 ;
+  FL_Sensor_Status_3_Sig_Type: FL_Sensor_Status_3 ;
+  FL_Sensor_Status_4_Sig_Type: FL_Sensor_Status_4 ;
+  FL_Sensor_Status_5_Sig_Type: FL_Sensor_Status_5 ;
+  FL_Sensor_Status_6_Sig_Type: FL_Sensor_Status_6 ;
+  FL_Sensor_Status_7_Sig_Type: FL_Sensor_Status_7 ;
+  FL_Sensor_Tx_Sig_Type: FL_Sensor_Tx ;
+  FL_TOF_Sig_Type: FL_TOF ;
+  FR_CRC_Sig_Type: FR_CRC ;
+  FR_Ringtime_Sig_Type: FR_Ringtime ;
+  FR_Sensor_Rx_Sig_Type: FR_Sensor_Rx ;
+  FR_Sensor_Status_0_Sig_Type: FR_Sensor_Status_0 ;
+  FR_Sensor_Status_1_Sig_Type: FR_Sensor_Status_1 ;
+  FR_Sensor_Status_2_Sig_Type: FR_Sensor_Status_2 ;
+  FR_Sensor_Status_3_Sig_Type: FR_Sensor_Status_3 ;
+  FR_Sensor_Status_4_Sig_Type: FR_Sensor_Status_4 ;
+  FR_Sensor_Status_5_Sig_Type: FR_Sensor_Status_5 ;
+  FR_Sensor_Status_6_Sig_Type: FR_Sensor_Status_6 ;
+  FR_Sensor_Status_7_Sig_Type: FR_Sensor_Status_7 ;
+  FR_Sensor_Tx_Sig_Type: FR_Sensor_Tx ;
+  FR_TOF_Sig_Type: FR_TOF ;
+  NAD_Sig_Type: NAD ;
+  PCI_Type_Sig_Type: PCI_Type ;
+  RCL_CRC_Sig_Type: RCL_CRC ;
+  RCL_Ringtime_Sig_Type: RCL_Ringtime ;
+  RCL_Sensor_Rx_Sig_Type: RCL_Sensor_Rx ;
+  RCL_Sensor_Status_0_Sig_Type: RCL_Sensor_Status_0 ;
+  RCL_Sensor_Status_1_Sig_Type: RCL_Sensor_Status_1 ;
+  RCL_Sensor_Status_2_Sig_Type: RCL_Sensor_Status_2 ;
+  RCL_Sensor_Status_3_Sig_Type: RCL_Sensor_Status_3 ;
+  RCL_Sensor_Status_4_Sig_Type: RCL_Sensor_Status_4 ;
+  RCL_Sensor_Status_5_Sig_Type: RCL_Sensor_Status_5 ;
+  RCL_Sensor_Status_6_Sig_Type: RCL_Sensor_Status_6 ;
+  RCL_Sensor_Status_7_Sig_Type: RCL_Sensor_Status_7 ;
+  RCL_Sensor_Tx_Sig_Type: RCL_Sensor_Tx ;
+  RCL_TOF_Sig_Type: RCL_TOF ;
+  RCR_CRC_Sig_Type: RCR_CRC ;
+  RCR_Ringtime_Sig_Type: RCR_Ringtime ;
+  RCR_Sensor_Rx_Sig_Type: RCR_Sensor_Rx ;
+  RCR_Sensor_Status_0_Sig_Type: RCR_Sensor_Status_0 ;
+  RCR_Sensor_Status_1_Sig_Type: RCR_Sensor_Status_1 ;
+  RCR_Sensor_Status_2_Sig_Type: RCR_Sensor_Status_2 ;
+  RCR_Sensor_Status_3_Sig_Type: RCR_Sensor_Status_3 ;
+  RCR_Sensor_Status_4_Sig_Type: RCR_Sensor_Status_4 ;
+  RCR_Sensor_Status_5_Sig_Type: RCR_Sensor_Status_5 ;
+  RCR_Sensor_Status_6_Sig_Type: RCR_Sensor_Status_6 ;
+  RCR_Sensor_Status_7_Sig_Type: RCR_Sensor_Status_7 ;
+  RCR_Sensor_Tx_Sig_Type: RCR_Sensor_Tx ;
+  RCR_TOF_Sig_Type: RCR_TOF ;
+  RL_CRC_Sig_Type: RL_CRC ;
+  RL_Ringtime_Sig_Type: RL_Ringtime ;
+  RL_Sensor_Rx_Sig_Type: RL_Sensor_Rx ;
+  RL_Sensor_Status_0_Sig_Type: RL_Sensor_Status_0 ;
+  RL_Sensor_Status_1_Sig_Type: RL_Sensor_Status_1 ;
+  RL_Sensor_Status_2_Sig_Type: RL_Sensor_Status_2 ;
+  RL_Sensor_Status_3_Sig_Type: RL_Sensor_Status_3 ;
+  RL_Sensor_Status_4_Sig_Type: RL_Sensor_Status_4 ;
+  RL_Sensor_Status_5_Sig_Type: RL_Sensor_Status_5 ;
+  RL_Sensor_Status_6_Sig_Type: RL_Sensor_Status_6 ;
+  RL_Sensor_Status_7_Sig_Type: RL_Sensor_Status_7 ;
+  RL_Sensor_Tx_Sig_Type: RL_Sensor_Tx ;
+  RL_TOF_Sig_Type: RL_TOF ;
+  RR_CRC_Sig_Type: RR_CRC ;
+  RR_Ringtime_Sig_Type: RR_Ringtime ;
+  RR_Sensor_Rx_Sig_Type: RR_Sensor_Rx ;
+  RR_Sensor_Status_0_Sig_Type: RR_Sensor_Status_0 ;
+  RR_Sensor_Status_1_Sig_Type: RR_Sensor_Status_1 ;
+  RR_Sensor_Status_2_Sig_Type: RR_Sensor_Status_2 ;
+  RR_Sensor_Status_3_Sig_Type: RR_Sensor_Status_3 ;
+  RR_Sensor_Status_4_Sig_Type: RR_Sensor_Status_4 ;
+  RR_Sensor_Status_5_Sig_Type: RR_Sensor_Status_5 ;
+  RR_Sensor_Status_6_Sig_Type: RR_Sensor_Status_6 ;
+  RR_Sensor_Status_7_Sig_Type: RR_Sensor_Status_7 ;
+  RR_Sensor_Tx_Sig_Type: RR_Sensor_Tx ;
+  RR_TOF_Sig_Type: RR_TOF ;
+  SID_Sig_Type: SID ;
+}

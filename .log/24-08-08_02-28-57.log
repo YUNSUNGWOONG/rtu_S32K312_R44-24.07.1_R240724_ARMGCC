@@ -1,0 +1,757 @@
+C:\ts_mirr\python\Portable_Python_2.7.6.1\App\python.exe C:\ts_mirr\scons\scons-local-2.3.4\scons.py -f.\Build\site_scons\SConstruct Compile -j20
+scons: Reading SConscript files ...
+AutoEver Toolset Version: 2.6.0
+scons: done reading SConscript files.
+scons: Building targets ...
+Compiling 1th file : Rte.c
+Compiling 2th file : NvM_Globals.c
+Compiling 3th file : NvM_IntFunc.c
+Compiling 4th file : NvM_MemIf.c
+Compiling 5th file : NvM_Version.c
+Compiling 6th file : Os_Arch_Context.c
+Compiling 7th file : Os_Arch_Counter.c
+Compiling 8th file : Os_Arch_Idle.c
+Compiling 9th file : Os_Arch_Init.c
+Compiling 10th file : Os_Arch_Interrupt.c
+Compiling 11th file : Os_Arch_MemPro.c
+Compiling 12th file : Os_Arch_Ram.c
+Compiling 13th file : Os_Arch_SystemCall.c
+Compiling 14th file : Os_Arch_Timer.c
+Compiling 15th file : Os_Arch_TimingProtection.c
+Compiling 16th file : Os_Arch_Trap.c
+Compiling 17th file : Os_Config.c
+Compiling 18th file : Os.c
+Compiling 19th file : Os_Alarm.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/src/Os_Arch_Idle.c:50:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+Compiling 20th file : Os_Application.c
+<command-line>: note: this is the location of the previous definition
+Compiling 21th file : Os_Counter.c
+Compiling 22th file : Os_Error.c
+Compiling 23th file : Os_Event.c
+Compiling 24th file : Os_Interrupt.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Timer.h:53,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/src/Os_Arch_Counter.c:53:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/src/Os_Arch_Init.c:52:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/src/Os_Arch_Ram.c:49:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+Compiling 25th file : Os_Ioc.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/src/Os_Arch_MemPro.c:65:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+Compiling 26th file : Os_Kernel.c
+Compiling 27th file : Os_Multicore.c
+Compiling 28th file : Os_MulticoreMessage.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/src/Os_Arch_Context.c:61:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/src/Os_Arch_Context.c:77:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiling 29th file : Os_MulticoreReceive.c
+Compiling 30th file : Os_MulticoreSend.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Timer.h:53,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/src/Os_Arch_Timer.c:60:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+Compiling 31th file : Os_Panic.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/src/Os_Arch_TimingProtection.c:57:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+Compiling 32th file : Os_Peripheral.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/src/Os_Arch_Trap.c:66:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/src/Os_Arch_Trap.c:74:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiling 33th file : Os_Ram.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Application.c:70:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Application.c:73:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Error.c:58:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Error.c:60:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiling 34th file : Os_Resource.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Panic.h:49,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Panic.c:49:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+Compiling 35th file : Os_SchedTable.c
+Compiling 36th file : Os_Shutdown.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Ram.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Ioc.c:65:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Ioc.c:67:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_MulticoreReceive.c:66:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+Compiling 37th file : Os_SpinLock.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Multicore.c:51:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Multicore.c:53:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_MulticoreMessage.c:75:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+Compiling 38th file : Os_Stack.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_MulticoreSend.c:68:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+Compiling 39th file : Os_SystemCallTable.c
+Compiling 40th file : Os_Task.c
+Compiling 41th file : Os_TimingProtection.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Regs.h:56,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Interrupt.h:68,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/src/Os_Arch_Interrupt.c:69:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/src/Os_Arch_Interrupt.c:73:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiling 42th file : PduR_Globals.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Peripheral.c:73:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Peripheral.c:76:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiling 43th file : PduR_Grp.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Counter.c:59:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Counter.c:64:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiling 44th file : PduR_Init.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_SystemCallTable.h:70,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_SystemCallTable.c:55:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+Compiling 45th file : PduR_RxLo.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_SchedTable.c:72:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_SchedTable.c:76:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_SystemCallTable.h:70,
+                 from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/src/Os_Arch_SystemCall.c:52:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Interrupt.c:61:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Interrupt.c:63:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiling 46th file : PduR_RxTp.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Event.c:62:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Event.c:66:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_SpinLock.c:75:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_SpinLock.c:78:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiling 47th file : PduR_TxLo.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Ram.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Ram.c:52:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Shutdown.c:59:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Shutdown.c:62:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiling 48th file : PduR_TxTp.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Kernel.c:85:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Kernel.c:96:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Stack.c:53:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+Compiling 49th file : PduR_TxUp.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_TimingProtection.c:56:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_TimingProtection.c:58:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiling 50th file : PduR_Version.c
+Compiling 51th file : StbM.c
+Compiling 52th file : StbM_Cbk.c
+Compiling 53th file : StbM_Internal.c
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Resource.c:57:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Resource.c:64:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiling 54th file : StbM_Math.c
+Compiling 55th file : StbM_Ram.c
+Compiling 56th file : StbM_Version.c
+Compiling 57th file : Tm.c
+Compiling 58th file : Tm_100us32bit.c
+Compiling 59th file : Tm_1us16bit.c
+Compiling 60th file : Tm_1us24bit.c
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:122,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/src/Rte.c:155:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2183: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2183 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:126,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/src/Rte.c:155:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2186: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2186 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:132,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/src/Rte.c:155:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2183: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2183 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:136,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/src/Rte.c:155:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2186: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2186 |   #pragma alignvar (4)
+      | 
+In file included from Generated/Bsw_Output/src/Rte.c:173:
+Generated/Bsw_Output/inc/Rte_SWC_AppMode.h:189: warning: "Rte_InitValue_modeRequestPort_ComMMode_PNC32_ComMMode_PNC32" redefined
+  189 | #define Rte_InitValue_modeRequestPort_ComMMode_PNC32_ComMMode_PNC32 Rte_InitValue_SWC_AppMode_modeRequestPort_ComMMode_PNC32_ComMMode_PNC32
+      | 
+In file included from Generated/Bsw_Output/src/Rte.c:159:
+Generated/Bsw_Output/inc/Rte_BswM_Partition_Main.h:191: note: this is the location of the previous definition
+  191 | #define Rte_InitValue_modeRequestPort_ComMMode_PNC32_ComMMode_PNC32 Rte_InitValue_BswM_Partition_Main_modeRequestPort_ComMMode_PNC32_ComMMode_PNC32
+      | 
+In file included from Generated/Bsw_Output/src/Rte.c:173:
+Generated/Bsw_Output/inc/Rte_SWC_AppMode.h:190: warning: "Rte_InitValue_modeRequestPort_ComMMode_LIN2_ComMMode_LIN2" redefined
+  190 | #define Rte_InitValue_modeRequestPort_ComMMode_LIN2_ComMMode_LIN2 Rte_InitValue_SWC_AppMode_modeRequestPort_ComMMode_LIN2_ComMMode_LIN2
+      | 
+In file included from Generated/Bsw_Output/src/Rte.c:159:
+Generated/Bsw_Output/inc/Rte_BswM_Partition_Main.h:195: note: this is the location of the previous definition
+  195 | #define Rte_InitValue_modeRequestPort_ComMMode_LIN2_ComMMode_LIN2 Rte_InitValue_BswM_Partition_Main_modeRequestPort_ComMMode_LIN2_ComMMode_LIN2
+      | 
+In file included from Generated/Bsw_Output/src/Rte.c:173:
+Generated/Bsw_Output/inc/Rte_SWC_AppMode.h:191: warning: "Rte_InitValue_modeRequestPort_ComMMode_LIN1_ComMMode_LIN1" redefined
+  191 | #define Rte_InitValue_modeRequestPort_ComMMode_LIN1_ComMMode_LIN1 Rte_InitValue_SWC_AppMode_modeRequestPort_ComMMode_LIN1_ComMMode_LIN1
+      | 
+In file included from Generated/Bsw_Output/src/Rte.c:159:
+Generated/Bsw_Output/inc/Rte_BswM_Partition_Main.h:193: note: this is the location of the previous definition
+  193 | #define Rte_InitValue_modeRequestPort_ComMMode_LIN1_ComMMode_LIN1 Rte_InitValue_BswM_Partition_Main_modeRequestPort_ComMMode_LIN1_ComMMode_LIN1
+      | 
+
+cc1.exe: out of memory allocating 1073745919 bytes
+scons: *** [Debug\Generated\Bsw_Output\src\Rte.o] Error 1
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Alarm.c:72:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Alarm.c:78:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_MulticoreMessage.h:69,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os.c:82:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os.c:84:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_PortTypes.h:58,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Task.c:65:
+Static_Code/Modules/Os_S32K31x_R44/arch/delivery/inc/Os_Arch_Types.h:349: warning: "S32K312" redefined
+  349 | #define S32K312 2
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_Error.h:96,
+                 from Static_Code/Modules/Os_S32K31x_R44/common/delivery/src/Os_Task.c:68:
+Static_Code/Modules/Os_S32K31x_R44/common/delivery/inc/Os_ErrorExternal.h:151:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 | OS_LOCAL_INLINE TrustedFunctionParameterRefType \
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:122,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:41,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_RxLo.c:49:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2183: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2183 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:126,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:41,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_RxLo.c:49:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2186: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2186 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:132,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:41,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_RxLo.c:49:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2183: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2183 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:136,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:41,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_RxLo.c:49:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2186: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2186 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:392,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_RxLo.c:49:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2785: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2785 |   #pragma alignvar (1)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:398,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_RxLo.c:49:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2788: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2788 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:401,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_RxLo.c:49:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2785: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2785 |   #pragma alignvar (1)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:405,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_RxLo.c:49:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2788: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2788 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:409,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_RxLo.c:49:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2785: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2785 |   #pragma alignvar (1)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:413,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_RxLo.c:49:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2788: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2788 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:418,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_RxLo.c:49:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2801: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2801 |   #pragma alignvar (1)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:422,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_RxLo.c:49:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2804: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2804 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:427,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_RxLo.c:49:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2825: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2825 |   #pragma alignvar (1)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:431,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_RxLo.c:49:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2828: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2828 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:122,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:41,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_TxLo.c:50:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2183: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2183 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:126,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:41,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_TxLo.c:50:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2186: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2186 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:132,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:41,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_TxLo.c:50:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2183: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2183 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:136,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:41,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_TxLo.c:50:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2186: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2186 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:392,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_TxLo.c:50:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2785: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2785 |   #pragma alignvar (1)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:398,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_TxLo.c:50:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2788: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2788 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:401,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_TxLo.c:50:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2785: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2785 |   #pragma alignvar (1)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:405,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_TxLo.c:50:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2788: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2788 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:409,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_TxLo.c:50:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2785: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2785 |   #pragma alignvar (1)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:413,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_TxLo.c:50:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2788: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2788 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:418,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_TxLo.c:50:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2801: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2801 |   #pragma alignvar (1)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:422,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_TxLo.c:50:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2804: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2804 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:427,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_TxLo.c:50:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2825: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2825 |   #pragma alignvar (1)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:431,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_TxLo.c:50:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2828: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2828 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:122,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:41,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2183: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2183 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:126,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:41,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2186: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2186 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:132,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:41,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2183: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2183 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:136,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:41,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2186: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2186 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:392,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2785: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2785 |   #pragma alignvar (1)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:398,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2788: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2788 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:401,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2785: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2785 |   #pragma alignvar (1)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:405,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2788: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2788 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:409,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2785: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2785 |   #pragma alignvar (1)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:413,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2788: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2788 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:418,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2801: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2801 |   #pragma alignvar (1)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:422,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2804: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2804 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:427,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2825: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2825 |   #pragma alignvar (1)
+      | 
+In file included from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm_IntTypes.h:431,
+                 from Static_Code/Modules/CanNm_R44/delivery/inc/CanNm.h:50,
+                 from Static_Code/Modules/CanIf_R44/delivery/inc/CanIf.h:93,
+                 from Generated/Bsw_Output/inc/PduR_Incl.h:43,
+                 from Static_Code/Modules/PduR_R44/delivery/src/PduR_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2828: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2828 |   #pragma alignvar (4)
+      | 
+scons: building terminated because of errors.

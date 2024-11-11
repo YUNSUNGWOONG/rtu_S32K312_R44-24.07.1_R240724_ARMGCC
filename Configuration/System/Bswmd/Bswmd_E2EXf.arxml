@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+********************************************************************************
+**                                                                            **
+**                                                                            **
+**                                                                            **
+**  Module        : E2EXf Module                                              **
+**                                                                            **
+**  PURPOSE       : BSW Module Description Template                           **
+**                                                                            **
+**  DESCRIPTION   : This file provides BSW Implementation, BSW Module         **
+**                  Description and API Details specific to E2EXf module and  **
+**                  it's depedent modules.                                    **
+**                                                                            **
+********************************************************************************
+** Version  Date          Initials        Description                         **
+********************************************************************************
+** 1.0.0                                                                      **
+********************************************************************************
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="1eb9abae-b371-49b7-a837-63c6e9540b39">
+      <SHORT-NAME>ArPackage_E2EXf</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION S="">
+          <SHORT-NAME>BswImplementation_E2EXf</SHORT-NAME>
+          <CATEGORY />
+          <SW-VERSION>1.1.0</SW-VERSION>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/ArPackage_E2EXf/E2EXf/BswInternalBehavior_E2EXf</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION>
+          <SHORT-NAME>E2EXf</SHORT-NAME>
+          <MODULE-ID>176</MODULE-ID>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR>
+              <SHORT-NAME>BswInternalBehavior_E2EXf</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="_conversion">
+                    <SDG GID="DISTINGUISHED-PARTITIONS">
+                      <SDG GID="BSW-DISTINGUISHED-PARTITION">
+                        <SDG GID="SHORT-NAME">
+                          <SD GID="_mixed">BswDistinguishedPartition_E2EXf</SD>
+                        </SDG>
+                      </SDG>
+                    </SDG>
+                    <SD GID="_path">DISTINGUISHED-PARTITIONS@3/</SD>
+                    <SD GID="_target">org.artop.aal.autosar411</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <ENTITYS>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCalledEntity_1</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_E2EXf/E2EXf_Inv_Com_ComISignalGroup_MsgGr_E2E_FD_CAN1_BSD_01_50ms_P11</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCalledEntity_2</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_E2EXf/E2EXf_Com_ComISignalGroup_MsgGr_E2E_FD_CAN1_TCU_01_10ms_P11</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+              </ENTITYS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+        <BSW-MODULE-ENTRY UUID="9516f9e9-1c8c-41f4-9159-b6e06c6a34cf">
+          <SHORT-NAME>E2EXf_Inv_Com_ComISignalGroup_MsgGr_E2E_FD_CAN1_BSD_01_50ms_P11</SHORT-NAME>
+          <SERVICE-ID>4</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="4399f07b-62c0-4b59-aeec-83038df7df95">
+          <SHORT-NAME>E2EXf_Com_ComISignalGroup_MsgGr_E2E_FD_CAN1_TCU_01_10ms_P11</SHORT-NAME>
+          <SERVICE-ID>3</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

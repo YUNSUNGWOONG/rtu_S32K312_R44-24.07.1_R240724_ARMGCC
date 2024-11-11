@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <!--
+********************************************************************************
+**                                                                            **
+**  PRODUCT   :    AUTOSAR COM Based Transformer Module                       **
+**                                                                            **
+**  PURPOSE   :    BSW MD for COMXF                                           **
+**                                                                            **
+*******************************************************************************/
+
+/*******************************************************************************
+**                              Change History                                **
+********************************************************************************
+** Revision         Date         Author         Description                   **
+********************************************************************************
+**                                                                            **
+*******************************************************************************/
+-->
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ArPackage_Xfrm</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION S="" UUID="96266e68-81e5-4955-af9a-01db17e853e8">
+          <SHORT-NAME>BswImplementation_ComXf</SHORT-NAME>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>1.0.11</SW-VERSION>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/ArPackage_Xfrm/ComXf/BswInternalBehavior_ComXf</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION>
+          <SHORT-NAME>ComXf</SHORT-NAME>
+          <MODULE-ID>175</MODULE-ID>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR UUID="640d9758-8d43-41b0-be37-31542cbf913e">
+              <SHORT-NAME>BswInternalBehavior_ComXf</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="_conversion">
+                    <SDG GID="DISTINGUISHED-PARTITIONS">
+                      <SDG GID="BSW-DISTINGUISHED-PARTITION">
+                        <SDG GID="SHORT-NAME">
+                          <SD GID="_mixed">BswDistinguishedPartition_ComXf</SD>
+                        </SDG>
+                      </SDG>
+                    </SDG>
+                    <SD GID="_path">DISTINGUISHED-PARTITIONS@3/</SD>
+                    <SD GID="_target">org.artop.aal.autosar411</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <ENTITYS>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCalledEntity_1</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_Xfrm/ComXf_Inv_Com_ComISignalGroup_MsgGr_E2E_FD_CAN1_BSD_01_50ms_P11</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCalledEntity_2</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_Xfrm/ComXf_Com_ComISignalGroup_MsgGr_E2E_FD_CAN1_TCU_01_10ms_P11</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+              </ENTITYS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+        <BSW-MODULE-ENTRY UUID="ac32ec2b-64ee-4356-a7da-6b22cf8dffa0">
+          <SHORT-NAME>ComXf_Inv_Com_ComISignalGroup_MsgGr_E2E_FD_CAN1_BSD_01_50ms_P11</SHORT-NAME>
+          <SERVICE-ID>4</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="fcfefe48-b6fd-4240-bfe7-f34e193c4446">
+          <SHORT-NAME>ComXf_Com_ComISignalGroup_MsgGr_E2E_FD_CAN1_TCU_01_10ms_P11</SHORT-NAME>
+          <SERVICE-ID>3</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

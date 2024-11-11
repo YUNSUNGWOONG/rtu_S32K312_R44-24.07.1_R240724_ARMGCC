@@ -1,0 +1,35 @@
+#define SchM_Enter_Wdg_WDG_EXCLUSIVE_AREA_00() SchM_Enter_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_00()
+#define SchM_Exit_Wdg_WDG_EXCLUSIVE_AREA_00() SchM_Exit_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_00()
+
+#define SchM_Enter_Wdg_WDG_EXCLUSIVE_AREA_01() SchM_Enter_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_01()
+#define SchM_Exit_Wdg_WDG_EXCLUSIVE_AREA_01() SchM_Exit_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_01()
+
+#define SchM_Enter_Wdg_WDG_EXCLUSIVE_AREA_02() SchM_Enter_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_02()
+#define SchM_Exit_Wdg_WDG_EXCLUSIVE_AREA_02() SchM_Exit_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_02()
+
+#define SchM_Enter_Wdg_WDG_EXCLUSIVE_AREA_03() SchM_Enter_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_03()
+#define SchM_Exit_Wdg_WDG_EXCLUSIVE_AREA_03() SchM_Exit_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_03()
+
+#define SchM_Enter_Wdg_WDG_EXCLUSIVE_AREA_04() SchM_Enter_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_04()
+#define SchM_Exit_Wdg_WDG_EXCLUSIVE_AREA_04() SchM_Exit_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_04()
+
+#define SchM_Enter_Wdg_WDG_EXCLUSIVE_AREA_05() SchM_Enter_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_05()
+#define SchM_Exit_Wdg_WDG_EXCLUSIVE_AREA_05() SchM_Exit_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_05()
+
+#define SchM_Enter_Wdg_WDG_EXCLUSIVE_AREA_06() SchM_Enter_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_06()
+#define SchM_Exit_Wdg_WDG_EXCLUSIVE_AREA_06() SchM_Exit_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_06()
+
+#define SchM_Enter_Wdg_WDG_EXCLUSIVE_AREA_07() SchM_Enter_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_07()
+#define SchM_Exit_Wdg_WDG_EXCLUSIVE_AREA_07() SchM_Exit_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_07()
+
+#define SchM_Enter_Wdg_WDG_EXCLUSIVE_AREA_08() SchM_Enter_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_08()
+#define SchM_Exit_Wdg_WDG_EXCLUSIVE_AREA_08() SchM_Exit_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_08()
+
+#define SchM_Enter_Wdg_WDG_EXCLUSIVE_AREA_09() SchM_Enter_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_09()
+#define SchM_Exit_Wdg_WDG_EXCLUSIVE_AREA_09() SchM_Exit_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_09()
+
+#define SchM_Enter_Wdg_WDG_EXCLUSIVE_AREA_10() SchM_Enter_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_10()
+#define SchM_Exit_Wdg_WDG_EXCLUSIVE_AREA_10() SchM_Exit_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_10()
+
+#define SchM_Enter_Wdg_WDG_EXCLUSIVE_AREA_11() SchM_Enter_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_11()
+#define SchM_Exit_Wdg_WDG_EXCLUSIVE_AREA_11() SchM_Exit_Wdg_43_Instance0_WDG_EXCLUSIVE_AREA_11()

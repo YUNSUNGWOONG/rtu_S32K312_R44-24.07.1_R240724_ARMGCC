@@ -1,0 +1,2615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="f67b8c25-2d90-4bdf-86cf-80ea79a06107">
+      <SHORT-NAME>Svc_StbM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="0e6776b4-2357-4591-8380-e6bfab1be8b1">
+          <SHORT-NAME>ClientServerInterfaces</SHORT-NAME>
+          <ELEMENTS>
+            <CLIENT-SERVER-INTERFACE UUID="fe1119c3-f2e9-42e9-a0b1-a9832dbb6985">
+              <SHORT-NAME>GlobalTime_Master_CertTime</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION UUID="f1c5088b-0b35-4206-b57c-543911468043">
+                  <SHORT-NAME>GetMasterConfig</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="4c0df2e5-6a03-415b-9c95-60a114873ee8">
+                      <SHORT-NAME>masterConfig</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_MasterConfigType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="a863c911-63b1-494e-8d5e-8a356e1f8f1e">
+                  <SHORT-NAME>SetGlobalTime</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="57f84e71-54fc-4dbc-837e-5360b85d77e3">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="09d283dd-859b-4297-bd5a-867d1139cb2f">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="bddec3c6-b9ca-4408-82db-ab9b53527217">
+                  <SHORT-NAME>SetRateCorrection</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="51d0c505-58b5-401d-99b1-0c97648d2d30">
+                      <SHORT-NAME>rateDeviation</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_RateDeviationType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="42029cda-0ac5-48b6-aaae-b6b93f844841">
+                  <SHORT-NAME>SetUserData</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="3b32f785-b954-40e3-bffc-c9796bf415a9">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="ac9ed116-4624-49d4-b47b-4e20f7847ea6">
+                  <SHORT-NAME>TriggerTimeTransmission</SHORT-NAME>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="8a3faf1a-9de0-452f-bfa9-c12769e6615c">
+                  <SHORT-NAME>UpdateGlobalTime</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="5c968059-0dd2-4415-9256-8f826f0a5d84">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="855ca0c1-b00c-47dc-bc46-2348c68005ec">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR UUID="379fbba4-1493-4217-964f-e4930be3c814">
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+                <APPLICATION-ERROR UUID="4c84ab96-415d-4317-b25e-2deac63cb668">
+                  <SHORT-NAME>E_OK</SHORT-NAME>
+                  <ERROR-CODE>0</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE UUID="37e3f24c-5f48-49cf-987d-17954e270743">
+              <SHORT-NAME>GlobalTime_Master_Offset0</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION UUID="096cf797-e891-48f6-8fc0-99c38c4d9d93">
+                  <SHORT-NAME>GetMasterConfig</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="cb24a3c8-bb83-4d3c-a582-b04488879284">
+                      <SHORT-NAME>masterConfig</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_MasterConfigType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="334edeee-92e5-40a1-beac-5d4a0880ce19">
+                  <SHORT-NAME>SetGlobalTime</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="928d15d3-7d23-4cfc-810c-286047992b4d">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="2f12297a-aed9-43b2-bb4e-de585cc3fa26">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="e52d0f6f-64b8-466f-8786-fdf9ba15d3e2">
+                  <SHORT-NAME>SetOffset</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="c7887a7e-2690-4c6d-8c82-34681ef910aa">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="471aee18-db4e-4976-b155-aca7043652cf">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="8744e3ad-ec90-49ec-8168-80a236df5709">
+                  <SHORT-NAME>SetRateCorrection</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="5f6cb5bc-9dee-41ca-a9fa-4aaf4d1812be">
+                      <SHORT-NAME>rateDeviation</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_RateDeviationType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="d5514853-4615-4f29-99a0-b3f2936ef964">
+                  <SHORT-NAME>SetUserData</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="5582d65e-f66c-4c3b-8ae1-95e629fdba14">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="e733cc4f-a4f5-4f2f-9ad3-dfb878da61af">
+                  <SHORT-NAME>TriggerTimeTransmission</SHORT-NAME>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="1c095cd8-0010-43a2-a630-26b04084f9e4">
+                  <SHORT-NAME>UpdateGlobalTime</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="96ceb356-dd1c-4b49-9a78-472a6dfb39f0">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="1a0d2fc9-e77a-45a0-9865-9efe8d7f7a89">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR UUID="ef793fa6-53ad-4006-8352-4b1dc64305dd">
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+                <APPLICATION-ERROR UUID="2adbb605-bf85-40c1-b041-003907f11c5e">
+                  <SHORT-NAME>E_OK</SHORT-NAME>
+                  <ERROR-CODE>0</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE UUID="74ea27c4-3287-4764-b80e-fbe8d713f588">
+              <SHORT-NAME>GlobalTime_Master_Provider0</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION UUID="f2ef7f11-1d2a-4e3e-9d66-fd8be901f3b3">
+                  <SHORT-NAME>GetMasterConfig</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="932241c3-d1a3-4231-939c-841534f64db2">
+                      <SHORT-NAME>masterConfig</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_MasterConfigType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="d79b98b2-6602-4716-806c-7acdb8bb2a3f">
+                  <SHORT-NAME>SetGlobalTime</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="893bca08-bf47-41ca-b403-9756acea8592">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="cda7733f-b5d3-4111-95fc-b5720f84e3ee">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="71bb7491-c353-438e-9304-b20348a74864">
+                  <SHORT-NAME>SetRateCorrection</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="8ea48556-548b-45b3-af60-88153aea39a0">
+                      <SHORT-NAME>rateDeviation</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_RateDeviationType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="45018fd1-0d03-4e40-ad6b-2caf42a494d1">
+                  <SHORT-NAME>SetUserData</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="ce007fcf-0128-496d-9614-358d835b705a">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="65ca3500-c2ab-42e8-8a32-e4275d49c74d">
+                  <SHORT-NAME>TriggerTimeTransmission</SHORT-NAME>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="e26acfe5-b8f1-43e4-80ab-1dea84363c3b">
+                  <SHORT-NAME>UpdateGlobalTime</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="5fcbd50b-7ec6-491b-87f0-2cd1817a33b9">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="e1e9caf1-2015-4eaa-a0b0-2048ab09361d">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR UUID="66f5a037-614d-46fb-87e0-4d6a57efdcf5">
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+                <APPLICATION-ERROR UUID="e5e2cf8b-8c9f-49a4-94d0-48364d2b5340">
+                  <SHORT-NAME>E_OK</SHORT-NAME>
+                  <ERROR-CODE>0</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE UUID="1289dca0-319e-4cef-b8f4-9c6e4a640ea0">
+              <SHORT-NAME>GlobalTime_Master_Provider1</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION UUID="2b46f1f5-cdae-4dcb-8c49-c8f96dbbdc66">
+                  <SHORT-NAME>GetMasterConfig</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="3ae13273-b0a9-4ffb-83e6-366859c73dd6">
+                      <SHORT-NAME>masterConfig</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_MasterConfigType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="04414922-4873-4647-bae9-a5a36ec6627a">
+                  <SHORT-NAME>SetGlobalTime</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="a7748ea6-1333-4ea3-bc21-991accbfd73e">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="2e502d94-876b-478d-9e14-48ba20fb7e8c">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="0b439cd5-cede-46c2-912d-ef31ecdff202">
+                  <SHORT-NAME>SetRateCorrection</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="f86d2177-a365-477c-996b-a9776e7c277d">
+                      <SHORT-NAME>rateDeviation</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_RateDeviationType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="9357b4b4-a1b2-4d8f-b4ba-69790e8ffe17">
+                  <SHORT-NAME>SetUserData</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="d65f7a52-eb78-4e20-bc9f-fd317fbd1a10">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="56b1edf3-9079-4c39-bf2d-7cbfb5763152">
+                  <SHORT-NAME>TriggerTimeTransmission</SHORT-NAME>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="1ad773d9-856a-4bca-8f5e-406f38cb1698">
+                  <SHORT-NAME>UpdateGlobalTime</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="c25f1e15-25cc-42ce-939e-fa0346befc72">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="f38fc337-9abc-4d6a-9b20-2d3a515f48f0">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR UUID="11d00ac2-eaf3-4c22-a188-a85784e017ba">
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+                <APPLICATION-ERROR UUID="ba120dc4-20a3-478e-8891-934550d74545">
+                  <SHORT-NAME>E_OK</SHORT-NAME>
+                  <ERROR-CODE>0</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE UUID="d2ae50e8-e0f2-45b8-8cfc-96d62b6b8848">
+              <SHORT-NAME>GlobalTime_Slave_CertTime</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION UUID="55f6dc08-1e12-42e4-98ad-62691f27d8b8">
+                  <SHORT-NAME>GetCurrentTime</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="b9985071-2a69-4bf8-a187-25de09f11fe1">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="402457d0-bad7-4d16-923d-03f17c841fde">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="1f2d4ea2-eb51-40dc-afe8-7184c0a20aa3">
+                  <SHORT-NAME>GetCurrentTimeExtended</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="8bc0d49c-a4b7-4f14-bbec-de616b1249c6">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampExtendedType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="d434eba6-7c05-484b-a866-fe1058eff770">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="2ceda9cc-b1df-45ef-8288-ef8b573da25c">
+                  <SHORT-NAME>GetRateDeviation</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="e1d51520-397b-4b6b-93cf-08d1364cc0d4">
+                      <SHORT-NAME>rateDeviation</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_RateDeviationType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="79840385-7abf-4885-a87c-25e51eeb791b">
+                  <SHORT-NAME>GetTimeBaseStatus</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="a36e93c7-238a-4566-8c56-aeceab288ad1">
+                      <SHORT-NAME>syncTimeBaseStatus</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeBaseStatusType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="e0cac81d-82d9-4954-95af-4a1cd97c0b44">
+                      <SHORT-NAME>offsetTimeBaseStatus</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeBaseStatusType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="a0093495-f012-49bb-aea1-7cea67e41ed6">
+                  <SHORT-NAME>GetTimeLeap</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="121caba5-8fa4-49e8-95bc-d35cde7df8ab">
+                      <SHORT-NAME>timeJump</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeDiffType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR UUID="33e2952b-b28d-40fa-a135-311ddb827dc8">
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+                <APPLICATION-ERROR UUID="2fed385d-9e20-4d24-8d70-b34a0ec9340c">
+                  <SHORT-NAME>E_OK</SHORT-NAME>
+                  <ERROR-CODE>0</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE UUID="120dba83-4df7-48a0-ac2f-c7c00cc1fc17">
+              <SHORT-NAME>GlobalTime_Slave_Client0</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION UUID="e0eddb6e-d249-486f-82e8-0bd75f8f5655">
+                  <SHORT-NAME>GetCurrentTime</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="1292f772-de77-4d8b-b68d-99ea4f2ecde0">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="209595b3-5419-4f10-9adc-35284c8dd20a">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="b594636d-be23-4867-8ac7-6e1dc6e3f91a">
+                  <SHORT-NAME>GetCurrentTimeExtended</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="c92fb1ac-19f7-4292-ae4e-85d311e8ee3e">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampExtendedType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="567dedb0-9b5e-4aea-ad91-3912e6af031f">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="8a4728ba-5331-489a-86e0-8978d739ff9a">
+                  <SHORT-NAME>GetRateDeviation</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="c2babd10-41d8-4153-b466-8784813255fe">
+                      <SHORT-NAME>rateDeviation</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_RateDeviationType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="ad5b35f2-ee91-4ed9-a4ef-b64c3d276ec6">
+                  <SHORT-NAME>GetSyncTimeRecordHead</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="034665df-e895-4197-9eb0-b72ed14c0124">
+                      <SHORT-NAME>syncRecordTableHead</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_SyncRecordTableHeadType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="e2e284b0-ec87-42fe-8325-0402fb72becd">
+                  <SHORT-NAME>GetTimeBaseStatus</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="8a5cc401-0fef-413e-9395-784c875e8fcd">
+                      <SHORT-NAME>syncTimeBaseStatus</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeBaseStatusType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="338eea9e-6410-4acc-8269-d6772eb22102">
+                      <SHORT-NAME>offsetTimeBaseStatus</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeBaseStatusType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="7bdbc999-39eb-446d-aac4-93e98e3ce77e">
+                  <SHORT-NAME>GetTimeLeap</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="5fbf6836-e363-45b3-bb9d-813cd5552689">
+                      <SHORT-NAME>timeJump</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeDiffType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR UUID="a8796f78-cb02-44a0-adcb-6a87e1703e49">
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+                <APPLICATION-ERROR UUID="1af0fc49-1943-4b03-b132-f5ef60540129">
+                  <SHORT-NAME>E_OK</SHORT-NAME>
+                  <ERROR-CODE>0</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE UUID="39bd9d3a-e1bc-444c-bba7-acfb5473eac4">
+              <SHORT-NAME>GlobalTime_Slave_Offset0</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION UUID="80f5b76a-d99f-4fee-b9c5-298b76dd058a">
+                  <SHORT-NAME>GetCurrentTime</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="c6b593d3-77d7-422c-ad39-28ff03d8ed5e">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="8c4362a9-a457-4f2f-8127-401313f51f3e">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="eab17f41-2b74-4385-8c03-29c60bc9c0ac">
+                  <SHORT-NAME>GetCurrentTimeExtended</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="c6d3a93f-fa2d-44bf-8616-1917a1f62327">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampExtendedType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="08180346-80ac-405c-a2e6-29252bc46c6e">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="dcba1af2-5c9c-45e7-8837-5fadc8361ee4">
+                  <SHORT-NAME>GetRateDeviation</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="510e146a-ce11-47ed-a6d5-f924bd4788d0">
+                      <SHORT-NAME>rateDeviation</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_RateDeviationType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="96d27789-690c-4d57-9209-06ce57f92594">
+                  <SHORT-NAME>GetTimeBaseStatus</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="d2fed63c-188b-4fc0-9bf4-61f89ebde430">
+                      <SHORT-NAME>syncTimeBaseStatus</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeBaseStatusType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="90da8513-e925-4495-a09a-e08f89da9055">
+                      <SHORT-NAME>offsetTimeBaseStatus</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeBaseStatusType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="e2ce3949-b970-4e48-99ec-2d39cecf7fa1">
+                  <SHORT-NAME>GetTimeLeap</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="14fe0838-8875-4391-9a32-bc0abd7b6b31">
+                      <SHORT-NAME>timeJump</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeDiffType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR UUID="ed332962-57e7-4290-80dc-c7f8e3ad4728">
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+                <APPLICATION-ERROR UUID="403f6a86-efdc-4430-9752-9f70a3fb7a38">
+                  <SHORT-NAME>E_OK</SHORT-NAME>
+                  <ERROR-CODE>0</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE UUID="d5635626-c018-42b0-80c2-8ffd47a6df39">
+              <SHORT-NAME>GlobalTime_Slave_Provider0</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION UUID="470d01ac-aeaa-4139-ad58-af8f02e2042d">
+                  <SHORT-NAME>GetCurrentTime</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="0a0de7cc-c7ac-4d2c-8f84-f2a1c876eb37">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="e1855bdc-86aa-4df6-b1e3-c167587553d4">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="56dae21f-d889-4fc6-b053-da44aaf477ae">
+                  <SHORT-NAME>GetCurrentTimeExtended</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="567eb4aa-c859-4188-9399-8f3b92c67cda">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampExtendedType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="28048058-7906-45f3-9596-47a1a5ebd60e">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="374ac3c8-94ef-4bb6-b23f-69675d6a6668">
+                  <SHORT-NAME>GetRateDeviation</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="0ffb7830-5d3d-4ea8-984a-5d16426666f1">
+                      <SHORT-NAME>rateDeviation</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_RateDeviationType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="09a8780d-864e-492f-9ebe-93dff599ebd4">
+                  <SHORT-NAME>GetTimeBaseStatus</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="36481301-566f-4148-92e8-2de766a98354">
+                      <SHORT-NAME>syncTimeBaseStatus</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeBaseStatusType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="cd3691a7-9051-42a3-b9d2-24eb9b9b346c">
+                      <SHORT-NAME>offsetTimeBaseStatus</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeBaseStatusType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="15be0ae6-9da4-4ca0-b703-922209420dab">
+                  <SHORT-NAME>GetTimeLeap</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="d6f46cfa-8b5a-4c00-ae13-b3081d896769">
+                      <SHORT-NAME>timeJump</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeDiffType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR UUID="418f706e-801e-4de6-aebf-7a6a3331ce73">
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+                <APPLICATION-ERROR UUID="a8dc2cdc-7748-4a26-bdca-128a97d32621">
+                  <SHORT-NAME>E_OK</SHORT-NAME>
+                  <ERROR-CODE>0</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE UUID="edff89ac-884c-4e77-bde3-64f5b772b01c">
+              <SHORT-NAME>GlobalTime_Slave_Provider1</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION UUID="622b5cdd-d0d6-4dd1-b3e6-8c48aff945a4">
+                  <SHORT-NAME>GetCurrentTime</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="a3b8bb16-eab2-45fd-981f-404858d0db84">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="caf0f84b-d491-430d-b963-fe3211ffee7d">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="d6e068f4-015c-45df-83d1-469352be331c">
+                  <SHORT-NAME>GetCurrentTimeExtended</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="e59dfe25-1b9e-455a-9d5b-b45ac455a413">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampExtendedType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="49a92eba-28af-4f41-83a6-c998e3006024">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_UserDataType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="0a40a375-ea74-4bd2-876f-fc6607c0e93a">
+                  <SHORT-NAME>GetRateDeviation</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="1f0bb467-780e-46ed-a235-956d1ef00763">
+                      <SHORT-NAME>rateDeviation</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_RateDeviationType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="03c9c8dc-1c2c-43bc-a1e7-9daaa1b9ac3e">
+                  <SHORT-NAME>GetTimeBaseStatus</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="350f48fe-ec7d-4c5e-afa2-a4ac51fe373b">
+                      <SHORT-NAME>syncTimeBaseStatus</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeBaseStatusType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="8c0b7059-252e-416c-b508-4f69ef257fda">
+                      <SHORT-NAME>offsetTimeBaseStatus</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeBaseStatusType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="8df771df-de1c-4a31-9de4-c1ec48851682">
+                  <SHORT-NAME>GetTimeLeap</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="27c7936f-3f77-4cd0-ab15-b338c80ed8b7">
+                      <SHORT-NAME>timeJump</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeDiffType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR UUID="e83730f7-6250-467e-80bb-fd6b91bc518c">
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+                <APPLICATION-ERROR UUID="8f3967aa-1aa2-46cd-b19c-57aa3e09e926">
+                  <SHORT-NAME>E_OK</SHORT-NAME>
+                  <ERROR-CODE>0</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE UUID="0aef4b2d-15aa-4fcd-852f-9a15d9445ff2">
+              <SHORT-NAME>MeasurementNotification_Client0</SHORT-NAME>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION UUID="8cca7e40-e05e-47f1-8a26-81eeffad7ade">
+                  <SHORT-NAME>SetSyncTimeRecordTable</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="5296f5d2-b749-4e27-a739-7ce200da4978">
+                      <SHORT-NAME>syncRecordTableBlock</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_SyncRecordTableBlockType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/MeasurementNotification_Client0/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/MeasurementNotification_Client0/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR UUID="a4b66f55-f662-4888-a3b5-7e85ad151ab7">
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+                <APPLICATION-ERROR UUID="af657e1c-4dc9-4bb2-8f08-1d86b9ec07c9">
+                  <SHORT-NAME>E_OK</SHORT-NAME>
+                  <ERROR-CODE>0</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE UUID="f24802a9-e085-4c5f-af59-41b0131c2ce6">
+              <SHORT-NAME>StartTimer</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>StartTimer</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>expireTime</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeStampType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/StartTimer/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/StartTimer/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR>
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+                <APPLICATION-ERROR UUID="2caba78d-29de-42ef-a5fa-ae42f6399563">
+                  <SHORT-NAME>E_OK</SHORT-NAME>
+                  <ERROR-CODE>0</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE UUID="73979905-2f35-4c6d-ba6f-171cc0f6ad4a">
+              <SHORT-NAME>TimeNotification</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>NotifyTime</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>deviationTime</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeDiffType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/TimeNotification/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_StbM/ClientServerInterfaces/TimeNotification/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR>
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+                <APPLICATION-ERROR UUID="2caba78d-29de-42ef-a5fa-ae42f6399563">
+                  <SHORT-NAME>E_OK</SHORT-NAME>
+                  <ERROR-CODE>0</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="ce429f46-a771-4b5f-90ee-24101ee441d6">
+          <SHORT-NAME>CompuMethods</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="ac3f0d5c-6914-46a8-871d-8234ab600472">
+          <SHORT-NAME>DataConstrs</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="21b2b4bb-10a2-4e09-a284-da7fecf286ab">
+          <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+          <ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE UUID="0a03f010-1fcd-41a0-8d31-77cc72b2293c">
+              <SHORT-NAME>StbM_CustomerIdType</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint16</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+              <IS-STRUCT-WITH-OPTIONAL-ELEMENT>false</IS-STRUCT-WITH-OPTIONAL-ELEMENT>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="8bc53beb-feb5-47e6-8125-1c5a8976641b">
+              <SHORT-NAME>StbM_MasterConfigType</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+              <IS-STRUCT-WITH-OPTIONAL-ELEMENT>false</IS-STRUCT-WITH-OPTIONAL-ELEMENT>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="7b90bb0c-124a-41c8-baf4-c3c79645e84b">
+              <SHORT-NAME>StbM_OffsetRecordTableBlockType</SHORT-NAME>
+              <CATEGORY>STRUCTURE</CATEGORY>
+              <IS-STRUCT-WITH-OPTIONAL-ELEMENT>true</IS-STRUCT-WITH-OPTIONAL-ELEMENT>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="bf34b37e-c1d9-4358-ac8d-6471f62844ef">
+                  <SHORT-NAME>GlbSeconds</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="06c09bdf-616d-4d36-8618-e87ad577d966">
+                  <SHORT-NAME>GlbNanoSeconds</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="97919f40-161f-43db-87bf-1f710e102de0">
+                  <SHORT-NAME>TimeBaseStatus</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="3118dcee-2c2f-4fc3-b88e-b462dcd3e5fe">
+              <SHORT-NAME>StbM_OffsetRecordTableHeadType</SHORT-NAME>
+              <CATEGORY>STRUCTURE</CATEGORY>
+              <IS-STRUCT-WITH-OPTIONAL-ELEMENT>true</IS-STRUCT-WITH-OPTIONAL-ELEMENT>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="bf34b37e-c1d9-4358-ac8d-6471f62844ef">
+                  <SHORT-NAME>OffsetTimeDomain</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="7cd847e7-31ae-404e-824a-4f60852f0e6e">
+              <SHORT-NAME>StbM_RateDeviationType</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/sint16</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+              <IS-STRUCT-WITH-OPTIONAL-ELEMENT>false</IS-STRUCT-WITH-OPTIONAL-ELEMENT>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="7417834a-3692-47df-a0d3-6ad6f51e57d5">
+              <SHORT-NAME>StbM_SyncRecordTableBlockType</SHORT-NAME>
+              <CATEGORY>STRUCTURE</CATEGORY>
+              <IS-STRUCT-WITH-OPTIONAL-ELEMENT>true</IS-STRUCT-WITH-OPTIONAL-ELEMENT>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="bf34b37e-c1d9-4358-ac8d-6471f62844ef">
+                  <SHORT-NAME>GlbSeconds</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="06c09bdf-616d-4d36-8618-e87ad577d966">
+                  <SHORT-NAME>GlbNanoSeconds</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="97919f40-161f-43db-87bf-1f710e102de0">
+                  <SHORT-NAME>TimeBaseStatus</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="8c8403c3-ccc9-47ba-84a7-1a535d47fd35">
+                  <SHORT-NAME>VirtualLocalTimeLow</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="3d7ef6f3-c65f-490b-93b7-54da8e087626">
+                  <SHORT-NAME>RateDeviation</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/sint16</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="f364b5a6-632d-413c-a028-d71132d88c4d">
+                  <SHORT-NAME>LocSeconds</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="35f39803-1248-4cad-a628-521c89f457f1">
+                  <SHORT-NAME>LocNanoSeconds</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="87a273f2-7d22-4f8e-84a6-28a3c4110cfe">
+                  <SHORT-NAME>PathDelay</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="98e13756-1211-4693-9b5b-4416178f6bd9">
+              <SHORT-NAME>StbM_SyncRecordTableHeadType</SHORT-NAME>
+              <CATEGORY>STRUCTURE</CATEGORY>
+              <IS-STRUCT-WITH-OPTIONAL-ELEMENT>true</IS-STRUCT-WITH-OPTIONAL-ELEMENT>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="bf34b37e-c1d9-4358-ac8d-6471f62844ef">
+                  <SHORT-NAME>SynchronizedTimeDomain</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="06c09bdf-616d-4d36-8618-e87ad577d966">
+                  <SHORT-NAME>HWfrequency</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="97919f40-161f-43db-87bf-1f710e102de0">
+                  <SHORT-NAME>HWprescaler</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="7965be7f-7eb1-4495-aa5d-227e9436a9f4">
+              <SHORT-NAME>StbM_SynchronizedTimeBaseType</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint16</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+              <IS-STRUCT-WITH-OPTIONAL-ELEMENT>false</IS-STRUCT-WITH-OPTIONAL-ELEMENT>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="d51a5fa7-c92b-4d4d-8cd3-ce7898732895">
+              <SHORT-NAME>StbM_TimeBaseNotificationType</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+              <IS-STRUCT-WITH-OPTIONAL-ELEMENT>false</IS-STRUCT-WITH-OPTIONAL-ELEMENT>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="8cf239d7-bc52-457d-aabf-708cd871fffd">
+              <SHORT-NAME>StbM_TimeBaseStatusType</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+              <IS-STRUCT-WITH-OPTIONAL-ELEMENT>false</IS-STRUCT-WITH-OPTIONAL-ELEMENT>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="e26e5207-b1bb-49c1-a986-506341205c05">
+              <SHORT-NAME>StbM_TimeDiffType</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/sint32</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+              <IS-STRUCT-WITH-OPTIONAL-ELEMENT>false</IS-STRUCT-WITH-OPTIONAL-ELEMENT>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="06653f56-be39-4707-9791-e3f6b6b88176">
+              <SHORT-NAME>StbM_TimeStampExtendedType</SHORT-NAME>
+              <CATEGORY>STRUCTURE</CATEGORY>
+              <IS-STRUCT-WITH-OPTIONAL-ELEMENT>true</IS-STRUCT-WITH-OPTIONAL-ELEMENT>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="9313f617-8bc9-4ef9-bef0-64e1227f6c4c">
+                  <SHORT-NAME>timeBaseStatus</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="bf34b37e-c1d9-4358-ac8d-6471f62844ef">
+                  <SHORT-NAME>nanoseconds</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="06c09bdf-616d-4d36-8618-e87ad577d966">
+                  <SHORT-NAME>seconds</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint64</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="54b6e72f-d4bf-4375-b764-2650f452a765">
+              <SHORT-NAME>StbM_TimeStampType</SHORT-NAME>
+              <CATEGORY>STRUCTURE</CATEGORY>
+              <IS-STRUCT-WITH-OPTIONAL-ELEMENT>true</IS-STRUCT-WITH-OPTIONAL-ELEMENT>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="9313f617-8bc9-4ef9-bef0-64e1227f6c4c">
+                  <SHORT-NAME>timeBaseStatus</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="bf34b37e-c1d9-4358-ac8d-6471f62844ef">
+                  <SHORT-NAME>nanoseconds</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="06c09bdf-616d-4d36-8618-e87ad577d966">
+                  <SHORT-NAME>seconds</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="97919f40-161f-43db-87bf-1f710e102de0">
+                  <SHORT-NAME>secondsHi</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint16</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="73da14bd-84e7-44cf-8760-c24988dc888d">
+              <SHORT-NAME>StbM_UserDataType</SHORT-NAME>
+              <CATEGORY>STRUCTURE</CATEGORY>
+              <IS-STRUCT-WITH-OPTIONAL-ELEMENT>true</IS-STRUCT-WITH-OPTIONAL-ELEMENT>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="bf34b37e-c1d9-4358-ac8d-6471f62844ef">
+                  <SHORT-NAME>userDataLength</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint16</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="06c09bdf-616d-4d36-8618-e87ad577d966">
+                  <SHORT-NAME>userByte0</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="051ecbbd-b9b3-4f0b-8df0-ad2900c90e33">
+                  <SHORT-NAME>userByte1</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="5d11bafd-05f2-4257-9221-4d5d0789d21b">
+                  <SHORT-NAME>userByte2</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+            </IMPLEMENTATION-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="bde79e16-57f3-4074-99ff-87337e5b1e78">
+          <SHORT-NAME>ModeSwitchInterfaces</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="f75dc299-e04d-4346-9311-91cb8d9d7d7c">
+          <SHORT-NAME>NvDataInterfaces</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="40b0a31a-5673-4dc5-9c35-19f3cf25a717">
+          <SHORT-NAME>SenderReceiverInterfaces</SHORT-NAME>
+          <ELEMENTS>
+            <SENDER-RECEIVER-INTERFACE UUID="674a9cd8-f3e2-46bb-8782-1ba41a5eeba3">
+              <SHORT-NAME>StatusNotification</SHORT-NAME>
+              <IS-SERVICE>false</IS-SERVICE>
+              <DATA-ELEMENTS>
+                <VARIABLE-DATA-PROTOTYPE UUID="d3926886-f125-4559-8f27-4d93db98795f">
+                  <SHORT-NAME>eventNotification</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_TimeBaseNotificationType</TYPE-TREF>
+                  <INIT-VALUE>
+                    <NUMERICAL-VALUE-SPECIFICATION>
+                      <VALUE>0</VALUE>
+                    </NUMERICAL-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </VARIABLE-DATA-PROTOTYPE>
+              </DATA-ELEMENTS>
+            </SENDER-RECEIVER-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="4172e7d1-4d8f-46e1-bec1-85640870ca7d">
+          <SHORT-NAME>SwComponentTypes</SHORT-NAME>
+          <ELEMENTS>
+            <SERVICE-SW-COMPONENT-TYPE>
+              <SHORT-NAME>StbM</SHORT-NAME>
+              <PORTS>
+                <P-PORT-PROTOTYPE UUID="f6191d70-2bc2-4cd0-8f4d-3056af20cdd9">
+                  <SHORT-NAME>GlobalTime_Master_CertTime</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/GetMasterConfig</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/SetGlobalTime</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/SetRateCorrection</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/SetUserData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/TriggerTimeTransmission</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/UpdateGlobalTime</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="d4829d16-fa2c-434b-aaad-714026cf80bc">
+                  <SHORT-NAME>GlobalTime_Master_Offset0</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/GetMasterConfig</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/SetGlobalTime</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/SetOffset</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/SetRateCorrection</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/SetUserData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/TriggerTimeTransmission</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/UpdateGlobalTime</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="a8a6f288-91ce-406b-9566-572b250b8cdd">
+                  <SHORT-NAME>GlobalTime_Master_Provider0</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/GetMasterConfig</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/SetGlobalTime</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/SetRateCorrection</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/SetUserData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/TriggerTimeTransmission</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/UpdateGlobalTime</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="146634d4-7d9f-469b-af69-d82676b0b48d">
+                  <SHORT-NAME>GlobalTime_Master_Provider1</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/GetMasterConfig</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/SetGlobalTime</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/SetRateCorrection</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/SetUserData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/TriggerTimeTransmission</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/UpdateGlobalTime</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="420988e5-4a96-4811-bf26-395073d7edcf">
+                  <SHORT-NAME>GlobalTime_Slave_CertTime</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/GetCurrentTime</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/GetCurrentTimeExtended</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/GetRateDeviation</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/GetTimeBaseStatus</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/GetTimeLeap</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="5b838ca4-2dd6-4462-8cb7-87ddee4884ec">
+                  <SHORT-NAME>GlobalTime_Slave_Client0</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/GetCurrentTime</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/GetCurrentTimeExtended</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/GetSyncTimeRecordHead</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/GetRateDeviation</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/GetTimeBaseStatus</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/GetTimeLeap</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="4e39e3a9-9445-4669-b2a1-8dc2d5a9faa2">
+                  <SHORT-NAME>GlobalTime_Slave_Offset0</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/GetCurrentTime</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/GetCurrentTimeExtended</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/GetRateDeviation</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/GetTimeBaseStatus</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/GetTimeLeap</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="72213343-f0e4-41ed-aa26-085ed030e053">
+                  <SHORT-NAME>GlobalTime_Slave_Provider0</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/GetCurrentTime</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/GetCurrentTimeExtended</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/GetRateDeviation</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/GetTimeBaseStatus</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/GetTimeLeap</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="17330eb4-88ed-447e-b8ee-d60e85490484">
+                  <SHORT-NAME>GlobalTime_Slave_Provider1</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/GetCurrentTime</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/GetCurrentTimeExtended</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/GetRateDeviation</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/GetTimeBaseStatus</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/GetTimeLeap</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="af7fa139-c5b6-4430-aa33-3cb9eea37a0c">
+                  <SHORT-NAME>GlobalTime_StatusEvent_Client0</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <NONQUEUED-SENDER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Svc_StbM/SenderReceiverInterfaces/StatusNotification/eventNotification</DATA-ELEMENT-REF>
+                      <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                    </NONQUEUED-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Svc_StbM/SenderReceiverInterfaces/StatusNotification</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="b14c04d4-54c1-4a85-b479-c37af13bdfbe">
+                  <SHORT-NAME>MeasurementNotification_Client0</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/MeasurementNotification_Client0/SetSyncTimeRecordTable</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_StbM/ClientServerInterfaces/MeasurementNotification_Client0</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>StbMInternalBehavior</SHORT-NAME>
+                  <EVENTS>
+                    <OPERATION-INVOKED-EVENT UUID="3fb069a8-7f3a-4df9-a460-293e4eacdada">
+                      <SHORT-NAME>OIE_GlobalTime_Master_CertTime_GetMasterConfig</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetMasterConfig</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_CertTime</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/GetMasterConfig</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="77f079f0-da25-4c18-aa30-c2e46cf56c8e">
+                      <SHORT-NAME>OIE_GlobalTime_Master_CertTime_SetGlobalTime</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetGlobalTime</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_CertTime</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/SetGlobalTime</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="bf09a078-d713-423e-9ea8-51dc0b4485be">
+                      <SHORT-NAME>OIE_GlobalTime_Master_CertTime_SetRateCorrection</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetRateCorrection</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_CertTime</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/SetRateCorrection</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="7bca8f87-fc8d-4175-ad7d-52869ecaf5b9">
+                      <SHORT-NAME>OIE_GlobalTime_Master_CertTime_SetUserData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetUserData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_CertTime</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/SetUserData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="12518b18-3468-4f99-abf4-b19a698437b5">
+                      <SHORT-NAME>OIE_GlobalTime_Master_CertTime_TriggerTimeTransmission</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/TriggerTimeTransmission</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_CertTime</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/TriggerTimeTransmission</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="53507640-db82-4436-9f3d-a118b7035d6c">
+                      <SHORT-NAME>OIE_GlobalTime_Master_CertTime_UpdateGlobalTime</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/UpdateGlobalTime</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_CertTime</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_CertTime/UpdateGlobalTime</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="adac9b76-51f7-4402-aba4-7e8718d131cd">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Offset0_GetMasterConfig</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetMasterConfig</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Offset0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/GetMasterConfig</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="19801073-0ae7-419c-927e-7613845c8a81">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Offset0_SetGlobalTime</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetGlobalTime</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Offset0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/SetGlobalTime</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="4033de22-b007-49df-8c8a-24674694baaa">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Offset0_SetOffset</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetOffset</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Offset0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/SetOffset</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="b54bc3fe-b60d-4e90-aec6-93401f4c93af">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Offset0_SetRateCorrection</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetRateCorrection</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Offset0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/SetRateCorrection</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="947fff05-c842-4776-99d0-507b2e5c83e6">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Offset0_SetUserData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetUserData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Offset0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/SetUserData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="ba2b2df2-42d5-4dd7-bc04-3870d098132e">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Offset0_TriggerTimeTransmission</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/TriggerTimeTransmission</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Offset0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/TriggerTimeTransmission</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="a1eeebb5-883d-4d5c-8114-5699907fb973">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Offset0_UpdateGlobalTime</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/UpdateGlobalTime</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Offset0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Offset0/UpdateGlobalTime</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="3332c36f-64ee-4537-ba10-058b1966a1ec">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Provider0_GetMasterConfig</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetMasterConfig</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Provider0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/GetMasterConfig</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="8c2b4345-4531-4d3b-ad30-78feff07532f">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Provider0_SetGlobalTime</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetGlobalTime</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Provider0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/SetGlobalTime</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="0dc9370c-8a54-4ee2-95f2-cff1f2ee85f7">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Provider0_SetRateCorrection</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetRateCorrection</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Provider0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/SetRateCorrection</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="582aff9c-6a28-482c-a6c6-2bb7bb27ae8a">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Provider0_SetUserData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetUserData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Provider0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/SetUserData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="2e58d08f-962f-46dc-a73b-444c7ce63896">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Provider0_TriggerTimeTransmission</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/TriggerTimeTransmission</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Provider0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/TriggerTimeTransmission</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="b019d639-a061-44fc-959a-d0d326f3ff69">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Provider0_UpdateGlobalTime</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/UpdateGlobalTime</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Provider0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider0/UpdateGlobalTime</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="83683096-f56a-4580-b7ac-a380394c8d25">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Provider1_GetMasterConfig</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetMasterConfig</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Provider1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/GetMasterConfig</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="7b43ce23-0508-4f33-8646-62457c3a0cca">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Provider1_SetGlobalTime</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetGlobalTime</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Provider1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/SetGlobalTime</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="64335eb8-c949-4448-9637-082e6c9a500a">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Provider1_SetRateCorrection</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetRateCorrection</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Provider1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/SetRateCorrection</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="6fa993c9-ea1b-410e-a7bc-e8e8ff437c3a">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Provider1_SetUserData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetUserData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Provider1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/SetUserData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="38041c1b-b612-4286-a466-245d37a9f7e7">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Provider1_TriggerTimeTransmission</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/TriggerTimeTransmission</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Provider1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/TriggerTimeTransmission</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="afd5ae41-6cda-4e28-b535-aa4e643ecb90">
+                      <SHORT-NAME>OIE_GlobalTime_Master_Provider1_UpdateGlobalTime</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/UpdateGlobalTime</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Provider1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Master_Provider1/UpdateGlobalTime</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="e06b9a59-eda4-4d63-b8d2-dd3d6ddaaa5b">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_CertTime_GetCurrentTime</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetCurrentTime</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_CertTime</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/GetCurrentTime</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="0bde79ea-3f8c-479a-b6b4-0489cfc63341">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_CertTime_GetCurrentTimeExtended</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetCurrentTimeExtended</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_CertTime</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/GetCurrentTimeExtended</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="d83f5808-9330-43a8-b3ef-e1b258eceab8">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_CertTime_GetRateDeviation</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetRateDeviation</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_CertTime</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/GetRateDeviation</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="aab40495-e275-4c30-a6ef-c9fbc63542e3">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_CertTime_GetTimeBaseStatus</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetTimeBaseStatus</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_CertTime</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/GetTimeBaseStatus</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="c1a63471-9092-47f9-a577-3c6be3afc836">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_CertTime_GetTimeLeap</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetTimeLeap</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_CertTime</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_CertTime/GetTimeLeap</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="c6335d09-7ae7-4cbc-8251-a151b4371942">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Client0_GetCurrentTime</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetCurrentTime</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Client0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/GetCurrentTime</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="79786567-1d46-4fbb-9391-a83a92fc8825">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Client0_GetCurrentTimeExtended</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetCurrentTimeExtended</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Client0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/GetCurrentTimeExtended</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="a14f7497-19e5-4cae-b53a-0093ac9ad518">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Client0_GetRateDeviation</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetRateDeviation</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Client0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/GetRateDeviation</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="8cd756da-4cbb-4137-95bd-fe2563b35501">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Client0_GetSyncTimeRecordHead</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetSyncTimeRecordHead</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Client0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/GetSyncTimeRecordHead</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="70ff5736-92e9-4193-9e09-53ab192fd178">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Client0_GetTimeBaseStatus</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetTimeBaseStatus</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Client0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/GetTimeBaseStatus</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="5ed5550c-d2fe-43a9-8a09-0e25cf796906">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Client0_GetTimeLeap</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetTimeLeap</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Client0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Client0/GetTimeLeap</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="d8c0422d-7b5d-4a9d-92ae-54c9a6e977b0">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Offset0_GetCurrentTime</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetCurrentTime</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Offset0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/GetCurrentTime</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="36e20e9d-0d65-4026-a161-2a96ebe4589c">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Offset0_GetCurrentTimeExtended</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetCurrentTimeExtended</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Offset0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/GetCurrentTimeExtended</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="8b6e5102-7545-464f-b98f-eeeebc88514e">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Offset0_GetRateDeviation</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetRateDeviation</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Offset0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/GetRateDeviation</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="ffafbc87-5f12-4f04-9c32-a15ca62cadda">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Offset0_GetTimeBaseStatus</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetTimeBaseStatus</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Offset0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/GetTimeBaseStatus</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="7ce6a8ea-74c7-46fd-98d3-205d0ef7724a">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Offset0_GetTimeLeap</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetTimeLeap</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Offset0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Offset0/GetTimeLeap</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="e44419c1-3957-412f-8588-cf36713f659b">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Provider0_GetCurrentTime</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetCurrentTime</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Provider0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/GetCurrentTime</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="e9ae9c63-067e-4ace-9bae-397f2ed9a00b">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Provider0_GetCurrentTimeExtended</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetCurrentTimeExtended</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Provider0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/GetCurrentTimeExtended</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="59015ed0-a639-4b0d-b53e-3146e54f95f0">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Provider0_GetRateDeviation</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetRateDeviation</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Provider0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/GetRateDeviation</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="fdfa5ba1-e43a-400d-86f4-fc474ffc83ef">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Provider0_GetTimeBaseStatus</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetTimeBaseStatus</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Provider0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/GetTimeBaseStatus</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="4b5dfbb9-1190-491b-80d9-d78294b72c43">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Provider0_GetTimeLeap</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetTimeLeap</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Provider0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider0/GetTimeLeap</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="625685dd-7f01-4e36-8a8a-a8669acc4d69">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Provider1_GetCurrentTime</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetCurrentTime</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Provider1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/GetCurrentTime</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="e72439c9-e24d-4cf3-a925-6d8a94abe49c">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Provider1_GetCurrentTimeExtended</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetCurrentTimeExtended</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Provider1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/GetCurrentTimeExtended</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="d8a801f0-8650-4d23-8b63-52500709a5b5">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Provider1_GetRateDeviation</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetRateDeviation</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Provider1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/GetRateDeviation</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="e8b1facb-e102-4399-a88f-6319b125b218">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Provider1_GetTimeBaseStatus</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetTimeBaseStatus</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Provider1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/GetTimeBaseStatus</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="28677463-8ddc-47ac-980b-420501a88673">
+                      <SHORT-NAME>OIE_GlobalTime_Slave_Provider1_GetTimeLeap</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetTimeLeap</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Provider1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/GlobalTime_Slave_Provider1/GetTimeLeap</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <INCLUDED-DATA-TYPE-SETS>
+                    <INCLUDED-DATA-TYPE-SET>
+                      <LITERAL-PREFIX></LITERAL-PREFIX>
+                    </INCLUDED-DATA-TYPE-SET>
+                  </INCLUDED-DATA-TYPE-SETS>
+                  <PORT-API-OPTIONS>
+                    <PORT-API-OPTION>
+                      <INDIRECT-API>false</INDIRECT-API>
+                      <PORT-ARG-VALUES>
+                        <PORT-DEFINED-ARGUMENT-VALUE>
+                          <VALUE>
+                            <NUMERICAL-VALUE-SPECIFICATION>
+                              <VALUE>1</VALUE>
+                            </NUMERICAL-VALUE-SPECIFICATION>
+                          </VALUE>
+                          <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_SynchronizedTimeBaseType</VALUE-TYPE-TREF>
+                        </PORT-DEFINED-ARGUMENT-VALUE>
+                      </PORT-ARG-VALUES>
+                      <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Provider0</PORT-REF>
+                    </PORT-API-OPTION>
+                    <PORT-API-OPTION>
+                      <INDIRECT-API>false</INDIRECT-API>
+                      <PORT-ARG-VALUES>
+                        <PORT-DEFINED-ARGUMENT-VALUE>
+                          <VALUE>
+                            <NUMERICAL-VALUE-SPECIFICATION>
+                              <VALUE>16</VALUE>
+                            </NUMERICAL-VALUE-SPECIFICATION>
+                          </VALUE>
+                          <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_SynchronizedTimeBaseType</VALUE-TYPE-TREF>
+                        </PORT-DEFINED-ARGUMENT-VALUE>
+                      </PORT-ARG-VALUES>
+                      <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Offset0</PORT-REF>
+                    </PORT-API-OPTION>
+                    <PORT-API-OPTION>
+                      <INDIRECT-API>false</INDIRECT-API>
+                      <PORT-ARG-VALUES>
+                        <PORT-DEFINED-ARGUMENT-VALUE>
+                          <VALUE>
+                            <NUMERICAL-VALUE-SPECIFICATION>
+                              <VALUE>2</VALUE>
+                            </NUMERICAL-VALUE-SPECIFICATION>
+                          </VALUE>
+                          <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_SynchronizedTimeBaseType</VALUE-TYPE-TREF>
+                        </PORT-DEFINED-ARGUMENT-VALUE>
+                      </PORT-ARG-VALUES>
+                      <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_Provider1</PORT-REF>
+                    </PORT-API-OPTION>
+                    <PORT-API-OPTION>
+                      <INDIRECT-API>false</INDIRECT-API>
+                      <PORT-ARG-VALUES>
+                        <PORT-DEFINED-ARGUMENT-VALUE>
+                          <VALUE>
+                            <NUMERICAL-VALUE-SPECIFICATION>
+                              <VALUE>3</VALUE>
+                            </NUMERICAL-VALUE-SPECIFICATION>
+                          </VALUE>
+                          <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_SynchronizedTimeBaseType</VALUE-TYPE-TREF>
+                        </PORT-DEFINED-ARGUMENT-VALUE>
+                      </PORT-ARG-VALUES>
+                      <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Master_CertTime</PORT-REF>
+                    </PORT-API-OPTION>
+                    <PORT-API-OPTION>
+                      <INDIRECT-API>false</INDIRECT-API>
+                      <PORT-ARG-VALUES>
+                        <PORT-DEFINED-ARGUMENT-VALUE>
+                          <VALUE>
+                            <NUMERICAL-VALUE-SPECIFICATION>
+                              <VALUE>0</VALUE>
+                            </NUMERICAL-VALUE-SPECIFICATION>
+                          </VALUE>
+                          <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_SynchronizedTimeBaseType</VALUE-TYPE-TREF>
+                        </PORT-DEFINED-ARGUMENT-VALUE>
+                      </PORT-ARG-VALUES>
+                      <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Client0</PORT-REF>
+                    </PORT-API-OPTION>
+                    <PORT-API-OPTION>
+                      <INDIRECT-API>false</INDIRECT-API>
+                      <PORT-ARG-VALUES>
+                        <PORT-DEFINED-ARGUMENT-VALUE>
+                          <VALUE>
+                            <NUMERICAL-VALUE-SPECIFICATION>
+                              <VALUE>1</VALUE>
+                            </NUMERICAL-VALUE-SPECIFICATION>
+                          </VALUE>
+                          <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_SynchronizedTimeBaseType</VALUE-TYPE-TREF>
+                        </PORT-DEFINED-ARGUMENT-VALUE>
+                      </PORT-ARG-VALUES>
+                      <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Provider0</PORT-REF>
+                    </PORT-API-OPTION>
+                    <PORT-API-OPTION>
+                      <INDIRECT-API>false</INDIRECT-API>
+                      <PORT-ARG-VALUES>
+                        <PORT-DEFINED-ARGUMENT-VALUE>
+                          <VALUE>
+                            <NUMERICAL-VALUE-SPECIFICATION>
+                              <VALUE>16</VALUE>
+                            </NUMERICAL-VALUE-SPECIFICATION>
+                          </VALUE>
+                          <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_SynchronizedTimeBaseType</VALUE-TYPE-TREF>
+                        </PORT-DEFINED-ARGUMENT-VALUE>
+                      </PORT-ARG-VALUES>
+                      <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Offset0</PORT-REF>
+                    </PORT-API-OPTION>
+                    <PORT-API-OPTION>
+                      <INDIRECT-API>false</INDIRECT-API>
+                      <PORT-ARG-VALUES>
+                        <PORT-DEFINED-ARGUMENT-VALUE>
+                          <VALUE>
+                            <NUMERICAL-VALUE-SPECIFICATION>
+                              <VALUE>2</VALUE>
+                            </NUMERICAL-VALUE-SPECIFICATION>
+                          </VALUE>
+                          <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_SynchronizedTimeBaseType</VALUE-TYPE-TREF>
+                        </PORT-DEFINED-ARGUMENT-VALUE>
+                      </PORT-ARG-VALUES>
+                      <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_Provider1</PORT-REF>
+                    </PORT-API-OPTION>
+                    <PORT-API-OPTION>
+                      <INDIRECT-API>false</INDIRECT-API>
+                      <PORT-ARG-VALUES>
+                        <PORT-DEFINED-ARGUMENT-VALUE>
+                          <VALUE>
+                            <NUMERICAL-VALUE-SPECIFICATION>
+                              <VALUE>3</VALUE>
+                            </NUMERICAL-VALUE-SPECIFICATION>
+                          </VALUE>
+                          <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_StbM/ImplementationDataTypes/StbM_SynchronizedTimeBaseType</VALUE-TYPE-TREF>
+                        </PORT-DEFINED-ARGUMENT-VALUE>
+                      </PORT-ARG-VALUES>
+                      <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_Slave_CertTime</PORT-REF>
+                    </PORT-API-OPTION>
+                  </PORT-API-OPTIONS>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="6be15a84-87ef-4e64-af0d-ac1af619612e">
+                      <SHORT-NAME>BusGetCurrentTime</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_BusGetCurrentTime</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="05dee3ab-0714-4808-9094-a26f17b025af">
+                      <SHORT-NAME>BusSetGlobalTime</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_BusSetGlobalTime</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="67d5c1a7-e4c2-4656-b673-1c7f99b786a4">
+                      <SHORT-NAME>GetCurrentTime</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_GetCurrentTime</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="5f33bd9a-3cfb-4b8c-95ce-bb1e788a14ed">
+                      <SHORT-NAME>GetCurrentTimeExtended</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_GetCurrentTimeExtended</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="e9e02a1e-5a4b-482f-974f-f90354cc9ea9">
+                      <SHORT-NAME>GetCurrentVirtualLocalTime</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_GetCurrentVirtualLocalTime</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="d4953ca1-06da-4e1a-96a0-b526a982a22e">
+                      <SHORT-NAME>GetMasterConfig</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_GetMasterConfig</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="d9fa3f5f-7812-439b-8a15-266947129a06">
+                      <SHORT-NAME>GetOffset</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_GetOffset</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="6f17a4ae-c9e4-4b2d-968f-60bad8a4917e">
+                      <SHORT-NAME>GetOffsetTimeRecordHead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_GetOffsetTimeRecordHead</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="66c3cde5-2107-464d-bfa7-c3d045fc67d9">
+                      <SHORT-NAME>GetRateDeviation</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_GetRateDeviation</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="4c30df80-cd5e-42b8-8548-ae05321a98cb">
+                      <SHORT-NAME>GetSyncTimeRecordHead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_GetSyncTimeRecordHead</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="3212c45c-1f2d-452c-8910-be63173124f0">
+                      <SHORT-NAME>GetTimeBaseStatus</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_GetTimeBaseStatus</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="a0abfed4-1068-4a02-b663-acfbeab56cc5">
+                      <SHORT-NAME>GetTimeBaseUpdateCounter</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_GetTimeBaseUpdateCounter</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="ffe3498a-e816-4f53-9262-4a24e6b129bb">
+                      <SHORT-NAME>GetTimeLeap</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_GetTimeLeap</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>MainFunction</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.005</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_MainFunction</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="7c561e56-4955-4a05-84d0-81fcf3a8e757">
+                      <SHORT-NAME>SetGlobalTime</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_SetGlobalTime</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="5f076583-008e-4e87-811f-b05e6bc04811">
+                      <SHORT-NAME>SetOffset</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_SetOffset</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="77099206-2e74-4519-af81-3d48156ca8a4">
+                      <SHORT-NAME>SetRateCorrection</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_SetRateCorrection</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="9acd9143-1b83-41a6-98c2-0d0f03d14fa4">
+                      <SHORT-NAME>SetUserData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_SetUserData</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>StartTimer</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_StartTimer</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="92dda5f0-0bfc-4324-a571-4c28a6ebbebf">
+                      <SHORT-NAME>StbM_Required_Port</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-SEND-POINTS>
+                        <VARIABLE-ACCESS UUID="e4255997-5de4-440f-96d0-f9a57dac93b0">
+                          <SHORT-NAME>GlobalTime_StatusEvent_Client0</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/GlobalTime_StatusEvent_Client0</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Svc_StbM/SenderReceiverInterfaces/StatusNotification/eventNotification</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                      </DATA-SEND-POINTS>
+                      <SERVER-CALL-POINTS>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="f50b8741-34c0-42de-abb9-b7da307ce6b5">
+                          <SHORT-NAME>MeasurementNotification_Client0</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Svc_StbM/SwComponentTypes/StbM/MeasurementNotification_Client0</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_StbM/ClientServerInterfaces/MeasurementNotification_Client0/SetSyncTimeRecordTable</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                      </SERVER-CALL-POINTS>
+                      <SYMBOL>StbM_Required_Ports_Call</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="8818803c-4ead-4856-8f1e-89ad7478935b">
+                      <SHORT-NAME>TriggerTimeTransmission</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_TriggerTimeTransmission</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="a6d607c8-7fe8-410c-ab40-1c2804ca7549">
+                      <SHORT-NAME>UpdateGlobalTime</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StbM_UpdateGlobalTime</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </SERVICE-SW-COMPONENT-TYPE>
+            <SWC-IMPLEMENTATION>
+              <SHORT-NAME>StbM_SwcImplementation</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE>
+                  <SHORT-NAME>CodeDescriptor</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>StbM_LibObjects</SHORT-LABEL>
+                      <CATEGORY>SWLIB</CATEGORY>
+                      <DOMAIN>AUTOSAR_STBM</DOMAIN>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <RESOURCE-CONSUMPTION>
+                <SHORT-NAME>ResourceConsumption</SHORT-NAME>
+              </RESOURCE-CONSUMPTION>
+              <SW-VERSION>1.0.0</SW-VERSION>
+              <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/Svc_StbM/SwComponentTypes/SwcBswMapping_StbM</SWC-BSW-MAPPING-REF>
+              <VENDOR-ID>76</VENDOR-ID>
+              <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior</BEHAVIOR-REF>
+            </SWC-IMPLEMENTATION>
+            <SWC-BSW-MAPPING>
+              <SHORT-NAME>SwcBswMapping_StbM</SHORT-NAME>
+              <BSW-BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_StbM/StbM/BswInternalBehavior_StbM</BSW-BEHAVIOR-REF>
+              <RUNNABLE-MAPPINGS>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_BusGetCurrentTime</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/BusGetCurrentTime</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_BusSetGlobalTime</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/BusSetGlobalTime</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_GetCurrentTime</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetCurrentTime</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_GetCurrentTimeExtended</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetCurrentTimeExtended</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_GetCurrentVirtualLocalTime</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetCurrentVirtualLocalTime</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_GetMasterConfig</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetMasterConfig</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_GetOffset</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetOffset</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_GetOffsetTimeRecordHead</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetOffsetTimeRecordHead</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_GetRateDeviation</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetRateDeviation</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_GetSyncTimeRecordHead</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetSyncTimeRecordHead</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_GetTimeBaseStatus</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetTimeBaseStatus</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_GetTimeBaseUpdateCounter</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetTimeBaseUpdateCounter</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_GetTimeLeap</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/GetTimeLeap</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-SCHEDULABLE-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswSE_StbM_MainFunction</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/MainFunction</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_SetGlobalTime</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetGlobalTime</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_SetOffset</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetOffset</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_SetRateCorrection</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetRateCorrection</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_SetUserData</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/SetUserData</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_StartTimer</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/StartTimer</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_TriggerTimeTransmission</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/TriggerTimeTransmission</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswCE_StbM_UpdateGlobalTime</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior/UpdateGlobalTime</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+              </RUNNABLE-MAPPINGS>
+              <SWC-BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/Svc_StbM/SwComponentTypes/StbM/StbMInternalBehavior</SWC-BEHAVIOR-REF>
+            </SWC-BSW-MAPPING>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

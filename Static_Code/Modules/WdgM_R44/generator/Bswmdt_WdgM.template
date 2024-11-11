@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+********************************************************************************
+**                                                                            **
+**  (C) 2019-2020 HYUNDAI AUTRON Co., Ltd.                                    **
+**  Confidential Proprietary Information. Distribution Limited.               **
+**  Do Not Copy Without Prior Permission                                      **
+**                                                                            **
+**  MODULE        : WdgM Module                                               **
+**                                                                            **
+**  PURPOSE       : Definition of the module descriptor.                      **
+**                                                                            **
+**  DESCRIPTION   : This file provides the Bsw module description             **
+**                  of the WdgM module.                                       **
+**                                                                            **
+********************************************************************************
+** Version Date           Prepared By     Description                         **
+********************************************************************************
+** 0.0.9   11-Sep-2020    Ngo Huy Thanh   #15596: Added multi core protection **
+** 0.0.8   16-Jun-2020    Ngo Huy Thanh   #13766: Removed implemented,        **
+**                                        expected entries.                   **
+**                                        Removed dependencies                **
+** 0.0.7   19-Mar-2020    Thanh Nguyen    #12021: Add DATA-TYPE-MAPPING-REFS  **
+**                                        in bswmd                            **
+** 0.0.6   16-Mar-2020    Thanh Nguyen    #11912: Added Distinguished         **
+**                                        Partition                           **
+** 0.0.5   19-Feb-2020    Ngo Huy Thanh   #11196: Fixed SW version number     **
+** 0.0.4   11-Feb-2020    Ngo Huy Thanh   #11022: Added <EXECUTION-CONTEXT>   **
+**                                        and <SW-SERVICE-IMPL-POLICY>        **
+** 0.0.3   14-Jan-2020    Ngo Huy Thanh   Updated vendor ID                   **
+** 0.0.2   20-Sep-2019    Ngo Huy Thanh   Added "{sw_version}", "{ar_version}"**
+**                                        and "{mainfunc_period}"             **
+** 0.0.1   19-Sep-2019    Ngo Huy Thanh   Initial version                     **
+********************************************************************************
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/XML/1998/namespace xml.xsd http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Bsw_WdgM</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION>
+          <SHORT-NAME>BswImplementation_WdgM</SHORT-NAME>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>1.0.0</SW-VERSION>
+          <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/WdgM/ServiceSwComponentTypes/SwcBswMapping_WdgM</SWC-BSW-MAPPING-REF>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_WdgM/WdgM/BswInternalBehavior_WdgM</BEHAVIOR-REF>
+          <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+            <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTRON/WdgM</VENDOR-SPECIFIC-MODULE-DEF-REF>
+          </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION>
+          <SHORT-NAME>WdgM</SHORT-NAME>
+          <MODULE-ID>13</MODULE-ID>
+          <REQUIRED-MODE-GROUPS>
+            <MODE-DECLARATION-GROUP-PROTOTYPE>
+              <SHORT-NAME>modeNotificationPort_EcuMode</SHORT-NAME>
+              <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/EcuM/ModeDeclarationGroups/EcuMode</TYPE-TREF>
+            </MODE-DECLARATION-GROUP-PROTOTYPE>
+          </REQUIRED-MODE-GROUPS>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR>
+              <SHORT-NAME>BswInternalBehavior_WdgM</SHORT-NAME>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/EcuM/DataTypeMappingSets/EcuModeMap</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA>
+                  <SHORT-NAME>GLOBALSUPVSNSTATUS_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA>
+                  <SHORT-NAME>FIRSTEXPIREDSEID_MULTICORE_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <ENTITYS>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCE_WdgM_CheckpointReached</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_WdgM/WdgM_CheckpointReached</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCE_WdgM_DeInit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_WdgM/WdgM_DeInit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCE_WdgM_GetFirstExpiredSEID</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_WdgM/WdgM_GetFirstExpiredSEID</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCE_WdgM_GetGlobalStatus</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_WdgM/WdgM_GetGlobalStatus</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCE_WdgM_GetLocalStatus</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_WdgM/WdgM_GetLocalStatus</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCE_WdgM_GetMode</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_WdgM/WdgM_GetMode</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCE_WdgM_GetVersionInfo</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_WdgM/WdgM_GetVersionInfo</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCE_WdgM_Init</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_WdgM/WdgM_Init</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCE_WdgM_PerformReset</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_WdgM/WdgM_PerformReset</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCE_WdgM_SetMode</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_WdgM/WdgM_SetMode</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-SCHEDULABLE-ENTITY>
+                  <SHORT-NAME>BswSE_WdgM_MainFunction</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_WdgM/WdgM/BswInternalBehavior_WdgM/GLOBALSUPVSNSTATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_WdgM/WdgM/BswInternalBehavior_WdgM/FIRSTEXPIREDSEID_MULTICORE_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <ACCESSED-MODE-GROUPS>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_WdgM/WdgM/modeNotificationPort_EcuMode</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                  </ACCESSED-MODE-GROUPS>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_WdgM/WdgM_MainFunction</IMPLEMENTED-ENTRY-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+              </ENTITYS>
+              <EVENTS>
+                <BSW-TIMING-EVENT>
+                  <SHORT-NAME>BswTE_WdgM_MainFunction</SHORT-NAME>
+                  <CONTEXT-LIMITATION-REFS>
+                    <CONTEXT-LIMITATION-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_WdgM/WdgM/BswInternalBehavior_WdgM/BswDistinguishedPartition_WdgM</CONTEXT-LIMITATION-REF>
+                  </CONTEXT-LIMITATION-REFS>
+                  <DISABLED-IN-MODE-IREFS>
+                    <DISABLED-IN-MODE-IREF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_WdgM/WdgM/modeNotificationPort_EcuMode</CONTEXT-MODE-DECLARATION-GROUP-REF>
+                      <TARGET-MODE-REF DEST="MODE-DECLARATION">/EcuM/ModeDeclarationGroups/EcuMode/ECUM_STATE_SHUTDOWN</TARGET-MODE-REF>
+                    </DISABLED-IN-MODE-IREF>
+                  </DISABLED-IN-MODE-IREFS>
+                  <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/Bsw_WdgM/WdgM/BswInternalBehavior_WdgM/BswSE_WdgM_MainFunction</STARTS-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </BSW-TIMING-EVENT>
+              </EVENTS>
+              <MODE-RECEIVER-POLICYS>
+                <BSW-MODE-RECEIVER-POLICY>
+                  <ENHANCED-MODE-API>true</ENHANCED-MODE-API>
+                  <REQUIRED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_WdgM/WdgM/modeNotificationPort_EcuMode</REQUIRED-MODE-GROUP-REF>
+                  <SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>true</SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>
+                </BSW-MODE-RECEIVER-POLICY>
+              </MODE-RECEIVER-POLICYS>
+              <DISTINGUISHED-PARTITIONS>
+                <BSW-DISTINGUISHED-PARTITION>
+                  <SHORT-NAME>BswDistinguishedPartition_WdgM</SHORT-NAME>
+                </BSW-DISTINGUISHED-PARTITION>
+              </DISTINGUISHED-PARTITIONS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>WdgM_CheckpointReached</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">WdgM_CheckpointReached</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Indicates to the Watchdog Manager that a Checkpoint within a Supervised Entity has been reached.</L-2>
+          </DESC>
+          <SERVICE-ID>0x0e</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>SEID</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">SEID</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Identifier of the Supervised Entity that reports a Checkpoint.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>CheckpointID</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">CheckpointID</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Identifier of the Checkpoint within a Supervised Entity that has been reached.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/WdgM/ImplementationDataTypes/WdgM_CheckpointIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>WdgM_DeInit</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">WdgM_DeInit</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">De-initializes the Watchdog Manager.</L-2>
+          </DESC>
+          <SERVICE-ID>0x01</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>WdgM_GetFirstExpiredSEID</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">WdgM_GetFirstExpiredSEID</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Returns SEID that first reached the state WDGM_LOCAL_STATUS_EXPIRED.</L-2>
+          </DESC>
+          <SERVICE-ID>0x10</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>SEID</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">SEID</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Identifier of the supervised entity that first reached the state WDGM_LOCAL_STATUS_EXPIRED.</L-2>
+              </DESC>
+              <DIRECTION>OUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-POINTER-TARGET-PROPS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-POINTER-TARGET-PROPS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>WdgM_GetGlobalStatus</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">WdgM_GetGlobalStatus</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Returns the global supervision status of the Watchdog Manager.</L-2>
+          </DESC>
+          <SERVICE-ID>0x0d</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Status</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Status</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Global supervision status of the Watchdog Manager.</L-2>
+              </DESC>
+              <DIRECTION>OUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-POINTER-TARGET-PROPS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/WdgM/ImplementationDataTypes/WdgM_GlobalStatusType</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-POINTER-TARGET-PROPS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>WdgM_GetLocalStatus</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">WdgM_GetLocalStatus</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Returns the supervision status of an individual Supervised Entity.</L-2>
+          </DESC>
+          <SERVICE-ID>0x0c</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>SEID</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">SEID</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Identifier of the supervised entity whose supervision status shall be returned.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Status</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Status</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Supervision status of the given supervised entity.</L-2>
+              </DESC>
+              <DIRECTION>OUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-POINTER-TARGET-PROPS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/WdgM/ImplementationDataTypes/WdgM_LocalStatusType</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-POINTER-TARGET-PROPS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>WdgM_GetMode</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">WdgM_GetMode</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Returns the current mode of the Watchdog Manager.</L-2>
+          </DESC>
+          <SERVICE-ID>0x0b</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Mode</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Mode</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Current mode of the Watchdog Manager.</L-2>
+              </DESC>
+              <DIRECTION>OUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-POINTER-TARGET-PROPS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/WdgM/ImplementationDataTypes/WdgM_ModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-POINTER-TARGET-PROPS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>WdgM_GetVersionInfo</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">WdgM_GetVersionInfo</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Returns the version information of this module.</L-2>
+          </DESC>
+          <SERVICE-ID>0x02</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>VersionInfo</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">VersionInfo</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to where to store the version information of the module WdgM.</L-2>
+              </DESC>
+              <DIRECTION>OUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-POINTER-TARGET-PROPS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Std/ImplementationDataTypes/Std_VersionInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-POINTER-TARGET-PROPS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>WdgM_Init</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">WdgM_Init</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Initializes the Watchdog Manager.</L-2>
+          </DESC>
+          <SERVICE-ID>0x00</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>ConfigPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">ConfigPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to post-build configuration data</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-POINTER-TARGET-PROPS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/WdgM/ImplementationDataTypes/WdgM_ConfigType</IMPLEMENTATION-DATA-TYPE-REF>
+                            <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-POINTER-TARGET-PROPS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>WdgM_MainFunction</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">WdgM_MainFunction</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Performs the processing of the cyclic Watchdog Manager jobs.</L-2>
+          </DESC>
+          <SERVICE-ID>0x08</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>SCHEDULED</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>INLINE-CONDITIONAL</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>WdgM_PerformReset</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">WdgM_PerformReset</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Instructs the Watchdog Manager to cause a watchdog reset.</L-2>
+          </DESC>
+          <SERVICE-ID>0x0f</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>WdgM_SetMode</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">WdgM_SetMode</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Sets the current mode of Watchdog Manager.</L-2>
+          </DESC>
+          <SERVICE-ID>0x03</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>Mode</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Mode</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">One of the configured Watchdog Manager modes.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/WdgM/ImplementationDataTypes/WdgM_ModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="1e9d3597-13f2-4548-9eb5-561eaea5f6a1">
+      <SHORT-NAME>Bsw_EcuM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="60eb8aa5-4aa2-4d48-9453-911525359ad6">
+          <SHORT-NAME>BswImplementations</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-IMPLEMENTATION UUID="7b8cb143-0341-426c-b7c6-9d0bf67f6553">
+              <SHORT-NAME>BswImplementation_EcuM</SHORT-NAME>
+              <SW-VERSION>1.2.4</SW-VERSION>
+              <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/EcuM/ServiceSwComponentTypes/SwcBswMapping_EcuM</SWC-BSW-MAPPING-REF>
+              <VENDOR-ID>76</VENDOR-ID>
+              <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+              <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM</BEHAVIOR-REF>
+            </BSW-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="c2982dec-4ec9-40da-b10d-37986a0b9812">
+          <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-DESCRIPTION UUID="0cc223e2-30df-4cb7-9779-2cbc712a8776">
+              <SHORT-NAME>EcuM</SHORT-NAME>
+              <MODULE-ID>10</MODULE-ID>
+              <INTERNAL-BEHAVIORS>
+                <BSW-INTERNAL-BEHAVIOR UUID="972968db-2f66-4b0e-9b90-c7acc302b2d9">
+                  <SHORT-NAME>BswIB_EcuM</SHORT-NAME>
+                  <EXCLUSIVE-AREAS>
+                    <EXCLUSIVE-AREA UUID="8f5982af-952c-4d3c-bf96-96db507c2ada">
+                      <SHORT-NAME>ALARM_TIME_PROTECTION</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA UUID="1e5b5f9a-add9-4819-83be-28d3f1c035e9">
+                      <SHORT-NAME>BOOT_TARGET_PROTECTION</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA UUID="f6377c1c-6e0e-49b4-8a3f-385e78577e72">
+                      <SHORT-NAME>SHUTDOWN_CAUSE</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA UUID="5ea9da12-7996-4279-ab5b-4d6ab49d32e9">
+                      <SHORT-NAME>SHUTDOWN_OR_SLEEP_FLAG_PROTECTION</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA UUID="430cc9c5-fd08-4324-9a0d-44e38a119915">
+                      <SHORT-NAME>SHUTDOWN_TARGET_PROTECTION</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA UUID="04a42def-c9e3-461e-91ef-97016556d619">
+                      <SHORT-NAME>STATE_PROTECTION</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA UUID="cb0d1183-9ca1-4f72-bcc4-b02783771b8c">
+                      <SHORT-NAME>WAKEUP_STATUS_PROTECTION</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                  </EXCLUSIVE-AREAS>
+                  <ENTITYS>
+                    <BSW-SCHEDULABLE-ENTITY UUID="2606413f-850b-4999-be2a-c202579978c6">
+                      <SHORT-NAME>BswSE_EcuM_MainFunction</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/ALARM_TIME_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/BOOT_TARGET_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/SHUTDOWN_OR_SLEEP_FLAG_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/SHUTDOWN_TARGET_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/SHUTDOWN_CAUSE</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/STATE_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/WAKEUP_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_EcuM/BswModuleEntrys/EcuM_MainFunction</IMPLEMENTED-ENTRY-REF>
+                    </BSW-SCHEDULABLE-ENTITY>
+                  </ENTITYS>
+                  <EVENTS>
+                    <BSW-TIMING-EVENT UUID="ba315ded-96ef-4743-b90c-71ac5fb8b9f1">
+                      <SHORT-NAME>BswTE_EcuM_MainFunction</SHORT-NAME>
+                      <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/Bsw_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/BswSE_EcuM_MainFunction</STARTS-ON-EVENT-REF>
+                      <PERIOD>0.01</PERIOD>
+                    </BSW-TIMING-EVENT>
+                  </EVENTS>
+                  <DISTINGUISHED-PARTITIONS>
+                    <BSW-DISTINGUISHED-PARTITION>
+                      <SHORT-NAME>BswDistinguishedPartition_EcuM_Core0</SHORT-NAME>
+                    </BSW-DISTINGUISHED-PARTITION>
+                    <BSW-DISTINGUISHED-PARTITION>
+                      <SHORT-NAME>BswDistinguishedPartition_EcuM_Core1</SHORT-NAME>
+                    </BSW-DISTINGUISHED-PARTITION>
+                    <BSW-DISTINGUISHED-PARTITION>
+                      <SHORT-NAME>BswDistinguishedPartition_EcuM_Core2</SHORT-NAME>
+                    </BSW-DISTINGUISHED-PARTITION>
+                    <BSW-DISTINGUISHED-PARTITION>
+                      <SHORT-NAME>BswDistinguishedPartition_EcuM_Core3</SHORT-NAME>
+                    </BSW-DISTINGUISHED-PARTITION>
+                    <BSW-DISTINGUISHED-PARTITION>
+                      <SHORT-NAME>BswDistinguishedPartition_EcuM_Core4</SHORT-NAME>
+                    </BSW-DISTINGUISHED-PARTITION>
+                    <BSW-DISTINGUISHED-PARTITION>
+                      <SHORT-NAME>BswDistinguishedPartition_EcuM_Core5</SHORT-NAME>
+                    </BSW-DISTINGUISHED-PARTITION>
+                  </DISTINGUISHED-PARTITIONS>
+                </BSW-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </BSW-MODULE-DESCRIPTION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="e1b8455b-1bbc-4631-8cf8-1e5be69f7c05">
+          <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY UUID="9af5cc8e-3918-4d93-b2fa-be3ddc2ae0c8">
+              <SHORT-NAME>EcuM_MainFunction</SHORT-NAME>
+              <SERVICE-ID>24</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

@@ -1,0 +1,105 @@
+C:\ts_mirr\python\Portable_Python_2.7.6.1\App\python.exe C:\ts_mirr\scons\scons-local-2.3.4\scons.py -f.\Build\site_scons\SConstruct GenerateFBL -j4
+scons: Reading SConscript files ...
+AutoEver Toolset Version: 2.6.0
+Ignoring unsupported command GenerateFBL
+C:\ts_mirr\python\Portable_Python_2.7.6.1\App\python.exe C:\ts_mirr\scons\scons-local-2.3.4\scons.py -f.\Build\site_scons\SConstruct BuildFBL -j4
+scons: Reading SConscript files ...
+AutoEver Toolset Version: 2.6.0
+Ignoring unsupported command BuildFBL
+C:\ts_mirr\python\Portable_Python_2.7.6.1\App\python.exe C:\ts_mirr\scons\scons-local-2.3.4\scons.py -f.\Build\site_scons\SConstruct GenerateAll -j4
+scons: Reading SConscript files ...
+AutoEver Toolset Version: 2.6.0
+scons: done reading SConscript files.
+scons: Building targets ...
+Generating MCAL
+Generating Build\bat_package\EcuM.bat
+Build\bat_package\EcuM.bat -B  -O Generated\Bsw_Output  Configuration\Ecu\Ecud_EcuM.arxml
+Generating Build\bat_package\IoHwAb.bat
+Build\bat_package\IoHwAb.bat -B  -O Generated\Bsw_Output  Configuration\Ecu\Ecud_IoHwAb.arxml
+Generating Build\bat_package\WdgM.bat
+Build\bat_package\WdgM.bat -B  -O Generated\Bsw_Output  Configuration\Ecu\Ecud_Dem.arxml Configuration\Ecu\Mcal\Ecud_Mcu.arxml Configuration\Ecu\Ecud_Os.arxml Configuration\Ecu\Ecud_WdgIf.arxml Configuration\Ecu\Ecud_WdgM.arxml Configuration\Ecu\Ecud_EcuC.arxml
+EB tresos Studio 29.0.0 b220329-0119
+ERROR 24-08-09,11:53:52 (12146) License check failed for feature BASE:
+Copyright 2003-2022 Elektrobit Automotive GmbH
+Required for all license protected functions of EB tresos Studio.
+WARNING 24-08-09,11:53:51 (12144) License check operation failed: No such feature exists.
+ERROR 24-08-09,11:53:52 (12146) License check failed for feature GENERATOR_TEMPL:
+Feature:       EB_TS_BASE
+Allows to use template-based code generators.
+ERROR 24-08-09,11:53:52 (12126) No valid license found
+scons: *** [Generated\Mcal_Output\src\Adc_Cfg.c] Error 1
+License path:  C:\ts_mirr\xml\eb-tresos-S32K3xx_RTD_3.0.0_P01_HF01\bin\*.lic;C:\ts_mirr\xml\eb-tresos-S32K3xx_RTD_3.0.0_P01_HF01\configuration\org.eclipse.osgi\32\0\.cp\resources\flexnet\tsinit.dat;
+FlexNet Licensing error:-5,357
+WARNING 24-08-09,11:53:52 (12144) License check operation failed: No such feature exists.
+Feature:       EB_TS_GENERATOR_TEMPL
+License path:  C:\ts_mirr\xml\eb-tresos-S32K3xx_RTD_3.0.0_P01_HF01\bin\*.lic;C:\ts_mirr\xml\eb-tresos-S32K3xx_RTD_3.0.0_P01_HF01\configuration\org.eclipse.osgi\32\0\.cp\resources\flexnet\tsinit.dat;
+FlexNet Licensing error:-5,357
+
+Errors "3" Warnings "2"
+C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Generated\Bsw_Output
+
+****************************************************************************************
+*                         HUYNDAI AUTOEVER Co., Ltd.                                   *
+*          AUTOSAR IoHwAb Generation Tool Version 1.7.1.0 [10-May-2024]                *
+*                    AUTOSAR Architecture Version 4.4.0.                               *
+****************************************************************************************
+
+INF000000: Execute module: IoHwAb, version: 1.7.1.0 started at 10-May-2024
+INF000001: Command line arguments:
+-B C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC
+-M IoHwAb
+-T C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules
+-O C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Generated\Bsw_Output
+-I C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Build\input_files.yml
+-XML -S C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\IoHwAb_R44\generator\Bswmdt_IoHwAb.template
+-L -G 
+WRN000000: swcd template file is not set!
+INF000003: Output file [C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Generated\Bsw_Output\bswmd\Bswmd_IoHwAb.arxml] at [2024-08-09 11:53:52]
+
+INF000006: Execution completed successfully with 1 warnings.
+
+C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Generated\Bsw_Output
+
+****************************************************************************************
+*                         HUYNDAI AUTOEVER Co., Ltd.                                   *
+*          AUTOSAR WdgM Generation Tool Version 1.3.3.0 [18-Dec-2022]                  *
+*                    AUTOSAR Architecture Version 4.4.0.                               *
+****************************************************************************************
+
+INF000000: Execute module: WdgM, version: 1.3.3.0 started at 18-Dec-2022
+INF000001: Command line arguments:
+-B C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC
+-M WdgM
+-T C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules
+-O C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Generated\Bsw_Output
+-I C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Build\input_files.yml
+-XML -S C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\WdgM_R44\generator\Bswmdt_WdgM.template
+-L -G 
+WRN000000: swcd template file is not set!
+INF000003: Output file [C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Generated\Bsw_Output\bswmd\Bswmd_WdgM.arxml] at [2024-08-09 11:53:53]
+
+INF000006: Execution completed successfully with 1 warnings.
+
+C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Generated\Bsw_Output
+
+****************************************************************************************
+*                         HUYNDAI AUTOEVER Co., Ltd.                                   *
+*          AUTOSAR EcuM Generation Tool Version 1.2.5.0 [30-Nov-2023]                  *
+*                    AUTOSAR Architecture Version 4.4.0.                               *
+****************************************************************************************
+
+INF000000: Execute module: EcuM, version: 1.2.5.0 started at 30-Nov-2023
+INF000001: Command line arguments:
+-B C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC
+-M EcuM
+-T C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules
+-O C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Generated\Bsw_Output
+-I C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Build\input_files.yml
+-XML -S C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\EcuM_R44\generator\Bswmdt_EcuM.template
+-L -G 
+WRN000000: swcd template file is not set!
+INF000003: Output file [C:\workspace\arc-2.0\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Generated\Bsw_Output\bswmd\Bswmd_EcuM.arxml] at [2024-08-09 11:53:55]
+
+INF000006: Execution completed successfully with 1 warnings.
+
+scons: building terminated because of errors.

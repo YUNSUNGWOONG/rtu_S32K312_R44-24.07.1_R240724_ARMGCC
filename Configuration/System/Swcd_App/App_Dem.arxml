@@ -1,0 +1,1299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AppSwComponent_Dem</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>SwComponentType</SHORT-NAME>
+          <ELEMENTS>
+            <APPLICATION-SW-COMPONENT-TYPE>
+              <SHORT-NAME>SWC_DiagnosticMonitor</SHORT-NAME>
+              <PORTS>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>InitEvt_DEM_E_TEST_EVENT</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/CallbackInitMonitorForEvent/InitMonitorForEvent</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/CallbackInitMonitorForEvent</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE>
+                  <SHORT-NAME>OpCycle_POWER_CYCLE</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/OperationCycle/RestartOperationCycle</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/OperationCycle</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE>
+                  <SHORT-NAME>Event_DEM_E_TEST_EVENT1</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>CBReadData_DE_0001</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0001/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0001</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>CBReadData_DE_0002</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0002/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0002</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE>
+                  <SHORT-NAME>Event_DEM_E_TEST_EVENT2</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE>
+                  <SHORT-NAME>Event_DEM_E_TEST_EVENT3</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE>
+                  <SHORT-NAME>Event_DEM_E_TEST_EVENT4</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE>
+                  <SHORT-NAME>EnableCond_EnableCondtion_0</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EnableCondition/SetEnableCondition</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/EnableCondition</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>CBStatusEvt_DEM_E_TEST_EVENT1</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/CallbackEventUdsStatusChanged/CallbackEventUdsStatusChanged</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/CallbackEventUdsStatusChanged</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE>
+                  <SHORT-NAME>IndStatus_DemIndicator_0</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/IndicatorStatus/GetIndicatorStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/IndicatorStatus</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="c0250697-5592-4838-a171-b1ef467b4817">
+                  <SHORT-NAME>DS000</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Det/ClientServerInterfaces/DETService/ReportError</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Det/ClientServerInterfaces/DETService/ReportRuntimeError</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Det/ClientServerInterfaces/DETService</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="54fad155-7279-4d07-a1ce-ab80fbfa770b">
+                  <SHORT-NAME>CBStatusEvt_E_MODE_CHANGE_HS_CAN1</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/CallbackEventUdsStatusChanged/CallbackEventUdsStatusChanged</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/CallbackEventUdsStatusChanged</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="4d76cd0d-b86d-46a0-97ce-3b54dab3bc71">
+                  <SHORT-NAME>CBClrEvt_DEM_E_TEST_EVENT1</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/CallbackClearEventAllowed/ClearEventAllowed</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/CallbackClearEventAllowed</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="4b33e7a3-2f97-4fbf-b255-aa6724e48d93">
+                  <SHORT-NAME>OverflowIndMirrorMemory_DemClient0</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetEventMemoryOverflow</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="4f9e72ae-1102-4300-bf2c-b9e6d71b01c5">
+                  <SHORT-NAME>OverflowIndPermanentMemory_DemClient0</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetEventMemoryOverflow</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="435abcb9-88bf-46a4-a6a3-1a150f1b1e24">
+                  <SHORT-NAME>OverflowIndPrimaryMemory_DemClient0</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetEventMemoryOverflow</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="7291c5bf-343e-42c7-b4ac-f5042d29d0cf">
+                  <SHORT-NAME>OverflowIndUserDefinedMemory_DemClient0</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetEventMemoryOverflow</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="bb6b896f-d996-49a9-bbfb-3766b6b1be20">
+                  <SHORT-NAME>ClearDTC_DemClient0</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/ClearDTC/ClearDTC</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/ClearDTC/SelectDTC</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/ClearDTC</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="098eb6fb-c9da-4eaf-9d43-80e7b17aef5f">
+                  <SHORT-NAME>ClearDtcNotification_EventMemorySet0_DemClearDTCNotification0</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/ClearDtcNotification/ClearDtcNotification</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/ClearDtcNotification</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="6c9ba082-973a-44a2-a31d-a47fe977c378">
+                  <SHORT-NAME>StorageCond_DemStorageCondition0</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/StorageCondition/SetStorageCondition</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/StorageCondition</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="0812960c-33a2-41c0-95e5-8343c95f634f">
+                  <SHORT-NAME>Event_DEM_E_TEST_OBD_EVENT_1</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="77920ea1-7f62-4dad-b85a-68ebd34f5571">
+                  <SHORT-NAME>Event_DEM_E_TEST_OBD_EVENT_2</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="215a5c23-a804-4e8c-adfb-15fe44183d12">
+                  <SHORT-NAME>Event_DEM_E_TEST_OBD_EVENT_3</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="c350771e-7bcc-4de2-9058-a5f5cd7dc590">
+                  <SHORT-NAME>Event_DEM_E_TEST_EVENT5</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="d3145946-db8e-433c-86ad-aad0c0201258">
+                  <SHORT-NAME>Event_DEM_E_TEST_EVENT6</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="6ef344d8-6e52-41e9-aa29-5506f415d310">
+                  <SHORT-NAME>Event_DEM_E_TEST_EVENT7</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="00cc22bd-c3e0-4f1a-9623-9f47fa527b68">
+                  <SHORT-NAME>Event_DEM_E_TEST_EVENT8</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="88136054-c581-4e6f-955d-5df3e838e45a">
+                  <SHORT-NAME>Event_DEM_E_TEST_EVENT9</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="bd2b6fd3-16fa-48cc-b300-8acb1a3138e8">
+                  <SHORT-NAME>Event_DEM_E_TEST_EVENT10</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="10f2e619-cf31-4a34-ad3b-79442c2b038e">
+                  <SHORT-NAME>Event_DEM_E_TEST_EVENT11</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="02191f9f-32ea-407f-80f9-ea98cb026798">
+                  <SHORT-NAME>Event_DEM_E_TEST_EVENT12</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="67eb43c8-43af-4c9c-93a4-5afa53173118">
+                  <SHORT-NAME>Event_DEM_E_TEST_EVENT13</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="abfebc23-a6d5-4e26-81e6-c587133813c7">
+                  <SHORT-NAME>StorageCond_DemStorageCondition1</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/StorageCondition/SetStorageCondition</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/StorageCondition</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="db14979f-a5ab-49c8-8bb7-25352d969a04">
+                  <SHORT-NAME>OverflowIndMirrorMemory_DemClient1</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetEventMemoryOverflow</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="b65921e7-83ed-46d6-81e7-a192961729be">
+                  <SHORT-NAME>OverflowIndPermanentMemory_DemClient1</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetEventMemoryOverflow</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="fe266e7f-d21e-454c-b81d-00baebcd80a7">
+                  <SHORT-NAME>OverflowIndPrimaryMemory_DemClient1</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetEventMemoryOverflow</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="12eb88b7-9de9-46b5-8ef0-db54b6ede71e">
+                  <SHORT-NAME>OverflowIndUserDefinedMemory_DemClient1</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetEventMemoryOverflow</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="df3848ee-b60b-49b3-aa09-a5e914ec5ed1">
+                  <SHORT-NAME>ClearDTC_DemClient1</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/ClearDTC/ClearDTC</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/ClearDTC/SelectDTC</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/ClearDTC</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="c21f1781-83e4-4238-b483-a6efda3dfdde">
+                  <SHORT-NAME>ControlDTCSuppression_Client</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DTCSuppression/GetDTCSuppression</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DTCSuppression/SetDTCSuppression</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DTCSuppression</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="31294088-e7d8-49c5-a9ea-d3912ddfcf40">
+                  <SHORT-NAME>DTR_Dtr0</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DTRCentralReport/SetDTR</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DTRCentralReport</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="06788fee-ca6c-447f-bbd0-292b7b76b442">
+                  <SHORT-NAME>DTR_Dtr1</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DTRCentralReport/SetDTR</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DTRCentralReport</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="4c294e9a-2341-40b9-bea8-5ecebb0ae88f">
+                  <SHORT-NAME>ControlDTCSuppression</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DTCSuppression/GetDTCSuppression</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DTCSuppression/SetDTCSuppression</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DTCSuppression</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="0c9aef58-b3e8-4803-99ab-1e9c18d44f60">
+                  <SHORT-NAME>ControlEventAvailable_DEM_E_TEST_EVENT6</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EventAvailable/SetEventAvailable</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/EventAvailable</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="5413c2e0-b8ab-487e-8ca8-f1e4ceb28560">
+                  <SHORT-NAME>CBReadData_DE_0003</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0003/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0003</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="1205b2cc-c2d0-446e-97ef-992b60108bfe">
+                  <SHORT-NAME>CBReadData_DE_0004</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0004/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0004</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="35719175-7c0b-49ef-b5ba-053c60a54188">
+                  <SHORT-NAME>CBReadData_DE_0005</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0005/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0005</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="4fbced83-ee26-405d-a6b8-d1594fbdcd61">
+                  <SHORT-NAME>CBReadData_DE_0006</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0006/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0006</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="13d2bceb-0dcb-4a4e-a5fe-e6443ac15297">
+                  <SHORT-NAME>EventInfo_DEM_E_TEST_EVENT6</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticInfo/GetFaultDetectionCounter</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticInfo</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="ff46d9c5-e14c-4368-81db-4496006810cb">
+                  <SHORT-NAME>EventInfo_DEM_E_TEST_EVENT5</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticInfo/GetEventFreezeFrameDataEx</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticInfo/GetEventExtendedDataRecordEx</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticInfo</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="7b770a5e-a7de-4934-a508-2b1db2b06261">
+                  <SHORT-NAME>IUMPRNumerator_Ratio00</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/IUMPRNumerator/RepIUMPRFaultDetect</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/IUMPRNumerator</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="e08caef7-b0e8-43f0-b19b-d2650d01cde7">
+                  <SHORT-NAME>IUMPRNumerator_Ratio01</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/IUMPRNumerator/RepIUMPRFaultDetect</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/IUMPRNumerator</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="99fd68b4-e294-49c2-abd0-e0c9c5b8615d">
+                  <SHORT-NAME>IUMPRNumerator_Ratio02</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/IUMPRNumerator/RepIUMPRFaultDetect</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/IUMPRNumerator</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="df438b67-cc84-4b8e-ad39-55c5a114c84e">
+                  <SHORT-NAME>IUMPRDenominatorCondition_DEM_IUMPR_GENERAL_OBDCOND</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/IUMPRDenominatorCondition/SetIUMPRDenCondition</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/IUMPRDenominatorCondition</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="ac8b604f-56c0-41c2-b0e2-2d92a0ba8d5a">
+                  <SHORT-NAME>IUMPRDenominatorCondition_DEM_IUMPR_GENERAL_INDIVIDUAL_DENOMINATOR</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/IUMPRDenominatorCondition/SetIUMPRDenCondition</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/IUMPRDenominatorCondition</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="820e85bb-aa65-4fe6-93d6-3e4fc6614805">
+                  <SHORT-NAME>EventStatus_DEM_E_TEST_EVENT3</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EventStatus/SetWIRStatus</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/EventStatus</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="983cf32c-225c-42ab-9b5d-47689f29ace5">
+                  <SHORT-NAME>FiM00_FunctionInhibition</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_FiM/ClientServerInterfaces/FunctionInhibition/GetFunctionPermission</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_FiM/ClientServerInterfaces/FunctionInhibition</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="304ddd80-94e4-4abf-b61c-4fd3f9eb0067">
+                  <SHORT-NAME>FiM00_ControlFunctionAvailable</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_FiM/ClientServerInterfaces/ControlFunctionAvailable/SetFunctionAvailable</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_FiM/ClientServerInterfaces/ControlFunctionAvailable</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="71e9ae02-e379-4eaf-8aa5-3bd9c1e75ebd">
+                  <SHORT-NAME>FiM01_FunctionInhibition</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_FiM/ClientServerInterfaces/FunctionInhibition/GetFunctionPermission</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_FiM/ClientServerInterfaces/FunctionInhibition</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="2d0041e6-849f-4e87-8118-c567cefbe017">
+                  <SHORT-NAME>FiM01_ControlFunctionAvailable</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_FiM/ClientServerInterfaces/ControlFunctionAvailable/SetFunctionAvailable</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_FiM/ClientServerInterfaces/ControlFunctionAvailable</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="464b44c9-ddd3-46d9-b15a-3b2c02c09632">
+                  <SHORT-NAME>CBReadData_DE_0009</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0009/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0009</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="7c2472ec-0f6b-47f0-b25c-29ee36bf12a8">
+                  <SHORT-NAME>CBReadData_DE_0008</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0008/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0008</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="a8438ff1-6818-46d3-b88e-26ae3df97874">
+                  <SHORT-NAME>CBReadData_DE_0010</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0010/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0010</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="20736e7c-ead4-42d2-a72b-b6b27068315e">
+                  <SHORT-NAME>MonitorData_DEM_E_TEST_EVENT11</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor_MonitorData/SetEventStatusWithMonitorData</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor_MonitorData</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>InternalBehaviors_DiagnosticMonitor</SHORT-NAME>
+                  <EVENTS>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>OIE_InitMonitorForEvent</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InternalBehaviors_DiagnosticMonitor/InitMonitorForEvent_DEM_E_TEST</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InitEvt_DEM_E_TEST_EVENT</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/CallbackInitMonitorForEvent/InitMonitorForEvent</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>OIE_CBReadData_DE_0001</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InternalBehaviors_DiagnosticMonitor/CBReadData_DE_0001</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/CBReadData_DE_0001</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0001/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>OIE_CBReadData_DE_0002</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InternalBehaviors_DiagnosticMonitor/CBReadData_DE_0002</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/CBReadData_DE_0002</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0002/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <TIMING-EVENT>
+                      <SHORT-NAME>TimingEvent_DiagnosticMonitor</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InternalBehaviors_DiagnosticMonitor/DianosticMonitor</START-ON-EVENT-REF>
+                      <PERIOD>0.01</PERIOD>
+                    </TIMING-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>OIE_CBStatusEvt_DEM_E_TEST_EVENT</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InternalBehaviors_DiagnosticMonitor/CBStatusEvt_DEM_E_TEST_EVENT1</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/CBStatusEvt_DEM_E_TEST_EVENT1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/CallbackEventUdsStatusChanged/CallbackEventUdsStatusChanged</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="94f6de49-8330-4266-b22c-13686aa8171e">
+                      <SHORT-NAME>OIE_CBStatusEvt_E_MODE_CHANGE_HS_CAN1_CBStatusEvt_E_MODE_CHANGE_HS_CAN1_EventStatusChanged</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InternalBehaviors_DiagnosticMonitor/CBStatusEvt_E_MODE_CHANGE_HS_CAN1</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/CBStatusEvt_E_MODE_CHANGE_HS_CAN1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/CallbackEventUdsStatusChanged/CallbackEventUdsStatusChanged</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="4c27f6e6-079c-4a84-b18c-63ad624faf74">
+                      <SHORT-NAME>OIE_CBClrEvt_DEM_E_TEST_EVENT1</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InternalBehaviors_DiagnosticMonitor/CBClrEvt_DEM_E_TEST_EVENT1</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/CBClrEvt_DEM_E_TEST_EVENT1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/CallbackClearEventAllowed/ClearEventAllowed</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="698bad64-7791-466c-9010-fc7a3fd2602e">
+                      <SHORT-NAME>OIE_CBReadData_DE_0003</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InternalBehaviors_DiagnosticMonitor/CBReadData_DE_0003</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/CBReadData_DE_0003</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0003/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="adfa5317-1fad-41bc-97b0-d178ad8c9d8b">
+                      <SHORT-NAME>OIE_CBReadData_DE_0004</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InternalBehaviors_DiagnosticMonitor/CBReadData_DE_0004</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/CBReadData_DE_0004</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0004/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="186c5fb0-b95e-4b40-a5ce-aa799fa8beac">
+                      <SHORT-NAME>OIE_CBReadData_DE_0005</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InternalBehaviors_DiagnosticMonitor/CBReadData_DE_0005</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/CBReadData_DE_0005</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0005/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="7f173047-5328-4d02-be08-83e600c4897d">
+                      <SHORT-NAME>OIE_CBReadData_DE_0006</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InternalBehaviors_DiagnosticMonitor/CBReadData_DE_0006</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/CBReadData_DE_0006</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0006/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="294a92b5-e247-41cc-8214-be3164fe5336">
+                      <SHORT-NAME>OIE_CBReadData_DE_0009</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InternalBehaviors_DiagnosticMonitor/CBReadData_DE_0009</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/CBReadData_DE_0009</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0009/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="0a78b12e-0de6-46e4-8835-d1db6d7866b6">
+                      <SHORT-NAME>OIE_CBReadData_DE_0008</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InternalBehaviors_DiagnosticMonitor/CBReadData_DE_0008</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/CBReadData_DE_0008</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0008/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="e64387e7-701e-435c-89e6-c4a3f161650d">
+                      <SHORT-NAME>OIE_CBReadData_DE_0010</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InternalBehaviors_DiagnosticMonitor/CBReadData_DE_0010</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/CBReadData_DE_0010</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DataServices_DE_0010/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <INCLUDED-DATA-TYPE-SETS>
+                    <INCLUDED-DATA-TYPE-SET />
+                  </INCLUDED-DATA-TYPE-SETS>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>InitMonitorForEvent_DEM_E_TEST</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>InitMonitorForEvent_DEM_E_TEST</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>CBReadData_DE_0001</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>CBReadData_DE_0001</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>CBReadData_DE_0002</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>CBReadData_DE_0002</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>DianosticMonitor</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SERVER-CALL-POINTS>
+                        <SYNCHRONOUS-SERVER-CALL-POINT>
+                          <SHORT-NAME>SSCP_SetOperationCycleState</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/OpCycle_POWER_CYCLE</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/OperationCycle/RestartOperationCycle</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT>
+                          <SHORT-NAME>DEM_E_TEST_EVENT1_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_EVENT1</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT>
+                          <SHORT-NAME>DEM_E_TEST_EVENT2_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_EVENT2</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT>
+                          <SHORT-NAME>DEM_E_TEST_EVENT3_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_EVENT3</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT>
+                          <SHORT-NAME>DEM_E_TEST_EVENT4_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_EVENT4</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT>
+                          <SHORT-NAME>EnableCond_EnableCondition_0</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/EnableCond_EnableCondtion_0</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EnableCondition/SetEnableCondition</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT>
+                          <SHORT-NAME>IndStatus_DemIndicator_0</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/IndStatus_DemIndicator_0</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/IndicatorStatus/GetIndicatorStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="93db14de-c9d0-4770-be9c-ca4cb4d7de75">
+                          <SHORT-NAME>Det_ReportError_DS000</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/DS000</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Det/ClientServerInterfaces/DETService/ReportError</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="70499ae4-b038-4fc0-8603-0c75a40a9f5a">
+                          <SHORT-NAME>ReportRuntimeError_DS000</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/DS000</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Det/ClientServerInterfaces/DETService/ReportRuntimeError</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="556ce026-f988-47dd-848f-357b0cd5ef28">
+                          <SHORT-NAME>SSCP_ClearDtcNotification_EventMemorySet0_DemClearDTCNotification0</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/ClearDtcNotification_EventMemorySet0_DemClearDTCNotification0</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/ClearDtcNotification/ClearDtcNotification</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="ea6e5f6b-cdf2-4be6-9629-91b83dffb078">
+                          <SHORT-NAME>SSCP_StorageCond_DemStorageCondition0</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/StorageCond_DemStorageCondition0</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/StorageCondition/SetStorageCondition</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="8a265b0d-366c-4bbd-8d0c-10b1f59f99b2">
+                          <SHORT-NAME>SSCP_OverflowIndMirrorMemory_DemClient0_GetEventMemoryOverflow</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/OverflowIndMirrorMemory_DemClient0</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetEventMemoryOverflow</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="c8585646-44d0-4ec1-8037-570e141ce9bd">
+                          <SHORT-NAME>SSCP_OverflowIndMirrorMemory_DemClient0_GetNumberOfEventMemoryEntries</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/OverflowIndMirrorMemory_DemClient0</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="ac1ed3ea-5b11-4195-a681-fd9b2459eddc">
+                          <SHORT-NAME>SSCP_OverflowIndPermanentMemory_DemClient0_GetEventMemoryOverflow</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/OverflowIndPermanentMemory_DemClient0</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetEventMemoryOverflow</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="812d3d2e-1eb1-4fe7-af83-935870eb6d65">
+                          <SHORT-NAME>SSCP_OverflowIndPermanentMemory_DemClient0_GetNumberOfEventMemoryEntries</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/OverflowIndPermanentMemory_DemClient0</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="22fc886d-4b28-4935-ab77-8990bc624cd7">
+                          <SHORT-NAME>SSCP_OverflowIndPrimaryMemory_DemClient0_GetEventMemoryOverflow</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/OverflowIndPrimaryMemory_DemClient0</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetEventMemoryOverflow</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="118a2f79-7633-4be4-90ac-d829ea76939a">
+                          <SHORT-NAME>SSCP_OverflowIndPrimaryMemory_DemClient0_GetNumberOfEventMemoryEntries</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/OverflowIndPrimaryMemory_DemClient0</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="cf163ed6-d138-45e6-b31b-46fb555f7de1">
+                          <SHORT-NAME>Event_DEM_E_TEST_OBD_EVENT_1_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_OBD_EVENT_1</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="6d8e97bf-7024-4565-b317-8729d12ed382">
+                          <SHORT-NAME>Event_DEM_E_TEST_OBD_EVENT_2_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_OBD_EVENT_2</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="73b3af06-9829-4fa3-a4d9-09d57610bd6f">
+                          <SHORT-NAME>Event_DEM_E_TEST_OBD_EVENT_3_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_OBD_EVENT_3</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="7fff000f-7989-4f20-ade6-5655df732e5f">
+                          <SHORT-NAME>SSCP_DEM_E_TEST_EVENT7_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_EVENT7</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="e1ef8624-4916-4c3d-aea1-712cfbed1323">
+                          <SHORT-NAME>SSCP_DEM_E_TEST_EVENT8_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_EVENT8</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="75c9c170-9801-4c8f-9f5a-a229ce921771">
+                          <SHORT-NAME>SSCP_DEM_E_TEST_EVENT9_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_EVENT9</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="c6ff88b0-0df7-4120-8f2b-52e3af878f86">
+                          <SHORT-NAME>SSCP_DEM_E_TEST_EVENT10_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_EVENT10</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="8101abe4-5376-4eed-a287-4966b00a783f">
+                          <SHORT-NAME>SSCP_DEM_E_TEST_EVENT11_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_EVENT11</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="a9ee7a83-397a-4ac1-85f2-3f9ff338a85e">
+                          <SHORT-NAME>SSCP_DEM_E_TEST_EVENT12_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_EVENT12</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="dc7a8dd5-2730-46ea-814a-9f7317360d5c">
+                          <SHORT-NAME>SSCP_DEM_E_TEST_EVENT13_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_EVENT13</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="4c93f118-0096-40d6-9d9a-f63c300bd1d9">
+                          <SHORT-NAME>SSCP_StorageCon0_SetStorageCondition</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/StorageCond_DemStorageCondition1</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/StorageCondition/SetStorageCondition</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="01f0dfda-3b18-4f08-b35b-8bd0686c8ada">
+                          <SHORT-NAME>SSCP_Client0_SelectDTC</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/ClearDTC_DemClient0</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/ClearDTC/SelectDTC</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="26722481-78d5-46e1-8343-8cdda417502b">
+                          <SHORT-NAME>SSCP_Client0_ClearDTC</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/ClearDTC_DemClient0</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/ClearDTC/ClearDTC</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="b3447057-fcc8-4564-85c8-3b93652d4aaf">
+                          <SHORT-NAME>SSCP_OverflowIndMirrorMemory_DemClient1_GetEventMemoryOverflow</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/OverflowIndMirrorMemory_DemClient1</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetEventMemoryOverflow</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="d87731fc-bf9e-422e-93d5-6502b5954aeb">
+                          <SHORT-NAME>SSCP_OverflowIndMirrorMemory_DemClient1_GetNumberOfEventMemoryEntries</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/OverflowIndMirrorMemory_DemClient1</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="733babb3-b7e5-415c-aae9-aa7ec0271ba7">
+                          <SHORT-NAME>SSCP_OverflowIndPermanentMemory_DemClient1_GetEventMemoryOverflow</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/OverflowIndPermanentMemory_DemClient1</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetEventMemoryOverflow</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="5b3d5a7e-3584-44d0-90a8-11d32dd37deb">
+                          <SHORT-NAME>SSCP_OverflowIndPermanentMemory_DemClient1_GetNumberOfEventMemoryEntries</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/OverflowIndPermanentMemory_DemClient1</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="d7d04652-f24b-4b31-8033-7a144562c4ea">
+                          <SHORT-NAME>SSCP_OverflowIndPrimaryMemory_DemClient1_GetEventMemoryOverflow</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/OverflowIndPrimaryMemory_DemClient1</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetEventMemoryOverflow</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="80b35281-6706-45fe-9626-385d3735441f">
+                          <SHORT-NAME>SSCP_OverflowIndPrimaryMemory_DemClient1_GetNumberOfEventMemoryEntries</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/OverflowIndPrimaryMemory_DemClient1</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="8e36415c-97ae-4cd2-8e28-ec5ca7a15404">
+                          <SHORT-NAME>SSCP_DEM_E_TEST_EVENT6_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_EVENT6</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="bb51195e-80a8-4915-9e66-e28ca0d9e34a">
+                          <SHORT-NAME>SSCP_DEM_E_TEST_EVENT5_SetEventStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/Event_DEM_E_TEST_EVENT5</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor/SetEventStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="9a3c94d4-9898-4d3d-a680-856952a2ccb2">
+                          <SHORT-NAME>SSCP_Client1_SelectDTC</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/ClearDTC_DemClient1</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/ClearDTC/SelectDTC</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="0575698f-beaa-4167-a56d-b7c9c78db3f6">
+                          <SHORT-NAME>SSCP_Client1_ClearDTC</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/ClearDTC_DemClient1</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/ClearDTC/ClearDTC</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="465df8be-4a8a-449f-b7be-47005c12f7a9">
+                          <SHORT-NAME>SSCP_Dtr_Dtr0</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/DTR_Dtr0</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DTRCentralReport/SetDTR</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="c2a8ffdf-b730-4743-a376-78db1ef8b8fd">
+                          <SHORT-NAME>SSCP_Dtr_Dtr1</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/DTR_Dtr1</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DTRCentralReport/SetDTR</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="282f3a49-e5ed-4487-a4b6-8545a89946bf">
+                          <SHORT-NAME>SSCP_ControlDTCSuppression_GetDtcSuppression</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/ControlDTCSuppression</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DTCSuppression/GetDTCSuppression</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="a8debb60-b082-4cd0-a1b4-a4e1c6025217">
+                          <SHORT-NAME>SSCP_ControlDTCSuppression_SetDtcSuppression</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/ControlDTCSuppression</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DTCSuppression/SetDTCSuppression</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="a902480f-75ca-4891-9e61-73ea977dc11b">
+                          <SHORT-NAME>SSCP_ControlEventAvailable_SetEventAvailable_DEM_E_TEST_EVENT1</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/ControlEventAvailable_DEM_E_TEST_EVENT6</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EventAvailable/SetEventAvailable</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="01ebf6f5-e4db-4129-884f-14df9c061e0c">
+                          <SHORT-NAME>SSCP_DEM_E_TEST_EVENT6_GetFaultDetectionCounter</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/EventInfo_DEM_E_TEST_EVENT6</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticInfo/GetFaultDetectionCounter</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="03135b97-a2c1-4d66-bd15-bcf221000d3c">
+                          <SHORT-NAME>SSCP_IUMPRNumerator_Ratio00</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/IUMPRNumerator_Ratio00</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/IUMPRNumerator/RepIUMPRFaultDetect</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="4989e0ae-8951-4b14-b171-13c3af7a070c">
+                          <SHORT-NAME>SSCP_IUMPRNumerator_Ratio01</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/IUMPRNumerator_Ratio01</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/IUMPRNumerator/RepIUMPRFaultDetect</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="0ea9903c-5584-4338-a680-72c253ecdea9">
+                          <SHORT-NAME>SSCP_IUMPRNumerator_02</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/IUMPRNumerator_Ratio02</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/IUMPRNumerator/RepIUMPRFaultDetect</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="57f9df86-6b7c-4a7e-adff-aa6df46270a1">
+                          <SHORT-NAME>SSCP_IUMPRDenominatorCondition_DEM_IUMPR_GENERAL_OBDCOND</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/IUMPRDenominatorCondition_DEM_IUMPR_GENERAL_OBDCOND</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/IUMPRDenominatorCondition/SetIUMPRDenCondition</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="3a0a172e-3666-44f2-bb3b-bb182c729ecd">
+                          <SHORT-NAME>SSCP_IUMPRDenominatorCondition_DEM_IUMPR_GENERAL_INDIVIDUAL_DENOMINATOR</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/IUMPRDenominatorCondition_DEM_IUMPR_GENERAL_INDIVIDUAL_DENOMINATOR</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/IUMPRDenominatorCondition/SetIUMPRDenCondition</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="580d929f-e01d-41f7-8c7e-c65678859307">
+                          <SHORT-NAME>SSCP_EventInfo_DEM_E_TEST_EVENT5_GetEventFreezeFrameDataEx</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/EventInfo_DEM_E_TEST_EVENT5</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticInfo/GetEventExtendedDataRecordEx</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="305ee5be-e300-4cda-8006-3b1ece9f3dec">
+                          <SHORT-NAME>SSCP_EventInfo_DEM_E_TEST_EVENT5_GetEventExtendedDataRecordEx</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/EventInfo_DEM_E_TEST_EVENT5</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticInfo/GetEventFreezeFrameDataEx</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="2e08c2fc-d385-439f-a7d2-74223ef66dc9">
+                          <SHORT-NAME>SSCP_EventStatus_DEM_E_TEST_EVENT3_SetWIRStatus</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/EventStatus_DEM_E_TEST_EVENT3</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EventStatus/SetWIRStatus</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="94ba709b-e878-4887-8b12-d48ee2bc2f76">
+                          <SHORT-NAME>SSCP_OverflowIndUserDefined_DemClient1_GetEventMemoryOverflow</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/OverflowIndUserDefinedMemory_DemClient1</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="ab689db8-0dcb-4f37-8fa4-c6be63f81160">
+                          <SHORT-NAME>SSCP_FiM00_FunctionInhibition_GetFunctionPermission</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/FiM00_FunctionInhibition</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_FiM/ClientServerInterfaces/FunctionInhibition/GetFunctionPermission</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="2dbd441d-9e43-4964-9b86-37759bb3587f">
+                          <SHORT-NAME>SSCP_FiM00_ControlFunctionAvailable_SetFunctionAvailable</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/FiM00_ControlFunctionAvailable</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_FiM/ClientServerInterfaces/ControlFunctionAvailable/SetFunctionAvailable</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="cbc8689b-4bec-43b5-80e0-0481a82455e5">
+                          <SHORT-NAME>SSCP_FiM01_FunctionInhibition_GetFunctionPermission</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/FiM01_FunctionInhibition</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_FiM/ClientServerInterfaces/FunctionInhibition/GetFunctionPermission</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="2f4e412e-2293-4dee-ac0f-c7350b4a5ecf">
+                          <SHORT-NAME>SSCP_FiM01_ControlFunctionAvailable_SetFunctionAvailable</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/FiM01_ControlFunctionAvailable</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_FiM/ClientServerInterfaces/ControlFunctionAvailable/SetFunctionAvailable</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="a63152a2-23fb-4de9-98dd-5c1149d317dc">
+                          <SHORT-NAME>SSCP_SetEventStatusWithMonitorData</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/MonitorData_DEM_E_TEST_EVENT11</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dem/ClientServerInterfaces/DiagnosticMonitor_MonitorData/SetEventStatusWithMonitorData</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                      </SERVER-CALL-POINTS>
+                      <SYMBOL>DiagnosticMonitor</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>CBStatusEvt_DEM_E_TEST_EVENT1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>CBStatusEvt_DEM_E_TEST_EVENT1</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="8fb8efec-f714-4d36-944f-b25ced93e39d">
+                      <SHORT-NAME>CBStatusEvt_E_MODE_CHANGE_HS_CAN1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>CBStatusEvt_E_MODE_CHANGE_HS_CAN1</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="3961b4ce-5f85-45f0-bf61-fe2bcfed14ab">
+                      <SHORT-NAME>CBClrEvt_DEM_E_TEST_EVENT1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>CBClrEvt_DEM_E_TEST_EVENT1</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="1f1a8de3-c50d-4698-8786-4bb60338fe20">
+                      <SHORT-NAME>ClearDtcNotification_EventMemorySet0_DemClearDTCNotification0</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>ClearDtcNotification_EventMemorySet0_DemClearDTCNotification0</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="73eef69a-592e-4fb2-92ca-61a20f3c6af7">
+                      <SHORT-NAME>CBReadData_DE_0003</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>CBReadData_DE_0003</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="6b80e008-6fb9-4494-a029-276c8fa5573d">
+                      <SHORT-NAME>CBReadData_DE_0004</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>CBReadData_DE_0004</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="b50628b6-be1b-4765-ad6c-91568e74f192">
+                      <SHORT-NAME>CBReadData_DE_0005</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>CBReadData_DE_0005</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="61b11166-1127-466d-8146-ed9e3e68b454">
+                      <SHORT-NAME>CBReadData_DE_0006</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>CBReadData_DE_0006</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="eafe4c11-fde0-4fac-b460-f02096d0fa49">
+                      <SHORT-NAME>CBReadData_DE_0008</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>CBReadData_DE_0008</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="190bea67-c7ce-4dac-ad31-1ad6b46eed91">
+                      <SHORT-NAME>CBReadData_DE_0009</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>CBReadData_DE_0009</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="df570d93-bddd-472d-a703-f2e9faebfcb3">
+                      <SHORT-NAME>CBReadData_DE_0010</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>CBReadData_DE_0010</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </APPLICATION-SW-COMPONENT-TYPE>
+            <SWC-IMPLEMENTATION>
+              <SHORT-NAME>SWC_DiagnosticMonitor_Implementation</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE>
+                  <SHORT-NAME>Default</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT />
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor/InternalBehaviors_DiagnosticMonitor</BEHAVIOR-REF>
+            </SWC-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

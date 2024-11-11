@@ -1,0 +1,2405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTRON</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="82048116-2463-423e-a65c-5f8e8e414f65">
+          <SHORT-NAME>CanIf</SHORT-NAME>
+          <ADMIN-DATA>
+            <DOC-REVISIONS>
+              <DOC-REVISION>
+                <REVISION-LABEL>4.2.0</REVISION-LABEL>
+                <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                <DATE>2011-11-09</DATE>
+              </DOC-REVISION>
+            </DOC-REVISIONS>
+          </ADMIN-DATA>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTRON/CanIf</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/Bsw_CanIf/BswImplementation_CanIf</MODULE-DESCRIPTION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="0c07915d-ecd5-498d-803b-e035a23fd281">
+              <SHORT-NAME>CanIfDispatchCfg</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2020-01-06T17:37:51Z" GID="CanIfDispatchUserCheckTrcvWakeFlagIndicationUL">CAN_SM</SD>
+                    <SD T="2020-07-02T15:35:22Z" GID="CanIfDispatchUserCtrlBusOffUL">CAN_SM</SD>
+                    <SD T="2020-08-13T11:54:43Z" GID="CanIfDispatchUserCtrlModeIndicationUL">CAN_SM</SD>
+                    <SD T="2020-11-26T17:51:18Z" GID="CanIfDispatchUserClearTrcvWufFlagIndicationUL">CAN_SM</SD>
+                    <SD T="2024-07-10T23:54:40Z" GID="CanIfDispatchUserConfirmPnAvailabilityUL">CAN_SM</SD>
+                  </SDG>
+                  <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                    <SD GID="CanIfDispatchUserConfirmPnAvailabilityUL">true</SD>
+                  </SDG>
+                  <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                    <SD T="2024-06-04T13:15:38Z" GID="CanIfDispatchUserConfirmPnAvailabilityUL">CAN_SM</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfDispatchCfg</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfDispatchCfg/CanIfDispatchUserCtrlBusOffUL</DEFINITION-REF>
+                  <VALUE>CAN_SM</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfDispatchCfg/CanIfDispatchUserCtrlModeIndicationUL</DEFINITION-REF>
+                  <VALUE>CAN_SM</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfDispatchCfg/CanIfDispatchUserValidateWakeupEventUL</DEFINITION-REF>
+                  <VALUE>ECUM</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfDispatchCfg/CanIfDispatchUserCheckTrcvWakeFlagIndicationUL</DEFINITION-REF>
+                  <VALUE>CAN_SM</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfDispatchCfg/CanIfDispatchUserClearTrcvWufFlagIndicationUL</DEFINITION-REF>
+                  <VALUE>CAN_SM</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfDispatchCfg/CanIfDispatchUserTrcvModeIndicationUL</DEFINITION-REF>
+                  <VALUE>CAN_SM</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfDispatchCfg/CanIfDispatchUserConfirmPnAvailabilityUL</DEFINITION-REF>
+                  <VALUE>CAN_SM</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="ed1c3794-59de-4b6a-bca4-27095da675fc">
+              <SHORT-NAME>CanIfPrivateCfg</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2020-05-27T10:46:18Z" GID="CanIfSupportCanCM">1</SD>
+                    <SD T="2020-01-06T18:28:40Z" GID="CanIfPrivateDataLengthCheck">1</SD>
+                    <SD T="2020-01-07T09:12:28Z" GID="CanIfFixedBuffer">1</SD>
+                    <SD T="2024-01-03T18:38:57Z" GID="CanIfPrivateSoftwareFilterType">BINARY</SD>
+                  </SDG>
+                  <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                    <SD GID="CanIfSupportCANFD">true</SD>
+                    <SD GID="CanIfPrivateDataLengthCheck">true</SD>
+                  </SDG>
+                  <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                    <SD T="2024-07-10T13:03:07Z" GID="CanIfSupportCANFD">1</SD>
+                    <SD T="2020-04-16T14:33:14Z" GID="CanIfPrivateDataLengthCheck">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfPrivateCfg</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfPrivateCfg/CanIfPrivateSoftwareFilterType</DEFINITION-REF>
+                  <VALUE>BINARY</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPrivateCfg/CanIfSupportTTCAN</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPrivateCfg/CanIfSupportCanCM</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPrivateCfg/CanIfSupportCANFD</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPrivateCfg/CanIfFixedBuffer</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPrivateCfg/CanIfPrivateDataLengthCheck</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="de19ade5-63de-49e0-82ff-1cb2217a8b2c">
+              <SHORT-NAME>CanIfPublicCfg</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                    <SD GID="CanIfPublicTxBuffering">true</SD>
+                    <SD GID="CanIfSetBaudrateApi">true</SD>
+                    <SD GID="CanIfDevErrorDetect">true</SD>
+                    <SD GID="CanIfVersionInfoApi">true</SD>
+                    <SD GID="CanIfPublicPnSupport">true</SD>
+                  </SDG>
+                  <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                    <SD T="2024-07-10T13:03:07Z" GID="CanIfPublicTxBuffering">0</SD>
+                    <SD T="2020-04-16T14:33:14Z" GID="CanIfSetBaudrateApi">0</SD>
+                    <SD T="2020-04-16T14:33:14Z" GID="CanIfDevErrorDetect">0</SD>
+                    <SD T="2020-04-16T14:33:14Z" GID="CanIfVersionInfoApi">1</SD>
+                    <SD T="2024-07-10T13:03:07Z" GID="CanIfPublicPnSupport">0</SD>
+                  </SDG>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2019-05-02T10:27:11Z" GID="CanIfAutronTrcvDrvSupport">1</SD>
+                    <SD T="2019-05-02T10:27:14Z" GID="CanIfExternalTrcvDrvSupport">0</SD>
+                    <SD T="2019-11-13T12:20:42Z" GID="CanIfPublicDevErrorDetect">0</SD>
+                    <SD T="2024-01-17T11:14:22Z" GID="CanIfPublicCddHeaderFile" />
+                    <SD T="2020-02-20T15:13:42Z" GID="CanIfBusMirroringSupport">0</SD>
+                    <SD T="2020-04-20T15:03:22Z" GID="CanIfDevErrorDetect">1</SD>
+                    <SD T="2020-01-07T09:22:11Z" GID="CanIfPublicIcomSupport">0</SD>
+                    <SD T="2020-01-07T09:14:53Z" GID="CanIfSetBaudrateApi">0</SD>
+                    <SD T="2022-02-21T09:17:00Z" GID="CanIfTriggerTransmitSupport">1</SD>
+                    <SD T="2020-01-07T09:22:14Z" GID="CanIfTxOfflineActiveSupport">0</SD>
+                    <SD T="2020-02-08T10:05:53Z" GID="CanIfVersionInfoApi">1</SD>
+                    <SD T="2020-07-23T11:08:13Z" GID="CanIfWakeupSupport">0</SD>
+                    <SD T="2020-02-08T10:05:44Z" GID="CanIfPublicTxConfirmPollingSupport">1</SD>
+                    <SD T="2020-05-18T10:49:02Z" GID="CanIfPublicReadRxPduDataApi">1</SD>
+                    <SD T="2020-05-18T10:49:03Z" GID="CanIfPublicReadRxPduNotifyStatusApi">1</SD>
+                    <SD T="2023-08-28T17:46:30Z" GID="CanIfPublicSetDynamicTxIdApi">0</SD>
+                    <SD T="2020-07-16T17:15:04Z" GID="CanIfPublicReadTxPduNotifyStatusApi">1</SD>
+                    <SD T="2020-08-14T09:07:53Z" GID="CanIfMetaDataSupport">1</SD>
+                    <SD T="2024-07-10T23:52:38Z" GID="CanIfPublicPnSupport">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfPublicCfg</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfPublicMultipleDrvSupport</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfPublicReadRxPduDataApi</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfPublicReadRxPduNotifyStatusApi</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfPublicReadTxPduNotifyStatusApi</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfPublicTxBuffering</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfPublicTxConfirmPollingSupport</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfPublicWakeupCheckValidSupport</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfPublicWakeupCheckValidByNM</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfMetaDataSupport</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfPublicHandleTypeEnum</DEFINITION-REF>
+                  <VALUE>UINT16</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfCANFDID16BitSupport</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfCANFDDiscreteDlcSupport</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfAutronTrcvDrvSupport</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfExternalTrcvDrvSupport</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfDevErrorDetect</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfVersionInfoApi</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfSetBaudrateApi</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfPublicIcomSupport</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfTriggerTransmitSupport</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfTxOfflineActiveSupport</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfWakeupSupport</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfBusMirroringSupport</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfPublicSetDynamicTxIdApi</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfPublicCfg/CanIfPublicPnSupport</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="11f757b2-b9fb-4bf1-9761-cf3f237028da">
+              <SHORT-NAME>CanIfTrcvDrvCfg0</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfTrcvDrvCfg</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="9bb3c6bd-24e8-43f6-a67a-267ad0fd5543">
+                  <SHORT-NAME>CanIfTrcvCfg_FD_CAN1</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2020-04-16T14:47:26Z" GID="CanIfTrcvWakeupSupport">0</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2023-12-22T09:29:34Z" GID="CanIfTrcvId">0</SD>
+                        <SD T="2020-04-16T14:48:08Z" GID="CanIfTrcvCanTrcvRef">/AUTRON/CanTrcv/CanTrcvConfigSet/CanTrcvChannel_FD_CAN1</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfTrcvDrvCfg/CanIfTrcvCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfTrcvDrvCfg/CanIfTrcvCfg/CanIfTrcvWakeupSupport</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfTrcvDrvCfg/CanIfTrcvCfg/CanIfTrcvId</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfTrcvDrvCfg/CanIfTrcvCfg/CanIfTrcvCanTrcvRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanTrcv/CanTrcvConfigSet/CanTrcvChannel_FD_CAN1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="9580daaa-b15a-4a0e-a53a-cca7048f26ba">
+              <SHORT-NAME>CanIfInitCfg</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                    <SD T="2024-07-10T13:03:07Z" GID="CanIfInitCfgSet">0</SD>
+                  </SDG>
+                  <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                    <SD GID="CanIfInitCfgSet">true</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitCfgSet</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="2e17ea30-3440-4dbf-8550-26633252730e">
+                  <SHORT-NAME>CanIfInitHohCfg0</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="924e2181-ad0b-48bb-b4b0-650528b74674">
+                      <SHORT-NAME>CanIfHrhCfg_IN_0x500_0x57f_ECU1_FD_CAN1_NM_Message</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhCanCtrlIdRef">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhIdSymRef">/Can_43_FLEXCAN/Can/CanConfigSet/IN_HwObj_0x500_0x57f_ECU1_FD_CAN1_NM_Message</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanIfHrhCanCtrlIdRef">true</SD>
+                            <SD GID="CanIfHrhIdSymRef">true</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2023-12-25T12:21:04Z" GID="CanIfHrhSoftwareFilter">1</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhSoftwareFilter</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanConfigSet/IN_HwObj_0x500_0x57f_ECU1_FD_CAN1_NM_Message</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="18ed6bbb-f4e7-42e9-8ab7-aebdbb30e65a">
+                          <SHORT-NAME>CanIfHrhRangeCfg0</SHORT-NAME>
+                          <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                                <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhRangeRxPduLowerCanId">1280</SD>
+                                <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhRangeRxPduUpperCanId">1407</SD>
+                                <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhRangeRxPduRangeCanIdType">STANDARD</SD>
+                              </SDG>
+                              <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                                <SD GID="CanIfHrhRangeRxPduLowerCanId">true</SD>
+                                <SD GID="CanIfHrhRangeRxPduUpperCanId">true</SD>
+                                <SD GID="CanIfHrhRangeRxPduRangeCanIdType">true</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhRangeCfg</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhRangeCfg/CanIfHrhRangeRxPduLowerCanId</DEFINITION-REF>
+                              <VALUE>1280</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhRangeCfg/CanIfHrhRangeRxPduUpperCanId</DEFINITION-REF>
+                              <VALUE>1407</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhRangeCfg/CanIfHrhRangeRxPduRangeCanIdType</DEFINITION-REF>
+                              <VALUE>STANDARD</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="1981b6a9-d61c-41d3-a812-5a9516b3503d">
+                      <SHORT-NAME>CanIfHrhCfg_IN_ECU1_FD_CAN1_0x7df_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhCanCtrlIdRef">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhIdSymRef">/Can_43_FLEXCAN/Can/CanConfigSet/IN_HwObj_ECU1_FD_CAN1_0x7df_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanIfHrhCanCtrlIdRef">true</SD>
+                            <SD GID="CanIfHrhIdSymRef">true</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2024-07-10T10:09:56Z" GID="CanIfHrhSoftwareFilter">1</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhSoftwareFilter</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanConfigSet/IN_HwObj_ECU1_FD_CAN1_0x7df_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="6b44ece1-a283-48ca-84d0-d39f38020213">
+                      <SHORT-NAME>CanIfHrhCfg_IN_ECU1_FD_CAN1_0x650_FD_CAN1_AtmReq</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhCanCtrlIdRef">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhIdSymRef">/Can_43_FLEXCAN/Can/CanConfigSet/IN_HwObj_ECU1_FD_CAN1_0x650_FD_CAN1_AtmReq</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanIfHrhCanCtrlIdRef">true</SD>
+                            <SD GID="CanIfHrhIdSymRef">true</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2024-07-10T10:09:56Z" GID="CanIfHrhSoftwareFilter">1</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhSoftwareFilter</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanConfigSet/IN_HwObj_ECU1_FD_CAN1_0x650_FD_CAN1_AtmReq</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="0180d531-9711-4a36-85a7-b55418c9f826">
+                      <SHORT-NAME>CanIfHrhCfg_IN_ECU1_FD_CAN1_0x18c_FD_CAN1_BSD_01_50ms_P11</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhCanCtrlIdRef">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhIdSymRef">/Can_43_FLEXCAN/Can/CanConfigSet/IN_HwObj_ECU1_FD_CAN1_0x18c_FD_CAN1_BSD_01_50ms_P11</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanIfHrhCanCtrlIdRef">true</SD>
+                            <SD GID="CanIfHrhIdSymRef">true</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2024-07-10T10:09:56Z" GID="CanIfHrhSoftwareFilter">1</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhSoftwareFilter</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanConfigSet/IN_HwObj_ECU1_FD_CAN1_0x18c_FD_CAN1_BSD_01_50ms_P11</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="bbb2e497-3939-42fa-9145-da32f51c4c00">
+                      <SHORT-NAME>CanIfHrhCfg_IN_ECU1_FD_CAN1_0x205_FD_CAN1_V_CGW_02_A</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhCanCtrlIdRef">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhIdSymRef">/Can_43_FLEXCAN/Can/CanConfigSet/IN_HwObj_ECU1_FD_CAN1_0x205_FD_CAN1_V_CGW_02_A</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanIfHrhCanCtrlIdRef">true</SD>
+                            <SD GID="CanIfHrhIdSymRef">true</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhSoftwareFilter">1</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhSoftwareFilter</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanConfigSet/IN_HwObj_ECU1_FD_CAN1_0x205_FD_CAN1_V_CGW_02_A</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="2eac1403-23c2-4bf3-9e3f-73761ed7b6db">
+                      <SHORT-NAME>CanIfHrhCfg_IN_0x748_0x77e_ECU1_FD_CAN1</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhCanCtrlIdRef">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhIdSymRef">/Can_43_FLEXCAN/Can/CanConfigSet/IN_HwObj_0x748_0x77e_ECU1_FD_CAN1</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanIfHrhCanCtrlIdRef">true</SD>
+                            <SD GID="CanIfHrhIdSymRef">true</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHrhSoftwareFilter">1</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhSoftwareFilter</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanConfigSet/IN_HwObj_0x748_0x77e_ECU1_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="27989852-54bf-455a-90bd-bf30cf11c3a8">
+                      <SHORT-NAME>CanIfHthCfg_OUT_ECU1_FD_CAN1_0x42_FD_CAN1_TCU_01_10ms_P11</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthCanCtrlIdRef">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthIdSymRef">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x42_FD_CAN1_TCU_01_10ms_P11</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanIfHthCanCtrlIdRef">true</SD>
+                            <SD GID="CanIfHthIdSymRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x42_FD_CAN1_TCU_01_10ms_P11</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="f075abfd-6417-46c7-bdb8-4c6446bc7758">
+                      <SHORT-NAME>CanIfHthCfg_OUT_ECU1_FD_CAN1_0x202_FD_CAN1_V_CGW_01_B</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthCanCtrlIdRef">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthIdSymRef">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x202_FD_CAN1_V_CGW_01_B</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanIfHthCanCtrlIdRef">true</SD>
+                            <SD GID="CanIfHthIdSymRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x202_FD_CAN1_V_CGW_01_B</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="a542dabd-5015-498e-87f9-1a223e9bcf69">
+                      <SHORT-NAME>CanIfHthCfg_OUT_ECU1_FD_CAN1_0x2b0_FD_CAN1_AFLS_01_100ms</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthCanCtrlIdRef">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthIdSymRef">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x2b0_FD_CAN1_AFLS_01_100ms</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanIfHthCanCtrlIdRef">true</SD>
+                            <SD GID="CanIfHthIdSymRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x2b0_FD_CAN1_AFLS_01_100ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="e62a5d3e-9ac3-4f45-a7f0-05ef9d95c4a8">
+                      <SHORT-NAME>CanIfHthCfg_OUT_ECU1_FD_CAN1_0x400_FD_CAN1_AHLS_01_300ms</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthCanCtrlIdRef">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthIdSymRef">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x400_FD_CAN1_AHLS_01_300ms</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanIfHthCanCtrlIdRef">true</SD>
+                            <SD GID="CanIfHthIdSymRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x400_FD_CAN1_AHLS_01_300ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="a6283c02-502f-4115-a034-2864898e8916">
+                      <SHORT-NAME>CanIfHthCfg_OUT_ECU1_FD_CAN1_0x502_FD_CAN1_NM_CGW</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthCanCtrlIdRef">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthIdSymRef">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x502_FD_CAN1_NM_CGW</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanIfHthCanCtrlIdRef">true</SD>
+                            <SD GID="CanIfHthIdSymRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x502_FD_CAN1_NM_CGW</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="0289ab84-c87c-45fc-87f1-f60fc0e0a641">
+                      <SHORT-NAME>CanIfHthCfg_OUT_ECU1_FD_CAN1_0x651_FD_CAN1_AtmResp</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthCanCtrlIdRef">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthIdSymRef">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x651_FD_CAN1_AtmResp</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanIfHthCanCtrlIdRef">true</SD>
+                            <SD GID="CanIfHthIdSymRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x651_FD_CAN1_AtmResp</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="984699d8-463a-49f1-8009-dd18e47a8b9f">
+                      <SHORT-NAME>CanIfHthCfg_OUT_ECU1_FD_CAN1_0x75a_FD_CAN1_Normal_Msg_FD_TP_01_A</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthCanCtrlIdRef">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthIdSymRef">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x75a_FD_CAN1_Normal_Msg_FD_TP_01_A</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanIfHthCanCtrlIdRef">true</SD>
+                            <SD GID="CanIfHthIdSymRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x75a_FD_CAN1_Normal_Msg_FD_TP_01_A</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="f34622c8-bbe2-4fcb-8262-d4d97fe58d3b">
+                      <SHORT-NAME>CanIfHthCfg_OUT_ECU1_FD_CAN1_0x760_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthCanCtrlIdRef">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfHthIdSymRef">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x760_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanIfHthCanCtrlIdRef">true</SD>
+                            <SD GID="CanIfHthIdSymRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfCtrlDrvCfg0/CanIfCtrlCfg_ECU1_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanConfigSet/OUT_HwObj_ECU1_FD_CAN1_0x760_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="a919ec2e-dc97-4cdc-9d92-8dfab336fead">
+                  <SHORT-NAME>CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x42_FD_CAN1_TCU_01_10ms_P11</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferSize">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferHthRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x42_FD_CAN1_TCU_01_10ms_P11</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfBufferSize">true</SD>
+                        <SD GID="CanIfBufferHthRef">true</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferSize</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferHthRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x42_FD_CAN1_TCU_01_10ms_P11</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="7dcca977-527f-4255-8795-7caefbadd959">
+                  <SHORT-NAME>CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x202_FD_CAN1_V_CGW_01_B</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferSize">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferHthRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x202_FD_CAN1_V_CGW_01_B</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfBufferSize">true</SD>
+                        <SD GID="CanIfBufferHthRef">true</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferSize</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferHthRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x202_FD_CAN1_V_CGW_01_B</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="bbde1531-f4de-4cae-bac9-80c833060c21">
+                  <SHORT-NAME>CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x2b0_FD_CAN1_AFLS_01_100ms</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferSize">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferHthRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x2b0_FD_CAN1_AFLS_01_100ms</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfBufferSize">true</SD>
+                        <SD GID="CanIfBufferHthRef">true</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferSize</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferHthRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x2b0_FD_CAN1_AFLS_01_100ms</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="cbde2f0a-0b8d-4a00-95b8-c605d19dae52">
+                  <SHORT-NAME>CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x400_FD_CAN1_AHLS_01_300ms</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferSize">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferHthRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x400_FD_CAN1_AHLS_01_300ms</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfBufferSize">true</SD>
+                        <SD GID="CanIfBufferHthRef">true</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferSize</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferHthRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x400_FD_CAN1_AHLS_01_300ms</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="4b1bb93c-847f-495d-b9a0-969cebb8178d">
+                  <SHORT-NAME>CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x502_FD_CAN1_NM_CGW</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferSize">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferHthRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x502_FD_CAN1_NM_CGW</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfBufferSize">true</SD>
+                        <SD GID="CanIfBufferHthRef">true</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferSize</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferHthRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x502_FD_CAN1_NM_CGW</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="5cdc7871-0f29-401f-9c14-55948907bccd">
+                  <SHORT-NAME>CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x651_FD_CAN1_AtmResp</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferSize">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferHthRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x651_FD_CAN1_AtmResp</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfBufferSize">true</SD>
+                        <SD GID="CanIfBufferHthRef">true</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferSize</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferHthRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x651_FD_CAN1_AtmResp</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="9ef2f16d-af0a-4d4b-ab06-40b83c559aef">
+                  <SHORT-NAME>CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x75a_FD_CAN1_Normal_Msg_FD_TP_01_A</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferSize">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferHthRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x75a_FD_CAN1_Normal_Msg_FD_TP_01_A</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfBufferSize">true</SD>
+                        <SD GID="CanIfBufferHthRef">true</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferSize</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferHthRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x75a_FD_CAN1_Normal_Msg_FD_TP_01_A</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="bb6706c7-3f07-4219-896c-45ade9b17d12">
+                  <SHORT-NAME>CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x760_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferSize">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfBufferHthRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x760_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfBufferSize">true</SD>
+                        <SD GID="CanIfBufferHthRef">true</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferSize</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferHthRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHthCfg_OUT_ECU1_FD_CAN1_0x760_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="41ab9013-a1a8-4b8a-9731-4e9b9ac63ec6">
+                  <SHORT-NAME>CanIfRxPduCfg_IN_ECU1_FD_CAN1_0x18c_FD_CAN1_BSD_01_50ms_P11</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanId">396</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdType">STANDARD_CAN</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdMask">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduId">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduHrhIdRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHrhCfg_IN_ECU1_FD_CAN1_0x18c_FD_CAN1_BSD_01_50ms_P11</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduDataLength">8</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduDataLengthCheck">1</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfPduReportIdsMEnable">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduUserRxIndicationUL">PDUR</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_BSD_01_50ms_P11</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfRxPduCanId">true</SD>
+                        <SD GID="CanIfRxPduCanIdType">true</SD>
+                        <SD GID="CanIfRxPduCanIdMask">true</SD>
+                        <SD GID="CanIfRxPduId">true</SD>
+                        <SD GID="CanIfRxPduDataLength">true</SD>
+                        <SD GID="CanIfRxPduDataLengthCheck">true</SD>
+                        <SD GID="CanIfPduReportIdsMEnable">true</SD>
+                        <SD GID="CanIfRxPduUserRxIndicationUL">true</SD>
+                        <SD GID="CanIfRxPduHrhIdRef">true</SD>
+                        <SD GID="CanIfRxPduRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfRxPduReadData">0</SD>
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfRxPduReadNotifyStatus">0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanId</DEFINITION-REF>
+                      <VALUE>396</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdMask</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDataLength</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDataLengthCheck</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfPduReportIdsMEnable</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationUL</DEFINITION-REF>
+                      <VALUE>PDUR</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduHrhIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHrhCfg_IN_ECU1_FD_CAN1_0x18c_FD_CAN1_BSD_01_50ms_P11</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_BSD_01_50ms_P11</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="a5920440-279c-4a9a-b7a0-f0ebc45c3c6e">
+                  <SHORT-NAME>CanIfRxPduCfg_IN_ECU1_FD_CAN1_0x205_FD_CAN1_V_CGW_02_A</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanId">517</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdType">STANDARD_CAN</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdMask">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduId">1</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduHrhIdRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHrhCfg_IN_ECU1_FD_CAN1_0x205_FD_CAN1_V_CGW_02_A</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduDataLength">8</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduDataLengthCheck">1</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfPduReportIdsMEnable">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduUserRxIndicationUL">PDUR</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_V_CGW_02_A</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfRxPduCanId">true</SD>
+                        <SD GID="CanIfRxPduCanIdType">true</SD>
+                        <SD GID="CanIfRxPduCanIdMask">true</SD>
+                        <SD GID="CanIfRxPduId">true</SD>
+                        <SD GID="CanIfRxPduDataLength">true</SD>
+                        <SD GID="CanIfRxPduDataLengthCheck">true</SD>
+                        <SD GID="CanIfPduReportIdsMEnable">true</SD>
+                        <SD GID="CanIfRxPduUserRxIndicationUL">true</SD>
+                        <SD GID="CanIfRxPduHrhIdRef">true</SD>
+                        <SD GID="CanIfRxPduRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduReadData">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduReadNotifyStatus">0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanId</DEFINITION-REF>
+                      <VALUE>517</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdMask</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDataLength</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDataLengthCheck</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfPduReportIdsMEnable</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationUL</DEFINITION-REF>
+                      <VALUE>PDUR</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduHrhIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHrhCfg_IN_ECU1_FD_CAN1_0x205_FD_CAN1_V_CGW_02_A</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_V_CGW_02_A</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="258ca1e5-3804-4ae1-858c-900ef82d5e14">
+                  <SHORT-NAME>CanIfRxPduCfg_IN_ECU1_FD_CAN1_CANNM_MESSAGE</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanId">1288</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdType">STANDARD_CAN</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdMask">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduId">2</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduHrhIdRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHrhCfg_IN_0x500_0x57f_ECU1_FD_CAN1_NM_Message</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduDataLength">8</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduDataLengthCheck">1</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfPduReportIdsMEnable">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduUserRxIndicationUL">CAN_NM</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NmPdu_FD_CAN1_NM_MDPS</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfRxPduCanId">true</SD>
+                        <SD GID="CanIfRxPduCanIdType">true</SD>
+                        <SD GID="CanIfRxPduCanIdMask">true</SD>
+                        <SD GID="CanIfRxPduId">true</SD>
+                        <SD GID="CanIfRxPduDataLength">true</SD>
+                        <SD GID="CanIfRxPduDataLengthCheck">true</SD>
+                        <SD GID="CanIfPduReportIdsMEnable">true</SD>
+                        <SD GID="CanIfRxPduUserRxIndicationUL">true</SD>
+                        <SD GID="CanIfRxPduHrhIdRef">true</SD>
+                        <SD GID="CanIfRxPduRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfRxPduReadData">0</SD>
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfRxPduReadNotifyStatus">0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanId</DEFINITION-REF>
+                      <VALUE>1288</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdMask</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
+                      <VALUE>2</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDataLength</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDataLengthCheck</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfPduReportIdsMEnable</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationUL</DEFINITION-REF>
+                      <VALUE>CAN_NM</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduHrhIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHrhCfg_IN_0x500_0x57f_ECU1_FD_CAN1_NM_Message</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NmPdu_FD_CAN1_NM_MDPS</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="3f91502b-d296-4337-bf66-e29783b03a12">
+                      <SHORT-NAME>CanIfRxPduCanIdRange0</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdRangeLowerCanId">1280</SD>
+                            <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdRangeUpperCanId">1407</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanIfRxPduCanIdRangeLowerCanId">true</SD>
+                            <SD GID="CanIfRxPduCanIdRangeUpperCanId">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdRange</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdRange/CanIfRxPduCanIdRangeLowerCanId</DEFINITION-REF>
+                          <VALUE>1280</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdRange/CanIfRxPduCanIdRangeUpperCanId</DEFINITION-REF>
+                          <VALUE>1407</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="5af3f455-9ed3-4adb-b835-d658c969ba09">
+                  <SHORT-NAME>CanIfRxPduCfg_IN_ECU1_FD_CAN1_0x650_FD_CAN1_AtmReq</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanId">1616</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdType">STANDARD_CAN</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdMask">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduId">3</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduHrhIdRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHrhCfg_IN_ECU1_FD_CAN1_0x650_FD_CAN1_AtmReq</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduDataLength">8</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduDataLengthCheck">1</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfPduReportIdsMEnable">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduUserRxIndicationUL">PDUR</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_AtmReq</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfRxPduCanId">true</SD>
+                        <SD GID="CanIfRxPduCanIdType">true</SD>
+                        <SD GID="CanIfRxPduCanIdMask">true</SD>
+                        <SD GID="CanIfRxPduId">true</SD>
+                        <SD GID="CanIfRxPduDataLength">true</SD>
+                        <SD GID="CanIfRxPduDataLengthCheck">true</SD>
+                        <SD GID="CanIfPduReportIdsMEnable">true</SD>
+                        <SD GID="CanIfRxPduUserRxIndicationUL">true</SD>
+                        <SD GID="CanIfRxPduHrhIdRef">true</SD>
+                        <SD GID="CanIfRxPduRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2024-07-10T10:09:56Z" GID="CanIfRxPduReadNotifyStatus">0</SD>
+                        <SD T="2024-07-10T10:09:56Z" GID="CanIfRxPduReadData">0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanId</DEFINITION-REF>
+                      <VALUE>1616</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdMask</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
+                      <VALUE>3</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDataLength</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDataLengthCheck</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfPduReportIdsMEnable</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationUL</DEFINITION-REF>
+                      <VALUE>PDUR</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduHrhIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHrhCfg_IN_ECU1_FD_CAN1_0x650_FD_CAN1_AtmReq</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_AtmReq</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="5381fd72-abc9-4ecc-b4a4-58ff696fb1db">
+                  <SHORT-NAME>CanIfRxPduCfg_IN_ECU1_FD_CAN1_0x75e_FD_CAN1_Normal_Msg_FD_TP_01_B</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanId">1886</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdType">STANDARD_CAN</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdMask">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduId">4</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduHrhIdRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHrhCfg_IN_0x748_0x77e_ECU1_FD_CAN1</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduDataLength">64</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduDataLengthCheck">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfPduReportIdsMEnable">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduUserRxIndicationUL">CAN_TP</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NPdu_FD_CAN1_Normal_Msg_FD_TP_01_B</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfRxPduCanId">true</SD>
+                        <SD GID="CanIfRxPduCanIdType">true</SD>
+                        <SD GID="CanIfRxPduCanIdMask">true</SD>
+                        <SD GID="CanIfRxPduId">true</SD>
+                        <SD GID="CanIfRxPduDataLength">true</SD>
+                        <SD GID="CanIfRxPduDataLengthCheck">true</SD>
+                        <SD GID="CanIfPduReportIdsMEnable">true</SD>
+                        <SD GID="CanIfRxPduUserRxIndicationUL">true</SD>
+                        <SD GID="CanIfRxPduHrhIdRef">true</SD>
+                        <SD GID="CanIfRxPduRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfRxPduReadNotifyStatus">0</SD>
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfRxPduReadData">0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanId</DEFINITION-REF>
+                      <VALUE>1886</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdMask</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
+                      <VALUE>4</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDataLength</DEFINITION-REF>
+                      <VALUE>64</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDataLengthCheck</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfPduReportIdsMEnable</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationUL</DEFINITION-REF>
+                      <VALUE>CAN_TP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduHrhIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHrhCfg_IN_0x748_0x77e_ECU1_FD_CAN1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NPdu_FD_CAN1_Normal_Msg_FD_TP_01_B</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="e35350ab-e41d-4b44-9e64-3a38b2bb64b8">
+                  <SHORT-NAME>CanIfRxPduCfg_IN_ECU1_FD_CAN1_0x768_FD_CAN1_Diag_Msg_TP_Phys_Req_FD_CAN1</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanId">1896</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdType">STANDARD_CAN</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdMask">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduId">5</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduHrhIdRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHrhCfg_IN_0x748_0x77e_ECU1_FD_CAN1</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduDataLength">8</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduDataLengthCheck">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfPduReportIdsMEnable">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduUserRxIndicationUL">CAN_TP</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NPdu_FD_CAN1_Diag_Msg_TP_Phys_Req_FD_CAN1</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfRxPduCanId">true</SD>
+                        <SD GID="CanIfRxPduCanIdType">true</SD>
+                        <SD GID="CanIfRxPduCanIdMask">true</SD>
+                        <SD GID="CanIfRxPduId">true</SD>
+                        <SD GID="CanIfRxPduDataLength">true</SD>
+                        <SD GID="CanIfRxPduDataLengthCheck">true</SD>
+                        <SD GID="CanIfPduReportIdsMEnable">true</SD>
+                        <SD GID="CanIfRxPduUserRxIndicationUL">true</SD>
+                        <SD GID="CanIfRxPduHrhIdRef">true</SD>
+                        <SD GID="CanIfRxPduRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2024-07-10T10:09:56Z" GID="CanIfRxPduReadNotifyStatus">0</SD>
+                        <SD T="2024-07-10T10:09:56Z" GID="CanIfRxPduReadData">0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanId</DEFINITION-REF>
+                      <VALUE>1896</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdMask</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
+                      <VALUE>5</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDataLength</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDataLengthCheck</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfPduReportIdsMEnable</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationUL</DEFINITION-REF>
+                      <VALUE>CAN_TP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduHrhIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHrhCfg_IN_0x748_0x77e_ECU1_FD_CAN1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NPdu_FD_CAN1_Diag_Msg_TP_Phys_Req_FD_CAN1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="bb11c8bf-b776-4e71-8aa4-9559606c5c49">
+                  <SHORT-NAME>CanIfRxPduCfg_IN_ECU1_FD_CAN1_0x7df_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanId">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdType">STANDARD_CAN</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduCanIdMask">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduId">6</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduHrhIdRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHrhCfg_IN_ECU1_FD_CAN1_0x7df_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduDataLength">8</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduDataLengthCheck">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfPduReportIdsMEnable">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduUserRxIndicationUL">CAN_TP</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfRxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NPdu_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfRxPduCanId">true</SD>
+                        <SD GID="CanIfRxPduCanIdType">true</SD>
+                        <SD GID="CanIfRxPduCanIdMask">true</SD>
+                        <SD GID="CanIfRxPduId">true</SD>
+                        <SD GID="CanIfRxPduDataLength">true</SD>
+                        <SD GID="CanIfRxPduDataLengthCheck">true</SD>
+                        <SD GID="CanIfPduReportIdsMEnable">true</SD>
+                        <SD GID="CanIfRxPduUserRxIndicationUL">true</SD>
+                        <SD GID="CanIfRxPduHrhIdRef">true</SD>
+                        <SD GID="CanIfRxPduRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2024-07-10T10:09:56Z" GID="CanIfRxPduReadNotifyStatus">0</SD>
+                        <SD T="2024-07-10T10:09:56Z" GID="CanIfRxPduReadData">0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanId</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdMask</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
+                      <VALUE>6</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDataLength</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDataLengthCheck</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfPduReportIdsMEnable</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationUL</DEFINITION-REF>
+                      <VALUE>CAN_TP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduHrhIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0/CanIfHrhCfg_IN_ECU1_FD_CAN1_0x7df_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NPdu_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="36852cc6-935e-49f6-9e56-6c5119f50676">
+                  <SHORT-NAME>CanIfTxPduCfg_OUT_ECU1_FD_CAN1_0x42_FD_CAN1_TCU_01_10ms_P11</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanId">66</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdType">STANDARD_FD_CAN</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdMask">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduId">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduBufferRef">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x42_FD_CAN1_TCU_01_10ms_P11</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduPnFilterPdu">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduUserTxConfirmationUL">PDUR</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_TCU_01_10ms_P11</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfTxPduCanId">true</SD>
+                        <SD GID="CanIfTxPduCanIdType">true</SD>
+                        <SD GID="CanIfTxPduCanIdMask">true</SD>
+                        <SD GID="CanIfTxPduId">true</SD>
+                        <SD GID="CanIfTxPduPnFilterPdu">true</SD>
+                        <SD GID="CanIfTxPduUserTxConfirmationUL">true</SD>
+                        <SD GID="CanIfTxPduBufferRef">true</SD>
+                        <SD GID="CanIfTxPduRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfTxPduTruncation">1</SD>
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfTxPduReadNotifyStatus">0</SD>
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfTxPduType">STATIC</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanId</DEFINITION-REF>
+                      <VALUE>66</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_FD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdMask</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduPnFilterPdu</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationUL</DEFINITION-REF>
+                      <VALUE>PDUR</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduTruncation</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduType</DEFINITION-REF>
+                      <VALUE>STATIC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduBufferRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x42_FD_CAN1_TCU_01_10ms_P11</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_TCU_01_10ms_P11</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="a8543e9e-1b04-4e73-8019-c146ebc58801">
+                  <SHORT-NAME>CanIfTxPduCfg_OUT_ECU1_FD_CAN1_0x202_FD_CAN1_V_CGW_01_B</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanId">514</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdType">STANDARD_FD_CAN</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdMask">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduId">1</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduBufferRef">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x202_FD_CAN1_V_CGW_01_B</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduPnFilterPdu">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduUserTxConfirmationUL">PDUR</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_V_CGW_01_B</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfTxPduCanId">true</SD>
+                        <SD GID="CanIfTxPduCanIdType">true</SD>
+                        <SD GID="CanIfTxPduCanIdMask">true</SD>
+                        <SD GID="CanIfTxPduId">true</SD>
+                        <SD GID="CanIfTxPduPnFilterPdu">true</SD>
+                        <SD GID="CanIfTxPduUserTxConfirmationUL">true</SD>
+                        <SD GID="CanIfTxPduBufferRef">true</SD>
+                        <SD GID="CanIfTxPduRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduType">STATIC</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduTruncation">1</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduReadNotifyStatus">0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanId</DEFINITION-REF>
+                      <VALUE>514</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_FD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdMask</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduPnFilterPdu</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationUL</DEFINITION-REF>
+                      <VALUE>PDUR</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduType</DEFINITION-REF>
+                      <VALUE>STATIC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduTruncation</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduBufferRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x202_FD_CAN1_V_CGW_01_B</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_V_CGW_01_B</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="a481175d-03e0-4fe1-a601-48d1545ad7b1">
+                  <SHORT-NAME>CanIfTxPduCfg_OUT_ECU1_FD_CAN1_0x2b0_FD_CAN1_AFLS_01_100ms</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanId">688</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdType">STANDARD_FD_CAN</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdMask">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduId">2</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduBufferRef">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x2b0_FD_CAN1_AFLS_01_100ms</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduPnFilterPdu">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduUserTxConfirmationUL">PDUR</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_AFLS_01_100ms</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfTxPduCanId">true</SD>
+                        <SD GID="CanIfTxPduCanIdType">true</SD>
+                        <SD GID="CanIfTxPduCanIdMask">true</SD>
+                        <SD GID="CanIfTxPduId">true</SD>
+                        <SD GID="CanIfTxPduPnFilterPdu">true</SD>
+                        <SD GID="CanIfTxPduUserTxConfirmationUL">true</SD>
+                        <SD GID="CanIfTxPduBufferRef">true</SD>
+                        <SD GID="CanIfTxPduRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfTxPduTruncation">1</SD>
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfTxPduReadNotifyStatus">0</SD>
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfTxPduType">STATIC</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanId</DEFINITION-REF>
+                      <VALUE>688</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_FD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdMask</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
+                      <VALUE>2</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduPnFilterPdu</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationUL</DEFINITION-REF>
+                      <VALUE>PDUR</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduTruncation</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduType</DEFINITION-REF>
+                      <VALUE>STATIC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduBufferRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x2b0_FD_CAN1_AFLS_01_100ms</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_AFLS_01_100ms</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="b1280249-1c55-4100-9dc6-30206d410818">
+                  <SHORT-NAME>CanIfTxPduCfg_OUT_ECU1_FD_CAN1_0x400_FD_CAN1_AHLS_01_300ms</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanId">1024</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdType">STANDARD_FD_CAN</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdMask">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduId">3</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduBufferRef">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x400_FD_CAN1_AHLS_01_300ms</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduPnFilterPdu">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduUserTxConfirmationUL">PDUR</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_AHLS_01_300ms</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfTxPduCanId">true</SD>
+                        <SD GID="CanIfTxPduCanIdType">true</SD>
+                        <SD GID="CanIfTxPduCanIdMask">true</SD>
+                        <SD GID="CanIfTxPduId">true</SD>
+                        <SD GID="CanIfTxPduPnFilterPdu">true</SD>
+                        <SD GID="CanIfTxPduUserTxConfirmationUL">true</SD>
+                        <SD GID="CanIfTxPduBufferRef">true</SD>
+                        <SD GID="CanIfTxPduRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfTxPduTruncation">1</SD>
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfTxPduReadNotifyStatus">0</SD>
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfTxPduType">STATIC</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanId</DEFINITION-REF>
+                      <VALUE>1024</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_FD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdMask</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
+                      <VALUE>3</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduPnFilterPdu</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationUL</DEFINITION-REF>
+                      <VALUE>PDUR</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduTruncation</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduType</DEFINITION-REF>
+                      <VALUE>STATIC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduBufferRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x400_FD_CAN1_AHLS_01_300ms</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_AHLS_01_300ms</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="52dd426f-b5ff-483d-b75e-1cf5ece6597d">
+                  <SHORT-NAME>CanIfTxPduCfg_OUT_ECU1_FD_CAN1_0x502_FD_CAN1_NM_CGW</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanId">1282</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdType">STANDARD_FD_CAN</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdMask">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduId">4</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduBufferRef">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x502_FD_CAN1_NM_CGW</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduPnFilterPdu">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduUserTxConfirmationUL">CAN_NM</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NmPdu_FD_CAN1_NM_CGW</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfTxPduCanId">true</SD>
+                        <SD GID="CanIfTxPduCanIdType">true</SD>
+                        <SD GID="CanIfTxPduCanIdMask">true</SD>
+                        <SD GID="CanIfTxPduId">true</SD>
+                        <SD GID="CanIfTxPduPnFilterPdu">true</SD>
+                        <SD GID="CanIfTxPduUserTxConfirmationUL">true</SD>
+                        <SD GID="CanIfTxPduBufferRef">true</SD>
+                        <SD GID="CanIfTxPduRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfTxPduReadNotifyStatus">0</SD>
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfTxPduType">STATIC</SD>
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfTxPduTruncation">1</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanId</DEFINITION-REF>
+                      <VALUE>1282</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_FD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdMask</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
+                      <VALUE>4</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduPnFilterPdu</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationUL</DEFINITION-REF>
+                      <VALUE>CAN_NM</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduType</DEFINITION-REF>
+                      <VALUE>STATIC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduTruncation</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduBufferRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x502_FD_CAN1_NM_CGW</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NmPdu_FD_CAN1_NM_CGW</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="8591df75-23e8-4823-b9fb-2125e97bb2a4">
+                  <SHORT-NAME>CanIfTxPduCfg_OUT_ECU1_FD_CAN1_0x651_FD_CAN1_AtmResp</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanId">1617</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdType">STANDARD_FD_CAN</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdMask">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduId">5</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduBufferRef">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x651_FD_CAN1_AtmResp</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduPnFilterPdu">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduUserTxConfirmationUL">PDUR</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_AtmResp</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfTxPduCanId">true</SD>
+                        <SD GID="CanIfTxPduCanIdType">true</SD>
+                        <SD GID="CanIfTxPduCanIdMask">true</SD>
+                        <SD GID="CanIfTxPduId">true</SD>
+                        <SD GID="CanIfTxPduPnFilterPdu">true</SD>
+                        <SD GID="CanIfTxPduUserTxConfirmationUL">true</SD>
+                        <SD GID="CanIfTxPduBufferRef">true</SD>
+                        <SD GID="CanIfTxPduRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2024-07-10T10:09:56Z" GID="CanIfTxPduType">STATIC</SD>
+                        <SD T="2024-07-10T10:09:56Z" GID="CanIfTxPduReadNotifyStatus">0</SD>
+                        <SD T="2024-07-10T10:09:56Z" GID="CanIfTxPduTruncation">1</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanId</DEFINITION-REF>
+                      <VALUE>1617</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_FD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdMask</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
+                      <VALUE>5</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduPnFilterPdu</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationUL</DEFINITION-REF>
+                      <VALUE>PDUR</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduType</DEFINITION-REF>
+                      <VALUE>STATIC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduTruncation</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduBufferRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x651_FD_CAN1_AtmResp</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ISignalIPdu_FD_CAN1_AtmResp</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="3a20f160-a8a8-43e3-ae17-e19f24e31728">
+                  <SHORT-NAME>CanIfTxPduCfg_OUT_ECU1_FD_CAN1_0x75a_FD_CAN1_Normal_Msg_FD_TP_01_A</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanId">1882</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdType">STANDARD_FD_CAN</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdMask">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduId">6</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduBufferRef">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x75a_FD_CAN1_Normal_Msg_FD_TP_01_A</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduPnFilterPdu">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduUserTxConfirmationUL">CAN_TP</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NPdu_FD_CAN1_Normal_Msg_FD_TP_01_A</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfTxPduCanId">true</SD>
+                        <SD GID="CanIfTxPduCanIdType">true</SD>
+                        <SD GID="CanIfTxPduCanIdMask">true</SD>
+                        <SD GID="CanIfTxPduId">true</SD>
+                        <SD GID="CanIfTxPduPnFilterPdu">true</SD>
+                        <SD GID="CanIfTxPduUserTxConfirmationUL">true</SD>
+                        <SD GID="CanIfTxPduBufferRef">true</SD>
+                        <SD GID="CanIfTxPduRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfTxPduTruncation">1</SD>
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfTxPduReadNotifyStatus">0</SD>
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfTxPduType">STATIC</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanId</DEFINITION-REF>
+                      <VALUE>1882</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_FD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdMask</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
+                      <VALUE>6</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduPnFilterPdu</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationUL</DEFINITION-REF>
+                      <VALUE>CAN_TP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduTruncation</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduType</DEFINITION-REF>
+                      <VALUE>STATIC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduBufferRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x75a_FD_CAN1_Normal_Msg_FD_TP_01_A</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NPdu_FD_CAN1_Normal_Msg_FD_TP_01_A</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="0b1d17e7-b6eb-4e38-be87-d5e1ea8f1f1d">
+                  <SHORT-NAME>CanIfTxPduCfg_OUT_ECU1_FD_CAN1_0x760_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanId">1888</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdType">STANDARD_FD_CAN</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduCanIdMask">2015</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduId">7</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduBufferRef">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x760_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduPnFilterPdu">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduUserTxConfirmationUL">CAN_TP</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfTxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NPdu_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfTxPduCanId">true</SD>
+                        <SD GID="CanIfTxPduCanIdType">true</SD>
+                        <SD GID="CanIfTxPduCanIdMask">true</SD>
+                        <SD GID="CanIfTxPduId">true</SD>
+                        <SD GID="CanIfTxPduPnFilterPdu">true</SD>
+                        <SD GID="CanIfTxPduUserTxConfirmationUL">true</SD>
+                        <SD GID="CanIfTxPduBufferRef">true</SD>
+                        <SD GID="CanIfTxPduRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2024-07-10T10:09:56Z" GID="CanIfTxPduReadNotifyStatus">0</SD>
+                        <SD T="2024-07-10T10:09:56Z" GID="CanIfTxPduType">STATIC</SD>
+                        <SD T="2024-07-10T10:09:56Z" GID="CanIfTxPduTruncation">1</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanId</DEFINITION-REF>
+                      <VALUE>1888</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_FD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdMask</DEFINITION-REF>
+                      <VALUE>2015</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
+                      <VALUE>7</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduPnFilterPdu</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationUL</DEFINITION-REF>
+                      <VALUE>CAN_TP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduType</DEFINITION-REF>
+                      <VALUE>STATIC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduTruncation</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduBufferRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfBufferCfg_OUT_ECU1_FD_CAN1_0x760_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NPdu_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="fd1d7f4d-76a9-404a-86e8-af8485b86ce0">
+              <SHORT-NAME>CanIfCtrlDrvCfg0</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                    <SD T="2024-07-10T13:03:07Z" GID="CanIfCtrlDrvNameRef">/Can_43_FLEXCAN/Can/CanGeneral</SD>
+                    <SD T="2024-07-10T13:03:07Z" GID="CanIfCtrlDrvInitHohConfigRef">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0</SD>
+                  </SDG>
+                  <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                    <SD GID="CanIfCtrlDrvNameRef">true</SD>
+                    <SD GID="CanIfCtrlDrvInitHohConfigRef">true</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfCtrlDrvCfg</DEFINITION-REF>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfCtrlDrvCfg/CanIfCtrlDrvInitHohConfigRef</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/CanIf/CanIfInitCfg/CanIfInitHohCfg0</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfCtrlDrvCfg/CanIfCtrlDrvNameRef</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanGeneral</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="b8832b5e-b573-44ba-a0e8-38606a3c0db5">
+                  <SHORT-NAME>CanIfCtrlCfg_ECU1_FD_CAN1</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfCtrlId">0</SD>
+                        <SD T="2024-07-10T13:03:07Z" GID="CanIfCtrlCanCtrlRef">/Can_43_FLEXCAN/Can/CanConfigSet/ECU1_FD_CAN1</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanIfCtrlId">true</SD>
+                        <SD GID="CanIfCtrlCanCtrlRef">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2023-12-25T12:21:04Z" GID="CanIfCtrlWakeupSupport">0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanIf/CanIfCtrlDrvCfg/CanIfCtrlCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanIf/CanIfCtrlDrvCfg/CanIfCtrlCfg/CanIfCtrlId</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanIf/CanIfCtrlDrvCfg/CanIfCtrlCfg/CanIfCtrlWakeupSupport</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanIf/CanIfCtrlDrvCfg/CanIfCtrlCfg/CanIfCtrlCanCtrlRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can_43_FLEXCAN/Can/CanConfigSet/ECU1_FD_CAN1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

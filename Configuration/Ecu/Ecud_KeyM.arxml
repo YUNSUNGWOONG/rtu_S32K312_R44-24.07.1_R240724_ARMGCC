@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="e6cb85e6-fe57-4c8c-b568-2b453d7ce070">
+      <SHORT-NAME>AUTRON</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="7d832aef-45c4-47c2-b59e-1a39acf61c1d">
+          <SHORT-NAME>KeyM</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTRON/KeyM</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/Bsw_KeyM/BswImplementation_KeyM</MODULE-DESCRIPTION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="b1561938-9227-43db-b939-df759e366809">
+              <SHORT-NAME>KeyMGeneral</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2020-10-14T16:09:09Z" GID="KeyMCertificateChainMaxDepth">3</SD>
+                    <SD T="2022-03-11T09:36:38Z" GID="KeyMCertificateManagerEnabled">0</SD>
+                    <SD T="2022-03-11T09:36:43Z" GID="KeyMCryptoKeyManagerEnabled">1</SD>
+                    <SD T="2021-11-02T09:32:31Z" GID="KeyMDevErrorDetect">1</SD>
+                    <SD T="2021-11-02T10:56:08Z" GID="KeyMKeyCertNameMaxLength">14</SD>
+                    <SD T="2020-10-29T10:49:20Z" GID="KeyMMainFunctionPeriod">0.01</SD>
+                    <SD T="2021-10-25T17:12:35Z" GID="KeyMCryptoKeyVerifyFunctionEnabled">0</SD>
+                    <SD T="2021-10-25T17:12:38Z" GID="KeyMServiceCertificateFunctionEnabled">0</SD>
+                    <SD T="2021-10-25T17:12:34Z" GID="KeyMCryptoKeyVerifyAsyncMode">0</SD>
+                    <SD T="2021-10-25T17:12:34Z" GID="KeyMCryptoKeyStartFinalizeFunctionEnabled">0</SD>
+                    <SD T="2021-10-25T17:12:33Z" GID="KeyMCryptoKeyPrepareFunctionEnabled">0</SD>
+                    <SD T="2021-11-02T09:31:51Z" GID="KeyMUserGetCurrentTimeFunc">KeyM_User_GetCurrentTime</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/KeyM/KeyMGeneral</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMCertificateChainMaxDepth</DEFINITION-REF>
+                  <VALUE>3</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMCertificateManagerEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMCryptoKeyHandlerPrepareEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMCryptoKeyHandlerServiceCertificateEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMCryptoKeyHandlerStartFinalizeEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMCryptoKeyHandlerUpdateEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMCryptoKeyHandlerVerifyEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMCryptoKeyManagerEnabled</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMDevErrorDetect</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMKeyCertNameMaxLength</DEFINITION-REF>
+                  <VALUE>14</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMCryptoKeyVerifyFunctionEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMServiceCertificateFunctionEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMMainFunctionPeriod</DEFINITION-REF>
+                  <VALUE>0.01</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMCryptoKeyStartFinalizeFunctionEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMCryptoKeyPrepareFunctionEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/KeyM/KeyMGeneral/KeyMCryptoKeyVerifyAsyncMode</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="d8b3236e-6ffd-4e2e-a6d5-46f4ada6dc35">
+              <SHORT-NAME>KeyMCryptoKey_DummyKey</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2022-03-10T19:43:23Z" GID="KeyMCryptoKeyGenerationType">KEYM_STORED_KEY</SD>
+                    <SD T="2022-03-10T19:43:27Z" GID="KeyMCryptoKeyStorage">KEYM_STORAGE_IN_RAM</SD>
+                    <SD T="2022-03-10T19:43:36Z" GID="KeyMCryptoKeyId">0</SD>
+                    <SD T="2022-03-10T19:44:48Z" GID="KeyMCryptoKeyMaxLength">300</SD>
+                    <SD T="2022-03-10T19:45:00Z" GID="KeyMCryptoKeyName">key0</SD>
+                    <SD T="2022-07-27T11:28:44Z" GID="KeyMCryptoKeyCsmKeyTargetRef">/AUTRON/Csm/CsmKeys/PRNG_Seed_Dummy</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/KeyM/KeyMCryptoKey</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/KeyM/KeyMCryptoKey/KeyMCryptoKeyGenerationType</DEFINITION-REF>
+                  <VALUE>KEYM_STORED_KEY</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/KeyM/KeyMCryptoKey/KeyMCryptoKeyStorage</DEFINITION-REF>
+                  <VALUE>KEYM_STORAGE_IN_RAM</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/KeyM/KeyMCryptoKey/KeyMCryptoKeyId</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/KeyM/KeyMCryptoKey/KeyMCryptoKeyMaxLength</DEFINITION-REF>
+                  <VALUE>300</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTRON/KeyM/KeyMCryptoKey/KeyMCryptoKeyName</DEFINITION-REF>
+                  <VALUE>key0</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/KeyM/KeyMCryptoKey/KeyMCryptoKeyCsmKeyTargetRef</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Csm/CsmKeys/RandomSeed_L9</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Bsw_IoHwAb</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION>
+          <SHORT-NAME>BswImplementation_IoHwAb</SHORT-NAME>
+          <SW-VERSION>1.7.1</SW-VERSION>
+          <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/Bsw_IoHwAb/SwcBswMapping_IoHwAb</SWC-BSW-MAPPING-REF>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION>
+          <SHORT-NAME>IoHwAb</SHORT-NAME>
+          <MODULE-ID>254</MODULE-ID>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR>
+              <SHORT-NAME>BswInternalBehavior_IoHwAb</SHORT-NAME>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/EcuM/DataTypeMappingSets/EcuModeMap</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA>
+                  <SHORT-NAME>IoHwAbProtection</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <ENTITYS>
+                <BSW-CALLED-ENTITY UUID="8ee38a0b-ccc5-462d-b0e2-280ff1dbca43">
+                  <SHORT-NAME>IoHwAb_AnaInDirReadDirect</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_AnaInDirReadDirect</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="8f63d4cd-49d7-4e40-b43a-d524741ab3fb">
+                  <SHORT-NAME>IoHwAb_DigDirIsInput</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_DigDirIsInput</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="12c37734-400a-4088-b598-7254752eba07">
+                  <SHORT-NAME>IoHwAb_DigDirIsOutput</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_DigDirIsOutput</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="49ca6472-8f44-405d-820c-481710e11eb0">
+                  <SHORT-NAME>IoHwAb_DigDirReadDirect</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_DigDirReadDirect</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="8efd8ccb-ccf4-4824-8e31-4620682a2f17">
+                  <SHORT-NAME>IoHwAb_DigDirSetToInput</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_DigDirSetToInput</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="38018521-7bca-4c0e-9a8b-263414e43e67">
+                  <SHORT-NAME>IoHwAb_DigDirSetToOutput</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_DigDirSetToOutput</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="0a4b8842-5aff-4321-afc3-3659ae1fd70e">
+                  <SHORT-NAME>IoHwAb_DigDirWriteDirect</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_DigDirWriteDirect</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="34df3b47-306e-4a05-83e3-ccaccd481eb5">
+                  <SHORT-NAME>IoHwAb_GptStartTimer</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_GptStartTimer</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="efe272c5-5d0e-4e0a-a041-9373ff2d2088">
+                  <SHORT-NAME>IoHwAb_GptStopTimer</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_GptStopTimer</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="f7840f01-81a5-41bf-89b0-0f691fd39c41">
+                  <SHORT-NAME>IoHwAb_IcuSetActivationCondition</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuSetActivationCondition</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+              </ENTITYS>
+              <DISTINGUISHED-PARTITIONS>
+                <BSW-DISTINGUISHED-PARTITION>
+                  <SHORT-NAME>BswDistinguishedPartition_IoHwAb</SHORT-NAME>
+                </BSW-DISTINGUISHED-PARTITION>
+              </DISTINGUISHED-PARTITIONS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+        <BSW-MODULE-ENTRY UUID="8a7bbeca-25e8-4f1c-9917-4ecb2f324562">
+          <SHORT-NAME>IoHwAb_AnaInDirReadDirect</SHORT-NAME>
+          <SERVICE-ID>23</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG UUID="bc5d9965-ebd4-4aee-aecd-bf5b554c8844">
+              <SHORT-NAME>ChIdx</SHORT-NAME>
+              <DIRECTION>IN</DIRECTION>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG UUID="54b39de9-e594-4536-af32-4f77b4ac6932">
+              <SHORT-NAME>Value</SHORT-NAME>
+              <DIRECTION>OUT</DIRECTION>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG UUID="002d7d9e-58c7-410f-94af-5aa71879e662">
+              <SHORT-NAME>AnaInDirLength</SHORT-NAME>
+              <DIRECTION>IN</DIRECTION>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="296628bc-7c15-4494-8eb5-9ae426644221">
+          <SHORT-NAME>IoHwAb_DigDirIsInput</SHORT-NAME>
+          <SERVICE-ID>35</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG UUID="369a4f77-18dd-4d1d-84c7-a7d5fc4904f9">
+              <SHORT-NAME>ChIdx</SHORT-NAME>
+              <DIRECTION>IN</DIRECTION>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG UUID="8057e81c-0351-4300-9652-fe5156af8d2d">
+              <SHORT-NAME>blResult</SHORT-NAME>
+              <DIRECTION>OUT</DIRECTION>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="f520336c-482a-46ba-8a24-c61185db5885">
+          <SHORT-NAME>IoHwAb_DigDirIsOutput</SHORT-NAME>
+          <SERVICE-ID>34</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG UUID="126d1931-bbb6-4803-a05a-4b8fa479af05">
+              <SHORT-NAME>ChIdx</SHORT-NAME>
+              <DIRECTION>IN</DIRECTION>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG UUID="91c99b7e-05d8-4700-8e9b-a48632c166b4">
+              <SHORT-NAME>blResult</SHORT-NAME>
+              <DIRECTION>OUT</DIRECTION>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="b3a29733-0fb2-41d0-a6f3-a43f03bb7a4d">
+          <SHORT-NAME>IoHwAb_DigDirReadDirect</SHORT-NAME>
+          <SERVICE-ID>32</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG UUID="eee8f681-62c7-4d6b-877d-1a88ee5f55fb">
+              <SHORT-NAME>ChIdx</SHORT-NAME>
+              <DIRECTION>IN</DIRECTION>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG UUID="7708d9ca-80be-4f3d-b3ee-8dfd674bb472">
+              <SHORT-NAME>Level</SHORT-NAME>
+              <DIRECTION>OUT</DIRECTION>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="77fc26af-5bba-46e9-b7df-aaae0fde5a1a">
+          <SHORT-NAME>IoHwAb_DigDirSetToInput</SHORT-NAME>
+          <SERVICE-ID>30</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG UUID="1469c53e-d98d-4854-a573-451ef7e4386c">
+              <SHORT-NAME>ChIdx</SHORT-NAME>
+              <DIRECTION>IN</DIRECTION>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="0fb23477-f95d-4f23-8378-022aa796efb5">
+          <SHORT-NAME>IoHwAb_DigDirSetToOutput</SHORT-NAME>
+          <SERVICE-ID>31</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG UUID="a5568171-14c2-48a3-b6d6-8b46d36886c3">
+              <SHORT-NAME>ChIdx</SHORT-NAME>
+              <DIRECTION>IN</DIRECTION>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="31938246-5cf3-4b45-bd55-706da843b7c9">
+          <SHORT-NAME>IoHwAb_DigDirWriteDirect</SHORT-NAME>
+          <SERVICE-ID>33</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG UUID="79826033-8467-473d-aa55-4f0920e66d30">
+              <SHORT-NAME>ChIdx</SHORT-NAME>
+              <DIRECTION>IN</DIRECTION>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG UUID="761fe732-aa0f-4383-b070-d1cdce48c717">
+              <SHORT-NAME>Level</SHORT-NAME>
+              <DIRECTION>IN</DIRECTION>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="48264d6a-2f85-40d4-af7f-808ffae3b39a">
+          <SHORT-NAME>IoHwAb_GptStartTimer</SHORT-NAME>
+          <SERVICE-ID>4</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG UUID="21ae9edf-81d5-4fe0-91a9-665799990184">
+              <SHORT-NAME>ChIdx</SHORT-NAME>
+              <DIRECTION>IN</DIRECTION>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG UUID="c11e8e0f-2c4b-4c4f-b582-00e874ceda89">
+              <SHORT-NAME>Value</SHORT-NAME>
+              <DIRECTION>IN</DIRECTION>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="7dee6428-fa61-4e2a-9212-612da0cda3de">
+          <SHORT-NAME>IoHwAb_GptStopTimer</SHORT-NAME>
+          <SERVICE-ID>0</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG UUID="625c0c2b-d571-40ef-a0cd-5ebe8f33d6fa">
+              <SHORT-NAME>ChIdx</SHORT-NAME>
+              <DIRECTION>IN</DIRECTION>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="330a906d-857d-416d-ae46-d140b0563a24">
+          <SHORT-NAME>IoHwAb_IcuSetActivationCondition</SHORT-NAME>
+          <SERVICE-ID>20</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG UUID="0f456af4-0ffe-4853-bbb8-e9947efff3dd">
+              <SHORT-NAME>ChIdx</SHORT-NAME>
+              <DIRECTION>IN</DIRECTION>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG UUID="0bfd4c48-627f-463a-8bfb-6ce8adccf825">
+              <SHORT-NAME>Activation</SHORT-NAME>
+              <DIRECTION>IN</DIRECTION>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <SWC-BSW-MAPPING>
+          <SHORT-NAME>SwcBswMapping_IoHwAb</SHORT-NAME>
+          <BSW-BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb</BSW-BEHAVIOR-REF>
+          <RUNNABLE-MAPPINGS>
+            <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_GptStopTimer</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_StopTimer</SWC-RUNNABLE-REF>
+            </SWC-BSW-RUNNABLE-MAPPING>
+            <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_GptStartTimer</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_StartTimer</SWC-RUNNABLE-REF>
+            </SWC-BSW-RUNNABLE-MAPPING>
+            <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuSetActivationCondition</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_SetActivationCondition</SWC-RUNNABLE-REF>
+            </SWC-BSW-RUNNABLE-MAPPING>
+            <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_AnaInDirReadDirect</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_AnaInDir_ReadDirect</SWC-RUNNABLE-REF>
+            </SWC-BSW-RUNNABLE-MAPPING>
+            <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_DigDirSetToInput</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToInput</SWC-RUNNABLE-REF>
+            </SWC-BSW-RUNNABLE-MAPPING>
+            <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_DigDirSetToOutput</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToOutput</SWC-RUNNABLE-REF>
+            </SWC-BSW-RUNNABLE-MAPPING>
+            <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_DigDirReadDirect</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_ReadDirect</SWC-RUNNABLE-REF>
+            </SWC-BSW-RUNNABLE-MAPPING>
+            <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_DigDirWriteDirect</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_WriteDirect</SWC-RUNNABLE-REF>
+            </SWC-BSW-RUNNABLE-MAPPING>
+            <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_DigDirIsOutput</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsOutput</SWC-RUNNABLE-REF>
+            </SWC-BSW-RUNNABLE-MAPPING>
+            <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_DigDirIsInput</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsInput</SWC-RUNNABLE-REF>
+            </SWC-BSW-RUNNABLE-MAPPING>
+          </RUNNABLE-MAPPINGS>
+          <SWC-BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb</SWC-BEHAVIOR-REF>
+        </SWC-BSW-MAPPING>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

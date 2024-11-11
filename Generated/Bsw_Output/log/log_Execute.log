@@ -1,0 +1,174 @@
+2024-11-11 12:51:19,916 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [IoHwAb], version: [1.7.1.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\IoHwAb_R44\generator\com.autron.odin.generator.bsw.iohwab_1.7.1.0.jar]
+2024-11-11 12:51:22,689 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [WdgM], version: [1.3.3.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\WdgM_R44\generator\com.autron.odin.generator.bsw.wdgm_1.3.3.0.jar]
+2024-11-11 12:51:27,816 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [EcuM], version: [1.2.5.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\EcuM_R44\generator\com.autron.odin.generator.bsw.ecum_1.2.5.0.jar]
+2024-11-11 12:51:45,033 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Det], version: [1.0.1.2] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Det_R44\generator\com.autron.odin.generator.bsw.det_1.0.1.2.jar]
+2024-11-11 12:51:48,716 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Dem], version: [2.1.0.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Dem_R44\generator\com.autron.odin.generator.bsw.dem_2.1.0.0.jar]
+2024-11-11 12:52:01,084 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [PduR], version: [1.0.9.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\PduR_R44\generator\com.autron.odin.generator.bsw.pdur_1.0.9.0.jar]
+2024-11-11 12:52:05,206 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [NvM], version: [1.3.2.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\NvM_R44\generator\com.autron.odin.generator.bsw.nvm_1.3.2.0.jar]
+2024-11-11 12:52:08,192 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Wdg], version: [1.3.4.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Wdg_R44\generator\com.autron.odin.generator.bsw.wdg_1.3.4.0.jar]
+2024-11-11 12:52:19,333 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Crc], version: [1.0.3.1] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Crc_R44\generator\com.autron.odin.generator.bsw.crc_1.0.3.1.jar]
+2024-11-11 12:52:23,293 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [MemIf], version: [1.0.4.1] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\MemIf_R44\generator\com.autron.odin.generator.bsw.memif_1.0.4.1.jar]
+2024-11-11 12:52:27,110 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Dcm], version: [1.4.2.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Dcm_R44\generator\com.autron.odin.generator.bsw.dcm_1.4.2.0.jar]
+2024-11-11 12:52:37,085 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [CanCM], version: [1.0.9.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\CanCM_R44\generator\com.autron.odin.generator.bsw.cancm_1.0.9.0.jar]
+2024-11-11 12:52:40,220 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [StbM], version: [1.0.7.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\StbM_R44\generator\com.autron.odin.generator.bsw.stbm_1.0.7.0.jar]
+2024-11-11 12:52:54,650 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Tm], version: [1.0.4.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Tm_R44\generator\com.autron.odin.generator.bsw.tm_1.0.4.0.jar]
+2024-11-11 12:52:56,475 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [FiM], version: [1.0.3.1] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\FiM_R44\generator\com.autron.odin.generator.bsw.fim_1.0.3.1.jar]
+2024-11-11 12:52:58,379 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [ComM], version: [1.1.7.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\ComM_R44\generator\com.autron.odin.generator.bsw.comm_1.1.7.0.jar]
+2024-11-11 12:53:02,258 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [LinTrcv], version: [1.0.7.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\LinTrcv_R44\generator\com.autron.odin.generator.bsw.lintrcv_1.0.7.0.jar]
+2024-11-11 12:53:16,622 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [CanIf], version: [1.1.0.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\CanIf_R44\generator\com.autron.odin.generator.bsw.canif_1.1.0.0.jar]
+2024-11-11 12:53:17,975 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Com], version: [1.1.11.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Com_R44\generator\com.autron.odin.generator.bsw.com_1.1.11.0.jar]
+2024-11-11 12:53:23,713 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [CanTp], version: [1.1.0.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\CanTp_R44\generator\com.autron.odin.generator.bsw.cantp_1.1.0.0.jar]
+2024-11-11 12:53:26,132 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Os], version: [1.3.0.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Os_S32K31x_R44\generator\com.autron.odin.generator.bsw.os_1.3.0.0.jar]
+2024-11-11 12:53:39,961 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [WdgIf], version: [1.4.3.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\WdgIf_R44\generator\com.autron.odin.generator.bsw.wdgif_1.4.3.0.jar]
+2024-11-11 12:53:40,944 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [LinSM], version: [1.0.9.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\LinSM_R44\generator\com.autron.odin.generator.bsw.linsm_1.0.9.0.jar]
+2024-11-11 12:53:44,930 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [CanTrcv], version: [1.0.11.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\CanTrcv_R44\generator\com.autron.odin.generator.bsw.cantrcv_1.0.11.0.jar]
+2024-11-11 12:53:48,328 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Nm], version: [1.0.5.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Nm_R44\generator\com.autron.odin.generator.bsw.nm_1.0.5.0.jar]
+2024-11-11 12:54:00,298 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [CryIf], version: [1.0.5.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\CryIf_R44\generator\com.autron.odin.generator.bsw.cryif_1.0.5.0.jar]
+2024-11-11 12:54:05,320 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Csm], version: [1.0.10.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Csm_R44\generator\com.autron.odin.generator.bsw.csm_1.0.10.0.jar]
+2024-11-11 12:54:06,153 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [CanSM], version: [1.0.9.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\CanSM_R44\generator\com.autron.odin.generator.bsw.cansm_1.0.9.0.jar]
+2024-11-11 12:54:12,338 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [LinIf], version: [1.0.15.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\LinIf_R44\generator\com.autron.odin.generator.bsw.linif_1.0.15.0.jar]
+2024-11-11 12:54:23,243 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [IpduM], version: [1.0.8.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\IpduM_R44\generator\com.autron.odin.generator.bsw.ipdum_1.0.8.0.jar]
+2024-11-11 12:54:28,494 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [KeyM], version: [1.0.9.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\KeyM_R44\generator\com.autron.odin.generator.bsw.keym_1.0.9.0.jar]
+2024-11-11 12:54:29,060 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [CanNm], version: [1.2.0.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\CanNm_R44\generator\com.autron.odin.generator.bsw.cannm_1.2.0.0.jar]
+2024-11-11 12:54:36,929 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Fota], version: [0.0.6.4] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Fota_R44\generator\com.autron.odin.generator.bsw.fota_0.0.6.4.jar]
+2024-11-11 12:54:43,576 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Mem], version: [0.0.6.7] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Mem_R44\generator\com.autron.odin.generator.bsw.mem_0.0.6.7.jar]
+2024-11-11 12:54:51,115 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [CanIf], version: [1.1.0.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\CanIf_R44\generator\com.autron.odin.generator.bsw.canif_1.1.0.0.jar]
+2024-11-11 12:54:53,087 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [CanSM], version: [1.0.9.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\CanSM_R44\generator\com.autron.odin.generator.bsw.cansm_1.0.9.0.jar]
+2024-11-11 12:54:57,208 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [CanTp], version: [1.1.0.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\CanTp_R44\generator\com.autron.odin.generator.bsw.cantp_1.1.0.0.jar]
+2024-11-11 12:55:02,039 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [CanTrcv], version: [1.0.11.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\CanTrcv_R44\generator\com.autron.odin.generator.bsw.cantrcv_1.0.11.0.jar]
+2024-11-11 12:55:14,505 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Com], version: [1.1.11.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Com_R44\generator\com.autron.odin.generator.bsw.com_1.1.11.0.jar]
+2024-11-11 12:55:15,402 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [ComM], version: [1.1.7.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\ComM_R44\generator\com.autron.odin.generator.bsw.comm_1.1.7.0.jar]
+2024-11-11 12:55:18,201 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Crc], version: [1.0.3.1] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Crc_R44\generator\com.autron.odin.generator.bsw.crc_1.0.3.1.jar]
+2024-11-11 12:55:23,794 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Det], version: [1.0.1.2] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Det_R44\generator\com.autron.odin.generator.bsw.det_1.0.1.2.jar]
+2024-11-11 12:55:39,097 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [ComM], version: [1.1.7.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\ComM_R44\generator\com.autron.odin.generator.bsw.comm_1.1.7.0.jar]
+2024-11-11 12:55:39,163 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [WdgM], version: [1.3.3.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\WdgM_R44\generator\com.autron.odin.generator.bsw.wdgm_1.3.3.0.jar]
+2024-11-11 12:55:42,585 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [IoHwAb], version: [1.7.1.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\IoHwAb_R44\generator\com.autron.odin.generator.bsw.iohwab_1.7.1.0.jar]
+2024-11-11 12:55:45,972 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Os], version: [1.3.0.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Os_S32K31x_R44\generator\com.autron.odin.generator.bsw.os_1.3.0.0.jar]
+2024-11-11 12:56:02,208 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Dem], version: [2.1.0.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Dem_R44\generator\com.autron.odin.generator.bsw.dem_2.1.0.0.jar]
+2024-11-11 12:56:03,011 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Os], version: [1.3.0.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Os_S32K31x_R44\generator\com.autron.odin.generator.bsw.os_1.3.0.0.jar]
+2024-11-11 12:56:04,582 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [PduR], version: [1.0.9.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\PduR_R44\generator\com.autron.odin.generator.bsw.pdur_1.0.9.0.jar]
+2024-11-11 12:56:10,402 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Csm], version: [1.0.10.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Csm_R44\generator\com.autron.odin.generator.bsw.csm_1.0.10.0.jar]
+2024-11-11 12:56:23,568 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [OsCommon], version: [1.6.0.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Os_S32K31x_R44\generator\com.autron.odin.generator.bsw.oscommon_1.6.0.0.jar]
+2024-11-11 12:56:26,962 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Dcm], version: [1.4.2.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Dcm_R44\generator\com.autron.odin.generator.bsw.dcm_1.4.2.0.jar]
+2024-11-11 12:56:30,490 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [ComXf], version: [1.0.11.1] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\ComXf_R44\generator\com.autron.odin.generator.bsw.comxf_1.0.11.1.jar]
+2024-11-11 12:56:34,329 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [E2EXf], version: [1.1.1.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\E2EXf_R44\generator\com.autron.odin.generator.bsw.e2exf_1.1.1.0.jar]
+2024-11-11 12:56:47,753 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [BswM], version: [1.3.2.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\BswM_R44\generator\com.autron.odin.generator.bsw.bswm_1.3.2.0.jar]
+2024-11-11 12:56:50,051 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [WdgIf], version: [1.4.3.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\WdgIf_R44\generator\com.autron.odin.generator.bsw.wdgif_1.4.3.0.jar]
+2024-11-11 12:56:50,497 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Wdg], version: [1.3.4.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Wdg_R44\generator\com.autron.odin.generator.bsw.wdg_1.3.4.0.jar]
+2024-11-11 12:56:52,670 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [MemIf], version: [1.0.4.1] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\MemIf_R44\generator\com.autron.odin.generator.bsw.memif_1.0.4.1.jar]
+2024-11-11 12:57:10,158 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [LinTrcv], version: [1.0.7.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\LinTrcv_R44\generator\com.autron.odin.generator.bsw.lintrcv_1.0.7.0.jar]
+2024-11-11 12:57:10,591 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [NvM], version: [1.3.2.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\NvM_R44\generator\com.autron.odin.generator.bsw.nvm_1.3.2.0.jar]
+2024-11-11 12:57:13,386 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [LinIf], version: [1.0.15.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\LinIf_R44\generator\com.autron.odin.generator.bsw.linif_1.0.15.0.jar]
+2024-11-11 12:57:19,495 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [LinSM], version: [1.0.9.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\LinSM_R44\generator\com.autron.odin.generator.bsw.linsm_1.0.9.0.jar]
+2024-11-11 12:57:32,042 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Fota], version: [0.0.6.4] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Fota_R44\generator\com.autron.odin.generator.bsw.fota_0.0.6.4.jar]
+2024-11-11 12:57:32,766 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [CryIf], version: [1.0.5.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\CryIf_R44\generator\com.autron.odin.generator.bsw.cryif_1.0.5.0.jar]
+2024-11-11 12:57:36,681 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Mem], version: [0.0.6.7] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Mem_R44\generator\com.autron.odin.generator.bsw.mem_0.0.6.7.jar]
+2024-11-11 12:57:45,935 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [EcuM], version: [1.2.5.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\EcuM_R44\generator\com.autron.odin.generator.bsw.ecum_1.2.5.0.jar]
+2024-11-11 12:57:52,326 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Dem], version: [2.1.0.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Dem_R44\generator\com.autron.odin.generator.bsw.dem_2.1.0.0.jar]
+2024-11-11 12:57:55,404 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [NvM], version: [1.3.2.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\NvM_R44\generator\com.autron.odin.generator.bsw.nvm_1.3.2.0.jar]
+2024-11-11 12:57:57,760 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Dcm], version: [1.4.2.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Dcm_R44\generator\com.autron.odin.generator.bsw.dcm_1.4.2.0.jar]
+2024-11-11 12:58:12,451 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Csm], version: [1.0.10.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Csm_R44\generator\com.autron.odin.generator.bsw.csm_1.0.10.0.jar]
+2024-11-11 12:58:13,842 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [IoHwAb], version: [1.7.1.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\IoHwAb_R44\generator\com.autron.odin.generator.bsw.iohwab_1.7.1.0.jar]
+2024-11-11 12:58:17,792 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Det], version: [1.0.1.2] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Det_R44\generator\com.autron.odin.generator.bsw.det_1.0.1.2.jar]
+2024-11-11 12:58:22,215 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [WdgM], version: [1.3.3.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\WdgM_R44\generator\com.autron.odin.generator.bsw.wdgm_1.3.3.0.jar]
+2024-11-11 12:58:33,762 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [FiM], version: [1.0.3.1] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\FiM_R44\generator\com.autron.odin.generator.bsw.fim_1.0.3.1.jar]
+2024-11-11 12:58:34,959 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [StbM], version: [1.0.7.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\StbM_R44\generator\com.autron.odin.generator.bsw.stbm_1.0.7.0.jar]
+2024-11-11 12:58:39,842 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [KeyM], version: [1.0.9.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\KeyM_R44\generator\com.autron.odin.generator.bsw.keym_1.0.9.0.jar]
+2024-11-11 12:58:42,860 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Fota], version: [0.0.6.4] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Fota_R44\generator\com.autron.odin.generator.bsw.fota_0.0.6.4.jar]
+2024-11-11 12:58:51,824 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [CanTrcv], version: [1.0.11.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\CanTrcv_R44\generator\com.autron.odin.generator.bsw.cantrcv_1.0.11.0.jar]
+2024-11-11 12:59:00,599 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [EcuM], version: [1.2.5.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\EcuM_R44\generator\com.autron.odin.generator.bsw.ecum_1.2.5.0.jar]
+2024-11-11 12:59:00,994 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [CanCM], version: [1.0.9.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\CanCM_R44\generator\com.autron.odin.generator.bsw.cancm_1.0.9.0.jar]
+2024-11-11 12:59:10,998 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Nm], version: [1.0.5.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Nm_R44\generator\com.autron.odin.generator.bsw.nm_1.0.5.0.jar]
+2024-11-11 12:59:18,817 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [Tm], version: [1.0.4.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\Tm_R44\generator\com.autron.odin.generator.bsw.tm_1.0.4.0.jar]
+2024-11-11 12:59:32,537 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [StbM], version: [1.0.7.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\StbM_R44\generator\com.autron.odin.generator.bsw.stbm_1.0.7.0.jar]
+2024-11-11 12:59:33,638 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [CanNm], version: [1.2.0.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\CanNm_R44\generator\com.autron.odin.generator.bsw.cannm_1.2.0.0.jar]
+2024-11-11 12:59:36,939 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [FiM], version: [1.0.3.1] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\FiM_R44\generator\com.autron.odin.generator.bsw.fim_1.0.3.1.jar]
+2024-11-11 12:59:51,355 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [IpduM], version: [1.0.8.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\IpduM_R44\generator\com.autron.odin.generator.bsw.ipdum_1.0.8.0.jar]
+2024-11-11 12:59:52,075 [INFO] com.autron.odin.generator.headless.LogExecute - >>> Module [KeyM], version: [1.0.9.0] found at: 
+[C:\workspace\rtu_S32K312_R44-24.07.1_R240724_ARMGCC\Static_Code\Modules\KeyM_R44\generator\com.autron.odin.generator.bsw.keym_1.0.9.0.jar]

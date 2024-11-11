@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="8e7b1958-8dff-49a9-abd7-5ebeb5595dfa">
+      <SHORT-NAME>Bsw_IpduM</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION>
+          <SHORT-NAME>BswImplementation_IpduM</SHORT-NAME>
+          <SW-VERSION>1.0.8</SW-VERSION>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_IpduM/IpduM/BswInternalBehavior_IpduM</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION>
+          <SHORT-NAME>IpduM</SHORT-NAME>
+          <MODULE-ID>52</MODULE-ID>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR>
+              <SHORT-NAME>BswInternalBehavior_IpduM</SHORT-NAME>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA>
+                  <SHORT-NAME>DEST_DATA_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA>
+                  <SHORT-NAME>TX_STATUS_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <ENTITYS>
+                <BSW-CALLED-ENTITY UUID="bf4c0107-5cdb-4ee0-b985-46e7842d86ec">
+                  <SHORT-NAME>Bsw_CE_IpduM_Init</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IpduM/IpduM_Init</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="ce1f5433-f013-4c5a-ad63-3522bc78f54e">
+                  <SHORT-NAME>Bsw_CE_IpduM_GetVersionInfo</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IpduM/IpduM_GetVersionInfo</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="ea81f51e-873e-44cc-972c-e691bd73ebf0">
+                  <SHORT-NAME>Bsw_CE_IpduM_Transmit</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IpduM/IpduM/BswInternalBehavior_IpduM/DEST_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IpduM/IpduM/BswInternalBehavior_IpduM/TX_STATUS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IpduM/IpduM_Transmit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="599b7587-a113-49a8-9c49-ff9a500e9167">
+                  <SHORT-NAME>Bsw_CE_IpduM_RxIndication</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IpduM/IpduM/BswInternalBehavior_IpduM/DEST_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IpduM/IpduM/BswInternalBehavior_IpduM/TX_STATUS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IpduM/IpduM_RxIndication</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="97964858-d496-4f9a-9283-da58df399eea">
+                  <SHORT-NAME>Bsw_CE_IpduM_TxConfirmation</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IpduM/IpduM/BswInternalBehavior_IpduM/DEST_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IpduM/IpduM/BswInternalBehavior_IpduM/TX_STATUS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IpduM/IpduM_TxConfirmation</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="d30b11f8-68c3-402b-ac6f-7ed7d2051ffd">
+                  <SHORT-NAME>Bsw_CE_IpduM_TriggerTransmit</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IpduM/IpduM/BswInternalBehavior_IpduM/DEST_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IpduM/IpduM/BswInternalBehavior_IpduM/TX_STATUS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IpduM/IpduM_TriggerTransmit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+              </ENTITYS>
+              <DISTINGUISHED-PARTITIONS>
+                <BSW-DISTINGUISHED-PARTITION>
+                  <SHORT-NAME>BswDistinguishedPartition_IpduM</SHORT-NAME>
+                </BSW-DISTINGUISHED-PARTITION>
+              </DISTINGUISHED-PARTITIONS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+        <BSW-MODULE-ENTRY UUID="9f4d1880-a777-432e-9644-379b9b33b503">
+          <SHORT-NAME>IpduM_Init</SHORT-NAME>
+          <SERVICE-ID>0</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="7eabdd1e-6123-4c71-8bc2-202df3233650">
+          <SHORT-NAME>IpduM_GetVersionInfo</SHORT-NAME>
+          <SERVICE-ID>1</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="94c7c3df-ef2e-46bd-bb24-6ec0eb2cb9a2">
+          <SHORT-NAME>IpduM_Transmit</SHORT-NAME>
+          <SERVICE-ID>73</SERVICE-ID>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="501a230a-0d1e-46bb-b223-670d72e227d3">
+          <SHORT-NAME>IpduM_RxIndication</SHORT-NAME>
+          <SERVICE-ID>66</SERVICE-ID>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>CALLBACK</CALL-TYPE>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="64cdddb2-3e4d-4daa-88e4-1e359bade822">
+          <SHORT-NAME>IpduM_TxConfirmation</SHORT-NAME>
+          <SERVICE-ID>64</SERVICE-ID>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>CALLBACK</CALL-TYPE>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="364c807d-def3-431b-9504-c27aa2795900">
+          <SHORT-NAME>IpduM_TriggerTransmit</SHORT-NAME>
+          <SERVICE-ID>65</SERVICE-ID>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>CALLBACK</CALL-TYPE>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="b529abc3-7c51-4011-915d-27a3efd32ca2">
+          <SHORT-NAME>IpduM_MainFunctionTx</SHORT-NAME>
+          <SERVICE-ID>18</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>SCHEDULED</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="04bafe27-31b9-4d5d-b3cc-debd6809f4f7">
+          <SHORT-NAME>IpduM_MainFunctionRx</SHORT-NAME>
+          <SERVICE-ID>17</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>SCHEDULED</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

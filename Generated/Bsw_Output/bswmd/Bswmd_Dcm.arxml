@@ -1,0 +1,1243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+<!--
+********************************************************************************
+**                                                                            **
+**  (C) 2021 HYUNDAI AUTOEVER Corp.                                           **
+**  Confidential Proprietary Information. Distribution Limited.               **
+**  Do Not Copy Without Prior Permission                                      **
+**                                                                            **
+**  PRODUCT   :    Dcm Module                                                 **
+**                                                                            **
+**  PURPOSE   :    Template of Basic Software Module Description              **
+**                                                                            **
+********************************************************************************
+
+********************************************************************************
+**                      Revision History                                      **
+********************************************************************************
+** Revision  Date          By        Description                              **
+********************************************************************************
+** 0.0.1     01-Apr-2020   HueKM     Initial version                          **
+********************************************************************************
+-->
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="b1eefac1-f517-4c92-8397-d05d2b92fffd">
+      <SHORT-NAME>Bsw_Dcm</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="f04a8cf0-f798-4172-9d35-dd6bd18f861e">
+          <SHORT-NAME>BswImplementation_Dcm</SHORT-NAME>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>1.0.0</SW-VERSION>
+          <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/Svc_Dcm/SwComponentTypes/SwcBswMapping_Dcm</SWC-BSW-MAPPING-REF>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_Dcm/Dcm/BswInternalBehavior_Dcm</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION UUID="b15a880e-1045-4cc7-8618-54ec9f2f9d81">
+          <SHORT-NAME>Dcm</SHORT-NAME>
+          <CATEGORY>BSW_MODULE</CATEGORY>
+          <MODULE-ID>53</MODULE-ID>
+          <BSW-MODULE-DEPENDENCYS>
+            <BSW-MODULE-DEPENDENCY UUID="667d32f7-e5ef-4e6f-bc1a-349257fc8c0a">
+              <SHORT-NAME>BswModuleDependency_BswM</SHORT-NAME>
+              <TARGET-MODULE-ID>42</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+            <BSW-MODULE-DEPENDENCY UUID="a21f8033-49d8-44d8-8b5e-0738a5d36d84">
+              <SHORT-NAME>BswModuleDependency_ComM</SHORT-NAME>
+              <TARGET-MODULE-ID>12</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+            <BSW-MODULE-DEPENDENCY UUID="d4e96e16-7361-4ef3-9357-38d9392a7cc3">
+              <SHORT-NAME>BswModuleDependency_Csm</SHORT-NAME>
+              <TARGET-MODULE-ID>110</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+            <BSW-MODULE-DEPENDENCY UUID="295f3b7d-682a-425b-a929-2228134359d7">
+              <SHORT-NAME>BswModuleDependency_Dem</SHORT-NAME>
+              <TARGET-MODULE-ID>54</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+            <BSW-MODULE-DEPENDENCY UUID="a73bbe9a-53e0-43fa-b39e-fdeaf69b95f9">
+              <SHORT-NAME>BswModuleDependency_EcuM</SHORT-NAME>
+              <TARGET-MODULE-ID>10</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+            <BSW-MODULE-DEPENDENCY UUID="9bdc48b5-da46-42d9-a33f-de1b91a32df5">
+              <SHORT-NAME>BswModuleDependency_IoHwAb</SHORT-NAME>
+              <TARGET-MODULE-ID>254</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+            <BSW-MODULE-DEPENDENCY UUID="3dd8f036-c7fc-4735-8320-4d8b8ebd6af0">
+              <SHORT-NAME>BswModuleDependency_KeyM</SHORT-NAME>
+              <TARGET-MODULE-ID>109</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+            <BSW-MODULE-DEPENDENCY UUID="28c40bef-a3e2-4a12-b766-63b4f6a286a1">
+              <SHORT-NAME>BswModuleDependency_NvM</SHORT-NAME>
+              <TARGET-MODULE-ID>20</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+            <BSW-MODULE-DEPENDENCY UUID="0284acb5-6cfe-4b36-9582-c085c669ceab">
+              <SHORT-NAME>BswModuleDependency_PduR</SHORT-NAME>
+              <TARGET-MODULE-ID>51</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+          </BSW-MODULE-DEPENDENCYS>
+          <PROVIDED-MODE-GROUPS>
+            <MODE-DECLARATION-GROUP-PROTOTYPE UUID="de5ced4a-fe64-416a-8393-5c98a83159be">
+              <SHORT-NAME>DcmApplicationUpdated</SHORT-NAME>
+              <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmApplicationUpdated</TYPE-TREF>
+            </MODE-DECLARATION-GROUP-PROTOTYPE>
+            <MODE-DECLARATION-GROUP-PROTOTYPE UUID="301921c9-051b-4772-9490-cae68e8d0144">
+              <SHORT-NAME>DcmCommunicationControl_ComMChannel_FD_CAN1</SHORT-NAME>
+              <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmCommunicationControl</TYPE-TREF>
+            </MODE-DECLARATION-GROUP-PROTOTYPE>
+            <MODE-DECLARATION-GROUP-PROTOTYPE UUID="aec04d97-7230-43ec-bc6c-c3f2ff7b7dcc">
+              <SHORT-NAME>DcmControlDTCSetting</SHORT-NAME>
+              <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmControlDTCSetting</TYPE-TREF>
+            </MODE-DECLARATION-GROUP-PROTOTYPE>
+            <MODE-DECLARATION-GROUP-PROTOTYPE UUID="d0aa35bd-6ed3-46f1-bd12-2371a5324088">
+              <SHORT-NAME>DcmDiagnosticSessionControl</SHORT-NAME>
+              <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmDiagnosticSessionControl</TYPE-TREF>
+            </MODE-DECLARATION-GROUP-PROTOTYPE>
+            <MODE-DECLARATION-GROUP-PROTOTYPE UUID="d812899b-36d3-4443-a20f-8370fce9aa80">
+              <SHORT-NAME>DcmEcuReset</SHORT-NAME>
+              <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmEcuReset</TYPE-TREF>
+            </MODE-DECLARATION-GROUP-PROTOTYPE>
+            <MODE-DECLARATION-GROUP-PROTOTYPE UUID="c3876272-ccd5-4910-bfcd-e8d133c8b827">
+              <SHORT-NAME>DcmModeRapidPowerShutDown</SHORT-NAME>
+              <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmModeRapidPowerShutDown</TYPE-TREF>
+            </MODE-DECLARATION-GROUP-PROTOTYPE>
+            <MODE-DECLARATION-GROUP-PROTOTYPE UUID="d61d478a-e387-4f0f-88a2-62f8fd59c8cc">
+              <SHORT-NAME>DcmResponseOnEvent_OnChangeOfDataIdentifier</SHORT-NAME>
+              <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmResponseOnEvent</TYPE-TREF>
+            </MODE-DECLARATION-GROUP-PROTOTYPE>
+            <MODE-DECLARATION-GROUP-PROTOTYPE UUID="c45e3914-70c9-460e-86be-d40a4774bdae">
+              <SHORT-NAME>DcmResponseOnEvent_OnDTCStatusChange</SHORT-NAME>
+              <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmResponseOnEvent</TYPE-TREF>
+            </MODE-DECLARATION-GROUP-PROTOTYPE>
+            <MODE-DECLARATION-GROUP-PROTOTYPE UUID="96e0d548-b94e-46ed-a8eb-5609540f625d">
+              <SHORT-NAME>DcmSecurityAccess</SHORT-NAME>
+              <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmSecurityAccess</TYPE-TREF>
+            </MODE-DECLARATION-GROUP-PROTOTYPE>
+          </PROVIDED-MODE-GROUPS>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR UUID="2de6e4e7-2486-4bf3-acf8-3c878c17c75b">
+              <SHORT-NAME>BswInternalBehavior_Dcm</SHORT-NAME>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmDiagnosticSessionControl</DATA-TYPE-MAPPING-REF>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmSecurityAccess</DATA-TYPE-MAPPING-REF>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmEcuReset</DATA-TYPE-MAPPING-REF>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmModeRapidPowerShutDown</DATA-TYPE-MAPPING-REF>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmControlDTCSetting</DATA-TYPE-MAPPING-REF>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmResponseOnEvent</DATA-TYPE-MAPPING-REF>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmCommunicationControl</DATA-TYPE-MAPPING-REF>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmApplicationUpdated</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA UUID="579c691c-c8e8-4d2b-bb0f-511f1d517e26">
+                  <SHORT-NAME>DATA_UPDATE</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="dbb04d51-efc4-483e-a1f7-b7727328a0a6">
+                  <SHORT-NAME>ProtclProtection</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="7ef9f128-1eac-437c-941b-b506c93d51c4">
+                  <SHORT-NAME>RxLengthProtection</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="cf8d2fa8-ce6f-421b-88fa-4b9f25acfe00">
+                  <SHORT-NAME>RxPduIdProtection</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="dc48c714-3532-483f-9713-e0d34c94246a">
+                  <SHORT-NAME>SIGNAL_DATA_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="c35810da-dd1b-48ae-ac53-cd4cbd5de09f">
+                  <SHORT-NAME>TimerProtection</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <ENTITYS>
+                <BSW-SCHEDULABLE-ENTITY UUID="38b24681-1ccc-4093-8973-28af602c7aff">
+                  <SHORT-NAME>BswSE_Dcm_MainFunction</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Dcm/Dcm/BswInternalBehavior_Dcm/DATA_UPDATE</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Dcm/Dcm/BswInternalBehavior_Dcm/ProtclProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Dcm/Dcm/BswInternalBehavior_Dcm/RxLengthProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Dcm/Dcm/BswInternalBehavior_Dcm/RxPduIdProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Dcm/Dcm/BswInternalBehavior_Dcm/SIGNAL_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Dcm/Dcm/BswInternalBehavior_Dcm/TimerProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <ACCESSED-MODE-GROUPS>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmDiagnosticSessionControl</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmSecurityAccess</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmEcuReset</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmModeRapidPowerShutDown</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmControlDTCSetting</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmResponseOnEvent_OnDTCStatusChange</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmResponseOnEvent_OnChangeOfDataIdentifier</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmCommunicationControl_ComMChannel_FD_CAN1</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmApplicationUpdated</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                  </ACCESSED-MODE-GROUPS>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Dcm/ImplementedEntries/DcmSchedules/Dcm_MainFunction</IMPLEMENTED-ENTRY-REF>
+                  <MANAGED-MODE-GROUPS>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmDiagnosticSessionControl</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmSecurityAccess</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmEcuReset</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmModeRapidPowerShutDown</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmControlDTCSetting</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmResponseOnEvent_OnDTCStatusChange</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmResponseOnEvent_OnChangeOfDataIdentifier</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmCommunicationControl_ComMChannel_FD_CAN1</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmApplicationUpdated</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                  </MANAGED-MODE-GROUPS>
+                </BSW-SCHEDULABLE-ENTITY>
+              </ENTITYS>
+              <EVENTS>
+                <BSW-TIMING-EVENT UUID="3422d47d-8fe8-42f3-b4bc-cd9b377bbe1f">
+                  <SHORT-NAME>BswTE_Dcm_MainFunction</SHORT-NAME>
+                  <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/Bsw_Dcm/Dcm/BswInternalBehavior_Dcm/BswSE_Dcm_MainFunction</STARTS-ON-EVENT-REF>
+                  <PERIOD>0.005</PERIOD>
+                </BSW-TIMING-EVENT>
+              </EVENTS>
+              <MODE-SENDER-POLICYS>
+                <BSW-MODE-SENDER-POLICY>
+                  <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                  <PROVIDED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmDiagnosticSessionControl</PROVIDED-MODE-GROUP-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </BSW-MODE-SENDER-POLICY>
+                <BSW-MODE-SENDER-POLICY>
+                  <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                  <PROVIDED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmSecurityAccess</PROVIDED-MODE-GROUP-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </BSW-MODE-SENDER-POLICY>
+                <BSW-MODE-SENDER-POLICY>
+                  <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                  <PROVIDED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmEcuReset</PROVIDED-MODE-GROUP-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </BSW-MODE-SENDER-POLICY>
+                <BSW-MODE-SENDER-POLICY>
+                  <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                  <PROVIDED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmModeRapidPowerShutDown</PROVIDED-MODE-GROUP-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </BSW-MODE-SENDER-POLICY>
+                <BSW-MODE-SENDER-POLICY>
+                  <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                  <PROVIDED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmControlDTCSetting</PROVIDED-MODE-GROUP-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </BSW-MODE-SENDER-POLICY>
+                <BSW-MODE-SENDER-POLICY>
+                  <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                  <PROVIDED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmResponseOnEvent_OnDTCStatusChange</PROVIDED-MODE-GROUP-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </BSW-MODE-SENDER-POLICY>
+                <BSW-MODE-SENDER-POLICY>
+                  <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                  <PROVIDED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmResponseOnEvent_OnChangeOfDataIdentifier</PROVIDED-MODE-GROUP-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </BSW-MODE-SENDER-POLICY>
+                <BSW-MODE-SENDER-POLICY>
+                  <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                  <PROVIDED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmCommunicationControl_ComMChannel_FD_CAN1</PROVIDED-MODE-GROUP-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </BSW-MODE-SENDER-POLICY>
+                <BSW-MODE-SENDER-POLICY>
+                  <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                  <PROVIDED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/Dcm/DcmApplicationUpdated</PROVIDED-MODE-GROUP-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </BSW-MODE-SENDER-POLICY>
+              </MODE-SENDER-POLICYS>
+              <SERVICE-DEPENDENCYS>
+                <BSW-SERVICE-DEPENDENCY>
+                  <ASSIGNED-ENTRY-ROLES>
+                    <ROLE-BASED-BSW-MODULE-ENTRY-ASSIGNMENT>
+                      <ASSIGNED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Dcm/ImplementedEntries/DcmSchedules/Dcm_MainFunction</ASSIGNED-ENTRY-REF>
+                    </ROLE-BASED-BSW-MODULE-ENTRY-ASSIGNMENT>
+                  </ASSIGNED-ENTRY-ROLES>
+                  <SERVICE-NEEDS>
+                    <BSW-MGR-NEEDS UUID="607597e9-05d4-4a9c-9668-cd6c4b2d14cd">
+                      <SHORT-NAME>BswMgrNeeds</SHORT-NAME>
+                    </BSW-MGR-NEEDS>
+                  </SERVICE-NEEDS>
+                </BSW-SERVICE-DEPENDENCY>
+              </SERVICE-DEPENDENCYS>
+              <DISTINGUISHED-PARTITIONS>
+                <BSW-DISTINGUISHED-PARTITION>
+                  <SHORT-NAME>BswDistinguishedPartition_Dcm</SHORT-NAME>
+                </BSW-DISTINGUISHED-PARTITION>
+              </DISTINGUISHED-PARTITIONS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>DataTypeMappingSet</SHORT-NAME>
+          <ELEMENTS>
+            <DATA-TYPE-MAPPING-SET UUID="47adfdff-9d01-46cc-8a34-7479933ce4f3">
+              <SHORT-NAME>DcmApplicationUpdated</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmApplicationUpdated</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="100bdbe0-065b-4fa9-874b-35ea5226171a">
+              <SHORT-NAME>DcmCommunicationControl</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmCommunicationControl</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="4ce4a560-3763-40a3-a309-6f4f927e465a">
+              <SHORT-NAME>DcmControlDTCSetting</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmControlDTCSetting</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="59c6e986-3194-499e-8488-5abb82618dad">
+              <SHORT-NAME>DcmDiagnosticSessionControl</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmDiagnosticSessionControl</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="d100d7ae-fed7-4794-a4ea-ba8f20c4a357">
+              <SHORT-NAME>DcmEcuReset</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmEcuReset</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="675c2fd1-0c51-4266-a237-ed1aaf02733a">
+              <SHORT-NAME>DcmModeRapidPowerShutDown</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmModeRapidPowerShutDown</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="ba527c8f-1fc2-4e7b-865b-7bd8c93c1df4">
+              <SHORT-NAME>DcmResponseOnEvent</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmResponseOnEvent</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="5b067f58-8d00-4cc7-95bc-0922388b8d3b">
+              <SHORT-NAME>DcmSecurityAccess</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmSecurityAccess</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="24b8bfa2-b595-498c-8e2f-8f3a1afeb3ee">
+          <SHORT-NAME>ExpectedEntries</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY UUID="a6b84cf7-d0d3-43c3-ae0b-c8bd69a1a11a">
+              <SHORT-NAME>ComM_DCM_ActiveDiagnostic</SHORT-NAME>
+              <SERVICE-ID>31</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLOUT</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="4d26ff5c-02a3-4d2c-ac18-94b08255792e">
+                  <SHORT-NAME>Channel</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="6c638dd8-8cd8-4dc0-9c5e-c3373c044db5">
+              <SHORT-NAME>ComM_DCM_InactiveDiagnostic</SHORT-NAME>
+              <SERVICE-ID>32</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLOUT</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="98df31f3-445c-40e6-b763-970e27d85ce8">
+                  <SHORT-NAME>Channel</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="56ad76d3-2ca3-44ba-87f9-d2a1a600ba29">
+              <SHORT-NAME>PduR_DcmTransmit</SHORT-NAME>
+              <SERVICE-ID>73</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLOUT</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE UUID="aefc0618-3cdf-4731-9fb7-5b7f1f8d975c">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="27bdb12a-fcb7-4e08-aa24-2d7c4c81d102">
+                  <SHORT-NAME>TxPduId</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="724c7c68-3124-4ec1-b0a7-b78d43c364fb">
+                  <SHORT-NAME>PduInfoPtr</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="f457f149-0171-4d42-8733-8aa55145d39c">
+          <SHORT-NAME>ImplementedEntries</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="84cf3f64-731e-4b27-b042-81660a5a5c70">
+              <SHORT-NAME>DcmBswComponents</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-ENTRY UUID="f21f8e55-f6c7-4016-a350-0f84bb3ba71d">
+                  <SHORT-NAME>Dcm_DemTriggerOnDTCStatus</SHORT-NAME>
+                  <SERVICE-ID>43</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="f4072e27-83b9-4a7f-9dc8-f8f3dad2c8f1">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="3ecc1752-1faa-4a5a-b773-80ae2a4cd8df">
+                      <SHORT-NAME>DTC</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="e17c8a13-a0ba-44e0-880d-aa06a7009e29">
+                      <SHORT-NAME>DTCStatusOld</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="3968464e-58fb-438a-bbab-9bbefeb44d47">
+                      <SHORT-NAME>DTCStatusNew</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="e212f0d0-6208-44a0-96d7-d2e119cc3b63">
+                  <SHORT-NAME>Dcm_GetVersionInfo</SHORT-NAME>
+                  <SERVICE-ID>36</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="3cae5fc6-4deb-402e-827a-334826e9f34e">
+                      <SHORT-NAME>versionInfo</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="13fd7525-31df-4340-b11e-648c49067f47">
+                  <SHORT-NAME>Dcm_GetVin</SHORT-NAME>
+                  <SERVICE-ID>7</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="6202cf30-1231-498b-a242-a9c6c6af3d5f">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="ccb60d50-65f6-4d3b-9d3e-08a7efcff06f">
+                      <SHORT-NAME>Data</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="46b3a764-73c5-4364-80e0-fc7f13b8dc07">
+                  <SHORT-NAME>Dcm_Init</SHORT-NAME>
+                  <SERVICE-ID>1</SERVICE-ID>
+                  <IS-REENTRANT>false</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="c86eedb9-4ec3-47f7-b3e6-4d415760d223">
+                      <SHORT-NAME>ConfigPtr</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="4375dd7c-73e0-42fb-bd3e-0cbf577a68a2">
+              <SHORT-NAME>DcmCallbacks</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-ENTRY UUID="1abf4e9e-d3ee-4382-a638-466cdae70224">
+                  <SHORT-NAME>Dcm_ComM_FullComModeEntered</SHORT-NAME>
+                  <SERVICE-ID>35</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>CALLBACK</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>ABSTRACT</BSW-ENTRY-KIND>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="3041dd92-46d8-447b-bb10-27fc9627f9c1">
+                      <SHORT-NAME>NetworkId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="a15bd41e-e119-483e-9b13-7a9f4fe4ec5d">
+                  <SHORT-NAME>Dcm_ComM_NoComModeEntered</SHORT-NAME>
+                  <SERVICE-ID>33</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>CALLBACK</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="008d0d29-5663-42b2-9bfb-7d124ef53e8d">
+                      <SHORT-NAME>NetworkId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="706a3ca0-d9bd-4340-b782-e14ff1780f62">
+                  <SHORT-NAME>Dcm_ComM_SilentComModeEntered</SHORT-NAME>
+                  <SERVICE-ID>34</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>CALLBACK</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="b1d5553c-36c4-4f23-b84f-9d6c67561a50">
+                      <SHORT-NAME>NetworkId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="77d7a885-8002-4dc7-9d49-1b37b7cbc175">
+                  <SHORT-NAME>Dcm_CopyRxData</SHORT-NAME>
+                  <SERVICE-ID>68</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>CALLBACK</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="b5f33990-6d34-4b73-81c4-3d7e66b7cab0">
+                    <SHORT-NAME>BufReq_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="ede940d3-feb0-4816-80fd-8af0612c4657">
+                      <SHORT-NAME>id</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="c77d8773-d22a-4d39-bc89-a6693da23f00">
+                      <SHORT-NAME>info</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="039cb141-dd74-429f-b214-a1cbc117453f">
+                      <SHORT-NAME>bufferSizePtr</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="fcdbf795-54f4-4e86-a083-9e87a8195e31">
+                  <SHORT-NAME>Dcm_CopyTxData</SHORT-NAME>
+                  <SERVICE-ID>67</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>CALLBACK</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="076746ea-fc26-45f1-aace-d09cce941002">
+                    <SHORT-NAME>BufReq_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="99446afe-f215-4945-83ad-58462ba5ffa2">
+                      <SHORT-NAME>id</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="2c49cabe-56e7-4eaf-9ec4-f6598afa982d">
+                      <SHORT-NAME>info</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="31f2f42d-58bd-408b-9a5f-1bc4a956ae99">
+                      <SHORT-NAME>retry</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="6bedfafa-d94e-4a60-8c25-b8f8b42c5aeb">
+                      <SHORT-NAME>availableDataPtr</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="d013f4d4-4ad9-4333-ac19-9a195d6612b7">
+                  <SHORT-NAME>Dcm_CsmAsyncJobFinished</SHORT-NAME>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>CALLBACK</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="5075ad7f-f7d4-47d8-a52d-a82e8f77f1a8">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="08bf6ada-c3da-46d8-a730-439faa212cb6">
+                      <SHORT-NAME>result</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="7c0a5676-0d99-4a72-bc72-3c5afa000d86">
+                  <SHORT-NAME>Dcm_KeyMAsyncCertificateVerifyFinished</SHORT-NAME>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>CALLBACK</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="b37d98bb-d088-43ee-a97a-aa8c3bef7885">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="343c3d39-b8a4-4590-9c01-498a20c69d40">
+                      <SHORT-NAME>result</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="9ac46ca4-4600-4ff3-afb6-078719c883e3">
+                      <SHORT-NAME>certId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="2307af7f-e368-442b-81c2-ed3663e6de15">
+                  <SHORT-NAME>Dcm_StartOfReception</SHORT-NAME>
+                  <SERVICE-ID>70</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>CALLBACK</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="60ca7682-2af0-4bc9-b0ba-6d5fc5230f68">
+                    <SHORT-NAME>BufReq_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="85d1ca45-0839-44ba-85d6-4bbfa542372e">
+                      <SHORT-NAME>id</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="1088b0b5-4f95-4ed3-9418-14c6a8fe9526">
+                      <SHORT-NAME>info</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="7e871a57-dc7c-4b19-8592-e230dca1b0a1">
+                      <SHORT-NAME>TpSduLength</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="3869eb2d-8326-4588-a46e-3b3503b31812">
+                      <SHORT-NAME>bufferSizePtr</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="5c8f8a65-ba84-4614-a8a5-fea3c793c246">
+                  <SHORT-NAME>Dcm_TpRxIndication</SHORT-NAME>
+                  <SERVICE-ID>69</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>CALLBACK</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="e3b716ae-053f-4be1-b495-54858eb6ae86">
+                      <SHORT-NAME>id</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="884064aa-b195-45b3-8078-e4e104b23afe">
+                      <SHORT-NAME>result</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="c403393b-0bed-4d66-9c8f-b7823b94b1ee">
+                  <SHORT-NAME>Dcm_TpTxConfirmation</SHORT-NAME>
+                  <SERVICE-ID>72</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>CALLBACK</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="073b158e-20c7-4463-9740-7db7e78f7bc9">
+                      <SHORT-NAME>id</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="3d05d66b-60b7-481b-8ae9-44744d585354">
+                      <SHORT-NAME>result</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="aa39e1a9-d71f-4c6c-98be-4ce500f37ed0">
+                  <SHORT-NAME>Dcm_TxConfirmation</SHORT-NAME>
+                  <SERVICE-ID>64</SERVICE-ID>
+                  <IS-REENTRANT>false</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>CALLBACK</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f90710a3-cfcb-48f0-82db-b675e8d6c58c">
+                      <SHORT-NAME>TxPduId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="072abade-fad3-498e-93a9-03ff4685cfde">
+                      <SHORT-NAME>result</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="dc4c884a-919c-47d2-b571-1549eefa30e2">
+              <SHORT-NAME>DcmSchedules</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-ENTRY UUID="8b78b0e5-92ef-4434-9bfe-3bf0de6d4896">
+                  <SHORT-NAME>Dcm_MainFunction</SHORT-NAME>
+                  <SERVICE-ID>37</SERVICE-ID>
+                  <IS-REENTRANT>false</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="d15b6366-a2cf-4d0e-bb5a-a80c36d0fde6">
+              <SHORT-NAME>DcmSwComponents</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-ENTRY UUID="7fb2ea98-7edf-4e82-b715-b33a2f35a9fd">
+                  <SHORT-NAME>Dcm_GetActiveProtocol</SHORT-NAME>
+                  <SERVICE-ID>15</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="e2b07060-cee9-486c-aba9-751c4ac7f5e8">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="85c25429-9ad1-4c98-b0e8-edd3d062a400">
+                      <SHORT-NAME>ActiveProtocolType</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="45ed73c4-0307-45e0-a575-a4e0832affd5">
+                      <SHORT-NAME>ConnectionId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="e61aa53b-3ed4-4289-9d19-0add919e583f">
+                      <SHORT-NAME>TesterSourceAddress</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="98cb74f1-35f3-467a-b354-2cd4a18e7df4">
+                  <SHORT-NAME>Dcm_GetSecurityLevel</SHORT-NAME>
+                  <SERVICE-ID>13</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="e70ecc69-0b49-4cf0-b6e2-6ed4d9125abb">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="0c6e904f-1f16-4f43-8100-45b019ab6494">
+                      <SHORT-NAME>SecLevel</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="28df4c82-ba20-4dbf-a1c2-503900596be2">
+                  <SHORT-NAME>Dcm_GetSesCtrlType</SHORT-NAME>
+                  <SERVICE-ID>6</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="c86308f7-ba53-428f-8b2b-c5302cb4dc22">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="0d481637-46f4-4cab-860d-d28e0837ff32">
+                      <SHORT-NAME>SesCtrlType</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="5956f5d4-6c31-44d0-9ba8-855cf4d9abb1">
+                  <SHORT-NAME>Dcm_ResetToDefaultSession</SHORT-NAME>
+                  <SERVICE-ID>42</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="527a15d8-20b1-49b2-b4f7-eb116289f771">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="33d4b81e-54e3-4079-8022-841cd25fcc32">
+                  <SHORT-NAME>Dcm_SetActiveDiagnostic</SHORT-NAME>
+                  <SERVICE-ID>86</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="1ae5add6-c1ef-4d7a-90c3-bb35e3a7af7c">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f3b6265a-6e0b-453e-a33e-696b6bd0635b">
+                      <SHORT-NAME>active</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="b5ce21b1-e628-43cb-8587-7a1fa127f922">
+                  <SHORT-NAME>Dcm_SetDeauthenticatedRole</SHORT-NAME>
+                  <SERVICE-ID>121</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>connectionId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="4fbcaff9-81b8-4215-8fb8-df0b5e476a15">
+                      <SHORT-NAME>deauthenticatedRole</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="2b55fa4a-1c62-4f04-9952-dab2d8931d3b">
+                  <SHORT-NAME>Dcm_TriggerOnEvent</SHORT-NAME>
+                  <SERVICE-ID>45</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="78a6cfb8-9cd8-440e-9b12-219062287840">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="df2edbab-b21b-4da5-b089-9b651cf791b0">
+                      <SHORT-NAME>RoeEventId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="db03616f-c4b5-4272-b4d3-2a625a7132e6">
+          <SHORT-NAME>ModeDeclarationGroup</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-DECLARATION-GROUP UUID="77a7169f-bc5f-4c9d-b9ff-7484d934799a">
+              <SHORT-NAME>DcmApplicationUpdated</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/Bsw_Dcm/ModeDeclarationGroup/DcmApplicationUpdated/APP_NOT_UPDATED</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="fb66d830-87fe-49bb-b9a6-b6b046075c59">
+                  <SHORT-NAME>APP_NOT_UPDATED</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="a5a012b3-a272-474c-ab10-bf4578addfc7">
+                  <SHORT-NAME>APP_UPDATED</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="c675ff88-34f9-489a-92a6-87bded976dd6">
+              <SHORT-NAME>DcmCommunicationControl</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/Bsw_Dcm/ModeDeclarationGroup/DcmCommunicationControl/DCM_ENABLE_RX_TX_NORM_NM</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="e2b54665-8690-4110-ae7e-d025fac9e19c">
+                  <SHORT-NAME>DCM_DISABLE_RX_ENABLE_TX_NM</SHORT-NAME>
+                  <VALUE>6</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="341fadbb-5e09-4916-81bc-77e5f6eb387c">
+                  <SHORT-NAME>DCM_DISABLE_RX_ENABLE_TX_NORM</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="1043fd40-6151-4839-b0c6-061bcfadc4b6">
+                  <SHORT-NAME>DCM_DISABLE_RX_ENABLE_TX_NORM_NM</SHORT-NAME>
+                  <VALUE>10</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="b47c8547-f490-43f0-9b9e-d3e959caaa4f">
+                  <SHORT-NAME>DCM_DISABLE_RX_TX_NM</SHORT-NAME>
+                  <VALUE>7</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="3c303380-4193-448a-a7d0-145924987235">
+                  <SHORT-NAME>DCM_DISABLE_RX_TX_NORMAL</SHORT-NAME>
+                  <VALUE>3</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="bcf05629-d8b1-42d6-a425-ec5eb6778f12">
+                  <SHORT-NAME>DCM_DISABLE_RX_TX_NORM_NM</SHORT-NAME>
+                  <VALUE>11</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="97d05b63-e99e-49b7-a5db-efdccfd8446f">
+                  <SHORT-NAME>DCM_ENABLE_RX_DISABLE_TX_NM</SHORT-NAME>
+                  <VALUE>5</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="17734da1-3822-493e-8e07-4d02865c885f">
+                  <SHORT-NAME>DCM_ENABLE_RX_DISABLE_TX_NORM</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="a570b72f-32fc-4504-8ba9-61d14d48b06b">
+                  <SHORT-NAME>DCM_ENABLE_RX_DISABLE_TX_NORM_NM</SHORT-NAME>
+                  <VALUE>9</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="b4d130de-6195-4b46-8003-e610a395f121">
+                  <SHORT-NAME>DCM_ENABLE_RX_TX_NM</SHORT-NAME>
+                  <VALUE>4</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="8971220a-3db4-4a95-9543-1765d2b20454">
+                  <SHORT-NAME>DCM_ENABLE_RX_TX_NORM</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="bd27e934-2eca-40ec-8a4a-e00c507bd04b">
+                  <SHORT-NAME>DCM_ENABLE_RX_TX_NORM_NM</SHORT-NAME>
+                  <VALUE>8</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="0ed101d3-bdd9-49d1-82a9-9e7734d39adf">
+              <SHORT-NAME>DcmControlDTCSetting</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/Bsw_Dcm/ModeDeclarationGroup/DcmControlDTCSetting/DCM_ENABLEDTCSETTING</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="157791c0-df4c-4d00-a434-498d8ded4aa9">
+                  <SHORT-NAME>DCM_DISABLEDTCSETTING</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="edadd292-a476-44fe-bb54-f2833e5be9d0">
+                  <SHORT-NAME>DCM_ENABLEDTCSETTING</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="1ab82c25-7672-4130-9624-22376728f630">
+              <SHORT-NAME>DcmDiagnosticSessionControl</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/Bsw_Dcm/ModeDeclarationGroup/DcmDiagnosticSessionControl/DCM_DEFAULT_SESSION</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="be0e1f5c-64d1-46e3-8974-49077b42be90">
+                  <SHORT-NAME>DCM_DEFAULT_SESSION</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="65cd8283-234d-4209-94ae-e36ebbec1f36">
+                  <SHORT-NAME>DCM_ECU_PROGRAMMING_MODE</SHORT-NAME>
+                  <VALUE>5</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="158c64ff-88f0-441e-809f-9998e1428008">
+                  <SHORT-NAME>DCM_EXTENDED_DIAGNOSTIC_MODE</SHORT-NAME>
+                  <VALUE>16</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="a233640c-2283-4a85-8184-4c02c7b4e203">
+                  <SHORT-NAME>DCM_EXTENDED_DIAGNOSTIC_SESSION</SHORT-NAME>
+                  <VALUE>3</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="efaff3c5-49de-413d-a4c1-9271bfc74873">
+                  <SHORT-NAME>DCM_PROGRAMMING_SESSION</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="be63aff8-b125-40d8-8a01-a826651b406b">
+                  <SHORT-NAME>DCM_QUIESCENT_CURRENT_DIAGNOSTIC_MODE_START</SHORT-NAME>
+                  <VALUE>80</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="ddcf1aab-0440-4acd-937b-882a045c4f56">
+                  <SHORT-NAME>DCM_SAFETY_SYSTEM_DIAGNOSTIC_SESSION</SHORT-NAME>
+                  <VALUE>4</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="4000ee6c-d19e-4c2d-8352-3ef01730dda9">
+                  <SHORT-NAME>DCM_SLEEP_MODE_START_REQUEST</SHORT-NAME>
+                  <VALUE>81</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="5022800b-92e3-4e94-9f40-f512479af2ba">
+              <SHORT-NAME>DcmEcuReset</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/Bsw_Dcm/ModeDeclarationGroup/DcmEcuReset/DCM_NONE</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="86a68b2f-b4f4-46cf-bdc3-38d3a1db3a79">
+                  <SHORT-NAME>DCM_EXECUTE</SHORT-NAME>
+                  <VALUE>6</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="d3e5bd9f-2c09-4452-a036-1adc2f58cec0">
+                  <SHORT-NAME>DCM_HARD</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="7cb02114-63b0-4497-aee7-da431f45f4a4">
+                  <SHORT-NAME>DCM_JUMPTOBOOTLOADER</SHORT-NAME>
+                  <VALUE>4</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="ac2bb9a6-20ea-4181-91c0-3f6a8d6bfcc7">
+                  <SHORT-NAME>DCM_JUMPTOSYSSUPPLIERBOOTLOADER</SHORT-NAME>
+                  <VALUE>5</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="b4d4f967-ca9e-4eb1-92b0-d0d96fd36c6e">
+                  <SHORT-NAME>DCM_KEYONOFF</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="3b032da6-2e2c-46de-934c-657662e4b044">
+                  <SHORT-NAME>DCM_NONE</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="91b81747-d3ee-4776-a7d3-8481cf63c1f0">
+                  <SHORT-NAME>DCM_SOFT</SHORT-NAME>
+                  <VALUE>3</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="e71643f9-a1d6-4b7c-8ada-6a12b9a87a73">
+              <SHORT-NAME>DcmModeRapidPowerShutDown</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/Bsw_Dcm/ModeDeclarationGroup/DcmModeRapidPowerShutDown/DCM_ENABLE_RAPIDPOWERSHUTDOWN</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="cc69d2c8-d43d-42d0-8c08-d3b8f66f1683">
+                  <SHORT-NAME>DCM_DISABLE_RAPIDPOWERSHUTDOWN</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="0d63dd44-a9d9-423a-bdec-9db823365c8c">
+                  <SHORT-NAME>DCM_ENABLE_RAPIDPOWERSHUTDOWN</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="f1e62ef9-d90b-4671-864c-89b626a8b75d">
+              <SHORT-NAME>DcmResponseOnEvent</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/Bsw_Dcm/ModeDeclarationGroup/DcmResponseOnEvent/DCM_EVENT_CLEARED</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="767a00b2-2e13-420a-b38e-a53fad753dde">
+                  <SHORT-NAME>DCM_EVENT_CLEARED</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="669ffce4-fb72-46ee-bd74-5a5cca3be5f8">
+                  <SHORT-NAME>DCM_EVENT_STARTED</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="3adf070a-60cb-4bda-87c4-3b2a7e61ec2b">
+                  <SHORT-NAME>DCM_EVENT_STOPPED</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="5cca54b0-4844-409a-b212-c1a274ab01d3">
+              <SHORT-NAME>DcmSecurityAccess</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/Bsw_Dcm/ModeDeclarationGroup/DcmSecurityAccess/DCM_SEC_LEV_LOCKED</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="31fe7a9d-9623-4d65-9609-c898e29fd31b">
+                  <SHORT-NAME>DCM_SEC_LEV_L9</SHORT-NAME>
+                  <VALUE>9</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="a3ccd90e-e343-4885-bbcd-e578a2bb01af">
+                  <SHORT-NAME>DCM_SEC_LEV_LOCKED</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="4927abd2-9ab0-4633-aeb7-3d767b17b566">
+          <SHORT-NAME>ModeSwitchInterface</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-SWITCH-INTERFACE UUID="29a0768f-72cb-48db-8511-962ed7560a98">
+              <SHORT-NAME>Dcm_ApplicationUpdatedModeSwitchInterface</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <MODE-GROUP UUID="4b72abf2-d3f9-464c-a447-2d7318aa9c6b">
+                <SHORT-NAME>Dcm_ApplicationUpdatedModeSwitchInterface</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmApplicationUpdated</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="22665226-d1e3-4387-8f56-a7c04128ff33">
+              <SHORT-NAME>Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <MODE-GROUP UUID="b538746e-e134-4b66-ab19-0a9ee5dbc325">
+                <SHORT-NAME>Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmCommunicationControl</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="82ab2640-782f-484d-b22f-556734d2b8e7">
+              <SHORT-NAME>Dcm_ControlDTCSettingModeSwitchInterface</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <MODE-GROUP UUID="f0dad3b1-3ef3-4ba2-b3f5-be3a0497568f">
+                <SHORT-NAME>Dcm_ControlDTCSettingModeSwitchInterface</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmControlDTCSetting</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="ab31b1f5-6542-45dc-9fa1-9656bba1e674">
+              <SHORT-NAME>Dcm_DiagnosticSessionControlModeSwitchInterface</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <MODE-GROUP UUID="e17b55d7-132c-4c66-9bd1-511b25f5accc">
+                <SHORT-NAME>Dcm_DiagnosticSessionControlModeSwitchInterface</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmDiagnosticSessionControl</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="e1434c71-b6b5-4ee4-95cf-9c41094c3396">
+              <SHORT-NAME>Dcm_EcuResetModeSwitchInterface</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <MODE-GROUP UUID="d2fa55dc-9dca-4a3c-8841-bf7f9db298fe">
+                <SHORT-NAME>Dcm_EcuResetModeSwitchInterface</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmEcuReset</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="c6076c97-617d-45d2-a2b5-a53ea14fb689">
+              <SHORT-NAME>Dcm_ModeRapidPowerShutDownModeSwitchInterface</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <MODE-GROUP UUID="be1ada90-ec4f-4e67-8001-b9fb1580ecce">
+                <SHORT-NAME>Dcm_ModeRapidPowerShutDownModeSwitchInterface</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmModeRapidPowerShutDown</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="53a7d001-3660-42d4-a062-78dfea9b50e9">
+              <SHORT-NAME>Dcm_ResponseOnEventModeSwitchInterface_OnChangeOfDataIdentifier</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <MODE-GROUP UUID="fcadfe70-1e28-4ca9-b3c4-aa6ce874a1d9">
+                <SHORT-NAME>Dcm_ResponseOnEventModeSwitchInterface_OnChangeOfDataIdentifier</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmResponseOnEvent</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="fb58e1fc-f5ac-4f6d-80c2-06300f5d7087">
+              <SHORT-NAME>Dcm_ResponseOnEventModeSwitchInterface_OnDTCStatusChange</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <MODE-GROUP UUID="9e78be06-7fcb-40d7-a6a4-f7b944b11789">
+                <SHORT-NAME>Dcm_ResponseOnEventModeSwitchInterface_OnDTCStatusChange</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmResponseOnEvent</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="3d0b9b31-0ec6-4554-9369-91b679d4e4e4">
+              <SHORT-NAME>Dcm_SecurityAccessModeSwitchInterface</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <MODE-GROUP UUID="84fcc517-47d5-413a-a865-e3f8244670d5">
+                <SHORT-NAME>Dcm_SecurityAccessModeSwitchInterface</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Bsw_Dcm/ModeDeclarationGroup/DcmSecurityAccess</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

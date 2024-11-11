@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+<!--
+/*******************************************************************************
+**                    (C) 2023 HYUNDAI AUTOEVER Corp.                         **
+********************************************************************************
+**  Confidential Proprietary Information. Distribution Limited.               **
+**  This source code is permitted to be used only in projects contracted      **
+**  with Hyundai Autoever, and any other use is prohibited.                   **
+**  If you use it for other purposes or change the source code,               **
+**  you may take legal responsibility.                                        **
+**  In this case, There is no warranty and technical support.                 **
+********************************************************************************
+**                                                                            **
+**  PRODUCT   :     AUTOSAR BSW Module Description File                       **
+**                                                                            **
+**                                                                            **
+**  PURPOSE   :     This file provides the version information related to     **
+**                  RTE Module.                                               **
+**                                                                            **
+*******************************************************************************/
+
+/*******************************************************************************
+**                              Change History                                **
+********************************************************************************
+** Revision         Date           Author              Description            **
+********************************************************************************
+** 1.8.0.0        May. 15, 2024   Donghyeon Lee      Change version string    **
+** 1.6.0.0        Dec. 15, 2023   KiYoung Yun        Change format and version**
+** 1.0.0.0        Dec.  4, 2020   SeungMo Koo        Initial version          **
+*******************************************************************************/
+                               
+/*******************************************************************************
+**                      Include Section                                       **
+********************************************************************************
+-->
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="4376f45c-c875-4582-8113-03bd5ce5ecce">
+      <SHORT-NAME>AUTOSAR_Rte</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION S="" UUID="96266e68-81e5-4955-af9a-01db17e853e8">
+          <SHORT-NAME>BswImplementation_Rte</SHORT-NAME>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>1.8.0.0</SW-VERSION>
+          <USED-CODE-GENERATOR>1.8.0.0</USED-CODE-GENERATOR>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_Rte/Rte/BswInternalBehavior_Rte</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION UUID="86f0d619-88fc-4d26-9162-9fe74de7199d">
+          <SHORT-NAME>Rte</SHORT-NAME>
+          <MODULE-ID>2</MODULE-ID>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR UUID="640d9758-8d43-41b0-be37-31542cbf913e">
+              <SHORT-NAME>BswInternalBehavior_Rte</SHORT-NAME>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,4 @@
+C:\ts_mirr\python\Portable_Python_2.7.6.1\App\python.exe C:\ts_mirr\scons\scons-local-2.3.4\scons.py -f.\Build\site_scons\SConstruct Compile -j32
+scons: Reading SConscript files ...
+AutoEver Toolset Version: 2.6.0
+('Please check your settings', NameError("global name 'length' is not defined",), "global name 'length' is not defined")

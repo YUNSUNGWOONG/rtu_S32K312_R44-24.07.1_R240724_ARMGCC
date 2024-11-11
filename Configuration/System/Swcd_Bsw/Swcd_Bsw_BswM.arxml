@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="88fd008e-ca4e-4136-97d8-b34dd7a969fc">
+      <SHORT-NAME>BswM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="c3cfbf7d-3081-489b-93cc-751f4178bcd0">
+          <SHORT-NAME>ServiceSwComponentTypes</SHORT-NAME>
+          <ELEMENTS>
+            <SERVICE-SW-COMPONENT-TYPE UUID="596c5f65-d688-4409-868c-6489d9a997e3">
+              <SHORT-NAME>BswM_Partition_Main</SHORT-NAME>
+              <PORTS>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_ComMMode_FD_CAN1</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_FD_CAN1/ModeSwitchInterfaces/ComMModeInterface_FD_CAN1/ComMMode_FD_CAN1</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_FD_CAN1/ModeSwitchInterfaces/ComMModeInterface_FD_CAN1</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_ComMMode_LIN1</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/ComMModeInterface_LIN1/ComMMode_LIN1</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_LIN1/ModeSwitchInterfaces/ComMModeInterface_LIN1</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_CanSMState_FD_CAN1</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_FD_CAN1/ModeSwitchInterfaces/CanSMStateInterface_FD_CAN1/CanSMState_FD_CAN1</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_FD_CAN1/ModeSwitchInterfaces/CanSMStateInterface_FD_CAN1</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_CanSMBORState_FD_CAN1</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_FD_CAN1/ModeSwitchInterfaces/CanSMBORStateInterface_FD_CAN1/CanSMBORState_FD_CAN1</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_FD_CAN1/ModeSwitchInterfaces/CanSMBORStateInterface_FD_CAN1</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_PduGroupTx_LIN1</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/PduGroupTxInterface_LIN1/PduGroupTx_LIN1</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_LIN1/ModeSwitchInterfaces/PduGroupTxInterface_LIN1</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_PduGroupRx_LIN1</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/PduGroupRxInterface_LIN1/PduGroupRx_LIN1</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_LIN1/ModeSwitchInterfaces/PduGroupRxInterface_LIN1</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_LinSMState_LIN1</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinSMStateInterface_LIN1/LinSMState_LIN1</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_LIN1/ModeSwitchInterfaces/LinSMStateInterface_LIN1</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_LinSMSchedule_LIN1</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_InitState</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/InitStateInterface/InitState</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE/ModeSwitchInterfaces/InitStateInterface</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_WakeupEvent</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/WakeupEventInterface/WakeupEvent</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE/ModeSwitchInterfaces/WakeupEventInterface</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_PduGroupRx_FD_CAN1_PNC32</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_FD_CAN1/ModeSwitchInterfaces/PduGroupRxInterface_FD_CAN1_PNC32/PduGroupRx_FD_CAN1_PNC32</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_FD_CAN1/ModeSwitchInterfaces/PduGroupRxInterface_FD_CAN1_PNC32</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_PduGroupTx_FD_CAN1_PNC32</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_FD_CAN1/ModeSwitchInterfaces/PduGroupTxInterface_FD_CAN1_PNC32/PduGroupTx_FD_CAN1_PNC32</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_FD_CAN1/ModeSwitchInterfaces/PduGroupTxInterface_FD_CAN1_PNC32</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_ComMMode_PNC32</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_PNC32/ModeSwitchInterfaces/ComMModeInterface_PNC32/ComMMode_PNC32</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_PNC32/ModeSwitchInterfaces/ComMModeInterface_PNC32</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_ComMMode_LIN2</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/ComMModeInterface_LIN2/ComMMode_LIN2</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_LIN2/ModeSwitchInterfaces/ComMModeInterface_LIN2</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_PduGroupTx_LIN2</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/PduGroupTxInterface_LIN2/PduGroupTx_LIN2</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_LIN2/ModeSwitchInterfaces/PduGroupTxInterface_LIN2</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_PduGroupRx_LIN2</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/PduGroupRxInterface_LIN2/PduGroupRx_LIN2</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_LIN2/ModeSwitchInterfaces/PduGroupRxInterface_LIN2</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_LinSMState_LIN2</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinSMStateInterface_LIN2/LinSMState_LIN2</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_LIN2/ModeSwitchInterfaces/LinSMStateInterface_LIN2</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeSwitchPort_LinSMSchedule_LIN2</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeRequestPort_LinSchedule_LIN1</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <NONQUEUED-RECEIVER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN1/SenderReceiverInterfaces/LinScheduleRequestInterface_LIN1/LinSchedule_LIN1</DATA-ELEMENT-REF>
+                    </NONQUEUED-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/MODE_LIN1/SenderReceiverInterfaces/LinScheduleRequestInterface_LIN1</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeRequestPort_LinSchedule_LIN2</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <NONQUEUED-RECEIVER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN2/SenderReceiverInterfaces/LinScheduleRequestInterface_LIN2/LinSchedule_LIN2</DATA-ELEMENT-REF>
+                    </NONQUEUED-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/MODE_LIN2/SenderReceiverInterfaces/LinScheduleRequestInterface_LIN2</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeRequestPort_ComMMode_LIN1</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <NONQUEUED-RECEIVER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN1/SenderReceiverInterfaces/ComMModeRequestInterface_LIN1/ComMMode_LIN1</DATA-ELEMENT-REF>
+                    </NONQUEUED-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/MODE_LIN1/SenderReceiverInterfaces/ComMModeRequestInterface_LIN1</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeRequestPort_ComMMode_PNC32</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <NONQUEUED-RECEIVER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_PNC32/SenderReceiverInterfaces/ComMModeRequestInterface_PNC32/ComMMode_PNC32</DATA-ELEMENT-REF>
+                    </NONQUEUED-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/MODE_PNC32/SenderReceiverInterfaces/ComMModeRequestInterface_PNC32</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE>
+                  <SHORT-NAME>modeRequestPort_ComMMode_LIN2</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <NONQUEUED-RECEIVER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN2/SenderReceiverInterfaces/ComMModeRequestInterface_LIN2/ComMMode_LIN2</DATA-ELEMENT-REF>
+                    </NONQUEUED-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/MODE_LIN2/SenderReceiverInterfaces/ComMModeRequestInterface_LIN2</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="44040598-4bce-404b-8909-4f1b753e6b7b">
+                  <SHORT-NAME>modeSwitchPort_Dcm_DiagnosticSessionControlModeSwitchInterface</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/Bsw_Dcm/ModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="9e5306fb-226a-4b25-b370-7bf01cc2fbb4">
+                  <SHORT-NAME>modeSwitchPort_Dcm_EcuResetModeSwitchInterface</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_EcuResetModeSwitchInterface/Dcm_EcuResetModeSwitchInterface</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/Bsw_Dcm/ModeSwitchInterface/Dcm_EcuResetModeSwitchInterface</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="aae54987-b026-4148-ab6f-36c4a0432dde">
+                  <SHORT-NAME>modeSwitchPort_Dcm_ModeRapidPowerShutDownModeSwitchInterface</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_ModeRapidPowerShutDownModeSwitchInterface/Dcm_ModeRapidPowerShutDownModeSwitchInterface</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/Bsw_Dcm/ModeSwitchInterface/Dcm_ModeRapidPowerShutDownModeSwitchInterface</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="e99882e1-4226-4261-966a-b10a6dbbe384">
+                  <SHORT-NAME>modeSwitchPort_Dcm_ControlDTCSettingModeSwitchInterface</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_ControlDTCSettingModeSwitchInterface/Dcm_ControlDTCSettingModeSwitchInterface</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/Bsw_Dcm/ModeSwitchInterface/Dcm_ControlDTCSettingModeSwitchInterface</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="7e3a2cc8-168d-4503-8e4c-5b408672ab34">
+                  <SHORT-NAME>modeSwitchPort_Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1/Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/Bsw_Dcm/ModeSwitchInterface/Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="3da35e74-e457-42f7-9e2d-f405f51e6b8d">
+                  <SHORT-NAME>SwcIB_BswM</SHORT-NAME>
+                  <DATA-TYPE-MAPPING-REFS>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_ComMMode</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_CanSMBORState</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_InitState</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_PduGroup</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_WakeupEvent</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_CanSMState</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmDiagnosticSessionControl</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmEcuReset</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE_LIN1/DataTypeMappingSets/MAP_LinSchedule_LIN1</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_LinSMState</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/EcuM/DataTypeMappingSets/EcuModeMap</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmCommunicationControl</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmModeRapidPowerShutDown</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmControlDTCSetting</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmApplicationUpdated</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmResponseOnEvent</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmSecurityAccess</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_EthSMState</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_ComMMode_PNC</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE_LIN2/DataTypeMappingSets/MAP_LinSchedule_LIN2</DATA-TYPE-MAPPING-REF>
+                  </DATA-TYPE-MAPPING-REFS>
+                  <EVENTS>
+                    <DATA-RECEIVED-EVENT>
+                      <SHORT-NAME>DRE_BswM_Immediate_SwcModeRequest_ComMMode_LIN1_modeRequestPort_ComMMode_LIN1_ComMMode_LIN1</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/SwcIB_BswM/BswM_Immediate_SwcModeRequest_ComMMode_LIN1</START-ON-EVENT-REF>
+                      <DATA-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeRequestPort_ComMMode_LIN1</CONTEXT-R-PORT-REF>
+                        <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN1/SenderReceiverInterfaces/ComMModeRequestInterface_LIN1/ComMMode_LIN1</TARGET-DATA-ELEMENT-REF>
+                      </DATA-IREF>
+                    </DATA-RECEIVED-EVENT>
+                    <DATA-RECEIVED-EVENT>
+                      <SHORT-NAME>DRE_BswM_Immediate_SwcModeRequest_LinSchedule_LIN1_modeRequestPort_LinSchedule_LIN1_LinSchedule_LIN1</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/SwcIB_BswM/BswM_Immediate_SwcModeRequest_LinSchedule_LIN1</START-ON-EVENT-REF>
+                      <DATA-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeRequestPort_LinSchedule_LIN1</CONTEXT-R-PORT-REF>
+                        <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN1/SenderReceiverInterfaces/LinScheduleRequestInterface_LIN1/LinSchedule_LIN1</TARGET-DATA-ELEMENT-REF>
+                      </DATA-IREF>
+                    </DATA-RECEIVED-EVENT>
+                    <DATA-RECEIVED-EVENT>
+                      <SHORT-NAME>DRE_BswM_Immediate_SwcModeRequest_LinSchedule_LIN2_modeRequestPort_LinSchedule_LIN2_LinSchedule_LIN2</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/SwcIB_BswM/BswM_Immediate_SwcModeRequest_LinSchedule_LIN2</START-ON-EVENT-REF>
+                      <DATA-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeRequestPort_LinSchedule_LIN2</CONTEXT-R-PORT-REF>
+                        <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN2/SenderReceiverInterfaces/LinScheduleRequestInterface_LIN2/LinSchedule_LIN2</TARGET-DATA-ELEMENT-REF>
+                      </DATA-IREF>
+                    </DATA-RECEIVED-EVENT>
+                    <DATA-RECEIVED-EVENT>
+                      <SHORT-NAME>DRE_BswM_Immediate_SwcModeRequest_ComMMode_PNC32_modeRequestPort_ComMMode_PNC32_ComMMode_PNC32</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/SwcIB_BswM/BswM_Immediate_SwcModeRequest_ComMMode_PNC32</START-ON-EVENT-REF>
+                      <DATA-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeRequestPort_ComMMode_PNC32</CONTEXT-R-PORT-REF>
+                        <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_PNC32/SenderReceiverInterfaces/ComMModeRequestInterface_PNC32/ComMMode_PNC32</TARGET-DATA-ELEMENT-REF>
+                      </DATA-IREF>
+                    </DATA-RECEIVED-EVENT>
+                    <DATA-RECEIVED-EVENT>
+                      <SHORT-NAME>DRE_BswM_Immediate_SwcModeRequest_ComMMode_LIN2_modeRequestPort_ComMMode_LIN2_ComMMode_LIN2</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/SwcIB_BswM/BswM_Immediate_SwcModeRequest_ComMMode_LIN2</START-ON-EVENT-REF>
+                      <DATA-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeRequestPort_ComMMode_LIN2</CONTEXT-R-PORT-REF>
+                        <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN2/SenderReceiverInterfaces/ComMModeRequestInterface_LIN2/ComMMode_LIN2</TARGET-DATA-ELEMENT-REF>
+                      </DATA-IREF>
+                    </DATA-RECEIVED-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_Immediate_SwcModeRequest_ComMMode_LIN1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                        <VARIABLE-ACCESS>
+                          <SHORT-NAME>DRPBA_BswM_Immediate_ComMMode_LIN1</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeRequestPort_ComMMode_LIN1</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN1/SenderReceiverInterfaces/ComMModeRequestInterface_LIN1/ComMMode_LIN1</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                      </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                      <SYMBOL>BswM_Immediate_ComMMode_LIN1</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_Immediate_SwcModeRequest_LinSchedule_LIN1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                        <VARIABLE-ACCESS>
+                          <SHORT-NAME>DRPBA_BswM_Immediate_LinSchedule_LIN1</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeRequestPort_LinSchedule_LIN1</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN1/SenderReceiverInterfaces/LinScheduleRequestInterface_LIN1/LinSchedule_LIN1</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                      </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                      <SYMBOL>BswM_Immediate_LinSchedule_LIN1</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_ComMMode_FD_CAN1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT>
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_ComMMode_FD_CAN1_modeSwitchPort_ComMMode_FD_CAN1_ComMMode_FD_CAN1</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_ComMMode_FD_CAN1</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_FD_CAN1/ModeSwitchInterfaces/ComMModeInterface_FD_CAN1/ComMMode_FD_CAN1</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_ComMMode_FD_CAN1</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_ComMMode_LIN1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT>
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_ComMMode_LIN1_modeSwitchPort_ComMMode_LIN1_ComMMode_LIN1</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_ComMMode_LIN1</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/ComMModeInterface_LIN1/ComMMode_LIN1</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_ComMMode_LIN1</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_CanSMState_FD_CAN1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT>
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_CanSMState_FD_CAN1_modeSwitchPort_CanSMState_FD_CAN1_CanSMState_FD_CAN1</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_CanSMState_FD_CAN1</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_FD_CAN1/ModeSwitchInterfaces/CanSMStateInterface_FD_CAN1/CanSMState_FD_CAN1</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_CanSMState_FD_CAN1</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_CanSMBORState_FD_CAN1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT>
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_CanSMBORState_FD_CAN1_modeSwitchPort_CanSMBORState_FD_CAN1_CanSMBORState_FD_CAN1</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_CanSMBORState_FD_CAN1</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_FD_CAN1/ModeSwitchInterfaces/CanSMBORStateInterface_FD_CAN1/CanSMBORState_FD_CAN1</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_CanSMBORState_FD_CAN1</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_PduGroupTx_LIN1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT>
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_PduGroupTx_LIN1_modeSwitchPort_PduGroupTx_LIN1_PduGroupTx_LIN1</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_PduGroupTx_LIN1</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/PduGroupTxInterface_LIN1/PduGroupTx_LIN1</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_PduGroupTx_LIN1</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_PduGroupRx_LIN1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT>
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_PduGroupRx_LIN1_modeSwitchPort_PduGroupRx_LIN1_PduGroupRx_LIN1</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_PduGroupRx_LIN1</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/PduGroupRxInterface_LIN1/PduGroupRx_LIN1</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_PduGroupRx_LIN1</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_LinSMState_LIN1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT>
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_LinSMState_LIN1_modeSwitchPort_LinSMState_LIN1_LinSMState_LIN1</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_LinSMState_LIN1</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinSMStateInterface_LIN1/LinSMState_LIN1</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_LinSMState_LIN1</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_LinSMSchedule_LIN1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT>
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_LinSMSchedule_LIN1_modeSwitchPort_LinSMSchedule_LIN1_LinSMSchedule_LIN1</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_LinSMSchedule_LIN1</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_LinSMSchedule_LIN1</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_InitState</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT>
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_InitState_modeSwitchPort_InitState_InitState</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_InitState</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/InitStateInterface/InitState</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_InitState</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_WakeupEvent</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT>
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_WakeupEvent_modeSwitchPort_WakeupEvent_WakeupEvent</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_WakeupEvent</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/WakeupEventInterface/WakeupEvent</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_WakeupEvent</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_PduGroupRx_FD_CAN1_PNC32</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT>
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_PduGroupRx_FD_CAN1_PNC32_modeSwitchPort_PduGroupRx_FD_CAN1_PNC32_PduGroupRx_FD_CAN1_PNC32</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_PduGroupRx_FD_CAN1_PNC32</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_FD_CAN1/ModeSwitchInterfaces/PduGroupRxInterface_FD_CAN1_PNC32/PduGroupRx_FD_CAN1_PNC32</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_PduGroupRx_FD_CAN1_PNC32</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_PduGroupTx_FD_CAN1_PNC32</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT>
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_PduGroupTx_FD_CAN1_PNC32_modeSwitchPort_PduGroupTx_FD_CAN1_PNC32_PduGroupTx_FD_CAN1_PNC32</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_PduGroupTx_FD_CAN1_PNC32</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_FD_CAN1/ModeSwitchInterfaces/PduGroupTxInterface_FD_CAN1_PNC32/PduGroupTx_FD_CAN1_PNC32</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_PduGroupTx_FD_CAN1_PNC32</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_ComMMode_PNC32</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT>
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_ComMMode_PNC32_modeSwitchPort_ComMMode_PNC32_ComMMode_PNC32</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_ComMMode_PNC32</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_PNC32/ModeSwitchInterfaces/ComMModeInterface_PNC32/ComMMode_PNC32</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_ComMMode_PNC32</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_Immediate_SwcModeRequest_ComMMode_PNC32</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                        <VARIABLE-ACCESS>
+                          <SHORT-NAME>DRPBA_BswM_Immediate_ComMMode_PNC32</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeRequestPort_ComMMode_PNC32</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_PNC32/SenderReceiverInterfaces/ComMModeRequestInterface_PNC32/ComMMode_PNC32</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                      </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                      <SYMBOL>BswM_Immediate_ComMMode_PNC32</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="1555b008-48d1-4339-aa1b-e409db865f03">
+                      <SHORT-NAME>BswM_Immediate_SwcModeRequest_LinSchedule_LIN2</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                        <VARIABLE-ACCESS>
+                          <SHORT-NAME>DRPBA_BswM_Immediate_LinSchedule_LIN2</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeRequestPort_LinSchedule_LIN2</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN2/SenderReceiverInterfaces/LinScheduleRequestInterface_LIN2/LinSchedule_LIN2</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                      </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                      <SYMBOL>BswM_Immediate_LinSchedule_LIN2</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="c745447e-ddbd-4069-94d8-81f3c4f4ee40">
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_Dcm_ControlDTCSettingModeSwitchInterface</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT UUID="34f3c4b4-4722-4832-98d7-296a1341bf55">
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_Dcm_ControlDTCSettingModeSwitchInterface_modeSwitchPort_Dcm_ControlDTCSettingModeSwitchInterface_Dcm_ControlDTCSettingModeSwitchInterface</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_Dcm_ControlDTCSettingModeSwitchInterface</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_ControlDTCSettingModeSwitchInterface/Dcm_ControlDTCSettingModeSwitchInterface</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_Dcm_ControlDTCSettingModeSwitchInterface</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="2ed1d5a2-af59-41bc-b657-d98faa6dcd6f">
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_DcmDiagnosticSessionControl</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT UUID="1395acf3-35de-4f93-90fd-573187155bb3">
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_DcmDiagnosticSessionControl_modeSwitchPort_Dcm_DiagnosticSessionControlModeSwitchInterface_Dcm_DiagnosticSessionControlModeSwitchInterface</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_Dcm_DiagnosticSessionControlModeSwitchInterface</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_DcmDiagnosticSessionControl</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="23ce21a9-8823-4f6b-87e8-b8957328844a">
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_Dcm_EcuResetModeSwitchInterface</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT UUID="e1509136-6c59-423c-bee7-adff95dae2ad">
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_Dcm_EcuResetModeSwitchInterface_modeSwitchPort_Dcm_EcuResetModeSwitchInterface_Dcm_EcuResetModeSwitchInterface</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_Dcm_EcuResetModeSwitchInterface</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_EcuResetModeSwitchInterface/Dcm_EcuResetModeSwitchInterface</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_Dcm_EcuResetModeSwitchInterface</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="866230c3-7804-48b1-a06f-c42d7aed154b">
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT>
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1_modeSwitchPort_Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1_Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1/Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="98de9952-7138-474b-a77a-74cf8e341b5a">
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_Dcm_DiagnosticSessionControlModeSwitchInterface</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT>
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_Dcm_DiagnosticSessionControlModeSwitchInterface_modeSwitchPort_Dcm_DiagnosticSessionControlModeSwitchInterface_Dcm_DiagnosticSessionControlModeSwitchInterface</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_Dcm_DiagnosticSessionControlModeSwitchInterface</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_Dcm_DiagnosticSessionControlModeSwitchInterface</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="8895261b-c212-459c-aadf-d4496f3cbf61">
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_Dcm_ModeRapidPowerShutDownModeSwitchInterface</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT UUID="ec3cf4b6-0b4d-4382-bff2-1d7ee99c281b">
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_Dcm_ModeRapidPowerShutDownModeSwitchInterface_modeSwitchPort_Dcm_ModeRapidPowerShutDownModeSwitchInterface_Dcm_ModeRapidPowerShutDownModeSwitchInterface</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_Dcm_ModeRapidPowerShutDownModeSwitchInterface</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_ModeRapidPowerShutDownModeSwitchInterface/Dcm_ModeRapidPowerShutDownModeSwitchInterface</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_Dcm_ModeRapidPowerShutDownModeSwitchInterface</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_ComMMode_LIN2</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT UUID="717a32a2-91c9-4d14-84fd-87c7ffb1bb8c">
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_ComMMode_LIN2_modeSwitchPort_ComMMode_LIN2_ComMMode_LIN2</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_ComMMode_LIN2</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/ComMModeInterface_LIN2/ComMMode_LIN2</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_ComMMode_LIN2</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_PduGroupTx_LIN2</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT UUID="aae00085-251a-4cd1-b10a-58b0d8e1c359">
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_PduGroupTx_LIN2_modeSwitchPort_PduGroupTx_LIN2_PduGroupTx_LIN2</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_PduGroupTx_LIN2</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/PduGroupTxInterface_LIN2/PduGroupTx_LIN2</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_PduGroupTx_LIN2</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_PduGroupRx_LIN2</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT UUID="042e21c9-22c5-4065-a8bc-aacf439f9753">
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_PduGroupRx_LIN2_modeSwitchPort_PduGroupRx_LIN2_PduGroupRx_LIN2</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_PduGroupRx_LIN2</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/PduGroupRxInterface_LIN2/PduGroupRx_LIN2</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_PduGroupRx_LIN2</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_LinSMState_LIN2</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT UUID="7e570f6a-8d20-4aca-8e8e-a593b5cd2b24">
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_LinSMState_LIN2_modeSwitchPort_LinSMState_LIN2_LinSMState_LIN2</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_LinSMState_LIN2</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinSMStateInterface_LIN2/LinSMState_LIN2</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_LinSMState_LIN2</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_ActionList_RteSwitch_LinSMSchedule_LIN2</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT UUID="4a86fd14-65f2-4bd8-8974-32b7ded94a91">
+                          <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_LinSMSchedule_LIN2_modeSwitchPort_LinSMSchedule_LIN2_LinSchedule_LIN2</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeSwitchPort_LinSMSchedule_LIN2</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>BswM_ActionList_RteSwitch_LinSMSchedule_LIN2</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>BswM_Immediate_SwcModeRequest_ComMMode_LIN2</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                        <VARIABLE-ACCESS>
+                          <SHORT-NAME>DRPBA_BswM_Immediate_ComMMode_LIN2</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/modeRequestPort_ComMMode_LIN2</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN2/SenderReceiverInterfaces/ComMModeRequestInterface_LIN2/ComMMode_LIN2</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                      </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                      <SYMBOL>BswM_Immediate_ComMMode_LIN2</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </SERVICE-SW-COMPONENT-TYPE>
+            <SWC-IMPLEMENTATION UUID="06e5c9a7-02a3-4541-8ab5-2f99191b46ef">
+              <SHORT-NAME>SwcImplementation_BswM</SHORT-NAME>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/BswM/SwcBswMappings/SwcBswMapping_BswM</SWC-BSW-MAPPING-REF>
+              <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/SwcIB_BswM</BEHAVIOR-REF>
+            </SWC-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="74414e29-3046-4043-af8d-6393c01aac49">
+          <SHORT-NAME>SwcBswMappings</SHORT-NAME>
+          <ELEMENTS>
+            <SWC-BSW-MAPPING UUID="ad22ffc4-a3ca-4811-b026-855eb195975d">
+              <SHORT-NAME>SwcBswMapping_BswM</SHORT-NAME>
+              <BSW-BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_BswM/BswModuleDescriptions/BswM/BswIB_BswM</BSW-BEHAVIOR-REF>
+              <SWC-BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/BswM/ServiceSwComponentTypes/BswM_Partition_Main/SwcIB_BswM</SWC-BEHAVIOR-REF>
+            </SWC-BSW-MAPPING>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

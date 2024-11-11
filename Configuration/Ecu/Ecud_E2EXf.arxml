@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="982e3288-b4dc-4f0a-b01a-ffc92e83df10">
+      <SHORT-NAME>AUTRON</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="b715c0dc-e16b-4636-80c9-3321bf8dbed4">
+          <SHORT-NAME>E2EXf</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTRON_E2EXf/Xfrm</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/ArPackage_E2EXf/BswImplementation_E2EXf</MODULE-DESCRIPTION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="47acd1d9-7697-4e49-9b77-685dd63fe238">
+              <SHORT-NAME>XfrmGeneral</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                    <SD T="2020-04-18T19:03:33Z" GID="XfrmDevErrorDetect">false</SD>
+                    <SD T="2020-04-18T19:03:33Z" GID="XfrmVersionInfoApi">false</SD>
+                  </SDG>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2020-04-18T19:10:29Z" GID="XfrmDevErrorDetect">1</SD>
+                    <SD T="2020-04-18T19:10:33Z" GID="XfrmInstanceId">0</SD>
+                    <SD T="2020-09-19T11:39:55Z" GID="XfrmVersionInfoApi">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON_E2EXf/Xfrm/XfrmGeneral</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON_E2EXf/Xfrm/XfrmGeneral/XfrmDevErrorDetect</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON_E2EXf/Xfrm/XfrmGeneral/XfrmInstanceId</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON_E2EXf/Xfrm/XfrmGeneral/XfrmVersionInfoApi</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="1068bc76-457f-4016-85dd-f43bcb66a34f">
+              <SHORT-NAME>E2EXf_MsgGr_E2E_FD_CAN1_BSD_01_50ms_P11</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                    <SD T="2024-07-10T10:09:57Z" GID="XfrmTransformationTechnologyRef">/DataTransformation/XF_FD_CAN1/XfSetRx_FD_CAN1_P11_8/XfTechRx_E2EXf_P11_8</SD>
+                    <SD T="2024-07-10T10:09:57Z" GID="XfrmInvTransformerBswModuleEntryRef">/ArPackage_E2EXf/E2EXf_Inv_Com_ComISignalGroup_MsgGr_E2E_FD_CAN1_BSD_01_50ms_P11</SD>
+                  </SDG>
+                  <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                    <SD GID="XfrmTransformationTechnologyRef">true</SD>
+                    <SD GID="XfrmInvTransformerBswModuleEntryRef">true</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON_E2EXf/Xfrm/XfrmImplementationMapping</DEFINITION-REF>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTRON_E2EXf/Xfrm/XfrmImplementationMapping/XfrmTransformationTechnologyRef</DEFINITION-REF>
+                  <VALUE-REF DEST="TRANSFORMATION-TECHNOLOGY">/DataTransformation/XF_FD_CAN1/XfSetRx_FD_CAN1_P11_8/XfTechRx_E2EXf_P11_8</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTRON_E2EXf/Xfrm/XfrmImplementationMapping/XfrmInvTransformerBswModuleEntryRef</DEFINITION-REF>
+                  <VALUE-REF DEST="BSW-MODULE-ENTRY">/ArPackage_E2EXf/E2EXf_Inv_Com_ComISignalGroup_MsgGr_E2E_FD_CAN1_BSD_01_50ms_P11</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="89c5a44f-66c7-4cb9-9332-04c3d65ea218">
+                  <SHORT-NAME>XfrmSignal</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON_E2EXf/Xfrm/XfrmImplementationMapping/XfrmSignal</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="cc905cd6-8910-438b-8995-add10ec7c15e">
+                      <SHORT-NAME>XfrmSignalChoice</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AUTRON_E2EXf/Xfrm/XfrmImplementationMapping/XfrmSignal/XfrmSignalChoice</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="6c742689-9b1c-40fd-8287-c6fccc6a8cb2">
+                          <SHORT-NAME>XfrmISignalGroupRefChoice</SHORT-NAME>
+                          <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                                <SD T="2024-07-10T10:09:57Z" GID="XfrmISignalGroupRef">/DBCImport/ISIGNALGROUPS/MsgGr_E2E_FD_CAN1_BSD_01_50ms_P11</SD>
+                              </SDG>
+                              <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                                <SD GID="XfrmISignalGroupRef">true</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON_E2EXf/Xfrm/XfrmImplementationMapping/XfrmSignal/XfrmSignalChoice/XfrmISignalGroupRefChoice</DEFINITION-REF>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTRON_E2EXf/Xfrm/XfrmImplementationMapping/XfrmSignal/XfrmSignalChoice/XfrmISignalGroupRefChoice/XfrmISignalGroupRef</DEFINITION-REF>
+                              <VALUE-REF DEST="I-SIGNAL-GROUP">/DBCImport/ISIGNALGROUPS/MsgGr_E2E_FD_CAN1_BSD_01_50ms_P11</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="be1dc15f-5235-4925-bb7a-a027021ee883">
+              <SHORT-NAME>E2EXf_MsgGr_E2E_FD_CAN1_TCU_01_10ms_P11</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                    <SD T="2024-07-10T10:09:57Z" GID="XfrmTransformationTechnologyRef">/DataTransformation/XF_FD_CAN1/XfSetTx_FD_CAN1_P11_8/XfTechTx_E2EXf_P11_8</SD>
+                    <SD T="2024-07-10T10:09:57Z" GID="XfrmTransformerBswModuleEntryRef">/ArPackage_E2EXf/E2EXf_Com_ComISignalGroup_MsgGr_E2E_FD_CAN1_TCU_01_10ms_P11</SD>
+                  </SDG>
+                  <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                    <SD GID="XfrmTransformationTechnologyRef">true</SD>
+                    <SD GID="XfrmTransformerBswModuleEntryRef">true</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON_E2EXf/Xfrm/XfrmImplementationMapping</DEFINITION-REF>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTRON_E2EXf/Xfrm/XfrmImplementationMapping/XfrmTransformationTechnologyRef</DEFINITION-REF>
+                  <VALUE-REF DEST="TRANSFORMATION-TECHNOLOGY">/DataTransformation/XF_FD_CAN1/XfSetTx_FD_CAN1_P11_8/XfTechTx_E2EXf_P11_8</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTRON_E2EXf/Xfrm/XfrmImplementationMapping/XfrmTransformerBswModuleEntryRef</DEFINITION-REF>
+                  <VALUE-REF DEST="BSW-MODULE-ENTRY">/ArPackage_E2EXf/E2EXf_Com_ComISignalGroup_MsgGr_E2E_FD_CAN1_TCU_01_10ms_P11</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="82494a7b-d27d-4370-9d80-5cd15670ab6b">
+                  <SHORT-NAME>XfrmSignal</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON_E2EXf/Xfrm/XfrmImplementationMapping/XfrmSignal</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="363bdafa-e627-413e-9454-48f10a9b9145">
+                      <SHORT-NAME>XfrmSignalChoice</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AUTRON_E2EXf/Xfrm/XfrmImplementationMapping/XfrmSignal/XfrmSignalChoice</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="de20e242-a83d-4ef7-b300-9e0569da964b">
+                          <SHORT-NAME>XfrmISignalGroupRefChoice</SHORT-NAME>
+                          <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                                <SD T="2024-07-10T10:09:57Z" GID="XfrmISignalGroupRef">/DBCImport/ISIGNALGROUPS/MsgGr_E2E_FD_CAN1_TCU_01_10ms_P11</SD>
+                              </SDG>
+                              <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                                <SD GID="XfrmISignalGroupRef">true</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON_E2EXf/Xfrm/XfrmImplementationMapping/XfrmSignal/XfrmSignalChoice/XfrmISignalGroupRefChoice</DEFINITION-REF>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTRON_E2EXf/Xfrm/XfrmImplementationMapping/XfrmSignal/XfrmSignalChoice/XfrmISignalGroupRefChoice/XfrmISignalGroupRef</DEFINITION-REF>
+                              <VALUE-REF DEST="I-SIGNAL-GROUP">/DBCImport/ISIGNALGROUPS/MsgGr_E2E_FD_CAN1_TCU_01_10ms_P11</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

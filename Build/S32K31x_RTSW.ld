@@ -1,0 +1,314 @@
+/*******************************************************************************
+**                                                                            **
+**  (C) 2021 HYUNDAI AUTOEVER Corp.                                           **
+**  Confidential Proprietary Information. Distribution Limited.               **
+**  This source code is permitted to be used only in projects contracted      **
+**  with Hyundai Autoever, and any other use is prohibited.                   **
+**  If you use it for other purposes or change the source code,               **
+**  you may take legal responsibility.                                        **
+**  In this case, There is no warranty and technical support.                 **
+**                                                                            **
+**  SRC-MODULE: S32K31x_RTSW.ld                                               **
+**                                                                            **
+**  TARGET    : S32K31x                                                       **
+**                                                                            **
+**  PRODUCT   : Bootloader                                                    **
+**                                                                            **
+**  PURPOSE   : This file provides Linker commands for memory assignments and **
+**              address information                                           **
+**                                                                            **
+**  PLATFORM DEPENDANT [yes/no]:       Yes                                    **
+**                                                                            **
+**  TO BE CHANGED BY USER [yes/no]:    Yes                                    **
+**                                                                            **
+*******************************************************************************/
+
+/*==============================================================================
+* [S32K311]
+*=============================================================================*/
+/* HSE Disabled */
+// FLASH_BOOT              : ORIGIN = 0x00400000, LENGTH = 0x00000400  /* 1K */
+// FLASH_VECTOR            : ORIGIN = 0x00400400, LENGTH = 0x00000400  /* 1K */
+// FLASH_CODE              : ORIGIN = 0x00400800, LENGTH = 0x000F3800  /* 974K = 1024K - 48K(sBAF + HSE) - 1K(Boot) - 1K(Vector Table)*/
+// FLASH_RESERVED          : ORIGIN = 0x004F4000, LENGTH = 0x0000C000  /* 48K */
+// FLASH_DATA              : ORIGIN = 0x10000000, LENGTH = 0x00010000  /* 64K */
+// MEM_UTEST               : ORIGIN = 0x1B000000, LENGTH = 0x00002000  /* 8K */
+// MEM_ITCM                : ORIGIN = 0x00000000, LENGTH = 0x00008000  /* 32K */
+// MEM_DTCM                : ORIGIN = 0x20000000, LENGTH = 0x00010000  /* 64K */
+// RAM_RETENTION           : ORIGIN = 0x20400000, LENGTH = 0x00004000  /* 16K */
+// RAM_SYSTEM              : ORIGIN = 0x20404000, LENGTH = 0x00004000  /* 16K */
+// RAM_END                 : ORIGIN = 0x20408000, LENGTH = 0
+/*----------------------------------------------------------------------------*/
+/* HSE Enabled / Full Memory HSE Firmware */
+// FLASH_BOOT              : ORIGIN = 0x00400000, LENGTH = 0x00000400  /* 1K */
+// FLASH_VECTOR            : ORIGIN = 0x00400400, LENGTH = 0x00000400  /* 1K */
+// FLASH_CODE              : ORIGIN = 0x00400800, LENGTH = 0x000D3800  /* 846K = 1024K - 176K(sBAF + HSE) - 1K(Boot) - 1K(Vector Table)*/
+// FLASH_RESERVED          : ORIGIN = 0x004D4000, LENGTH = 0x0002C000  /* 176K(sBAF + HSE) */
+// FLASH_DATA              : ORIGIN = 0x10000000, LENGTH = 0x00010000  /* 64K */
+// MEM_UTEST               : ORIGIN = 0x1B000000, LENGTH = 0x00002000  /* 8K */
+// MEM_ITCM                : ORIGIN = 0x00000000, LENGTH = 0x00008000  /* 32K */
+// MEM_DTCM                : ORIGIN = 0x20000000, LENGTH = 0x00010000  /* 64K */
+// RAM_RETENTION           : ORIGIN = 0x20400000, LENGTH = 0x00004000  /* 16K */
+// RAM_SYSTEM              : ORIGIN = 0x20404000, LENGTH = 0x00004000  /* 16K */
+// RAM_END                 : ORIGIN = 0x20408000, LENGTH = 0
+/*----------------------------------------------------------------------------*/
+/* HSE Enabled / AB Swap Memory HSE Firmware */
+// FLASH_BOOT              : ORIGIN = 0x00400000, LENGTH = 0x00000400  /* 1K */
+// FLASH_VECTOR            : ORIGIN = 0x00400400, LENGTH = 0x00000400  /* 1K */
+// FLASH_CODE              : ORIGIN = 0x00400800, LENGTH = 0x00053800  /* 334K = 512K - 176K(sBAF + HSE) - 1K(Boot) - 1K(Vector Table)*/
+// FLASH_RESERVED          : ORIGIN = 0x00454000, LENGTH = 0x0002C000  /* 176K(sBAF + HSE) */
+// FLASH_BOOT_PASSIVE      : ORIGIN = 0x00480000, LENGTH = 0x00000400  /* 1K */
+// FLASH_VECTOR_PASSIVE    : ORIGIN = 0x00480400, LENGTH = 0x00000400  /* 1K */
+// FLASH_CODE_PASSIVE      : ORIGIN = 0x00480800, LENGTH = 0x00053800  /* 334K = 512K - 176K(sBAF + HSE) - 1K(Boot) - 1K(Vector Table)*/
+// FLASH_RESERVED_PASSIVE  : ORIGIN = 0x004D4000, LENGTH = 0x0002C000  /* 176K(sBAF + HSE) */
+// FLASH_DATA              : ORIGIN = 0x10000000, LENGTH = 0x00010000  /* 64K */
+// MEM_UTEST               : ORIGIN = 0x1B000000, LENGTH = 0x00002000  /* 8K */
+// MEM_ITCM                : ORIGIN = 0x00000000, LENGTH = 0x00008000  /* 32K */
+// MEM_DTCM                : ORIGIN = 0x20000000, LENGTH = 0x00010000  /* 64K */
+// RAM_RETENTION           : ORIGIN = 0x20400000, LENGTH = 0x00004000  /* 16K */
+// RAM_SYSTEM              : ORIGIN = 0x20404000, LENGTH = 0x00004000  /* 16K */
+// RAM_END                 : ORIGIN = 0x20408000, LENGTH = 0
+/*----------------------------------------------------------------------------*/
+
+/*==============================================================================
+* [S32K312]
+*=============================================================================*/
+/* HSE Disabled */
+// FLASH_BOOT              : ORIGIN = 0x00400000, LENGTH = 0x00000400  /* 1K */
+// FLASH_VECTOR            : ORIGIN = 0x00400400, LENGTH = 0x00000400  /* 1K */
+// FLASH_CODE              : ORIGIN = 0x00400800, LENGTH = 0x001F3800  /* 1998K = 2048K - 48K(sBAF + HSE) - 1K(Boot) - 1K(Vector Table)*/
+// FLASH_RESERVED          : ORIGIN = 0x005F4000, LENGTH = 0x0000C000  /* 48K */
+// FLASH_DATA              : ORIGIN = 0x10000000, LENGTH = 0x00020000  /* 128K */
+// MEM_UTEST               : ORIGIN = 0x1B000000, LENGTH = 0x00002000  /* 8K */
+// MEM_ITCM                : ORIGIN = 0x00000000, LENGTH = 0x00008000  /* 32K */
+// MEM_DTCM                : ORIGIN = 0x20000000, LENGTH = 0x00010000  /* 64K */
+// RAM_RETENTION           : ORIGIN = 0x20400000, LENGTH = 0x00008000  /* 32K */
+// RAM_SYSTEM              : ORIGIN = 0x20408000, LENGTH = 0x00010000  /* 64K */
+// RAM_END                 : ORIGIN = 0x20418000, LENGTH = 0
+/*----------------------------------------------------------------------------*/
+/* HSE Enabled / Full Memory HSE Firmware */
+// FLASH_BOOT              : ORIGIN = 0x00400000, LENGTH = 0x00000400  /* 1K */
+// FLASH_VECTOR            : ORIGIN = 0x00400400, LENGTH = 0x00000400  /* 1K */
+// FLASH_CODE              : ORIGIN = 0x00400800, LENGTH = 0x001D3800  /* 1870K = 2048K - 176K(sBAF + HSE) - 1K(Boot) - 1K(Vector Table)*/
+// FLASH_RESERVED          : ORIGIN = 0x005D4000, LENGTH = 0x0002C000  /* 176K(sBAF + HSE) */
+// FLASH_DATA              : ORIGIN = 0x10000000, LENGTH = 0x00016000  /* 88K */
+// MEM_UTEST               : ORIGIN = 0x1B000000, LENGTH = 0x00002000  /* 8K */
+// MEM_ITCM                : ORIGIN = 0x00000000, LENGTH = 0x00008000  /* 32K */
+// MEM_DTCM                : ORIGIN = 0x20000000, LENGTH = 0x00010000  /* 64K */
+// RAM_RETENTION           : ORIGIN = 0x20400000, LENGTH = 0x00008000  /* 32K */
+// RAM_SYSTEM              : ORIGIN = 0x20408000, LENGTH = 0x00010000  /* 64K */
+// RAM_END                 : ORIGIN = 0x20418000, LENGTH = 0
+/*----------------------------------------------------------------------------*/
+/* HSE Enabled / AB Swap Memory HSE Firmware */
+// FLASH_BOOT              : ORIGIN = 0x00400000, LENGTH = 0x00000400  /* 1K */
+// FLASH_VECTOR            : ORIGIN = 0x00400400, LENGTH = 0x00000400  /* 1K */
+// FLASH_CODE              : ORIGIN = 0x00400800, LENGTH = 0x000D3800  /* 846K = 1024K - 176K(sBAF + HSE) - 1K(Boot) - 1K(Vector Table)*/
+// FLASH_RESERVED          : ORIGIN = 0x004D4000, LENGTH = 0x0002C000  /* 176K(sBAF + HSE) */
+// FLASH_BOOT_PASSIVE      : ORIGIN = 0x00500000, LENGTH = 0x00000100  /* 0.25K */
+// FLASH_VECTOR_PASSIVE    : ORIGIN = 0x00500100, LENGTH = 0x00000400  /* 1K */
+// FLASH_CODE_PASSIVE      : ORIGIN = 0x00500800, LENGTH = 0x000D3800  /* 846K = 1024K - 176K(sBAF + HSE) - 1K(Boot) - 1K(Vector Table)*/
+// FLASH_RESERVED_PASSIVE  : ORIGIN = 0x005D4000, LENGTH = 0x0002C000  /* 176K(sBAF + HSE) */
+// FLASH_DATA              : ORIGIN = 0x10000000, LENGTH = 0x00020000  /* 128K */
+// MEM_UTEST               : ORIGIN = 0x1B000000, LENGTH = 0x00002000  /* 8K */
+// MEM_ITCM                : ORIGIN = 0x00000000, LENGTH = 0x00008000  /* 32K */
+// MEM_DTCM                : ORIGIN = 0x20000000, LENGTH = 0x00010000  /* 64K */
+// RAM_RETENTION           : ORIGIN = 0x20400000, LENGTH = 0x00008000  /* 32K */
+// RAM_SYSTEM              : ORIGIN = 0x20408000, LENGTH = 0x00010000  /* 64K */
+// RAM_END                 : ORIGIN = 0x20418000, LENGTH = 0
+/*----------------------------------------------------------------------------*/
+
+/*==============================================================================
+* [S32K314]
+*=============================================================================*/
+/* HSE Disabled */
+// FLASH_BOOT              : ORIGIN = 0x00400000, LENGTH = 0x00000400  /* 1K */
+// FLASH_VECTOR            : ORIGIN = 0x00400400, LENGTH = 0x00000400  /* 1K */
+// FLASH_CODE              : ORIGIN = 0x00400800, LENGTH = 0x003F3800  /* 4046K = 4096K - 48K(sBAF + HSE) - 1K(Boot) - 1K(Vector Table)*/
+// FLASH_RESERVED          : ORIGIN = 0x007F4000, LENGTH = 0x0000C000  /* 48K */
+// FLASH_DATA              : ORIGIN = 0x10000000, LENGTH = 0x00020000  /* 128K */
+// MEM_UTEST               : ORIGIN = 0x1B000000, LENGTH = 0x00002000  /* 8K */
+// MEM_ITCM                : ORIGIN = 0x00000000, LENGTH = 0x00008000  /* 32K */
+// MEM_DTCM                : ORIGIN = 0x20000000, LENGTH = 0x00010000  /* 64K */
+// RAM_RETENTION           : ORIGIN = 0x20400000, LENGTH = 0x00008000  /* 32K */
+// RAM_SYSTEM              : ORIGIN = 0x20408000, LENGTH = 0x00048000  /* 288K */
+// RAM_END                 : ORIGIN = 0x20450000, LENGTH = 0
+/*----------------------------------------------------------------------------*/
+/* HSE Enabled / Full Memory HSE Firmware */
+// FLASH_BOOT              : ORIGIN = 0x00400000, LENGTH = 0x00000400  /* 1K */
+// FLASH_VECTOR            : ORIGIN = 0x00400400, LENGTH = 0x00000400  /* 1K */
+// FLASH_CODE              : ORIGIN = 0x00400800, LENGTH = 0x003D3800  /* 3918K = 4096K - 176K(sBAF + HSE) - 1K(Boot) - 1K(Vector Table)*/
+// FLASH_RESERVED          : ORIGIN = 0x007D4000, LENGTH = 0x0002C000  /* 176K(sBAF + HSE) */
+// FLASH_DATA              : ORIGIN = 0x10000000, LENGTH = 0x00016000  /* 88K */
+// MEM_UTEST               : ORIGIN = 0x1B000000, LENGTH = 0x00002000  /* 8K */
+// MEM_ITCM                : ORIGIN = 0x00000000, LENGTH = 0x00008000  /* 32K */
+// MEM_DTCM                : ORIGIN = 0x20000000, LENGTH = 0x00010000  /* 64K */
+// RAM_RETENTION           : ORIGIN = 0x20400000, LENGTH = 0x00008000  /* 32K */
+// RAM_SYSTEM              : ORIGIN = 0x20408000, LENGTH = 0x00048000  /* 288K */
+// RAM_END                 : ORIGIN = 0x20450000, LENGTH = 0
+/*----------------------------------------------------------------------------*/
+/* HSE Enabled / AB Swap Memory HSE Firmware */
+// FLASH_BOOT              : ORIGIN = 0x00400000, LENGTH = 0x00000400  /* 1K */
+// FLASH_VECTOR            : ORIGIN = 0x00400400, LENGTH = 0x00000400  /* 1K */
+// FLASH_CODE              : ORIGIN = 0x00400800, LENGTH = 0x001D3800  /* 1870K = 2048K - 176K(sBAF + HSE) - 1K(Boot) - 1K(Vector Table)*/
+// FLASH_RESERVED          : ORIGIN = 0x005D4000, LENGTH = 0x0002C000  /* 176K(sBAF + HSE) */
+// FLASH_BOOT_PASSIVE      : ORIGIN = 0x00600000, LENGTH = 0x00000100  /* 0.25K */
+// FLASH_VECTOR_PASSIVE    : ORIGIN = 0x00600100, LENGTH = 0x00000400  /* 1K */
+// FLASH_CODE_PASSIVE      : ORIGIN = 0x00600800, LENGTH = 0x001D3800  /* 1870K = 2048K - 176K(sBAF + HSE) - 1K(Boot) - 1K(Vector Table)*/
+// FLASH_RESERVED_PASSIVE  : ORIGIN = 0x007D4000, LENGTH = 0x0002C000  /* 176K(sBAF + HSE) */
+// FLASH_DATA              : ORIGIN = 0x10000000, LENGTH = 0x00020000  /* 128K */
+// MEM_UTEST               : ORIGIN = 0x1B000000, LENGTH = 0x00002000  /* 8K */
+// MEM_ITCM                : ORIGIN = 0x00000000, LENGTH = 0x00008000  /* 32K */
+// MEM_DTCM                : ORIGIN = 0x20000000, LENGTH = 0x00010000  /* 64K */
+// RAM_RETENTION           : ORIGIN = 0x20400000, LENGTH = 0x00008000  /* 32K */
+// RAM_SYSTEM              : ORIGIN = 0x20408000, LENGTH = 0x00048000  /* 288K */
+// RAM_END                 : ORIGIN = 0x20450000, LENGTH = 0
+/*----------------------------------------------------------------------------*/
+
+DEFAULTS 
+{
+}
+
+MEMORY 
+{
+  /* S32K314 */
+  /* HSE Enabled / AB Swap Memory HSE Firmware */
+//  FLASH_BOOT              : ORIGIN = 0x00460000, LENGTH = 0x00000400  /* 1K */
+//  FLASH_VECTOR            : ORIGIN = 0x00460400, LENGTH = 0x00000400  /* 1K */
+//  FLASH_CODE              : ORIGIN = 0x00460800, LENGTH = 0x00173800  /* 1550K = 1728K - 176K(sBAF + HSE) - 1K(Boot) - 1K(Vector Table)*/
+//  FLASH_RESERVED          : ORIGIN = 0x005D4000, LENGTH = 0x0002C000  /* 176K(sBAF + HSE) */
+//  FLASH_BOOT_PASSIVE      : ORIGIN = 0x00650000, LENGTH = 0x00000400  /* 1K */
+//  FLASH_VECTOR_PASSIVE    : ORIGIN = 0x00650400, LENGTH = 0x00000400  /* 1K */
+//  FLASH_CODE_PASSIVE      : ORIGIN = 0x00650800, LENGTH = 0x00183800  /* 1550K = 1728K - 176K(sBAF + HSE) - 1K(Boot) - 1K(Vector Table)*/
+//  FLASH_RESERVED_PASSIVE  : ORIGIN = 0x007D4000, LENGTH = 0x0002C000  /* 176K(sBAF + HSE) */
+//  FLASH_DATA              : ORIGIN = 0x10000000, LENGTH = 0x00020000  /* 128K */
+//  MEM_UTEST               : ORIGIN = 0x1B000000, LENGTH = 0x00002000  /* 8K */
+//  MEM_ITCM                : ORIGIN = 0x00000000, LENGTH = 0x00008000  /* 32K */
+//  MEM_DTCM                : ORIGIN = 0x20000000, LENGTH = 0x00010000  /* 64K */
+//  RAM_RETENTION           : ORIGIN = 0x20400100, LENGTH = 0x00007F00  /* 32K */
+//  RAM_SYSTEM              : ORIGIN = 0x20408000, LENGTH = 0x00048000  /* 288K */
+//  RAM_END                 : ORIGIN = 0x20450000, LENGTH = 0
+
+ /* S32K312 */
+/* HSE Enabled / Full Memory HSE Firmware */
+ FLASH_BOOT              : ORIGIN = 0x00460000, LENGTH = 0x00000400  /* 1K */
+ FLASH_VECTOR            : ORIGIN = 0x00460400, LENGTH = 0x00000400  /* 1K */
+ FLASH_CODE              : ORIGIN = 0x00460800, LENGTH = 0x00173800  /* 1870K = 2048K - 176K(sBAF + HSE) - 1K(Boot) - 1K(Vector Table)*/
+ FLASH_RESERVED          : ORIGIN = 0x005D4000, LENGTH = 0x0002C000  /* 176K(sBAF + HSE) */
+ FLASH_DATA              : ORIGIN = 0x10000000, LENGTH = 0x00016000  /* 88K */
+ MEM_UTEST               : ORIGIN = 0x1B000000, LENGTH = 0x00002000  /* 8K */
+ MEM_ITCM                : ORIGIN = 0x00000000, LENGTH = 0x00008000  /* 32K */
+ MEM_DTCM                : ORIGIN = 0x20000000, LENGTH = 0x00010000  /* 64K */
+ STARTUP_COMMAND         : ORIGIN = 0x20400000, LENGTH = 0x00000004
+ BTL_APPL_COMMON_RAM     : ORIGIN = 0x20400004, LENGTH = 0x0000003C 
+ RAM_RETENTION           : ORIGIN = 0x20400200, LENGTH = 0x00000200  /* 256B */
+ RAM_RETENTION_OS        : ORIGIN = 0x20400400, LENGTH = 0x00003C00  /* 32K */
+ RAM_SYSTEM              : ORIGIN = 0x20404000, LENGTH = 0x00014000  /* 288K */
+ RAM_END                 : ORIGIN = 0x20418000, LENGTH = 0
+}
+
+SECTIONS
+{
+/*----------------------------------------------------------------------------*/
+/* ROM SECTIONS                                                               */
+/*----------------------------------------------------------------------------*/
+  .boot_header             ALIGN(4)    : > FLASH_BOOT
+  .vector.EXCEPTION        ALIGN(4)    : > FLASH_VECTOR
+  
+  .ASW_IDENT                           : > FLASH_CODE
+  .ASW_MAINSW_CRC          0x00460800  : > .
+  .ASW_SECURITY_KEY        0x00460900  : > .
+  .ASW_MAINSW_SIGNATURE    0x00460A00  : > .
+  
+  .text        0x00460C00  ALIGN(32)   : {*(".text.*CODE")
+                                          *(".text.*CALLOUT_CODE")} > .
+  .mcal_text               ALIGN(4)    : > .
+  .acmcu_code_rom          ALIGN(4)    : > .
+  .acfls_code_rom          ALIGN(4)    : > .
+  
+  .ghtws.text                          : > .  /* For Green Hills Compiler, The position must be located immediately after the .text section */
+  
+  .rodata                              : {*(".rodata.*CONST*")
+                                          *(".rodata.*CONFIG_DATA*")
+                                          *(".rodata.*CONFIG_UNSPECIFIED*")} > .
+  .mcal_const_cfg          ALIGN(4)    : > .
+  .mcal_const              ALIGN(4)    : > .
+  
+  /* ROM sections for initialized data */
+  .ROM.ramcode                  ROM(.ramcode)                  ALIGN(4)    : > .
+  .ROM.data                     ROM(.data)                     ALIGN(4)    : > .
+  .ROM.mcal_data                ROM(.mcal_data)                ALIGN(4)    : > .
+  .ROM.mcal_data_no_cacheable   ROM(.mcal_data_no_cacheable)   ALIGN(4)    : > .
+  .ROM.mcal_const_no_cacheable  ROM(.mcal_const_no_cacheable)  ALIGN(4)    : > .
+  .ROM.BTL_CFLS_CODE            ROM(.BTL_CFLS_CODE)            ALIGN(4)    : > .
+  .ROM.mcal_shared_data         ROM(.mcal_shared_data)         ALIGN(4)    : > .
+  
+  .syscall                             : > .  /* For Green Hills Compiler */
+  .secinfo                             : > .  /* For Green Hills Compiler, The position can be placed in ROM */
+  
+/*----------------------------------------------------------------------------*/
+/* RAM SECTIONS                                                               */
+/*----------------------------------------------------------------------------*/
+   .BTL_APPL_RS_DATA ALIGN(4) NOCLEAR                    : > STARTUP_COMMAND
+   .APPIF_COMMON_RAM ALIGN(4) NOCLEAR                    : > BTL_APPL_COMMON_RAM
+  /*--------------------------------------------------------------------------*/
+  /* Retention RAM area                                                       */
+  /*--------------------------------------------------------------------------*/
+  .bss_noclear                                   NOCLEAR : {*(".bss.*VAR_NO_INIT*")
+                                                            *(".bss.*VAR_SAVED_ZONE*")} > RAM_RETENTION_OS
+  .rbss.noclear                                  NOCLEAR : > .                                                          
+  /*--------------------------------------------------------------------------*/
+  
+  .BTL_CFLS_CODE                             ALIGN(4)    : > RAM_SYSTEM
+  .ramcode                               ABS ALIGN(4)    : > .
+  
+  .data                                      ALIGN(4)    : {*(".data.*VAR_INIT*")
+                                                            *(".data.*VAR_POWER_ON_INIT*")} > .
+  .mcal_data                                 ALIGN(4)    : > .
+  .data_non_cacheable                        ALIGN(4)    : > .
+  .mcal_data_no_cacheable                    ALIGN(4)    : > .
+  .mcal_const_no_cacheable                   ALIGN(4)    : > .
+  .mcal_shared_data                          ALIGN(4)    : > .
+  
+  .bss                        CLEAR (NOLOAD) ALIGN(4)    : {*(".bss.*VAR_CLEARED*")
+                                                            *(".bss.*VAR_POWER_ON_CLEARED*")
+                                                            *(".bss.OS_RAM_STACK_CORE0_CLEARED_UNSPECIFIED")} > .
+
+  .mcal_bss                   CLEAR (NOLOAD) ALIGN(16)   : > .
+  // reserve space for .acfls_code_ram
+  //.acfls_code_ram                            ALIGN(4)    : > int_sram_fls_rsv
+  .bss_non_cacheable                   CLEAR ALIGN(4)    : > .
+  .mcal_bss_no_cacheable      CLEAR (NOLOAD) ALIGN(16)   : > .
+  .mcal_shared_bss            CLEAR (NOLOAD) ALIGN(16)   : > .
+  
+  .heap                            ALIGN(16) PAD(0K)     : > .
+  
+  /* Initializes stack on the end of block */
+  STACK_SIZE = isdefined(__stack_size__) ? __stack_size__ : 0x2000;
+  StackTop = addr(RAM_SYSTEM)+sizeof(RAM_SYSTEM);
+  StackLimit = StackTop - STACK_SIZE;
+  PROVIDE(__stack = StackTop);
+  
+  .stack StackLimit (NOLOAD):
+  {
+      . = ALIGN(8);
+      __stack_start__ = .;
+      . += STACK_SIZE;
+      __stack_end__= .;
+  } > RAM_SYSTEM
+  
+  OS_MAIN_STACK_MIN = StackLimit;
+  OS_MAIN_STACK_MAX = StackTop;
+
+  /* For Startup.s */
+  __CORE0_VTOR                  = ADDR(.vector.EXCEPTION);
+  
+  /* Fls module access code support */
+  Fls_ACEraseRomStart           = ADDR(.acfls_code_rom);
+  Fls_ACEraseRomEnd             = ADDR(.acfls_code_rom) + SIZEOF(.acfls_code_rom);
+  Fls_ACEraseSize               = (SIZEOF(.acfls_code_rom)+3) / 4; /* Copy 4 bytes at a time*/
+  Fls_ACWriteRomStart           = ADDR(.acfls_code_rom);
+  Fls_ACWriteRomEnd             = ADDR(.acfls_code_rom) + SIZEOF(.acfls_code_rom);
+  Fls_ACWriteSize               = (SIZEOF(.acfls_code_rom)+3) / 4; /* Copy 4 bytes at a time*/
+  // _ERASE_FUNC_ADDRESS_          = ADDR(.acfls_code_ram);
+  // _WRITE_FUNC_ADDRESS_          = ADDR(.acfls_code_ram);
+}

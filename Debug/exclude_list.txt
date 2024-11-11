@@ -1,0 +1,19 @@
+[cryptolib\nxp_hse\install]
+[static_code\modules\canif_r44\delivery\src]
+	|+canif_version.c
+[static_code\modules\cantrcv_r44\delivery\src]
+	|+cantrcv_version.c
+[static_code\modules\e2exf_r44\delivery\src]
+	|+e2exf_version.c
+[static_code\modules\iohwab_r44\delivery\src]
+	|+iohwab_version.c
+[static_code\modules\linif_r44\delivery\src]
+	|+linif_version.c
+[static_code\modules\lintrcv_r44\delivery\src]
+	|+lintrcv_version.c
+[static_code\modules\memif_r44\delivery\src]
+	|+memif_version.c
+[static_code\modules\tm_r44\delivery\src]
+	|+tm_version.c
+[static_code\modules\wdgm_r44\delivery\src]
+	|+wdgm_version.c

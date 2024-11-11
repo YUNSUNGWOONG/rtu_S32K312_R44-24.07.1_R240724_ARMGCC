@@ -1,0 +1,206 @@
+C:\ts_mirr\python\Portable_Python_2.7.6.1\App\python.exe C:\ts_mirr\scons\scons-local-2.3.4\scons.py -f.\Build\site_scons\SConstruct Compile -j20
+scons: Reading SConscript files ...
+AutoEver Toolset Version: 2.6.0
+scons: done reading SConscript files.
+scons: Building targets ...
+Compiling 1th file : Rte.c
+Compiling 2th file : Dcm_SessionControl.c
+Compiling 3th file : Dcm_Timer.c
+Compiling 4th file : Dcm_Utils.c
+Compiling 5th file : Dcm_Validate.c
+Compiling 6th file : Dcm_Version.c
+Compiling 7th file : Dcm_Vin.c
+Compiling 8th file : Dem.c
+Compiling 9th file : Dem_BswIf.c
+Compiling 10th file : Dem_CddIf.c
+Compiling 11th file : Dem_Component.c
+Compiling 12th file : Dem_Config.c
+Compiling 13th file : Dem_DcmIf.c
+Compiling 14th file : Dem_Dtc.c
+Compiling 15th file : Dem_Event.c
+Compiling 16th file : Dem_EventAging.c
+Compiling 17th file : Dem_EventCallback.c
+Compiling 18th file : Dem_EventDebounce.c
+Compiling 19th file : Dem_EventMemory.c
+Compiling 20th file : Dem_EventMemoryCfg.c
+Compiling 21th file : Dem_EventRelatedData.c
+Compiling 22th file : Dem_Indicator.c
+Compiling 23th file : Dem_J1939DcmIf.c
+Compiling 24th file : Dem_J1939Ram.c
+Static_Code/Modules/Dem_R44/delivery/src/Dem_CddIf.c: In function 'Dem_CddClearDTC':
+Static_Code/Modules/Dem_R44/delivery/src/Dem_CddIf.c:149: note: '-Wmisleading-indentation' is disabled from this point onwards, since column-tracking was disabled due to the size of the code/headers
+  149 |   return LddRetVal;
+      | 
+Compiling 25th file : Dem_NvData.c
+Compiling 26th file : Dem_Obd.c
+Compiling 27th file : Dem_ObdRam.c
+Static_Code/Modules/Dcm_R44/delivery/src/Dcm_SessionControl.c: In function 'Dcm_DcmDiagnosticSessionControl':
+Static_Code/Modules/Dcm_R44/delivery/src/Dcm_SessionControl.c:1487: note: '-Wmisleading-indentation' is disabled from this point onwards, since column-tracking was disabled due to the size of the code/headers
+ 1487 |     Dcm_SesCtrl_CheckProcessingDone(pMsgContext, ErrorCode);
+      | 
+Compiling 28th file : Dem_OperationCycle.c
+Compiling 29th file : Dem_Ram.c
+Compiling 30th file : Dem_SwcIf.c
+Compiling 31th file : Dem_Version.c
+Compiling 32th file : Det.c
+Compiling 33th file : Det_Ram.c
+Static_Code/Modules/Dem_R44/delivery/src/Dem_EventDebounce.c: In function 'Dem_GetFDCDebounceTimeBased':
+Static_Code/Modules/Dem_R44/delivery/src/Dem_EventDebounce.c:496: note: '-Wmisleading-indentation' is disabled from this point onwards, since column-tracking was disabled due to the size of the code/headers
+  496 |   return LddRetVal;
+      | 
+Compiling 34th file : Det_Version.c
+Compiling 35th file : E2E.c
+Compiling 36th file : E2E_P01.c
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:122,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM_PCTypes.h:58,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM.h:85,
+                 from Static_Code/Modules/Dcm_R44/delivery/src/Dcm_Version.c:48:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2183: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2183 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:126,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM_PCTypes.h:58,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM.h:85,
+                 from Static_Code/Modules/Dcm_R44/delivery/src/Dcm_Version.c:48:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2186: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2186 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:132,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM_PCTypes.h:58,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM.h:85,
+                 from Static_Code/Modules/Dcm_R44/delivery/src/Dcm_Version.c:48:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2183: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2183 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:136,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM_PCTypes.h:58,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM.h:85,
+                 from Static_Code/Modules/Dcm_R44/delivery/src/Dcm_Version.c:48:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2186: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2186 |   #pragma alignvar (4)
+      | 
+Compiling 37th file : E2E_P02.c
+Compiling 38th file : E2E_P04.c
+Compiling 39th file : E2E_P05.c
+Compiling 40th file : E2E_P06.c
+Compiling 41th file : E2E_P07.c
+Compiling 42th file : E2E_P11.c
+Compiling 43th file : E2E_P22.c
+Compiling 44th file : E2E_SM.c
+Compiling 45th file : E2EXf.c
+Compiling 46th file : EcuM.c
+Compiling 47th file : EcuM_Internal.c
+Compiling 48th file : EcuM_Os.c
+Static_Code/Modules/Dem_R44/delivery/src/Dem_Dtc.c: In function 'Dem_CountAndStoreFilterDtc':
+Static_Code/Modules/Dem_R44/delivery/src/Dem_Dtc.c:490: note: '-Wmisleading-indentation' is disabled from this point onwards, since column-tracking was disabled due to the size of the code/headers
+  490 |           if ((Dem_DTCFilterState[ClientId].dfs_FilterWithSeverity == DEM_TRUE)
+      | 
+Compiling 49th file : EcuM_Ram.c
+Compiling 50th file : EcuM_Version.c
+Compiling 51th file : FiM.c
+Compiling 52th file : FiM_Config.c
+Compiling 53th file : FiM_Dem.c
+Compiling 54th file : FiM_InternalFunc.c
+Compiling 55th file : FiM_Ram.c
+Compiling 56th file : FiM_Version.c
+Compiling 57th file : IoHwAb.c
+Compiling 58th file : IoHwAb_Adc.c
+Compiling 59th file : IoHwAb_Config.c
+Compiling 60th file : IoHwAb_Dcm.c
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:122,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/src/Rte.c:155:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2183: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2183 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:126,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/src/Rte.c:155:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2186: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2186 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:132,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/src/Rte.c:155:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2183: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2183 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:136,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Generated/Bsw_Output/src/Rte.c:155:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2186: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2186 |   #pragma alignvar (4)
+      | 
+In file included from Generated/Bsw_Output/src/Rte.c:173:
+Generated/Bsw_Output/inc/Rte_SWC_AppMode.h:189: warning: "Rte_InitValue_modeRequestPort_ComMMode_PNC32_ComMMode_PNC32" redefined
+  189 | #define Rte_InitValue_modeRequestPort_ComMMode_PNC32_ComMMode_PNC32 Rte_InitValue_SWC_AppMode_modeRequestPort_ComMMode_PNC32_ComMMode_PNC32
+      | 
+In file included from Generated/Bsw_Output/src/Rte.c:159:
+Generated/Bsw_Output/inc/Rte_BswM_Partition_Main.h:191: note: this is the location of the previous definition
+  191 | #define Rte_InitValue_modeRequestPort_ComMMode_PNC32_ComMMode_PNC32 Rte_InitValue_BswM_Partition_Main_modeRequestPort_ComMMode_PNC32_ComMMode_PNC32
+      | 
+In file included from Generated/Bsw_Output/src/Rte.c:173:
+Generated/Bsw_Output/inc/Rte_SWC_AppMode.h:190: warning: "Rte_InitValue_modeRequestPort_ComMMode_LIN2_ComMMode_LIN2" redefined
+  190 | #define Rte_InitValue_modeRequestPort_ComMMode_LIN2_ComMMode_LIN2 Rte_InitValue_SWC_AppMode_modeRequestPort_ComMMode_LIN2_ComMMode_LIN2
+      | 
+In file included from Generated/Bsw_Output/src/Rte.c:159:
+Generated/Bsw_Output/inc/Rte_BswM_Partition_Main.h:195: note: this is the location of the previous definition
+  195 | #define Rte_InitValue_modeRequestPort_ComMMode_LIN2_ComMMode_LIN2 Rte_InitValue_BswM_Partition_Main_modeRequestPort_ComMMode_LIN2_ComMMode_LIN2
+      | 
+In file included from Generated/Bsw_Output/src/Rte.c:173:
+Generated/Bsw_Output/inc/Rte_SWC_AppMode.h:191: warning: "Rte_InitValue_modeRequestPort_ComMMode_LIN1_ComMMode_LIN1" redefined
+  191 | #define Rte_InitValue_modeRequestPort_ComMMode_LIN1_ComMMode_LIN1 Rte_InitValue_SWC_AppMode_modeRequestPort_ComMMode_LIN1_ComMMode_LIN1
+      | 
+In file included from Generated/Bsw_Output/src/Rte.c:159:
+Generated/Bsw_Output/inc/Rte_BswM_Partition_Main.h:193: note: this is the location of the previous definition
+  193 | #define Rte_InitValue_modeRequestPort_ComMMode_LIN1_ComMMode_LIN1 Rte_InitValue_BswM_Partition_Main_modeRequestPort_ComMMode_LIN1_ComMMode_LIN1
+      | 
+
+cc1.exe: out of memory allocating 1073745919 bytes
+Compiling 61th file : IoHwAb_DigDir.c
+scons: *** [Debug\Generated\Bsw_Output\src\Rte.o] Error 1
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:122,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM_PCTypes.h:58,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM.h:85,
+                 from Static_Code/Modules/EcuM_R44/delivery/src/EcuM_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2183: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2183 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:126,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM_PCTypes.h:58,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM.h:85,
+                 from Static_Code/Modules/EcuM_R44/delivery/src/EcuM_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2186: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2186 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:132,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM_PCTypes.h:58,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM.h:85,
+                 from Static_Code/Modules/EcuM_R44/delivery/src/EcuM_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2183: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2183 |   #pragma alignvar (4)
+      | 
+In file included from Static_Code/Modules/Com_R44/delivery/inc/Com_Ram.h:136,
+                 from Static_Code/Modules/Com_R44/delivery/inc/Com.h:62,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM_PCTypes.h:58,
+                 from Static_Code/Modules/ComM_R44/delivery/inc/ComM.h:85,
+                 from Static_Code/Modules/EcuM_R44/delivery/src/EcuM_Version.c:43:
+Static_Code/Integration_Code/integration_MemMap_R44/fixedcode/MemMap.h:2186: warning: ignoring '#pragma alignvar ' [-Wunknown-pragmas]
+ 2186 |   #pragma alignvar (4)
+      | 
+Static_Code/Modules/Dem_R44/delivery/src/Dem_EventRelatedData.c: In function 'Dem_CaptureDataElementClass':
+Static_Code/Modules/Dem_R44/delivery/src/Dem_EventRelatedData.c:978: note: '-Wmisleading-indentation' is disabled from this point onwards, since column-tracking was disabled due to the size of the code/headers
+  978 |         if (E_OK == LucResult)
+      | 
+Static_Code/Modules/Dem_R44/delivery/src/Dem_SwcIf.c: In function 'Dem_SetEventFailureCycleCounterThreshold':
+Static_Code/Modules/Dem_R44/delivery/src/Dem_SwcIf.c:146: note: '-Wmisleading-indentation' is disabled from this point onwards, since column-tracking was disabled due to the size of the code/headers
+  146 |   return LddRetVal;
+      | 
+scons: building terminated because of errors.

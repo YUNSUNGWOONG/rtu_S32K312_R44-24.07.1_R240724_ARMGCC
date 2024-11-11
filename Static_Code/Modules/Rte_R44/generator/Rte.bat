@@ -1,0 +1,186 @@
+@echo OFF
+setlocal enabledelayedexpansion
+
+SET GEN_OPTION=%1
+
+IF "-O" == "%GEN_OPTION:~0,2%" GOTO GENERATOR_PATH_NOT_EXIST
+GOTO SET_GEN_BASIC
+
+:SET_GEN_BASIC
+SET GEN_BASIC=%GEN_OPTION:~1%
+SHIFT
+
+REM Init. Var.
+set RTE_DEFINES=
+set ISSET_GEN_MODE=FALSE
+set RTE_GEN_MODE=
+set ISSET_MOD_PARAM=FALSE
+set RTE_MOD_PARAM=
+
+:START_INPUT_RTE_DEFIEN
+IF "%~1" == "-I" (
+GOTO END_INPUT_RTE_DEFIEN
+) ELSE IF "%~1" == "-O" (
+GOTO END_INPUT_RTE_DEFIEN
+) ELSE IF "%~1" == "" (
+GOTO END_INPUT_RTE_DEFIEN
+)
+SET RTE_DEFINES=!RTE_DEFINES! %1
+SHIFT
+GOTO START_INPUT_RTE_DEFIEN
+
+:END_INPUT_RTE_DEFIEN
+
+IF NOT EXIST %GEN_BASIC% GOTO GEN_BASIC_NOT_EXIST 
+
+:PROCESS
+SET CURRENT_PATH=%cd%
+rem ECHO CURRENT_PATH=%CURRENT_PATH%
+SET GEN_HOME=%GEN_BASIC%\Rte_R44_1.8.0\
+SET PATH_BACKUP=%PATH%
+SET GEN_INI=%CURRENT_PATH%\RteGen.ini
+SET INPUT_LIST=%CURRENT_PATH%\RteGen_In.ini
+SET OUTPUT_LIST=%CURRENT_PATH%\RteGen_Out.ini
+SET RTEGEN_MINRAM=1G
+SET RTEGEN_MAXRAM=1G
+SHIFT
+
+IF NOT EXIST %GEN_HOME% GOTO GEN_HOME_NOT_EXIST
+echo GEN_HOME = %GEN_HOME% 
+
+:INISETTINGBEGIN
+echo -input_files> %INPUT_LIST%
+echo -out> %OUTPUT_LIST%
+echo -project_root> %GEN_INI%
+echo %CURRENT_PATH%>> %GEN_INI%
+echo -msn>> %GEN_INI%
+echo Rte>> %GEN_INI%
+
+:BEGIN
+IF "" == "%0" GOTO END
+REM SET INPUT_FILE_PATH=%INPUT_FILE_PATH% %~f0
+	IF %~0 ==-I (
+		IF EXIST %~f1 dir /s /b /on %~f1\*.arxml>> %INPUT_LIST%
+		SHIFT
+		SHIFT
+		goto BEGIN
+	) 
+	IF %~0 ==-O (
+		REM echo -out>> %GEN_INI%
+        echo %~f1>> %OUTPUT_LIST%
+		SHIFT
+		SHIFT
+		goto BEGIN
+	) 
+rem for the release mode.
+	echo %~0>> %INPUT_LIST% 
+rem for the debug mode. 
+rem	echo %~f0>> %INPUT_LIST%
+	SHIFT
+GOTO BEGIN
+:END
+type %INPUT_LIST%>> %GEN_INI%
+IF EXIST %INPUT_LIST% del %INPUT_LIST%
+type %OUTPUT_LIST%>> %GEN_INI%
+IF EXIST %OUTPUT_LIST% del %OUTPUT_LIST%
+
+REM for, delete prefix, process
+for %%P in (%RTE_DEFINES%) do (
+    SET RTE_DEF=%%P
+    echo RTE_DEF : !RTE_DEF!
+    SET RTE_CHK_PREFIX=!RTE_DEF:~0,6!
+    REM ECHO RTE_CHK_PREFIX = !RTE_CHK_PREFIX!
+
+    SET RTE_FIX_DEF=!RTE_DEF!
+    IF [!RTE_CHK_PREFIX!]==[-[XMS]] call :PROCESS_RTE_RAM_XMS !RTE_DEF:~6!
+    IF [!RTE_CHK_PREFIX!]==[-[XMX]] call :PROCESS_RTE_RAM_XMX !RTE_DEF:~6!
+    IF [!RTE_CHK_PREFIX!]==[-[HYP]] call :PROCESS_RTE_DEF_HYPEN !RTE_DEF:~6!
+    IF [!RTE_CHK_PREFIX!]==[-[GEN]] call :PROCESS_RTE_DEF_GEN !RTE_DEF:~6!
+    IF [!RTE_CHK_PREFIX!]==[-[MOD]] call :PROCESS_RTE_DEF_MOD !RTE_DEF:~6!
+
+    REM ECHO RTE FIX DEF : !RTE_FIX_DEF!
+    rem echo !RTE_FIX_DEF!>> %FILESS%
+    rem echo|set /p=!RTE_FIX_DEF!>>%FILESS%
+)
+GOTO END_CHECK_RTE
+
+:PROCESS_RTE_RAM_XMS
+SET RTEGEN_MINRAM=%1
+EXIT /B
+
+:PROCESS_RTE_RAM_XMX
+SET RTEGEN_MAXRAM=%1
+EXIT /B
+
+:PROCESS_RTE_DEF_HYPEN
+echo -%1>> %GEN_INI%
+EXIT /B
+
+:PROCESS_RTE_DEF_SPACE
+echo %1>> %GEN_INI%
+EXIT /B
+
+:PROCESS_RTE_DEF_GEN
+IF [%ISSET_GEN_MODE%]==[FALSE] (
+    set ISSET_GEN_MODE=TRUE
+    set RTE_GEN_MODE=!RTE_GEN_MODE! -genmode
+)
+set RTE_GEN_MODE=!RTE_GEN_MODE! %1
+ECHO GEN MODE : %RTE_GEN_MODE%
+EXIT /B
+
+:PROCESS_RTE_DEF_MOD
+IF [%ISSET_MOD_PARAM%]==[FALSE] (
+    set ISSET_MOD_PARAM=TRUE
+    set RTE_MOD_PARAM=!RTE_MOD_PARAM! -moduleparams
+)
+set RTE_MOD_PARAM=!RTE_MOD_PARAM! %1
+ECHO MODE PARAM : %RTE_MOD_PARAM%
+EXIT /B
+:END_CHECK_RTE
+
+IF [%ISSET_GEN_MODE%]==[TRUE] (    
+    for %%P in (%RTE_GEN_MODE%) do (
+        ECHO %%P>> %GEN_INI%
+        REM ECHO GEN MODE : %%P
+        )
+)
+
+IF [%ISSET_MOD_PARAM%]==[TRUE] (
+    for %%P in (%RTE_MOD_PARAM%) do (
+        ECHO %%P>> %GEN_INI%
+        REM ECHO MOD PARAM : %%P
+        )
+)
+
+
+:INISETTINGEND
+ECHO GEN_INI=%GEN_INI%
+REM %GEN_HOME%RteGen.exe -out %OUT_PATH% -msn Rte -input_files%INPUT_FILE_PATH% -generate -logfile -apiargqualifier
+%GEN_HOME%RteGen.exe --launcher.ini %GEN_INI% -vmargs -Xms%RTEGEN_MINRAM%  -Xmx%RTEGEN_MAXRAM%
+
+IF NOT "%ERRORLEVEL%" == "0" GOTO ERROR
+
+GOTO FINISH
+
+:GENERATOR_PATH_NOT_EXIST
+echo Error : TRANSFORMER Option should be configured in the Bsw defines of the Rte. Please check your Scons Configurations.
+GOTO ERROR
+
+:GEN_BASIC_NOT_EXIST
+echo Error : Generator root path does not exist.(%GEN_BASIC%)
+GOTO ERROR
+
+:GEN_HOME_NOT_EXIST
+echo Error : Generator path does not exist.(%GEN_HOME%)
+GOTO ERROR
+
+:ERROR
+EXIT -1
+GOTO FINISH
+
+:FINISH
+rem IF EXIST %GEN_INI% del %GEN_INI%
+SET PATH=%PATH_BACKUP%
+endlocal
+@echo end

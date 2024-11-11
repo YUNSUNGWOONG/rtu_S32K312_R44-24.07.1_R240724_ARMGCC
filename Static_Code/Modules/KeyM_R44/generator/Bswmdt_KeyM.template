@@ -1,0 +1,2403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+********************************************************************************
+**  (C) 2021 HYUNDAI AUTOEVER Corp.                                           **
+**  Confidential Proprietary Information. Distribution Limited.               **
+**  This source code is permitted to be used only in projects contracted      **
+**  with Hyundai Autoever, and any other use is prohibited.                   **
+**  If you use it for other purposes or change the source code,               **
+**  you may take legal responsibility.                                        **
+**  In this case, There is no warranty and technical support.                 **
+**                                                                            **
+**  MODULE        : KeyM Module                                               **
+**                                                                            **
+**  PURPOSE       : Definition of the module descriptor.                      **
+**                                                                            **
+**  DESCRIPTION   : This file provides the Bsw module description             **
+**                  of the KeyM module.                                       **
+**                                                                            **
+********************************************************************************
+** Version Date           Prepared By     Description                         **
+********************************************************************************
+** 0.0.1   21-Oct-2020    TamTV6          Initial version                     **
+********************************************************************************
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+   <AR-PACKAGES>
+      <AR-PACKAGE>
+         <SHORT-NAME>Bsw_KeyM</SHORT-NAME>
+         <ELEMENTS>
+            <BSW-IMPLEMENTATION>
+               <SHORT-NAME>BswImplementation_KeyM</SHORT-NAME>
+               <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+               <SW-VERSION>1.0.9</SW-VERSION>
+               <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/KeyM/ServiceSwComponentTypes/SwcBswMapping_KeyM</SWC-BSW-MAPPING-REF>
+               <VENDOR-ID>76</VENDOR-ID>
+               <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+               <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_KeyM/KeyM/BswInternalBehavior_KeyM</BEHAVIOR-REF>
+               <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                  <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTRON/KeyM</VENDOR-SPECIFIC-MODULE-DEF-REF>
+               </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+            </BSW-IMPLEMENTATION>
+            <BSW-MODULE-DESCRIPTION>
+               <SHORT-NAME>KeyM</SHORT-NAME>
+               <MODULE-ID>109</MODULE-ID>
+               <REQUIRED-MODE-GROUPS>
+                  <MODE-DECLARATION-GROUP-PROTOTYPE>
+                     <SHORT-NAME>modeNotificationPort_KeyMEcuShutdown</SHORT-NAME>
+                     <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/EcuM/ModeDeclarationGroups/EcuMode</TYPE-TREF>
+                  </MODE-DECLARATION-GROUP-PROTOTYPE>
+               </REQUIRED-MODE-GROUPS>
+               <INTERNAL-BEHAVIORS>
+                  <BSW-INTERNAL-BEHAVIOR>
+                     <SHORT-NAME>BswInternalBehavior_KeyM</SHORT-NAME>
+                     <DATA-TYPE-MAPPING-REFS>
+                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/EcuM/DataTypeMappingSets/EcuModeMap</DATA-TYPE-MAPPING-REF>
+                     </DATA-TYPE-MAPPING-REFS>
+                     <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA>
+                           <SHORT-NAME>GLOBALVAR_PROTECTION</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                     </EXCLUSIVE-AREAS>
+                     <EXCLUSIVE-AREA-POLICYS>
+                        <BSW-EXCLUSIVE-AREA-POLICY>
+                          <API-PRINCIPLE>COMMON</API-PRINCIPLE>
+                          <EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_KeyM/KeyM/BswInternalBehavior_KeyM/GLOBALVAR_PROTECTION</EXCLUSIVE-AREA-REF>
+                        </BSW-EXCLUSIVE-AREA-POLICY>
+                      </EXCLUSIVE-AREA-POLICYS>                    
+                     <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY>
+                           <SHORT-NAME>BswSE_KeyM_MainFunction</SHORT-NAME>
+                           <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                              <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_KeyM/KeyM/BswInternalBehavior_KeyM/GLOBALVAR_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                           </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <ACCESSED-MODE-GROUPS>
+                              <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                                 <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_KeyM/KeyM/modeNotificationPort_KeyMEcuShutdown</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                           </ACCESSED-MODE-GROUPS>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                        <BSW-SCHEDULABLE-ENTITY>
+                           <SHORT-NAME>BswSE_KeyM_MainBackgroundFunction</SHORT-NAME>
+                           <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                              <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_KeyM/KeyM/BswInternalBehavior_KeyM/GLOBALVAR_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                           </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <ACCESSED-MODE-GROUPS>
+                              <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                                 <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_KeyM/KeyM/modeNotificationPort_KeyMEcuShutdown</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                           </ACCESSED-MODE-GROUPS>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_MainBackgroundFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_Init</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_Init</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_Deinit</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_Deinit</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_GetVersionInfo</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_GetVersionInfo</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_Start</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_Start</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_Finalize</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_Finalize</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_Prepare</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_Prepare</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_Update</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_Update</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_Verify</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_Verify</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_ServiceCertificate</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_ServiceCertificate</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_SetCertificate</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_SetCertificate</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_GetCertificate</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_GetCertificate</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_VerifyCertificates</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_VerifyCertificates</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_VerifyCertificate</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_VerifyCertificate</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_VerifyCertificateChain</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_VerifyCertificateChain</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_CertElementGet</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_CertElementGet</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_CertGetStatus</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_CertGetStatus</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_CertificateElementGetByIndex</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_CertificateElementGetByIndex</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_CertificateElementGetCount</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_CertificateElementGetCount</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_CryptoKeyFinalizeCallbackNotification</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_CryptoKeyFinalizeCallbackNotification</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_CryptoKeyUpdateCallbackNotification</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_CryptoKeyUpdateCallbackNotification</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_ServiceCertificateCallbackNotification</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_ServiceCertificateCallbackNotification</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_CertificateVerifyCallbackNotification</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_CertificateVerifyCallbackNotification</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                        <BSW-CALLED-ENTITY>
+                           <SHORT-NAME>BswCE_KeyM_CryptoKeyVerifyCallbackNotification</SHORT-NAME>
+                           <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_KeyM/KeyM_CryptoKeyVerifyCallbackNotification</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                     </ENTITYS>
+                     <EVENTS>
+                        <BSW-TIMING-EVENT>
+                           <SHORT-NAME>BswTE_KeyM_MainFunction</SHORT-NAME>
+                           <CONTEXT-LIMITATION-REFS>
+                              <CONTEXT-LIMITATION-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_KeyM/KeyM/BswInternalBehavior_KeyM/BswDistinguishedPartition_KeyM</CONTEXT-LIMITATION-REF>
+                           </CONTEXT-LIMITATION-REFS>
+                           <DISABLED-IN-MODE-IREFS>
+                              <DISABLED-IN-MODE-IREF>
+                                 <CONTEXT-MODE-DECLARATION-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_KeyM/KeyM/modeNotificationPort_KeyMEcuShutdown</CONTEXT-MODE-DECLARATION-GROUP-REF>
+                                 <TARGET-MODE-REF DEST="MODE-DECLARATION">/EcuM/ModeDeclarationGroups/EcuMode/ECUM_STATE_SHUTDOWN</TARGET-MODE-REF>
+                              </DISABLED-IN-MODE-IREF>
+                           </DISABLED-IN-MODE-IREFS>
+                           <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/Bsw_KeyM/KeyM/BswInternalBehavior_KeyM/BswSE_KeyM_MainFunction</STARTS-ON-EVENT-REF>
+                           <PERIOD>0</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                           <SHORT-NAME>BswTE_KeyM_MainBackgroundFunction</SHORT-NAME>
+                           <CONTEXT-LIMITATION-REFS>
+                              <CONTEXT-LIMITATION-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_KeyM/KeyM/BswInternalBehavior_KeyM/BswDistinguishedPartition_KeyM</CONTEXT-LIMITATION-REF>
+                           </CONTEXT-LIMITATION-REFS>
+                           <DISABLED-IN-MODE-IREFS>
+                              <DISABLED-IN-MODE-IREF>
+                                 <CONTEXT-MODE-DECLARATION-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_KeyM/KeyM/modeNotificationPort_KeyMEcuShutdown</CONTEXT-MODE-DECLARATION-GROUP-REF>
+                                 <TARGET-MODE-REF DEST="MODE-DECLARATION">/EcuM/ModeDeclarationGroups/EcuMode/ECUM_STATE_SHUTDOWN</TARGET-MODE-REF>
+                              </DISABLED-IN-MODE-IREF>
+                           </DISABLED-IN-MODE-IREFS>
+                           <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/Bsw_KeyM/KeyM/BswInternalBehavior_KeyM/BswSE_KeyM_MainBackgroundFunction</STARTS-ON-EVENT-REF>
+                           <PERIOD>0.1</PERIOD>
+                        </BSW-TIMING-EVENT>
+                  <!--      <BSW-BACKGROUND-EVENT UUID="2ad253f5-7c44-4402-b139-57baaee93b0f">
+                           <SHORT-NAME>BswBGE_KeyM_MainBackgroundFunction</SHORT-NAME>
+                           <CONTEXT-LIMITATION-REFS>
+                             <CONTEXT-LIMITATION-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_KeyM/KeyM/BswInternalBehavior_KeyM/BswDistinguishedPartition_KeyM</CONTEXT-LIMITATION-REF>
+                           </CONTEXT-LIMITATION-REFS>
+                           <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/Bsw_KeyM/KeyM/BswInternalBehavior_KeyM/BswSE_KeyM_MainBackgroundFunction</STARTS-ON-EVENT-REF>
+                        </BSW-BACKGROUND-EVENT> -->
+                     </EVENTS>
+                     <MODE-RECEIVER-POLICYS>
+                        <BSW-MODE-RECEIVER-POLICY>
+                           <ENHANCED-MODE-API>true</ENHANCED-MODE-API>
+                           <REQUIRED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_KeyM/KeyM/modeNotificationPort_KeyMEcuShutdown</REQUIRED-MODE-GROUP-REF>
+                           <SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>true</SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>
+                        </BSW-MODE-RECEIVER-POLICY>
+                     </MODE-RECEIVER-POLICYS>
+                     <DISTINGUISHED-PARTITIONS>
+                        <BSW-DISTINGUISHED-PARTITION>
+                           <SHORT-NAME>BswDistinguishedPartition_KeyM</SHORT-NAME>
+                        </BSW-DISTINGUISHED-PARTITION>
+                     </DISTINGUISHED-PARTITIONS>
+                  </BSW-INTERNAL-BEHAVIOR>
+               </INTERNAL-BEHAVIORS>
+            </BSW-MODULE-DESCRIPTION>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_CertElementGet</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_CertElementGet</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Provides the content of a specific certificate element. The certificate configuration defines how the certificate submodule can find the element, e.g. by providing the object identifier (OID). This function is used to retrieve this information if only one element is assigned to the respective OID.</L-2>
+              </DESC>
+              <SERVICE-ID>0x0f</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertId</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertId</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Holds the identifier of the certificate.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertificateIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertElementId</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertElementId</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Specifies the ElementId where the data shall be read from.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertElementIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertElementData</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertElementData</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pointer to a data buffer allocated by the caller of this function. If available, the function returns E_OK and copies the data into this buffer.</L-2>
+                  </DESC>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertElementDataLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertElementDataLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">In: Pointer to a value that contains the maximum data length of the CertElementData buffer. Out: The data length will be overwritten with the actual length of data placed to the buffer if the function returns E_OK. Otherwise, the it will be overwritten with the value zero.</L-2>
+                  </DESC>
+                  <DIRECTION>INOUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_CertificateElementGetByIndex</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_CertificateElementGetByIndex</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This function provides the element data of a certificate. The function is used if an element type can have more than one parameter. The index specifies which element shall be read. The function works similar to the KeyM_CertElementGetFirst/KeyM_CertElementGetNext, but instead of the iteration, the individual elements can be accessed by index (like the operation in the service interface).</L-2>
+              </DESC>
+              <SERVICE-ID>0x13</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertId</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertId</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Holds the identifier of the certificate.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertificateIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertElementId</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertElementId</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Specifies the CertElementId where the data shall be read from.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertElementIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>Index</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Index</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Specifies the index to the element that shall be read (0..N).</L-2>
+                  </DESC>
+                  <DIRECTION>INOUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertElementDataPtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertElementDataPtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pointer to a data buffer allocated by the caller of this function. If available, the function returns E_OK and copies the data into this buffer.</L-2>
+                  </DESC>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertElementDataLengthPtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertElementDataLengthPtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">In: Pointer to a value that contains the maximum data length of the CertElementData buffer. Out: The data length will be overwritten with the actual length of data placed to the buffer if the function returns E_OK.</L-2>
+                  </DESC>
+                  <DIRECTION>INOUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_CertificateElementGetCount</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_CertificateElementGetCount</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This function provides the total number of data elements that are available for the specified certificate element. Typically, only one data element is available. But in some cases, several data elements can be assigned to one certificate element in a row. This function retrieves the total number of elements. The individual data elements can then accessed with KeyM_CertificateElementGetByIndex().</L-2>
+              </DESC>
+              <SERVICE-ID>0x14</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertId</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertId</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Holds the identifier of the certificate.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertificateIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertElementId</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertElementId</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Specifies the CertElementId where the data shall be read from.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertElementIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CountPtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CountPtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pointer to the buffer where the number of available data elements for this certificate element shall be copied to.</L-2>
+                  </DESC>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_CertGetStatus</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_CertGetStatus</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This function provides the status of a certificate.</L-2>
+              </DESC>
+              <SERVICE-ID>0x12</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertId</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertId</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Holds the identifier of the certificate</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertificateIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>Status</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Status</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Provides the status of the certificate.</L-2>
+                  </DESC>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertificateStatusType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_Deinit</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_Deinit</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This function resets the key management module to the uninitialized state.</L-2>
+              </DESC>
+              <SERVICE-ID>0x02</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_Finalize</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_Finalize</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">The function is used to finalize key update operations. It is typically used in conjunction with the KeyM_Start operation and returns the key operation into the idle mode. Further key prepare or update operations are not accepted until a new KeyM_Start operation has been initialized. This function is only available if KeyMCryptoKeyStartFinalizeFunctionEnabled is set to TRUE. In addition, updated key material will be persisted and set into valid state (calling Csm_KeySetValid).</L-2>
+              </DESC>
+              <SERVICE-ID>0x07</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>RequestDataPtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">RequestDataPtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Information that comes along with the request</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>RequestDataLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">RequestDataLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Length of data in the RequestData array</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResponseDataPtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResponseDataPtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Data returned by the function.</L-2>
+                  </DESC>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResponseMaxDataLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResponseMaxDataLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Length of data in the RespondData array</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_GetCertificate</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_GetCertificate</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This function provides the certificate data</L-2>
+              </DESC>
+              <SERVICE-ID>0x0b</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertId</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertId</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Holds the identifier of the certificate</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertificateIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertificateDataPtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertificateDataPtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Provides a pointer to a certificate data structure. The buffer located by the pointer in the structure shall be provided by the caller of this function. The length information indicates the maximum length of the buffer when the function is called. If E_OK is returned, the length information indicates the actual length of the certificate data in the buffer.</L-2>
+                  </DESC>
+                  <DIRECTION>INOUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertDataType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+               <SHORT-NAME>KeyM_ServiceCertificateCallbackNotification</SHORT-NAME>
+               <LONG-NAME>
+                 <L-4 L="EN">KeyM_ServiceCertificateCallbackNotification</L-4>
+               </LONG-NAME>
+               <DESC>
+                 <L-2 L="EN">Notifies the application that the certificate service operation has been finished. This function is used by the certificate submodule. This callback is only provided if KeyMServiceCertificateFunctionEnabled is set to TRUE. The function name is configurable by KeyMServiceCertificateCallbackNotificationFunc.</L-2>
+               </DESC>
+               <IS-REENTRANT>true</IS-REENTRANT>
+               <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+               <CALL-TYPE>CALLBACK</CALL-TYPE>
+			   <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+               <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+               <BSW-ENTRY-KIND>ABSTRACT</BSW-ENTRY-KIND>
+               <ARGUMENTS>
+                 <SW-SERVICE-ARG>
+                   <SHORT-NAME>CertId</SHORT-NAME>
+                   <LONG-NAME>
+                     <L-4 L="EN">CertId</L-4>
+                   </LONG-NAME>
+                   <DESC>
+                     <L-2 L="EN">The certificate identifier where this service was started for.</L-2>
+                   </DESC>
+                   <DIRECTION>IN</DIRECTION>
+                   <SW-DATA-DEF-PROPS>
+                     <SW-DATA-DEF-PROPS-VARIANTS>
+                       <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertificateIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                       </SW-DATA-DEF-PROPS-CONDITIONAL>
+                     </SW-DATA-DEF-PROPS-VARIANTS>
+                   </SW-DATA-DEF-PROPS>
+                 </SW-SERVICE-ARG>
+                 <SW-SERVICE-ARG>
+                   <SHORT-NAME>Result</SHORT-NAME>
+                   <LONG-NAME>
+                     <L-4 L="EN">Result</L-4>
+                   </LONG-NAME>
+                   <DESC>
+                     <L-2 L="EN">Contains information about the result of the operation.</L-2>
+                   </DESC>
+                   <DIRECTION>IN</DIRECTION>
+                   <SW-DATA-DEF-PROPS>
+                     <SW-DATA-DEF-PROPS-VARIANTS>
+                       <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_ResultType</IMPLEMENTATION-DATA-TYPE-REF>
+                       </SW-DATA-DEF-PROPS-CONDITIONAL>
+                     </SW-DATA-DEF-PROPS-VARIANTS>
+                   </SW-DATA-DEF-PROPS>
+                 </SW-SERVICE-ARG>
+                 <SW-SERVICE-ARG>
+                   <SHORT-NAME>ResultDataLength</SHORT-NAME>
+                   <LONG-NAME>
+                     <L-4 L="EN">ResultDataLength</L-4>
+                   </LONG-NAME>
+                   <DESC>
+                     <L-2 L="EN">Contains the length of the resulting data of this operation if any.</L-2>
+                   </DESC>
+                   <DIRECTION>IN</DIRECTION>
+                   <SW-DATA-DEF-PROPS>
+                     <SW-DATA-DEF-PROPS-VARIANTS>
+                       <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                       </SW-DATA-DEF-PROPS-CONDITIONAL>
+                     </SW-DATA-DEF-PROPS-VARIANTS>
+                   </SW-DATA-DEF-PROPS>
+                 </SW-SERVICE-ARG>
+                 <SW-SERVICE-ARG>
+                   <SHORT-NAME>ResultDataPtr</SHORT-NAME>
+                   <LONG-NAME>
+                     <L-4 L="EN">ResultDataPtr</L-4>
+                   </LONG-NAME>
+                   <DESC>
+                     <L-2 L="EN">Pointer to the data of the result.</L-2>
+                   </DESC>
+                   <DIRECTION>IN</DIRECTION>
+                   <SW-DATA-DEF-PROPS>
+                     <SW-DATA-DEF-PROPS-VARIANTS>
+                       <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <SW-POINTER-TARGET-PROPS>
+                           <SW-DATA-DEF-PROPS>
+                             <SW-DATA-DEF-PROPS-VARIANTS>
+                               <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                 <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                 <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                               </SW-DATA-DEF-PROPS-CONDITIONAL>
+                             </SW-DATA-DEF-PROPS-VARIANTS>
+                           </SW-DATA-DEF-PROPS>
+                         </SW-POINTER-TARGET-PROPS>
+                       </SW-DATA-DEF-PROPS-CONDITIONAL>
+                     </SW-DATA-DEF-PROPS-VARIANTS>
+                   </SW-DATA-DEF-PROPS>
+                 </SW-SERVICE-ARG>
+               </ARGUMENTS>
+             </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_GetVersionInfo</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_GetVersionInfo</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Provides the version information of this module.</L-2>
+              </DESC>
+              <SERVICE-ID>0x03</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>VersionInfo</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">VersionInfo</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pointer to the version information of this module.</L-2>
+                  </DESC>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_VersionInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_Init</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_Init</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This function initializes the key management module.</L-2>
+              </DESC>
+              <SERVICE-ID>0x01</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ConfigPtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ConfigPtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pointer to the configuration set in VARIANT-POST-BUILD.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE"></IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_MainBackgroundFunction</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_MainBackgroundFunction</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Function is called from a pre-emptive operating system when no other task operation is needed. Can be used for calling time consuming synchronous functions such as KeyM_KH_Update().</L-2>
+              </DESC>
+              <SERVICE-ID>0x1a</SERVICE-ID>
+			  <IS-REENTRANT>false</IS-REENTRANT>
+		      <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_MainFunction</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_MainFunction</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Function is called periodically according the specified time interval.</L-2>
+              </DESC>
+              <SERVICE-ID>0x19</SERVICE-ID>
+			  <IS-REENTRANT>false</IS-REENTRANT>
+		      <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>W
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_Prepare</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_Prepare</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This function is used to prepare a key update operation. The main intent is to provide information for the key operation to the key server. Other operations may start the negotiation for a common secret that is used further to derive key material. This function is only available if KeyMCryptoKeyPrepareFunctionEnabled is set to TRUE.</L-2>
+              </DESC>
+              <SERVICE-ID>0x05</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>RequestData</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">RequestData</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Information that comes along with the request</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>RequestDataLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">RequestDataLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Length of data in the RequestData array</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResponseData</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResponseData</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Data returned by the function.</L-2>
+                  </DESC>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResponseDataLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResponseDataLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">In: Max number of bytes available in ResponseData Out: Actual number of bytes</L-2>
+                  </DESC>
+                  <DIRECTION>INOUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_ServiceCertificate</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_ServiceCertificate</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">The key server requests an operation from the key client. The type of operation is specified in the first parameter KeyM_ServiceCertificateType. Certificate operation requests are operated through this function. This function is only available if the configuration parameter KeyMServiceCertificateFunctionEnabled is set to TRUE.</L-2>
+              </DESC>
+              <SERVICE-ID>0x09</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>Service</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Service</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Provides the type of service the key manager has to perform.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_ServiceCertificateType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertNamePtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertNamePtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Points to an array that defines the name of the certificate to be updated</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertNameLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertNameLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Specifies the number of bytes in CertNamePtr. The value 0 indicates that no CertNamePtr is provided within this function.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>RequestData</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">RequestData</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Information that comes along with the request</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>RequestDataLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">RequestDataLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Length of data in the RequestData array</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResponseData</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResponseData</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Data returned by the function.</L-2>
+                  </DESC>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResponseDataLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResponseDataLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Max number of bytes available in ResponseDataPtr.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_SetCertificate</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_SetCertificate</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This function provides the certificate data to the key management module to temporarily store the certificate.</L-2>
+              </DESC>
+              <SERVICE-ID>0x0a</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertId</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertId</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Holds the identifier of the certificate</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertificateIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertificateDataPtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertificateDataPtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pointer to a structure that provides the certificate data.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertDataType</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_Start</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_Start</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This function is optional and only used if the configuration item KeyMCryptoKeyStartFinalizeFunctionEnabled is set to true. It intents to allow key update operation.</L-2>
+              </DESC>
+              <SERVICE-ID>0x04</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>StartType</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">StartType</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Defines in which mode the key operation shall be executed.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_StartType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>RequestData</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">RequestData</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Information that comes along with the request, e.g. signature</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>RequestDataLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">RequestDataLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Length of data in the RequestData array</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResponseData</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResponseData</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Data returned by the function.</L-2>
+                  </DESC>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResponseDataLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResponseDataLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">In: Max number of bytes available in ResponseData Out: Actual number</L-2>
+                  </DESC>
+                  <DIRECTION>INOUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_Update</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_Update</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This function is used to initiate the key generation or update process.</L-2>
+              </DESC>
+              <SERVICE-ID>0x06</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>KeyNamePtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">KeyNamePtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pointer to an array that defines the name of the key to be updated</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>KeyNameLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">KeyNameLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Specifies the number of bytes in keyName. The value 0 indicates that no keyName is provided within this function.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>RequestDataPtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">RequestDataPtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Information that comes along with the request</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>RequestDataLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">RequestDataLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Length of data in the RequestData array</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResultDataPtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResultDataPtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pointer to a data buffer used by the function to store results.</L-2>
+                  </DESC>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResultDataMaxLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResultDataMaxLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Max number of bytes available in ResultDataPtr.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_Verify</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_Verify</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">The key server requests to verify the provided keys. The key manager performs operation on the assigned job and returns the result to the key server who verifies if the results was provided with this key as expected. This function is only available if KeyMCryptoKeyVerifyFunctionEnabled is set to TRUE.</L-2>
+              </DESC>
+              <SERVICE-ID>0x08</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>KeyNamePtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">KeyNamePtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Points to an array that defines the name of the key to be updated</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>KeyNameLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">KeyNameLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Specifies the number of bytes in KeyNamePtr. The value 0 indicates that no KeyNamePtr is provided within this function.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>RequestData</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">RequestData</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Information that comes along with the request</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>RequestDataLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">RequestDataLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Length of data in the RequestData array</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResponseData</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResponseData</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Data returned by the function.</L-2>
+                  </DESC>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResponseDataLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResponseDataLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">In: Max number of bytes available in ResponseData Out: Actual number of bytes in ResponseData or left untouched if service runs in asynchronous mode and function returns KEYM_E_PENDING</L-2>
+                  </DESC>
+                  <DIRECTION>INOUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_VerifyCertificate</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_VerifyCertificate</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This function verifies a certificate that was previously provided with KeyM_SetCertificate() against already stored and provided certificates stored with other certificate IDs.</L-2>
+              </DESC>
+              <SERVICE-ID>0x0d</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertId</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertId</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Holds the identifier of the certificate</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertificateIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_VerifyCertificateChain</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_VerifyCertificateChain</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This function performs a certificate verification against a list of certificates. It is a pre-requisite that the certificate that shall be checked has already been written with KeyM_SetCertificate() and that the root certificate is either in the list or is already assigned to one of the other certificates.</L-2>
+              </DESC>
+              <SERVICE-ID>0x0e</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertId</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertId</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Holds the identifier of the certificate.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertificateIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>certChainData</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">certChainData</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">This is a pointer to an array of certificates sorted according to the order in the PKI.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertDataType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>NumberOfCertificates</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">NumberOfCertificates</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Defines the number of certificates stored in the CertChainData array.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_VerifyCertificates</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_VerifyCertificates</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This function verifies two certificates that are stored and parsed internally against each other. The certificate referenced with CertId was signed by the certificate referenced with certUpperId. Only these two certificates are validated against each other.</L-2>
+              </DESC>
+              <SERVICE-ID>0x0c</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertId</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertId</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Holds the identifier of the lower certificate in the chain</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertificateIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertUpperId</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertUpperId</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Holds the identifier of the upper certificate in the chain</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertificateIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_CertificateVerifyCallbackNotification</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_CertificateVerifyCallbackNotification</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Notifies the application that a certificate verification has been finished. The function name is configurable by KeyMCertificateVerifyCallbackNotificationFunc.</L-2>
+              </DESC>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+			  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>ABSTRACT</BSW-ENTRY-KIND>
+              <RETURN-TYPE>
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>CertId</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CertId</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">The certificate identifier that has been verified.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertificateIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>Result</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Result</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Contains information about the result of the operation.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_CertificateStatusType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_CryptoKeyFinalizeCallbackNotification</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_CryptoKeyFinalizeCallbackNotification</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Notifies the application that a crypto key finalize operation has been finished. The callback function is only called and needed if KeyMCryptoKeyStartFinalizeFunctionEnabled is set to TRUE.</L-2>
+              </DESC>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+			  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>ABSTRACT</BSW-ENTRY-KIND>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>Result</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Result</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Contains information about the result of the operation.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_ResultType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResultDataLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResultDataLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">ontains the length of the resulting data of this operation.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResultDataPtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResultDataPtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pointer to the data of the result (the data buffer that has been provided with the service function).</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_CryptoKeyUpdateCallbackNotification</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_CryptoKeyUpdateCallbackNotification</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Notifies the application that a crypto key update operation has been finished. This function is used by the key manager.</L-2>
+              </DESC>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+			  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>ABSTRACT</BSW-ENTRY-KIND>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>Result</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Result</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Contains information about the result of the operation.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_ResultType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResultDataLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResultDataLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Contains the length of the resulting data of this operation if any.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResultDataPtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResultDataPtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pointer to the data of the result.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>KeyM_CryptoKeyVerifyCallbackNotification</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">KeyM_CryptoKeyVerifyCallbackNotification</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Notifies the application that a crypto key verify operation has been finished. This function is used by the key manager.</L-2>
+              </DESC>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+			  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>ABSTRACT</BSW-ENTRY-KIND>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>Result</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Result</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Contains information about the result of the operation.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/KeyM/ImplementationDataTypes/KeyM_ResultType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>KeyId</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">KeyId</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">The key identifier where this verification was started for.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResultDataLength</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResultDataLength</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Contains the length of the resulting data of this operation if any.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ResultDataPtr</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">ResultDataPtr</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pointer to the data of the result.</L-2>
+                  </DESC>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+         </ELEMENTS>
+      </AR-PACKAGE>
+   </AR-PACKAGES>
+</AUTOSAR>

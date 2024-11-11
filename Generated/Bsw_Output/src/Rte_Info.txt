@@ -1,0 +1,592 @@
+/*******************************************************************************
+**                           HYUNDAI AUTOEVER Corp.                           **
+********************************************************************************
+** (C) 2021 HYUNDAI AUTOEVER Corp.                                            **
+** Confidential Proprietary Information. Distribution Limited.                **
+** This source code is permitted to be used only in projects contracted       **
+** with Hyundai Autoever, and any other use is prohibited.                    **
+** If you use it for other purposes or change the source code,                **
+** you may take legal responsibility.                                         **
+** In this case, There is no warranty and technical support.                  **
+********************************************************************************
+**  Module Name : RTE                                                         **
+**                                                                            **
+**  File Name : Rte_Info.txt                                                  **
+**                                                                            **
+**  Generated On : Mon Nov 11 2024 13:32:30 KST                               **
+**                                                                            **
+**  Generated from :                                                          **
+**  Configuration\Definition\Os_ECU_Configuration_PDF_S32K312.arxml           **
+**  Configuration\Ecu\ECUCD_EcucValueCollection.arxml                         **
+**  Configuration\Ecu\Ecud_BswM.arxml                                         **
+**  Configuration\Ecu\Ecud_CanCM.arxml                                        **
+**  Configuration\Ecu\Ecud_CanIf.arxml                                        **
+**  Configuration\Ecu\Ecud_CanNm.arxml                                        **
+**  Configuration\Ecu\Ecud_CanSM.arxml                                        **
+**  Configuration\Ecu\Ecud_CanTp.arxml                                        **
+**  Configuration\Ecu\Ecud_CanTrcv.arxml                                      **
+**  Configuration\Ecu\Ecud_Com.arxml                                          **
+**  Configuration\Ecu\Ecud_ComM.arxml                                         **
+**  Configuration\Ecu\Ecud_ComXf.arxml                                        **
+**  Configuration\Ecu\Ecud_Crc.arxml                                          **
+**  Configuration\Ecu\Ecud_CryIf.arxml                                        **
+**  Configuration\Ecu\Ecud_Crypto_76_HaeModule.arxml                          **
+**  Configuration\Ecu\Ecud_Csm.arxml                                          **
+**  Configuration\Ecu\Ecud_Dcm.arxml                                          **
+**  Configuration\Ecu\Ecud_Dem.arxml                                          **
+**  Configuration\Ecu\Ecud_Det.arxml                                          **
+**  Configuration\Ecu\Ecud_E2EXf.arxml                                        **
+**  Configuration\Ecu\Ecud_EcuC.arxml                                         **
+**  Configuration\Ecu\Ecud_EcuM.arxml                                         **
+**  Configuration\Ecu\Ecud_FiM.arxml                                          **
+**  Configuration\Ecu\Ecud_Fota.arxml                                         **
+**  Configuration\Ecu\Ecud_IoHwAb.arxml                                       **
+**  Configuration\Ecu\Ecud_LinIf.arxml                                        **
+**  Configuration\Ecu\Ecud_LinSM.arxml                                        **
+**  Configuration\Ecu\Ecud_LinTrcv.arxml                                      **
+**  Configuration\Ecu\Ecud_MemIf.arxml                                        **
+**  Configuration\Ecu\Ecud_Nm.arxml                                           **
+**  Configuration\Ecu\Ecud_NvM.arxml                                          **
+**  Configuration\Ecu\Ecud_Os.arxml                                           **
+**  Configuration\Ecu\Ecud_PduR.arxml                                         **
+**  Configuration\Ecu\Ecud_Rte.arxml                                          **
+**  Configuration\Ecu\Ecud_StbM.arxml                                         **
+**  Configuration\Ecu\Ecud_Tm.arxml                                           **
+**  Configuration\Ecu\Ecud_WdgIf.arxml                                        **
+**  Configuration\Ecu\Ecud_WdgM.arxml                                         **
+**  Configuration\Ecu\Ecud_Wdg_76_Acw.arxml                                   **
+**  Configuration\Ecu\Mcal\Ecud_Adc.arxml                                     **
+**  Configuration\Ecu\Mcal\Ecud_Wdg.arxml                                     **
+**  Configuration\System\Bswmd\Bswmd_Adc.arxml                                **
+**  Configuration\System\Bswmd\Bswmd_BswM.arxml                               **
+**  Configuration\System\Bswmd\Bswmd_Can.arxml                                **
+**  Configuration\System\Bswmd\Bswmd_ComXf.arxml                              **
+**  Configuration\System\Bswmd\Bswmd_Crypto.arxml                             **
+**  Configuration\System\Bswmd\Bswmd_Dio.arxml                                **
+**  Configuration\System\Bswmd\Bswmd_E2EXf.arxml                              **
+**  Configuration\System\Bswmd\Bswmd_Fee.arxml                                **
+**  Configuration\System\Bswmd\Bswmd_Fls.arxml                                **
+**  Configuration\System\Bswmd\Bswmd_Gpt.arxml                                **
+**  Configuration\System\Bswmd\Bswmd_Icu.arxml                                **
+**  Configuration\System\Bswmd\Bswmd_Lin.arxml                                **
+**  Configuration\System\Bswmd\Bswmd_Mcl.arxml                                **
+**  Configuration\System\Bswmd\Bswmd_Mcu.arxml                                **
+**  Configuration\System\Bswmd\Bswmd_Port.arxml                               **
+**  Configuration\System\Bswmd\Bswmd_Pwm.arxml                                **
+**  Configuration\System\Bswmd\Bswmd_Spi.arxml                                **
+**  Configuration\System\Bswmd\Bswmd_Wdg.arxml                                **
+**  Configuration\System\Composition\EcuExtract.arxml                         **
+**  Configuration\System\DBImport\DataTypes\AUTOSAR_DataTypes.arxml           **
+**  Configuration\System\DBImport\DataTypes\CanStack_DataTypes.arxml          **
+**  Configuration\System\DBImport\DataTypes\ComStack_DataTypes.arxml          **
+**  Configuration\System\DBImport\FD_CAN1.arxml                               **
+**  Configuration\System\DBImport\LIN1.arxml                                  **
+**  Configuration\System\DBImport\LIN2.arxml                                  **
+**  Configuration\System\Swcd_App\App_Dcm.arxml                               **
+**  Configuration\System\Swcd_App\App_Dem.arxml                               **
+**  Configuration\System\Swcd_App\App_E2EXf.arxml                             **
+**  Configuration\System\Swcd_App\App_Lin.arxml                               **
+**  Configuration\System\Swcd_App\App_Mode.arxml                              **
+**  Configuration\System\Swcd_App\App_WdgM.arxml                              **
+**  Configuration\System\Swcd_Bsw\MODE_PortInterfaces.arxml                   **
+**  Configuration\System\Swcd_Bsw\Swcd_Bsw_BswM.arxml                         **
+**  Configuration\System\Swcd_Bsw\Swcd_Lin.arxml                              **
+**  Configuration\System\Transformer\Transformer.arxml                        **
+**  Generated\Bsw_Output\bswmd\Bswmd_CanCM.arxml                              **
+**  Generated\Bsw_Output\bswmd\Bswmd_CanIf.arxml                              **
+**  Generated\Bsw_Output\bswmd\Bswmd_CanNm.arxml                              **
+**  Generated\Bsw_Output\bswmd\Bswmd_CanSM.arxml                              **
+**  Generated\Bsw_Output\bswmd\Bswmd_CanTp.arxml                              **
+**  Generated\Bsw_Output\bswmd\Bswmd_CanTrcv.arxml                            **
+**  Generated\Bsw_Output\bswmd\Bswmd_Com.arxml                                **
+**  Generated\Bsw_Output\bswmd\Bswmd_ComM.arxml                               **
+**  Generated\Bsw_Output\bswmd\Bswmd_Crc.arxml                                **
+**  Generated\Bsw_Output\bswmd\Bswmd_CryIf.arxml                              **
+**  Generated\Bsw_Output\bswmd\Bswmd_Crypto_76_HaeModule.arxml                **
+**  Generated\Bsw_Output\bswmd\Bswmd_Csm.arxml                                **
+**  Generated\Bsw_Output\bswmd\Bswmd_Dcm.arxml                                **
+**  Generated\Bsw_Output\bswmd\Bswmd_Dem.arxml                                **
+**  Generated\Bsw_Output\bswmd\Bswmd_Det.arxml                                **
+**  Generated\Bsw_Output\bswmd\Bswmd_EcuM.arxml                               **
+**  Generated\Bsw_Output\bswmd\Bswmd_FiM.arxml                                **
+**  Generated\Bsw_Output\bswmd\Bswmd_Fota.arxml                               **
+**  Generated\Bsw_Output\bswmd\Bswmd_IoHwAb.arxml                             **
+**  Generated\Bsw_Output\bswmd\Bswmd_IpduM.arxml                              **
+**  Generated\Bsw_Output\bswmd\Bswmd_KeyM.arxml                               **
+**  Generated\Bsw_Output\bswmd\Bswmd_LinIf.arxml                              **
+**  Generated\Bsw_Output\bswmd\Bswmd_LinSM.arxml                              **
+**  Generated\Bsw_Output\bswmd\Bswmd_LinTrcv.arxml                            **
+**  Generated\Bsw_Output\bswmd\Bswmd_MemIf.arxml                              **
+**  Generated\Bsw_Output\bswmd\Bswmd_Mem_76_Pfls.arxml                        **
+**  Generated\Bsw_Output\bswmd\Bswmd_Nm.arxml                                 **
+**  Generated\Bsw_Output\bswmd\Bswmd_NvM.arxml                                **
+**  Generated\Bsw_Output\bswmd\Bswmd_Os.arxml                                 **
+**  Generated\Bsw_Output\bswmd\Bswmd_PduR.arxml                               **
+**  Generated\Bsw_Output\bswmd\Bswmd_StbM.arxml                               **
+**  Generated\Bsw_Output\bswmd\Bswmd_Tm.arxml                                 **
+**  Generated\Bsw_Output\bswmd\Bswmd_WdgIf.arxml                              **
+**  Generated\Bsw_Output\bswmd\Bswmd_WdgM.arxml                               **
+**  Generated\Bsw_Output\bswmd\Bswmd_Wdg_76_Acw.arxml                         **
+**  Generated\Bsw_Output\swcd\Swcd_Bsw_ComM.arxml                             **
+**  Generated\Bsw_Output\swcd\Swcd_Bsw_Csm.arxml                              **
+**  Generated\Bsw_Output\swcd\Swcd_Bsw_Dcm.arxml                              **
+**  Generated\Bsw_Output\swcd\Swcd_Bsw_Dem.arxml                              **
+**  Generated\Bsw_Output\swcd\Swcd_Bsw_Det.arxml                              **
+**  Generated\Bsw_Output\swcd\Swcd_Bsw_EcuM.arxml                             **
+**  Generated\Bsw_Output\swcd\Swcd_Bsw_FiM.arxml                              **
+**  Generated\Bsw_Output\swcd\Swcd_Bsw_IoHwAb.arxml                           **
+**  Generated\Bsw_Output\swcd\Swcd_Bsw_KeyM.arxml                             **
+**  Generated\Bsw_Output\swcd\Swcd_Bsw_NvM.arxml                              **
+**  Generated\Bsw_Output\swcd\Swcd_Bsw_Os.arxml                               **
+**  Generated\Bsw_Output\swcd\Swcd_Bsw_StbM.arxml                             **
+**  Generated\Bsw_Output\swcd\Swcd_Bsw_WdgM.arxml                             **
+**  Generated\Bsw_Output\swcd\Swcd_Fota.arxml                                 **
+**  Static_Code\Modules\EcuM_R44\generator\EcuM_PortInterface.arxml           **
+**  Static_Code\Modules\Rte_R44\generator\SafeRTE_PDF.arxml                   **
+**                                                                            **
+**  Generator version : 1.8.0.0                                               **
+**                                                                            **
+**  NOTE: This is a generated file, Please DO NOT EDIT manually!              **
+**                                                                           **/
+
+/******************************************************************************/
+/* Description : This file provides supporting information regarding the generated RTE.  */
+/******************************************************************************/
+------------                                                   -----------
+LIST OF HASH                                                   INPUT NAMES
+------------                                                   -----------
+1. 8bb1e479f465ff64 :                                          SWC_AppMode,
+                                                               modeNotificationPort_CanSMBORState_FD_CAN1,
+                                                               CanSMBORState_FD_CAN1
+
+2. fff6fd9c82812b10 :                                          ComM,
+                                                               LimitECUToNoComMode
+
+3. fff192428562eb42 :                                          EcuM,
+                                                               ReleasePOST_RUN
+
+4. 8819c4afe04a425a :                                          BswM_Partition_Main,
+                                                               modeRequestPort_LinSchedule_LIN1,
+                                                               LinSchedule_LIN1
+
+5. 0005ab3d6809b8c0 :                                          ComM,
+                                                               SetECUGroupClassification
+
+6. 000f23db67971382 :                                          EcuM,
+                                                               GetLastShutdownTarget
+
+7. 000b25766339c570 :                                          EcuM,
+                                                               RequestSleep
+
+8. fff6d636aba927fe :                                          WdgM,
+                                                               CheckpointReached
+
+9. 74cbe44b26ceefa0 :                                          BswM_Partition_Main,
+                                                               modeRequestPort_LinSchedule_LIN2,
+                                                               LinSchedule_LIN2
+
+10. 0003532849521c9a :                                         BswM,
+                                                               modeNotificationPort_DcmEcuReset
+
+11. 000b234547d1d6c0 :                                         EcuM,
+                                                               RequestReset
+
+12. 129a759d547ea270 :                                         SWC_DiagnosticService,
+                                                               DcmDsdServiceRequestManufacturerNotification0_Indication
+
+13. 000bed9f4360c1a2 :                                         EcuM,
+                                                               SelectShutdownTarget
+
+14. eeb8b904ae9c5d40 :                                         SWC_AppMode,
+                                                               modeNotificationPort_currentMode,
+                                                               currentMode
+
+15. 0001e6b13305ea00 :                                         ComM,
+                                                               LimitChannelToNoComMode
+
+16. fff85b1ad297e418 :                                         BswM,
+                                                               modeNotificationPort_DcmCommunicationControl_FD_CAN1
+
+17. 000f8ac1239ef8e8 :                                         EcuM,
+                                                               RequestRUN
+
+18. 15d30c580ec79fa4 :                                         SWC_AppMode,
+                                                               modeNotificationPort_InitState,
+                                                               InitState
+
+19. 0daf7ecc14846c90 :                                         SWC_AppMode,
+                                                               modeNotificationPort_PduGroupTx_FD_CAN1_PNC32,
+                                                               PduGroupTx_FD_CAN1_PNC32
+
+20. 000b8f4416982e14 :                                         BswM,
+                                                               modeNotificationPort_DcmDiagnosticSessionControl
+
+21. ce01ca41ddc8e984 :                                         SWC_AppMode,
+                                                               modeNotificationPort_WakeupEvent,
+                                                               WakeupEvent
+
+22. fffe2f5decd8ae6c :                                         EcuM,
+                                                               GetWakeupTime
+
+23. ffffb4b0f0d8e431 :                                         WdgM,
+                                                               GetGlobalStatus
+
+24. 6c0de0fd610e5800 :                                         SWC_AppMode,
+                                                               modeNotificationPort_ComMMode_LIN1,
+                                                               ComMMode_LIN1
+
+25. 70c370098e5c2424 :                                         SWC_AppMode,
+                                                               modeNotificationPort_ComMMode_LIN2,
+                                                               ComMMode_LIN2
+
+26. ef635963178df050 :                                         BswM_Partition_Main,
+                                                               modeRequestPort_ComMMode_PNC32,
+                                                               ComMMode_PNC32
+
+27. 000f8abff8291b00 :                                         EcuM,
+                                                               RequestOff
+
+28. b92c318d57ba4340 :                                         SWC_AppMode,
+                                                               modeNotificationPort_ComMMode_PNC32,
+                                                               ComMMode_PNC32
+
+29. fff8082d16294fe0 :                                         EcuM,
+                                                               GetCurrentTime
+
+30. fff003761e250406 :                                         EcuM,
+                                                               GetBootTarget
+
+31. 08c6b569d73c095a :                                         BswM_Partition_Main,
+                                                               modeRequestPort_ComMMode_LIN2,
+                                                               ComMMode_LIN2
+
+32. 1fb16897c0648a88 :                                         SWC_DiagnosticService,
+                                                               DcmDsdServiceRequestSupplierNotification0_Confirmation
+
+33. c5d478a01163f838 :                                         currentMode,
+                                                               globalMode,
+                                                               WdgM
+
+34. fff0fcd02ddf9dec :                                         ComM,
+                                                               GetInhibitionStatus
+
+35. fffd99202f764ac4 :                                         BswM,
+                                                               modeNotificationPort_DcmControlDTCSetting
+
+36. 06527a84cee16440 :                                         BswM_Partition_Main,
+                                                               modeRequestPort_ComMMode_LIN1,
+                                                               ComMMode_LIN1
+
+37. 72129d0bb4ab3540 :                                         SWC_AppMode,
+                                                               modeNotificationPort_PduGroupRx_FD_CAN1_PNC32,
+                                                               PduGroupRx_FD_CAN1_PNC32
+
+38. 00091ac1c5f9d28a :                                         EcuM,
+                                                               SelectBootTarget
+
+39. fff9d3fd410fc53f :                                         WdgM,
+                                                               SetMode
+
+40. f7bcb049494e7b4e :                                         SWC_DiagnosticService,
+                                                               DcmDsdServiceRequestManufacturerNotification0_Confirmation
+
+41. ffefad46475ed51e :                                         EcuM,
+                                                               GetShutdownTarget
+
+42. 000a88e4ab1848c8 :                                         WdgM,
+                                                               GetFirstExpiredSEID
+
+43. 000b0115a79b2820 :                                         BswM,
+                                                               modeNotificationPort_DcmModeRapidPowerShutDown
+
+44. fff69c666875aff2 :                                         EcuM,
+                                                               RequestPOST_RUN
+
+45. 25138ec9b263382a :                                         SWC_DiagnosticService,
+                                                               DcmDsdServiceRequestSupplierNotification0_Indication
+
+46. 0003a5538c8deb98 :                                         EcuM,
+                                                               ReleaseRUN
+
+-------------------------------                                
+LIST OF CODE MEMCLASS FOR SWCs                                 
+(To be defined in Compiler_Cfg.h)                            
+-------------------------------                                
+#define SWC_AppMode_CODE
+#define Fota_CODE
+#define Csm_CODE
+#define App_Lin_LIN1_CODE
+#define SWC_DiagnosticMonitor_CODE
+#define NvM_CODE
+#define Os_Master_CODE
+#define EcuM_CODE
+#define ComM_CODE
+#define SWC_WdgMTest_CODE
+#define CDD_LIN_CODE
+#define DET_CODE
+#define IoHwAb_CODE
+#define WdgM_CODE
+#define Dcm_CODE
+#define KeyM_CODE
+#define SWC_DiagnosticService_CODE
+#define FiM_CODE
+#define SWC_E2EXf_CODE
+#define BswM_Partition_Main_CODE
+#define StbM_CODE
+#define Dem_CODE
+
+-------------------------------                                
+LIST OF CODE MEMCLASS FOR BSW Modules                          
+(To be defined in Compiler_Cfg.h)                            
+-------------------------------                                
+#define CRYPTO_76_HAEMODULE_CODE
+#define DET_CODE
+#define BSWM_CODE
+#define FOTA_CODE
+#define DEM_CODE
+#define KEYM_CODE
+#define STBM_CODE
+#define COMM_CODE
+#define ECUM_CODE
+#define DIO_CODE
+#define WDGM_CODE
+#define FEE_CODE
+#define CANTP_CODE
+#define LINSM_CODE
+#define CRYPTO_CODE
+#define PDUR_CODE
+#define CAN_43_FLEXCAN_CODE
+#define ICU_CODE
+#define COM_CODE
+#define LINIF_CODE
+#define FIM_CODE
+#define PWM_CODE
+#define DCM_CODE
+#define NVM_CODE
+#define LIN_43_LPUART_FLEXIO_CODE
+#define GPT_CODE
+#define CANSM_CODE
+#define PORT_CODE
+#define ADC_CODE
+#define CANNM_CODE
+#define WDG_43_INSTANCE0_CODE
+#define CSM_CODE
+#define CANIF_CODE
+#define WDG_76_ACW_76_ACW_CODE
+#define IOHWAB_CODE
+#define SPI_CODE
+#define IPDUM_CODE
+#define FLS_CODE
+#define MCU_CODE
+#define NM_CODE
+#define MCL_CODE
+#define CANTRCV_CODE
+#define CANCM_CODE
+#define LINTRCV_CODE
+
+----------------------------------------------                 
+LIST OF LINKER MEMORY SECTIONS EXPECTED BY RTE                 
+----------------------------------------------                 
+=> Common Memory Sections
+
+  => VAR_FAST_NO_INIT
+    RTE_VAR_FAST_NO_INIT_16
+    RTE_VAR_FAST_NO_INIT_32
+    RTE_VAR_FAST_NO_INIT_8
+    RTE_VAR_FAST_NO_INIT_BOOLEAN
+    RTE_VAR_FAST_NO_INIT_UNSPECIFIED
+
+  => VAR_INIT
+    RTE_VAR_INIT_16
+    RTE_VAR_INIT_32
+    RTE_VAR_INIT_8
+    RTE_VAR_INIT_BOOLEAN
+    RTE_VAR_INIT_UNSPECIFIED
+
+  => VAR_SLOW_POWER_ON_CLEARED
+    RTE_VAR_SLOW_POWER_ON_CLEARED_16
+    RTE_VAR_SLOW_POWER_ON_CLEARED_32
+    RTE_VAR_SLOW_POWER_ON_CLEARED_8
+    RTE_VAR_SLOW_POWER_ON_CLEARED_BOOLEAN
+    RTE_VAR_SLOW_POWER_ON_CLEARED_UNSPECIFIED
+
+  => VAR_POWER_ON_INIT
+    RTE_VAR_POWER_ON_INIT_16
+    RTE_VAR_POWER_ON_INIT_32
+    RTE_VAR_POWER_ON_INIT_8
+    RTE_VAR_POWER_ON_INIT_BOOLEAN
+    RTE_VAR_POWER_ON_INIT_UNSPECIFIED
+
+  => INTERNAL_VAR_POWER_ON_INIT
+    RTE_INTERNAL_VAR_POWER_ON_INIT_16
+    RTE_INTERNAL_VAR_POWER_ON_INIT_32
+    RTE_INTERNAL_VAR_POWER_ON_INIT_8
+    RTE_INTERNAL_VAR_POWER_ON_INIT_BOOLEAN
+    RTE_INTERNAL_VAR_POWER_ON_INIT_UNSPECIFIED
+
+  => VAR_POWER_ON_CLEARED
+    RTE_VAR_POWER_ON_CLEARED_16
+    RTE_VAR_POWER_ON_CLEARED_32
+    RTE_VAR_POWER_ON_CLEARED_8
+    RTE_VAR_POWER_ON_CLEARED_BOOLEAN
+    RTE_VAR_POWER_ON_CLEARED_UNSPECIFIED
+
+  => CONST
+    RTE_ROM_CONST_16
+    RTE_ROM_CONST_32
+    RTE_ROM_CONST_8
+    RTE_ROM_CONST_BOOLEAN
+    RTE_ROM_CONST_UNSPECIFIED
+
+  => VAR_FAST_POWER_ON_INIT
+    RTE_VAR_FAST_POWER_ON_INIT_16
+    RTE_VAR_FAST_POWER_ON_INIT_32
+    RTE_VAR_FAST_POWER_ON_INIT_8
+    RTE_VAR_FAST_POWER_ON_INIT_BOOLEAN
+    RTE_VAR_FAST_POWER_ON_INIT_UNSPECIFIED
+
+  => VAR_SLOW_POWER_ON_INIT
+    RTE_VAR_SLOW_POWER_ON_INIT_16
+    RTE_VAR_SLOW_POWER_ON_INIT_32
+    RTE_VAR_SLOW_POWER_ON_INIT_8
+    RTE_VAR_SLOW_POWER_ON_INIT_BOOLEAN
+    RTE_VAR_SLOW_POWER_ON_INIT_UNSPECIFIED
+
+  => CALIB
+    RTE_ROM_CALIB_16
+    RTE_ROM_CALIB_32
+    RTE_ROM_CALIB_8
+    RTE_ROM_CALIB_BOOLEAN
+    RTE_ROM_CALIB_UNSPECIFIED
+
+  => VAR_NO_INIT
+    RTE_VAR_NO_INIT_16
+    RTE_VAR_NO_INIT_32
+    RTE_VAR_NO_INIT_8
+    RTE_VAR_NO_INIT_BOOLEAN
+    RTE_VAR_NO_INIT_UNSPECIFIED
+
+  => VAR_FAST_INIT
+    RTE_VAR_FAST_INIT_16
+    RTE_VAR_FAST_INIT_32
+    RTE_VAR_FAST_INIT_8
+    RTE_VAR_FAST_INIT_BOOLEAN
+    RTE_VAR_FAST_INIT_UNSPECIFIED
+
+  => CODE
+    RTE_
+
+  => CARTO
+    RTE_CARTO_16
+    RTE_CARTO_32
+    RTE_CARTO_8
+    RTE_CARTO_BOOLEAN
+    RTE_CARTO_UNSPECIFIED
+
+  => INTERNAL_VAR_CLEARED
+    RTE_INTERNAL_VAR_CLEARED_16
+    RTE_INTERNAL_VAR_CLEARED_32
+    RTE_INTERNAL_VAR_CLEARED_8
+    RTE_INTERNAL_VAR_CLEARED_BOOLEAN
+    RTE_INTERNAL_VAR_CLEARED_UNSPECIFIED
+
+  => VAR_SAVED_ZONE
+    RTE_VAR_SAVED_ZONE_16
+    RTE_VAR_SAVED_ZONE_32
+    RTE_VAR_SAVED_ZONE_8
+    RTE_VAR_SAVED_ZONE_BOOLEAN
+    RTE_VAR_SAVED_ZONE_UNSPECIFIED
+
+  => CONFIG_DATA
+    RTE_ROM_CONFIG_DATA_16
+    RTE_ROM_CONFIG_DATA_32
+    RTE_ROM_CONFIG_DATA_8
+    RTE_ROM_CONFIG_DATA_BOOLEAN
+    RTE_ROM_CONFIG_DATA_UNSPECIFIED
+
+  => VAR_FAST_POWER_ON_CLEARED
+    RTE_VAR_FAST_POWER_ON_CLEARED_16
+    RTE_VAR_FAST_POWER_ON_CLEARED_32
+    RTE_VAR_FAST_POWER_ON_CLEARED_8
+    RTE_VAR_FAST_POWER_ON_CLEARED_BOOLEAN
+    RTE_VAR_FAST_POWER_ON_CLEARED_UNSPECIFIED
+
+  => INTERNAL_VAR_NO_INIT
+    RTE_INTERNAL_VAR_NO_INIT_16
+    RTE_INTERNAL_VAR_NO_INIT_32
+    RTE_INTERNAL_VAR_NO_INIT_8
+    RTE_INTERNAL_VAR_NO_INIT_BOOLEAN
+    RTE_INTERNAL_VAR_NO_INIT_UNSPECIFIED
+
+  => CONST_SAVED_RECOVERY_ZONE
+    RTE_ROM_CONST_SAVED_RECOVERY_ZONE_16
+    RTE_ROM_CONST_SAVED_RECOVERY_ZONE_32
+    RTE_ROM_CONST_SAVED_RECOVERY_ZONE_8
+    RTE_ROM_CONST_SAVED_RECOVERY_ZONE_BOOLEAN
+    RTE_ROM_CONST_SAVED_RECOVERY_ZONE_UNSPECIFIED
+
+  => VAR_SLOW_CLEARED
+    RTE_VAR_SLOW_CLEARED_16
+    RTE_VAR_SLOW_CLEARED_32
+    RTE_VAR_SLOW_CLEARED_8
+    RTE_VAR_SLOW_CLEARED_BOOLEAN
+    RTE_VAR_SLOW_CLEARED_UNSPECIFIED
+
+  => VAR_SLOW_INIT
+    RTE_VAR_SLOW_INIT_16
+    RTE_VAR_SLOW_INIT_32
+    RTE_VAR_SLOW_INIT_8
+    RTE_VAR_SLOW_INIT_BOOLEAN
+    RTE_VAR_SLOW_INIT_UNSPECIFIED
+
+  => VAR_CLEARED
+    RTE_VAR_CLEARED_16
+    RTE_VAR_CLEARED_32
+    RTE_VAR_CLEARED_8
+    RTE_VAR_CLEARED_BOOLEAN
+    RTE_VAR_CLEARED_UNSPECIFIED
+
+  => INTERNAL_VAR_INIT
+    RTE_INTERNAL_VAR_INIT_16
+    RTE_INTERNAL_VAR_INIT_32
+    RTE_INTERNAL_VAR_INIT_8
+    RTE_INTERNAL_VAR_INIT_BOOLEAN
+    RTE_INTERNAL_VAR_INIT_UNSPECIFIED
+
+  => INTERNAL_VAR_POWER_ON_CLEARED
+    RTE_INTERNAL_VAR_POWER_ON_CLEARED_16
+    RTE_INTERNAL_VAR_POWER_ON_CLEARED_32
+    RTE_INTERNAL_VAR_POWER_ON_CLEARED_8
+    RTE_INTERNAL_VAR_POWER_ON_CLEARED_BOOLEAN
+    RTE_INTERNAL_VAR_POWER_ON_CLEARED_UNSPECIFIED
+
+  => VAR_FAST_CLEARED
+    RTE_VAR_FAST_CLEARED_16
+    RTE_VAR_FAST_CLEARED_32
+    RTE_VAR_FAST_CLEARED_8
+    RTE_VAR_FAST_CLEARED_BOOLEAN
+    RTE_VAR_FAST_CLEARED_UNSPECIFIED
+
+  => CODE_SLOW
+    RTE_CODE_SLOW
+
+  => CALLOUT_CODE
+    RTE_CALLOUT_CODE
+
+  => VAR_SLOW_NO_INIT
+    RTE_VAR_SLOW_NO_INIT_16
+    RTE_VAR_SLOW_NO_INIT_32
+    RTE_VAR_SLOW_NO_INIT_8
+    RTE_VAR_SLOW_NO_INIT_BOOLEAN
+    RTE_VAR_SLOW_NO_INIT_UNSPECIFIED
+
+  => CODE_FAST
+    RTE_CODE_FAST
+
+=> Memory Sections for Partition: COMMON
+
+  => VAR_CLEARED
+    COMMON_VAR_CLEARED_8
+
+  => CODE
+    COMMON_

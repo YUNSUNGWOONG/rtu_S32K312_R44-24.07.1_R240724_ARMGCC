@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="069a032d-2d8d-4ae9-9bb3-a50c330db043">
+      <SHORT-NAME>AUTRON</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="0bd32da2-f0ae-4ed5-a915-1a0c03be7e78">
+          <SHORT-NAME>IoHwAb</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTRON/IoHwAb</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/Bsw_IoHwAb/BswImplementation_IoHwAb</MODULE-DESCRIPTION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="75cf4839-75f4-4408-9735-f4e079e451b2">
+              <SHORT-NAME>IoHwAbGeneral</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2023-09-20T10:44:06Z" GID="IoHwAbMcalVendorVersion">NXP_S32K31X_3_0_0_P01_HF01</SD>
+                    <SD T="2020-02-10T08:46:15Z" GID="IoHwAbDevErrorDetect">1</SD>
+                    <SD T="2020-09-19T13:32:21Z" GID="IoHwAbVersionInfoApi">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbDevErrorDetect</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbVersionInfoApi</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbMcalVendorVersion</DEFINITION-REF>
+                  <VALUE>NXP_S32K31X_3_0_0_P01_HF01</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="2ef6123e-f6f2-4e0c-89e3-1ae9a21cc98b">
+                  <SHORT-NAME>IoHwAbPortPinChs</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="67603360-35de-4251-8174-e6c2112db564">
+                      <SHORT-NAME>IoHwAbPortPinCh_PTA6</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2020-04-03T20:03:53Z" GID="IoHwAbPolarity">HighActive</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:29:26Z" GID="IoHwAbHwDioChRef">/Dio/Dio/DioConfig/DioPort_AL/DioChannel_PTA6</SD>
+                            <SD T="2024-07-10T10:29:35Z" GID="IoHwAbHwPortPinRef">/Port/Port/PortConfigSet/PortContainer_A/PortPin_PTA6</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbPolarity</DEFINITION-REF>
+                          <VALUE>HighActive</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwDioChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_AL/DioChannel_PTA6</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwPortPinRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Port/Port/PortConfigSet/PortContainer_A/PortPin_PTA6</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="398d2257-1dbc-4052-9e42-d2aade875d44">
+                      <SHORT-NAME>IoHwAbPortPinCh_PTC20</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2020-02-06T14:25:46Z" GID="IoHwAbPolarity">HighActive</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:30:48Z" GID="IoHwAbHwDioChRef">/Dio/Dio/DioConfig/DioPort_CH/DioChannel_PTC20</SD>
+                            <SD T="2024-07-10T10:30:59Z" GID="IoHwAbHwPortPinRef">/Port/Port/PortConfigSet/PortContainer_C/PortPin_PTC20</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbPolarity</DEFINITION-REF>
+                          <VALUE>HighActive</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwDioChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_CH/DioChannel_PTC20</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwPortPinRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Port/Port/PortConfigSet/PortContainer_C/PortPin_PTC20</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="7e2ad253-93c4-4e3d-a901-8e6cc61f26d0">
+                      <SHORT-NAME>IoHwAbPortPinCh_PTC21</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2020-02-06T14:25:40Z" GID="IoHwAbPolarity">HighActive</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:31:11Z" GID="IoHwAbHwDioChRef">/Dio/Dio/DioConfig/DioPort_CH/DioChannel_PTC21</SD>
+                            <SD T="2024-07-10T10:31:18Z" GID="IoHwAbHwPortPinRef">/Port/Port/PortConfigSet/PortContainer_C/PortPin_PTC21</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbPolarity</DEFINITION-REF>
+                          <VALUE>HighActive</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwDioChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_CH/DioChannel_PTC21</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwPortPinRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Port/Port/PortConfigSet/PortContainer_C/PortPin_PTC21</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="f7546025-090d-4d65-831c-6b226646db2c">
+                      <SHORT-NAME>IoHwAbPortPinCh_PTC23</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2020-04-14T19:47:47Z" GID="IoHwAbPolarity">HighActive</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:31:29Z" GID="IoHwAbHwDioChRef">/Dio/Dio/DioConfig/DioPort_CH/DioChannel_PTC23</SD>
+                            <SD T="2024-07-10T10:31:36Z" GID="IoHwAbHwPortPinRef">/Port/Port/PortConfigSet/PortContainer_C/PortPin_PTC23</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbPolarity</DEFINITION-REF>
+                          <VALUE>HighActive</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwDioChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_CH/DioChannel_PTC23</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwPortPinRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Port/Port/PortConfigSet/PortContainer_C/PortPin_PTC23</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="d890dd3d-3e91-4ed8-b32a-8541fca344e9">
+                      <SHORT-NAME>IoHwAbPortPinCh_PTB19</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2023-09-22T10:39:18Z" GID="IoHwAbPolarity">HighActive</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:32:01Z" GID="IoHwAbHwDioChRef">/Dio/Dio/DioConfig/DioPort_BH/DioChannel_PTB19</SD>
+                            <SD T="2024-07-10T10:32:10Z" GID="IoHwAbHwPortPinRef">/Port/Port/PortConfigSet/PortContainer_B/PortPin_PTB19</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbPolarity</DEFINITION-REF>
+                          <VALUE>HighActive</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwDioChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_BH/DioChannel_PTB19</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwPortPinRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Port/Port/PortConfigSet/PortContainer_B/PortPin_PTB19</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="63e6fe04-32e0-471e-b418-46195e9d7169">
+                      <SHORT-NAME>IoHwAbPortPinCh_PTB26</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2020-04-03T19:53:58Z" GID="IoHwAbPolarity">HighActive</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:36:22Z" GID="IoHwAbHwDioChRef">/Dio/Dio/DioConfig/DioPort_BH/DioChannel_PTB26</SD>
+                            <SD T="2024-07-10T10:36:29Z" GID="IoHwAbHwPortPinRef">/Port/Port/PortConfigSet/PortContainer_B/PortPin_PTB26</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbPolarity</DEFINITION-REF>
+                          <VALUE>HighActive</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwDioChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_BH/DioChannel_PTB26</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwPortPinRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Port/Port/PortConfigSet/PortContainer_B/PortPin_PTB26</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="63e6fe04-32e0-471e-b418-46195e9d7169">
+                      <SHORT-NAME>IoHwAbPortPinCh_PTA29</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2020-04-03T19:53:58Z" GID="IoHwAbPolarity">HighActive</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:36:39Z" GID="IoHwAbHwDioChRef">/Dio/Dio/DioConfig/DioPort_AH/DioChannel_PTA29</SD>
+                            <SD T="2024-07-10T10:36:47Z" GID="IoHwAbHwPortPinRef">/Port/Port/PortConfigSet/PortContainer_A/PortPin_PTA29</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbPolarity</DEFINITION-REF>
+                          <VALUE>HighActive</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwDioChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_AH/DioChannel_PTA29</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwPortPinRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Port/Port/PortConfigSet/PortContainer_A/PortPin_PTA29</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="63e6fe04-32e0-471e-b418-46195e9d7169">
+                      <SHORT-NAME>IoHwAbPortPinCh_PTA30</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2020-04-03T19:53:58Z" GID="IoHwAbPolarity">HighActive</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:37:00Z" GID="IoHwAbHwDioChRef">/Dio/Dio/DioConfig/DioPort_AH/DioChannel_PTA30</SD>
+                            <SD T="2024-07-10T10:37:05Z" GID="IoHwAbHwPortPinRef">/Port/Port/PortConfigSet/PortContainer_A/PortPin_PTA30</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbPolarity</DEFINITION-REF>
+                          <VALUE>HighActive</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwDioChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_AH/DioChannel_PTA30</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwPortPinRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Port/Port/PortConfigSet/PortContainer_A/PortPin_PTA30</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="63e6fe04-32e0-471e-b418-46195e9d7169">
+                      <SHORT-NAME>IoHwAbPortPinCh_PTA31</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2020-04-03T19:53:58Z" GID="IoHwAbPolarity">HighActive</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:37:12Z" GID="IoHwAbHwDioChRef">/Dio/Dio/DioConfig/DioPort_AH/DioChannel_PTA31</SD>
+                            <SD T="2024-07-10T10:37:20Z" GID="IoHwAbHwPortPinRef">/Port/Port/PortConfigSet/PortContainer_A/PortPin_PTA31</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbPolarity</DEFINITION-REF>
+                          <VALUE>HighActive</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwDioChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_AH/DioChannel_PTA31</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwPortPinRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Port/Port/PortConfigSet/PortContainer_A/PortPin_PTA31</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="63e6fe04-32e0-471e-b418-46195e9d7169">
+                      <SHORT-NAME>IoHwAbPortPinCh_PTD16</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2020-04-03T19:53:58Z" GID="IoHwAbPolarity">HighActive</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:37:30Z" GID="IoHwAbHwDioChRef">/Dio/Dio/DioConfig/DioPort_DH/DioChannel_PTD16</SD>
+                            <SD T="2024-07-10T10:37:36Z" GID="IoHwAbHwPortPinRef">/Port/Port/PortConfigSet/PortContainer_D/PortPin_PTD16</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbPolarity</DEFINITION-REF>
+                          <VALUE>HighActive</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwDioChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_DH/DioChannel_PTD16</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwPortPinRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Port/Port/PortConfigSet/PortContainer_D/PortPin_PTD16</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="63e6fe04-32e0-471e-b418-46195e9d7169">
+                      <SHORT-NAME>IoHwAbPortPinCh_PTD17</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                            <SD T="2020-04-03T19:53:58Z" GID="IoHwAbPolarity">HighActive</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:37:45Z" GID="IoHwAbHwDioChRef">/Dio/Dio/DioConfig/DioPort_DH/DioChannel_PTD17</SD>
+                            <SD T="2024-07-10T10:37:53Z" GID="IoHwAbHwPortPinRef">/Port/Port/PortConfigSet/PortContainer_D/PortPin_PTD17</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbPolarity</DEFINITION-REF>
+                          <VALUE>HighActive</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwDioChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_DH/DioChannel_PTD17</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh/IoHwAbHwPortPinRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Port/Port/PortConfigSet/PortContainer_D/PortPin_PTD17</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="c1cc809c-3e6a-4d58-91ea-8917ad70e91a">
+                  <SHORT-NAME>IoHwAbAdcSetting</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2020-02-08T15:51:48Z" GID="IoHwAbAdcReadDirectMaxDelay">0xffff</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcReadDirectMaxDelay</DEFINITION-REF>
+                      <VALUE>0xffff</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="e7b527e5-989d-45ee-90fb-936b2b727522">
+                      <SHORT-NAME>IoHwAbAdcGroups</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="899442d9-091e-44cc-99da-8422f9442b49">
+                          <SHORT-NAME>IoHwAbAdcGroup_PTA1</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2023-08-27T18:26:25Z" GID="IoHwAbHwAdcGroupRef">/Adc/Adc/AdcConfigSet/AdcHwUnit_0/AdcGroup_PTC25</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup</DEFINITION-REF>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup/IoHwAbHwAdcGroupRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet/AdcHwUnit_0/AdcGroup_PTA1</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="899442d9-091e-44cc-99da-8422f9442b49">
+                          <SHORT-NAME>IoHwAbAdcGroup_PTA9</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2023-12-25T14:18:40Z" GID="IoHwAbHwAdcGroupRef">/Adc/Adc/AdcConfigSet/AdcHwUnit_0/AdcGroup_PTC26</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup</DEFINITION-REF>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup/IoHwAbHwAdcGroupRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet/AdcHwUnit_0/AdcGroup_PTA9</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="dd071a4a-9f32-4578-978b-7a407be8d6cf">
+                          <SHORT-NAME>IoHwAbAdcGroup_PTA11</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2024-07-10T10:39:02Z" GID="IoHwAbHwAdcGroupRef">/Adc/Adc/AdcConfigSet/AdcHwUnit_1/AdcGroup_PTA11</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup</DEFINITION-REF>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup/IoHwAbHwAdcGroupRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet/AdcHwUnit_1/AdcGroup_PTA11</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="dd071a4a-9f32-4578-978b-7a407be8d6cf">
+                          <SHORT-NAME>IoHwAbAdcGroup_PTC11</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2024-07-10T10:39:30Z" GID="IoHwAbHwAdcGroupRef">/Adc/Adc/AdcConfigSet/AdcHwUnit_0/AdcGroup_PTC11</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup</DEFINITION-REF>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup/IoHwAbHwAdcGroupRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet/AdcHwUnit_0/AdcGroup_PTC11</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="dd071a4a-9f32-4578-978b-7a407be8d6cf">
+                          <SHORT-NAME>IoHwAbAdcGroup_PTD21</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2024-07-10T10:39:37Z" GID="IoHwAbHwAdcGroupRef">/Adc/Adc/AdcConfigSet/AdcHwUnit_0/AdcGroup_PTD21</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup</DEFINITION-REF>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup/IoHwAbHwAdcGroupRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet/AdcHwUnit_0/AdcGroup_PTD21</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="dd071a4a-9f32-4578-978b-7a407be8d6cf">
+                          <SHORT-NAME>IoHwAbAdcGroup_PTD24</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2024-07-10T10:39:48Z" GID="IoHwAbHwAdcGroupRef">/Adc/Adc/AdcConfigSet/AdcHwUnit_1/AdcGroup_PTD24</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup</DEFINITION-REF>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup/IoHwAbHwAdcGroupRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet/AdcHwUnit_1/AdcGroup_PTD24</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="0f9ba0e4-52f4-431a-834e-a092b6b50163">
+                      <SHORT-NAME>IoHwAbAdcAllGroups</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:40:22Z" GID="IoHwAbHwAdcAllGroupRef" />
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcAllGroups</DEFINITION-REF>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="94158ffa-fe81-4e0f-9aa4-35493978f1f3">
+                  <SHORT-NAME>IoHwAbPrefixConfig</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPrefixConfig</DEFINITION-REF>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="ad859660-df2a-410d-8228-e67d6e4359df">
+              <SHORT-NAME>IoHwAbConfig</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2020-02-07T17:35:06Z" GID="IoHwAbUseDigitalDirect">1</SD>
+                    <SD T="2020-02-07T17:35:11Z" GID="IoHwAbUseAnalogInputDirect">1</SD>
+                    <SD T="2023-08-28T18:45:36Z" GID="IoHwAbUsePwm">1</SD>
+                    <SD T="2020-02-07T17:35:22Z" GID="IoHwAbUseGpt">1</SD>
+                    <SD T="2022-07-19T14:15:12Z" GID="IoHwAbUseIcu">1</SD>
+                    <SD T="2024-07-10T11:07:36Z" GID="IoHwAbUseIOManager">0</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbUseDigitalDirect</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbUseAnalogInputDirect</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbUsePwm</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbUseGpt</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbUseIcu</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbUseOcu</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbUseIOManager</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="550c31ea-ac70-404a-a375-dd0ba47d3463">
+                  <SHORT-NAME>IoHwAbAnalogInputDirect</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbAnalogInputDirect</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="e1c07572-24a0-4c68-9957-bfe98960845e">
+                      <SHORT-NAME>IoHwAbAnalogInputDirectLogical_CANBAT</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-02-02T16:01:09Z" GID="IoHwAbAdcGroupRef">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup_PTC26</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbAnalogInputDirect/IoHwAbAnalogInputDirectLogical</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbAnalogInputDirect/IoHwAbAnalogInputDirectLogical/IoHwAbAdcGroupRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup_PTA9</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="b4d45e25-5684-4f6f-87e3-de7e6870d677">
+                      <SHORT-NAME>IoHwAbAnalogInputDirectLogical_Test1</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:41:07Z" GID="IoHwAbAdcGroupRef">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup_PTC11</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbAnalogInputDirect/IoHwAbAnalogInputDirectLogical</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbAnalogInputDirect/IoHwAbAnalogInputDirectLogical/IoHwAbAdcGroupRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup_PTC11</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="44c0a66a-0763-4cac-ab5b-5bc5e97706c7">
+                      <SHORT-NAME>IoHwAbAnalogInputDirectLogical_Test2</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:41:13Z" GID="IoHwAbAdcGroupRef">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup_PTA11</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbAnalogInputDirect/IoHwAbAnalogInputDirectLogical</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbAnalogInputDirect/IoHwAbAnalogInputDirectLogical/IoHwAbAdcGroupRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbAdcSetting/IoHwAbAdcGroups/IoHwAbAdcGroup_PTA11</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="b3848750-7159-41f9-9920-1c95d53e0e97">
+                  <SHORT-NAME>IoHwAbDigitalDirect</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDigitalDirect</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="53c0f886-5bab-4c0f-997d-560fe395c416">
+                      <SHORT-NAME>IoHwAbDigitalDirectLogical_FD_CAN1_RX</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2023-12-22T14:02:48Z" GID="IoHwAbPortPinChRef">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh_PTA12</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDigitalDirect/IoHwAbDigitalDirectLogical</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDigitalDirect/IoHwAbDigitalDirectLogical/IoHwAbPortPinChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh_PTA6</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="68d23258-53d5-4355-9c47-50057f8b8a43">
+                      <SHORT-NAME>IoHwAbDigitalDirectLogical_FD_CAN1_STB</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:46:22Z" GID="IoHwAbPortPinChRef">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh_PTC20</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDigitalDirect/IoHwAbDigitalDirectLogical</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDigitalDirect/IoHwAbDigitalDirectLogical/IoHwAbPortPinChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh_PTC20</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="1b7f45e5-889c-4dd1-979a-eeeb5ebc6f7a">
+                      <SHORT-NAME>IoHwAbDigitalDirectLogical_FD_CAN1_EN</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:46:31Z" GID="IoHwAbPortPinChRef">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh_PTC21</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDigitalDirect/IoHwAbDigitalDirectLogical</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDigitalDirect/IoHwAbDigitalDirectLogical/IoHwAbPortPinChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh_PTC21</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="a0e3d34a-a3d0-44d8-a519-10c8dc3cc6be">
+                      <SHORT-NAME>IoHwAbDigitalDirectLogical_FD_CAN1_ERRN</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-07-10T10:46:39Z" GID="IoHwAbPortPinChRef">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh_PTC23</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDigitalDirect/IoHwAbDigitalDirectLogical</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDigitalDirect/IoHwAbDigitalDirectLogical/IoHwAbPortPinChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh_PTC23</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="8ca2b375-b214-4f51-baa0-2bcab7d6cb31">
+                  <SHORT-NAME>IoHwAbGpt</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbGpt</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="ad01b87d-76d8-47da-8460-f6bb033b9d93">
+                      <SHORT-NAME>IoHwAbGptLogical0</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2023-08-27T18:31:39Z" GID="IoHwAbHwGptChRef">/Gpt/Gpt/GptChannelConfigSet/GptChannelConfiguration_Test</SD>
+                            <SD T="2018-10-02T15:21:03Z" GID="IoHwAbGptCallbackViaRte">1</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbGpt/IoHwAbGptLogical</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbGpt/IoHwAbGptLogical/IoHwAbGptCallbackViaRte</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbGpt/IoHwAbGptLogical/IoHwAbHwGptChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Gpt/Gpt/GptChannelConfigSet/GptChannelConfiguration_Test</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="c05d4f14-cf5b-48c9-b3f5-032b69e6cadb">
+                  <SHORT-NAME>IoHwAbIcu</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbIcu</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="740a8596-d319-4b77-91c7-e01ed444fa05">
+                      <SHORT-NAME>IoHwAbIcuLogical0_EdgeCounter</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2023-08-27T18:33:09Z" GID="IoHwAbHwIcuChRef">/Icu/Icu/IcuConfigSet/IcuChannel_EdgeCounter</SD>
+                            <SD T="2020-07-09T14:54:03Z" GID="IoHwAbIcuCallbackViaRte">0</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbIcu/IoHwAbIcuLogical</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbIcu/IoHwAbIcuLogical/IoHwAbIcuCallbackViaRte</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbIcu/IoHwAbIcuLogical/IoHwAbHwIcuChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Icu/Icu/IcuConfigSet/IcuChannel_EdgeCounter</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="373807df-187e-446b-8c1a-0cae8502ee16">
+                      <SHORT-NAME>IoHwAbIcuLogical1_EdgeDetect</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2023-08-27T18:33:15Z" GID="IoHwAbHwIcuChRef">/Icu/Icu/IcuConfigSet/IcuChannel_EdgeDetect</SD>
+                            <SD T="2024-01-03T08:25:09Z" GID="IoHwAbIcuCallbackViaRte">1</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbIcu/IoHwAbIcuLogical</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbIcu/IoHwAbIcuLogical/IoHwAbIcuCallbackViaRte</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbIcu/IoHwAbIcuLogical/IoHwAbHwIcuChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Icu/Icu/IcuConfigSet/IcuChannel_EdgeDetect</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="64c97bef-e902-448a-b41f-04e51e36d317">
+                      <SHORT-NAME>IoHwAbIcuLogical2_Timestamp</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2024-01-03T08:25:18Z" GID="IoHwAbIcuCallbackViaRte">1</SD>
+                            <SD T="2023-08-27T18:33:27Z" GID="IoHwAbHwIcuChRef">/Icu/Icu/IcuConfigSet/IcuChannel_Timestamp</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbIcu/IoHwAbIcuLogical</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbIcu/IoHwAbIcuLogical/IoHwAbIcuCallbackViaRte</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbIcu/IoHwAbIcuLogical/IoHwAbHwIcuChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Icu/Icu/IcuConfigSet/IcuChannel_Timestamp</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="78257d31-6ffb-495f-8032-380a320fc3f9">
+                      <SHORT-NAME>IoHwAbIcuLogical3_SignalMeasurement</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2023-08-27T18:33:20Z" GID="IoHwAbHwIcuChRef">/Icu/Icu/IcuConfigSet/IcuChannel_SignalMeasurement</SD>
+                            <SD T="2020-07-09T14:54:17Z" GID="IoHwAbIcuCallbackViaRte">0</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbIcu/IoHwAbIcuLogical</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbIcu/IoHwAbIcuLogical/IoHwAbIcuCallbackViaRte</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbIcu/IoHwAbIcuLogical/IoHwAbHwIcuChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Icu/Icu/IcuConfigSet/IcuChannel_SignalMeasurement</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="efa5cc4e-f010-4d82-be02-c4003a600693">
+                  <SHORT-NAME>IoHwAbPwm</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbPwm</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="27475c39-7ed1-400d-bf31-10aa427a2072">
+                      <SHORT-NAME>IoHwAbPwmLogical0</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2023-08-27T18:33:55Z" GID="IoHwAbHwPwmChRef">/Pwm/Pwm/PwmChannelConfigSet/PwmChannel_PTA14</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbPwm/IoHwAbPwmLogical</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbPwm/IoHwAbPwmLogical/IoHwAbPwmCallbackViaRte</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbPwm/IoHwAbPwmLogical/IoHwAbHwPwmChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Pwm/Pwm/PwmChannelConfigSet/PwmChannel_PTA12</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="9de00073-fc1f-4b08-a3aa-7766cd538a2a">
+                  <SHORT-NAME>IoHwAbDemEventParameterRefs</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2023-08-27T18:35:43Z" GID="IOHWAB_E_WRONG_STATE">/AUTRON/Dem/DemConfigSet/IOHWAB_E_WRONG_STATE</SD>
+                        <SD T="2023-08-27T18:35:54Z" GID="IOHWAB_E_WRONG_SETTING">/AUTRON/Dem/DemConfigSet/IOHWAB_E_WRONG_SETTING</SD>
+                        <SD T="2023-08-27T18:36:04Z" GID="IOHWAB_E_WRONG_PARAM">/AUTRON/Dem/DemConfigSet/IOHWAB_E_WRONG_PARAM</SD>
+                        <SD T="2023-08-27T18:36:13Z" GID="IOHWAB_E_SETUP_FAIL">/AUTRON/Dem/DemConfigSet/IOHWAB_E_SETUP_FAIL</SD>
+                        <SD T="2023-08-27T18:36:26Z" GID="IOHWAB_E_PROC_FAIL">/AUTRON/Dem/DemConfigSet/IOHWAB_E_PROC_FAIL</SD>
+                        <SD T="2023-08-27T18:36:35Z" GID="IOHWAB_E_BUSY">/AUTRON/Dem/DemConfigSet/IOHWAB_E_BUSY</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDemEventParameterRefs</DEFINITION-REF>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDemEventParameterRefs/IOHWAB_E_WRONG_STATE</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Dem/DemConfigSet/IOHWAB_E_WRONG_STATE</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDemEventParameterRefs/IOHWAB_E_WRONG_SETTING</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Dem/DemConfigSet/IOHWAB_E_WRONG_SETTING</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDemEventParameterRefs/IOHWAB_E_WRONG_PARAM</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Dem/DemConfigSet/IOHWAB_E_WRONG_PARAM</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDemEventParameterRefs/IOHWAB_E_SETUP_FAIL</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Dem/DemConfigSet/IOHWAB_E_SETUP_FAIL</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDemEventParameterRefs/IOHWAB_E_PROC_FAIL</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Dem/DemConfigSet/IOHWAB_E_PROC_FAIL</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDemEventParameterRefs/IOHWAB_E_BUSY</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Dem/DemConfigSet/IOHWAB_E_BUSY</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="13436853-ef87-48e9-807f-0b245cf27ad2">
+      <SHORT-NAME>AUTRON</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="b8c669f5-ea5e-43e4-bdd3-3dd052569f15">
+          <SHORT-NAME>CanNm</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTRON/CanNm</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/Bsw_CanNm/BswImplementation_CanNm</MODULE-DESCRIPTION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="912fa035-c110-49d1-b88d-aa8fbb1fbf22">
+              <SHORT-NAME>CanNmGlobalConfig</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2020-05-19T16:53:16Z" GID="CanNmBusLoadReductionEnabled">0</SD>
+                    <SD T="2023-12-26T13:30:20Z" GID="CanNmBusSynchronizationEnabled">0</SD>
+                    <SD T="2019-10-30T13:43:21Z" GID="CanNmComControlEnabled">1</SD>
+                    <SD T="2020-06-19T15:58:11Z" GID="CanNmComUserDataSupport">1</SD>
+                    <SD T="2023-12-26T13:25:01Z" GID="CanNmCoordinatorSyncSupport">0</SD>
+                    <SD T="2019-10-30T13:43:23Z" GID="CanNmDevErrorDetect">1</SD>
+                    <SD T="2020-10-01T16:54:15Z" GID="CanNmGlobalPnSupport">1</SD>
+                    <SD T="2020-05-19T16:55:05Z" GID="CanNmImmediateRestartEnabled">0</SD>
+                    <SD T="2020-03-19T16:04:48Z" GID="CanNmImmediateTxconfEnabled">0</SD>
+                    <SD T="2020-06-17T16:51:48Z" GID="CanNmMainFunctionPeriod">0.005</SD>
+                    <SD T="2020-03-19T16:04:52Z" GID="CanNmPassiveModeEnabled">0</SD>
+                    <SD T="2023-12-26T13:25:06Z" GID="CanNmPduRxIndicationEnabled">0</SD>
+                    <SD T="2020-10-01T16:54:12Z" GID="CanNmPnEiraCalcEnabled">1</SD>
+                    <SD T="2023-12-26T13:25:08Z" GID="CanNmRemoteSleepIndEnabled">0</SD>
+                    <SD T="2024-01-16T08:40:38Z" GID="CanNmStateChangeIndEnabled">0</SD>
+                    <SD T="2019-10-30T13:43:31Z" GID="CanNmVersionInfoApi">1</SD>
+                    <SD T="2023-12-26T13:25:26Z" GID="CanNmUserDataEnabled">0</SD>
+                    <SD T="2021-08-03T21:13:47Z" GID="CanNmPnResetTime">0.22</SD>
+                    <SD T="2020-10-01T16:54:25Z" GID="CanNmPnEiraRxNSduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NmPdu_FD_CAN1_NM_RX_PNC_EIRA</SD>
+                    <SD T="2024-03-18T21:47:14Z" GID="CanNmPassiveNodeEnabled">0</SD>
+                  </SDG>
+                  <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                    <SD GID="CanNmBusLoadReductionEnabled">true</SD>
+                    <SD GID="CanNmBusSynchronizationEnabled">true</SD>
+                    <SD GID="CanNmComControlEnabled">true</SD>
+                    <SD GID="CanNmComUserDataSupport">true</SD>
+                    <SD GID="CanNmCoordinatorSyncSupport">true</SD>
+                    <SD GID="CanNmDevErrorDetect">true</SD>
+                    <SD GID="CanNmGlobalPnSupport">true</SD>
+                    <SD GID="CanNmImmediateRestartEnabled">true</SD>
+                    <SD GID="CanNmImmediateTxconfEnabled">true</SD>
+                    <SD GID="CanNmPassiveModeEnabled">true</SD>
+                    <SD GID="CanNmPduRxIndicationEnabled">true</SD>
+                    <SD GID="CanNmPnEiraCalcEnabled">true</SD>
+                    <SD GID="CanNmPnResetTime">true</SD>
+                    <SD GID="CanNmRemoteSleepIndEnabled">true</SD>
+                    <SD GID="CanNmStateChangeIndEnabled">true</SD>
+                    <SD GID="CanNmUserDataEnabled">true</SD>
+                    <SD GID="CanNmVersionInfoApi">true</SD>
+                    <SD GID="CanNmPnEiraRxNSduRef">true</SD>
+                  </SDG>
+                  <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                    <SD T="2024-07-10T13:03:08Z" GID="CanNmBusLoadReductionEnabled">0</SD>
+                    <SD T="2021-08-02T16:23:44Z" GID="CanNmBusSynchronizationEnabled">0</SD>
+                    <SD T="2024-07-10T13:03:08Z" GID="CanNmComControlEnabled">1</SD>
+                    <SD T="2024-07-10T13:03:08Z" GID="CanNmComUserDataSupport">1</SD>
+                    <SD T="2021-08-02T16:23:44Z" GID="CanNmCoordinatorSyncSupport">0</SD>
+                    <SD T="2024-07-10T13:03:08Z" GID="CanNmDevErrorDetect">1</SD>
+                    <SD T="2024-07-10T13:03:08Z" GID="CanNmGlobalPnSupport">1</SD>
+                    <SD T="2024-07-10T13:03:08Z" GID="CanNmImmediateRestartEnabled">0</SD>
+                    <SD T="2024-07-10T13:03:08Z" GID="CanNmImmediateTxconfEnabled">0</SD>
+                    <SD T="2024-07-10T13:03:08Z" GID="CanNmPassiveModeEnabled">0</SD>
+                    <SD T="2021-08-02T16:23:44Z" GID="CanNmPduRxIndicationEnabled">0</SD>
+                    <SD T="2024-07-10T13:03:08Z" GID="CanNmPnEiraCalcEnabled">1</SD>
+                    <SD T="2024-07-10T13:03:08Z" GID="CanNmPnResetTime">0.5</SD>
+                    <SD T="2021-08-02T16:23:44Z" GID="CanNmRemoteSleepIndEnabled">0</SD>
+                    <SD T="2024-07-10T13:03:08Z" GID="CanNmStateChangeIndEnabled">1</SD>
+                    <SD T="2024-07-10T13:03:08Z" GID="CanNmUserDataEnabled">1</SD>
+                    <SD T="2024-07-10T13:03:08Z" GID="CanNmVersionInfoApi">1</SD>
+                    <SD T="2024-07-10T13:03:08Z" GID="CanNmPnEiraRxNSduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ComMPdu_Rx_EIRA_CanNm</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanNm/CanNmGlobalConfig</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmBusLoadReductionEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmBusSynchronizationEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmComControlEnabled</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmCoordinatorSyncSupport</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmDevErrorDetect</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmGlobalPnSupport</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmImmediateRestartEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmImmediateTxconfEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmMainFunctionPeriod</DEFINITION-REF>
+                  <VALUE>0.005</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPduRxIndicationEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnEiraCalcEnabled</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmRemoteSleepIndEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmStateChangeIndEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmVersionInfoApi</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmUserDataEnabled</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmComUserDataSupport</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPassiveModeEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnResetTime</DEFINITION-REF>
+                  <VALUE>0.5</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPassiveNodeEnabled</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnEiraRxNSduRef</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ComMPdu_Rx_EIRA_CanNm</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="c98f89a1-163c-4f91-953e-c45795b447ee">
+                  <SHORT-NAME>CanNmChannelConfig_FD_CAN1</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmActiveWakeupBitEnabled">1</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmAllNmMessagesKeepAwake">0</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmBusLoadReductionActive">0</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmCarWakeUpFilterEnabled">0</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmCarWakeUpRxEnabled">0</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmImmediateNmCycleTime">0.01</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmImmediateNmTransmissions">3</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmMsgCycleOffset">0.0</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmMsgCycleTime">0.1</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmMsgReducedTime">1.0</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmMsgTimeoutTime">0.005</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmNodeDetectionEnabled">1</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmNodeId">2</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmNodeIdEnabled">1</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmPduCbvPosition">CANNM_PDU_BYTE_1</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmPduNidPosition">CANNM_PDU_BYTE_0</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmPnEnabled">1</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmPnEraCalcEnabled">0</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmPnHandleMultipleNetworkRequests">0</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmRemoteSleepIndTime">5.0</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmRepeatMessageTime">1.2</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmRepeatMsgIndEnabled">0</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmTimeoutTime">1.0</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmWaitBusSleepTime">1.5</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmComMNetworkHandleRef">/AUTRON/ComM/ComMConfigSet/ComMChannel_FD_CAN1</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmPduNetworkRequestReasonPosition">CANNM_PDU_BYTE_2</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmPduNmStatePosition">CANNM_PDU_BYTE_3</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanNmActiveWakeupBitEnabled">true</SD>
+                        <SD GID="CanNmAllNmMessagesKeepAwake">true</SD>
+                        <SD GID="CanNmBusLoadReductionActive">true</SD>
+                        <SD GID="CanNmCarWakeUpFilterEnabled">true</SD>
+                        <SD GID="CanNmCarWakeUpRxEnabled">true</SD>
+                        <SD GID="CanNmImmediateNmCycleTime">true</SD>
+                        <SD GID="CanNmImmediateNmTransmissions">true</SD>
+                        <SD GID="CanNmMsgCycleOffset">true</SD>
+                        <SD GID="CanNmMsgCycleTime">true</SD>
+                        <SD GID="CanNmMsgReducedTime">true</SD>
+                        <SD GID="CanNmMsgTimeoutTime">true</SD>
+                        <SD GID="CanNmNodeDetectionEnabled">true</SD>
+                        <SD GID="CanNmNodeId">true</SD>
+                        <SD GID="CanNmNodeIdEnabled">true</SD>
+                        <SD GID="CanNmPduCbvPosition">true</SD>
+                        <SD GID="CanNmPduNidPosition">true</SD>
+                        <SD GID="CanNmPnEnabled">true</SD>
+                        <SD GID="CanNmPnEraCalcEnabled">true</SD>
+                        <SD GID="CanNmPnHandleMultipleNetworkRequests">true</SD>
+                        <SD GID="CanNmRemoteSleepIndTime">true</SD>
+                        <SD GID="CanNmRepeatMessageTime">true</SD>
+                        <SD GID="CanNmRepeatMsgIndEnabled">true</SD>
+                        <SD GID="CanNmTimeoutTime">true</SD>
+                        <SD GID="CanNmWaitBusSleepTime">true</SD>
+                        <SD GID="CanNmComMNetworkHandleRef">true</SD>
+                        <SD GID="CanNmPduNetworkRequestReasonPosition">true</SD>
+                        <SD GID="CanNmPduNmStatePosition">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2021-08-03T14:57:46Z" GID="CanNmMsgCycleOffset">0.0</SD>
+                        <SD T="2021-08-03T14:58:08Z" GID="CanNmMsgCycleTime">0.1</SD>
+                        <SD T="2021-08-03T14:57:29Z" GID="CanNmImmediateNmCycleTime">0.1</SD>
+                        <SD T="2021-08-03T14:57:36Z" GID="CanNmImmediateNmTransmissions">0</SD>
+                        <SD T="2021-08-03T14:58:32Z" GID="CanNmMsgReducedTime">0.001</SD>
+                        <SD T="2021-08-03T14:59:25Z" GID="CanNmMsgTimeoutTime">0.1</SD>
+                        <SD T="2021-08-03T21:16:01Z" GID="CanNmRepeatMsgIndEnabled">1</SD>
+                        <SD T="2021-08-03T21:16:13Z" GID="CanNmRemoteSleepIndTime">0.001</SD>
+                        <SD T="2024-07-17T16:45:23Z" GID="CanNmForcePnAvailabilityConfEnabled">1</SD>
+                        <SD T="2022-09-21T15:17:26Z" GID="CanNmCarWakeUpBitPosition">0</SD>
+                        <SD T="2022-09-21T15:17:32Z" GID="CanNmCarWakeUpBytePosition">4</SD>
+                        <SD T="2022-09-21T15:17:34Z" GID="CanNmPduNetworkRequestReasonPosition">CANNM_PDU_BYTE_2</SD>
+                        <SD T="2022-09-21T15:17:39Z" GID="CanNmPduNmStatePosition">CANNM_PDU_BYTE_3</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmActiveWakeupBitEnabled</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmAllNmMessagesKeepAwake</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmBusLoadReductionActive</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmCarWakeUpFilterEnabled</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmCarWakeUpRxEnabled</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmImmediateNmCycleTime</DEFINITION-REF>
+                      <VALUE>0.01</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmImmediateNmTransmissions</DEFINITION-REF>
+                      <VALUE>3</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmMsgCycleOffset</DEFINITION-REF>
+                      <VALUE>0.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmMsgCycleTime</DEFINITION-REF>
+                      <VALUE>0.1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmMsgReducedTime</DEFINITION-REF>
+                      <VALUE>1.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmMsgTimeoutTime</DEFINITION-REF>
+                      <VALUE>0.005</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmNodeDetectionEnabled</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmNodeId</DEFINITION-REF>
+                      <VALUE>2</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmNodeIdEnabled</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmPduCbvPosition</DEFINITION-REF>
+                      <VALUE>CANNM_PDU_BYTE_1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmPduNidPosition</DEFINITION-REF>
+                      <VALUE>CANNM_PDU_BYTE_0</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmPnEnabled</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmPnEraCalcEnabled</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmPnHandleMultipleNetworkRequests</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmRemoteSleepIndTime</DEFINITION-REF>
+                      <VALUE>5.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmRepeatMessageTime</DEFINITION-REF>
+                      <VALUE>1.2</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmRepeatMsgIndEnabled</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmTimeoutTime</DEFINITION-REF>
+                      <VALUE>1.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmWaitBusSleepTime</DEFINITION-REF>
+                      <VALUE>1.5</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmForcePnAvailabilityConfEnabled</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmCarWakeUpBitPosition</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmCarWakeUpBytePosition</DEFINITION-REF>
+                      <VALUE>4</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmPduNetworkRequestReasonPosition</DEFINITION-REF>
+                      <VALUE>CANNM_PDU_BYTE_2</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmPduNmStatePosition</DEFINITION-REF>
+                      <VALUE>CANNM_PDU_BYTE_3</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmComMNetworkHandleRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/ComM/ComMConfigSet/ComMChannel_FD_CAN1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="d638447d-5a20-408d-82e6-05734b98b0cf">
+                      <SHORT-NAME>CanNmRxPdu_IN_ECU1_FD_CAN1_CANNM_MESSAGE</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:08Z" GID="CanNmRxPduId">0</SD>
+                            <SD T="2024-07-10T13:03:08Z" GID="CanNmRxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NmPdu_FD_CAN1_NM_MDPS</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanNmRxPduId">true</SD>
+                            <SD GID="CanNmRxPduRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmRxPdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmRxPdu/CanNmRxPduId</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmRxPdu/CanNmRxPduRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NmPdu_FD_CAN1_NM_MDPS</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="6809d6f9-f773-4603-b9df-ef1f93a2d958">
+                      <SHORT-NAME>CanNmTxPdu_NmPdu_FD_CAN1_NM_CGW</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:08Z" GID="CanNmTxConfirmationPduId">0</SD>
+                            <SD T="2024-07-10T13:03:08Z" GID="CanNmTxPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NmPdu_FD_CAN1_NM_CGW</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanNmTxConfirmationPduId">true</SD>
+                            <SD GID="CanNmTxPduRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmTxPdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmTxPdu/CanNmTxConfirmationPduId</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmTxPdu/CanNmTxPduRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_NmPdu_FD_CAN1_NM_CGW</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="017b6a20-6715-4ccd-97ce-f33bf42ea6b3">
+                      <SHORT-NAME>CanNmUserDataTxPdu_FD_CAN1</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:08Z" GID="CanNmTxUserDataPduId">0</SD>
+                            <SD T="2024-07-10T13:03:08Z" GID="CanNmTxUserDataPduRef">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ComMPdu_Tx_PncVector_FD_CAN1</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanNmTxUserDataPduId">true</SD>
+                            <SD GID="CanNmTxUserDataPduRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmUserDataTxPdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmUserDataTxPdu/CanNmTxUserDataPduId</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmUserDataTxPdu/CanNmTxUserDataPduRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucConfigSet/EcucPduCollection/Pdu_ComMPdu_Tx_PncVector_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="7f37467d-dc2c-451d-9295-818520a5a756">
+                  <SHORT-NAME>CanNmPnInfo</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmPnInfoLength">4</SD>
+                        <SD T="2024-07-10T13:03:08Z" GID="CanNmPnInfoOffset">4</SD>
+                      </SDG>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="CanNmPnInfoLength">true</SD>
+                        <SD GID="CanNmPnInfoOffset">true</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnInfo</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnInfoLength</DEFINITION-REF>
+                      <VALUE>4</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnInfoOffset</DEFINITION-REF>
+                      <VALUE>4</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="5ac36e97-bfa2-4879-90ce-090cfa0fb50c">
+                      <SHORT-NAME>CanNmPnFilterMaskByte_4</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:08Z" GID="CanNmPnFilterMaskByteIndex">0</SD>
+                            <SD T="2024-07-10T13:03:08Z" GID="CanNmPnFilterMaskByteValue">1</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanNmPnFilterMaskByteIndex">true</SD>
+                            <SD GID="CanNmPnFilterMaskByteValue">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte/CanNmPnFilterMaskByteIndex</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte/CanNmPnFilterMaskByteValue</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="55ec26d8-5799-4af1-b11d-43e3ad570309">
+                      <SHORT-NAME>CanNmPnFilterMaskByte_5</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:08Z" GID="CanNmPnFilterMaskByteIndex">1</SD>
+                            <SD T="2024-07-10T13:03:08Z" GID="CanNmPnFilterMaskByteValue">0</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanNmPnFilterMaskByteIndex">true</SD>
+                            <SD GID="CanNmPnFilterMaskByteValue">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte/CanNmPnFilterMaskByteIndex</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte/CanNmPnFilterMaskByteValue</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="e66a19a1-2c14-4aad-b2cc-f9d476c7f33e">
+                      <SHORT-NAME>CanNmPnFilterMaskByte_6</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:08Z" GID="CanNmPnFilterMaskByteIndex">2</SD>
+                            <SD T="2024-07-10T13:03:08Z" GID="CanNmPnFilterMaskByteValue">0</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanNmPnFilterMaskByteIndex">true</SD>
+                            <SD GID="CanNmPnFilterMaskByteValue">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte/CanNmPnFilterMaskByteIndex</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte/CanNmPnFilterMaskByteValue</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="8dcaa69b-b083-44f6-b89c-6ebfa4924d4e">
+                      <SHORT-NAME>CanNmPnFilterMaskByte_7</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:08Z" GID="CanNmPnFilterMaskByteIndex">3</SD>
+                            <SD T="2024-07-10T13:03:08Z" GID="CanNmPnFilterMaskByteValue">0</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="CanNmPnFilterMaskByteIndex">true</SD>
+                            <SD GID="CanNmPnFilterMaskByteValue">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte/CanNmPnFilterMaskByteIndex</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte/CanNmPnFilterMaskByteValue</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

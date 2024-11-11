@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="045e9527-441c-496d-898a-ee856ad58a89">
+      <SHORT-NAME>AUTRON</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-DEF UUID="b39a0171-a28e-4633-bf9d-da6feca3fae6">
+          <SHORT-NAME>Fota</SHORT-NAME>
+          <DESC>
+            <L-2 L="EN">Configuration of the FOTA handler module.</L-2>
+          </DESC>
+          <ADMIN-DATA>
+            <DOC-REVISIONS>
+              <DOC-REVISION>
+                <REVISION-LABEL>4.7.0</REVISION-LABEL>
+                <ISSUED-BY>AUTOSAR</ISSUED-BY>
+              </DOC-REVISION>
+            </DOC-REVISIONS>
+          </ADMIN-DATA>
+          <INTRODUCTION>
+            <P>
+              <L-1 L="EN">Its multiplicity describes the actual number of FOTA drivers. There will be one container for each Mem driver.</L-1>
+            </P>
+          </INTRODUCTION>
+          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+          <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+          <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+          <SUPPORTED-CONFIG-VARIANTS>
+          <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+          </SUPPORTED-CONFIG-VARIANTS>
+          <CONTAINERS>
+            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:3c9d1fc3-94c0-4881-9279-7bf9a9d9464e">
+              <SHORT-NAME>FotaGeneral</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">Container for general configuration parameters of the FOTA driver. These parameters are always pre-compile.</L-2>
+              </DESC>
+              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <PARAMETERS>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:09eec05e-986a-45d9-95ff-d02f8d4b2a48">
+                  <SHORT-NAME>FotaDevErrorDetect</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Switches the development error detection and notification on or off.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <SCOPE>LOCAL</SCOPE>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                  <VALUE-CONFIG-CLASSES>
+                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                  </VALUE-CONFIG-CLASSES>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:09eec05e-986a-45d9-95ff-d02f8d4b2a48">
+                  <SHORT-NAME>FotaLargeSector</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Is Fota implement with large sector?.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <SCOPE>LOCAL</SCOPE>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                  <VALUE-CONFIG-CLASSES>
+                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                  </VALUE-CONFIG-CLASSES>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:09eec05e-986a-45d9-95ff-d02f8d4b2a48">
+                  <SHORT-NAME>FotaDownGradeProtection</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Enable downgrade protection.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <SCOPE>LOCAL</SCOPE>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                  <VALUE-CONFIG-CLASSES>
+                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                  </VALUE-CONFIG-CLASSES>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:09eec05e-986a-45d9-95ff-d02f8d4b2a48">
+                  <SHORT-NAME>FotaARMArchitectureEcu</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Is Ecu a ARM architecture.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <SCOPE>LOCAL</SCOPE>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                  <VALUE-CONFIG-CLASSES>
+                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                  </VALUE-CONFIG-CLASSES>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:09eec05e-986a-45d9-95ff-d02f8d4b2a48">
+                  <SHORT-NAME>FotaVersionInfoAPI</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Fota use API of version info.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <SCOPE>LOCAL</SCOPE>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                  <VALUE-CONFIG-CLASSES>
+                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                  </VALUE-CONFIG-CLASSES>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:09eec05e-986a-45d9-95ff-d02f8d4b2a49">
+                  <SHORT-NAME>FotaBootManagerEnable</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Fota use boot manager feature.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <SCOPE>LOCAL</SCOPE>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                  <VALUE-CONFIG-CLASSES>
+                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                  </VALUE-CONFIG-CLASSES>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:09eec05e-986a-45d9-95ff-d02f8d4b2a59">
+                  <SHORT-NAME>FotaSoftwareVersionCheckEnable</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Fota use software version check feature.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <SCOPE>LOCAL</SCOPE>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                  <VALUE-CONFIG-CLASSES>
+                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                  </VALUE-CONFIG-CLASSES>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-STRING-PARAM-DEF UUID="9d1bf736-26c1-4c70-a83b-8c36398102e8">
+                  <SHORT-NAME>FotaUserIncludeFiles</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">User include files</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                  <ORIGIN>AUTRON</ORIGIN>
+                </ECUC-STRING-PARAM-DEF>
+                <ECUC-FLOAT-PARAM-DEF UUID="4eaf63ce-8f21-428c-94b4-900952d246fd">
+                  <SHORT-NAME>FotaMainfunctionPeriod</SHORT-NAME>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <ORIGIN>AUTRON</ORIGIN>
+                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <MAX>Inf</MAX>
+                  <MIN>0</MIN>
+                </ECUC-FLOAT-PARAM-DEF>
+                <ECUC-ENUMERATION-PARAM-DEF UUID="bfb84c6a-d7d2-4a55-92e5-1d62a8f50681">
+                  <SHORT-NAME>FotaMcuMemoryAccessType</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Memory Access Type of Fota</L-2>
+                  </DESC>
+                  <INTRODUCTION>
+                    <P>
+                      <L-1 L="EN">FOTA_SINGLE_TYPE: Single type.&#xD;
+                      FOTA_NON_MMU_TYPE: Dual NonMMU type.&#xD;
+                      FOTA_MMU_TYPE: Dual MMU type.</L-1>
+                    </P>
+                  </INTRODUCTION>
+                  <DEFAULT-VALUE>FOTA_MMU_TYPE</DEFAULT-VALUE>
+                  <LITERALS>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="63247b6b-a50a-4e46-9cda-57fe738a2f53">
+                      <SHORT-NAME>FOTA_MMU_TYPE</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="8b9d2ce7-1dee-4142-8f85-9ef97cc5532f">
+                      <SHORT-NAME>FOTA_NON_MMU_TYPE</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="8b9d2ce7-1dee-4142-8f85-9ef97cc5532f">
+                      <SHORT-NAME>FOTA_SINGLE_TYPE</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                  </LITERALS>
+                </ECUC-ENUMERATION-PARAM-DEF>
+                <ECUC-ENUMERATION-PARAM-DEF UUID="bfb84c6a-d7d2-4a55-92e5-1d62a8f50681">
+                  <SHORT-NAME>FotaStandardSupport</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Standard of Fota</L-2>
+                  </DESC>
+                  <DEFAULT-VALUE>FOTA_OTA_ES98765_01</DEFAULT-VALUE>
+                  <LITERALS>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="63247b6b-a50a-4e46-9cda-57fe738a2f53">
+                      <SHORT-NAME>FOTA_OTA_ES98765_01</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="8b9d2ce7-1dee-4142-8f85-9ef97cc5532f">
+                      <SHORT-NAME>FOTA_OTA_ES98765_02</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                  </LITERALS>
+                </ECUC-ENUMERATION-PARAM-DEF>
+                <ECUC-ENUMERATION-PARAM-DEF UUID="bfb84c6a-d7d2-4a55-92e5-1d62a8f50681">
+                  <SHORT-NAME>FotaMode</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Operation mode of Fota module</L-2>
+                  </DESC>
+                  <DEFAULT-VALUE>FBL_MODE</DEFAULT-VALUE>
+                  <LITERALS>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="63247b6b-a50a-4e46-9cda-57fe738a2f53">
+                      <SHORT-NAME>FBL_MODE</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="8b9d2ce7-1dee-4142-8f85-9ef97cc5532f">
+                      <SHORT-NAME>APP_MODE</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="89d9a8f4-9729-44a3-97a7-c8ed61850ad4">
+                      <SHORT-NAME>UPDATER_MODE</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                  </LITERALS>
+                </ECUC-ENUMERATION-PARAM-DEF>
+                <ECUC-INTEGER-PARAM-DEF UUID="15166f68-09d6-4bf2-9a4d-ac565eed7d18">
+                  <SHORT-NAME>FotaVersionLengthMaximum</SHORT-NAME>
+                </ECUC-INTEGER-PARAM-DEF>
+                <ECUC-INTEGER-PARAM-DEF UUID="15166f68-09d6-4bf2-9a4d-ac565eed7d18">
+                  <SHORT-NAME>FotaCommonRAMAddress</SHORT-NAME>
+                </ECUC-INTEGER-PARAM-DEF>
+                <ECUC-INTEGER-PARAM-DEF UUID="67c009e7-d20a-4816-baa9-68b62f246644">
+                  <SHORT-NAME>FotaStartUpCommandAddress</SHORT-NAME>
+                </ECUC-INTEGER-PARAM-DEF>
+                <ECUC-INTEGER-PARAM-DEF UUID="444944c2-f844-42f3-ba07-2a9d790628fe">
+                  <SHORT-NAME>FotaStartUpCommandValue</SHORT-NAME>
+                </ECUC-INTEGER-PARAM-DEF>
+                <ECUC-INTEGER-PARAM-DEF UUID="444944c2-f844-42f3-ba07-2a9d790628fe">
+                  <SHORT-NAME>FotaCpdKeyValue</SHORT-NAME>
+                </ECUC-INTEGER-PARAM-DEF>
+                <ECUC-INTEGER-PARAM-DEF UUID="444944c2-f844-42f3-ba07-2a9d790628fe">
+                  <SHORT-NAME>FotaTpBlockLength</SHORT-NAME>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                </ECUC-INTEGER-PARAM-DEF>
+                <ECUC-INTEGER-PARAM-DEF UUID="a8b193be-b2e8-4e1a-a449-7b239b654330">
+                  <SHORT-NAME>FotaPartitionFlagSecurityValue</SHORT-NAME>
+                </ECUC-INTEGER-PARAM-DEF>
+              </PARAMETERS>
+            </ECUC-PARAM-CONF-CONTAINER-DEF>
+            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:b01dec4a-dcdf-4f4d-b0b1-58b53f6ed9c5">
+              <SHORT-NAME>FotaSwUnit</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">This container includes the FOTA driver instance specific configuration parameters.</L-2>
+              </DESC>
+              <INTRODUCTION>
+                <P>
+                  <L-1 L="EN">Its multiplicity describes the number of FOTA driver instances of this FOTA driver. There will be one container for each FOTA driver instance.</L-1>
+                </P>
+              </INTRODUCTION>
+              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+              <MULTIPLICITY-CONFIG-CLASSES>
+                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+              </MULTIPLICITY-CONFIG-CLASSES>
+              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+              <PARAMETERS>
+                <ECUC-ENUMERATION-PARAM-DEF UUID="810b9e16-6d5b-454e-8a9d-0c9109103c2e">
+                  <SHORT-NAME>FotaSoftwareType</SHORT-NAME>
+                  <LITERALS>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="e325c163-d9ed-4eeb-b80d-fa1361bb1c6d">
+                      <SHORT-NAME>FOTA_FBL_TYPE</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="71ebfdc8-f730-4bfc-92c4-6c8e8bcada73">
+                      <SHORT-NAME>FOTA_UPDATER_TYPE</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="71ebfdc8-f730-4bfc-92c4-6c8e8bcada83">
+                      <SHORT-NAME>FOTA_NEW_FBL_TYPE</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="71ebfdc8-f730-4bfc-92c4-6c8e8bcada64">
+                      <SHORT-NAME>FOTA_RTSW_TYPE</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="71ebfdc8-f730-4bfc-92c4-6c8e8bcada64">
+                      <SHORT-NAME>FOTA_RTSW_PARTA_TYPE</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="71ebfdc8-f730-4bfc-92c4-6c8e8bcada64">
+                      <SHORT-NAME>FOTA_RTSW_PARTB_TYPE</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="71ebfdc8-f730-4bfc-92c4-6c8e8bcada64">
+                      <SHORT-NAME>FOTA_DATA_TYPE</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                    <ECUC-ENUMERATION-LITERAL-DEF UUID="71ebfdc8-f730-4bfc-92c4-6c8e8bcada64">
+                      <SHORT-NAME>FOTA_USER_TYPE</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                  </LITERALS>
+                </ECUC-ENUMERATION-PARAM-DEF>
+                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:c3f57eb2-b673-4a08-94ce-59b4dd5816a1">
+                  <SHORT-NAME>FotaSwUnitIndex</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">This value specifies the unique numeric identifier which is used to reference a Mem driver instance in case multiple devices of the same type shall be addressed by one Mem driver. This value will be assigned to the symbolic name derived of the MemInstance container short name.</L-2>
+                    <L-2 L="EN">Tags: atp.Status=draft</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <SCOPE>LOCAL</SCOPE>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                  <VALUE-CONFIG-CLASSES>
+                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                  </VALUE-CONFIG-CLASSES>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                  <MAX>255</MAX>
+                  <MIN>0</MIN>
+                </ECUC-INTEGER-PARAM-DEF>
+                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:c3f57eb2-b673-4a08-94ce-59b4dd5816a1">
+                  <SHORT-NAME>FotaEcuSwUnit</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">The parameter specifies the ECU software Unit according to ES95486-02E</L-2>
+                    <L-2 L="EN">Tags: atp.Status=draft</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <SCOPE>LOCAL</SCOPE>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                  <VALUE-CONFIG-CLASSES>
+                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                  </VALUE-CONFIG-CLASSES>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                  <MAX>65535</MAX>
+                  <MIN>0</MIN>
+                </ECUC-INTEGER-PARAM-DEF>
+                <ECUC-FUNCTION-NAME-DEF UUID="a32e71ea-79cc-402e-8632-72fa4d71559d">
+                  <SHORT-NAME>FotaPreRoutineControlCallout</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN" />
+                  </DESC>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                </ECUC-FUNCTION-NAME-DEF>
+                <ECUC-INTEGER-PARAM-DEF UUID="6145a981-8bda-46e7-88d5-eb06473a3712">
+                  <SHORT-NAME>FotaSwFuncPtrTable</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Number of contiguous sectors with identical values for MemSectorSize and MemPageSize.</L-2>
+                    <L-2 L="EN">Tags: atp.Status=draft</L-2>
+                  </DESC>
+                  <INTRODUCTION>
+                    <P>
+                      <L-1 L="EN">If this parameter is configured to be greater than 1, the sectors are grouped in a sector batch.</L-1>
+                    </P>
+                  </INTRODUCTION>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <SCOPE>LOCAL</SCOPE>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                  <VALUE-CONFIG-CLASSES>
+                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                  </VALUE-CONFIG-CLASSES>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <DEFAULT-VALUE>1</DEFAULT-VALUE>
+                  <MAX>4294967295</MAX>
+                  <MIN>0</MIN>
+                </ECUC-INTEGER-PARAM-DEF>
+                <ECUC-FUNCTION-NAME-DEF UUID="1274c67f-9142-438c-b81f-a530d5215f7f">
+                  <SHORT-NAME>FotaPostRoutineControlCallout</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN" />
+                  </DESC>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                </ECUC-FUNCTION-NAME-DEF>
+              </PARAMETERS>
+              <REFERENCES>
+                <ECUC-CHOICE-REFERENCE-DEF UUID="c270142c-3319-443e-8410-d029f2a39442">
+                  <SHORT-NAME>FotaMemDriverRef</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN" />
+                  </DESC>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <DESTINATION-REFS>
+                    <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Mem/MemInstance</DESTINATION-REF>
+                  </DESTINATION-REFS>
+                </ECUC-CHOICE-REFERENCE-DEF>
+                <ECUC-CHOICE-REFERENCE-DEF UUID="55ffd765-4a5e-49bb-8c7b-61cf08e19fdd">
+                  <SHORT-NAME>FotaNvmBlockRef</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN" />
+                  </DESC>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <DESTINATION-REFS>
+                    <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/NvM/NvMBlockDescriptor</DESTINATION-REF>
+                  </DESTINATION-REFS>
+                </ECUC-CHOICE-REFERENCE-DEF>
+                <ECUC-CHOICE-REFERENCE-DEF UUID="b45d5164-bf1f-4b8a-8f37-8cbf8d3ab872">
+                  <SHORT-NAME>FotaProtectedBlock</SHORT-NAME>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                  <DESTINATION-REFS>
+                    <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock</DESTINATION-REF>
+                  </DESTINATION-REFS>
+                </ECUC-CHOICE-REFERENCE-DEF>
+                <ECUC-CHOICE-REFERENCE-DEF UUID="b45d5164-bf1f-4b8a-8f37-8cbf8d3ab872">
+                  <SHORT-NAME>FotaHeaderTrailerRef</SHORT-NAME>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <DESTINATION-REFS>
+                    <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Fota/HeaderTrailerInfo</DESTINATION-REF>
+                  </DESTINATION-REFS>
+                </ECUC-CHOICE-REFERENCE-DEF>                
+              </REFERENCES>
+              <SUB-CONTAINERS>
+                <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:47068044-43bf-4333-82ed-8ba53a0e1c96">
+                  <SHORT-NAME>FotaBlockInfo</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Specific configurations for the firmware instance to be installed/updated.</L-2>
+                  </DESC>
+                  <INTRODUCTION>
+                    <P>
+                      <L-1 L="EN">It is recommended to group as many identical sectors as possible together.</L-1>
+                    </P>
+                  </INTRODUCTION>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <MULTIPLICITY-CONFIG-CLASSES>
+                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                  </MULTIPLICITY-CONFIG-CLASSES>
+                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-INTEGER-PARAM-DEF UUID="20e770b4-e04e-420e-85b7-8afc2142f901">
+                      <SHORT-NAME>ModuleInfoAddress</SHORT-NAME>
+                    </ECUC-INTEGER-PARAM-DEF>
+                  </PARAMETERS>
+                  <SUB-CONTAINERS>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="321e174e-ffaf-4ae3-87fb-61d3de0e7c45">
+                      <SHORT-NAME>FotaBlock</SHORT-NAME>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                      <PARAMETERS>
+                        <ECUC-ENUMERATION-PARAM-DEF UUID="810b9e16-6d5b-454e-8a9d-0c9109103c1e">
+                          <SHORT-NAME>BlockType</SHORT-NAME>
+                          <DESC>
+                            <L-2>Each firmware block handling is different based on block type</L-2>
+                          </DESC>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="e325c163-d9ed-4eeb-b80d-fa1361bb1c4d">
+                              <SHORT-NAME>METADATA</SHORT-NAME>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="71ebfdc8-f730-4bfc-92c4-6c8e8bcada62">
+                              <SHORT-NAME>FIRMWARE</SHORT-NAME>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="9ca5d0d8-ffff-41bd-a1e9-23700de20b12">
+                              <SHORT-NAME>SIGNATURE</SHORT-NAME>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="f07aa338-340c-4c4d-a19c-bf37c4561469">
+                              <SHORT-NAME>PARTITION_FLAG</SHORT-NAME>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="f07aa338-340c-4c4d-a19c-bf37c4561469">
+                              <SHORT-NAME>CRC</SHORT-NAME>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF UUID="6fd1a1ef-c89d-4889-8c49-4dba3d94ad65">
+                          <SHORT-NAME>BlockIndex</SHORT-NAME>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF UUID="27207e7c-008f-419c-ad4e-9ecf58580a79">
+                          <SHORT-NAME>BlockStartAddress</SHORT-NAME>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF UUID="d7974455-4db7-4364-a897-fa43bb01c11a">
+                          <SHORT-NAME>BlockEndAddress</SHORT-NAME>
+                        </ECUC-INTEGER-PARAM-DEF>
+                      </PARAMETERS>
+                      <SUB-CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="9e8b3630-e3ea-4e1a-b287-7c6ea62547c4">
+                          <SHORT-NAME>VerificationInfo</SHORT-NAME>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <REFERENCES>
+                            <ECUC-CHOICE-REFERENCE-DEF UUID="771c4262-e1a9-4eff-9708-c927c0748eab">
+                              <SHORT-NAME>CsmAlgorithm</SHORT-NAME>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <DESTINATION-REFS>
+                                <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Csm/CsmJobs/CsmJob</DESTINATION-REF>
+                              </DESTINATION-REFS>
+                            </ECUC-CHOICE-REFERENCE-DEF>
+                            <ECUC-REFERENCE-DEF UUID="5adf1885-62f3-4ec5-944a-bc4df17856a8">
+                              <SHORT-NAME>TargetBlock</SHORT-NAME>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock</DESTINATION-REF>
+                            </ECUC-REFERENCE-DEF>
+                          </REFERENCES>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>VerifySizeOfOneCycle</SHORT-NAME>
+                              <DESC>
+                                <L-2>Lengh of verify in one cycle.</L-2>
+                              </DESC>
+                              <DEFAULT-VALUE>8</DEFAULT-VALUE>
+                              <MAX>8192</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>VerifyBufferUsed</SHORT-NAME>
+                              <DESC>
+                                <L-2>Is Verify buffer used or not.</L-2>
+                              </DESC>
+                              <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="d2baa55e-86f2-4bc2-a23b-2dc41ab7379e">
+                          <SHORT-NAME>PartitionFlagInfo</SHORT-NAME>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-FUNCTION-NAME-DEF UUID="71a43989-bf32-4147-b086-b925a1cc230c">
+                              <SHORT-NAME>WriteParitionFlagUserCallOut</SHORT-NAME>
+                            </ECUC-FUNCTION-NAME-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="38a32cfb-7861-4a92-875f-5c221ba29e29">
+                          <SHORT-NAME>MetaDataInfo</SHORT-NAME>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF UUID="2bedd28c-8d10-4368-b535-b362ec16dfcc">
+                              <SHORT-NAME>MdBlockHeaderLength</SHORT-NAME>
+                              <DESC>
+                                <L-2>Length of the metadata sector header in BYTES.</L-2>
+                              </DESC>
+                              <DEFAULT-VALUE>8</DEFAULT-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="099bb9c9-eb71-4a17-9858-1f0394bd930a">
+                              <SHORT-NAME>MdBlockMetadataLength</SHORT-NAME>
+                              <DESC>
+                                <L-2>Length of the actual metadata used for hashing in metadata sector in BYTES.</L-2>
+                              </DESC>
+                              <CATEGORY />
+                              <DEFAULT-VALUE>48</DEFAULT-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="3cac27f0-bfbc-4a50-8a68-3713caedc842">
+                              <SHORT-NAME>MdBlockDecKeyMACLength</SHORT-NAME>
+                              <DESC>
+                                <L-2>Length of the firmware decryption key's MAC value in metadata sector in BYTES.</L-2>
+                              </DESC>
+                              <CATEGORY />
+                              <DEFAULT-VALUE>16</DEFAULT-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="2e360ca5-8e77-4399-94c8-fa203bc5540e">
+                              <SHORT-NAME>MetadataWriteToFlash</SHORT-NAME>
+                              <DESC>
+                                <L-2>Specify whether the metadata block shall be written into code flash. In case TRUE, an appropriate address in code flash for this metadata sector must be provided.</L-2>
+                              </DESC>
+                              <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-CHOICE-REFERENCE-DEF UUID="6a2c4c1a-7362-4a1d-a54d-a7c003b463fb">
+                              <SHORT-NAME>CsmMetadataHashJob</SHORT-NAME>
+                              <DESC>
+                                <L-2>CsmJob for hashing of firmware metadata.</L-2>
+                              </DESC>
+                              <DESTINATION-REFS>
+                                <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Csm/CsmJobs/CsmJob</DESTINATION-REF>
+                              </DESTINATION-REFS>
+                            </ECUC-CHOICE-REFERENCE-DEF>
+                            <ECUC-CHOICE-REFERENCE-DEF UUID="a19015ae-5ae4-4c8c-83fe-e8c0a59048e3">
+                              <SHORT-NAME>CsmKeyForKeyDerivationPassword</SHORT-NAME>
+                              <DESC>
+                                <L-2>CsmKey to be used for storing the OEM specific Pre-shared Key and performing the derivation of firmware decryption key &amp; CMAC verification key.</L-2>
+                              </DESC>
+                              <DESTINATION-REFS>
+                                <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Csm/CsmKeys/CsmKey</DESTINATION-REF>
+                              </DESTINATION-REFS>
+                            </ECUC-CHOICE-REFERENCE-DEF>
+                            <ECUC-CHOICE-REFERENCE-DEF UUID="62403468-ed88-47f8-94e3-3038339fddac">
+                              <SHORT-NAME>CsmKeyForKeyDerivationResult</SHORT-NAME>
+                              <DESC>
+                                <L-2>CsmKey to be used for storing the derivation result of firmware decryption key &amp; CMAC verification key.</L-2>
+                              </DESC>
+                              <DESTINATION-REFS>
+                                <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Csm/CsmKeys/CsmKey</DESTINATION-REF>
+                              </DESTINATION-REFS>
+                            </ECUC-CHOICE-REFERENCE-DEF>
+                            <ECUC-CHOICE-REFERENCE-DEF UUID="7e6cd960-1f41-4590-81cc-a87baff9983a">
+                              <SHORT-NAME>CsmDecryptKey</SHORT-NAME>
+                              <DESC>
+                                <L-2>CsmKey to be used for storing the firmware decryption key.</L-2>
+                              </DESC>
+                              <DESTINATION-REFS>
+                                <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Csm/CsmKeys/CsmKey</DESTINATION-REF>
+                              </DESTINATION-REFS>
+                            </ECUC-CHOICE-REFERENCE-DEF>
+                            <ECUC-CHOICE-REFERENCE-DEF UUID="87c7966a-b669-4bdc-a658-21c6ef00d32b">
+                              <SHORT-NAME>CsmDecryptKeyVerifyJob</SHORT-NAME>
+                              <DESC>
+                                <L-2>CsmJob to be used for performing the CMAC verification of firmware decryption key.</L-2>
+                              </DESC>
+                              <DESTINATION-REFS>
+                                <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Csm/CsmJobs/CsmJob</DESTINATION-REF>
+                              </DESTINATION-REFS>
+                            </ECUC-CHOICE-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="e9fa0ec9-8057-4c62-b925-994e8de31d44">
+                          <SHORT-NAME>BlockProcessing</SHORT-NAME>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:09eec05e-986a-45d9-95ff-d02f8d4b2a48">
+                              <SHORT-NAME>IsEncrypted</SHORT-NAME>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-CHOICE-REFERENCE-DEF UUID="c8cc2d27-4d04-4a9f-8a69-357e6bf4b724">
+                              <SHORT-NAME>CsmDecryptionAlgo</SHORT-NAME>
+                              <DESC>
+                                <L-2>CsmJob to be used for performing decryption of firmware data block.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <DESTINATION-REFS>
+                                <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Csm/CsmJobs/CsmJob</DESTINATION-REF>
+                              </DESTINATION-REFS>
+                            </ECUC-CHOICE-REFERENCE-DEF>
+                          </REFERENCES>
+                          <SUB-CONTAINERS>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="d9bd6e62-ad0d-41fe-b594-3f2f540b7fe2">
+                              <SHORT-NAME>PreBlockUserCallOutInfo</SHORT-NAME>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-FUNCTION-NAME-DEF UUID="3e3e0b16-b39e-4057-bd6d-e0992f6b899c">
+                                  <SHORT-NAME>PreProcessingBlockUserCallOut</SHORT-NAME>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                </ECUC-FUNCTION-NAME-DEF>
+                              </PARAMETERS>
+                              <REFERENCES>
+                                <ECUC-CHOICE-REFERENCE-DEF UUID="b03de231-d49e-4e2b-80d1-f9b73f0e9aaf">
+                                  <SHORT-NAME>CsmAlgorithm</SHORT-NAME>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <DESTINATION-REFS>
+                                    <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Csm/CsmJobs/CsmJob</DESTINATION-REF>
+                                  </DESTINATION-REFS>
+                                </ECUC-CHOICE-REFERENCE-DEF>
+                              </REFERENCES>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="0d8e4b08-c1d7-49a2-8888-f26d19f13602">
+                              <SHORT-NAME>PostBlockUserCallOutInfo</SHORT-NAME>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-FUNCTION-NAME-DEF UUID="4f83c8ca-9890-4722-953e-6b240e41a89b">
+                                  <SHORT-NAME>PostProcessingBlockUserCallOut</SHORT-NAME>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                </ECUC-FUNCTION-NAME-DEF>
+                              </PARAMETERS>
+                              <REFERENCES>
+                                <ECUC-CHOICE-REFERENCE-DEF UUID="5d6da618-c6ad-421e-9b92-5b1607b6de70">
+                                  <SHORT-NAME>CsmAlgorithm</SHORT-NAME>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <DESTINATION-REFS>
+                                    <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Csm/CsmJobs/CsmJob</DESTINATION-REF>
+                                  </DESTINATION-REFS>
+                                </ECUC-CHOICE-REFERENCE-DEF>
+                              </REFERENCES>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                          </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </SUB-CONTAINERS>
+            </ECUC-PARAM-CONF-CONTAINER-DEF>
+            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:3c9d1fc3-94c0-4881-9279-7bf9a9d9464e">
+              <SHORT-NAME>HeaderTrailerInfo</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">Container for information of header and trailer.</L-2>
+              </DESC>              
+              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+              <PARAMETERS>
+                <ECUC-INTEGER-PARAM-DEF UUID="27207e7c-008f-419c-ad4e-9ecf58580a79">
+                  <SHORT-NAME>BlockHeader</SHORT-NAME>
+                </ECUC-INTEGER-PARAM-DEF>
+                <ECUC-INTEGER-PARAM-DEF UUID="27207e7c-008f-419c-ad4e-9ecf58580a79">
+                  <SHORT-NAME>BlockTrailer</SHORT-NAME>
+                </ECUC-INTEGER-PARAM-DEF>
+              </PARAMETERS>                        
+            </ECUC-PARAM-CONF-CONTAINER-DEF>
+          </CONTAINERS>
+        </ECUC-MODULE-DEF>
+        <ECUC-DEFINITION-COLLECTION UUID="193996d4-b5f3-4074-a553-2632c70556b6">
+          <SHORT-NAME>ParameterDefinition_Fota</SHORT-NAME>
+          <MODULE-REFS>
+            <MODULE-REF DEST="ECUC-MODULE-DEF">/AUTRON/Fota</MODULE-REF>
+          </MODULE-REFS>
+        </ECUC-DEFINITION-COLLECTION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

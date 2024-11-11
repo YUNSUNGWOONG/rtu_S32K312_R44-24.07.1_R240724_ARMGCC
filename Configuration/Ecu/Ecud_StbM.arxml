@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="0926df2d-7422-44bb-9d26-93031fedd1ee">
+      <SHORT-NAME>AUTRON</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="859fad92-c8ba-4031-9960-1a719b17d506">
+          <SHORT-NAME>StbM</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTRON/StbM</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/Bsw_StbM/BswImplementation_StbM</MODULE-DESCRIPTION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="35fc153b-57fa-404a-b11f-079525386721">
+              <SHORT-NAME>StbMGeneral</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2020-06-26T14:05:09Z" GID="StbMDevErrorDetect">1</SD>
+                    <SD T="2020-09-07T10:01:49Z" GID="StbMGetCurrentTimeExtendedAvailable">1</SD>
+                    <SD T="2023-12-26T10:17:08Z" GID="StbMMainFunctionPeriod">0.005</SD>
+                    <SD T="2020-11-09T14:04:11Z" GID="StbMTimeRecordingSupport">1</SD>
+                    <SD T="2020-09-09T14:09:45Z" GID="StbMVersionInfoApi">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/StbM/StbMGeneral</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/StbM/StbMGeneral/StbMDevErrorDetect</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/StbM/StbMGeneral/StbMMainFunctionPeriod</DEFINITION-REF>
+                  <VALUE>0.005</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/StbM/StbMGeneral/StbMTimeRecordingSupport</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/StbM/StbMGeneral/StbMGetCurrentTimeExtendedAvailable</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/StbM/StbMGeneral/StbMVersionInfoApi</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="2c999881-8d88-4397-8eb0-a291cf5fe835">
+              <SHORT-NAME>Client0</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2020-08-13T17:01:13Z" GID="StbMAllowSystemWideGlobalTimeMaster">0</SD>
+                    <SD T="2020-08-12T10:37:10Z" GID="StbMIsSystemWideGlobalTimeMaster">0</SD>
+                    <SD T="2020-09-09T14:15:15Z" GID="StbMNotificationInterface">SR_INTERFACE</SD>
+                    <SD T="2020-11-09T14:05:10Z" GID="StbMSynchronizedTimeBaseIdentifier">0</SD>
+                    <SD T="2020-08-16T15:40:02Z" GID="StbMSyncLossTimeout">1</SD>
+                    <SD T="2020-08-16T15:40:03Z" GID="StbMTimeLeapFutureThreshold">1</SD>
+                    <SD T="2020-08-16T15:40:06Z" GID="StbMTimeLeapPastThreshold">1</SD>
+                    <SD T="2020-08-16T15:40:22Z" GID="StbMClearTimeleapCount">1</SD>
+                    <SD T="2020-09-09T14:15:18Z" GID="StbMStatusNotificationMask">42</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMIsSystemWideGlobalTimeMaster</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMNotificationInterface</DEFINITION-REF>
+                  <VALUE>SR_INTERFACE</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMSynchronizedTimeBaseIdentifier</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMAllowSystemWideGlobalTimeMaster</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMSyncLossTimeout</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMTimeLeapFutureThreshold</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMTimeLeapPastThreshold</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMClearTimeleapCount</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMStatusNotificationMask</DEFINITION-REF>
+                  <VALUE>42</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="f720bdfe-27b9-463d-8169-28fcb5428d78">
+                  <SHORT-NAME>StbMLocalTimeClock</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2020-06-09T09:45:29Z" GID="StbMClockFrequency">800</SD>
+                        <SD T="2020-06-09T09:45:30Z" GID="StbMClockPrescaler">1</SD>
+                        <SD T="2023-08-29T20:08:31Z" GID="StbMLocalTimeHardware">/AUTOSAR/Os/OsCounter_0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock/StbMClockFrequency</DEFINITION-REF>
+                      <VALUE>800</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock/StbMClockPrescaler</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock/StbMLocalTimeHardware</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Os/OsCounter_Main</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="332b1669-ef4a-4825-992c-0aac32d69ae3">
+                  <SHORT-NAME>StbMTimeCorrection</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2020-08-16T14:21:40Z" GID="StbMAllowMasterRateCorrection">0</SD>
+                        <SD T="2020-08-16T14:24:01Z" GID="StbMRateCorrectionMeasurementDuration">1</SD>
+                        <SD T="2020-08-16T14:24:02Z" GID="StbMRateCorrectionsPerMeasurementDuration">3</SD>
+                        <SD T="2020-08-16T14:24:03Z" GID="StbMOffsetCorrectionJumpThreshold">0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMTimeCorrection</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMTimeCorrection/StbMAllowMasterRateCorrection</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMTimeCorrection/StbMRateCorrectionMeasurementDuration</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMTimeCorrection/StbMRateCorrectionsPerMeasurementDuration</DEFINITION-REF>
+                      <VALUE>3</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMTimeCorrection/StbMOffsetCorrectionJumpThreshold</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="60df6a39-ed7d-4cdb-94fa-6cc21631d01a">
+                  <SHORT-NAME>StbMTimeRecording</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2020-11-09T14:06:06Z" GID="StbMOffsetTimeRecordTableBlockCount">0</SD>
+                        <SD T="2020-11-09T14:06:11Z" GID="StbMSyncTimeRecordTableBlockCount">20</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMTimeRecording</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMTimeRecording/StbMOffsetTimeRecordTableBlockCount</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMTimeRecording/StbMSyncTimeRecordTableBlockCount</DEFINITION-REF>
+                      <VALUE>20</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="2c999881-8d88-4397-8eb0-a291cf5fe835">
+              <SHORT-NAME>Provider0</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2020-06-09T09:45:01Z" GID="StbMAllowSystemWideGlobalTimeMaster">1</SD>
+                    <SD T="2020-06-09T09:45:08Z" GID="StbMIsSystemWideGlobalTimeMaster">1</SD>
+                    <SD T="2020-06-09T09:45:13Z" GID="StbMNotificationInterface">NO_NOTIFICATION</SD>
+                    <SD T="2020-06-26T13:59:00Z" GID="StbMSynchronizedTimeBaseIdentifier">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMAllowSystemWideGlobalTimeMaster</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMIsSystemWideGlobalTimeMaster</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMNotificationInterface</DEFINITION-REF>
+                  <VALUE>NO_NOTIFICATION</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMSynchronizedTimeBaseIdentifier</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="f720bdfe-27b9-463d-8169-28fcb5428d78">
+                  <SHORT-NAME>StbMLocalTimeClock</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2020-06-09T09:45:29Z" GID="StbMClockFrequency">800</SD>
+                        <SD T="2020-06-09T09:45:30Z" GID="StbMClockPrescaler">1</SD>
+                        <SD T="2023-08-29T20:09:31Z" GID="StbMLocalTimeHardware">/AUTOSAR/Os/OsCounter_0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock/StbMClockFrequency</DEFINITION-REF>
+                      <VALUE>800</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock/StbMClockPrescaler</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock/StbMLocalTimeHardware</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Os/OsCounter_Main</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="712370b2-d3fb-442c-b3a9-d49b4d987341">
+              <SHORT-NAME>Offset0</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2020-07-24T13:33:27Z" GID="StbMAllowSystemWideGlobalTimeMaster">1</SD>
+                    <SD T="2020-07-24T13:33:33Z" GID="StbMIsSystemWideGlobalTimeMaster">1</SD>
+                    <SD T="2020-07-24T13:33:36Z" GID="StbMNotificationInterface">NO_NOTIFICATION</SD>
+                    <SD T="2020-07-24T13:33:48Z" GID="StbMSynchronizedTimeBaseIdentifier">16</SD>
+                    <SD T="2020-07-24T13:33:50Z" GID="StbMOffsetTimeBase">/AUTRON/StbM/Provider0</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMAllowSystemWideGlobalTimeMaster</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMIsSystemWideGlobalTimeMaster</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMNotificationInterface</DEFINITION-REF>
+                  <VALUE>NO_NOTIFICATION</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMSynchronizedTimeBaseIdentifier</DEFINITION-REF>
+                  <VALUE>16</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMOffsetTimeBase</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/StbM/Provider0</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="12775fc4-b407-4619-b5f3-a8eeedb2e33d">
+              <SHORT-NAME>Provider1</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2020-11-12T17:43:10Z" GID="StbMAllowSystemWideGlobalTimeMaster">1</SD>
+                    <SD T="2020-11-12T17:43:11Z" GID="StbMIsSystemWideGlobalTimeMaster">1</SD>
+                    <SD T="2020-11-12T17:43:16Z" GID="StbMNotificationInterface">NO_NOTIFICATION</SD>
+                    <SD T="2020-11-12T17:44:07Z" GID="StbMSynchronizedTimeBaseIdentifier">2</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMAllowSystemWideGlobalTimeMaster</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMIsSystemWideGlobalTimeMaster</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMNotificationInterface</DEFINITION-REF>
+                  <VALUE>NO_NOTIFICATION</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMSynchronizedTimeBaseIdentifier</DEFINITION-REF>
+                  <VALUE>2</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="a1d2a3ef-a0ff-4afc-a0b7-73a54fd970c0">
+                  <SHORT-NAME>StbMLocalTimeClock</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2020-11-12T17:43:41Z" GID="StbMClockFrequency">800</SD>
+                        <SD T="2020-11-12T17:43:42Z" GID="StbMClockPrescaler">1</SD>
+                        <SD T="2023-08-29T20:10:08Z" GID="StbMLocalTimeHardware">/AUTOSAR/Os/OsCounter_0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock/StbMClockFrequency</DEFINITION-REF>
+                      <VALUE>800</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock/StbMClockPrescaler</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock/StbMLocalTimeHardware</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Os/OsCounter_Main</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="91b13ea7-89fb-46d1-8854-a2229f80b565">
+              <SHORT-NAME>CertTime</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2020-11-26T10:16:41Z" GID="StbMAllowSystemWideGlobalTimeMaster">1</SD>
+                    <SD T="2020-11-26T10:16:43Z" GID="StbMIsSystemWideGlobalTimeMaster">1</SD>
+                    <SD T="2020-11-26T10:16:57Z" GID="StbMNotificationInterface">NO_NOTIFICATION</SD>
+                    <SD T="2020-11-26T10:17:06Z" GID="StbMSynchronizedTimeBaseIdentifier">3</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMAllowSystemWideGlobalTimeMaster</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMIsSystemWideGlobalTimeMaster</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMNotificationInterface</DEFINITION-REF>
+                  <VALUE>NO_NOTIFICATION</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMSynchronizedTimeBaseIdentifier</DEFINITION-REF>
+                  <VALUE>3</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="3d046877-83e7-4e8c-abcf-b3410dcc6f20">
+                  <SHORT-NAME>StbMLocalTimeClock</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2020-11-26T10:18:08Z" GID="StbMClockFrequency">800</SD>
+                        <SD T="2020-11-26T10:18:11Z" GID="StbMClockPrescaler">1</SD>
+                        <SD T="2023-08-29T20:10:36Z" GID="StbMLocalTimeHardware">/AUTOSAR/Os/OsCounter_0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock/StbMClockFrequency</DEFINITION-REF>
+                      <VALUE>800</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock/StbMClockPrescaler</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/StbM/StbMSynchronizedTimeBase/StbMLocalTimeClock/StbMLocalTimeHardware</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Os/OsCounter_Main</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

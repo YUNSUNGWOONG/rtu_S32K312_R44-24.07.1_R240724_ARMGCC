@@ -1,0 +1,1428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AppSwComponent_Dcm</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="10e66942-aba7-4d12-8f39-98fd6fc7a140">
+          <SHORT-NAME>SwComponentType</SHORT-NAME>
+          <ELEMENTS>
+            <APPLICATION-SW-COMPONENT-TYPE UUID="ec18f878-e35e-4d1f-9937-9af45d85c446">
+              <SHORT-NAME>SWC_DiagnosticService</SHORT-NAME>
+              <PORTS>
+                <P-PORT-PROTOTYPE UUID="465d6912-ced5-4440-9fff-5a60dbe6bec4">
+                  <SHORT-NAME>CallbackDCMRequestServices</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/CallbackDCMRequestServices/StartProtocol</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/CallbackDCMRequestServices/StopProtocol</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/CallbackDCMRequestServices</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="a3f1137a-98d6-4b9a-b8b2-db33507e7a32">
+                  <SHORT-NAME>DCM_Services</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DCMServices/GetActiveProtocol</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DCMServices/GetSesCtrlType</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DCMServices/GetSecurityLevel</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DCMServices/ResetToDefaultSession</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/DCMServices</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="62401609-d844-4966-9acf-683ec9ea9e50">
+                  <SHORT-NAME>modeNotificationPort_SessionControl</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <MODE-SWITCH-RECEIVER-COM-SPEC>
+                      <ENHANCED-MODE-API>true</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface</MODE-GROUP-REF>
+                      <SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>true</SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>
+                    </MODE-SWITCH-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/Bsw_Dcm/ModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="b0192d05-c5ea-420c-95ed-a68dce7a7cd3">
+                  <SHORT-NAME>UploadDownloadServices</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/UploadDownloadServices/ProcessRequestDownload</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/UploadDownloadServices/ProcessRequestTransferExit</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/UploadDownloadServices/ProcessRequestUpload</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/UploadDownloadServices/ProcessTransferDataRead</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/UploadDownloadServices/ProcessTransferDataWrite</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/UploadDownloadServices</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="afb803f8-7b4b-4751-a78a-05ac54598cd4">
+                  <SHORT-NAME>RequestControlServices_Tid1</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestControlServices_Tid1/RequestControl</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/RequestControlServices_Tid1</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="eed40354-f49e-4d2c-93aa-939f8b24b02d">
+                  <SHORT-NAME>DataServices_ActuatorControl</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ActuatorControl/ConditionCheckRead</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ActuatorControl/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ActuatorControl/WriteData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ActuatorControl/FreezeCurrentState</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ActuatorControl/ReturnControlToECU</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ActuatorControl/ShortTermAdjustment</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ActuatorControl/ResetToDefault</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/DataServices_ActuatorControl</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="331f8eef-eb3c-4cff-9161-bca5255759b7">
+                  <SHORT-NAME>DataServices_VehicleManufacturerECUSoftwareVersionNumber</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VehicleManufacturerECUSoftwareVersionNumber/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VehicleManufacturerECUSoftwareVersionNumber/ConditionCheckRead</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/DataServices_VehicleManufacturerECUSoftwareVersionNumber</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="bfc9bb8d-4f02-4616-ad4d-a1b50850f96c">
+                  <SHORT-NAME>DataServices_SystemSupplierECUHardwareVersionNumber</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_SystemSupplierECUHardwareVersionNumber/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_SystemSupplierECUHardwareVersionNumber/ConditionCheckRead</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/DataServices_SystemSupplierECUHardwareVersionNumber</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="12fc294e-362f-42f9-803e-e7a3c3be0187">
+                  <SHORT-NAME>DataServices_VehicleSpeed</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VehicleSpeed/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VehicleSpeed/ConditionCheckRead</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VehicleSpeed/GetScalingInformation</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/DataServices_VehicleSpeed</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="d6122f50-235f-46a2-b741-75ce0f4cfed3">
+                  <SHORT-NAME>DataServices_DIDRange_DID_0100h_0110h</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_DIDRange_DIDs_0100h_0110h/IsDidAvailable</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_DIDRange_DIDs_0100h_0110h/ReadDidData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_DIDRange_DIDs_0100h_0110h/ReadDidRangeDataLength</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_DIDRange_DIDs_0100h_0110h/WriteDidData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/DataServices_DIDRange_DIDs_0100h_0110h</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="1f74ebcf-fe1d-4d6b-8b13-d82401271b1e">
+                  <SHORT-NAME>DataServices_VINDataIdentifier</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VINDataIdentifier/ConditionCheckRead</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VINDataIdentifier/GetScalingInformation</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VINDataIdentifier/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VINDataIdentifier/WriteData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/DataServices_VINDataIdentifier</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="03696a02-dff1-44e0-a384-78de1b6c3c3f">
+                  <SHORT-NAME>DataServices_BatVolt</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_BatVolt/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_BatVolt/ConditionCheckRead</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_BatVolt/WriteData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/DataServices_BatVolt</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="7763b1a2-2789-448f-8f27-07173818f84a">
+                  <SHORT-NAME>DataServices_ECT</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ECT/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ECT/WriteData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ECT/ConditionCheckRead</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/DataServices_ECT</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="f659434b-b820-4e52-8573-f9b4120dfe72">
+                  <SHORT-NAME>DataServices_SystemSupplierECUSoftwareNumber</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_SystemSupplierECUSoftwareNumber/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_SystemSupplierECUSoftwareNumber/ConditionCheckRead</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/DataServices_SystemSupplierECUSoftwareNumber</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="b64d16f8-a9c6-43ce-be2e-f38d1a2eea7c">
+                  <SHORT-NAME>DataServices_RPM</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_RPM/ReadData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_RPM/ConditionCheckRead</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_RPM/FreezeCurrentState</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_RPM/ReturnControlToECU</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_RPM/ShortTermAdjustment</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_RPM/WriteData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/DataServices_RPM</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="a1948e94-f3be-4475-87b5-4c0121d2b7dd">
+                  <SHORT-NAME>InfotypeServices_VINInfoData</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/InfotypeServices_VINInfoData/GetInfotypeValueData</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/InfotypeServices_VINInfoData</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="ecb1d075-f303-4333-864f-44a9badd99c4">
+                  <SHORT-NAME>RoutineServices_RID_0200h_CalibrationActuator</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RoutineServices_RID_0200h_CalibrationActuator/Start</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RoutineServices_RID_0200h_CalibrationActuator/Stop</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RoutineServices_RID_0200h_CalibrationActuator/RequestResults</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/RoutineServices_RID_0200h_CalibrationActuator</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="a208a4d2-9bc2-4afa-808f-2584f068433a">
+                  <SHORT-NAME>RequestFileTransfer</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestFileTransfer/ProcessRequestAddFile</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestFileTransfer/ProcessRequestDeleteFile</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestFileTransfer/ProcessRequestReadDir</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestFileTransfer/ProcessRequestReadFile</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestFileTransfer/ProcessRequestReplaceFile</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestFileTransfer/ReadFileOrDir</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestFileTransfer/WriteFile</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/RequestFileTransfer</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="66f5dbdb-44b5-4f56-8869-4761a82c1a68">
+                  <SHORT-NAME>ServiceRequestManufacturerNotification_DcmDsdServiceRequestManufacturerNotification0</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/ServiceRequestNotification/Confirmation</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/ServiceRequestNotification/Indication</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/ServiceRequestNotification</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="13d84e06-9654-4758-8008-ae9ab93cbea9">
+                  <SHORT-NAME>ServiceRequestSupplierNotification_DcmDsdServiceRequestSupplierNotification0</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/ServiceRequestNotification/Confirmation</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/ServiceRequestNotification/Indication</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/ServiceRequestNotification</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="16766881-b247-4ab9-a14a-f17ca71799aa">
+                  <SHORT-NAME>Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <MODE-SWITCH-RECEIVER-COM-SPEC>
+                      <ENHANCED-MODE-API>true</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1/Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1</MODE-GROUP-REF>
+                      <SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>true</SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>
+                    </MODE-SWITCH-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/Bsw_Dcm/ModeSwitchInterface/Dcm_CommunicationControlModeSwitchInterface_ComMChannel_FD_CAN1</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="0a4db91e-d20f-43b6-91d4-bff0446df6e1">
+                  <SHORT-NAME>SecurityAccess_L9</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/SecurityAccess_L9/CompareKey</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/SecurityAccess_L9/GetSeed</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/SecurityAccess_L9</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="0fca891a-28f7-4284-8dc4-7b0f2e7b97c1">
+                  <SHORT-NAME>CsmKeyManagement_RandomSeed_L9</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Csm/ClientServerInterfaces/CsmKeyManagement_RandomSeed_L9/RandomSeed</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Csm/ClientServerInterfaces/CsmKeyManagement_RandomSeed_L9</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="61e22e77-687d-4f0a-a544-7e81ab025c8a">
+                  <SHORT-NAME>RandomGenerate_L9_CsmRandomGenerateConfig</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Csm/ClientServerInterfaces/RandomGenerate_L9_CsmRandomGenerateConfig/RandomGenerate</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Csm/ClientServerInterfaces/RandomGenerate_L9_CsmRandomGenerateConfig</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="31d1139c-c63b-4221-a123-37debdf6b205">
+                  <SHORT-NAME>InternalBehaviors_DiagnosticService</SHORT-NAME>
+                  <DATA-TYPE-MAPPING-REFS>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Bsw_Dcm/DataTypeMappingSet/DcmDiagnosticSessionControl</DATA-TYPE-MAPPING-REF>
+                  </DATA-TYPE-MAPPING-REFS>
+                  <EVENTS>
+                    <OPERATION-INVOKED-EVENT UUID="53887125-ad9e-4ff8-9863-0835608d9a2a">
+                      <SHORT-NAME>OIE_CallbackDCMRequestServices_StartProtocol</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/CallbackDCMRequestServices_StartProtocol</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/CallbackDCMRequestServices</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/CallbackDCMRequestServices/StartProtocol</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>OIE_CallbackDCMRequestServices_StopProtocol</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/CallbackDCMRequestServices_StopProtocol</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/CallbackDCMRequestServices</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/CallbackDCMRequestServices/StopProtocol</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <SWC-MODE-SWITCH-EVENT UUID="ca585526-ce54-49c5-9ce3-0e3d797809b8">
+                      <SHORT-NAME>SMSE_Entry_DiagnosticSessionControlNotification_modeNotificationPort_SessionControl_DcmDiagnosticSessionControl_DCM_DEFAULT_SESSION</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/DiagnosticSessionControlNotification</START-ON-EVENT-REF>
+                      <ACTIVATION>ON-ENTRY</ACTIVATION>
+                      <MODE-IREFS>
+                        <MODE-IREF>
+                          <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/modeNotificationPort_SessionControl</CONTEXT-PORT-REF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Bsw_Dcm/ModeDeclarationGroup/DcmDiagnosticSessionControl/DCM_DEFAULT_SESSION</TARGET-MODE-DECLARATION-REF>
+                        </MODE-IREF>
+                      </MODE-IREFS>
+                    </SWC-MODE-SWITCH-EVENT>
+                    <SWC-MODE-SWITCH-EVENT UUID="0077a5d8-2b02-48ae-b3a2-8d05f9152006">
+                      <SHORT-NAME>SMSE_Entry_DiagnosticSessionControlNotification_modeNotificationPort_SessionControl_DcmDiagnosticSessionControl_DCM_EXTENDED_DIAGNOSTIC_SESSION</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/DiagnosticSessionControlNotification</START-ON-EVENT-REF>
+                      <ACTIVATION>ON-ENTRY</ACTIVATION>
+                      <MODE-IREFS>
+                        <MODE-IREF>
+                          <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/modeNotificationPort_SessionControl</CONTEXT-PORT-REF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Bsw_Dcm/ModeDeclarationGroup/DcmDiagnosticSessionControl/DCM_EXTENDED_DIAGNOSTIC_SESSION</TARGET-MODE-DECLARATION-REF>
+                        </MODE-IREF>
+                      </MODE-IREFS>
+                    </SWC-MODE-SWITCH-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="e6d0e959-b259-448c-8fa7-d73cfb48524d">
+                      <SHORT-NAME>OIE_UploadDownloadServices_ProcessTransferDataRead</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/UploadDownloadServices_ProcessTransferDataRead</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/UploadDownloadServices</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/UploadDownloadServices/ProcessTransferDataRead</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="5f7372d4-aa34-4892-b43f-87cce035e826">
+                      <SHORT-NAME>OIE_UploadDownloadServices_ProcessRequestDownload</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/UploadDownloadServices_ProcessRequestDownload</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/UploadDownloadServices</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/UploadDownloadServices/ProcessRequestDownload</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="51915a02-b1eb-420f-87e1-817f6dc9a4fc">
+                      <SHORT-NAME>OIE_UploadDownloadServices_ProcessTransferDataWrite</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/UploadDownloadServices_ProcessTransferDataWrite</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/UploadDownloadServices</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/UploadDownloadServices/ProcessTransferDataWrite</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="ca3babb7-9788-4ce5-9922-a4f74b1d8b17">
+                      <SHORT-NAME>OIE_UploadDownloadServices_ProcessRequestTransferExit</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/UploadDownloadServices_ProcessRequestTransferExit</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/UploadDownloadServices</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/UploadDownloadServices/ProcessRequestTransferExit</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="97c688e0-7615-4541-b303-aa8442bec115">
+                      <SHORT-NAME>OIE_UploadDownloadServices_ProcessRequestUpload</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/UploadDownloadServices_ProcessRequestUpload</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/UploadDownloadServices</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/UploadDownloadServices/ProcessRequestUpload</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="6dabba5d-e8a1-459a-9808-56edc2ef1e91">
+                      <SHORT-NAME>OIE_RequestControlServices_Tid1_RequestControl</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RequestControlServices_Tid1_RequestControl</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/RequestControlServices_Tid1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestControlServices_Tid1/RequestControl</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="be5af64d-4085-4419-a531-3d6aeb27ab4b">
+                      <SHORT-NAME>OIE_ActuatorControl_ReadData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/ActuatorControl_ReadData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_ActuatorControl</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ActuatorControl/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="65db7c4d-4bb9-4836-b346-98f4c9a1eaec">
+                      <SHORT-NAME>OIE_ActuatorControl_WriteData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/ActuatorControl_WriteData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_ActuatorControl</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ActuatorControl/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="fa608767-f633-40a7-a9e9-1cd57cb15f36">
+                      <SHORT-NAME>OIE_ActuatorControl_ConditionCheckRead</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/ActuatorControl_ConditionCheckRead</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_ActuatorControl</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ActuatorControl/ConditionCheckRead</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="ace7bdea-88b2-4e09-aef5-a296929037dc">
+                      <SHORT-NAME>OIE_ActuatorControl_ResetToDefault</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/ActuatorControl_ResetToDefault</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_ActuatorControl</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ActuatorControl/ResetToDefault</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="da219780-d1ec-418c-9ae1-13adc6ea8da7">
+                      <SHORT-NAME>OIE_ActuatorControl_FreezeCurrentState</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/ActuatorContro_FreezeCurrentState</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_ActuatorControl</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ActuatorControl/FreezeCurrentState</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="fd941767-4df1-4bc4-a0c4-8687f75b1686">
+                      <SHORT-NAME>OIE_ActuatorControl_ReturnControlToECU</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/ActuatorControl_ReturnControlToECU</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_ActuatorControl</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ActuatorControl/ReturnControlToECU</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="9a3137c8-d947-4a1f-993e-52d217df0a8c">
+                      <SHORT-NAME>OIE_ActuatorControl_ShortTermAdjustment</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/ActuatorControl_ShortTermAdjustment</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_ActuatorControl</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ActuatorControl/ShortTermAdjustment</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="daf326fb-a64f-4051-9041-28a5e00889ee">
+                      <SHORT-NAME>OIE_DID_0100h_0110h_ReadDidData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/DID_0100h_0110h_ReadDidData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_DIDRange_DID_0100h_0110h</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_DIDRange_DIDs_0100h_0110h/ReadDidData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="a04c1535-1f73-4d6a-8c00-a2760ed44abc">
+                      <SHORT-NAME>OIE_DID_0100h_0110h_WriteDidData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/DID_0100h_0110h_WriteDidData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_DIDRange_DID_0100h_0110h</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_DIDRange_DIDs_0100h_0110h/WriteDidData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="343d1ba0-7262-441c-a787-45d611db9dc3">
+                      <SHORT-NAME>OIE_DID_0100h_0110h_IsDidAvailable</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/DID_0100h_0110h_IsDidAvailable</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_DIDRange_DID_0100h_0110h</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_DIDRange_DIDs_0100h_0110h/IsDidAvailable</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="35232fa3-79cb-48b9-bb90-42656092a5aa">
+                      <SHORT-NAME>OIE_DID_0100h_0110h_ReadDidRangeDataLength</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/DID_0100h_0110h_ReadDidRangeDataLength</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_DIDRange_DID_0100h_0110h</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_DIDRange_DIDs_0100h_0110h/ReadDidRangeDataLength</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="548b02dd-3667-475a-977a-de4bdf1e2859">
+                      <SHORT-NAME>OIE_VehicleSpeed_GetScalingInformation</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/VehicleSpeed_GetScalingInformation</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_VehicleSpeed</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VehicleSpeed/GetScalingInformation</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="8cf380ff-2058-4cb8-a4b6-12c0874bceec">
+                      <SHORT-NAME>OIE_VINDataIdentifier_ConditionCheckRead</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/VINDataIdentifier_ConditionCheckRead</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_VINDataIdentifier</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VINDataIdentifier/ConditionCheckRead</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="32218f91-208f-4e21-8be6-601c14a2557c">
+                      <SHORT-NAME>OIE_VehicleManufacturerECUSoftwareVersionNumber_ConditionCheckRead</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/VehicleManufacturerECUSoftwareVersionNumber_ConditionCheckRead</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_VehicleManufacturerECUSoftwareVersionNumber</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VehicleManufacturerECUSoftwareVersionNumber/ConditionCheckRead</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="92179260-6b12-4911-ae35-1b89d4929284">
+                      <SHORT-NAME>OIE_RPM_WriteData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RPM_WriteData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_RPM</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_RPM/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="b36224f2-19b8-43ae-8657-7b5fb9adcf55">
+                      <SHORT-NAME>OIE_VINDataIdentifier_WriteData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/VINDataIdentifier_WriteData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_VINDataIdentifier</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VINDataIdentifier/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="76e302cf-43a5-4474-b0a3-6201a580770b">
+                      <SHORT-NAME>OIE_SystemSupplierECUHardwareVersionNumber_ReadData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/SystemSupplierECUHardwareVersionNumber_ReadData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_SystemSupplierECUHardwareVersionNumber</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_SystemSupplierECUHardwareVersionNumber/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="7076d755-5238-437c-b362-0683ce5464d7">
+                      <SHORT-NAME>OIE_BatVolt_WriteData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/BatVolt_WriteData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_BatVolt</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_BatVolt/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="26f19de7-44a3-4b0b-9109-a3822e9ea1da">
+                      <SHORT-NAME>OIE_ECT_ReadData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/ECT_ReadData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_ECT</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ECT/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="e7882479-aa83-4922-b594-4dcdd9891ade">
+                      <SHORT-NAME>OIE_ECT_WriteData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/ECT_WriteData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_ECT</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ECT/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="d91e5127-00f6-4d9c-9b59-926419fd9c90">
+                      <SHORT-NAME>OIE_VehicleManufacturerECUSoftwareVersionNumber_ReadData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/VehicleManufacturerECUSoftwareVersionNumber_ReadData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_VehicleManufacturerECUSoftwareVersionNumber</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VehicleManufacturerECUSoftwareVersionNumber/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="ebdc5a74-9c3c-4083-85b5-dd769d317cca">
+                      <SHORT-NAME>OIE_SystemSupplierECUSoftwareNumber_ConditionCheckRead</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/SystemSupplierECUSoftwareNumber_ConditionCheckRead</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_SystemSupplierECUSoftwareNumber</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_SystemSupplierECUSoftwareNumber/ConditionCheckRead</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="6d5509a6-7b61-4e88-9f96-0000884bd130">
+                      <SHORT-NAME>OIE_RPM_FreezeCurrentState</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RPM_FreezeCurrentState</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_RPM</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_RPM/FreezeCurrentState</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="f7bae5e1-cbf4-41e4-bf27-ab0e75fb5195">
+                      <SHORT-NAME>OIE_BatVolt_ConditionCheckRead</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/BatVolt_ConditionCheckRead</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_BatVolt</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_BatVolt/ConditionCheckRead</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="ac90afd7-6842-4562-9eb1-ca15f99f160f">
+                      <SHORT-NAME>OIE_SystemSupplierECUHardwareVersionNumber_ConditionCheckRead</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/SystemSupplierECUHardwareVersionNumber_ConditionCheckRead</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_SystemSupplierECUHardwareVersionNumber</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_SystemSupplierECUHardwareVersionNumber/ConditionCheckRead</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="9cd8932a-666b-4b4d-9334-c2e88ab2abbc">
+                      <SHORT-NAME>OIE_BatVolt_ReadData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/BatVolt_ReadData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_BatVolt</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_BatVolt/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="d001d763-a789-4194-b2ba-1dcd6cff3c88">
+                      <SHORT-NAME>OIE_RPM_ReadData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RPM_ReadData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_RPM</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_RPM/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="ae8bb34a-7f20-4ff5-b56b-8d1bf9342f4f">
+                      <SHORT-NAME>OIE_VINDataIdentifier_ReadData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/VINDataIdentifier_ReadData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_VINDataIdentifier</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VINDataIdentifier/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="4c7fbce4-638a-4f7e-9bc8-2c2b9c03a761">
+                      <SHORT-NAME>OIE_RPM_ShortTermAdjustment</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RPM_ShortTermAdjustment</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_RPM</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_RPM/ShortTermAdjustment</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="a180ea0b-196f-4639-aa7f-782d16f77c14">
+                      <SHORT-NAME>OIE_RPM_ConditionCheckRead</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RPM_ConditionCheckRead</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_RPM</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_RPM/ConditionCheckRead</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="15244889-aac6-4b5c-abfd-a745b208283a">
+                      <SHORT-NAME>OIE_ECT_ConditionCheckRead</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/ECT_ConditionCheckRead</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_ECT</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_ECT/ConditionCheckRead</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="f3820c90-3fae-4c1f-9a6c-36cb6a6811f9">
+                      <SHORT-NAME>OIE_VehicleSpeed_ConditionCheckRead</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/VehicleSpeed_ConditionCheckRead</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_VehicleSpeed</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VehicleSpeed/ConditionCheckRead</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="a4355b7a-a50b-4640-abe9-3afa2f870e2c">
+                      <SHORT-NAME>OIE_RPM_ReturnControlToECU</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RPM_ReturnControlToECU</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_RPM</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_RPM/ReturnControlToECU</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="cd1f42de-f966-4ce9-b3aa-04dec1d5c695">
+                      <SHORT-NAME>OIE_VehicleSpeed_ReadData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/VehicleSpeed_ReadData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_VehicleSpeed</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VehicleSpeed/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="51d39c80-b66e-4bda-98f1-d5d40ee7ab30">
+                      <SHORT-NAME>OIE_SystemSupplierECUSoftwareNumber_ReadData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/SystemSupplierECUSoftwareNumber_ReadData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_SystemSupplierECUSoftwareNumber</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_SystemSupplierECUSoftwareNumber/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="ab03e5b8-237e-4c2e-ac11-b53507119636">
+                      <SHORT-NAME>OIE_VINDataIdentifier_GetScalingInformation</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/VINDataIdentifier_GetScalingInformation</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DataServices_VINDataIdentifier</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DataServices_VINDataIdentifier/GetScalingInformation</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="2aed206b-c34c-47c0-870e-2835d0eacb19">
+                      <SHORT-NAME>OIE_InfotypeServices_VINInfoData_GetInfotypeValueData</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/InfotypeServices_VINInfoData_GetInfotypeValueData</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InfotypeServices_VINInfoData</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/InfotypeServices_VINInfoData/GetInfotypeValueData</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="4444fad0-8252-43cf-bcaf-823df532b661">
+                      <SHORT-NAME>OIE_RoutineServices_RID_0200h_CalibrationActuator_Start</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RID_0200h_CalibrationActuator_Start</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/RoutineServices_RID_0200h_CalibrationActuator</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RoutineServices_RID_0200h_CalibrationActuator/Start</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="72ab207a-8ee2-4e43-959a-41aac7b64838">
+                      <SHORT-NAME>OIE_RoutineServices_RID_0200h_CalibrationActuator_Stop</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RID_0200h_CalibrationActuator_Stop</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/RoutineServices_RID_0200h_CalibrationActuator</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RoutineServices_RID_0200h_CalibrationActuator/Stop</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="1cf501c6-e39e-4976-b388-b57116b24bb7">
+                      <SHORT-NAME>OIE_RoutineServices_RID_0200h_CalibrationActuator_RequestResults</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RID_0200h_CalibrationActuator_RequestResults</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/RoutineServices_RID_0200h_CalibrationActuator</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RoutineServices_RID_0200h_CalibrationActuator/RequestResults</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="b58f0b38-a275-4cb3-b58f-52ebf5266ef4">
+                      <SHORT-NAME>OIE_RequestFileTransfer_ProcessRequestAddFile</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RequestFileTransfer_ProcessRequestAddFile</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/RequestFileTransfer</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestFileTransfer/ProcessRequestAddFile</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="51cca1d4-c344-4fa7-90b3-8c3c1d9cbd7f">
+                      <SHORT-NAME>OIE_RequestFileTransfer_ProcessRequestDeleteFile</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RequestFileTransfer_ProcessRequestDeleteFile</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/RequestFileTransfer</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestFileTransfer/ProcessRequestDeleteFile</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="99039d0c-d8f0-48cd-aee9-13f188fbecf3">
+                      <SHORT-NAME>OIE_RequestFileTransfer_ProcessRequestReadDir</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RequestFileTransfer_ProcessRequestReadDir</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/RequestFileTransfer</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestFileTransfer/ProcessRequestReadDir</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="fdec9c99-f8b3-41f5-ae02-8d7b86197f41">
+                      <SHORT-NAME>OIE_RequestFileTransfer_ProcessRequestReadFile</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RequestFileTransfer_ProcessRequestReadFile</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/RequestFileTransfer</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestFileTransfer/ProcessRequestReadFile</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="1f3353c9-dc92-4934-8a0e-c46b158171ad">
+                      <SHORT-NAME>OIE_RequestFileTransfer_ProcessRequestReplaceFile</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RequestFileTransfer_ProcessRequestReplaceFile</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/RequestFileTransfer</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestFileTransfer/ProcessRequestReplaceFile</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="e36b0eb3-1e6a-487f-96c2-cf1cf1509b62">
+                      <SHORT-NAME>OIE_RequestFileTransfer_ReadFileOrDir</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RequestFileTransfer_ReadFileOrDir</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/RequestFileTransfer</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestFileTransfer/ReadFileOrDir</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="977c848d-373a-4057-a32d-2a7b8428e2e7">
+                      <SHORT-NAME>OIE_RequestFileTransfer_WriteFile</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/RequestFileTransfer_WriteFile</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/RequestFileTransfer</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/RequestFileTransfer/WriteFile</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="1fe5ed3e-9046-4f4c-8783-1ef0906fe9b6">
+                      <SHORT-NAME>OIE_ServiceRequestManufacturerNotification_DcmDsdServiceRequestManufacturerNotification0_Confirmation</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/DcmDsdServiceRequestManufacturerNotification0_Confirmation</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/ServiceRequestManufacturerNotification_DcmDsdServiceRequestManufacturerNotification0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/ServiceRequestNotification/Confirmation</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="b0e39181-bf74-476f-a8d5-b1cde1cdb247">
+                      <SHORT-NAME>OIE_ServiceRequestManufacturerNotification_DcmDsdServiceRequestManufacturerNotification0_Indication</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/DcmDsdServiceRequestManufacturerNotification0_Indication</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/ServiceRequestManufacturerNotification_DcmDsdServiceRequestManufacturerNotification0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/ServiceRequestNotification/Indication</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="9d99681c-9e53-49ad-8c9e-a2791a8a4023">
+                      <SHORT-NAME>OIE_ServiceRequestSupplierNotification_DcmDsdServiceRequestSupplierNotification0_Confirmation</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/DcmDsdServiceRequestSupplierNotification0_Confirmation</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/ServiceRequestSupplierNotification_DcmDsdServiceRequestSupplierNotification0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/ServiceRequestNotification/Confirmation</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="d2f6f0f0-eee8-41b4-b021-34d3487723c3">
+                      <SHORT-NAME>OIE_ServiceRequestSupplierNotification_DcmDsdServiceRequestSupplierNotification0_Indication</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/DcmDsdServiceRequestSupplierNotification0_Indication</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/ServiceRequestSupplierNotification_DcmDsdServiceRequestSupplierNotification0</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/ServiceRequestNotification/Indication</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="b0999a76-7a25-45eb-89f2-d5f7f17e6992">
+                      <SHORT-NAME>OIE_L9_CompareKey_SecurityAccess_L9_CompareKey</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/L9_CompareKey</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/SecurityAccess_L9</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/SecurityAccess_L9/CompareKey</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="a6645a2b-3dc4-4244-a88d-5a37f6becd6e">
+                      <SHORT-NAME>OIE_L9_GetSeed_SecurityAccess_L9_GetSeed</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService/L9_GetSeed</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/SecurityAccess_L9</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/SecurityAccess_L9/GetSeed</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="a2d7bd2d-203b-4c7e-84d3-8d3357647bc5">
+                      <SHORT-NAME>DO_NOT_REMPOVE</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SERVER-CALL-POINTS>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="32ee3fff-8e9f-49ad-9969-7dc3d4e0a8d2">
+                          <SHORT-NAME>SSCP_GetActiveProtocol</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DCM_Services</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DCMServices/GetActiveProtocol</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="76fe5afb-098f-4dee-8ac3-b93d03ee5a74">
+                          <SHORT-NAME>SSCP_GetSesCtrlType</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DCM_Services</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DCMServices/GetSesCtrlType</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="27bb5c83-e6ed-46f6-a246-c33af35d9a80">
+                          <SHORT-NAME>SSCP_GetSecurityLevel</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DCM_Services</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DCMServices/GetSecurityLevel</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="32ee3fff-8e9f-49ad-9969-7dc3d4e0a8d2">
+                          <SHORT-NAME>SSCP_ResetToDefaultSession</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/DCM_Services</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/DCMServices/ResetToDefaultSession</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                      </SERVER-CALL-POINTS>
+                      <SYMBOL>AppDcm_Runnable</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="81e8c080-f639-43f9-9d78-79895f170a09">
+                      <SHORT-NAME>CallbackDCMRequestServices_StartProtocol</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_StartProtocol</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="653d227c-6e4d-495b-88c8-0f4ed2c281c4">
+                      <SHORT-NAME>CallbackDCMRequestServices_StopProtocol</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_StopProtocol</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="67478f3b-9315-451c-81f8-9bbbf0926190">
+                      <SHORT-NAME>DiagnosticSessionControlNotification</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-ACCESS-POINTS>
+                        <MODE-ACCESS-POINT>
+                          <IDENT UUID="78673b0a-1b64-47a4-905d-c197b7de957f">
+                            <SHORT-NAME>MRAP_DiagnosticSessionControlNotification_modeNotificationPort_SessionControl_DcmDiagnosticSessionControl</SHORT-NAME>
+                          </IDENT>
+                          <MODE-GROUP-IREF>
+                            <R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                              <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/modeNotificationPort_SessionControl</CONTEXT-R-PORT-REF>
+                              <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_Dcm/ModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface/Dcm_DiagnosticSessionControlModeSwitchInterface</TARGET-MODE-GROUP-REF>
+                            </R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-ACCESS-POINT>
+                      </MODE-ACCESS-POINTS>
+                      <SYMBOL>AppDcm_DiagnosticSessionControlNotification</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="74398a70-0cd4-4df3-8801-2daee23a7119">
+                      <SHORT-NAME>UploadDownloadServices_ProcessTransferDataRead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_UploadDownloadServices_ProcessTransferDataRead</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="156610ec-2805-4d22-b665-825122c1436e">
+                      <SHORT-NAME>UploadDownloadServices_ProcessRequestDownload</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_UploadDownloadServices_ProcessRequestDownload</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="d45b4171-b99e-40b8-9c3d-69073d781822">
+                      <SHORT-NAME>UploadDownloadServices_ProcessTransferDataWrite</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_UploadDownloadServices_ProcessTransferDataWrite</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="0377e63c-fd38-412c-b17b-2954c6e64214">
+                      <SHORT-NAME>UploadDownloadServices_ProcessRequestTransferExit</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_UploadDownloadServices_ProcessRequestTransferExit</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="ebd63152-6341-44ef-9803-5f62909394cc">
+                      <SHORT-NAME>UploadDownloadServices_ProcessRequestUpload</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_UploadDownloadServices_ProcessRequestUpload</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="e3bf3dc0-5830-4452-b05d-c723a31aaf45">
+                      <SHORT-NAME>RequestControlServices_Tid1_RequestControl</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_RequestControlServices_Tid1_RequestControl</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="cabbb0fb-c952-4d11-b5f6-4194531d8bd6">
+                      <SHORT-NAME>ActuatorControl_ReadData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ReadData_ActuatorControl</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="9cdaa297-b6dd-427f-9e86-6497167c8389">
+                      <SHORT-NAME>ActuatorControl_WriteData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_WriteData_ActuatorControl</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="a7f3f7f7-31f2-48fb-9e29-5d18046812af">
+                      <SHORT-NAME>ActuatorControl_ConditionCheckRead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ConditionCheckRead_ActuatorControl</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="236b7386-1885-4b78-a236-c4c1db80a043">
+                      <SHORT-NAME>ActuatorControl_ResetToDefault</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ResetToDefault_ActuatorControl</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="dbd7d5ef-4096-4016-a659-6257716fca51">
+                      <SHORT-NAME>ActuatorControl_ReturnControlToECU</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ReturnControlToECU_ActuatorControl</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="f526270c-9e0b-47ea-aa3e-a92f9bc44bf5">
+                      <SHORT-NAME>ActuatorContro_FreezeCurrentState</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_FreezeCurrentState_ActuatorControl</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="3e221bfd-00c8-4d86-a074-561a17a7e6ec">
+                      <SHORT-NAME>ActuatorControl_ShortTermAdjustment</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ShortTermAdjustment_ActuatorControl</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="0084195c-aba8-4253-9b3b-458e45623d94">
+                      <SHORT-NAME>DID_0100h_0110h_ReadDidData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ReadDidData_DID_0100h_0110h</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="edfb2449-b5c2-4a42-8fc6-5a18f3148916">
+                      <SHORT-NAME>DID_0100h_0110h_WriteDidData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_WriteDidData_DID_0100h_0110h</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="012fe78f-09e0-432d-9a53-f852f98f7888">
+                      <SHORT-NAME>DID_0100h_0110h_IsDidAvailable</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_IsDidAvailable_DID_0100h_0110h</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="6432db3c-cf6d-474c-8b9f-f7732e17ce58">
+                      <SHORT-NAME>DID_0100h_0110h_ReadDidRangeDataLength</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ReadDidRangeDataLength_DID_0100h_0110h</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="eb974e1b-809b-496f-be5f-914f8dd02a07">
+                      <SHORT-NAME>SystemSupplierECUHardwareVersionNumber_ConditionCheckRead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ConditionCheckRead_SystemSupplierECUHardwareVersionNumber</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="0c8be581-e0da-4830-9e4a-d1cea8426ff7">
+                      <SHORT-NAME>VehicleSpeed_GetScalingInformation</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_GetScalingInformation_VehicleSpeed</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="2309b757-3497-4d1e-99d2-02301851030d">
+                      <SHORT-NAME>SystemSupplierECUHardwareVersionNumber_ReadData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ReadData_SystemSupplierECUHardwareVersionNumber</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="33ecef1c-f3aa-4d21-adfe-df6ba9eebe43">
+                      <SHORT-NAME>SystemSupplierECUSoftwareNumber_ConditionCheckRead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ConditionCheckRead_SystemSupplierECUSoftwareNumber</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="707e73f6-9ba5-4904-95f4-1f2c4b7790bf">
+                      <SHORT-NAME>VehicleSpeed_ReadData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ReadData_VehicleSpeed</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="09044032-be02-4903-aeab-3bb4b8118ce4">
+                      <SHORT-NAME>VehicleManufacturerECUSoftwareVersionNumber_ReadData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ReadData_VehicleManufacturerECUSoftwareVersionNumber</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="a9d5bf4e-3fc9-4c42-beec-d97b9dca626d">
+                      <SHORT-NAME>VINDataIdentifier_GetScalingInformation</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_GetScalingInformation_VINDataIdentifier</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="3c033126-0b24-4dc6-b945-bda6b99f1601">
+                      <SHORT-NAME>VINDataIdentifier_WriteData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_WriteData_VINDataIdentifier</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="6ef01830-e891-4511-80a0-d9d4ed81deda">
+                      <SHORT-NAME>VehicleManufacturerECUSoftwareVersionNumber_ConditionCheckRead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ConditionCheckRead_VehicleManufacturerECUSoftwareVersionNumber</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="433c60cf-0161-4d56-926a-c3ef1fb36a83">
+                      <SHORT-NAME>SystemSupplierECUSoftwareNumber_ReadData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ReadData_SystemSupplierECUSoftwareNumber</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="f6d93f1c-b7de-4772-ad55-53419d260f35">
+                      <SHORT-NAME>VINDataIdentifier_ConditionCheckRead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ConditionCheckRead_VINDataIdentifier</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="6dd5b5ee-8de2-4480-b3b5-f5f1b777c924">
+                      <SHORT-NAME>VINDataIdentifier_ReadData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ReadData_VINDataIdentifier</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="5c2a4baa-b2bb-44f4-acdc-1ec13219936e">
+                      <SHORT-NAME>VehicleSpeed_ConditionCheckRead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ConditionCheckRead_VehicleSpeed</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="260d578c-0d02-41f2-b490-b88f76586fad">
+                      <SHORT-NAME>BatVolt_ReadData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ReadData_BatVolt</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="59fbda8a-051a-4b5b-a514-1dec0c1e52fa">
+                      <SHORT-NAME>ECT_WriteData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_WriteData_ECT</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="d0fb1ff0-a128-4ec5-aeaf-627e4341e8dd">
+                      <SHORT-NAME>RPM_FreezeCurrentState</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_FreezeCurrentState_RPM</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="c27e3f5a-d9ed-4194-9029-35d9d271184f">
+                      <SHORT-NAME>BatVolt_WriteData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_WriteData_BatVolt</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="94222f5d-7bfc-4f63-a82d-91b5cc7daea4">
+                      <SHORT-NAME>RPM_ReturnControlToECU</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ReturnControlToECU_RPM</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="87f9d2e2-445d-4eb7-9936-bed695135cc3">
+                      <SHORT-NAME>RPM_ShortTermAdjustment</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ShortTermAdjustment_RPM</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="4a3f1e3d-1d17-4ee4-bf73-8078ab8220b7">
+                      <SHORT-NAME>RPM_ReadData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ReadData_RPM</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="fe29ae97-ac58-46e5-9fbc-16f7f27d8021">
+                      <SHORT-NAME>BatVolt_ConditionCheckRead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ConditionCheckRead_BatVolt</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="1ea6f6d1-9dec-4e32-b9f0-db3bb40b3316">
+                      <SHORT-NAME>RPM_WriteData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_WriteData_RPM</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="8433daa5-c3b7-4781-b1b6-5c551573bc77">
+                      <SHORT-NAME>RPM_ConditionCheckRead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ConditionCheckRead_RPM</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="1552a1fb-59d7-4da0-a043-46bfd4e7b81a">
+                      <SHORT-NAME>ECT_ReadData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ReadData_ECT</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="5949088d-16f6-4d5e-8ba8-6a073f1c354b">
+                      <SHORT-NAME>ECT_ConditionCheckRead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_ConditionCheckRead_ECT</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="d712f854-7b52-4846-a3e0-899dc832c503">
+                      <SHORT-NAME>InfotypeServices_VINInfoData_GetInfotypeValueData</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_InfotypeServices_VINInfoData_GetInfotypeValueData</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="6fca0f28-db23-4422-9f39-fc3921fb9631">
+                      <SHORT-NAME>RID_0200h_CalibrationActuator_Start</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_Start_CalibrationActuator</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="5f045316-c6ca-4a46-a94c-8f0c1e02d3cd">
+                      <SHORT-NAME>RID_0200h_CalibrationActuator_Stop</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_Stop_CalibrationActuator</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="f8479fea-696e-4c8f-a10e-b0e1b08703bf">
+                      <SHORT-NAME>RID_0200h_CalibrationActuator_RequestResults</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_RequestResults_CalibrationActuator</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="e1907162-0df3-4814-8d62-27a1bbbb3c87">
+                      <SHORT-NAME>RequestFileTransfer_ProcessRequestAddFile</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_RequestFileTransfer_ProcessRequestAddFile</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="8de81d0b-1d80-4650-8f8d-d924055a21f7">
+                      <SHORT-NAME>RequestFileTransfer_ProcessRequestDeleteFile</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_RequestFileTransfer_ProcessRequestDeleteFile</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="f23f4f7c-ab84-461f-8ac2-d86ca20f21ea">
+                      <SHORT-NAME>RequestFileTransfer_ProcessRequestReadDir</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_RequestFileTransfer_ProcessRequestReadDir</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="7665b737-ea08-4d4a-9e45-724731e64260">
+                      <SHORT-NAME>RequestFileTransfer_ProcessRequestReadFile</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_RequestFileTransfer_ProcessRequestReadFile</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="0ca96d5e-3b6e-4196-9f11-e51575f831cc">
+                      <SHORT-NAME>RequestFileTransfer_ProcessRequestReplaceFile</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_RequestFileTransfer_ProcessRequestReplaceFile</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="14043aa4-898e-4ec6-98c3-4258e9b7d00e">
+                      <SHORT-NAME>RequestFileTransfer_ReadFileOrDir</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_RequestFileTransfer_ReadFileOrDir</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="db3f83cf-f94f-498f-a04c-f27b94122860">
+                      <SHORT-NAME>RequestFileTransfer_WriteFile</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>App_Dcm_RequestFileTransfer_WriteFile</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="03fd584a-1445-43f3-9ee3-a352f481bae9">
+                      <SHORT-NAME>DcmDsdServiceRequestManufacturerNotification0_Confirmation</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>ServiceRequestManufacturerNotification_Confirmation</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="73467f47-d686-457e-b974-cedaff8edd1b">
+                      <SHORT-NAME>DcmDsdServiceRequestManufacturerNotification0_Indication</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>ServiceRequestManufacturerNotification_Indication</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="7167a04d-75a7-49aa-a9e2-471052f519ad">
+                      <SHORT-NAME>DcmDsdServiceRequestSupplierNotification0_Confirmation</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>ServiceRequestSupplierNotification_Confirmation</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="dc4dbf8a-62b2-426e-b225-43ff6d4bf141">
+                      <SHORT-NAME>DcmDsdServiceRequestSupplierNotification0_Indication</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>ServiceRequestSupplierNotification_Indication</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="2d244c2f-3315-47d0-a040-be23f82d5b03">
+                      <SHORT-NAME>L9_CompareKey</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppDcm_CompareKey_L9</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="f058cf45-1c07-4078-9531-1d1d30bc19d9">
+                      <SHORT-NAME>L9_GetSeed</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SERVER-CALL-POINTS>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="4adfca10-68bc-4e41-b30d-cfb5a420c144">
+                          <SHORT-NAME>SSCP_L9_GetSeed_CsmKeyManagement_RandomSeed_L9_RandomSeed</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/CsmKeyManagement_RandomSeed_L9</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Csm/ClientServerInterfaces/CsmKeyManagement_RandomSeed_L9/RandomSeed</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="e38f4b97-1af8-43ac-9137-d1567b1d5b51">
+                          <SHORT-NAME>SSCP_L9_GetSeed_RandomGenerate_L9_CsmRandomGenerateConfig_RandomGenerate</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/RandomGenerate_L9_CsmRandomGenerateConfig</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Csm/ClientServerInterfaces/RandomGenerate_L9_CsmRandomGenerateConfig/RandomGenerate</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                      </SERVER-CALL-POINTS>
+                      <SYMBOL>AppDcm_GetSeed_L9</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SERVICE-DEPENDENCYS>
+                    <SWC-SERVICE-DEPENDENCY UUID="c9ff5278-41de-4f7a-a50e-f5500f416d1f">
+                      <SHORT-NAME>SwcServiceDependency0</SHORT-NAME>
+                      <ASSIGNED-PORTS>
+                        <ROLE-BASED-PORT-ASSIGNMENT>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/modeNotificationPort_SessionControl</PORT-PROTOTYPE-REF>
+                          <ROLE>Custom</ROLE>
+                        </ROLE-BASED-PORT-ASSIGNMENT>
+                      </ASSIGNED-PORTS>
+                      <SERVICE-NEEDS>
+                        <BSW-MGR-NEEDS UUID="1b7372bb-a8b7-4b9e-9602-bc5bf926817c">
+                          <SHORT-NAME>BswMgrNeeds</SHORT-NAME>
+                        </BSW-MGR-NEEDS>
+                      </SERVICE-NEEDS>
+                    </SWC-SERVICE-DEPENDENCY>
+                  </SERVICE-DEPENDENCYS>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </APPLICATION-SW-COMPONENT-TYPE>
+            <SWC-IMPLEMENTATION>
+              <SHORT-NAME>App_Dcm_Implementation</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE>
+                  <SHORT-NAME>Default</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT />
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService/InternalBehaviors_DiagnosticService</BEHAVIOR-REF>
+            </SWC-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

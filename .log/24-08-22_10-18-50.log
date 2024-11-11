@@ -1,0 +1,330 @@
+C:\ts_mirr\python\Portable_Python_2.7.6.1\App\python.exe C:\ts_mirr\scons\scons-local-2.3.4\scons.py -f.\Build\site_scons\SConstruct Compile -j32
+scons: Reading SConscript files ...
+AutoEver Toolset Version: 2.6.0
+======{'INCLUDE_PATH': [['CryptoLib\\DummyCrypto\\usercode', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface\\config', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface\\inc_common', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface\\inc_services', 'Generated\\Bsw_Output\\inc', 'Generated\\Mcal_Output\\include', 'Static_Code\\Integration_Code\\Integration_Transformer\\fixedcode', 'Static_Code\\Integration_Code\\integration_Dcm_R44\\fixedcode', 'Static_Code\\Integration_Code\\integration_EcuM_R44\\usercode\\inc', 'Static_Code\\Integration_Code\\integration_Fota_F\\fixedcode', 'Static_Code\\Integration_Code\\integration_Fota_F\\usercode', 'Static_Code\\Integration_Code\\integration_Fota_F\\usercode\\infineon_ucb\\TC3XX\\inc', 'Static_Code\\Integration_Code\\integration_MemMap_R44\\fixedcode', 'Static_Code\\Integration_Code\\integration_MemMap_R44\\usercode', 'Static_Code\\Integration_Code\\integration_Mem_R44\\fixedcode\\inc', 'Static_Code\\Integration_Code\\integration_Mem_R44\\usercode\\inc', 'Static_Code\\Integration_Code\\integration_Pfls_R44\\usercode', 'Static_Code\\Integration_Code\\integration_Wdg\\usercode', 'Static_Code\\Modules\\BswM_R44\\delivery\\inc', 'Static_Code\\Modules\\CanCM_R44\\delivery\\inc', 'Static_Code\\Modules\\CanIf_R44\\delivery\\inc', 'Static_Code\\Modules\\CanNm_R44\\delivery\\inc', 'Static_Code\\Modules\\CanSM_R44\\delivery\\inc', 'Static_Code\\Modules\\CanTp_R44\\delivery\\inc', 'Static_Code\\Modules\\CanTrcv_R44\\delivery\\inc', 'Static_Code\\Modules\\ComM_R44\\delivery\\inc', 'Static_Code\\Modules\\ComXf_R44\\delivery\\inc', 'Static_Code\\Modules\\Com_R44\\delivery\\inc', 'Static_Code\\Modules\\Crc_R44\\delivery\\inc', 'Static_Code\\Modules\\CryIf_R44\\delivery\\inc', 'Static_Code\\Modules\\Crypto_76_HaeModule_R44\\delivery\\inc', 'Static_Code\\Modules\\Csm_R44\\delivery\\inc', 'Static_Code\\Modules\\Dcm_R44\\delivery\\inc', 'Static_Code\\Modules\\Dem_R44\\delivery\\inc', 'Static_Code\\Modules\\Det_R44\\delivery\\inc', 'Static_Code\\Modules\\E2EXf_R44\\delivery\\inc', 'Static_Code\\Modules\\E2E_R44\\delivery\\inc', 'Static_Code\\Modules\\EcuM_R44\\delivery\\inc', 'Static_Code\\Modules\\FiM_R44\\delivery\\inc', 'Static_Code\\Modules\\Fota_R44\\delivery\\inc', 'Static_Code\\Modules\\GeneralTypes_R44', 'Static_Code\\Modules\\IoHwAb_R44\\delivery\\inc', 'Static_Code\\Modules\\IpduM_R44\\delivery\\inc', 'Static_Code\\Modules\\KeyM_R44\\delivery\\inc', 'Static_Code\\Modules\\LinIf_R44\\delivery\\inc', 'Static_Code\\Modules\\LinSM_R44\\delivery\\inc', 'Static_Code\\Modules\\LinTrcv_R44\\delivery\\inc', 'Static_Code\\Modules\\MemIf_R44\\delivery\\inc', 'Static_Code\\Modules\\Mem_R44\\arch\\delivery\\inc', 'Static_Code\\Modules\\Mem_R44\\common\\delivery\\inc', 'Static_Code\\Modules\\Nm_R44\\delivery\\inc', 'Static_Code\\Modules\\NvM_R44\\delivery\\inc', 'Static_Code\\Modules\\Os_S32K31x_R44\\arch\\delivery\\inc', 'Static_Code\\Modules\\Os_S32K31x_R44\\common\\delivery\\inc', 'Static_Code\\Modules\\PduR_R44\\delivery\\inc', 'Static_Code\\Modules\\StbM_R44\\delivery\\inc', 'Static_Code\\Modules\\Tm_R44\\delivery\\inc', 'Static_Code\\Modules\\WdgIf_R44\\delivery\\inc', 'Static_Code\\Modules\\WdgM_R44\\delivery\\inc', 'Static_Code\\Modules\\Wdg_R44\\delivery\\inc', 'Static_Code\\Modules\\b_autosar_cdd_OsProfiler\\delivery\\inc', 'Static_Code\\Modules\\b_autosar_imp_Os_s32k31x\\delivery\\inc', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\Integration_Mcal', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Adc_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Base_nxp_S32K3xx\\header', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Base_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Can_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Crypto_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Dio_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Fee_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Fls_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Gpt_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Icu_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Lin_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Mcl_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Mcu_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Port_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Pwm_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Spi_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Wdg_nxp_S32K3xx\\include', 'Static_Code\\Reference_Code\\inc', 'Static_Code\\Reference_Code\\stub\\Dcm_Lin']], 'CCFLAGS': ['-DLINARO', '-DS32K312', '-Os', '-Wall', '-Werror=implicit-function-declaration', '-Wextra', '-Wno-sign-compare', '-Wstrict-prototypes', '-fdump-ipa-all', '-fno-common', '-fomit-frame-pointer', '-fstack-usage', '-ggdb3', '-mcpu=cortex-m7', '-mlittle-endian', '-msoft-float', '-mthumb', '-c'], 'CPPDEFINES': ['DISABLE_MCAL_INTERMODULE_ASR_CHECK', 'FLS_CONFIGSET=&Fls_Config', '__CORTEX_M7__', '__GCC__', '__S32K312__', 'MCAL_SUPPORT_MOBILGENE_2_0', 'NO_STDINT_H', 'CUSTON_STDINT_H=<BasicTypes.h>', '__DSB()=__asm("dsb")']}
+======{'INCLUDE_PATH': [['CryptoLib\\DummyCrypto\\usercode', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface\\config', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface\\inc_common', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface\\inc_services', 'Generated\\Bsw_Output\\inc', 'Generated\\Mcal_Output\\include', 'Static_Code\\Integration_Code\\Integration_Transformer\\fixedcode', 'Static_Code\\Integration_Code\\integration_Dcm_R44\\fixedcode', 'Static_Code\\Integration_Code\\integration_EcuM_R44\\usercode\\inc', 'Static_Code\\Integration_Code\\integration_Fota_F\\fixedcode', 'Static_Code\\Integration_Code\\integration_Fota_F\\usercode', 'Static_Code\\Integration_Code\\integration_Fota_F\\usercode\\infineon_ucb\\TC3XX\\inc', 'Static_Code\\Integration_Code\\integration_MemMap_R44\\fixedcode', 'Static_Code\\Integration_Code\\integration_MemMap_R44\\usercode', 'Static_Code\\Integration_Code\\integration_Mem_R44\\fixedcode\\inc', 'Static_Code\\Integration_Code\\integration_Mem_R44\\usercode\\inc', 'Static_Code\\Integration_Code\\integration_Pfls_R44\\usercode', 'Static_Code\\Integration_Code\\integration_Wdg\\usercode', 'Static_Code\\Modules\\BswM_R44\\delivery\\inc', 'Static_Code\\Modules\\CanCM_R44\\delivery\\inc', 'Static_Code\\Modules\\CanIf_R44\\delivery\\inc', 'Static_Code\\Modules\\CanNm_R44\\delivery\\inc', 'Static_Code\\Modules\\CanSM_R44\\delivery\\inc', 'Static_Code\\Modules\\CanTp_R44\\delivery\\inc', 'Static_Code\\Modules\\CanTrcv_R44\\delivery\\inc', 'Static_Code\\Modules\\ComM_R44\\delivery\\inc', 'Static_Code\\Modules\\ComXf_R44\\delivery\\inc', 'Static_Code\\Modules\\Com_R44\\delivery\\inc', 'Static_Code\\Modules\\Crc_R44\\delivery\\inc', 'Static_Code\\Modules\\CryIf_R44\\delivery\\inc', 'Static_Code\\Modules\\Crypto_76_HaeModule_R44\\delivery\\inc', 'Static_Code\\Modules\\Csm_R44\\delivery\\inc', 'Static_Code\\Modules\\Dcm_R44\\delivery\\inc', 'Static_Code\\Modules\\Dem_R44\\delivery\\inc', 'Static_Code\\Modules\\Det_R44\\delivery\\inc', 'Static_Code\\Modules\\E2EXf_R44\\delivery\\inc', 'Static_Code\\Modules\\E2E_R44\\delivery\\inc', 'Static_Code\\Modules\\EcuM_R44\\delivery\\inc', 'Static_Code\\Modules\\FiM_R44\\delivery\\inc', 'Static_Code\\Modules\\Fota_R44\\delivery\\inc', 'Static_Code\\Modules\\GeneralTypes_R44', 'Static_Code\\Modules\\IoHwAb_R44\\delivery\\inc', 'Static_Code\\Modules\\IpduM_R44\\delivery\\inc', 'Static_Code\\Modules\\KeyM_R44\\delivery\\inc', 'Static_Code\\Modules\\LinIf_R44\\delivery\\inc', 'Static_Code\\Modules\\LinSM_R44\\delivery\\inc', 'Static_Code\\Modules\\LinTrcv_R44\\delivery\\inc', 'Static_Code\\Modules\\MemIf_R44\\delivery\\inc', 'Static_Code\\Modules\\Mem_R44\\arch\\delivery\\inc', 'Static_Code\\Modules\\Mem_R44\\common\\delivery\\inc', 'Static_Code\\Modules\\Nm_R44\\delivery\\inc', 'Static_Code\\Modules\\NvM_R44\\delivery\\inc', 'Static_Code\\Modules\\Os_S32K31x_R44\\arch\\delivery\\inc', 'Static_Code\\Modules\\Os_S32K31x_R44\\common\\delivery\\inc', 'Static_Code\\Modules\\PduR_R44\\delivery\\inc', 'Static_Code\\Modules\\StbM_R44\\delivery\\inc', 'Static_Code\\Modules\\Tm_R44\\delivery\\inc', 'Static_Code\\Modules\\WdgIf_R44\\delivery\\inc', 'Static_Code\\Modules\\WdgM_R44\\delivery\\inc', 'Static_Code\\Modules\\Wdg_R44\\delivery\\inc', 'Static_Code\\Modules\\b_autosar_cdd_OsProfiler\\delivery\\inc', 'Static_Code\\Modules\\b_autosar_imp_Os_s32k31x\\delivery\\inc', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\Integration_Mcal', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Adc_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Base_nxp_S32K3xx\\header', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Base_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Can_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Crypto_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Dio_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Fee_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Fls_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Gpt_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Icu_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Lin_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Mcl_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Mcu_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Port_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Pwm_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Spi_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Wdg_nxp_S32K3xx\\include', 'Static_Code\\Reference_Code\\inc', 'Static_Code\\Reference_Code\\stub\\Dcm_Lin']], 'CCFLAGS': ['-DLINARO', '-DS32K312', '-Os', '-Wall', '-Werror=implicit-function-declaration', '-Wextra', '-Wno-sign-compare', '-Wstrict-prototypes', '-fdump-ipa-all', '-fno-common', '-fomit-frame-pointer', '-fstack-usage', '-ggdb3', '-mcpu=cortex-m7', '-mlittle-endian', '-msoft-float', '-mthumb', '-c'], 'CPPDEFINES': ['DISABLE_MCAL_INTERMODULE_ASR_CHECK', 'FLS_CONFIGSET=&Fls_Config', '__CORTEX_M7__', '__GCC__', '__S32K312__', 'MCAL_SUPPORT_MOBILGENE_2_0', 'NO_STDINT_H', 'CUSTON_STDINT_H=<BasicTypes.h>']}
+======{'INCLUDE_PATH': [['CryptoLib\\DummyCrypto\\usercode', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface\\config', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface\\inc_common', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface\\inc_services', 'Generated\\Bsw_Output\\inc', 'Generated\\Mcal_Output\\include', 'Static_Code\\Integration_Code\\Integration_Transformer\\fixedcode', 'Static_Code\\Integration_Code\\integration_Dcm_R44\\fixedcode', 'Static_Code\\Integration_Code\\integration_EcuM_R44\\usercode\\inc', 'Static_Code\\Integration_Code\\integration_Fota_F\\fixedcode', 'Static_Code\\Integration_Code\\integration_Fota_F\\usercode', 'Static_Code\\Integration_Code\\integration_Fota_F\\usercode\\infineon_ucb\\TC3XX\\inc', 'Static_Code\\Integration_Code\\integration_MemMap_R44\\fixedcode', 'Static_Code\\Integration_Code\\integration_MemMap_R44\\usercode', 'Static_Code\\Integration_Code\\integration_Mem_R44\\fixedcode\\inc', 'Static_Code\\Integration_Code\\integration_Mem_R44\\usercode\\inc', 'Static_Code\\Integration_Code\\integration_Pfls_R44\\usercode', 'Static_Code\\Integration_Code\\integration_Wdg\\usercode', 'Static_Code\\Modules\\BswM_R44\\delivery\\inc', 'Static_Code\\Modules\\CanCM_R44\\delivery\\inc', 'Static_Code\\Modules\\CanIf_R44\\delivery\\inc', 'Static_Code\\Modules\\CanNm_R44\\delivery\\inc', 'Static_Code\\Modules\\CanSM_R44\\delivery\\inc', 'Static_Code\\Modules\\CanTp_R44\\delivery\\inc', 'Static_Code\\Modules\\CanTrcv_R44\\delivery\\inc', 'Static_Code\\Modules\\ComM_R44\\delivery\\inc', 'Static_Code\\Modules\\ComXf_R44\\delivery\\inc', 'Static_Code\\Modules\\Com_R44\\delivery\\inc', 'Static_Code\\Modules\\Crc_R44\\delivery\\inc', 'Static_Code\\Modules\\CryIf_R44\\delivery\\inc', 'Static_Code\\Modules\\Crypto_76_HaeModule_R44\\delivery\\inc', 'Static_Code\\Modules\\Csm_R44\\delivery\\inc', 'Static_Code\\Modules\\Dcm_R44\\delivery\\inc', 'Static_Code\\Modules\\Dem_R44\\delivery\\inc', 'Static_Code\\Modules\\Det_R44\\delivery\\inc', 'Static_Code\\Modules\\E2EXf_R44\\delivery\\inc', 'Static_Code\\Modules\\E2E_R44\\delivery\\inc', 'Static_Code\\Modules\\EcuM_R44\\delivery\\inc', 'Static_Code\\Modules\\FiM_R44\\delivery\\inc', 'Static_Code\\Modules\\Fota_R44\\delivery\\inc', 'Static_Code\\Modules\\GeneralTypes_R44', 'Static_Code\\Modules\\IoHwAb_R44\\delivery\\inc', 'Static_Code\\Modules\\IpduM_R44\\delivery\\inc', 'Static_Code\\Modules\\KeyM_R44\\delivery\\inc', 'Static_Code\\Modules\\LinIf_R44\\delivery\\inc', 'Static_Code\\Modules\\LinSM_R44\\delivery\\inc', 'Static_Code\\Modules\\LinTrcv_R44\\delivery\\inc', 'Static_Code\\Modules\\MemIf_R44\\delivery\\inc', 'Static_Code\\Modules\\Mem_R44\\arch\\delivery\\inc', 'Static_Code\\Modules\\Mem_R44\\common\\delivery\\inc', 'Static_Code\\Modules\\Nm_R44\\delivery\\inc', 'Static_Code\\Modules\\NvM_R44\\delivery\\inc', 'Static_Code\\Modules\\Os_S32K31x_R44\\arch\\delivery\\inc', 'Static_Code\\Modules\\Os_S32K31x_R44\\common\\delivery\\inc', 'Static_Code\\Modules\\PduR_R44\\delivery\\inc', 'Static_Code\\Modules\\StbM_R44\\delivery\\inc', 'Static_Code\\Modules\\Tm_R44\\delivery\\inc', 'Static_Code\\Modules\\WdgIf_R44\\delivery\\inc', 'Static_Code\\Modules\\WdgM_R44\\delivery\\inc', 'Static_Code\\Modules\\Wdg_R44\\delivery\\inc', 'Static_Code\\Modules\\b_autosar_cdd_OsProfiler\\delivery\\inc', 'Static_Code\\Modules\\b_autosar_imp_Os_s32k31x\\delivery\\inc', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\Integration_Mcal', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Adc_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Base_nxp_S32K3xx\\header', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Base_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Can_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Crypto_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Dio_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Fee_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Fls_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Gpt_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Icu_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Lin_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Mcl_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Mcu_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Port_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Pwm_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Spi_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Wdg_nxp_S32K3xx\\include', 'Static_Code\\Reference_Code\\inc', 'Static_Code\\Reference_Code\\stub\\Dcm_Lin']], 'CCFLAGS': ['-Os', '-Wall', '-Werror=implicit-function-declaration', '-Wextra', '-Wno-sign-compare', '-Wstrict-prototypes', '-fdump-ipa-all', '-fno-common', '-fomit-frame-pointer', '-fstack-usage', '-ggdb3', '-mcpu=cortex-m7', '-mlittle-endian', '-msoft-float', '-mthumb', '-c'], 'CPPDEFINES': ['DISABLE_MCAL_INTERMODULE_ASR_CHECK', 'FLS_CONFIGSET=&Fls_Config', '__CORTEX_M7__', '__GCC__', '__S32K312__', 'MCAL_SUPPORT_MOBILGENE_2_0', 'NO_STDINT_H', 'CUSTON_STDINT_H=<BasicTypes.h>']}
+======{'INCLUDE_PATH': ['CryptoLib\\DummyCrypto\\usercode', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface\\config', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface\\inc_common', 'CryptoLib\\NXP_HSE\\hse_full_mem\\interface\\inc_services', 'Generated\\Bsw_Output\\inc', 'Generated\\Mcal_Output\\include', 'Static_Code\\Integration_Code\\Integration_Transformer\\fixedcode', 'Static_Code\\Integration_Code\\integration_Dcm_R44\\fixedcode', 'Static_Code\\Integration_Code\\integration_EcuM_R44\\usercode\\inc', 'Static_Code\\Integration_Code\\integration_Fota_F\\fixedcode', 'Static_Code\\Integration_Code\\integration_Fota_F\\usercode', 'Static_Code\\Integration_Code\\integration_Fota_F\\usercode\\infineon_ucb\\TC3XX\\inc', 'Static_Code\\Integration_Code\\integration_MemMap_R44\\fixedcode', 'Static_Code\\Integration_Code\\integration_MemMap_R44\\usercode', 'Static_Code\\Integration_Code\\integration_Mem_R44\\fixedcode\\inc', 'Static_Code\\Integration_Code\\integration_Mem_R44\\usercode\\inc', 'Static_Code\\Integration_Code\\integration_Pfls_R44\\usercode', 'Static_Code\\Integration_Code\\integration_Wdg\\usercode', 'Static_Code\\Modules\\BswM_R44\\delivery\\inc', 'Static_Code\\Modules\\CanCM_R44\\delivery\\inc', 'Static_Code\\Modules\\CanIf_R44\\delivery\\inc', 'Static_Code\\Modules\\CanNm_R44\\delivery\\inc', 'Static_Code\\Modules\\CanSM_R44\\delivery\\inc', 'Static_Code\\Modules\\CanTp_R44\\delivery\\inc', 'Static_Code\\Modules\\CanTrcv_R44\\delivery\\inc', 'Static_Code\\Modules\\ComM_R44\\delivery\\inc', 'Static_Code\\Modules\\ComXf_R44\\delivery\\inc', 'Static_Code\\Modules\\Com_R44\\delivery\\inc', 'Static_Code\\Modules\\Crc_R44\\delivery\\inc', 'Static_Code\\Modules\\CryIf_R44\\delivery\\inc', 'Static_Code\\Modules\\Crypto_76_HaeModule_R44\\delivery\\inc', 'Static_Code\\Modules\\Csm_R44\\delivery\\inc', 'Static_Code\\Modules\\Dcm_R44\\delivery\\inc', 'Static_Code\\Modules\\Dem_R44\\delivery\\inc', 'Static_Code\\Modules\\Det_R44\\delivery\\inc', 'Static_Code\\Modules\\E2EXf_R44\\delivery\\inc', 'Static_Code\\Modules\\E2E_R44\\delivery\\inc', 'Static_Code\\Modules\\EcuM_R44\\delivery\\inc', 'Static_Code\\Modules\\FiM_R44\\delivery\\inc', 'Static_Code\\Modules\\Fota_R44\\delivery\\inc', 'Static_Code\\Modules\\GeneralTypes_R44', 'Static_Code\\Modules\\IoHwAb_R44\\delivery\\inc', 'Static_Code\\Modules\\IpduM_R44\\delivery\\inc', 'Static_Code\\Modules\\KeyM_R44\\delivery\\inc', 'Static_Code\\Modules\\LinIf_R44\\delivery\\inc', 'Static_Code\\Modules\\LinSM_R44\\delivery\\inc', 'Static_Code\\Modules\\LinTrcv_R44\\delivery\\inc', 'Static_Code\\Modules\\MemIf_R44\\delivery\\inc', 'Static_Code\\Modules\\Mem_R44\\arch\\delivery\\inc', 'Static_Code\\Modules\\Mem_R44\\common\\delivery\\inc', 'Static_Code\\Modules\\Nm_R44\\delivery\\inc', 'Static_Code\\Modules\\NvM_R44\\delivery\\inc', 'Static_Code\\Modules\\Os_S32K31x_R44\\arch\\delivery\\inc', 'Static_Code\\Modules\\Os_S32K31x_R44\\common\\delivery\\inc', 'Static_Code\\Modules\\PduR_R44\\delivery\\inc', 'Static_Code\\Modules\\StbM_R44\\delivery\\inc', 'Static_Code\\Modules\\Tm_R44\\delivery\\inc', 'Static_Code\\Modules\\WdgIf_R44\\delivery\\inc', 'Static_Code\\Modules\\WdgM_R44\\delivery\\inc', 'Static_Code\\Modules\\Wdg_R44\\delivery\\inc', 'Static_Code\\Modules\\b_autosar_cdd_OsProfiler\\delivery\\inc', 'Static_Code\\Modules\\b_autosar_imp_Os_s32k31x\\delivery\\inc', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\Integration_Mcal', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Adc_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Base_nxp_S32K3xx\\header', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Base_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Can_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Crypto_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Dio_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Fee_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Fls_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Gpt_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Icu_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Lin_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Mcl_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Mcu_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Port_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Pwm_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Spi_nxp_S32K3xx\\include', 'Static_Code\\Modules\\b_mcal_nxp_S32K3xx\\b_mcal_Wdg_nxp_S32K3xx\\include', 'Static_Code\\Reference_Code\\inc', 'Static_Code\\Reference_Code\\stub\\Dcm_Lin'], 'CCFLAGS': ['-c', '-Os', '-ggdb3', '-mcpu=cortex-m7', '-mthumb', '-mlittle-endian', '-fomit-frame-pointer', '-msoft-float', '-fno-common', '-Wall', '-Wextra', '-Wstrict-prototypes', '-Wno-sign-compare', '-fstack-usage', '-fdump-ipa-all', '-Werror=implicit-function-declaration', '-DLINARO', '-DS32K312', '-Wno-unknown-pragmas', '-DSTART_OS_MEMMAP'], 'CPPDEFINES': ['FLS_CONFIGSET=&Fls_Config', '__GCC__', '__GNU__', 'DISABLE_MCAL_INTERMODULE_ASR_CHECK', 'FLASH_START', 'NO_STDINT_H', 'CUSTON_STDINT_H=<BasicTypes.h>', 'MCAL_SUPPORT_MOBILGENE_2_0', '__CORETEX_M7__', '__S32K312__']}
+scons: done reading SConscript files.
+scons: Building targets ...
+Compiling 1th file : App_DiagnosticMonitor.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 2th file : App_DiagnosticService.c
+Compiling 3th file : App_Lin.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 4th file : App_Mode.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 5th file : App_OsHook.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 6th file : App_WdgM.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 7th file : Cache_Setup.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 8th file : LowPower_Callout.c
+Compiling 9th file : Startup.s
+Compiling 10th file : Lin_Diag.c
+Compiling 11th file : Os_stub.c
+Compiling 12th file : Dummy_HaeASK.c
+Compiling 13th file : Dummy_HaeCryptoLib.c
+Compiling 14th file : Dummy_HaeHsmDriver.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 15th file : Dummy_HaeSFM2.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 16th file : BswM.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 17th file : BswM_ActionList.c
+Compiling 18th file : BswM_Cfg.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 19th file : BswM_Ram.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 20th file : BswM_Rule.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 21th file : CanCM_Cfg.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 22th file : CanIf_Cfg.c
+Compiling 23th file : CanNm_Cfg.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 24th file : CanSM_Cfg.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 25th file : CanTp_Cfg.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 26th file : CanTrcv_Cfg.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 27th file : ComM_Cfg.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 28th file : ComXf_APIs.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 29th file : ComXf_Cfg.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 30th file : ComXf_PbCfg.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 31th file : Com_Cfg.c
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+scons: *** [Debug\Static_Code\Reference_Code\src\App_DiagnosticMonitor.o] Error 1
+Compiling 32th file : CryIf_Cfg.c
+scons: *** [Debug\Static_Code\Reference_Code\src\App_DiagnosticService.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\src\App_Lin.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\src\App_Mode.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\src\App_OsHook.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\src\App_WdgM.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\src\Cache_Setup.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\src\LowPower_Callout.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\src\Startup.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\stub\Dcm_Lin\Lin_Diag.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\stub\Os\Os_stub.o] Error 1
+scons: *** [Debug\CryptoLib\DummyCrypto\usercode\Dummy_HaeASK.o] Error 1
+scons: *** [Debug\CryptoLib\DummyCrypto\usercode\Dummy_HaeCryptoLib.o] Error 1
+scons: *** [Debug\CryptoLib\DummyCrypto\usercode\Dummy_HaeHsmDriver.o] Error 1
+scons: *** [Debug\CryptoLib\DummyCrypto\usercode\Dummy_HaeSFM2.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\BswM.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\BswM_ActionList.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\BswM_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\BswM_Ram.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\BswM_Rule.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\CanCM_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\CanIf_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\CanNm_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\CanSM_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\CanTp_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\CanTrcv_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\ComM_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\ComXf_APIs.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\ComXf_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\ComXf_PbCfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\Com_Cfg.o] Error 1
+arm-none-eabi-gcc.exe: error: 42: No such file or directory
+arm-none-eabi-gcc.exe: error: 43: No such file or directory
+arm-none-eabi-gcc.exe: error: 44: No such file or directory
+arm-none-eabi-gcc.exe: error: 45: No such file or directory
+arm-none-eabi-gcc.exe: error: 46: No such file or directory
+arm-none-eabi-gcc.exe: error: 47: No such file or directory
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+scons: *** [Debug\Generated\Bsw_Output\src\CryIf_Cfg.o] Error 1
+scons: building terminated because of errors.

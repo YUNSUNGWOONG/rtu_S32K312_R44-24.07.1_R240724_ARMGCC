@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="b1eefac1-f517-4c92-8397-d05d2b92fffd">
+      <SHORT-NAME>Bsw_StbM</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="f04a8cf0-f798-4172-9d35-dd6bd18f861e">
+          <SHORT-NAME>BswImplementation_StbM</SHORT-NAME>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>1.0.7</SW-VERSION>
+          <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/Svc_StbM/SwComponentTypes/SwcBswMapping_StbM</SWC-BSW-MAPPING-REF>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_StbM/StbM/BswInternalBehavior_StbM</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION UUID="b15a880e-1045-4cc7-8618-54ec9f2f9d81">
+          <SHORT-NAME>StbM</SHORT-NAME>
+          <CATEGORY>BSW_MODULE</CATEGORY>
+          <MODULE-ID>160</MODULE-ID>
+          <BSW-MODULE-DEPENDENCYS>
+            <BSW-MODULE-DEPENDENCY UUID="0284acb5-6cfe-4b36-9582-c085c669ceab">
+              <SHORT-NAME>BswModuleDependency_EthIf</SHORT-NAME>
+              <TARGET-MODULE-ID>65</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+            <BSW-MODULE-DEPENDENCY UUID="295f3b7d-682a-425b-a929-2228134359d7">
+              <SHORT-NAME>BswModuleDependency_Gpt</SHORT-NAME>
+              <TARGET-MODULE-ID>100</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+            <BSW-MODULE-DEPENDENCY UUID="a21f8033-49d8-44d8-8b5e-0738a5d36d84">
+              <SHORT-NAME>BswModuleDependency_Os</SHORT-NAME>
+              <TARGET-MODULE-ID>1</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+          </BSW-MODULE-DEPENDENCYS>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR UUID="2de6e4e7-2486-4bf3-acf8-3c878c17c75b">
+              <SHORT-NAME>BswInternalBehavior_StbM</SHORT-NAME>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA UUID="dc48c714-3532-483f-9713-e0d34c94246a">
+                  <SHORT-NAME>RAM_DATA_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <EXCLUSIVE-AREA-POLICYS>
+                <BSW-EXCLUSIVE-AREA-POLICY>
+                  <API-PRINCIPLE>COMMON</API-PRINCIPLE>
+                  <EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_StbM/StbM/BswInternalBehavior_StbM/RAM_DATA_PROTECTION</EXCLUSIVE-AREA-REF>
+                </BSW-EXCLUSIVE-AREA-POLICY>
+              </EXCLUSIVE-AREA-POLICYS>
+              <ENTITYS>
+                <BSW-CALLED-ENTITY UUID="c4a16b46-8034-4853-9f20-c305d479f569">
+                  <SHORT-NAME>BswCE_StbM_BusGetCurrentTime</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_BusGetCurrentTime</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="e52dcc7f-e5a3-430f-a638-2fc0ae14a8ed">
+                  <SHORT-NAME>BswCE_StbM_BusSetGlobalTime</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_StbM/StbM/BswInternalBehavior_StbM/RAM_DATA_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_BusSetGlobalTime</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="152d4324-4569-47ff-867e-206063c645ce">
+                  <SHORT-NAME>BswCE_StbM_GetCurrentTime</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_GetCurrentTime</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="90c7a774-8cd6-4d86-8c0b-5ae479bb93fb">
+                  <SHORT-NAME>BswCE_StbM_GetCurrentTimeExtended</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_GetCurrentTimeExtended</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="e53b4351-cc4e-47ab-b96f-fc94a6f8d461">
+                  <SHORT-NAME>BswCE_StbM_GetCurrentVirtualLocalTime</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_GetCurrentVirtualLocalTime</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="7b27210e-3030-4f35-b772-f575c07531dc">
+                  <SHORT-NAME>BswCE_StbM_GetMasterConfig</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_GetMasterConfig</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="265cd32e-422f-4224-b20f-2f1d7b79396a">
+                  <SHORT-NAME>BswCE_StbM_GetOffset</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_GetOffset</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="909cab3b-3393-416f-b210-02f7f50b17b7">
+                  <SHORT-NAME>BswCE_StbM_GetOffsetTimeRecordHead</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_GetOffsetTimeRecordHead</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="3a628143-c290-478a-9f00-d64423630a16">
+                  <SHORT-NAME>BswCE_StbM_GetRateDeviation</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_GetRateDeviation</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="17d06a12-5885-4b50-8e5c-fac64e8d40cd">
+                  <SHORT-NAME>BswCE_StbM_GetSyncTimeRecordHead</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_GetSyncTimeRecordHead</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="86a922d2-3518-4e48-929c-903888350376">
+                  <SHORT-NAME>BswCE_StbM_GetTimeBaseStatus</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_GetTimeBaseStatus</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="7a97f2fe-4c6e-4d29-9e0d-664476882a7e">
+                  <SHORT-NAME>BswCE_StbM_GetTimeBaseUpdateCounter</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_GetTimeBaseUpdateCounter</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="d3e6b41f-bd1c-473e-9faf-52caf69b676e">
+                  <SHORT-NAME>BswCE_StbM_GetTimeLeap</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_GetTimeLeap</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="3d21f125-d885-41c3-ba4e-6656554489dc">
+                  <SHORT-NAME>BswCE_StbM_SetGlobalTime</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_StbM/StbM/BswInternalBehavior_StbM/RAM_DATA_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_SetGlobalTime</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="28c2cc51-72f3-44a2-a25a-e550988181e2">
+                  <SHORT-NAME>BswCE_StbM_SetOffset</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_StbM/StbM/BswInternalBehavior_StbM/RAM_DATA_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_SetOffset</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="c7ed8c03-cfd7-4aed-9fe6-10eb158fadcf">
+                  <SHORT-NAME>BswCE_StbM_SetRateCorrection</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_StbM/StbM/BswInternalBehavior_StbM/RAM_DATA_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_SetRateCorrection</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="ca18ee49-22a8-49da-834e-502fea56d97a">
+                  <SHORT-NAME>BswCE_StbM_SetUserData</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_SetUserData</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="f40ccbd0-44ca-430b-b890-8d68e5fc6512">
+                  <SHORT-NAME>BswCE_StbM_StartTimer</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_StartTimer</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="d4ed0451-1db4-4b1b-b4f4-5e70527871be">
+                  <SHORT-NAME>BswCE_StbM_TriggerTimeTransmission</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_TriggerTimeTransmission</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="dab045d5-0152-4d09-9222-4dec40a5c620">
+                  <SHORT-NAME>BswCE_StbM_UpdateGlobalTime</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_StbM/StbM/BswInternalBehavior_StbM/RAM_DATA_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSwComponents/StbM_UpdateGlobalTime</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-SCHEDULABLE-ENTITY UUID="38b24681-1ccc-4093-8973-28af602c7aff">
+                  <SHORT-NAME>BswSE_StbM_MainFunction</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_StbM/StbM/BswInternalBehavior_StbM/RAM_DATA_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.005</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_StbM/ImplementedEntries/StbMSchedules/StbM_MainFunction</IMPLEMENTED-ENTRY-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+              </ENTITYS>
+              <EVENTS>
+                <BSW-TIMING-EVENT UUID="eed30ab3-c057-468a-8106-5534637b551c">
+                  <SHORT-NAME>BswTE_StbM_MainFunction</SHORT-NAME>
+                  <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswSE_StbM_MainFunction</STARTS-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </BSW-TIMING-EVENT>
+              </EVENTS>
+              <DISTINGUISHED-PARTITIONS>
+                <BSW-DISTINGUISHED-PARTITION>
+                  <SHORT-NAME>BswDistinguishedPartition_StbM</SHORT-NAME>
+                </BSW-DISTINGUISHED-PARTITION>
+              </DISTINGUISHED-PARTITIONS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>DataTypeMappingSet</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="24b8bfa2-b595-498c-8e2f-8f3a1afeb3ee">
+          <SHORT-NAME>ExpectedEntries</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY UUID="56ad76d3-2ca3-44ba-87f9-d2a1a600ba29">
+              <SHORT-NAME>EthIf_GetCurrentTime</SHORT-NAME>
+              <SERVICE-ID>34</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLOUT</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE UUID="aefc0618-3cdf-4731-9fb7-5b7f1f8d975c">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="27bdb12a-fcb7-4e08-aa24-2d7c4c81d102">
+                  <SHORT-NAME>CtrlIdx</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="724c7c68-3124-4ec1-b0a7-b78d43c364fb">
+                  <SHORT-NAME>timeQualPtr</SHORT-NAME>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="4c6622ea-515b-48dc-8a59-d789137cf313">
+                  <SHORT-NAME>timeStampPtr</SHORT-NAME>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="a6b84cf7-d0d3-43c3-ae0b-c8bd69a1a11a">
+              <SHORT-NAME>GetCounterValue</SHORT-NAME>
+              <SERVICE-ID>16</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLOUT</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE UUID="90e937ca-baae-4bc4-966e-46bc7d3df5b8">
+                <SHORT-NAME>StatusType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="4d26ff5c-02a3-4d2c-ac18-94b08255792e">
+                  <SHORT-NAME>CounterID</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="13439a31-bdd5-44f7-8ac1-7e8f0792b6a2">
+                  <SHORT-NAME>Value</SHORT-NAME>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="6c638dd8-8cd8-4dc0-9c5e-c3373c044db5">
+              <SHORT-NAME>GetScheduleTableStatus</SHORT-NAME>
+              <SERVICE-ID>15</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLOUT</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE UUID="1bb7f32e-626e-4853-b3e3-23011a810947">
+                <SHORT-NAME>StatusType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="98df31f3-445c-40e6-b763-970e27d85ce8">
+                  <SHORT-NAME>ScheduleTableID</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="821b79ce-a00d-4591-aa40-f45f7ca7f5a2">
+                  <SHORT-NAME>ScheduleStatus</SHORT-NAME>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="0b26398f-29ab-408b-a80d-9d6c972904a4">
+              <SHORT-NAME>Gpt_StartTimer</SHORT-NAME>
+              <SERVICE-ID>5</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLOUT</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="98df31f3-445c-40e6-b763-970e27d85ce8">
+                  <SHORT-NAME>Channel</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="821b79ce-a00d-4591-aa40-f45f7ca7f5a2">
+                  <SHORT-NAME>Value</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="c52565c5-e3de-47f8-a9b6-ab21d27b01f7">
+              <SHORT-NAME>SyncScheduleTable</SHORT-NAME>
+              <SERVICE-ID>12</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLOUT</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE UUID="1bb7f32e-626e-4853-b3e3-23011a810947">
+                <SHORT-NAME>StatusType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="98df31f3-445c-40e6-b763-970e27d85ce8">
+                  <SHORT-NAME>ScheduleTableID</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="821b79ce-a00d-4591-aa40-f45f7ca7f5a2">
+                  <SHORT-NAME>Value</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="f457f149-0171-4d42-8733-8aa55145d39c">
+          <SHORT-NAME>ImplementedEntries</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="84cf3f64-731e-4b27-b042-81660a5a5c70">
+              <SHORT-NAME>StbMBswComponents</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-ENTRY UUID="e212f0d0-6208-44a0-96d7-d2e119cc3b63">
+                  <SHORT-NAME>StbM_GetVersionInfo</SHORT-NAME>
+                  <SERVICE-ID>5</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="3cae5fc6-4deb-402e-827a-334826e9f34e">
+                      <SHORT-NAME>versionInfo</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="46b3a764-73c5-4364-80e0-fc7f13b8dc07">
+                  <SHORT-NAME>StbM_Init</SHORT-NAME>
+                  <SERVICE-ID>0</SERVICE-ID>
+                  <IS-REENTRANT>false</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="c86eedb9-4ec3-47f7-b3e6-4d415760d223">
+                      <SHORT-NAME>ConfigPtr</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="4375dd7c-73e0-42fb-bd3e-0cbf577a68a2">
+              <SHORT-NAME>StbMCallbacks</SHORT-NAME>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="dc4c884a-919c-47d2-b571-1549eefa30e2">
+              <SHORT-NAME>StbMSchedules</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-ENTRY UUID="8b78b0e5-92ef-4434-9bfe-3bf0de6d4896">
+                  <SHORT-NAME>StbM_MainFunction</SHORT-NAME>
+                  <SERVICE-ID>4</SERVICE-ID>
+                  <IS-REENTRANT>false</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="d15b6366-a2cf-4d0e-bb5a-a80c36d0fde6">
+              <SHORT-NAME>StbMSwComponents</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-ENTRY UUID="725363c8-f68f-4c56-a508-e8379daf0ab9">
+                  <SHORT-NAME>StbM_BusGetCurrentTime</SHORT-NAME>
+                  <SERVICE-ID>7</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="e963d227-7a18-4bc6-85a5-1e0e4ebaeacc">
+                      <SHORT-NAME>globalTimePtr</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="be4d5741-284a-4586-b32b-cd7c5e5e10bb">
+                      <SHORT-NAME>localTimePtr</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="c7432229-2a64-41f1-b10e-f89af4fd543f">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="656cbbce-c9ed-4d47-a516-88956f700837">
+                  <SHORT-NAME>StbM_BusSetGlobalTime</SHORT-NAME>
+                  <SERVICE-ID>15</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="e963d227-7a18-4bc6-85a5-1e0e4ebaeacc">
+                      <SHORT-NAME>globalTimePtr</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="c7432229-2a64-41f1-b10e-f89af4fd543f">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="be4d5741-284a-4586-b32b-cd7c5e5e10bb">
+                      <SHORT-NAME>localTimePtr</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="20884108-12a2-4502-86ac-d65559c80c61">
+                      <SHORT-NAME>measureDataPtr</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="b5ce21b1-e628-43cb-8587-7a1fa127f922">
+                  <SHORT-NAME>StbM_GetCurrentTime</SHORT-NAME>
+                  <SERVICE-ID>7</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="4fbcaff9-81b8-4215-8fb8-df0b5e476a15">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="be4d5741-284a-4586-b32b-cd7c5e5e10bb">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="b560093a-0a6b-40f2-a260-3c35ad1929c7">
+                  <SHORT-NAME>StbM_GetCurrentTimeExtended</SHORT-NAME>
+                  <SERVICE-ID>8</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="4fbcaff9-81b8-4215-8fb8-df0b5e476a15">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="be4d5741-284a-4586-b32b-cd7c5e5e10bb">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="158fa33a-23d3-4316-bed1-83dedd522536">
+                  <SHORT-NAME>StbM_GetCurrentVirtualLocalTime</SHORT-NAME>
+                  <SERVICE-ID>30</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="4fbcaff9-81b8-4215-8fb8-df0b5e476a15">
+                      <SHORT-NAME>localTimePtr</SHORT-NAME>
+                      <CATEGORY>DATA_REFERENCE</CATEGORY>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="17480aee-789e-4e04-b595-bf1325361db1">
+                  <SHORT-NAME>StbM_GetMasterConfig</SHORT-NAME>
+                  <SERVICE-ID>30</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="c40fe0d8-e04a-4312-9af5-171fac8286f5">
+                      <SHORT-NAME>masterConfig</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="d1e51267-3245-4a1e-b48f-ae4e6ff80d27">
+                  <SHORT-NAME>StbM_GetOffset</SHORT-NAME>
+                  <SERVICE-ID>14</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="e963d227-7a18-4bc6-85a5-1e0e4ebaeacc">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="be4d5741-284a-4586-b32b-cd7c5e5e10bb">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="fea018b4-9767-48eb-b6b9-e6965f15ecce">
+                  <SHORT-NAME>StbM_GetOffsetTimeRecordHead</SHORT-NAME>
+                  <SERVICE-ID>23</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="e963d227-7a18-4bc6-85a5-1e0e4ebaeacc">
+                      <SHORT-NAME>offsetRecordTableHead</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="4b15d14e-9da0-4034-88c3-30461653e177">
+                  <SHORT-NAME>StbM_GetRateDeviation</SHORT-NAME>
+                  <SERVICE-ID>17</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="e963d227-7a18-4bc6-85a5-1e0e4ebaeacc">
+                      <SHORT-NAME>rateDeviation</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="7e042642-b039-49a5-8d01-9806c342e297">
+                  <SHORT-NAME>StbM_GetSyncTimeRecordHead</SHORT-NAME>
+                  <SERVICE-ID>22</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="e963d227-7a18-4bc6-85a5-1e0e4ebaeacc">
+                      <SHORT-NAME>syncRecordTableHead</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="b9ef07a8-526a-4731-b0bd-36066841228b">
+                  <SHORT-NAME>StbM_GetTimeBaseStatus</SHORT-NAME>
+                  <SERVICE-ID>20</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="e963d227-7a18-4bc6-85a5-1e0e4ebaeacc">
+                      <SHORT-NAME>syncTimeBaseStatus</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="f5ac90e2-3363-47c0-ace0-6eaa1e836efd">
+                      <SHORT-NAME>offsetTimeBaseStatus</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="eb23e8b4-d049-4f89-9553-8be94c4ed18a">
+                  <SHORT-NAME>StbM_GetTimeBaseUpdateCounter</SHORT-NAME>
+                  <SERVICE-ID>27</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>uint8</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="95580e12-2a09-4b4f-98bb-b84eae6ef816">
+                  <SHORT-NAME>StbM_GetTimeLeap</SHORT-NAME>
+                  <SERVICE-ID>18</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="e963d227-7a18-4bc6-85a5-1e0e4ebaeacc">
+                      <SHORT-NAME>timeJump</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="a823d908-39ee-4729-a649-a5f3dcccc5e9">
+                  <SHORT-NAME>StbM_SetGlobalTime</SHORT-NAME>
+                  <SERVICE-ID>11</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="4fbcaff9-81b8-4215-8fb8-df0b5e476a15">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="be4d5741-284a-4586-b32b-cd7c5e5e10bb">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="e1c153e8-35c7-49d4-b2b9-119a9ce81168">
+                  <SHORT-NAME>StbM_SetOffset</SHORT-NAME>
+                  <SERVICE-ID>13</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="e963d227-7a18-4bc6-85a5-1e0e4ebaeacc">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="be4d5741-284a-4586-b32b-cd7c5e5e10bb">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="e74b8e2c-d9a7-4418-9198-f30dc07f4ae7">
+                  <SHORT-NAME>StbM_SetRateCorrection</SHORT-NAME>
+                  <SERVICE-ID>18</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="e963d227-7a18-4bc6-85a5-1e0e4ebaeacc">
+                      <SHORT-NAME>rateDeviation</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="e3847d0e-5fd1-449e-a519-079f51be7881">
+                  <SHORT-NAME>StbM_SetUserData</SHORT-NAME>
+                  <SERVICE-ID>12</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="be4d5741-284a-4586-b32b-cd7c5e5e10bb">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="ba7a24c7-588e-4c9a-aa28-3747adcae736">
+                  <SHORT-NAME>StbM_StartTimer</SHORT-NAME>
+                  <SERVICE-ID>21</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="e963d227-7a18-4bc6-85a5-1e0e4ebaeacc">
+                      <SHORT-NAME>syncTimeBaseStatus</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="f5ac90e2-3363-47c0-ace0-6eaa1e836efd">
+                      <SHORT-NAME>expireTime</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="bf0e57e4-6d85-4d15-a8f2-4fa6af99d5ad">
+                  <SHORT-NAME>StbM_TriggerTimeTransmission</SHORT-NAME>
+                  <SERVICE-ID>28</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="25af955b-14db-4d69-81c1-4773dbf43c35">
+                  <SHORT-NAME>StbM_UpdateGlobalTime</SHORT-NAME>
+                  <SERVICE-ID>16</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <RETURN-TYPE UUID="a97af295-d7d2-4ab7-b8fd-0ac40da0a6ee">
+                    <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                    <DIRECTION>OUT</DIRECTION>
+                  </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="f1c9b961-100d-4978-b031-73e520546e70">
+                      <SHORT-NAME>timeBaseId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="4fbcaff9-81b8-4215-8fb8-df0b5e476a15">
+                      <SHORT-NAME>timeStamp</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="be4d5741-284a-4586-b32b-cd7c5e5e10bb">
+                      <SHORT-NAME>userData</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="db03616f-c4b5-4272-b4d3-2a625a7132e6">
+          <SHORT-NAME>ModeDeclarationGroup</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="4927abd2-9ab0-4633-aeb7-3d767b17b566">
+          <SHORT-NAME>ModeSwitchInterface</SHORT-NAME>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

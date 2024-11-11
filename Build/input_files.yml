@@ -1,0 +1,786 @@
+
+modules:
+   GenericValidationPath: Build\ruleID.csv
+   Fota:
+      DefaultInputs:
+         - Configuration\Ecu\Ecud_Fota.arxml
+   Mem:
+      DefaultInputs:
+         - Configuration\Ecu\Ecud_Mem_76_Pfls.arxml
+         - Static_Code\Modules\Mem_R44\generator\Mem_76_Pfls_ECU_Configuration_PDF.arxml
+   CanIf:
+      DefaultInputs:
+         - Static_Code\Modules\CanIf_R44\generator\CanIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanNm_R44\generator\CanNm_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanSM_R44\generator\CanSM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanTp_R44\generator\CanTp_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanTrcv_R44\generator\CanTrcv_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\PduR_R44\generator\PduR_ECU_Configuration_PDF.arxml
+         - Configuration\System\Bswmd\Bswmd_Can.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanIf.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanTp.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanTrcv.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Ecu\Mcal\Ecud_Can.arxml
+         - Configuration\Ecu\Ecud_CanNm.arxml
+         - Configuration\Ecu\Ecud_CanSM.arxml
+         - Configuration\Ecu\Ecud_CanTp.arxml
+         - Configuration\Ecu\Ecud_CanTrcv.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Ecu\Ecud_PduR.arxml
+         - Configuration\Ecu\Ecud_CanIf.arxml
+         - Configuration\Definition\Can_43_FLEXCAN_s32k312_mqfp172.epd
+         - Configuration\Ecu\Ecud_Nm.arxml
+         - Configuration\Ecu\Ecud_EcuM.arxml
+         - Static_Code\Modules\EcuM_R44\generator\EcuM_ECU_Configuration_PDF.arxml
+   CanSM:
+      DefaultInputs:
+         - Static_Code\Modules\CanIf_R44\generator\CanIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanSM_R44\generator\CanSM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\ComM_R44\generator\ComM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Dem_R44\generator\Dem_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanSM.arxml
+         - Configuration\Ecu\Ecud_CanIf.arxml
+         - Configuration\Ecu\Ecud_CanSM.arxml
+         - Configuration\Ecu\Ecud_Com.arxml
+         - Configuration\Ecu\Ecud_ComM.arxml
+         - Configuration\Ecu\Ecud_Dem.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Static_Code\Modules\CanTrcv_R44\generator\CanTrcv_ECU_Configuration_PDF.arxml
+         - Configuration\Ecu\Ecud_CanTrcv.arxml
+   CanTp:
+      DefaultInputs:
+         - Static_Code\Modules\CanIf_R44\generator\CanIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanTp_R44\generator\CanTp_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Com_R44\generator\Com_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\PduR_R44\generator\PduR_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanTp.arxml
+         - Configuration\Ecu\Ecud_CanTp.arxml
+         - Configuration\Ecu\Ecud_Com.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Ecu\Ecud_PduR.arxml
+         - Configuration\Ecu\Ecud_CanIf.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+   CanTrcv:
+      DefaultInputs:
+         - Configuration\System\DBImport\DataTypes\AUTOSAR_DataTypes.arxml
+         - Static_Code\Modules\CanTrcv_R44\generator\CanTrcv_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\EcuM_R44\generator\EcuM_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanTrcv.arxml
+         - Configuration\System\DBImport\DataTypes\CanStack_DataTypes.arxml
+         - Configuration\Ecu\Ecud_CanTrcv.arxml
+         - Configuration\Ecu\Ecud_EcuM.arxml
+         - Configuration\Ecu\Mcal\Ecud_Dio.arxml
+         - Configuration\System\Bswmd\Bswmd_Dio.arxml
+         - Configuration\Definition\Dio_s32k312_mqfp172.epd
+   Com:
+      DefaultInputs:
+         - Static_Code\Modules\Com_R44\generator\Com_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\PduR_R44\generator\PduR_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Com.arxml
+         - Configuration\Ecu\Ecud_Com.arxml
+         - Configuration\Ecu\Ecud_PduR.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Ecu\Ecud_ComM.arxml
+         - Static_Code\Modules\ComM_R44\generator\ComM_ECU_Configuration_PDF.arxml
+   ComM:
+      DefaultInputs:
+         - Configuration\System\DBImport\DataTypes\AUTOSAR_DataTypes.arxml
+         - Static_Code\Modules\ComM_R44\generator\ComM_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_ComM.arxml
+         - Configuration\System\DBImport\DataTypes\ComStack_DataTypes.arxml
+         - Configuration\Ecu\Ecud_Com.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Ecu\Ecud_NvM.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_ComM.arxml
+         - Configuration\Ecu\Ecud_ComM.arxml
+         - Configuration\Ecu\Ecud_CanNm.arxml
+         - Static_Code\Modules\Com_R44\generator\Com_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanNm_R44\generator\CanNm_ECU_Configuration_PDF.arxml
+   Crc:
+      DefaultInputs:
+         - Generated\Bsw_Output\bswmd\Bswmd_Crc.arxml
+         - Configuration\Ecu\Ecud_Crc.arxml
+         - Static_Code\Modules\Crc_R44\generator\Crc_ECU_Configuration_PDF.arxml
+   Det:
+      DefaultInputs:
+         - Configuration\System\DBImport\DataTypes\AUTOSAR_DataTypes.arxml
+         - Static_Code\Modules\Det_R44\generator\Det_ECU_Configuration_PDF.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Ecu\Ecud_Det.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Det.arxml
+   WdgM:
+      DefaultInputs:
+         - Static_Code\Modules\Dem_R44\generator\Dem_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\WdgIf_R44\generator\WdgIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\WdgM_R44\generator\WdgM_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_WdgM.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Ecu\Mcal\Ecud_Mcu.arxml
+         - Configuration\Ecu\Ecud_Os.arxml
+         - Configuration\Ecu\Ecud_Rte.arxml
+         - Configuration\Ecu\Ecud_WdgIf.arxml
+         - Configuration\Ecu\Ecud_WdgM.arxml
+         - Static_Code\Modules\Rte_R44\generator\SafeRTE_PDF.arxml
+         - Configuration\Ecu\Ecud_Dem.arxml
+         - Configuration\Definition\Os_ECU_Configuration_PDF_S32K312.arxml
+   IoHwAb:
+      DefaultInputs:
+         - Configuration\System\DBImport\DataTypes\AUTOSAR_DataTypes.arxml
+         - Static_Code\Modules\IoHwAb_R44\generator\IoHwAb_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_IoHwAb.arxml
+         - Configuration\Ecu\Ecud_Dem.arxml
+         - Configuration\Ecu\Mcal\Ecud_Dio.arxml
+         - Configuration\Ecu\Mcal\Ecud_Gpt.arxml
+         - Configuration\Ecu\Mcal\Ecud_Icu.arxml
+         - Configuration\Ecu\Ecud_IoHwAb.arxml
+         - Configuration\Ecu\Mcal\Ecud_Mcu.arxml
+         - Configuration\Ecu\Ecud_Os.arxml
+         - Configuration\Ecu\Mcal\Ecud_Port.arxml
+         - Configuration\Ecu\Mcal\Ecud_Pwm.arxml
+         - Configuration\Ecu\Mcal\Ecud_Adc.arxml
+   Os:
+      ModuleOptions:
+         LinkerFile : Build\S32K31x_RTSW.ld
+      DefaultInputs:
+         - Configuration\Ecu\Ecud_Os.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Os.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Static_Code\Modules\Os_S32K31x_R44\generator\Bswmdt_Os.template
+         - Static_Code\Modules\Os_S32K31x_R44\generator\Swcdt_Bsw_Os.template
+         - Configuration\Definition\Os_ECU_Configuration_PDF_S32K312.arxml
+   OsCommon:
+      ModuleOptions:
+         msnAlias: Os
+         ORTI:
+      DefaultInputs:
+         - Configuration\System\DBImport\DataTypes\AUTOSAR_DataTypes.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Os.arxml
+         - Configuration\Ecu\Ecud_Os.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_Os.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Definition\Os_ECU_Configuration_PDF_S32K312.arxml
+   PduR:
+      DefaultInputs:
+         - Static_Code\Modules\CanIf_R44\generator\CanIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanNm_R44\generator\CanNm_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanTp_R44\generator\CanTp_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Com_R44\generator\Com_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Dcm_R44\generator\Dcm_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\LinIf_R44\generator\LinIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\PduR_R44\generator\PduR_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_LinIf.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Ecu\Ecud_CanIf.arxml
+         - Configuration\Ecu\Ecud_CanNm.arxml
+         - Configuration\Ecu\Ecud_CanTp.arxml
+         - Configuration\Ecu\Ecud_Com.arxml
+         - Configuration\Ecu\Ecud_Dcm.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Ecu\Ecud_IpduM.arxml
+         - Configuration\Ecu\Ecud_LinIf.arxml
+         - Configuration\Ecu\Ecud_PduR.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_PduR.arxml
+         - Static_Code\Modules\IpduM_R44\generator\IpduM_ECU_Configuration_PDF.arxml
+   Dem:
+      DefaultInputs:
+         - Configuration\System\DBImport\DataTypes\AUTOSAR_DataTypes.arxml
+         - Static_Code\Modules\Dcm_R44\generator\Dcm_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Dem_R44\generator\Dem_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\FiM_R44\generator\FiM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\NvM_R44\generator\NvM_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Dem.arxml
+         - Configuration\Ecu\Ecud_Dem.arxml
+         - Configuration\Ecu\Ecud_FiM.arxml
+         - Configuration\Ecu\Ecud_NvM.arxml
+         - Configuration\Ecu\Ecud_Dcm.arxml
+   Csm:
+      DefaultInputs:
+         - Static_Code\Modules\CryIf_R44\generator\CryIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Crypto_76_HaeModule_R44\generator\AUTOSAR_Crypto_76_HaeModule_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Csm_R44\generator\Csm_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CryIf.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Ecu\Ecud_CryIf.arxml
+         - Configuration\Ecu\Ecud_Csm.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Csm.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Crypto_76_HaeModule.arxml
+         - Configuration\Ecu\Ecud_Crypto_76_HaeModule.arxml
+   Dcm:
+      DefaultInputs:
+         - Configuration\System\DBImport\DataTypes\AUTOSAR_DataTypes.arxml
+         - Static_Code\Modules\ComM_R44\generator\ComM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Csm_R44\generator\Csm_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Dcm_R44\generator\Dcm_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Dem_R44\generator\Dem_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\KeyM_R44\generator\KeyM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\NvM_R44\generator\NvM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\PduR_R44\generator\PduR_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Dcm.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Dem.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_NvM.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Ecu\Ecud_ComM.arxml
+         - Configuration\Ecu\Ecud_Csm.arxml
+         - Configuration\Ecu\Ecud_Dem.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Ecu\Ecud_KeyM.arxml
+         - Configuration\Ecu\Ecud_NvM.arxml
+         - Configuration\Ecu\Ecud_PduR.arxml
+         - Configuration\Ecu\Ecud_Dcm.arxml
+   ComXf:
+      DefaultInputs:
+         - Static_Code\Modules\ComXf_R44\generator\ComXf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Com_R44\generator\Com_ECU_Configuration_PDF.arxml
+         - Configuration\System\Swcd_App\App_E2EXf.arxml
+         - Configuration\System\Bswmd\Bswmd_ComXf.arxml
+         - Configuration\System\Composition\EcuExtract.arxml
+         - Configuration\Ecu\Ecud_Com.arxml
+         - Configuration\Ecu\Ecud_ComXf.arxml
+         - Configuration\System\DBImport\FD_CAN1.arxml
+         - Configuration\System\Transformer\Transformer.arxml
+         - Configuration\System\DBImport\DataTypes\AUTOSAR_DataTypes.arxml
+   E2EXf:
+      DefaultInputs:
+         - Static_Code\Modules\Dem_R44\generator\Dem_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\E2EXf_R44\generator\E2EXf_ECU_Configuration_PDF.arxml
+         - Configuration\System\Bswmd\Bswmd_E2EXf.arxml
+         - Configuration\Ecu\Ecud_Dem.arxml
+         - Configuration\System\DBImport\FD_CAN1.arxml
+         - Configuration\System\Transformer\Transformer.arxml
+         - Configuration\Ecu\Ecud_E2EXf.arxml
+   BswM:
+      ModuleOptions:
+         Compiler_Type: ghs
+      DefaultInputs:
+         - Static_Code\Modules\BswM_R44\generator\BswM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\ComM_R44\generator\ComM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Com_R44\generator\Com_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\EcuM_R44\generator\EcuM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\LinSM_R44\generator\LinSM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\NvM_R44\generator\NvM_ECU_Configuration_PDF.arxml
+         - Configuration\System\Bswmd\Bswmd_BswM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Dcm.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_EcuM.arxml
+         - Static_Code\Modules\EcuM_R44\generator\EcuM_PortInterface.arxml
+         - Configuration\Ecu\Ecud_BswM.arxml
+         - Configuration\Ecu\Ecud_Com.arxml
+         - Configuration\Ecu\Ecud_ComM.arxml
+         - Configuration\Ecu\Ecud_Crc.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Ecu\Ecud_EcuM.arxml
+         - Configuration\Ecu\Ecud_LinSM.arxml
+         - Configuration\Ecu\Ecud_NvM.arxml
+         - Configuration\Ecu\Ecud_Os.arxml
+         - Configuration\Ecu\Ecud_Rte.arxml
+         - Configuration\System\Swcd_Bsw\MODE_PortInterfaces.arxml
+         - Static_Code\Modules\Rte_R44\generator\SafeRTE_PDF.arxml
+         - Configuration\System\Swcd_Bsw\Swcd_Bsw_BswM.arxml
+         - Configuration\System\DBImport\DataTypes\AUTOSAR_DataTypes.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Definition\Os_ECU_Configuration_PDF_S32K312.arxml
+   WdgIf:
+      DefaultInputs:
+         - Static_Code\Modules\WdgIf_R44\generator\WdgIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Wdg_R44\generator\Wdg_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_WdgIf.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Wdg_76_Acw.arxml
+         - Configuration\Ecu\Mcal\Ecud_Wdg.arxml
+         - Configuration\Ecu\Ecud_Wdg_76_Acw.arxml
+         - Configuration\Ecu\Ecud_WdgIf.arxml
+         - Configuration\System\Bswmd\Bswmd_Wdg.arxml
+   Wdg:
+      DefaultInputs:
+         - Static_Code\Modules\Wdg_R44\generator\Wdg_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Wdg_76_Acw.arxml
+         - Configuration\Ecu\Mcal\Ecud_Dio.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Ecu\Mcal\Ecud_Gpt.arxml
+         - Configuration\Ecu\Ecud_Wdg_76_Acw.arxml
+         - Configuration\Ecu\Ecud_Dem.arxml
+         - Configuration\Definition\Gpt_s32k312_mqfp172.epd
+   MemIf:
+      DefaultInputs:
+         - Static_Code\Modules\MemIf_R44\generator\MemIf_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_MemIf.arxml
+         - Configuration\Ecu\Ecud_MemIf.arxml
+         - Configuration\Ecu\Mcal\Ecud_Fee.arxml
+         - Configuration\Ecu\Mcal\Ecud_Fls.arxml
+         - Configuration\Definition\Fls_s32k312_mqfp172.epd
+         - Static_Code\Modules\b_mcal_nxp_S32K3xx\b_mcal_Fee_nxp_S32K3xx\autosar\Fee.epd
+   NvM:
+      DefaultInputs:
+         - Static_Code\Modules\Dem_R44\generator\Dem_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\NvM_R44\generator\NvM_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_NvM.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Ecu\Ecud_NvM.arxml
+         - Configuration\Ecu\Ecud_Dem.arxml
+         - Configuration\Ecu\Mcal\Ecud_Fee.arxml
+         - Configuration\Ecu\Mcal\Ecud_Fls.arxml
+         - Configuration\Ecu\Ecud_Os.arxml
+         - Configuration\Definition\Os_ECU_Configuration_PDF_S32K312.arxml
+         - Configuration\Definition\Fls_s32k312_mqfp172.epd
+         - Static_Code\Modules\b_mcal_nxp_S32K3xx\b_mcal_Fee_nxp_S32K3xx\autosar\Fee.epd
+   LinTrcv:
+      DefaultInputs:
+         - Static_Code\Modules\EcuM_R44\generator\EcuM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\LinTrcv_R44\generator\LinTrcv_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_LinTrcv.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Ecu\Mcal\Ecud_Dio.arxml
+         - Configuration\Ecu\Ecud_EcuM.arxml
+         - Configuration\Ecu\Ecud_LinTrcv.arxml
+         - Configuration\Definition\Dio_s32k312_mqfp172.epd
+   LinIf:
+      DefaultInputs:
+         - Static_Code\Modules\ComM_R44\generator\ComM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Com_R44\generator\Com_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\LinIf_R44\generator\LinIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\LinTrcv_R44\generator\LinTrcv_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\PduR_R44\generator\PduR_ECU_Configuration_PDF.arxml
+         - Configuration\System\Bswmd\Bswmd_Lin.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_LinIf.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_LinTrcv.arxml
+         - Configuration\Ecu\Ecud_BswM.arxml
+         - Configuration\Ecu\Ecud_Com.arxml
+         - Configuration\Ecu\Ecud_ComM.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Ecu\Ecud_EcuM.arxml
+         - Configuration\Ecu\Mcal\Ecud_Lin.arxml
+         - Configuration\Ecu\Ecud_LinIf.arxml
+         - Configuration\Ecu\Ecud_LinTrcv.arxml
+         - Configuration\Ecu\Ecud_PduR.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Definition\Lin_43_LPUART_FLEXIO_s32k312_mqfp172.epd
+   LinSM:
+      DefaultInputs:
+         - Static_Code\Modules\ComM_R44\generator\ComM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\LinIf_R44\generator\LinIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\LinSM_R44\generator\LinSM_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_LinSM.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Ecu\Ecud_ComM.arxml
+         - Configuration\Ecu\Ecud_LinIf.arxml
+         - Configuration\Ecu\Ecud_LinSM.arxml
+   CryIf:
+      DefaultInputs:
+         - Static_Code\Modules\CryIf_R44\generator\CryIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Crypto_76_HaeModule_R44\generator\AUTOSAR_Crypto_76_HaeModule_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CryIf.arxml
+         - Configuration\System\Bswmd\Bswmd_Crypto.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Ecu\Ecud_CryIf.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Crypto_76_HaeModule.arxml
+         - Configuration\Ecu\Ecud_Crypto_76_HaeModule.arxml
+         - Configuration\Ecu\Mcal\Ecud_Crypto.arxml
+         - Configuration\Definition\Crypto_s32k312_mqfp172.epd
+   Fota:
+      DefaultInputs:
+         - Configuration\Ecu\Ecud_Fota.arxml
+         - Configuration\Ecu\Ecud_Mem_76_Pfls.arxml
+         - Static_Code\Modules\Fota_R44\generator\Fota_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Fota.arxml
+         - Configuration\Ecu\Ecud_Csm.arxml
+         - Static_Code\Modules\Csm_R44\generator\Csm_ECU_Configuration_PDF.arxml
+         - Configuration\Ecu\Ecud_CryIf.arxml
+         - Static_Code\Modules\CryIf_R44\generator\CryIf_ECU_Configuration_PDF.arxml
+         - Configuration\Ecu\Mcal\Ecud_Crypto.arxml
+         - Configuration\Definition\Crypto_s32k312_mqfp172.epd
+         - Static_Code\Modules\Crypto_76_HaeModule_R44\generator\AUTOSAR_Crypto_76_HaeModule_ECU_Configuration_PDF.arxml
+         - Configuration\Ecu\Ecud_Crypto_76_HaeModule.arxml
+         - Static_Code\Modules\Mem_R44\generator\Mem_76_Pfls_ECU_Configuration_PDF.arxml
+   Mem:
+      DefaultInputs:
+         - Generated\Bsw_Output\bswmd\Bswmd_Mem_76_Pfls.arxml
+         - Static_Code\Modules\Mem_R44\generator\Mem_76_Pfls_ECU_Configuration_PDF.arxml
+         - Configuration\Ecu\Ecud_Mem_76_Pfls.arxml
+   Rte:
+      DefaultInputs:
+         - Configuration\System\DBImport\DataTypes\AUTOSAR_DataTypes.arxml
+         - Configuration\System\Bswmd\Bswmd_BswM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanIf.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanSM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanTrcv.arxml
+         - Configuration\System\Bswmd\Bswmd_Can.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Com.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_ComM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_EcuM.arxml
+         - Configuration\System\Bswmd\Bswmd_Gpt.arxml
+         - Configuration\System\Bswmd\Bswmd_Mcu.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_PduR.arxml
+         - Configuration\System\Composition\EcuExtract.arxml
+         - Static_Code\Modules\EcuM_R44\generator\EcuM_PortInterface.arxml
+         - Configuration\Ecu\Ecud_Com.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Ecu\Ecud_Os.arxml
+         - Configuration\System\Transformer\Transformer.arxml
+         - Configuration\System\Swcd_App\App_Mode.arxml
+         - Configuration\Ecu\ECUCD_EcucValueCollection.arxml
+         - Configuration\Ecu\Ecud_Rte.arxml
+         - Configuration\System\Swcd_Bsw\MODE_PortInterfaces.arxml
+         - Configuration\System\Swcd_Bsw\Swcd_Bsw_BswM.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_EcuM.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_Os.arxml
+         - Configuration\System\Bswmd\Bswmd_Adc.arxml
+         - Configuration\Ecu\Mcal\Ecud_Adc.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Det.arxml
+         - Configuration\System\Bswmd\Bswmd_Icu.arxml
+         - Configuration\System\Bswmd\Bswmd_Pwm.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_IoHwAb.arxml
+         - Configuration\Ecu\Ecud_CanTp.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanTp.arxml
+         - Configuration\Ecu\Mcal\Ecud_Wdg.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Crc.arxml
+         - Configuration\System\Bswmd\Bswmd_Fee.arxml
+         - Configuration\System\Bswmd\Bswmd_Fee.arxml
+         - Configuration\System\Bswmd\Bswmd_Fee.arxml
+         - Configuration\System\Bswmd\Bswmd_Fee.arxml
+         - Configuration\System\Bswmd\Bswmd_Fee.arxml
+         - Configuration\System\Bswmd\Bswmd_Fee.arxml
+         - Configuration\System\Bswmd\Bswmd_Fee.arxml
+         - Configuration\System\Bswmd\Bswmd_Fee.arxml
+         - Configuration\System\Bswmd\Bswmd_Fee.arxml
+         - Configuration\System\Bswmd\Bswmd_Fee.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_MemIf.arxml
+         - Configuration\System\Bswmd\Bswmd_Spi.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_Dem.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Dem.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_NvM.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_NvM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Dcm.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_Dcm.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Csm.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_Csm.arxml
+         - Configuration\System\Swcd_App\App_E2EXf.arxml
+         - Configuration\System\Bswmd\Bswmd_E2EXf.arxml
+         - Configuration\System\Bswmd\Bswmd_ComXf.arxml
+         - Configuration\Ecu\Ecud_E2EXf.arxml
+         - Configuration\Ecu\Ecud_ComXf.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Wdg_76_Acw.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Os.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_ComM.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_IoHwAb.arxml
+         - Configuration\System\DBImport\FD_CAN1.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_Det.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_WdgM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanCM.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_WdgM.arxml
+         - Configuration\System\DBImport\DataTypes\ComStack_DataTypes.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Tm.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_StbM.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_StbM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanNm.arxml
+         - Configuration\System\DBImport\DataTypes\CanStack_DataTypes.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_FiM.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_FiM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_LinIf.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_LinSM.arxml
+         - Configuration\System\Swcd_App\App_Lin.arxml
+         - Configuration\System\Swcd_Bsw\Swcd_Lin.arxml
+         - Configuration\System\DBImport\LIN1.arxml
+         - Configuration\System\Bswmd\Bswmd_Lin.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_LinTrcv.arxml
+         - Configuration\Ecu\Ecud_BswM.arxml
+         - Configuration\Ecu\Ecud_CanCM.arxml
+         - Configuration\Ecu\Ecud_CanIf.arxml
+         - Configuration\Ecu\Ecud_CanNm.arxml
+         - Configuration\Ecu\Ecud_CanSM.arxml
+         - Configuration\Ecu\Ecud_CanTrcv.arxml
+         - Configuration\Ecu\Ecud_ComM.arxml
+         - Configuration\Ecu\Ecud_Crc.arxml
+         - Configuration\Ecu\Ecud_Csm.arxml
+         - Configuration\Ecu\Ecud_Dcm.arxml
+         - Configuration\Ecu\Ecud_Dem.arxml
+         - Configuration\Ecu\Ecud_Det.arxml
+         - Configuration\Ecu\Ecud_EcuM.arxml
+         - Configuration\Ecu\Ecud_FiM.arxml
+         - Configuration\Ecu\Ecud_IoHwAb.arxml
+         - Configuration\Ecu\Ecud_LinIf.arxml
+         - Configuration\Ecu\Ecud_LinSM.arxml
+         - Configuration\Ecu\Ecud_LinTrcv.arxml
+         - Configuration\Ecu\Ecud_MemIf.arxml
+         - Configuration\Ecu\Ecud_Nm.arxml
+         - Configuration\Ecu\Ecud_NvM.arxml
+         - Configuration\Ecu\Ecud_PduR.arxml
+         - Configuration\Ecu\Ecud_StbM.arxml
+         - Configuration\Ecu\Ecud_Tm.arxml
+         - Configuration\Ecu\Ecud_WdgIf.arxml
+         - Configuration\Ecu\Ecud_WdgM.arxml
+         - Configuration\Ecu\Ecud_Wdg_76_Acw.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_IpduM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_WdgIf.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Nm.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CryIf.arxml
+         - Configuration\Ecu\Ecud_CryIf.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_KeyM.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_KeyM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Crypto_76_HaeModule.arxml
+         - Configuration\System\Swcd_App\App_WdgM.arxml
+         - Configuration\System\Bswmd\Bswmd_Fee.arxml
+         - Configuration\System\Bswmd\Bswmd_Fls.arxml
+         - Configuration\System\Swcd_App\App_Dcm.arxml
+         - Configuration\System\Swcd_App\App_Dem.arxml
+         - Configuration\Ecu\Ecud_Crypto_76_HaeModule.arxml
+         - Configuration\Definition\Os_ECU_Configuration_PDF_S32K312.arxml
+         - Configuration\System\Bswmd\Bswmd_Dio.arxml
+         - Configuration\System\Bswmd\Bswmd_Mcl.arxml
+         - Configuration\System\Bswmd\Bswmd_Port.arxml
+         - Configuration\System\Bswmd\Bswmd_Wdg.arxml
+         - Configuration\System\Bswmd\Bswmd_Crypto.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Fota.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Fota.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Mem_76_Pfls.arxml
+         - Configuration\Ecu\Ecud_Fota.arxml
+         - Configuration\System\DBImport\LIN2.arxml
+   EcuM:
+      DefaultInputs:
+         - Configuration\System\DBImport\DataTypes\AUTOSAR_DataTypes.arxml
+         - Static_Code\Modules\CanIf_R44\generator\CanIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanNm_R44\generator\CanNm_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanSM_R44\generator\CanSM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanTp_R44\generator\CanTp_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanTrcv_R44\generator\CanTrcv_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\ComM_R44\generator\ComM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\ComXf_R44\generator\ComXf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Com_R44\generator\Com_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Crc_R44\generator\Crc_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CryIf_R44\generator\CryIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Crypto_76_HaeModule_R44\generator\AUTOSAR_Crypto_76_HaeModule_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Csm_R44\generator\Csm_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Dcm_R44\generator\Dcm_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Dem_R44\generator\Dem_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Det_R44\generator\Det_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\E2EXf_R44\generator\E2EXf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\EcuM_R44\generator\EcuM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\FiM_R44\generator\FiM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\IoHwAb_R44\generator\IoHwAb_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\KeyM_R44\generator\KeyM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\LinIf_R44\generator\LinIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\LinSM_R44\generator\LinSM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\LinTrcv_R44\generator\LinTrcv_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Nm_R44\generator\Nm_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\PduR_R44\generator\PduR_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\StbM_R44\generator\StbM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\WdgM_R44\generator\WdgM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Wdg_R44\generator\Wdg_ECU_Configuration_PDF.arxml
+         - Configuration\System\Bswmd\Bswmd_Adc.arxml
+         - Configuration\System\Bswmd\Bswmd_Can.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanCM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanIf.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanSM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanTp.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanTrcv.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Com.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_ComM.arxml
+         - Configuration\System\Bswmd\Bswmd_ComXf.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Crc.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CryIf.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Csm.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Dcm.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Dem.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Det.arxml
+         - Configuration\System\Bswmd\Bswmd_Dio.arxml
+         - Configuration\System\Bswmd\Bswmd_E2EXf.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_EcuM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_FiM.arxml
+         - Configuration\System\Bswmd\Bswmd_Gpt.arxml
+         - Configuration\System\Bswmd\Bswmd_Icu.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_IoHwAb.arxml
+         - Configuration\System\Bswmd\Bswmd_Lin.arxml
+         - Configuration\System\Bswmd\Bswmd_Mcu.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_PduR.arxml
+         - Configuration\System\Bswmd\Bswmd_Port.arxml
+         - Configuration\System\Bswmd\Bswmd_Pwm.arxml
+         - Configuration\System\Bswmd\Bswmd_Spi.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_StbM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Wdg_76_Acw.arxml
+         - Static_Code\Modules\EcuM_R44\generator\EcuM_PortInterface.arxml
+         - Configuration\Ecu\Mcal\Ecud_Adc.arxml
+         - Configuration\Ecu\Mcal\Ecud_Can.arxml
+         - Configuration\Ecu\Ecud_CanCM.arxml
+         - Configuration\Ecu\Ecud_CanIf.arxml
+         - Configuration\Ecu\Ecud_CanNm.arxml
+         - Configuration\Ecu\Ecud_CanSM.arxml
+         - Configuration\Ecu\Ecud_CanTp.arxml
+         - Configuration\Ecu\Ecud_CanTrcv.arxml
+         - Configuration\Ecu\Ecud_Com.arxml
+         - Configuration\Ecu\Ecud_ComM.arxml
+         - Configuration\Ecu\Ecud_ComXf.arxml
+         - Configuration\Ecu\Ecud_Crc.arxml
+         - Configuration\Ecu\Ecud_CryIf.arxml
+         - Configuration\Ecu\Ecud_Csm.arxml
+         - Configuration\Ecu\Ecud_Dcm.arxml
+         - Configuration\Ecu\Ecud_Dem.arxml
+         - Configuration\Ecu\Ecud_Det.arxml
+         - Configuration\Ecu\Mcal\Ecud_Dio.arxml
+         - Configuration\Ecu\Ecud_E2EXf.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Ecu\Ecud_EcuM.arxml
+         - Configuration\Ecu\Ecud_FiM.arxml
+         - Configuration\Ecu\Mcal\Ecud_Gpt.arxml
+         - Configuration\Ecu\Mcal\Ecud_Icu.arxml
+         - Configuration\Ecu\Ecud_IoHwAb.arxml
+         - Configuration\Ecu\Ecud_IpduM.arxml
+         - Configuration\Ecu\Ecud_KeyM.arxml
+         - Configuration\Ecu\Mcal\Ecud_Lin.arxml
+         - Configuration\Ecu\Ecud_LinIf.arxml
+         - Configuration\Ecu\Ecud_LinSM.arxml
+         - Configuration\Ecu\Ecud_LinTrcv.arxml
+         - Configuration\Ecu\Mcal\Ecud_Mcu.arxml
+         - Configuration\Ecu\Ecud_Nm.arxml
+         - Configuration\Ecu\Ecud_Os.arxml
+         - Configuration\Ecu\Ecud_PduR.arxml
+         - Configuration\Ecu\Mcal\Ecud_Port.arxml
+         - Configuration\Ecu\Mcal\Ecud_Pwm.arxml
+         - Configuration\Ecu\Mcal\Ecud_Spi.arxml
+         - Configuration\Ecu\Ecud_StbM.arxml
+         - Configuration\Ecu\Mcal\Ecud_Wdg.arxml
+         - Configuration\Ecu\Ecud_WdgM.arxml
+         - Configuration\Ecu\Ecud_Wdg_76_Acw.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_EcuM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Crypto_76_HaeModule.arxml
+         - Configuration\PostBuildManager\PostBuildVariants.arxml
+         - Static_Code\Modules\CanCM_R44\generator\CanCM_ECU_Configuration_PDF.arxml
+         - Configuration\Ecu\Ecud_Rte.arxml
+         - Static_Code\Modules\Rte_R44\generator\SafeRTE_PDF.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Static_Code\Modules\b_autosar_imp_Os_s32k31x\generator\OsImp_ECU_Configuration_PDF.arxml
+         - Configuration\System\Bswmd\Bswmd_OsImp.arxml
+         - Configuration\Ecu\Ecud_OsImp.arxml
+         - Configuration\Ecu\Ecud_BswM.arxml
+         - Static_Code\Modules\BswM_R44\generator\BswM_ECU_Configuration_PDF.arxml
+         - Configuration\Ecu\Ecud_Crypto_76_HaeModule.arxml
+         - Configuration\Definition\Adc_s32k312_mqfp172.epd
+         - Configuration\Definition\Dio_s32k312_mqfp172.epd
+         - Configuration\Definition\Gpt_s32k312_mqfp172.epd
+         - Configuration\Definition\Icu_s32k312_mqfp172.epd
+         - Configuration\Definition\Mcl_s32k312_mqfp172.epd
+         - Configuration\Definition\Mcu_s32k312_mqfp172.epd
+         - Configuration\Definition\Port_s32k312_mqfp172.epd
+         - Configuration\Definition\Pwm_s32k312_mqfp172.epd
+         - Configuration\Definition\Spi_s32k312_mqfp172.epd
+         - Configuration\Definition\Wdg_s32k312_mqfp172.epd
+         - Configuration\Definition\Os_ECU_Configuration_PDF_S32K312.arxml
+         - Configuration\Ecu\Mcal\Ecud_Mcl.arxml
+         - Configuration\System\Bswmd\Bswmd_Mcl.arxml
+         - Configuration\Definition\Crypto_s32k312_mqfp172.epd
+         - Configuration\Definition\Can_43_FLEXCAN_s32k312_mqfp172.epd
+         - Configuration\Definition\Lin_43_LPUART_FLEXIO_s32k312_mqfp172.epd
+         - Static_Code\Modules\IpduM_R44\generator\IpduM_ECU_Configuration_PDF.arxml
+   CanCM:
+      DefaultInputs:
+         - Static_Code\Modules\CanIf_R44\generator\CanIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanSM_R44\generator\CanSM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\ComM_R44\generator\ComM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Dem_R44\generator\Dem_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\EcuM_R44\generator\EcuM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\IoHwAb_R44\generator\IoHwAb_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanCM.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Ecu\Ecud_CanIf.arxml
+         - Configuration\Ecu\Ecud_CanSM.arxml
+         - Configuration\Ecu\Ecud_ComM.arxml
+         - Configuration\Ecu\Ecud_Dem.arxml
+         - Configuration\Ecu\Ecud_EcuM.arxml
+         - Configuration\Ecu\Ecud_IoHwAb.arxml
+         - Configuration\Ecu\Ecud_CanCM.arxml
+         - Static_Code\Modules\CanCM_R44\generator\CanCM_ECU_Configuration_PDF.arxml
+   Nm:
+      DefaultInputs:
+         - Static_Code\Modules\CanNm_R44\generator\CanNm_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\ComM_R44\generator\ComM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Nm_R44\generator\Nm_ECU_Configuration_PDF.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Ecu\Ecud_CanNm.arxml
+         - Configuration\Ecu\Ecud_ComM.arxml
+         - Configuration\Ecu\Ecud_Nm.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Nm.arxml
+   Tm:
+      DefaultInputs:
+         - Static_Code\Modules\Tm_R44\generator\Tm_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Tm.arxml
+         - Configuration\Ecu\Ecud_Tm.arxml
+   StbM:
+      DefaultInputs:
+         - Static_Code\Modules\StbM_R44\generator\StbM_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_StbM.arxml
+         - Configuration\Ecu\Mcal\Ecud_Gpt.arxml
+         - Configuration\Ecu\Ecud_Os.arxml
+         - Configuration\Ecu\Ecud_StbM.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_StbM.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Definition\Os_ECU_Configuration_PDF_S32K312.arxml
+         - Configuration\Definition\Gpt_s32k312_mqfp172.epd
+   CanNm:
+      DefaultInputs:
+         - Static_Code\Modules\CanIf_R44\generator\CanIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanNm_R44\generator\CanNm_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\CanSM_R44\generator\CanSM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\ComM_R44\generator\ComM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Nm_R44\generator\Nm_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\PduR_R44\generator\PduR_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CanNm.arxml
+         - Configuration\Ecu\Ecud_CanIf.arxml
+         - Configuration\Ecu\Ecud_CanSM.arxml
+         - Configuration\Ecu\Ecud_ComM.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Ecu\Ecud_Nm.arxml
+         - Configuration\Ecu\Ecud_PduR.arxml
+         - Configuration\Ecu\Ecud_CanNm.arxml
+         - Configuration\System\DBImport\DataTypes\AUTOSAR_DataTypes.arxml
+         - Configuration\System\DBImport\DataTypes\CanStack_DataTypes.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+   FiM:
+      DefaultInputs:
+         - Configuration\System\DBImport\DataTypes\AUTOSAR_DataTypes.arxml
+         - Static_Code\Modules\Dem_R44\generator\Dem_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\FiM_R44\generator\FiM_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_FiM.arxml
+         - Configuration\Ecu\Ecud_Dem.arxml
+         - Configuration\Ecu\Ecud_FiM.arxml
+   IpduM:
+      DefaultInputs:
+         - Static_Code\Modules\Com_R44\generator\Com_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\PduR_R44\generator\PduR_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_IpduM.arxml
+         - Configuration\Ecu\Ecud_Com.arxml
+         - Configuration\Ecu\Ecud_EcuC.arxml
+         - Configuration\Ecu\Ecud_PduR.arxml
+         - Configuration\Ecu\Ecud_IpduM.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Static_Code\Modules\IpduM_R44\generator\IpduM_ECU_Configuration_PDF.arxml
+   KeyM:
+      DefaultInputs:
+         - Static_Code\Modules\CryIf_R44\generator\CryIf_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Crypto_76_HaeModule_R44\generator\AUTOSAR_Crypto_76_HaeModule_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\Csm_R44\generator\Csm_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\KeyM_R44\generator\KeyM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\NvM_R44\generator\NvM_ECU_Configuration_PDF.arxml
+         - Static_Code\Modules\StbM_R44\generator\StbM_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_CryIf.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Csm.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_KeyM.arxml
+         - Configuration\Definition\ECUConfigurationParameters.arxml
+         - Configuration\Ecu\Ecud_CryIf.arxml
+         - Configuration\Ecu\Ecud_KeyM.arxml
+         - Configuration\Ecu\Ecud_NvM.arxml
+         - Configuration\Ecu\Ecud_StbM.arxml
+         - Configuration\Ecu\Ecud_Csm.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Crypto_76_HaeModule.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_NvM.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_StbM.arxml
+         - Generated\Bsw_Output\swcd\Swcd_Bsw_StbM.arxml
+         - Configuration\Ecu\Ecud_Crypto_76_HaeModule.arxml
+   Crypto_76_HaeModule:
+      DefaultInputs:
+         - Configuration\Ecu\Ecud_Crypto_76_HaeModule.arxml
+         - Configuration\Ecu\Ecud_CryIf.arxml
+         - Static_Code\Modules\Crypto_76_HaeModule_R44\generator\AUTOSAR_Crypto_76_HaeModule_ECU_Configuration_PDF.arxml
+         - Generated\Bsw_Output\bswmd\Bswmd_Crypto_76_HaeModule.arxml

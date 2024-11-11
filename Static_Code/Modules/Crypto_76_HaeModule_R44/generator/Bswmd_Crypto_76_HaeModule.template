@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0">
+    <AR-PACKAGES>
+    <AR-PACKAGE UUID="0eb2eb03-dd95-4d58-a7c8-92ddb107d576">
+      <SHORT-NAME>BSW_Crypto_76_HaeModule</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="9ae569ba-38d4-4a85-b221-3ece7bb12207">
+          <SHORT-NAME>BswImplementation_Crypto_76_HaeModule</SHORT-NAME>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>1.0.2</SW-VERSION>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/BSW_Crypto_76_HaeModule/Crypto/BswInternalBehavior_Crypto_76_HaeModule</BEHAVIOR-REF>
+          <VENDOR-API-INFIX>HaeModule</VENDOR-API-INFIX>
+          <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+            <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTRON/Crypto</VENDOR-SPECIFIC-MODULE-DEF-REF>
+          </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION UUID="c95f06f1-58e3-4ea3-a92c-2de6e2165c3a">
+          <SHORT-NAME>Crypto</SHORT-NAME>
+          <CATEGORY>BSW_MODULE</CATEGORY>
+          <IMPLEMENTED-ENTRYS>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_Init</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_GetVersionInfo</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_ProcessJob</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_CancelJob</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_KeyElementSet</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_KeySetValid</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_KeyElementGet</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_KeyElementCopy</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_KeyElementPartialCopy</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_KeyCopy</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_KeyElementIdsGet</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_RandomSeed</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_KeyGenerate</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_KeyDerive</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_KeyExchangePubValCalc</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_Crypto_76_HaeModule/Crypto_76_HaeModule_KeyExchangeSecretCalc</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <!-- Add BSW-MODULE-ENTRY-REF: Crypto_HaeHsm_MainFunction, Crypto_HaeCryptoLib_MainFunction -->
+          </IMPLEMENTED-ENTRYS>
+          <MODULE-ID>255</MODULE-ID>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR UUID="87af4a79-1f89-439b-ba47-768e13c11567">
+              <SHORT-NAME>BswInternalBehavior_Crypto_76_HaeModule</SHORT-NAME>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA UUID="5c1ea45b-46a9-448f-b8ae-7d7e4b475b6c">
+                  <SHORT-NAME>GLOBALVAR_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <EXCLUSIVE-AREA-POLICYS>
+                <BSW-EXCLUSIVE-AREA-POLICY>
+                  <API-PRINCIPLE>COMMON</API-PRINCIPLE>
+                  <EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/BSW_Crypto_76_HaeModule/Crypto/BswInternalBehavior_Crypto_76_HaeModule/GLOBALVAR_PROTECTION</EXCLUSIVE-AREA-REF>
+                </BSW-EXCLUSIVE-AREA-POLICY>
+              </EXCLUSIVE-AREA-POLICYS>
+              <ENTITYS>
+                <!-- Add BSW-SCHEDULABLE-ENTITY: BswSE_Crypto_HaeHsm_MainFunction, BswSE_Crypto_HaeCryptoLib_MainFunction -->
+              </ENTITYS>
+              <EVENTS>
+                <!-- Add BSW-TIMING-EVENT: BswTE_Crypto_HaeHsm_MainFunction, BswTE_Crypto_HaeCryptoLib_MainFunction -->
+              </EVENTS>
+              <DISTINGUISHED-PARTITIONS>
+                <BSW-DISTINGUISHED-PARTITION>
+                  <SHORT-NAME>BswDistinguishedPartition_Crypto_76_HaeModule</SHORT-NAME>
+                </BSW-DISTINGUISHED-PARTITION>
+              </DISTINGUISHED-PARTITIONS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_CancelJob</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_CancelJob</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This interface removes the provided job from the queue and cancels the processing of the job if possible.</L-2>
+          </DESC>
+          <SERVICE-ID>0x0e</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>objectId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">objectId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the Crypto Driver Object.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>job</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">job</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to the configuration of the job. Contains structures with job and primitive relevant information.</L-2>
+              </DESC>
+              <DIRECTION>INOUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Csm/ImplementationDataTypes/Crypto_JobInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_GetVersionInfo</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_GetVersionInfo</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Returns the version information of this module.</L-2>
+          </DESC>
+          <SERVICE-ID>0x01</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>versioninfo</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">versioninfo</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to where to store the version information of this module.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_VersionInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_Init</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_Init</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Initializes the Crypto Driver.</L-2>
+          </DESC>
+          <SERVICE-ID>0x00</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>configPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">configPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to a selected configuration structure</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Crypto/ImplementationDataTypes/Crypto_ConfigType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_KeyCopy</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_KeyCopy</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Copies a key with all its elements to another key in the same crypto driver.
+Note:
+If the actual key element is directly mapped to flash memory, there could be a bigger delay when calling this function (synchronous operation)</L-2>
+          </DESC>
+          <SERVICE-ID>0x10</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be the source element.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>targetCryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">targetCryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be the destination element.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_KeyDerive</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_KeyDerive</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Derives a new key by using the key elements in the given key identified by the cryptoKeyId. The given key contains the key elements for the password, salt. The derived key is stored in the key element with the id 1 of the key identified by targetCryptoKeyId. The number of iterations is given in the key element CRYPTO_KE_KEYDERIVATION_ITERATIONS.</L-2>
+          </DESC>
+          <SERVICE-ID>0x08</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key which is used for key derivation.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>targetCryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">targetCryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key which is used to store the derived key.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_KeyElementCopy</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_KeyElementCopy</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Copies a key element to another key element in the same crypto driver.
+Note:
+If the actual key element is directly mapped to flash memory, there could be a bigger delay when calling this function (synchronous operation)</L-2>
+          </DESC>
+          <SERVICE-ID>0x0f</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be the source element.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key element which shall be the source for the copy operation.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>targetCryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">targetCryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be the destination element.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>targetKeyElementId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">targetKeyElementId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key element which shall be the destination for the copy operation.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_KeyElementPartialCopy</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_KeyElementCopyPartial</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Copies a key element to another key element in the same crypto driver. The keyElementSourceOffset and keyElementCopyLength allows to copy just a part of the source key element into the destination. The offset of the target key is also specified with this function.</L-2>
+          </DESC>
+          <INTRODUCTION>
+            <P SI="ASR">
+              <L-1 L="EN">Note:
+If the actual key element is directly mapped to flash memory, there could be a bigger delay when calling this function (synchronous operation).</L-1>
+            </P>
+          </INTRODUCTION>
+          <SERVICE-ID>0x13</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be the source element.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key element which shall be the source for the copy operation.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementSourceOffset</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementSourceOffset</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This is the offset of the of the source key element indicating the start index of the copy operation.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementTargetOffset</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementTargetOffset</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This is the offset of the of the target key element indicating the start index of the copy operation.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementCopyLength</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementCopyLength</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Specifies the number of bytes that shall be copied.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>targetCryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">targetCryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be the destination element.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>targetKeyElementId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">targetKeyElementId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key element which shall be the destination for the copy operation.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_KeyElementGet</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_KeyElementGet</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This interface shall be used to get a key element of the key identified by the cryptoKeyId and store the key element in the memory location pointed by the result pointer.
+Note:
+If the actual key element is directly mapped to flash memory, there could be a bigger delay when calling this function (synchronous operation).</L-2>
+          </DESC>
+          <SERVICE-ID>0x06</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be returned.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key element which shall be returned.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>resultPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">resultPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the pointer of the buffer for the returned key element</L-2>
+              </DESC>
+              <DIRECTION>OUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>resultLengthPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">resultLengthPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds a pointer to a memory location in which the length information is stored. On calling this function this parameter shall contain the size of the buffer provided by resultPtr. If the key element is configured to allow partial access, this parameter contains the amount of data which should be read from the key element. The size may not be equal to the size of the provided buffer anymore. When the request has finished, the amount of data that has been stored shall be stored.</L-2>
+              </DESC>
+              <DIRECTION>INOUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_KeyElementIdsGet</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_KeyElementIdsGet</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Used to retrieve information which key elements are available in a given key.</L-2>
+          </DESC>
+          <SERVICE-ID>0x11</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose available element ids shall be exported.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementIdsPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementIdsPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Contains the pointer to the array where the ids of the key elements shall be stored.</L-2>
+              </DESC>
+              <DIRECTION>OUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementIdsLengthPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementIdsLengthPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds a pointer to the memory location in which the number of key elements in the given key is stored. On calling this function, this parameter shall contain the size of the buffer provided by keyElementIdsPtr. When the request has finished, the actual number of key elements shall be stored.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_KeyElementSet</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_KeyElementSet</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Sets the given key element bytes to the key identified by cryptoKeyId.</L-2>
+          </DESC>
+          <SERVICE-ID>0x04</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be set.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key element which shall be set.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the pointer to the key data which shall be set as key element.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyLength</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyLength</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Contains the length of the key element in bytes.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_KeyExchangePubValCalc</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_KeyExchangeCalcPubVal</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Calculates the public value for the key exchange and stores the public key in the memory location pointed by the public value pointer.</L-2>
+          </DESC>
+          <SERVICE-ID>0x09</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key which shall be used for the key exchange protocol.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>publicValuePtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">publicValuePtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Contains the pointer to the data where the public value shall be stored.</L-2>
+              </DESC>
+              <DIRECTION>OUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>publicValueLengthPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">publicValueLengthPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds a pointer to the memory location in which the public value length information is stored. On calling this function, this parameter shall contain the size of the buffer provided by publicValuePtr. When the request has finished, the actual length of the returned value shall be stored.</L-2>
+              </DESC>
+              <DIRECTION>INOUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_KeyExchangeSecretCalc</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_KeyExchangeCalcSecret</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Calculates the shared secret key for the key exchange with the key material of the key identified by the cryptoKeyId and the partner public key. The shared secret key is stored as a key element in the same key.</L-2>
+          </DESC>
+          <SERVICE-ID>0x0a</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key which shall be used for the key exchange protocol.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>partnerPublicValuePtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">partnerPublicValuePtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the pointer to the memory location which contains the partner's public value.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>partnerPublicValueLength</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">partnerPublicValueLength</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Contains the length of the partner's public value in bytes.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_KeyGenerate</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_KeyGenerate</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Generates new key material store it in the key identified by cryptoKeyId.</L-2>
+          </DESC>
+          <SERVICE-ID>0x07</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key which is to be updated with the generated value.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_KeySetValid</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_KeySetValid</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Sets the key state of the key identified by cryptoKeyId to valid.</L-2>
+          </DESC>
+          <SERVICE-ID>0x05</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key which shall be set to valid.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_ProcessJob</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_ProcessJob</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Performs the crypto primitive, that is configured in the job parameter.</L-2>
+          </DESC>
+          <SERVICE-ID>0x03</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>objectId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">objectId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the Crypto Driver Object.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>job</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">job</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to the configuration of the job. Contains structures with job and primitive relevant information but also pointer to result buffers.</L-2>
+              </DESC>
+              <DIRECTION>INOUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Csm/ImplementationDataTypes/Crypto_JobType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>Crypto_76_HaeModule_RandomSeed</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">Crypto_RandomSeed</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This function generates the internal seed state using the provided entropy source. Furthermore, this function can be used to update the seed state with new entropy</L-2>
+          </DESC>
+          <SERVICE-ID>0x0d</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryptoKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryptoKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key for which a new seed shall be generated.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>seedPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">seedPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds a pointer to the memory location which contains the data to feed the seed.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>seedLength</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">seedLength</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Contains the length of the seed in bytes.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <!-- Add BSW-MODULE-ENTRY: Crypto_HaeHsm_MainFunction, Crypto_HaeCryptoLib_MainFunction -->
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

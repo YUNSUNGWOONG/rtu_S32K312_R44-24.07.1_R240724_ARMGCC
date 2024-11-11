@@ -1,0 +1,1110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="8d91c7a6-645a-4848-a9fc-65eb9d0e279c">
+      <SHORT-NAME>ApplicationSwComponentTypesAR</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="cb3476c5-c3aa-4b34-a37d-f044c1766c40">
+          <SHORT-NAME>App_Lin_LIN1</SHORT-NAME>
+          <PORTS>
+            <R-PORT-PROTOTYPE UUID="c49d3c97-4ed1-4ebd-b69f-1dd40de7b911">
+              <SHORT-NAME>R_MSR_LIN1_SCHEDULE_INDICATION</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <MODE-SWITCH-RECEIVER-COM-SPEC>
+                  <ENHANCED-MODE-API>true</ENHANCED-MODE-API>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</MODE-GROUP-REF>
+                  <SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>true</SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>
+                </MODE-SWITCH-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="2a30edb9-6d91-4966-9822-236188bd0ee3">
+              <SHORT-NAME>P_SR_LIN1_SCHEDULE_CHANGE</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN1/SenderReceiverInterfaces/LinScheduleRequestInterface_LIN1/LinSchedule_LIN1</DATA-ELEMENT-REF>
+                  <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/MODE_LIN1/SenderReceiverInterfaces/LinScheduleRequestInterface_LIN1</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="c31871d5-0f1e-4e55-9512-2ced3e4a4d25">
+              <SHORT-NAME>CallbackAfterSchedule</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ServiceSwComponent_LIN/ClientServerInterface/CallbackAfterSchedule/lin_after_schedule</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ServiceSwComponent_LIN/ClientServerInterface/CallbackAfterSchedule</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="9ee493f0-02f9-43e3-a50a-18209723a2ae">
+              <SHORT-NAME>CallbackError</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ServiceSwComponent_LIN/ClientServerInterface/CallbackError/lin_cbk_err</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ServiceSwComponent_LIN/ClientServerInterface/CallbackError</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="deddcc5b-acec-4f19-a888-6d17d74580c2">
+              <SHORT-NAME>Gr_MsgGr_LIN1_Master_Cmd</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_Master_Cmd/MsgGr_LIN1_Master_Cmd</DATA-ELEMENT-REF>
+                  <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                  <NETWORK-REPRESENTATION>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL />
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </NETWORK-REPRESENTATION>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_Master_Cmd</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="940ca029-2f18-4609-91fa-e906e607bda5">
+              <SHORT-NAME>Gr_MsgGr_LIN1_MasterReq</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_MasterReq/MsgGr_LIN1_MasterReq</DATA-ELEMENT-REF>
+                  <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                  <NETWORK-REPRESENTATION>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL />
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </NETWORK-REPRESENTATION>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_MasterReq</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="82618f5b-cfd2-436e-aa32-9d4d3aabeb34">
+              <SHORT-NAME>Gr_MsgGr_LIN1_FR_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_FR_Sensor_Status/MsgGr_LIN1_FR_Sensor_Status</DATA-ELEMENT-REF>
+                  <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                  <NETWORK-REPRESENTATION>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL />
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </NETWORK-REPRESENTATION>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-DATA-STATUS>false</HANDLE-DATA-STATUS>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                  <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_FR_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="ecfdd45b-5025-4ff7-b9d6-de3a78b2437d">
+              <SHORT-NAME>Gr_MsgGr_LIN1_SlaveResp</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_SlaveResp/MsgGr_LIN1_SlaveResp</DATA-ELEMENT-REF>
+                  <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                  <NETWORK-REPRESENTATION>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL />
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </NETWORK-REPRESENTATION>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-DATA-STATUS>false</HANDLE-DATA-STATUS>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                  <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_SlaveResp</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="27e1cb66-4ce1-4fb3-86c8-8ada9d9988da">
+              <SHORT-NAME>Gr_MsgGr_LIN1_RR_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_RR_Sensor_Status/MsgGr_LIN1_RR_Sensor_Status</DATA-ELEMENT-REF>
+                  <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                  <NETWORK-REPRESENTATION>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL />
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </NETWORK-REPRESENTATION>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-DATA-STATUS>false</HANDLE-DATA-STATUS>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                  <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_RR_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="6b6d3a4a-80b9-43c7-84dc-2e9449521f9b">
+              <SHORT-NAME>Gr_MsgGr_LIN1_RCR_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_RCR_Sensor_Status/MsgGr_LIN1_RCR_Sensor_Status</DATA-ELEMENT-REF>
+                  <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                  <NETWORK-REPRESENTATION>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL />
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </NETWORK-REPRESENTATION>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-DATA-STATUS>false</HANDLE-DATA-STATUS>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                  <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_RCR_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="379ea6ca-0197-4677-853e-d71586e784d4">
+              <SHORT-NAME>Gr_MsgGr_LIN1_FCL_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_FCL_Sensor_Status/MsgGr_LIN1_FCL_Sensor_Status</DATA-ELEMENT-REF>
+                  <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                  <NETWORK-REPRESENTATION>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL />
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </NETWORK-REPRESENTATION>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-DATA-STATUS>false</HANDLE-DATA-STATUS>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                  <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_FCL_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="0778635c-dbdb-4623-ad78-71e4b663bf52">
+              <SHORT-NAME>Gr_MsgGr_LIN1_RCL_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_RCL_Sensor_Status/MsgGr_LIN1_RCL_Sensor_Status</DATA-ELEMENT-REF>
+                  <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                  <NETWORK-REPRESENTATION>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL />
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </NETWORK-REPRESENTATION>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-DATA-STATUS>false</HANDLE-DATA-STATUS>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                  <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_RCL_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="3438af06-425b-465c-9149-55534fcf4341">
+              <SHORT-NAME>Gr_MsgGr_LIN1_FL_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_FL_Sensor_Status/MsgGr_LIN1_FL_Sensor_Status</DATA-ELEMENT-REF>
+                  <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                  <NETWORK-REPRESENTATION>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL />
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </NETWORK-REPRESENTATION>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-DATA-STATUS>false</HANDLE-DATA-STATUS>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                  <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_FL_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="07936dc1-f714-4c1c-b5d8-f8f050c60570">
+              <SHORT-NAME>Gr_MsgGr_LIN1_FCR_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_FCR_Sensor_Status/MsgGr_LIN1_FCR_Sensor_Status</DATA-ELEMENT-REF>
+                  <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                  <NETWORK-REPRESENTATION>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL />
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </NETWORK-REPRESENTATION>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-DATA-STATUS>false</HANDLE-DATA-STATUS>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                  <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_FCR_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="529f48f8-b16c-4f3a-8750-7d8a73f4f7b7">
+              <SHORT-NAME>Gr_MsgGr_LIN1_RL_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_RL_Sensor_Status/MsgGr_LIN1_RL_Sensor_Status</DATA-ELEMENT-REF>
+                  <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                  <NETWORK-REPRESENTATION>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL />
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </NETWORK-REPRESENTATION>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-DATA-STATUS>false</HANDLE-DATA-STATUS>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                  <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN1/INTERFACES/Gr_MsgGr_LIN1_RL_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="07d09ce3-d44c-4c29-8216-ec6c642f98cf">
+              <SHORT-NAME>R_MSR_LIN2_SCHEDULE_INDICATION</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <MODE-SWITCH-RECEIVER-COM-SPEC>
+                  <ENHANCED-MODE-API>true</ENHANCED-MODE-API>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</MODE-GROUP-REF>
+                  <SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>true</SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>
+                </MODE-SWITCH-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="de3f0735-d8ba-4cef-b599-4120114469b7">
+              <SHORT-NAME>P_SR_LIN2_SCHEDULE_CHANGE</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN2/SenderReceiverInterfaces/LinScheduleRequestInterface_LIN2/LinSchedule_LIN2</DATA-ELEMENT-REF>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/MODE_LIN2/SenderReceiverInterfaces/LinScheduleRequestInterface_LIN2</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="cd94f6f6-a969-4a1b-b024-68795c549121">
+              <SHORT-NAME>Gr_MsgGr_LIN2_Master_Cmd</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_Master_Cmd/MsgGr_LIN2_Master_Cmd</DATA-ELEMENT-REF>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_Master_Cmd</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="0fc27868-780c-4423-b885-a73fd53f10c8">
+              <SHORT-NAME>Gr_MsgGr_LIN2_MasterReq</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_MasterReq/MsgGr_LIN2_MasterReq</DATA-ELEMENT-REF>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_MasterReq</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="c652b528-e48d-462a-a9bb-f5a37c03bd36">
+              <SHORT-NAME>Gr_MsgGr_LIN2_SlaveResp</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_SlaveResp/MsgGr_LIN2_SlaveResp</DATA-ELEMENT-REF>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_SlaveResp</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="85f91496-13dd-4e63-bdf5-016f88025522">
+              <SHORT-NAME>Gr_MsgGr_LIN2_RL_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_RL_Sensor_Status/MsgGr_LIN2_RL_Sensor_Status</DATA-ELEMENT-REF>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_RL_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="2b43736b-3f94-4380-bf04-8c236ef41290">
+              <SHORT-NAME>Gr_MsgGr_LIN2_FCR_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_FCR_Sensor_Status/MsgGr_LIN2_FCR_Sensor_Status</DATA-ELEMENT-REF>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_FCR_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="e6bd5ce9-d85a-4c01-9fbf-c4d63f68b9cb">
+              <SHORT-NAME>Gr_MsgGr_LIN2_FR_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_FR_Sensor_Status/MsgGr_LIN2_FR_Sensor_Status</DATA-ELEMENT-REF>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_FR_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="09855f6c-429c-4dcf-a96c-1c278299f6a9">
+              <SHORT-NAME>Gr_MsgGr_LIN2_RCR_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_RCR_Sensor_Status/MsgGr_LIN2_RCR_Sensor_Status</DATA-ELEMENT-REF>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_RCR_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="cbadba2b-1601-4f67-80e2-8ce76ee9f6de">
+              <SHORT-NAME>Gr_MsgGr_LIN2_FCL_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_FCL_Sensor_Status/MsgGr_LIN2_FCL_Sensor_Status</DATA-ELEMENT-REF>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_FCL_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="d065135d-60e3-45d3-ba6e-333f1a8042aa">
+              <SHORT-NAME>Gr_MsgGr_LIN2_RR_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_RR_Sensor_Status/MsgGr_LIN2_RR_Sensor_Status</DATA-ELEMENT-REF>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_RR_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="63f5c61a-ccc0-4956-9b46-58125b973569">
+              <SHORT-NAME>Gr_MsgGr_LIN2_RCL_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_RCL_Sensor_Status/MsgGr_LIN2_RCL_Sensor_Status</DATA-ELEMENT-REF>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_RCL_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="266ac8cb-8f52-47e4-884c-771c4519e11b">
+              <SHORT-NAME>Gr_MsgGr_LIN2_FL_Sensor_Status</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_FL_Sensor_Status/MsgGr_LIN2_FL_Sensor_Status</DATA-ELEMENT-REF>
+                  <ALIVE-TIMEOUT>0.0</ALIVE-TIMEOUT>
+                  <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                  <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/LIN2/INTERFACES/Gr_MsgGr_LIN2_FL_Sensor_Status</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="8cf89b5f-e0d2-48d1-928d-5da076fb2d9f">
+              <SHORT-NAME>SwcIB_App_LIN1</SHORT-NAME>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_LinSMState</DATA-TYPE-MAPPING-REF>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE_LIN1/DataTypeMappingSets/MAP_LinSchedule_LIN1</DATA-TYPE-MAPPING-REF>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE_LIN2/DataTypeMappingSets/MAP_LinSchedule_LIN2</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <EVENTS>
+                <OPERATION-INVOKED-EVENT UUID="d9681934-aa00-4c0a-b322-ab85c99d3111">
+                  <SHORT-NAME>OIE_RE_after_schedule_CBAfterSchedule_lin_after_schedule</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/RE_after_schedule</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/CallbackAfterSchedule</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ServiceSwComponent_LIN/ClientServerInterface/CallbackAfterSchedule/lin_after_schedule</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="ff6bde8b-b1bd-4223-af5c-05eb12fb3cdc">
+                  <SHORT-NAME>OIE_RE_cbk_err_CBCbkErr_lin_cbk_err</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/RE_cbk_err</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/CallbackError</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ServiceSwComponent_LIN/ClientServerInterface/CallbackError/lin_cbk_err</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="b65753f6-8b5f-4f00-afaa-437baa91a67d">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_NULL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/NULL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="cdeb92ce-a16a-4ce6-871f-dd6a99acdc54">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_FPAS_TUNNING_WRITE</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_FPAS_TUNNING_WRITE</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="fe411e51-b822-4296-81ef-bddd09ce5dd6">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_FPAS_VER_CHECK</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_FPAS_VER_CHECK</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="7349cac8-0e92-4aee-8568-04061641ca1a">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_FRONT_PAS_NORMAL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_FRONT_PAS_NORMAL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="bb5d9d44-4471-41d7-ad12-46436180a838">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_PAS_CRC_COMPARE</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_PAS_CRC_COMPARE</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="7ed3ac4e-bfd6-48b9-a9b5-ba8cce5b3af8">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_PAS_DIAG</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_PAS_DIAG</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="b275a3fa-18bd-4d40-a98f-3ff979cc813e">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_PAS_DIAG_FCL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_PAS_DIAG_FCL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="4a2d39c7-f5e3-4479-a8dc-9ae0e770063b">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_PAS_DIAG_FCR</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_PAS_DIAG_FCR</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="28a93400-ccf6-49f4-95f6-60ac84c3aeea">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_PAS_DIAG_FL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_PAS_DIAG_FL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="33b1e747-cc4f-4492-9228-74f3d53006da">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_PAS_DIAG_FR</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_PAS_DIAG_FR</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="4f078673-f530-4112-9b20-5002e7368956">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_PAS_DIAG_IBU</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_PAS_DIAG_IBU</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="2fb605dd-257e-4c1a-a719-a58a03f2b4f9">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_PAS_DIAG_RCL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_PAS_DIAG_RCL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="4153fb9c-1e8d-430b-8441-80a472ebdc8b">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_PAS_DIAG_RCR</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_PAS_DIAG_RCR</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="d17473bf-0078-4e09-a89a-b4f1f8ad12a6">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_PAS_DIAG_RL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_PAS_DIAG_RL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="07491ce1-62d4-41d2-bc65-64d800f19f1b">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_PAS_DIAG_RR</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_PAS_DIAG_RR</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="0743830e-2859-41ab-81f1-ea802cf6caaa">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_PAS_NORMAL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_PAS_NORMAL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="dfc8a289-d53f-46cf-af2d-9a539f09b824">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_PAS_SENSOR_REQUEST</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_PAS_SENSOR_REQUEST</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="952b360e-a0dc-49fb-9c11-d35a349d25c1">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_PAS_TEMP_COMP</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_PAS_TEMP_COMP</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="1f5628ee-46bd-4a3a-9a25-9a4480abcf0a">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_RPAS_CRC_COMPARE</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_RPAS_CRC_COMPARE</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="d04716d0-d337-484b-a9f8-40abe803bdcb">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_RPAS_NORMAL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_RPAS_NORMAL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="b193f8c8-290c-4857-97ff-611f7ffb9de9">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_RPAS_TEMP_COMP</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_RPAS_TEMP_COMP</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="fcb09e7e-b87c-4b7d-884b-c0f481ea4a08">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_RPAS_TUNNING_WRITE</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_RPAS_TUNNING_WRITE</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="e1f5f7cc-74cf-47c2-a360-4b0606356c8f">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1_SCHEDULER_RPAS_VER_CHECK</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN1_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/SCHEDULER_RPAS_VER_CHECK</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="0ac3e278-9345-4ee6-a55d-f85345a2116b">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_NULL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/NULL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="451f887b-0a3c-4068-bc4b-e1a9630c39f7">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_FPAS_TUNNING_WRITE</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_FPAS_TUNNING_WRITE</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="9f36207f-ab3e-4f0c-8585-9635c2e4880a">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_FPAS_VER_CHECK</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_FPAS_VER_CHECK</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="7bddb404-5d9c-49d6-8df7-c521a9373b2e">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_FRONT_PAS_NORMAL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_FRONT_PAS_NORMAL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="37ffe5f7-843a-4072-bb23-90a7d6b6bfd6">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_PAS_CRC_COMPARE</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_PAS_CRC_COMPARE</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="3c27ff06-956f-4f12-889a-a2c8e8d3934a">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_PAS_DIAG</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_PAS_DIAG</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="9f3981dd-1e35-4106-98f8-2a033bed90f7">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_PAS_DIAG_FCL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_PAS_DIAG_FCL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="0c26f603-2662-4998-8c93-e874e5abe648">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_PAS_DIAG_FCR</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_PAS_DIAG_FCR</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="297ec630-6759-4996-b9f4-aed7b3484a27">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_PAS_DIAG_FL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_PAS_DIAG_FL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="6399ea0a-8c5c-4fab-bf90-c90cefa89864">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_PAS_DIAG_FR</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_PAS_DIAG_FR</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="b333729a-c727-41f8-9120-fc78c150a35b">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_PAS_DIAG_IBU</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_PAS_DIAG_IBU</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="cac62cf1-dcc8-42b6-97b9-aa5d76f6d46c">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_PAS_DIAG_RCL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_PAS_DIAG_RCL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="2dc74d10-763f-499a-ae5b-6f3d0f641b79">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_PAS_DIAG_RCR</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_PAS_DIAG_RCR</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="3aaf0faa-53cc-4838-8e2f-82ecf2ebe450">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_PAS_DIAG_RL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_PAS_DIAG_RL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="b8bb7b9b-1808-4000-9e82-f8c00b40e2de">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_PAS_DIAG_RR</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_PAS_DIAG_RR</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="adfd6819-b753-4e68-8f7d-e707a837fb78">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_PAS_NORMAL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_PAS_NORMAL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="c8f6f94a-68b7-4142-a3a3-4cb5ee846c48">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_PAS_SENSOR_REQUEST</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_PAS_SENSOR_REQUEST</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="79fb259c-cddc-496e-8642-b2d0567f8a17">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_PAS_TEMP_COMP</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_PAS_TEMP_COMP</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="906f336b-c323-4bb0-a28b-c6b2c1d5da57">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_RPAS_CRC_COMPARE</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_RPAS_CRC_COMPARE</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="31cf9357-d2b5-4da0-8193-29e7ee1125bb">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_RPAS_NORMAL</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_RPAS_NORMAL</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="b429ca94-1b9c-40cf-a6c4-aa09c148f0cf">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_RPAS_TEMP_COMP</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_RPAS_TEMP_COMP</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="edfc812b-65f7-4b78-af84-9f1b2d24dbf2">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_RPAS_TUNNING_WRITE</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_RPAS_TUNNING_WRITE</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="728bd0fe-c28e-4860-b8dc-23a12047a53a">
+                  <SHORT-NAME>SMSE_Entry_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2_SCHEDULER_RPAS_VER_CHECK</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationSwComponentTypesAR/App_Lin_LIN1/SwcIB_App_LIN1/Lin_LIN2_ScheduleSwitch</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/SCHEDULER_RPAS_VER_CHECK</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+              </EVENTS>
+              <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="8a8bf6f6-6d97-41c2-9cba-a65a38d1109a">
+                  <SHORT-NAME>Lin_LIN1_ScheduleRequest</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="045fed37-f787-432f-a3ff-5019f70a8f6c">
+                      <SHORT-NAME>VariableAccess0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/P_SR_LIN1_SCHEDULE_CHANGE</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN1/SenderReceiverInterfaces/LinScheduleRequestInterface_LIN1/LinSchedule_LIN1</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
+                  <SYMBOL>Sym_LinScheduleRequest_LIN1</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="8f60caf2-aa0f-49aa-b7ea-a303fd5139d7">
+                  <SHORT-NAME>RE_after_schedule</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>lin_after_schedule</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="0d31c59b-0006-410b-9dcf-80731c1de595">
+                  <SHORT-NAME>RE_cbk_err</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>lin_cbk_err</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="4464a0fe-d91c-4f77-8dc3-a0d705664684">
+                  <SHORT-NAME>Lin_LIN1_ScheduleSwitch</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <MODE-ACCESS-POINTS>
+                    <MODE-ACCESS-POINT>
+                      <IDENT UUID="904fc669-d18a-438d-a691-de0302ed33c9">
+                        <SHORT-NAME>MRAP_Lin_LIN1_ScheduleSwitch_R_MSR_LIN_SCHEDULE_INDICATION_LinSchedule_LIN1</SHORT-NAME>
+                      </IDENT>
+                      <MODE-GROUP-IREF>
+                        <R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                          <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</CONTEXT-R-PORT-REF>
+                          <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN1/ModeSwitchInterfaces/LinScheduleInterface_LIN1/LinSchedule_LIN1</TARGET-MODE-GROUP-REF>
+                        </R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                      </MODE-GROUP-IREF>
+                    </MODE-ACCESS-POINT>
+                  </MODE-ACCESS-POINTS>
+                  <SYMBOL>Sym_LinScheduleSwitch_LIN1</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="da9e3199-3e0a-4ed0-959f-ddce39d04a13">
+                  <SHORT-NAME>Lin_LIN2_ScheduleRequest</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="2780f0be-73a2-4cc7-a7d0-59e79dc48e91">
+                      <SHORT-NAME>DSP_Lin_LIN2_ScheduleRequest_P_SR_LIN2_SCHEDULE_CHANGE_LinSchedule_LIN2</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/P_SR_LIN2_SCHEDULE_CHANGE</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_LIN2/SenderReceiverInterfaces/LinScheduleRequestInterface_LIN2/LinSchedule_LIN2</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                      <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
+                  <SYMBOL>Sym_LinScheduleRequest_LIN2</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="8803f5ca-8c19-48a7-9ab0-c698445a3bca">
+                  <SHORT-NAME>Lin_LIN2_ScheduleSwitch</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <MODE-ACCESS-POINTS>
+                    <MODE-ACCESS-POINT>
+                      <IDENT UUID="215f6cca-d2e2-4d18-a3a9-181428e84ed5">
+                        <SHORT-NAME>MRAP_Lin_LIN2_ScheduleSwitch_R_MSR_LIN2_SCHEDULE_INDICATION_LinSchedule_LIN2</SHORT-NAME>
+                      </IDENT>
+                      <MODE-GROUP-IREF>
+                        <R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                          <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</CONTEXT-R-PORT-REF>
+                          <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_LIN2/ModeSwitchInterfaces/LinScheduleInterface_LIN2/LinSchedule_LIN2</TARGET-MODE-GROUP-REF>
+                        </R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                      </MODE-GROUP-IREF>
+                    </MODE-ACCESS-POINT>
+                  </MODE-ACCESS-POINTS>
+                  <SYMBOL>Sym_LinScheduleSwitch_LIN2</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SERVICE-DEPENDENCYS>
+                <SWC-SERVICE-DEPENDENCY UUID="6e89a5a9-ca30-4d22-a5db-edf56898b6c1">
+                  <SHORT-NAME>SwcServiceDependency0</SHORT-NAME>
+                  <ASSIGNED-PORTS>
+                    <ROLE-BASED-PORT-ASSIGNMENT>
+                      <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/P_SR_LIN1_SCHEDULE_CHANGE</PORT-PROTOTYPE-REF>
+                      <ROLE>Custom</ROLE>
+                    </ROLE-BASED-PORT-ASSIGNMENT>
+                    <ROLE-BASED-PORT-ASSIGNMENT>
+                      <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN1_SCHEDULE_INDICATION</PORT-PROTOTYPE-REF>
+                      <ROLE>Custom</ROLE>
+                    </ROLE-BASED-PORT-ASSIGNMENT>
+                    <ROLE-BASED-PORT-ASSIGNMENT>
+                      <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/P_SR_LIN2_SCHEDULE_CHANGE</PORT-PROTOTYPE-REF>
+                      <ROLE>Custom</ROLE>
+                    </ROLE-BASED-PORT-ASSIGNMENT>
+                    <ROLE-BASED-PORT-ASSIGNMENT>
+                      <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ApplicationSwComponentTypesAR/App_Lin_LIN1/R_MSR_LIN2_SCHEDULE_INDICATION</PORT-PROTOTYPE-REF>
+                      <ROLE>Custom</ROLE>
+                    </ROLE-BASED-PORT-ASSIGNMENT>
+                  </ASSIGNED-PORTS>
+                  <SERVICE-NEEDS>
+                    <BSW-MGR-NEEDS UUID="e03f412b-eb7f-4ee0-ba13-db2bf3fbccb7">
+                      <SHORT-NAME>BswMgrNeeds</SHORT-NAME>
+                    </BSW-MGR-NEEDS>
+                  </SERVICE-NEEDS>
+                </SWC-SERVICE-DEPENDENCY>
+              </SERVICE-DEPENDENCYS>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

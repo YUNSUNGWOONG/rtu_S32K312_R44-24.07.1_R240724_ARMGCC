@@ -1,0 +1,118 @@
+****************************************************************************************************
+Release Notes for NXP S32K3 Real Time Drivers AUTOSAR 4.4 software version: 3.0.0 P01 HF01
+
+NXP(TM) and the NXP logo are trademarks of NXP.
+
+All other product or service names are the property of their respective owners.
+*       Copyright 2020-2023 NXP
+
+
+****************************************************************************************************
+
+****************************************************************************************************
+This package contains files for
+NXP S32K3 Real Time Drivers AUTOSAR 4.4 software version: 3.0.0 P01 HF01
+****************************************************************************************************
+"<mod>_TS_T40D34M30I0R0" directories - Tresos Plugins, 1 per module.
+"SW32K3_RTD_4.4_3.0.0_P01_HF01_D2304_ReleaseNotes.txt" - This file.
+
+
+****************************************************************************************************
+Installation
+****************************************************************************************************
+- Installation Design Studio
+    o Bundled in S32 Design Studio:
+        S32 RTD is delivered bundled in the S32 Design Studio. In this case,
+        it already configured and ready to use. New S32DS project wizard and New S32DS project
+        from Example can be used to create S32 RTD based projects.
+    o Delivered as an extension for S32 Design Studio
+        S32 RTD is delivered as an Update Site for S32 Design Studio "S32DS 3.5 Service Pack 1 EAR4 Build 230307 and S32M27x_SP2_CD".
+        In this case, it must be installed by opening Help -> S32DS Extensions and Updates -> Add Update Sites 
+        and selecting the archive file containing the S32 RTD software. 
+        Select the RTD package and click install.
+        After it is installed, New S32DS project wizard and New S32DS project from Example can be used to create S32 RTD based projects.
+
+- Installation EB Tresos
+    Follow the installer steps. By default, the installer will create a link between the
+    installation target directory and a selected EB Tresos installation. If you choose not to
+    create a link, you can later create one manually or you can copy all "<mod>_TS_T40D34M30I0R0"
+    directories and .JAR files to the "<Tresos Install Path>\plugins" directory.
+
+
+Release Specifics:
+==================
+- This release contains fixes for the FLS driver.
+
+- This release contains all drivers from previous release on top of which the new versions of the affected drivers are present.
+
+- Hot Fix Releases are not fully qualified and are not intended for production,
+  they must be replaced by the next qualified standard release.
+  The intention of a Hot Fix Release is immediate fix of a critical and blocking issue at the customer.
+
+- This hotfix release was not fully tested as the delivery was needed before the relevant test
+  cases could be created. A full validation will be performed as part of the next planned release.
+
+
+Support and Driver Plugins Delivered:
+=====================================
+    ADC 		sw version 3.0.0 			Driver, Analog to Digital Conversion
+    BASE 		sw version 3.0.0 			Base Module, General AUTOSAR and Hardware Specific register files
+    CAN 		sw version 3.0.0 			Driver, Controller Area Network
+    CRC 		sw version 3.0.0 			Driver, Cyclic Redundancy Check
+    CRYPTO 		sw version 3.0.0 			Driver, Cryptographic Operations
+    DIO 		sw version 3.0.0 			Driver, Digital Input Output
+    ETH 		sw version 3.0.0 			Driver, Ethernet
+    EEP 		sw version 3.0.0 P01		Driver, EEPROM
+    FEE 		sw version 3.0.0 P01		Driver, Flash EEPROM Emulation
+    FLS 		sw version 3.0.0 P01 HF01	Driver, Flash
+    GPT 		sw version 3.0.0 			Driver, General Purpose Timer
+    I2C 		sw version 3.0.0 			Driver, Inter-Integrated Circuit
+    I2S 		sw version 3.0.0 			Driver, Inter-IC Sound
+    ICU 		sw version 3.0.0 			Driver, Input Capture Unit
+    LIN 		sw version 3.0.0 			Driver, Local Interconnect Network
+    MCL 		sw version 3.0.0 			Driver, Microcontroller Library
+    MCU 		sw version 3.0.0 			Driver, Microcontroller Unit
+    OCU 		sw version 3.0.0 			Driver, Output Control Unit
+    PLATFORM 	sw version 3.0.0 			Driver, Platform
+    PORT 		sw version 3.0.0 			Driver, Port
+    PWM 		sw version 3.0.0 			Driver, Pulse Width Modulation
+    RESOURCE 	sw version 3.0.0 			Resource Module, Required by all other modules to select MCU derivative
+    RM 			sw version 3.0.0 			Resource Module, Resource Manager
+    SENT 		sw version 3.0.0 			Driver, Single edge nibble transmission
+    SPI 		sw version 3.0.0 			Driver, Serial Peripheral Interface
+    UART 		sw version 3.0.0 			Driver, None
+    ZIPWIRE 	sw version 3.0.0 			Driver, Zipwire
+    AE 			sw version 3.0.0 			Driver, Watchdog
+    WDG 		sw version 3.0.0 			Driver, Watchdog
+    GDU 		sw version 3.0.0 			Driver, None
+    OCOTP 		sw version 3.0.0 			Driver, None
+    LINTRCV 	sw version 3.0.0 			Driver, None
+    CANTRCV 	sw version 3.0.0 			Driver, None
+    DPGA 		sw version 3.0.0 			Driver, None
+    CANIF 		sw version 3.0.0 			Support Stub, Controller Area Network Interface
+    CRYIF 		sw version 3.0.0 			Support stub, Crypto Interface
+    CSM 		sw version 3.0.0 			Support stub, Crypto Service Manager
+    DEM 		sw version 3.0.0 			Support Stub, Diagnostic Event Manager
+    DET 		sw version 3.0.0 			Support Stub, Development Error Tracer
+    ECUC 		sw version 3.0.0 			Support Stub, ECU Configuration
+    ECUM 		sw version 3.0.0 			Support Stub, ECU State Manager
+    ETHIF 		sw version 3.0.0 			Support Stub, Ethernet Interface
+    ETHTRCV 	sw version 3.0.0 			Support stub, Ethernet Transceiver
+    ETHSWT 		sw version 3.0.0 			Support stub, Ethernet Switch
+    LINIF 		sw version 3.0.0 			Support Stub, Local Interconnect Network Interface
+    MEMIF 		sw version 3.0.0 			Support Stub, Memory Interface
+    OS 			sw version 3.0.0 			Support stub, Operating System
+    RTE 		sw version 3.0.0 			Support Stub, only for Schedule Manager
+    WDGIF 		sw version 3.0.0 			Support Stub, Watchdog Interface
+
+
+==============================
+What's Modified v3.0.0 P01 HF01
+==============================
+    ARTD-54994 [FLS] [S32K3] Fls_Write potential bug
+
+
+==============================
+What's Modified v3.0.0 P01
+==============================
+    Please refer to the file "SW32K3_RTD_4.4_3.0.0_P01_D2303_ReleaseNotes.pdf" delivered with the RTM 3.0.0 P01 release.

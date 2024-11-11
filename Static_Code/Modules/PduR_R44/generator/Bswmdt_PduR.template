@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="61adb0bf-4ae5-497d-87a8-41b08223f04c">
+      <SHORT-NAME>Bsw_PduR</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="7c6d5482-36f6-4685-bcff-27f66c6d726d">
+          <SHORT-NAME>BswImplementation_PduR</SHORT-NAME>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>1.0.9</SW-VERSION>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_PduR/PduR/BswInternalBehavior_PduR</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION UUID="a9fdc287-4a32-4d5a-b941-75846176a500">
+          <SHORT-NAME>PduR</SHORT-NAME>
+		  <CATEGORY>BSW_MODULE</CATEGORY>
+          <MODULE-ID>51</MODULE-ID>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR UUID="d7e6abb5-818f-4685-b65e-1ac27d1d8ec4">
+              <SHORT-NAME>BswInternalBehavior_PduR</SHORT-NAME>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA UUID="445765f1-21fe-4a94-8009-f95b65e58f37">
+                  <SHORT-NAME>TP_TX_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="93e2360a-8c31-49d5-bcbf-997e591660ee">
+                  <SHORT-NAME>GROUP_STATUS_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="c3480848-c13b-43be-9e73-d9261fc57a73">
+                  <SHORT-NAME>FIFO_STATUS_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="57b2e377-818a-4f5b-a52c-63888372dc09">
+                  <SHORT-NAME>DATA_BUFFER_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="b0d7e59c-7f5e-4a1a-a619-d1f4258636e1">
+                  <SHORT-NAME>MULTICAST_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="6aee762f-a28a-4a21-ace0-4950cf0e2a93">
+                  <SHORT-NAME>TP_GATEWAY_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <ENTITYS>
+                <BSW-CALLED-ENTITY UUID="9547c552-c10d-4586-b3ba-28bdb18a1260">
+                  <SHORT-NAME>BswCalledEntity0</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_PduR/PduR/BswInternalBehavior_PduR/DATA_BUFFER_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_PduR/PduR/BswInternalBehavior_PduR/FIFO_STATUS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_PduR/PduR/BswInternalBehavior_PduR/GROUP_STATUS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_PduR/PduR/BswInternalBehavior_PduR/MULTICAST_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_PduR/PduR/BswInternalBehavior_PduR/TP_GATEWAY_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_PduR/PduR/BswInternalBehavior_PduR/TP_TX_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_PduR/PduR_LoTpTxConfirmation</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+              </ENTITYS>
+			  <DISTINGUISHED-PARTITIONS>
+                <BSW-DISTINGUISHED-PARTITION>
+                  <SHORT-NAME>BswDistinguishedPartition_PduR</SHORT-NAME>
+                </BSW-DISTINGUISHED-PARTITION>
+              </DISTINGUISHED-PARTITIONS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+        <BSW-MODULE-ENTRY UUID="1afebcbc-dfd9-4d2d-a736-a0a526a0dbed">
+          <SHORT-NAME>PduR_LoTpTxConfirmation</SHORT-NAME>
+        </BSW-MODULE-ENTRY>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

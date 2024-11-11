@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <!--
+********************************************************************************
+**                                                                            **
+**  (C) 2021 HYUNDAI AUTOEVER Corp.                                           **
+**  Confidential Proprietary Information. Distribution Limited.               **
+**  This source code is permitted to be used only in projects contracted      **
+**  with Hyundai Autoever, and any other use is prohibited.                   **
+**  If you use it for other purposes or change the source code,               **
+**  you may take legal responsibility.                                        **
+**  In this case, There is no warranty and technical support.                 **
+**                                                                            **
+**  PRODUCT       : LinTrcv Module                                            **
+**                                                                            **
+**  PURPOSE       : Definition of the Basic Software Module Description       **
+**                  (BSWMDT).                                                 **
+**                                                                            **
+**  DESCRIPTION   : This is the documentation of the template for the Basic   **
+**                  Software Module Description(BSWMDT).                      **
+**                                                                            **
+********************************************************************************
+**  Revision  Date          Prepared By     Description                       **
+********************************************************************************
+**  1.0.7     08-Apr-2024   YB Song         #CP44-5981                        **
+**  1.0.5     17-May-2023   KhaLN1          #CP44-2131                        **
+**  1.0.4     11-Jan-2023   KhaLN1          #CP44-1198, #CP44-1381            **
+**  1.0.3     03-Aug-2022   KhaLN1          #CP44-705                         **
+**  1.0.2     17-May-2022   DuyNHP2         R44-Redmine #20124                **
+**  1.0.0     24-Mar-2020   DuTP1           Initial version                   **
+********************************************************************************
+-->
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="446aebd8-ac92-4f38-944f-0e2012dee80f">
+      <SHORT-NAME>Bsw_LinTrcv</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="d384f31c-731c-43cc-ac63-e725f295cbdd">
+          <SHORT-NAME>BswImplementation_LinTrcv</SHORT-NAME>
+          <SW-VERSION>1.0.7</SW-VERSION>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_LinTrcv/LinTrcv/BswInternalBehavior_LinTrcv</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION UUID="d34a4445-a313-46ce-84f9-8d88059e1732">
+          <SHORT-NAME>LinTrcv</SHORT-NAME>
+		  <CATEGORY>BSW_MODULE</CATEGORY>
+          <MODULE-ID>64</MODULE-ID>
+		  <BSW-MODULE-DEPENDENCYS>
+            <BSW-MODULE-DEPENDENCY UUID="0281acb5-6cfe-4b36-9582-c085c669ceab">
+              <SHORT-NAME>BswModuleDependency_EcuM</SHORT-NAME>
+              <TARGET-MODULE-ID>10</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+			<BSW-MODULE-DEPENDENCY UUID="0282acb5-6cfe-4b36-9582-c085c669ceab">
+              <SHORT-NAME>BswModuleDependency_LinIf</SHORT-NAME>
+              <TARGET-MODULE-ID>62</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+			<BSW-MODULE-DEPENDENCY UUID="0283acb5-6cfe-4b36-9582-c085c669ceab">
+              <SHORT-NAME>BswModuleDependency_Tm</SHORT-NAME>
+              <TARGET-MODULE-ID>14</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+			<BSW-MODULE-DEPENDENCY UUID="0284acb5-6cfe-4b36-9582-c085c669ceab">
+              <SHORT-NAME>BswModuleDependency_Dio</SHORT-NAME>
+              <TARGET-MODULE-ID>120</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+          </BSW-MODULE-DEPENDENCYS>		  
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR UUID="80323e13-edaa-4b5b-a915-fc4b50fe5772">
+              <SHORT-NAME>BswInternalBehavior_LinTrcv</SHORT-NAME>
+			    <EXCLUSIVE-AREAS>
+				  <EXCLUSIVE-AREA UUID="7ff2d755-0a65-4160-992c-34d73db89a8c">
+                    <SHORT-NAME>DIO_READ_WRITE_PROTECTION</SHORT-NAME>
+                  </EXCLUSIVE-AREA>				   
+			    </EXCLUSIVE-AREAS>
+				<ENTITYS>
+					<BSW-CALLED-ENTITY UUID="e482af71-a03e-452f-8daf-404c9f3f9d40">
+						<SHORT-NAME>BswCE_LinTrcv_GetVersionInfo</SHORT-NAME>
+						<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_LinTrcv/ImplementedEntries/LinTrcv_GetVersionInfo</IMPLEMENTED-ENTRY-REF>
+					</BSW-CALLED-ENTITY>
+					<BSW-CALLED-ENTITY UUID="e482af71-a03e-4520-8daf-404c9f3f9d41">
+						<SHORT-NAME>BswCE_LinTrcv_Init</SHORT-NAME>
+						<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_LinTrcv/ImplementedEntries/LinTrcv_Init</IMPLEMENTED-ENTRY-REF>
+					</BSW-CALLED-ENTITY>
+					<BSW-CALLED-ENTITY UUID="e482af71-a03e-4521-8daf-404c9f3f9d43">
+						<SHORT-NAME>BswCE_LinTrcv_SetOpMode</SHORT-NAME>
+						<CAN-ENTER-EXCLUSIVE-AREA-REFS>
+							<CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_LinTrcv/LinTrcv/BswInternalBehavior_LinTrcv/DIO_READ_WRITE_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+						</CAN-ENTER-EXCLUSIVE-AREA-REFS>
+						<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_LinTrcv/ImplementedEntries/LinTrcv_SetOpMode</IMPLEMENTED-ENTRY-REF>
+					</BSW-CALLED-ENTITY>
+					<BSW-CALLED-ENTITY UUID="e482af71-a03e-4522-8daf-404c9f3f9d44">
+						<SHORT-NAME>BswCE_LinTrcv_GetOpMode</SHORT-NAME>
+						<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_LinTrcv/ImplementedEntries/LinTrcv_GetOpMode</IMPLEMENTED-ENTRY-REF>
+					</BSW-CALLED-ENTITY>
+					<BSW-CALLED-ENTITY UUID="e482af71-a03e-4523-8daf-404c9f3f9d45">
+						<SHORT-NAME>BswCE_LinTrcv_GetBusWuReason</SHORT-NAME>
+						<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_LinTrcv/ImplementedEntries/LinTrcv_GetBusWuReason</IMPLEMENTED-ENTRY-REF>
+					</BSW-CALLED-ENTITY>
+					<BSW-CALLED-ENTITY UUID="e482af71-a03e-4524-8daf-404c9f3f9d46">
+						<SHORT-NAME>BswCE_LinTrcv_CheckWakeup</SHORT-NAME>
+						<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_LinTrcv/ImplementedEntries/LinTrcv_CheckWakeup</IMPLEMENTED-ENTRY-REF>
+					</BSW-CALLED-ENTITY>
+					<BSW-CALLED-ENTITY UUID="e482af71-a03e-4525-8daf-404c9f3f9d47">
+						<SHORT-NAME>BswCE_LinTrcv_SetWakeupMode</SHORT-NAME>
+						<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_LinTrcv/ImplementedEntries/LinTrcv_SetWakeupMode</IMPLEMENTED-ENTRY-REF>
+					</BSW-CALLED-ENTITY>			
+				</ENTITYS>
+				<DISTINGUISHED-PARTITIONS>
+					<BSW-DISTINGUISHED-PARTITION>
+						<SHORT-NAME>BswDistinguishedPartition_LinTrcv</SHORT-NAME>
+					</BSW-DISTINGUISHED-PARTITION>
+				</DISTINGUISHED-PARTITIONS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+      </ELEMENTS>
+	  <AR-PACKAGES>
+		<AR-PACKAGE>
+		  <SHORT-NAME>ExpectedEntries</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY UUID="56ad76d1-2ca3-44ba-87f9-d2a1a600ba29">
+              <SHORT-NAME>EcuM_SetWakeupEvent</SHORT-NAME>
+              <SERVICE-ID>12</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="27bdb12a-fcb7-4e08-aa24-2d7c4c81d102">
+                  <SHORT-NAME>sources</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+			<BSW-MODULE-ENTRY UUID="56ad76d2-2ca3-44ba-87f9-d2a1a600ba28">
+              <SHORT-NAME>LinIf_WakeupConfirmation</SHORT-NAME>
+              <SERVICE-ID>97</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="27bdb12a-fcb7-4e08-aa24-2d7c4c81d101">
+                  <SHORT-NAME>WakeupSource</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+			<BSW-MODULE-ENTRY UUID="56ad76d3-2ca3-44ba-87f9-d2a1a600ba27">
+              <SHORT-NAME>Tm_BusyWait1us16bit</SHORT-NAME>
+              <SERVICE-ID>6</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+			  <RETURN-TYPE UUID="aefc0618-3cdf-4731-9fb7-5b8f1f8d975c">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="27bdb12a-fcb7-4e08-aa24-2d7c4c81d100">
+                  <SHORT-NAME>WaitingTimeMin</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+			<BSW-MODULE-ENTRY UUID="56ad76d4-2ca3-44ba-87f9-d2a1a600ba27">
+              <SHORT-NAME>Dio_ReadChannel</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+			  <RETURN-TYPE UUID="aefc0618-3cdf-4731-9fb7-5b8f1e8d975c">
+                <SHORT-NAME>Dio_LevelType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="27bdb12a-fcb7-4e18-aa24-2d7c4c81d100">
+                  <SHORT-NAME>ChannelId</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+			<BSW-MODULE-ENTRY UUID="56ad76d5-2ca3-44ba-87f9-d2a1a600ba27">
+              <SHORT-NAME>Dio_WriteChannel</SHORT-NAME>
+              <SERVICE-ID>1</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="27bdb12a-fcb7-4e08-aa24-2d7c4c81d101">
+                  <SHORT-NAME>ChannelId</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+				<SW-SERVICE-ARG UUID="27bdb12a-fcb7-4e08-aa24-2d7c4c81d102">
+                  <SHORT-NAME>Level</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+			<BSW-MODULE-ENTRY UUID="56ad76d6-2ca3-44ba-87f9-d2a1a600ba27">
+              <SHORT-NAME>Dio_ReadPort</SHORT-NAME>
+              <SERVICE-ID>2</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+			  <RETURN-TYPE UUID="aefc0618-3cdf-4731-9fb7-5c8f1f8d975c">
+                <SHORT-NAME>Dio_PortLevelType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="27bdb12a-fcb7-4e08-ac24-2d7c4c81d100">
+                  <SHORT-NAME>PortId</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+			<BSW-MODULE-ENTRY UUID="56ad76d7-2ca3-44ba-87f9-d2a1a600ba27">
+              <SHORT-NAME>Dio_WritePort</SHORT-NAME>
+              <SERVICE-ID>3</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="28bdb12a-fcb7-4e08-aa24-2d7c4c81d100">
+                  <SHORT-NAME>PortId</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+				<SW-SERVICE-ARG UUID="29bdb12a-fcb7-4e08-aa24-2d7c4c81d100">
+                  <SHORT-NAME>Level</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+			<BSW-MODULE-ENTRY UUID="56ad76d8-2ca3-44ba-87f9-d2a1a600ba27">
+              <SHORT-NAME>Dio_ReadChannelGroup</SHORT-NAME>
+              <SERVICE-ID>4</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+			  <RETURN-TYPE UUID="aefc0618-3cdf-4731-9fb7-5b8f1f8d975c">
+                <SHORT-NAME>Dio_PortLevelType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="27bdb12a-fcb7-4e08-aa24-2d7c4c81d100">
+                  <SHORT-NAME>ChannelGroupIdPtr</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+			<BSW-MODULE-ENTRY UUID="56ad76d9-2ca3-44ba-87f9-d2a1a600ba27">
+              <SHORT-NAME>Dio_WriteChannelGroup</SHORT-NAME>
+              <SERVICE-ID>5</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="57bdb12a-fcb7-4e08-aa24-2d7c4c81d100">
+                  <SHORT-NAME>ChannelGroupIdPtr</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+				<SW-SERVICE-ARG UUID="67bdb12a-fcb7-4e08-aa24-2d7c4c81d100">
+                  <SHORT-NAME>Level</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+		</AR-PACKAGE>
+		<AR-PACKAGE>
+		  <SHORT-NAME>ImplementedEntries</SHORT-NAME>
+		  <ELEMENTS>
+			<BSW-MODULE-ENTRY UUID="e212f6d0-6208-44a0-91d7-d2e119cc3b63">
+			  <SHORT-NAME>LinTrcv_GetVersionInfo</SHORT-NAME>
+			  <SERVICE-ID>4</SERVICE-ID>
+			  <IS-REENTRANT>true</IS-REENTRANT>
+			  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+			  <CALL-TYPE>REGULAR</CALL-TYPE>
+			  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+			  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+			  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+			  <ARGUMENTS>
+				<SW-SERVICE-ARG UUID="3cae5fc6-4deb-402e-821a-334826e9f34e">
+				  <SHORT-NAME>versionInfo</SHORT-NAME>
+				  <DIRECTION>OUT</DIRECTION>
+				</SW-SERVICE-ARG>
+			  </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+			<BSW-MODULE-ENTRY UUID="e212f5d0-6208-44a0-91d7-d2e119cc3b63">
+			  <SHORT-NAME>LinTrcv_Init</SHORT-NAME>
+			  <SERVICE-ID>0</SERVICE-ID>
+			  <IS-REENTRANT>false</IS-REENTRANT>
+			  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+			  <CALL-TYPE>REGULAR</CALL-TYPE>
+			  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+			  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+			  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+			  <ARGUMENTS>
+				<SW-SERVICE-ARG UUID="3cae5fc6-4d1b-402e-821a-334826e9f34e">
+				  <SHORT-NAME>ConfigPtr</SHORT-NAME>
+				  <DIRECTION>IN</DIRECTION>
+				</SW-SERVICE-ARG>
+			  </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+			<BSW-MODULE-ENTRY UUID="e212f4d0-6208-4410-91d7-d2e119cc3b63">
+			  <SHORT-NAME>LinTrcv_SetOpMode</SHORT-NAME>
+			  <SERVICE-ID>1</SERVICE-ID>
+			  <IS-REENTRANT>false</IS-REENTRANT>
+			  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+			  <CALL-TYPE>REGULAR</CALL-TYPE>
+			  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+			  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+			  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+			  <RETURN-TYPE UUID="aefc0618-3cdf-4731-9fb7-518f1f8d975c">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+			  <ARGUMENTS>
+				<SW-SERVICE-ARG UUID="3cae5fc6-4deb-412e-822a-334826e9e34e">
+				  <SHORT-NAME>LinNetwork</SHORT-NAME>
+				  <DIRECTION>IN</DIRECTION>
+				</SW-SERVICE-ARG>
+				<SW-SERVICE-ARG UUID="3cae5fc6-4deb-412e-822a-314826e9f34e">
+				  <SHORT-NAME>OpMode</SHORT-NAME>
+				  <DIRECTION>IN</DIRECTION>
+				</SW-SERVICE-ARG>
+			  </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+			<BSW-MODULE-ENTRY UUID="e212f3d0-6208-4410-91d7-d20119cc3b63">
+			  <SHORT-NAME>LinTrcv_GetOpMode</SHORT-NAME>
+			  <SERVICE-ID>2</SERVICE-ID>
+			  <IS-REENTRANT>true</IS-REENTRANT>
+			  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+			  <CALL-TYPE>REGULAR</CALL-TYPE>
+			  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+			  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+			  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+			  <RETURN-TYPE UUID="aefc0618-3cdf-4731-9fb7-510f1f8d975c">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+			  <ARGUMENTS>
+				<SW-SERVICE-ARG UUID="3cae5fc6-4deb-412e-802a-334826e9e34e">
+				  <SHORT-NAME>LinNetwork</SHORT-NAME>
+				  <DIRECTION>IN</DIRECTION>
+				</SW-SERVICE-ARG>
+				<SW-SERVICE-ARG UUID="3cae5fc6-40eb-412e-822a-314826e9f34e">
+				  <SHORT-NAME>*OpMode</SHORT-NAME>
+				  <DIRECTION>IN</DIRECTION>
+				</SW-SERVICE-ARG>
+			  </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+			<BSW-MODULE-ENTRY UUID="e212f2d0-6208-4410-91d7-d20119cc3b63">
+			  <SHORT-NAME>LinTrcv_GetBusWuReason</SHORT-NAME>
+			  <SERVICE-ID>3</SERVICE-ID>
+			  <IS-REENTRANT>true</IS-REENTRANT>
+			  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+			  <CALL-TYPE>REGULAR</CALL-TYPE>
+			  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+			  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+			  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+			  <RETURN-TYPE UUID="aefc0618-3cdf-4731-9fb7-510f1f8d975c">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+			  <ARGUMENTS>
+				<SW-SERVICE-ARG UUID="3cae5fc6-4deb-412e-802a-334826e9e34e">
+				  <SHORT-NAME>LinNetwork</SHORT-NAME>
+				  <DIRECTION>IN</DIRECTION>
+				</SW-SERVICE-ARG>
+				<SW-SERVICE-ARG UUID="3cae5fc6-40eb-412e-822a-314826e9f34e">
+				  <SHORT-NAME>*Reason</SHORT-NAME>
+				  <DIRECTION>IN</DIRECTION>
+				</SW-SERVICE-ARG>
+			  </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+			<BSW-MODULE-ENTRY UUID="e212f1d0-6208-4410-9117-d20119cc3b63">
+			  <SHORT-NAME>LinTrcv_CheckWakeup</SHORT-NAME>
+			  <SERVICE-ID>7</SERVICE-ID>
+			  <IS-REENTRANT>true</IS-REENTRANT>
+			  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+			  <CALL-TYPE>REGULAR</CALL-TYPE>
+			  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+			  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+			  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+			  <RETURN-TYPE UUID="aefc0618-3cdf-4731-9fb7-51011f8d975c">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+			  <ARGUMENTS>
+				<SW-SERVICE-ARG UUID="3cae5fc6-4deb-412e-802a-334126e9e34e">
+				  <SHORT-NAME>LinNetwork</SHORT-NAME>
+				  <DIRECTION>IN</DIRECTION>
+				</SW-SERVICE-ARG>
+			  </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+			<BSW-MODULE-ENTRY UUID="e212f0d0-6208-4410-9117-d20119cc3b63">
+			  <SHORT-NAME>LinTrcv_SetWakeupMode</SHORT-NAME>
+			  <SERVICE-ID>5</SERVICE-ID>
+			  <IS-REENTRANT>false</IS-REENTRANT>
+			  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+			  <CALL-TYPE>REGULAR</CALL-TYPE>
+			  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+			  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+			  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+			  <RETURN-TYPE UUID="aefc0618-3cdf-4831-9fb7-51d91f8d975c">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+			  <ARGUMENTS>
+				<SW-SERVICE-ARG UUID="3cae2fc6-4deb-412e-809a-334126e9e34e">
+				  <SHORT-NAME>LinNetwork</SHORT-NAME>
+				  <DIRECTION>IN</DIRECTION>
+				</SW-SERVICE-ARG>
+				<SW-SERVICE-ARG UUID="3cae5fc6-4deb-412e-902a-33412600e34e">
+				  <SHORT-NAME>TrcvWakupMode</SHORT-NAME>
+				  <DIRECTION>IN</DIRECTION>
+				</SW-SERVICE-ARG>
+			  </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+		  </ELEMENTS>
+		</AR-PACKAGE>
+	  </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

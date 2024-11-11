@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="6618a878-821e-4717-b063-57d0ca2bdcb6">
+      <SHORT-NAME>Svc_CanTrcv</SHORT-NAME>
+      <ELEMENTS>
+        <SERVICE-SW-COMPONENT-TYPE UUID="56613be3-ebba-46a1-b60b-09207b77848e">
+          <SHORT-NAME>Cantrcv</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="f9ba395a-d8d3-4b3c-adcd-32bd9e691404">
+              <SHORT-NAME>ArisuCan_SendSPI</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/ArisuCan_SendSPI</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="c53ebe12-5e1a-4e3e-beee-1e5357e02d45">
+              <SHORT-NAME>CanTrcv_ArisuCan_ChangeStopMode</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/CanTrcv_ArisuCan_ChangeStopMode</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="51f41513-7c29-41c3-a51c-d4c31ad4ee7a">
+              <SHORT-NAME>CanTrcv_ArisuCan_GetInternalSBCMode</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_GetStatus/CanTrcv_ArisuCan_GetInternalSBCMode</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_GetStatus</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="627a4189-8113-4473-aedf-3da084ff3f4e">
+              <SHORT-NAME>CanTrcv_ArisuCan_PowerDownMode</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/CanTrcv_ArisuCan_PowerDownMode</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="39c54258-d2cc-4b32-87f3-db8bf6f4c845">
+              <SHORT-NAME>CanTrcv_ArisuCan_ReadStatus</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_GetStatus/CanTrcv_ArisuCan_ReadStatus</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_GetStatus</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="4ef68e35-70ab-4520-b4ce-dd7f98e7ca4e">
+              <SHORT-NAME>CanTrcv_ArisuCan_RequestCanMode</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/CanTrcv_ArisuCan_RequestCanMode</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="7abbea6b-bd75-41fd-8ea9-35c9e3994ffe">
+              <SHORT-NAME>CanTrcv_ArisuCan_SetMode</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/CanTrcv_ArisuCan_SetMode</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="87122b76-b756-4ed9-8b7b-1bd65777b20f">
+              <SHORT-NAME>CanTrcv_ArisuCan_VbsenseDisable</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/CanTrcv_ArisuCan_VbsenseDisable</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="789bac2a-cdc2-4760-bec2-e3b3bf9db2a4">
+              <SHORT-NAME>CanTrcv_ArisuCan_VbsenseEnable</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/CanTrcv_ArisuCan_VbsenseEnable</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="6ab14744-337c-4fb0-804f-7061e4a3854a">
+              <SHORT-NAME>SwcInternalBehavior_CanTrcv</SHORT-NAME>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA UUID="ee498119-bb35-479b-b6a7-c1563b736610">
+                  <SHORT-NAME>CanTrcv_INTERRUPT_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <EVENTS>
+                <OPERATION-INVOKED-EVENT UUID="858e2e79-af13-4f4a-9475-2f0fbb69e410">
+                  <SHORT-NAME>OIE_ArisuCan_SendSPI</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/ArisuCan_SendSPI</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_CanTrcv/Cantrcv/ArisuCan_SendSPI</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/ArisuCan_SendSPI</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="aff4cd09-285e-48aa-af2c-fcdac972e291">
+                  <SHORT-NAME>OIE_CanTrcv_ArisuCan_ChangeStopMode</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_ArisuCan_ChangeStopMode</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_CanTrcv/Cantrcv/CanTrcv_ArisuCan_ChangeStopMode</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/CanTrcv_ArisuCan_ChangeStopMode</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="10a53c50-cebc-4fcb-a632-423923042b5e">
+                  <SHORT-NAME>OIE_CanTrcv_ArisuCan_GetInternalSBCMode</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_ArisuCan_GetInternalSBCMode</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_CanTrcv/Cantrcv/CanTrcv_ArisuCan_GetInternalSBCMode</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_GetStatus/CanTrcv_ArisuCan_GetInternalSBCMode</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="5d976570-9425-47f9-83a3-37afb97499a4">
+                  <SHORT-NAME>OIE_CanTrcv_ArisuCan_PowerDownMode</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_ArisuCan_PowerDownMode</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_CanTrcv/Cantrcv/CanTrcv_ArisuCan_PowerDownMode</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/CanTrcv_ArisuCan_PowerDownMode</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="520be98c-aa62-4b0d-8dbf-a7319aa2d285">
+                  <SHORT-NAME>OIE_CanTrcv_ArisuCan_ReadStatus</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_ArisuCan_ReadStatus</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_CanTrcv/Cantrcv/CanTrcv_ArisuCan_ReadStatus</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_GetStatus/CanTrcv_ArisuCan_ReadStatus</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="f44a0d9b-34cf-45ea-bd65-6e9c353404e0">
+                  <SHORT-NAME>OIE_CanTrcv_ArisuCan_RequestCanMode</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_ArisuCan_RequestCanMode</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_CanTrcv/Cantrcv/CanTrcv_ArisuCan_RequestCanMode</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/CanTrcv_ArisuCan_RequestCanMode</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="f00ed163-2907-4242-8a23-b0df05e1bc2a">
+                  <SHORT-NAME>OIE_CanTrcv_ArisuCan_SetMode</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_ArisuCan_SetMode</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_CanTrcv/Cantrcv/CanTrcv_ArisuCan_SetMode</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/CanTrcv_ArisuCan_SetMode</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="38a82e1d-c940-4224-8792-70ae39980f80">
+                  <SHORT-NAME>OIE_CanTrcv_ArisuCan_VbsenseDisable</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_ArisuCan_VbsenseDisable</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_CanTrcv/Cantrcv/CanTrcv_ArisuCan_VbsenseDisable</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/CanTrcv_ArisuCan_VbsenseDisable</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="878bcc57-c4d5-4901-a8f4-3deffb9e72e7">
+                  <SHORT-NAME>OIE_CanTrcv_ArisuCan_VbsenseEnable</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_ArisuCan_VbsenseEnable</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_CanTrcv/Cantrcv/CanTrcv_ArisuCan_VbsenseEnable</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/CanTrcv_ArisuCan_VbsenseEnable</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+              </EVENTS>
+              <EXCLUSIVE-AREA-POLICYS>
+                <SWC-EXCLUSIVE-AREA-POLICY>
+                  <API-PRINCIPLE>COMMON</API-PRINCIPLE>
+                  <EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_INTERRUPT_PROTECTION_AREA</EXCLUSIVE-AREA-REF>
+                </SWC-EXCLUSIVE-AREA-POLICY>
+              </EXCLUSIVE-AREA-POLICYS>
+              <INCLUDED-DATA-TYPE-SETS>
+                <INCLUDED-DATA-TYPE-SET>
+                  <DATA-TYPE-REFS>
+                    <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_CanTrcv/ImplementationDataTypes/ArisuCan_SBCModeType</DATA-TYPE-REF>
+                    <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_CanTrcv/ImplementationDataTypes/CanTrcv_ArisuCanType</DATA-TYPE-REF>
+                    <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_CanTrcv/ImplementationDataTypes/CanTrcv_HwType</DATA-TYPE-REF>
+                  </DATA-TYPE-REFS>
+                </INCLUDED-DATA-TYPE-SET>
+              </INCLUDED-DATA-TYPE-SETS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="2b8af5b6-a986-4c2c-a1a2-cec209188da0">
+                  <SHORT-NAME>ArisuCan_SendSPI</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_INTERRUPT_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <REENTRANCY-LEVEL>NON-REENTRANT</REENTRANCY-LEVEL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>ArisuCan_SendSPI</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="61dc835b-3099-4c2f-b7ad-b270ba2d0e0b">
+                  <SHORT-NAME>CanTrcv_ArisuCan_ChangeStopMode</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_INTERRUPT_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <REENTRANCY-LEVEL>NON-REENTRANT</REENTRANCY-LEVEL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>CanTrcv_ArisuCan_ChangeStopMode</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="05a1da30-ce5c-4e77-a079-70f6fbdb4d89">
+                  <SHORT-NAME>CanTrcv_ArisuCan_GetInternalSBCMode</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <REENTRANCY-LEVEL>SINGLE-CORE-REENTRANT</REENTRANCY-LEVEL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>CanTrcv_ArisuCan_GetInternalSBCMode</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="a1f118c3-ec5e-4543-8360-904529c7b972">
+                  <SHORT-NAME>CanTrcv_ArisuCan_PowerDownMode</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_INTERRUPT_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <REENTRANCY-LEVEL>NON-REENTRANT</REENTRANCY-LEVEL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>CanTrcv_ArisuCan_PowerDownMode</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="0931d124-a0ad-43b5-a7bf-6802306fd2ca">
+                  <SHORT-NAME>CanTrcv_ArisuCan_ReadStatus</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_INTERRUPT_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <REENTRANCY-LEVEL>NON-REENTRANT</REENTRANCY-LEVEL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>CanTrcv_ArisuCan_ReadStatus</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="153f850f-836b-4e2c-b255-79c9785a0d33">
+                  <SHORT-NAME>CanTrcv_ArisuCan_RequestCanMode</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_INTERRUPT_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <REENTRANCY-LEVEL>NON-REENTRANT</REENTRANCY-LEVEL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>CanTrcv_ArisuCan_RequestCanMode</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="03c95259-1476-4b34-945a-97bca4b796fd">
+                  <SHORT-NAME>CanTrcv_ArisuCan_SetMode</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_INTERRUPT_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <REENTRANCY-LEVEL>NON-REENTRANT</REENTRANCY-LEVEL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>CanTrcv_ArisuCan_SetMode</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="87f7b3e9-cb18-4d28-8dc1-c903f583d0fa">
+                  <SHORT-NAME>CanTrcv_ArisuCan_VbsenseDisable</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_INTERRUPT_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <REENTRANCY-LEVEL>NON-REENTRANT</REENTRANCY-LEVEL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>CanTrcv_ArisuCan_VbsenseDisable</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="91834ff4-55c5-4160-a382-49a4eef0f323">
+                  <SHORT-NAME>CanTrcv_ArisuCan_VbsenseEnable</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv/CanTrcv_INTERRUPT_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <REENTRANCY-LEVEL>NON-REENTRANT</REENTRANCY-LEVEL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>CanTrcv_ArisuCan_VbsenseEnable</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </SERVICE-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="2ab6fa38-d382-46c8-ba07-dfca9b3966fb">
+          <SHORT-NAME>SwcImplementation_CanTrcv</SHORT-NAME>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>1.0.11</SW-VERSION>
+          <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/Bsw_CanTrcv/SwcBswMapping_CanTrcv</SWC-BSW-MAPPING-REF>
+          <VENDOR-ID>76</VENDOR-ID>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/Svc_CanTrcv/Cantrcv/SwcInternalBehavior_CanTrcv</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="de0127da-c654-4438-9ffb-8dc656e715d7">
+          <SHORT-NAME>ClientServerInterfaces</SHORT-NAME>
+          <ELEMENTS>
+            <CLIENT-SERVER-INTERFACE UUID="af32da3a-9ebe-4fdc-829e-b81a23b08be5">
+              <SHORT-NAME>ArisuCan_GetStatus</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION UUID="44ce4f6c-758f-43ac-b39c-46c74755dab5">
+                  <SHORT-NAME>CanTrcv_ArisuCan_GetInternalSBCMode</SHORT-NAME>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="a010a89d-a34c-4b67-91ec-50f0fcf794c3">
+                  <SHORT-NAME>CanTrcv_ArisuCan_ReadStatus</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="2b0357ab-644b-48e9-9a23-4e938f9f2347">
+                      <SHORT-NAME>address</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_CanTrcv/ImplementationDataTypes/CanTrcv_ArisuCanType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="fce186d7-41ce-4528-b050-86d43b756e6c">
+                      <SHORT-NAME>data</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_CanTrcv/ImplementationDataTypes/CanTrcv_ArisuCanType</TYPE-TREF>
+                      <DIRECTION>INOUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_GetStatus/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_GetStatus/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR UUID="a1300dcc-28d7-4c92-8e20-55a5226a1593">
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+                <APPLICATION-ERROR UUID="fec52898-9673-4298-b255-d29a90a3b4e8">
+                  <SHORT-NAME>E_OK</SHORT-NAME>
+                  <ERROR-CODE>0</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE UUID="1e1a8b76-9b1f-4bc2-bf2d-996f45b7eb42">
+              <SHORT-NAME>ArisuCan_OperationModeControl</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION UUID="b923c794-77e2-4b2c-8e12-1fdd724c28dc">
+                  <SHORT-NAME>ArisuCan_SendSPI</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="cb2dd9b6-a963-459d-93e8-5f55c5d9cad0">
+                      <SHORT-NAME>SpiSrcData</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="02f5d053-5d0b-47a2-bf2a-24499327b1bd">
+                      <SHORT-NAME>SpiDestData</SHORT-NAME>
+                      <DIRECTION>INOUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="a8ae3372-169b-4f49-8749-2c1dbc9d7f4d">
+                  <SHORT-NAME>CanTrcv_ArisuCan_ChangeStopMode</SHORT-NAME>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="f1330982-ae0c-4c73-bf02-530bfc0b07b4">
+                  <SHORT-NAME>CanTrcv_ArisuCan_PowerDownMode</SHORT-NAME>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="c0dc4cfa-043f-41d6-bac9-899ff55505f6">
+                  <SHORT-NAME>CanTrcv_ArisuCan_RequestCanMode</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="829c45fb-36ab-402c-a74a-b1b9b076dd14">
+                      <SHORT-NAME>canTrcv</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_CanTrcv/ImplementationDataTypes/CanTrcv_HwType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="7555f011-5672-4e04-aa19-01002151694d">
+                      <SHORT-NAME>mode</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_CanTrcv/ImplementationDataTypes/ArisuCan_SBCModeType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="8d550674-a181-4359-b48a-a52fd31f6eb8">
+                  <SHORT-NAME>CanTrcv_ArisuCan_SetMode</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE UUID="97b837e2-4f4f-42f3-8aad-3276d875c19b">
+                      <SHORT-NAME>mode</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_CanTrcv/ImplementationDataTypes/ArisuCan_SBCModeType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="c696f8ad-efb5-49df-b230-7e34b09e731e">
+                  <SHORT-NAME>CanTrcv_ArisuCan_VbsenseDisable</SHORT-NAME>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION UUID="e5d6f678-7132-4560-8eeb-68fa631f1b1a">
+                  <SHORT-NAME>CanTrcv_ArisuCan_VbsenseEnable</SHORT-NAME>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/E_NOT_OK</POSSIBLE-ERROR-REF>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_CanTrcv/ClientServerInterfaces/ArisuCan_OperationModeControl/E_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR UUID="b41b197d-e1e0-41fd-b305-35ef42bebf9d">
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+                <APPLICATION-ERROR UUID="50e78506-d867-4ea7-9290-e7023d733f90">
+                  <SHORT-NAME>E_OK</SHORT-NAME>
+                  <ERROR-CODE>0</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="d71fb030-e366-42c0-99ef-b608ac06587e">
+          <SHORT-NAME>CompuMethods</SHORT-NAME>
+          <ELEMENTS>
+            <COMPU-METHOD UUID="aa9af3ea-64f9-4a66-a5d5-04d6ccfdc5a3">
+              <SHORT-NAME>ArisuCan_SBCModeType</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>0</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>ARISUCAN_SBCMODE_NORMAL</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>1</LOWER-LIMIT>
+                    <UPPER-LIMIT>1</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>ARISUCAN_SBCMODE_SLEEP</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>2</LOWER-LIMIT>
+                    <UPPER-LIMIT>2</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>ARISUCAN_SBCMODE_STOP</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>3</LOWER-LIMIT>
+                    <UPPER-LIMIT>3</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>ARISUCAN_SBCMODE_INIT</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>4</LOWER-LIMIT>
+                    <UPPER-LIMIT>4</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>ARISUCAN_SBCMODE_RESTART</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>5</LOWER-LIMIT>
+                    <UPPER-LIMIT>5</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>ARISUCAN_SBCMODE_MAX</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="5ac0fe28-d04a-4f75-bff9-047dc95ba24b">
+              <SHORT-NAME>CanTrcv_HwType</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>0</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_NCV7342</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>1</LOWER-LIMIT>
+                    <UPPER-LIMIT>1</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TJA1040</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>2</LOWER-LIMIT>
+                    <UPPER-LIMIT>2</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TJA1041</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>3</LOWER-LIMIT>
+                    <UPPER-LIMIT>3</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TJA1041A</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>4</LOWER-LIMIT>
+                    <UPPER-LIMIT>4</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TJA1042</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>5</LOWER-LIMIT>
+                    <UPPER-LIMIT>5</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TJA1043</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>6</LOWER-LIMIT>
+                    <UPPER-LIMIT>6</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TJA1044</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>7</LOWER-LIMIT>
+                    <UPPER-LIMIT>7</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TJA1050</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>8</LOWER-LIMIT>
+                    <UPPER-LIMIT>8</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TJA1051</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>9</LOWER-LIMIT>
+                    <UPPER-LIMIT>9</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TJA1054</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>10</LOWER-LIMIT>
+                    <UPPER-LIMIT>10</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TJA1054A</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>11</LOWER-LIMIT>
+                    <UPPER-LIMIT>11</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TJA1055</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>12</LOWER-LIMIT>
+                    <UPPER-LIMIT>12</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TJA1057</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>13</LOWER-LIMIT>
+                    <UPPER-LIMIT>13</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TJA1145</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>14</LOWER-LIMIT>
+                    <UPPER-LIMIT>14</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TLE6250G</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>15</LOWER-LIMIT>
+                    <UPPER-LIMIT>15</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TLE6251G</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>16</LOWER-LIMIT>
+                    <UPPER-LIMIT>16</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TLE62513G</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>17</LOWER-LIMIT>
+                    <UPPER-LIMIT>17</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TLE6251DS</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>18</LOWER-LIMIT>
+                    <UPPER-LIMIT>18</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TLE62542G</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>19</LOWER-LIMIT>
+                    <UPPER-LIMIT>19</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TLE62543G</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>20</LOWER-LIMIT>
+                    <UPPER-LIMIT>20</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TLE7250G</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>21</LOWER-LIMIT>
+                    <UPPER-LIMIT>21</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TLE7250LE</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>22</LOWER-LIMIT>
+                    <UPPER-LIMIT>22</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TLE9250SJ</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>23</LOWER-LIMIT>
+                    <UPPER-LIMIT>23</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TLE9251VSJ</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>24</LOWER-LIMIT>
+                    <UPPER-LIMIT>24</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TLE9255W</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>25</LOWER-LIMIT>
+                    <UPPER-LIMIT>25</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_UJA1169</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>26</LOWER-LIMIT>
+                    <UPPER-LIMIT>26</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_ARISU_CAN0</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>27</LOWER-LIMIT>
+                    <UPPER-LIMIT>27</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_ARISU_CAN1</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>28</LOWER-LIMIT>
+                    <UPPER-LIMIT>28</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_ARISU_CAN2</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>29</LOWER-LIMIT>
+                    <UPPER-LIMIT>29</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_ARISU_CAN3</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>30</LOWER-LIMIT>
+                    <UPPER-LIMIT>30</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TJA1463</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>31</LOWER-LIMIT>
+                    <UPPER-LIMIT>31</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TJA1059</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>32</LOWER-LIMIT>
+                    <UPPER-LIMIT>32</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TCAN1043A</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>33</LOWER-LIMIT>
+                    <UPPER-LIMIT>33</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TCAN1044</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>34</LOWER-LIMIT>
+                    <UPPER-LIMIT>34</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TCAN1057</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT>35</LOWER-LIMIT>
+                    <UPPER-LIMIT>35</UPPER-LIMIT>
+                    <COMPU-INVERSE-VALUE>
+                      <VT>CANTRCV_TCAN1145</VT>
+                    </COMPU-INVERSE-VALUE>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="33a928e3-28a9-4c1e-b1d7-d5c453aaf678">
+          <SHORT-NAME>DataConstrs</SHORT-NAME>
+          <ELEMENTS>
+            <DATA-CONSTR UUID="f07a1519-989a-4e74-bf93-704d3d632fc3">
+              <SHORT-NAME>ArisuCan_SBCModeType</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>5</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>5</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="43daf345-39a1-47c3-a589-809e87c5aef8">
+              <SHORT-NAME>CanTrcv_HwType</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>36</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>35</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="cad104bc-f2be-4d69-9aa1-7be1ef920e33">
+          <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+          <ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE UUID="9fddac3d-3ce1-4251-ad4b-c2fe03e72449">
+              <SHORT-NAME>ArisuCan_SBCModeType</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/Svc_CanTrcv/CompuMethods/ArisuCan_SBCModeType</COMPU-METHOD-REF>
+                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/Svc_CanTrcv/DataConstrs/ArisuCan_SBCModeType</DATA-CONSTR-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="0a79ff64-3c15-40a5-8513-7791d0226998">
+              <SHORT-NAME>CanTrcv_ArisuCanType</SHORT-NAME>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint16</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="4a3a7037-cf66-4965-9b2b-f04f22e9bf38">
+              <SHORT-NAME>CanTrcv_HwType</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/Svc_CanTrcv/CompuMethods/CanTrcv_HwType</COMPU-METHOD-REF>
+                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/Svc_CanTrcv/DataConstrs/CanTrcv_HwType</DATA-CONSTR-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

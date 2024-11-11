@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+********************************************************************************
+**                                                                            **
+**  (C) 2020 HYUNDAI AUTRON Co., Ltd.                                         **
+**  Confidential Proprietary Information. Distribution Limited.               **
+**  Do Not Copy Without Prior Permission                                      **
+**                                                                            **
+**  MODULE        : CanNm Module                                              **
+**                                                                            **
+**  PURPOSE       : Definition of the ports.                                  **
+**                                                                            **
+**  DESCRIPTION   : This file provides the description of the ports and the   **
+**                  mapping between SWC and the CanNm module descriptor.      **
+**                                                                            **
+********************************************************************************
+** Version Date           Prepared By     Description                         **
+********************************************************************************
+** 0.0.1   30-Sep-2022    NamNT1          Initial version                     **
+********************************************************************************
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="1e875d31-4742-46bc-9f7a-dbafc2184b7b">
+      <SHORT-NAME>Svc_CanNm</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="f8ea6f7c-3d72-11ed-b878-0242ac120002">
+          <SHORT-NAME>ClientServerInterface</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="cac1134e-9fb7-4dac-81a5-41adc285acb2">
+          <SHORT-NAME>ServiceSwComponentType</SHORT-NAME>
+          <ELEMENTS>
+            <SERVICE-SW-COMPONENT-TYPE UUID="48986853-45a9-4934-968e-50756bd5813e">
+              <SHORT-NAME>CanNm</SHORT-NAME>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="aeef409b-0b38-4a87-8df4-37def1f32466">
+                  <SHORT-NAME>SwcIB_CanNm</SHORT-NAME>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </SERVICE-SW-COMPONENT-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

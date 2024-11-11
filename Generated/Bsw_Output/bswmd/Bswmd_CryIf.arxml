@@ -1,0 +1,1261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <!--
+/*******************************************************************************
+**  (C) 2021 HYUNDAI AUTOEVER Corp.                                           **
+**  Confidential Proprietary Information. Distribution Limited.               **
+**  This source code is permitted to be used only in projects contracted      **
+**  with Hyundai Autoever, and any other use is prohibited.                   **
+**  If you use it for other purposes or change the source code,               **
+**  you may take legal responsibility.                                        **
+**  In this case, There is no warranty and technical support.                 **
+**                                                                            **
+**  PRODUCT       :    CryIf Module                                           **
+**                                                                            **
+**  PURPOSE       :    Definition of Configuration Parameters                 **
+**                                                                            **
+**  DESCRIPTION   : This file provides the definition of the containers,      **
+**                  parameters specific to CryIf module.                      **
+**                                                                            **
+*******************************************************************************/
+
+/*******************************************************************************
+**                      Revision History                                      **
+********************************************************************************
+** Revision  Date          By          Description                            **
+********************************************************************************
+** 0.0.1     01-07-2020    VietPT4     Initial version                        **
+** 0.0.2     17-12-2020    VietPT4     Add module entry                       **
+** 1.0.3.0   12-Aug-2022        DienTC1      #595                             **
+** 1.0.4.0   01-Dec-2022        DienTC1      #CP44-996                        **
+** 1.0.5.0   02-Mar-2023        PhuocLH9     #CP44-1745                       **
+*******************************************************************************/
+-->
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="5d8a68ff-5051-4886-9519-4a12ea9f5711">
+      <SHORT-NAME>BSW_CryIf</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="0c375832-9fd4-4bb2-9723-23cf31ae7147">
+          <SHORT-NAME>BswImplementation_CryIf</SHORT-NAME>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>1.0.5</SW-VERSION>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/BSW_CryIf/CryIf/BswInternalBehavior_CryIf</BEHAVIOR-REF>
+          <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+            <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTRON/CryIf</VENDOR-SPECIFIC-MODULE-DEF-REF>
+          </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION UUID="e05b936f-7b7f-4a0b-8eb4-8bedd6b858b8">
+          <SHORT-NAME>CryIf</SHORT-NAME>
+          <CATEGORY>BSW_MODULE</CATEGORY>
+          <IMPLEMENTED-ENTRYS>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_Init</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_GetVersionInfo</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_ProcessJob</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_CancelJob</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_KeyElementSet</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_KeySetValid</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_KeyElementGet</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_KeyElementCopy</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_KeyElementCopyPartial</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_KeyCopy</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_RandomSeed</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_KeyGenerate</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_KeyDerive</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_KeyExchangeCalcPubVal</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_KeyExchangeCalcSecret</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_CallbackNotification</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+          </IMPLEMENTED-ENTRYS>
+          <MODULE-ID>112</MODULE-ID>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR UUID="1f7d50cd-8582-4155-8576-50d9fafbc5af">
+              <SHORT-NAME>BswInternalBehavior_CryIf</SHORT-NAME>
+              <ENTITYS>
+                <BSW-CALLED-ENTITY UUID="8b8eecc7-01c5-4ab0-9cd4-d7b04923a006">
+                  <SHORT-NAME>BswCE_CryIf_GetVersionInfo</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_GetVersionInfo</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="2ee92050-9a3b-43f5-8125-e79a8e6e32db">
+                  <SHORT-NAME>BswCE_CryIf_Init</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/BSW_CryIf/CryIf_Init</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+              </ENTITYS>
+              <DISTINGUISHED-PARTITIONS>
+                <BSW-DISTINGUISHED-PARTITION>
+                  <SHORT-NAME>BswDistinguishedPartition_CryIf</SHORT-NAME>
+                </BSW-DISTINGUISHED-PARTITION>
+              </DISTINGUISHED-PARTITIONS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_CallbackNotification</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_CallbackNotification</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Notifies the CRYIF about the completion of the request with the result of the cryptographic operation.</L-2>
+          </DESC>
+          <SERVICE-ID>0x0d</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>job</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">job</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Points to the completed job's information structure. It contains a callbackID to identify which job is finished.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Csm/ImplementationDataTypes/Crypto_JobType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>result</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">result</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Contains the result of the cryptographic operation.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_CancelJob</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_CancelJob</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This interface dispatches the job cancellation function to the configured crypto driver object.</L-2>
+          </DESC>
+          <SERVICE-ID>0x0e</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>channelId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">channelId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the crypto channel.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>job</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">job</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to the configuration of the job. Contains structures with user and primitive relevant information.</L-2>
+              </DESC>
+              <DIRECTION>INOUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Csm/ImplementationDataTypes/Crypto_JobType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_GetVersionInfo</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_GetVersionInfo</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Returns the version information of this module.</L-2>
+          </DESC>
+          <SERVICE-ID>0x01</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>versioninfo</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">versioninfo</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to where to store the version information of this module.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_VersionInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_Init</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_Init</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Initializes the CRYIF module.</L-2>
+          </DESC>
+          <SERVICE-ID>0x00</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>configPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">configPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to a selected configuration structure</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/CryIf/ImplementationDataTypes_Blueprint/CryIf_ConfigType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_KeyCopy</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_KeyCopy</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This function shall copy all key elements from the source key to a target key.</L-2>
+          </DESC>
+          <SERVICE-ID>0x10</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryIfKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryIfKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be the source element.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>targetCryIfKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">targetCryIfKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be the destination element.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_KeyDerive</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_KeyDerive</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This function shall dispatch the key derive function to the configured crypto driver object.</L-2>
+          </DESC>
+          <SERVICE-ID>0x09</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryIfKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryIfKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key which is used for key derivation.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>targetCryIfKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">targetCryIfKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key which is used to store the derived key.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_KeyElementCopy</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_KeyElementCopy</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This function shall copy a key elements from one key to a target key.</L-2>
+          </DESC>
+          <SERVICE-ID>0x0f</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryIfKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryIfKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be the source element.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key element which shall be the source for the copy operation.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>targetCryIfKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">targetCryIfKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be the destination element.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>targetKeyElementId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">targetKeyElementId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key element which shall be the destination for the copy operation.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_KeyElementCopyPartial</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_KeyElementCopyPartial</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">Copies a key element to another key element. The keyElementOffsets and keyElementCopyLength allows to copy just parts of the source key element into the destination key element.</L-2>
+          </DESC>
+          <SERVICE-ID>0x12</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryIfKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryIfKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be the source element.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key element which shall be the source for the copy operation.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementSourceOffset</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementSourceOffset</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This is the offset of the source key element indicating the start index of the copy operation.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementTargetOffset</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementTargetOffset</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This is the offset of the target key element indicating the start index of the copy operation.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementCopyLength</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementCopyLength</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Specifies the number of bytes that shall be copied.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>targetCryIfKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">targetCryIfKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be the destination element.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>targetKeyElementId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">targetKeyElementId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key element which shall be the destination for the copy operation.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_KeyElementGet</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_KeyElementGet</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This function shall dispatch the get key element function to the configured crypto driver object.</L-2>
+          </DESC>
+          <SERVICE-ID>0x06</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryIfKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryIfKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be returned.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key element which shall be returned.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>resultPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">resultPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the pointer of the buffer for the returned key element</L-2>
+              </DESC>
+              <DIRECTION>OUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>resultLengthPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">resultLengthPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds a pointer to a memory location in which the length information is stored. On calling this function this parameter shall contain the size of the buffer provided by resultPtr. If the key element is configured to allow partial access, this parameter contains the amount of data which should be read from the key element. The size may not be equal to the size of the provided buffer anymore. When the request has finished, the amount of data that has been stored shall be stored.</L-2>
+              </DESC>
+              <DIRECTION>INOUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_KeyElementSet</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_KeyElementSet</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This function shall dispatch the set key element function to the configured crypto driver object.</L-2>
+          </DESC>
+          <SERVICE-ID>0x04</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Std/ImplementationDataTypes_Blueprint/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryIfKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryIfKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key element shall be set.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyElementId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyElementId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key element which shall be set.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the pointer to the key data which shall be set as key element.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>keyLength</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">keyLength</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Contains the length of the key element in bytes.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_KeyExchangeCalcPubVal</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_KeyExchangeCalcPubVal</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This function shall dispatch the key exchange public value calculation function to the configured crypto driver object.</L-2>
+          </DESC>
+          <SERVICE-ID>0x0a</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryIfKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryIfKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key which shall be used for the key exchange protocol.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>publicValuePtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">publicValuePtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Contains the pointer to the data where the public value shall be stored.</L-2>
+              </DESC>
+              <DIRECTION>OUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>publicValueLengthPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">publicValueLengthPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds a pointer to the memory location in which the public value length information is stored. On calling this function, this parameter shall contain the size of the buffer provided by publicValuePtr. When the request has finished, the actual length of the returned value shall be stored.</L-2>
+              </DESC>
+              <DIRECTION>INOUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_KeyExchangeCalcSecret</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_KeyExchangeCalcSecret</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This function shall dispatch the key exchange common shared secret calculation function to the configured crypto driver object.</L-2>
+          </DESC>
+          <SERVICE-ID>0x0b</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryIfKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryIfKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key which shall be used for the key exchange protocol.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>partnerPublicValuePtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">partnerPublicValuePtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the pointer to the memory location which contains the partner's public value.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>partnerPublicValueLength</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">partnerPublicValueLength</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Contains the length of the partner's public value in bytes.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_KeyGenerate</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_KeyGenerate</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This function shall dispatch the key generate function to the configured crypto driver object.</L-2>
+          </DESC>
+          <SERVICE-ID>0x08</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryIfKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryIfKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key which is to be updated with the generated value.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_KeySetValid</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_KeySetValid</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This function shall dispatch the set key valid function to the configured crypto driver object.</L-2>
+          </DESC>
+          <SERVICE-ID>0x05</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryIfKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryIfKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key whose key elements shall be set to valid.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_ProcessJob</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_ProcessJob</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This interface dispatches the received jobs to the configured crypto driver object.</L-2>
+          </DESC>
+          <SERVICE-ID>0x03</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>channelId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">channelId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the crypto channel.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>job</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">job</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Pointer to the configuration of the job. Contains structures with user and primitive relevant information.</L-2>
+              </DESC>
+              <DIRECTION>INOUT</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Csm/ImplementationDataTypes/Crypto_JobType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>CryIf_RandomSeed</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">CryIf_RandomSeed</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">This function shall dispatch the random seed function to the configured crypto driver object.</L-2>
+          </DESC>
+          <SERVICE-ID>0x07</SERVICE-ID>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+          <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+          <RETURN-TYPE>
+            <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+            <SW-DATA-DEF-PROPS>
+              <SW-DATA-DEF-PROPS-VARIANTS>
+                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                </SW-DATA-DEF-PROPS-CONDITIONAL>
+              </SW-DATA-DEF-PROPS-VARIANTS>
+            </SW-DATA-DEF-PROPS>
+          </RETURN-TYPE>
+          <ARGUMENTS>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>cryIfKeyId</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">cryIfKeyId</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds the identifier of the key for which a new seed shall be generated.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>seedPtr</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">seedPtr</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Holds a pointer to the memory location which contains the data to feed the seed.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+            <SW-SERVICE-ARG>
+              <SHORT-NAME>seedLength</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">seedLength</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Contains the length of the seed in bytes.</L-2>
+              </DESC>
+              <DIRECTION>IN</DIRECTION>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </SW-SERVICE-ARG>
+          </ARGUMENTS>
+        </BSW-MODULE-ENTRY>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

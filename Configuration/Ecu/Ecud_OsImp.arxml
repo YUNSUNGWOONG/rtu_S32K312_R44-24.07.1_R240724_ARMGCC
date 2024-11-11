@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="ce7d7471-0492-4103-b601-7c817f54156f">
+      <SHORT-NAME>AUTOSAR</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="bff3514a-393c-4ced-aa75-2e0f3b68e8ba">
+          <SHORT-NAME>OsImp</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTRON/OsImp</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/Bsw_OsImp/BswImplementation_OsImp</MODULE-DESCRIPTION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="254c552c-e318-42f1-add6-0d4e0619ada4">
+              <SHORT-NAME>OsImpGeneral</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2019-01-24T13:37:42Z" GID="OsImpDebugCpuload">0</SD>
+                    <SD T="2023-01-06T19:10:10Z" GID="OsImpDebugStackdepth" />
+                    <SD T="2019-01-24T14:54:18Z" GID="OsImpOpfUsed">0</SD>
+                    <SD T="2019-01-24T13:37:45Z" GID="OsImpErrmUsed">0</SD>
+                    <SD T="2023-01-11T19:55:05Z" GID="OsImpCpuLoad">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/OsImp/OsImpGeneral</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/OsImp/OsImpGeneral/OsImpCpuLoad</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="3bb87024-afb9-486c-bbfa-40c85a341db3">
+              <SHORT-NAME>OsImpConfiguration</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/OsImp/OsImpConfiguration</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="790de5e3-16a6-48f6-8811-0f98010292fe">
+                  <SHORT-NAME>MEM_ITCM</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2019-01-24T13:37:57Z" GID="OsImpRamDefaultValue">0</SD>
+                        <SD T="2019-01-24T13:37:57Z" GID="OsImpRamInitProperty">PowerOnReset</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2023-01-06T18:10:47Z" GID="OsImpRamDefaultValue">0</SD>
+                        <SD T="2023-01-06T18:07:05Z" GID="OsImpRamSectionBaseAddress">0x00000000</SD>
+                        <SD T="2023-01-06T18:06:15Z" GID="OsImpRamSectionSize">0x00008000</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamDefaultValue</DEFINITION-REF>
+                      <VALUE>0x0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamInitProperty</DEFINITION-REF>
+                      <VALUE>PowerOnReset</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamSectionBaseAddress</DEFINITION-REF>
+                      <VALUE>0x00000000</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamSectionSize</DEFINITION-REF>
+                      <VALUE>0x00008000</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="32e6e457-77d3-4e63-afda-da031f7f1027">
+                  <SHORT-NAME>MEM_DTCM</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2019-01-24T14:15:34Z" GID="OsImpRamDefaultValue">0</SD>
+                        <SD T="2019-01-24T14:15:34Z" GID="OsImpRamInitProperty">PowerOnReset</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2023-01-06T18:08:29Z" GID="OsImpRamSectionSize">0x00010000</SD>
+                        <SD T="2019-01-24T14:16:14Z" GID="OsImpRamSectionBaseAddress">0x20000000</SD>
+                        <SD T="2023-01-06T18:10:49Z" GID="OsImpRamDefaultValue">0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamDefaultValue</DEFINITION-REF>
+                      <VALUE>0x0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamInitProperty</DEFINITION-REF>
+                      <VALUE>PowerOnReset</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamSectionSize</DEFINITION-REF>
+                      <VALUE>0x00010000</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamSectionBaseAddress</DEFINITION-REF>
+                      <VALUE>0x20000000</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="8de73e69-9bf8-4328-a2e0-f27ca3b501b8">
+                  <SHORT-NAME>RAM_RETENTION</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2023-01-06T18:09:31Z" GID="OsImpRamDefaultValue">0</SD>
+                        <SD T="2023-01-06T18:09:31Z" GID="OsImpRamInitProperty">PowerOnReset</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2024-07-17T14:12:15Z" GID="OsImpRamSectionBaseAddress">0x20400200</SD>
+                        <SD T="2024-07-17T14:12:17Z" GID="OsImpRamSectionSize">0x00003E00</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamDefaultValue</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamInitProperty</DEFINITION-REF>
+                      <VALUE>PowerOnReset</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamSectionBaseAddress</DEFINITION-REF>
+                      <VALUE>0x20400200</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamSectionSize</DEFINITION-REF>
+                      <VALUE>0x00003E00</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="1e669846-f4bf-441a-b541-b6f5bb52f656">
+                  <SHORT-NAME>RAM_SYSTEM</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2023-01-06T18:10:21Z" GID="OsImpRamDefaultValue">0</SD>
+                        <SD T="2023-01-06T18:10:21Z" GID="OsImpRamInitProperty">PowerOnReset</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2024-07-17T14:12:35Z" GID="OsImpRamSectionBaseAddress">0x20404000</SD>
+                        <SD T="2024-07-17T14:12:38Z" GID="OsImpRamSectionSize">0x00014000</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamDefaultValue</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamInitProperty</DEFINITION-REF>
+                      <VALUE>PowerOnReset</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamSectionBaseAddress</DEFINITION-REF>
+                      <VALUE>0x20404000</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamSectionSize</DEFINITION-REF>
+                      <VALUE>0x00014000</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="7051ec33-70ad-4ac2-84be-e2820b5d1b9f">
+                  <SHORT-NAME>MEM_ITCM_Wakeup</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2023-01-06T18:11:33Z" GID="OsImpRamDefaultValue">0</SD>
+                        <SD T="2023-01-06T18:11:33Z" GID="OsImpRamInitProperty">PowerOnReset</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2023-01-06T18:11:49Z" GID="OsImpRamSectionBaseAddress">0x00000000</SD>
+                        <SD T="2023-01-06T18:11:53Z" GID="OsImpRamSectionSize">0x00008000</SD>
+                        <SD T="2023-01-06T18:11:55Z" GID="OsImpRamInitProperty">WakeUp</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamDefaultValue</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamInitProperty</DEFINITION-REF>
+                      <VALUE>WakeUp</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamSectionBaseAddress</DEFINITION-REF>
+                      <VALUE>0x00000000</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamSectionSize</DEFINITION-REF>
+                      <VALUE>0x00008000</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="6f9a5194-3414-47b2-961e-43c4e2b6c9a2">
+                  <SHORT-NAME>MEM_DTCM_Wakeup</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2023-01-06T18:12:19Z" GID="OsImpRamDefaultValue">0</SD>
+                        <SD T="2023-01-06T18:12:19Z" GID="OsImpRamInitProperty">PowerOnReset</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2023-01-06T18:12:28Z" GID="OsImpRamSectionBaseAddress">0x20000000</SD>
+                        <SD T="2023-01-06T18:12:31Z" GID="OsImpRamSectionSize">0x00010000</SD>
+                        <SD T="2023-01-06T18:12:33Z" GID="OsImpRamInitProperty">WakeUp</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamDefaultValue</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamInitProperty</DEFINITION-REF>
+                      <VALUE>WakeUp</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamSectionBaseAddress</DEFINITION-REF>
+                      <VALUE>0x20000000</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamSectionSize</DEFINITION-REF>
+                      <VALUE>0x00010000</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="69827997-a735-4e55-adab-66b57a11fd21">
+                  <SHORT-NAME>RAM_SYSTEM_Wakeup</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2023-01-06T18:12:38Z" GID="OsImpRamDefaultValue">0</SD>
+                        <SD T="2023-01-06T18:12:38Z" GID="OsImpRamInitProperty">PowerOnReset</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2024-07-17T14:12:46Z" GID="OsImpRamSectionBaseAddress">0x20404000</SD>
+                        <SD T="2024-07-17T14:12:44Z" GID="OsImpRamSectionSize">0x00014000</SD>
+                        <SD T="2023-01-06T18:12:51Z" GID="OsImpRamInitProperty">WakeUp</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamDefaultValue</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamInitProperty</DEFINITION-REF>
+                      <VALUE>WakeUp</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamSectionBaseAddress</DEFINITION-REF>
+                      <VALUE>0x20404000</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/OsImp/OsImpConfiguration/OsImpRamSector/OsImpRamSectionSize</DEFINITION-REF>
+                      <VALUE>0x00014000</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

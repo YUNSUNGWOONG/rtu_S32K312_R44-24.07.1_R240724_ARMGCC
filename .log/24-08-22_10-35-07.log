@@ -1,0 +1,146 @@
+C:\ts_mirr\python\Portable_Python_2.7.6.1\App\python.exe C:\ts_mirr\scons\scons-local-2.3.4\scons.py -f.\Build\site_scons\SConstruct Compile -j32
+scons: Reading SConscript files ...
+AutoEver Toolset Version: 2.6.0
+=== CCCOM == $CC ${OPTION_VIA_FILE("$OPTION_FILE_PREFIX", "$CCCOM_OPTION")}
+=== OPTION_VIA_FILE == <class 'common.OptionViaFile'>
+=== OPTION_FILE_PREFIX == @
+=== CCCOM == $CC ${OPTION_VIA_FILE("$OPTION_FILE_PREFIX", "$CCCOM_OPTION")}
+=== OPTION_VIA_FILE == <class 'common.OptionViaFile'>
+=== OPTION_FILE_PREFIX == @
+=== CCCOM == $CC ${OPTION_VIA_FILE("$OPTION_FILE_PREFIX", "$CCCOM_OPTION")}
+=== OPTION_VIA_FILE == <class 'common.OptionViaFile'>
+=== OPTION_FILE_PREFIX == @
+=== CCCOM == $CC ${OPTION_VIA_FILE("$OPTION_FILE_PREFIX", "$CCCOM_OPTION")}
+=== OPTION_VIA_FILE == <class 'common.OptionViaFile'>
+=== OPTION_FILE_PREFIX == @
+scons: done reading SConscript files.
+scons: Building targets ...
+Compiling 1th file : App_DiagnosticMonitor.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 2th file : App_DiagnosticService.c
+Compiling 3th file : App_Lin.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 4th file : App_Mode.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 5th file : App_OsHook.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 6th file : App_WdgM.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 7th file : Cache_Setup.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 8th file : LowPower_Callout.c
+Compiling 9th file : Startup.s
+Compiling 10th file : Lin_Diag.c
+Compiling 11th file : Os_stub.c
+Compiling 12th file : Dummy_HaeASK.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 13th file : Dummy_HaeCryptoLib.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 14th file : Dummy_HaeHsmDriver.c
+Compiling 15th file : Dummy_HaeSFM2.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 16th file : BswM.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 17th file : BswM_ActionList.c
+Compiling 18th file : BswM_Cfg.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 19th file : BswM_Ram.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 20th file : BswM_Rule.c
+Compiling 21th file : CanCM_Cfg.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 22th file : CanIf_Cfg.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 23th file : CanNm_Cfg.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 24th file : CanSM_Cfg.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 25th file : CanTp_Cfg.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 26th file : CanTrcv_Cfg.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 27th file : ComM_Cfg.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 28th file : ComXf_APIs.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 29th file : ComXf_Cfg.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 30th file : ComXf_PbCfg.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+Compiling 31th file : Com_Cfg.c
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+scons: *** [Debug\Static_Code\Reference_Code\src\App_DiagnosticMonitor.o] Error 1
+Compiling 32th file : CryIf_Cfg.c
+scons: *** [Debug\Static_Code\Reference_Code\src\App_DiagnosticService.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\src\App_Lin.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\src\App_Mode.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\src\App_OsHook.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\src\App_WdgM.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\src\Cache_Setup.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\src\LowPower_Callout.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\src\Startup.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\stub\Dcm_Lin\Lin_Diag.o] Error 1
+scons: *** [Debug\Static_Code\Reference_Code\stub\Os\Os_stub.o] Error 1
+scons: *** [Debug\CryptoLib\DummyCrypto\usercode\Dummy_HaeASK.o] Error 1
+scons: *** [Debug\CryptoLib\DummyCrypto\usercode\Dummy_HaeCryptoLib.o] Error 1
+scons: *** [Debug\CryptoLib\DummyCrypto\usercode\Dummy_HaeHsmDriver.o] Error 1
+scons: *** [Debug\CryptoLib\DummyCrypto\usercode\Dummy_HaeSFM2.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\BswM.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\BswM_ActionList.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\BswM_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\BswM_Ram.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\BswM_Rule.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\CanCM_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\CanIf_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\CanNm_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\CanSM_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\CanTp_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\CanTrcv_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\ComM_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\ComXf_APIs.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\ComXf_Cfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\ComXf_PbCfg.o] Error 1
+scons: *** [Debug\Generated\Bsw_Output\src\Com_Cfg.o] Error 1
+arm-none-eabi-gcc.exe: fatal error: no input files
+compilation terminated.
+scons: *** [Debug\Generated\Bsw_Output\src\CryIf_Cfg.o] Error 1
+scons: building terminated because of errors.

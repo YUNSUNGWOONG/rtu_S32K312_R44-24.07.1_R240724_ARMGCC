@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="ac1616b5-373b-44a4-816b-e915046f7df7">
+      <SHORT-NAME>App_WdgM</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="90eaf64d-bb4b-4be2-ba47-03e8ac1d5b05">
+          <SHORT-NAME>SWC_WdgMTest</SHORT-NAME>
+          <PORTS>
+            <R-PORT-PROTOTYPE UUID="352b8b52-5493-4528-ad8b-aa3ec880576c">
+              <SHORT-NAME>SE_Init_CP_AS0</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/WdgM/ClientServerInterfaces/WdgM_LocalSupervision/CheckpointReached</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/WdgM/ClientServerInterfaces/WdgM_LocalSupervision</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="73d86966-d14b-48f0-b76c-4169bc4d6a2d">
+              <SHORT-NAME>globalMode</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <MODE-SWITCH-RECEIVER-COM-SPEC>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/WdgM/ModeSwitchInterfaces/WdgM_GlobalMode/currentMode</MODE-GROUP-REF>
+                  <SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>false</SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>
+                </MODE-SWITCH-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/WdgM/ModeSwitchInterfaces/WdgM_GlobalMode</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="4f79faf6-a52b-40bb-be32-87cae4b106a5">
+              <SHORT-NAME>WdgM_GlobalSupervision</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/WdgM/ClientServerInterfaces/WdgM_GlobalSupervision/GetFirstExpiredSEID</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/WdgM/ClientServerInterfaces/WdgM_GlobalSupervision/GetGlobalStatus</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/WdgM/ClientServerInterfaces/WdgM_GlobalSupervision/SetMode</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/WdgM/ClientServerInterfaces/WdgM_GlobalSupervision/PerformReset</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/WdgM/ClientServerInterfaces/WdgM_GlobalSupervision/GetMode</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/WdgM/ClientServerInterfaces/WdgM_GlobalSupervision</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="63959e7e-dbff-4580-9823-3aed898a14ba">
+              <SHORT-NAME>SE_WdgMTest_CP_AS0</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/WdgM/ClientServerInterfaces/WdgM_LocalSupervision/CheckpointReached</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/WdgM/ClientServerInterfaces/WdgM_LocalSupervision</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="93144aa8-5c90-43df-bbc8-bc65c8013a51">
+              <SHORT-NAME>InternalBehavior</SHORT-NAME>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/WdgM/DataTypeMappingSets/WdgM_Mode</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <EVENTS>
+                <TIMING-EVENT UUID="1c0097db-47e9-4432-ac4d-98cf211d4559">
+                  <SHORT-NAME>TE_RE_WdgMTest</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/App_WdgM/SWC_WdgMTest/InternalBehavior/RE_WdgMTest</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="e28b936f-d585-431d-afb2-9da7cb3e1560">
+                  <SHORT-NAME>SMSE_Entry_RE_WdgMTestGlobalMode_globalMode_currentMode_SUPERVISION_EXPIRED</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/App_WdgM/SWC_WdgMTest/InternalBehavior/RE_WdgMTestGlobalMode</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/App_WdgM/SWC_WdgMTest/globalMode</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/WdgM/ModeSwitchInterfaces/WdgM_GlobalMode/currentMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/WdgM/ModeDeclarationGroups/WdgM_Mode/SUPERVISION_EXPIRED</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="27ccdfb4-7e0f-4a47-baaf-22837d5a9c5e">
+                  <SHORT-NAME>SMSE_Entry_RE_WdgMTestGlobalMode_globalMode_currentMode_SUPERVISION_FAILED</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/App_WdgM/SWC_WdgMTest/InternalBehavior/RE_WdgMTestGlobalMode</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/App_WdgM/SWC_WdgMTest/globalMode</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/WdgM/ModeSwitchInterfaces/WdgM_GlobalMode/currentMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/WdgM/ModeDeclarationGroups/WdgM_Mode/SUPERVISION_FAILED</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="0607acbf-8725-4354-92ce-a15c6d60e596">
+                  <SHORT-NAME>SMSE_Entry_RE_WdgMTestGlobalMode_globalMode_currentMode_SUPERVISION_OK</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/App_WdgM/SWC_WdgMTest/InternalBehavior/RE_WdgMTestGlobalMode</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/App_WdgM/SWC_WdgMTest/globalMode</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/WdgM/ModeSwitchInterfaces/WdgM_GlobalMode/currentMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/WdgM/ModeDeclarationGroups/WdgM_Mode/SUPERVISION_OK</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="baebda04-7863-44d4-8423-f6b320cfd441">
+                  <SHORT-NAME>SMSE_Entry_RE_WdgMTestGlobalMode_globalMode_currentMode_SUPERVISION_STOPPED</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/App_WdgM/SWC_WdgMTest/InternalBehavior/RE_WdgMTestGlobalMode</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-ENTRY</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/App_WdgM/SWC_WdgMTest/globalMode</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/WdgM/ModeSwitchInterfaces/WdgM_GlobalMode/currentMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/WdgM/ModeDeclarationGroups/WdgM_Mode/SUPERVISION_STOPPED</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+              </EVENTS>
+              <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="9bbe0afc-d046-4b92-80f7-509c2ede0332">
+                  <SHORT-NAME>RE_WdgMTest</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="632a0b73-3bdf-4599-817f-dce96232554a">
+                      <SHORT-NAME>SSCP_RE_WdgMTest_WdgM_GlobalSupervision_SetMode</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_WdgM/SWC_WdgMTest/WdgM_GlobalSupervision</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/WdgM/ClientServerInterfaces/WdgM_GlobalSupervision/SetMode</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="7144f54a-c46b-46c3-8349-7eb17e6a51f1">
+                      <SHORT-NAME>SSCP_RE_WdgMTest_WdgM_GlobalSupervision_GetFirstExpiredSEID</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_WdgM/SWC_WdgMTest/WdgM_GlobalSupervision</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/WdgM/ClientServerInterfaces/WdgM_GlobalSupervision/GetFirstExpiredSEID</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                      <TIMEOUT>0.0</TIMEOUT>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="e88540bb-5e83-414d-882c-361b2c5b02fe">
+                      <SHORT-NAME>SSCP_RE_WdgMTest_WdgM_GlobalSupervision_GetGlobalStatus</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_WdgM/SWC_WdgMTest/WdgM_GlobalSupervision</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/WdgM/ClientServerInterfaces/WdgM_GlobalSupervision/GetGlobalStatus</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                      <TIMEOUT>0.0</TIMEOUT>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="1d80f78c-7bf8-4106-90a7-bc5b32741a19">
+                      <SHORT-NAME>SSCP_RE_WdgMTest_SE_Init_CP_AS0_CheckpointReached</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_WdgM/SWC_WdgMTest/SE_Init_CP_AS0</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/WdgM/ClientServerInterfaces/WdgM_LocalSupervision/CheckpointReached</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>RE_WdgMTest</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="2cca5be4-43ac-4f1a-a184-8e6e48b5ba04">
+                  <SHORT-NAME>RE_WdgMTestGlobalMode</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <MODE-ACCESS-POINTS>
+                    <MODE-ACCESS-POINT>
+                      <IDENT UUID="56b6f1e2-d1e2-42f1-bd98-0d8f841c8a2f">
+                        <SHORT-NAME>MRAP_RE_WdgMTestGlobalMode_globalMode_currentMode</SHORT-NAME>
+                      </IDENT>
+                      <MODE-GROUP-IREF>
+                        <R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                          <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_WdgM/SWC_WdgMTest/globalMode</CONTEXT-R-PORT-REF>
+                          <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/WdgM/ModeSwitchInterfaces/WdgM_GlobalMode/currentMode</TARGET-MODE-GROUP-REF>
+                        </R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                      </MODE-GROUP-IREF>
+                    </MODE-ACCESS-POINT>
+                  </MODE-ACCESS-POINTS>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="d5f6302c-6954-4a0b-8588-4f4c74b42ac9">
+                      <SHORT-NAME>SSCP_RE_WdgMTestGlobalMode_WdgM_GlobalSupervision_GetFirstExpiredSEID</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_WdgM/SWC_WdgMTest/WdgM_GlobalSupervision</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/WdgM/ClientServerInterfaces/WdgM_GlobalSupervision/GetFirstExpiredSEID</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                      <TIMEOUT>0.0</TIMEOUT>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="85f83724-727b-4b3e-b311-ba9fd8e9aa92">
+                      <SHORT-NAME>SSCP_RE_WdgMTestGlobalMode_WdgM_GlobalSupervision_GetGlobalStatus</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_WdgM/SWC_WdgMTest/WdgM_GlobalSupervision</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/WdgM/ClientServerInterfaces/WdgM_GlobalSupervision/GetGlobalStatus</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                      <TIMEOUT>0.0</TIMEOUT>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>RE_WdgMTestGlobalMode</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

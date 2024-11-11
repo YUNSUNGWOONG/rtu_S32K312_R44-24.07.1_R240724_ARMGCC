@@ -1,0 +1,2024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="e3c2a072-c5f2-4966-acb7-9088a8dfb63a">
+          <SHORT-NAME>EcuC</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/EcuC</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-POST-BUILD</IMPLEMENTATION-CONFIG-VARIANT>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="6c5524e2-2fab-4e88-9a6e-5a38604da4f7">
+              <SHORT-NAME>EcucConfigSet</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="9959c369-cc19-4127-88c0-6851a0dd2d89">
+                  <SHORT-NAME>EcucPduCollection</SHORT-NAME>
+                  <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                        <SD GID="PduIdTypeEnum">true</SD>
+                        <SD GID="PduLengthTypeEnum">true</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                        <SD T="2024-07-10T13:03:03Z" GID="PduIdTypeEnum">UINT8</SD>
+                        <SD T="2024-07-10T13:03:03Z" GID="PduLengthTypeEnum">UINT8</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2023-08-29T20:19:23Z" GID="PduIdTypeEnum">UINT8</SD>
+                        <SD T="2023-08-29T20:19:30Z" GID="PduLengthTypeEnum">UINT8</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/PduIdTypeEnum</DEFINITION-REF>
+                      <VALUE>UINT8</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/PduLengthTypeEnum</DEFINITION-REF>
+                      <VALUE>UINT8</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="5a2cd624-a8c2-4888-b95c-b8ff4e332ef2">
+                      <SHORT-NAME>MetaDataType0</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/MetaDataType</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="cdbf1765-fdcc-4986-83f1-8309ab91d8d2">
+                          <SHORT-NAME>MetaDataItem0</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2020-01-10T11:06:16Z" GID="MetaDataItemType">CAN_ID_32</SD>
+                                <SD T="2020-01-10T11:06:33Z" GID="MetaDataItemLength">1</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/MetaDataType/MetaDataItem</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/MetaDataType/MetaDataItem/MetaDataItemType</DEFINITION-REF>
+                              <VALUE>CAN_ID_32</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/MetaDataType/MetaDataItem/MetaDataItemLength</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="5d872141-6505-45f6-91e8-225a8723ad7e">
+                      <SHORT-NAME>MetaDataType_ID32</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/MetaDataType</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="31898945-200f-4b6e-84b2-3dcf2f05998c">
+                          <SHORT-NAME>MetaDataItemCANID32</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2020-08-07T10:19:57Z" GID="MetaDataItemLength">4</SD>
+                                <SD T="2020-08-07T10:20:00Z" GID="MetaDataItemType">CAN_ID_32</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/MetaDataType/MetaDataItem</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/MetaDataType/MetaDataItem/MetaDataItemLength</DEFINITION-REF>
+                              <VALUE>4</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/MetaDataType/MetaDataItem/MetaDataItemType</DEFINITION-REF>
+                              <VALUE>CAN_ID_32</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="1a6c66be-9882-4d5a-8b8f-cda7b8dab8c7">
+                      <SHORT-NAME>MetaDataType1</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/MetaDataType</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="8204e5a5-5962-44b3-9c07-c3a471298b3d">
+                          <SHORT-NAME>MetaDataItem0</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2020-08-11T14:43:59Z" GID="MetaDataItemLength">4</SD>
+                                <SD T="2020-08-11T14:44:02Z" GID="MetaDataItemType">CAN_ID_32</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/MetaDataType/MetaDataItem</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/MetaDataType/MetaDataItem/MetaDataItemLength</DEFINITION-REF>
+                              <VALUE>4</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/MetaDataType/MetaDataItem/MetaDataItemType</DEFINITION-REF>
+                              <VALUE>CAN_ID_32</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="971f6111-ee21-43fa-b2c1-ba8fe5223e16">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN1_Master_Cmd</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">5</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_Master_Cmd</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_Master_Cmd</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>5</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_Master_Cmd</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_Master_Cmd</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="a3f32736-840c-421b-81e3-1215cf3cb560">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN1_FL_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_FL_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_FL_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_FL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_FL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="ac142774-953c-4732-b6c8-0ffcb04ef586">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN1_FCL_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_FCL_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_FCL_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_FCL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_FCL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="479e19a4-b45f-4231-a28d-949ae518988c">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN1_FCR_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_FCR_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_FCR_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_FCR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_FCR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="e4e1b40a-6590-4576-8973-9eb49143a876">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN1_FR_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_FR_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_FR_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_FR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_FR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="0b9134bc-7257-4449-be04-80120a7bc1b8">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN1_RL_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_RL_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_RL_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_RL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_RL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="8b261d7f-cfe2-4ffd-af10-c7533febd8dd">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN1_RCL_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_RCL_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_RCL_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_RCL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_RCL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="c6d1d227-d232-4fb8-a947-7a6a8d1ed3a7">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN1_RCR_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_RCR_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_RCR_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_RCR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_RCR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="7b506fac-adb5-4029-80af-d4eefc445d8c">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN1_RR_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_RR_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_RR_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_RR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_RR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="2a08dd76-2ea2-4938-b50f-099498c0fcd4">
+                      <SHORT-NAME>Pdu_ISignalIPdu_FD_CAN1_BSD_01_50ms_P11</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_BSD_01_50ms_P11</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_BSD_01_50ms_P11</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_BSD_01_50ms_P11</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_BSD_01_50ms_P11</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="0870116e-bcf7-4e45-8d7b-6db661c745dd">
+                      <SHORT-NAME>Pdu_ISignalIPdu_FD_CAN1_TCU_01_10ms_P11</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_TCU_01_10ms_P11</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_TCU_01_10ms_P11</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_TCU_01_10ms_P11</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_TCU_01_10ms_P11</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="28fffbe4-2880-4b70-a23c-1a6b07c766d5">
+                      <SHORT-NAME>Pdu_NmPdu_FD_CAN1_NM_MDPS</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_NM_MDPS</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_NM_MDPS</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_NM_MDPS</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_NM_MDPS</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="694a3de8-8593-4abf-b07b-0cbb591ef3ff">
+                      <SHORT-NAME>Pdu_NmPdu_FD_CAN1_NM_ECS</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_NM_ECS</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_NM_ECS</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_NM_ECS</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_NM_ECS</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="4b4ebca2-a88b-4a4d-9f6b-db639be9e04c">
+                      <SHORT-NAME>Pdu_NmPdu_FD_CAN1_NM_CGW</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_NM_CGW</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_NM_CGW</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_NM_CGW</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_NM_CGW</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="52013eae-53cb-4d51-8e71-5eee96e723aa">
+                      <SHORT-NAME>Pdu_ISignalIPdu_FD_CAN1_Normal_Msg_FD_TP_01_B</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">64</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Normal_Msg_FD_TP_01_B</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_Normal_Msg_FD_TP_01_B</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>64</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Normal_Msg_FD_TP_01_B</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_Normal_Msg_FD_TP_01_B</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="d98e9f2c-d4c2-407d-9e1c-f4c472382a90">
+                      <SHORT-NAME>Pdu_NPdu_FD_CAN1_Normal_Msg_FD_TP_01_B</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Normal_Msg_FD_TP_01_B</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Normal_Msg_FD_TP_01_B</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="18d81496-0ee7-4552-9693-eb3772a3ae2f">
+                      <SHORT-NAME>Pdu_ISignalIPdu_FD_CAN1_Normal_Msg_FD_TP_01_A</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">64</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Normal_Msg_FD_TP_01_A</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_Normal_Msg_FD_TP_01_A</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>64</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Normal_Msg_FD_TP_01_A</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_Normal_Msg_FD_TP_01_A</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="fbca2b88-0b97-47a4-96d1-0e0128cccfda">
+                      <SHORT-NAME>Pdu_NPdu_FD_CAN1_Normal_Msg_FD_TP_01_A</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">64</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Normal_Msg_FD_TP_01_A</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>64</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Normal_Msg_FD_TP_01_A</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="4eab87d1-0ae6-4cb4-8597-8973a7fe24ae">
+                      <SHORT-NAME>Pdu_ISignalIPdu_FD_CAN1_AFLS_01_100ms</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_AFLS_01_100ms</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_AFLS_01_100ms</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_AFLS_01_100ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_AFLS_01_100ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="63b2c629-cac2-45fe-a882-ae44459e3a13">
+                      <SHORT-NAME>Pdu_ISignalIPdu_FD_CAN1_AHLS_01_300ms</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_AHLS_01_300ms</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_AHLS_01_300ms</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_AHLS_01_300ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_AHLS_01_300ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="185d3b2e-5aac-46d9-a083-c673c9b85185">
+                      <SHORT-NAME>Pdu_ComMPdu_Rx_EIRA_CanNm</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">4</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="99900eae-224a-4c35-834c-47edaab5069a">
+                      <SHORT-NAME>Pdu_ComMPdu_Tx_PncVector_FD_CAN1</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">4</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="609e8478-a428-4b4e-941e-4c9b4dd1c635">
+                      <SHORT-NAME>Pdu_DcmIPdu_LIN1_MasterReq</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_MasterReq</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_MasterReq</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_MasterReq</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_MasterReq</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="ebd261f4-f7c4-40d0-baba-0a6a3901458c">
+                      <SHORT-NAME>Pdu_DcmIPdu_LIN1_SlaveResp</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_SlaveResp</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_SlaveResp</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/LinFrameTriggering_LIN1_SlaveResp</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN1/CLUSTERS/LIN1/PhysicalChannel_0/PduTriggering_LIN1_SlaveResp</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="5fff9baa-8fe3-424f-a3d8-02585adbbf25">
+                      <SHORT-NAME>Pdu_DcmIPdu_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">64</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>64</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="2ff2a7a0-626e-4c74-8886-e0f49798ccea">
+                      <SHORT-NAME>Pdu_NPdu_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Diag_Msg_TP_Phys_Res_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="8f0b17a4-234f-408d-b1e9-3a0bb6cb6ea2">
+                      <SHORT-NAME>Pdu_DcmIPdu_FD_CAN1_Diag_Msg_TP_Phys_Req_FD_CAN1</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Diag_Msg_TP_Phys_Req_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_Diag_Msg_TP_Phys_Req_FD_CAN1</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Diag_Msg_TP_Phys_Req_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_Diag_Msg_TP_Phys_Req_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="f4ae3f01-5f9e-4e6d-8280-4a82f06a62d7">
+                      <SHORT-NAME>Pdu_NPdu_FD_CAN1_Diag_Msg_TP_Phys_Req_FD_CAN1</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Diag_Msg_TP_Phys_Req_FD_CAN1</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Diag_Msg_TP_Phys_Req_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="ea5bfe05-7e49-4114-b5b9-59a9b63c3529">
+                      <SHORT-NAME>Pdu_DcmIPdu_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="70df810b-a67f-405e-91fe-8a2bdfec6062">
+                      <SHORT-NAME>Pdu_NPdu_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_Diag_Msg_TP_Func_FD_CAN1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="ffec5a15-c0fa-4a96-861e-03fa78f7ca86">
+                      <SHORT-NAME>Pdu_ISignalIPdu_FD_CAN1_AtmResp</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_AtmResp</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_AtmResp</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_AtmResp</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_AtmResp</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="2207333a-1528-4e76-84c4-42fec593cdea">
+                      <SHORT-NAME>Pdu_ISignalIPdu_FD_CAN1_AtmReq</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_AtmReq</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_AtmReq</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_AtmReq</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_AtmReq</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="bfc86bab-af82-4642-8ae9-34ab4f3635bd">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN2_Master_Cmd</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">5</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_Master_Cmd</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_Master_Cmd</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>5</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_Master_Cmd</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_Master_Cmd</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="6a277bc8-ce9b-4dc6-bd2b-e8eeb539f86a">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN2_FL_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_FL_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_FL_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_FL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_FL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="3a4a2353-58ca-4176-9a2d-a86ee33354f4">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN2_FCL_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_FCL_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_FCL_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_FCL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_FCL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="368ba1a4-e39d-4ef2-a422-f53655d56f89">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN2_FCR_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_FCR_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_FCR_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_FCR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_FCR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="7bc5a1ab-7d13-4d6b-8233-c12c84f11280">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN2_FR_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_FR_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_FR_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_FR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_FR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="da9b514a-b8f0-4dcb-99ab-f43860453766">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN2_RL_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_RL_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_RL_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_RL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_RL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="92ccae72-0d43-4eb2-9033-62749db8cb41">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN2_RCL_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_RCL_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_RCL_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_RCL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_RCL_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="dca47ad3-d25b-41cf-9b78-c829b9bdb70f">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN2_RCR_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_RCR_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_RCR_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_RCR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_RCR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="f0a1eb42-13cd-4e46-941c-5e0cab9d5cf0">
+                      <SHORT-NAME>Pdu_ISignalIPdu_LIN2_RR_Sensor_Status</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">6</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_RR_Sensor_Status</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_RR_Sensor_Status</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_RR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_RR_Sensor_Status</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="40ae157c-b6f9-42df-bfed-2eee54e90c01">
+                      <SHORT-NAME>Pdu_DcmIPdu_LIN2_MasterReq</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_MasterReq</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_MasterReq</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_MasterReq</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_MasterReq</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="1fefa881-f2a0-4815-ba9f-ffad981f754f">
+                      <SHORT-NAME>Pdu_DcmIPdu_LIN2_SlaveResp</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_SlaveResp</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_SlaveResp</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="LIN-FRAME-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/LinFrameTriggering_LIN2_SlaveResp</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/LIN2/CLUSTERS/LIN2/PhysicalChannel_0/PduTriggering_LIN2_SlaveResp</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="036a5cef-9b3d-4444-a831-0ae4467b505e">
+                      <SHORT-NAME>Pdu_ISignalIPdu_FD_CAN1_V_CGW_02_A</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_V_CGW_02_A</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_V_CGW_02_A</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_V_CGW_02_A</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_V_CGW_02_A</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="710bfa64-0210-4bee-b750-b4c8f206b3de">
+                      <SHORT-NAME>Pdu_ISignalIPdu_FD_CAN1_V_CGW_01_B</SHORT-NAME>
+                      <CATEGORY>TOOL_CONFIGURED</CATEGORY>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:AUTO_CONFIGURED">
+                            <SD T="2024-07-10T13:03:03Z" GID="PduLength">8</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToFrameTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_V_CGW_01_B</SD>
+                            <SD T="2024-07-10T13:03:03Z" GID="SysTPduToPduTriggeringRef">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_V_CGW_01_B</SD>
+                          </SDG>
+                          <SDG GID="ODIN_AUTO_CONFIG_PROPERTY">
+                            <SD GID="PduLength">true</SD>
+                            <SD GID="SysTPduToFrameTriggeringRef">true</SD>
+                            <SD GID="SysTPduToPduTriggeringRef">true</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToFrameTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="CAN-FRAME-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/FT_FD_CAN1_V_CGW_01_B</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/SysTPduToPduTriggeringRef</DEFINITION-REF>
+                          <VALUE-REF DEST="PDU-TRIGGERING">/DBCImport/CLUSTERS/FD_CAN1/FD_CAN1/PT_FD_CAN1_V_CGW_01_B</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="aa85c545-c85f-4997-8b0d-1aebdb9aabe4">
+              <SHORT-NAME>EcucHardware</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucHardware</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="83d0eec9-23ee-45b6-8d32-796871b1a990">
+                  <SHORT-NAME>EcucCoreDefinition_Main</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2020-01-05T22:54:07Z" GID="EcucCoreId">0</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucHardware/EcucCoreDefinition</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucHardware/EcucCoreDefinition/EcucCoreId</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="d1efab1b-57f5-482d-a119-ff0cdcffa19d">
+              <SHORT-NAME>EcucPartitionCollection</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="0004499d-424e-4f13-bbf7-19243755b300">
+                  <SHORT-NAME>EcucPartition_Main</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2023-08-28T18:40:38Z" GID="EcucPartitionQmBswModuleExecution">1</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2023-08-28T18:40:56Z" GID="EcucPartitionBswModuleExecution">1</SD>
+                        <SD T="2023-08-28T18:41:01Z" GID="PartitionCanBeRestarted">0</SD>
+                        <SD T="2024-07-10T14:34:26Z" GID="EcucPartitionBswModuleDistinguishedPartition">/AUTOSAR_BswM/BswModuleDescriptions/BswM/BswIB_BswM/BswDistinguishedPartition_BswM,/Bsw_CanCm/CanCM/BswInternalBehavior_CanCM/BswDistinguishedPartition_CanCM,/Bsw_CanIf/CanIf/BswInternalBehavior_CanIf/BswDistinguishedPartition_CanIf,/Bsw_CanNm/CanNm/BswInternalBehavior_CanNm/BswDistinguishedPartition_CanNm,/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/BswDistinguishedPartition_CanSM,/Bsw_CanTp/CanTp/BswInternalBehavior_CanTp/BswDistinguishedPartition_CanTp,/Bsw_CanTrcv/CanTrcv/BswInternalBehavior_CanTrcv/BswDistinguishedPartition_CanTrcv,/Bsw_Com/Com/BswInternalBehavior_Com/BswDistinguishedPartition_Com,/Bsw_ComM/ComM/BswIB_ComM/BswDistinguishedPartition_ComM,/Bsw_Crc/BswModuleDescription_Crc/BswInternalBehavior_Crc/BswDistinguishedPartition_Crc,/BSW_CryIf/CryIf/BswInternalBehavior_CryIf/BswDistinguishedPartition_CryIf,/Bsw_Csm/Csm/BswInternalBehavior_Csm/BswDistinguishedPartition_Csm,/Bsw_Dcm/Dcm/BswInternalBehavior_Dcm/BswDistinguishedPartition_Dcm,/Bsw_Dem/Dem/BswInternalBehavior_Dem/BswDistinguishedPartition_Dem,/Bsw_Det/Det/BswInternalBehavior_Det/BswDistinguishedPartition_Det,/Bsw_Ea/Ea/BswInternalBehavior_Ea/BswDistinguishedPartition_Ea,/Bsw_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/BswDistinguishedPartition_EcuM_Core0,/Bsw_Eep/Eep/BswInternalBehavior_Eep/BswDistinguishedPartition_Eep,/Bsw_FiM/FiM/BswInternalBehavior_FiM/BswDistinguishedPartition_FiM,/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/BswDistinguishedPartition_IoHwAb,/Bsw_IpduM/IpduM/BswInternalBehavior_IpduM/BswDistinguishedPartition_IpduM,/Bsw_KeyM/KeyM/BswInternalBehavior_KeyM/BswDistinguishedPartition_KeyM,/Bsw_LinIf/LinIf/BswInternalBehavior_LinIf/BswDistinguishedPartition_LinIf,/Bsw_LinSM/LinSM/BswInternalBehavior_LinSM/BswDistinguishedPartition_LinSM,/Bsw_LinTrcv/LinTrcv/BswInternalBehavior_LinTrcv/BswDistinguishedPartition_LinTrcv,/Bsw_MemIf/MemIf/BswInternalBehavior_MemIf/BswDistinguishedPartition_MemIf,/Bsw_Nm/Nm/BswInternalBehavior_Nm/BswDistinguishedPartition_Nm,/Bsw_NvM/NvM/BswInternalBehavior_NvM/BswDistinguishedPartition_NvM,/Bsw_Os/Os/BswInternalBehavior_Os/BswDistinguishedPartition_Os,/Bsw_PduR/PduR/BswInternalBehavior_PduR/BswDistinguishedPartition_PduR,/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswDistinguishedPartition_StbM,/Bsw_Tm/Tm/BswInternalBehavior_Tm/BswDistinguishedPartition_Tm,/Bsw_Wdg_76_Acw/Wdg_76_Acw/BswInternalBehavior_Wdg_76_Acw/BswDistinguishedPartition_Wdg_76_Acw,/Bsw_WdgIf/WdgIf/BswInternalBehavior_WdgIf/BswDistinguishedPartition_WdgIf,/Bsw_WdgM/WdgM/BswInternalBehavior_WdgM/BswDistinguishedPartition_WdgM</SD>
+                        <SD T="2023-12-13T14:06:16Z" GID="EcucPartitionSoftwareComponentInstanceRef">&lt;/ECU_EXTRACT/EcuComposition/App_Lin_LIN1;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/BswM;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/CDD_LIN;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/ComM;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/Csm;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/Dcm;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/Dem;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/DET;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/EcuM;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/FiM;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/IoHwAb;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/KeyM;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/NvM;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/Os_Master;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/StbM;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/SWC_AppMode;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/SWC_DiagnosticMonitor;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/SWC_DiagnosticService;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/SWC_E2EXf;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/SWC_WdgMTest;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;,&lt;/ECU_EXTRACT/EcuComposition/WdgM;/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype&gt;</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionQmBswModuleExecution</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleExecution</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/PartitionCanBeRestarted</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/AUTOSAR_BswM/BswModuleDescriptions/BswM/BswIB_BswM/BswDistinguishedPartition_BswM</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_CanCm/CanCM/BswInternalBehavior_CanCM/BswDistinguishedPartition_CanCM</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_CanIf/CanIf/BswInternalBehavior_CanIf/BswDistinguishedPartition_CanIf</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_CanNm/CanNm/BswInternalBehavior_CanNm/BswDistinguishedPartition_CanNm</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/BswDistinguishedPartition_CanSM</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_CanTp/CanTp/BswInternalBehavior_CanTp/BswDistinguishedPartition_CanTp</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_CanTrcv/CanTrcv/BswInternalBehavior_CanTrcv/BswDistinguishedPartition_CanTrcv</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_Com/Com/BswInternalBehavior_Com/BswDistinguishedPartition_Com</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_ComM/ComM/BswIB_ComM/BswDistinguishedPartition_ComM</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_Crc/BswModuleDescription_Crc/BswInternalBehavior_Crc/BswDistinguishedPartition_Crc</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/BSW_CryIf/CryIf/BswInternalBehavior_CryIf/BswDistinguishedPartition_CryIf</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_Csm/Csm/BswInternalBehavior_Csm/BswDistinguishedPartition_Csm</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_Dcm/Dcm/BswInternalBehavior_Dcm/BswDistinguishedPartition_Dcm</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_Dem/Dem/BswInternalBehavior_Dem/BswDistinguishedPartition_Dem</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_Det/Det/BswInternalBehavior_Det/BswDistinguishedPartition_Det</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_Ea/Ea/BswInternalBehavior_Ea/BswDistinguishedPartition_Ea</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/BswDistinguishedPartition_EcuM_Core0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_Eep/Eep/BswInternalBehavior_Eep/BswDistinguishedPartition_Eep</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_FiM/FiM/BswInternalBehavior_FiM/BswDistinguishedPartition_FiM</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/BswDistinguishedPartition_IoHwAb</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_IpduM/IpduM/BswInternalBehavior_IpduM/BswDistinguishedPartition_IpduM</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_KeyM/KeyM/BswInternalBehavior_KeyM/BswDistinguishedPartition_KeyM</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_LinIf/LinIf/BswInternalBehavior_LinIf/BswDistinguishedPartition_LinIf</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_LinSM/LinSM/BswInternalBehavior_LinSM/BswDistinguishedPartition_LinSM</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_LinTrcv/LinTrcv/BswInternalBehavior_LinTrcv/BswDistinguishedPartition_LinTrcv</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_MemIf/MemIf/BswInternalBehavior_MemIf/BswDistinguishedPartition_MemIf</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_Nm/Nm/BswInternalBehavior_Nm/BswDistinguishedPartition_Nm</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_NvM/NvM/BswInternalBehavior_NvM/BswDistinguishedPartition_NvM</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_Os/Os/BswInternalBehavior_Os/BswDistinguishedPartition_Os</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_PduR/PduR/BswInternalBehavior_PduR/BswDistinguishedPartition_PduR</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_StbM/StbM/BswInternalBehavior_StbM/BswDistinguishedPartition_StbM</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_Tm/Tm/BswInternalBehavior_Tm/BswDistinguishedPartition_Tm</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_Wdg_76_Acw/Wdg_76_Acw/BswInternalBehavior_Wdg_76_Acw/BswDistinguishedPartition_Wdg_76_Acw</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_WdgIf/WdgIf/BswInternalBehavior_WdgIf/BswDistinguishedPartition_WdgIf</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleDistinguishedPartition</DEFINITION-REF>
+                      <VALUE-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_WdgM/WdgM/BswInternalBehavior_WdgM/BswDistinguishedPartition_WdgM</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/App_Lin_LIN1</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/BswM</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/CDD_LIN</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/ComM</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/Csm</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/Dcm</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/Dem</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/DET</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/EcuM</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/FiM</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/IoHwAb</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/KeyM</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/NvM</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/Os_Master</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/StbM</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/SWC_AppMode</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/SWC_DiagnosticMonitor</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/SWC_DiagnosticService</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/SWC_E2EXf</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/SWC_WdgMTest</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/WdgM</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="163e60e4-25d3-4769-addb-6b0b9ceabe4f">
+              <SHORT-NAME>EcucPostBuildVariants</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2023-08-29T20:20:45Z" GID="EcucPostBuildVariantRef">/AUTRON/PostBuildSelectable/Variant_FL</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPostBuildVariants</DEFINITION-REF>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPostBuildVariants/EcucPostBuildVariantRef</DEFINITION-REF>
+                  <VALUE-REF DEST="PREDEFINED-VARIANT">/AUTRON/PostBuildSelectable/Variant_FL</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

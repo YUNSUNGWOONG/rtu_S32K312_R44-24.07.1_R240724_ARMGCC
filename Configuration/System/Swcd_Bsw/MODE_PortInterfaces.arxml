@@ -1,0 +1,1549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="3d2a9d10-ba22-4009-aca9-a947c37dc9e0">
+      <SHORT-NAME>MODE</SHORT-NAME>
+      <CATEGORY>STANDARD</CATEGORY>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="23cc16ac-48a6-4549-9914-3ef94fba61fa">
+          <SHORT-NAME>ApplicationPrimitiveDataTypes</SHORT-NAME>
+          <CATEGORY>STANDARD</CATEGORY>
+          <ELEMENTS>
+            <APPLICATION-PRIMITIVE-DATA-TYPE UUID="97fad529-c949-40b2-8cd2-d9cea43a9b0c">
+              <SHORT-NAME>ENUM_ComMMode</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/MODE/CompuMethods/ENUM_ComMMode_def</COMPU-METHOD-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+            <APPLICATION-PRIMITIVE-DATA-TYPE UUID="96965d99-aecd-4e37-b7b5-583ee743ed56">
+              <SHORT-NAME>ENUM_PduRouter</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/MODE/CompuMethods/ENUM_PduRouter_def</COMPU-METHOD-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+            <APPLICATION-PRIMITIVE-DATA-TYPE UUID="515d2e58-8c40-4cc7-8fdb-ffd023307d74">
+              <SHORT-NAME>ENUM_AppMode</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/MODE/CompuMethods/ENUM_AppMode_def</COMPU-METHOD-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+            <APPLICATION-PRIMITIVE-DATA-TYPE UUID="4de357a1-b48b-4804-99cb-897ab094a9f2">
+              <SHORT-NAME>ENUM_ComMMode_PNC</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/MODE/CompuMethods/ENUM_ComMMode_PNC_def</COMPU-METHOD-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="092a43af-2acb-463a-b062-f8f72292864e">
+          <SHORT-NAME>CompuMethods</SHORT-NAME>
+          <ELEMENTS>
+            <COMPU-METHOD UUID="3cb055fa-7daf-45a4-a4af-004a5c6d1e3c">
+              <SHORT-NAME>ENUM_ComMMode_def</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>COMM_MODE_NO_COM</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>COMM_MODE_FULL_COM</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="39809a1a-c22a-453a-b775-8b6112dae2a5">
+              <SHORT-NAME>ENUM_PduRouter_def</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>PDU_ROUTER_ENABLE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>PDU_ROUTER_DISABLE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="88c8b058-7524-4891-8a69-63acde7a2aec">
+              <SHORT-NAME>ENUM_AppMode_def</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>APP_MODE_ACTIVE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>APP_MODE_INACTIVE_OFF</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>APP_MODE_INACTIVE_RESET</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>APP_MODE_INACTIVE_SLEEP</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="2a59aa5e-4f08-41c3-a46c-795c3631cbd1">
+              <SHORT-NAME>ENUM_ComMMode_PNC_def</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>COMM_MODE_PNC_REQUESTED</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>COMM_MODE_PNC_READY_SLEEP</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>COMM_MODE_PNC_PREPARE_SLEEP</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>COMM_MODE_PNC_NO_COMMUNICATION</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>COMM_MODE_PNC_FULL_COMMUNICATION</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="478fd0f7-0522-40e6-9ecc-65598d9d4ee0">
+          <SHORT-NAME>ModeDeclarationGroups</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-DECLARATION-GROUP UUID="727fd3ac-c24d-4b0a-86a7-a0cf81a18f75">
+              <SHORT-NAME>MDG_ComMMode</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MODE/ModeDeclarationGroups/MDG_ComMMode/NO_COM</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="5ed42bd2-9338-4e4c-a52a-f3549c1473fa">
+                  <SHORT-NAME>NO_COM</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="2ba46a92-9cf5-43ec-9e63-2ea3b4eeda62">
+                  <SHORT-NAME>SILENT_COM</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="67880569-46ce-4217-b84d-94f508523e40">
+                  <SHORT-NAME>FULL_COM</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="93d2d20a-206c-4faf-ad6d-34e3527fa5ac">
+              <SHORT-NAME>MDG_CanSMState</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MODE/ModeDeclarationGroups/MDG_CanSMState/NO_COM</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="37728300-f063-4575-8d34-7ee49ed4e3be">
+                  <SHORT-NAME>NO_COM</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="da6d28b1-faee-4089-a35d-d2d0a04856e3">
+                  <SHORT-NAME>SILENT_COM</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="fbc09fef-f05f-4ad6-862a-ea64dd285d45">
+                  <SHORT-NAME>FULL_COM</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="cd4943af-fd2d-4bd8-b27c-709d005251e2">
+                  <SHORT-NAME>BUS_OFF</SHORT-NAME>
+                  <VALUE>3</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="1ff74386-6dda-49cf-9564-c8ff24df9037">
+                  <SHORT-NAME>CHANGE_BAUDRATE</SHORT-NAME>
+                  <VALUE>4</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="a603b35d-ff45-4d09-a71d-c3beab6a8314">
+              <SHORT-NAME>MDG_CanSMBORState</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MODE/ModeDeclarationGroups/MDG_CanSMBORState/initmode</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="72ec1a25-ca99-42b6-b633-d399341190fb">
+                  <SHORT-NAME>COMPLETE</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="89301d9e-1d47-4390-a5c7-cc855a05dac3">
+                  <SHORT-NAME>START</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="3ede8dcb-dd81-48e2-831e-aeec71358f37">
+                  <SHORT-NAME>initmode</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="928bec68-fbc8-4b75-9ccf-9e13a864cf44">
+              <SHORT-NAME>MDG_LinSMState</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MODE/ModeDeclarationGroups/MDG_LinSMState/NO_COM</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="b7b3055a-8232-4247-941b-38d01daf6d6b">
+                  <SHORT-NAME>NO_COM</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="412f4020-7a3e-40f2-8e62-61318d88a12a">
+                  <SHORT-NAME>FULL_COM</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="dfe999c0-d0cd-4286-adb0-adc3dd8d9c20">
+              <SHORT-NAME>MDG_WakeupEvent</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MODE/ModeDeclarationGroups/MDG_WakeupEvent/INITIAL_MODE</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>POWER</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>RESET</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>INTERNAL_RESET</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>INTERNAL_WDG</SHORT-NAME>
+                  <VALUE>3</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>EXTERNAL_WDG</SHORT-NAME>
+                  <VALUE>4</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>GPT</SHORT-NAME>
+                  <VALUE>5</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>FD_CAN1_RX</SHORT-NAME>
+                  <VALUE>6</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>FD_CAN1_RX_POLL</SHORT-NAME>
+                  <VALUE>7</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>HS_CAN1_RX</SHORT-NAME>
+                  <VALUE>8</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>HS_CAN1_RX_POLL</SHORT-NAME>
+                  <VALUE>9</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>LIN1_RX</SHORT-NAME>
+                  <VALUE>10</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>INITIAL_MODE</SHORT-NAME>
+                  <VALUE>32</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="28e0c8cc-dd60-4958-a24e-676d93a46c19">
+              <SHORT-NAME>MDG_InitState</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MODE/ModeDeclarationGroups/MDG_InitState/START</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="9997a234-0c10-455d-890c-0ee03b7529fb">
+                  <SHORT-NAME>START</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="b59ae3a4-3900-4113-ab1a-fd8205fa4dae">
+                  <SHORT-NAME>COMPLETE</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="2a19466b-0974-4132-96f2-4d4ba5428ae1">
+              <SHORT-NAME>MDG_PduGroup</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MODE/ModeDeclarationGroups/MDG_PduGroup/STOP</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="f1e229b8-19b0-4830-83cb-89377e1815d1">
+                  <SHORT-NAME>STOP</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="3c4952de-71d6-471e-bc45-05558ec3b914">
+                  <SHORT-NAME>START</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="31160465-255b-488e-aef9-9499d29393f1">
+              <SHORT-NAME>MDG_EthSMMode</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MODE/ModeDeclarationGroups/MDG_EthSMMode/OFFLINE</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>OFFLINE</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>WAIT_TRCVLINK</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>ONLINE</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="5dcb4b08-8501-467f-8e43-a9c391e104ef">
+                  <SHORT-NAME>WAIT_ONLINE</SHORT-NAME>
+                  <VALUE>3</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="235c7020-7e62-4e33-a80c-387fbaa94057">
+                  <SHORT-NAME>ONHOLD</SHORT-NAME>
+                  <VALUE>4</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="178a07fc-23a3-451f-b160-1c631fb2a132">
+                  <SHORT-NAME>WAIT_OFFLINE</SHORT-NAME>
+                  <VALUE>5</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>254</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="a9587cb0-0d86-4bed-9b44-193bc7c4e229">
+              <SHORT-NAME>MDG_ComMMode_PNC</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MODE/ModeDeclarationGroups/MDG_ComMMode_PNC/PNC_NO_COMMUNICATION</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="1a451de5-7f1c-4eda-acdb-ce1ffad7ce75">
+                  <SHORT-NAME>PNC_REQUESTED</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="a204402b-a65c-4958-97a1-8b500657e89d">
+                  <SHORT-NAME>PNC_READY_SLEEP</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="79618166-0957-42ef-81d2-463a8a49f0a0">
+                  <SHORT-NAME>PNC_PREPARE_SLEEP</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="08d235f1-f406-4af2-bc5d-c19e0f733115">
+                  <SHORT-NAME>PNC_NO_COMMUNICATION</SHORT-NAME>
+                  <VALUE>3</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="2f1de61a-1a6c-4625-885f-2e8c2becd804">
+                  <SHORT-NAME>PNC_FULL_COMMUNICATION</SHORT-NAME>
+                  <VALUE>4</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="6b68f9e0-b64b-41ff-8c6d-569c592e2337">
+          <SHORT-NAME>DataTypeMappingSets</SHORT-NAME>
+          <CATEGORY>STANDARD</CATEGORY>
+          <ELEMENTS>
+            <DATA-TYPE-MAPPING-SET S="TOOL_CONFIGURED" UUID="22581678-0415-4acd-8f0b-710d80996cb4">
+              <SHORT-NAME>MAP_ComMMode</SHORT-NAME>
+              <DATA-TYPE-MAPS>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/MODE/ApplicationPrimitiveDataTypes/ENUM_ComMMode</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+              </DATA-TYPE-MAPS>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_ComMMode</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="bd3d20ad-7223-493a-b176-614e4892d71c">
+              <SHORT-NAME>MAP_CanSMState</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_CanSMState</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="674988d3-94bb-4005-a64d-0a7ab0c69f14">
+              <SHORT-NAME>MAP_CanSMBORState</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_CanSMBORState</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="9a2b998a-2dc8-4409-967d-67a4d29fa057">
+              <SHORT-NAME>MAP_LinSMState</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_LinSMState</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="a5fc1d85-0b89-4760-97eb-0e051b2d2bcb">
+              <SHORT-NAME>MAP_WakeupEvent</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_WakeupEvent</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="256719c8-0f2f-43a3-9879-f3728a3c0210">
+              <SHORT-NAME>MAP_PduRouter</SHORT-NAME>
+              <DATA-TYPE-MAPS>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/MODE/ApplicationPrimitiveDataTypes/ENUM_PduRouter</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+              </DATA-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="2c59c2a1-10c0-485a-8326-135883e75562">
+              <SHORT-NAME>MAP_InitState</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_InitState</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET S="TOOL_CONFIGURED" UUID="b324632b-8233-40cc-80bf-7867a024603a">
+              <SHORT-NAME>MAP_AppMode</SHORT-NAME>
+              <DATA-TYPE-MAPS>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/MODE/ApplicationPrimitiveDataTypes/ENUM_AppMode</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+              </DATA-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="81cee74a-0144-48f3-bc59-416f9b0701d3">
+              <SHORT-NAME>MAP_PduGroup</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_PduGroup</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="cd9af97a-22c6-49ff-965c-19e5f5fa4fec">
+              <SHORT-NAME>MAP_EthSMState</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_EthSMMode</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <DATA-TYPE-MAPPING-SET UUID="4b51b121-1d8c-472a-8154-abfe1dff47a0">
+              <SHORT-NAME>MAP_ComMMode_PNC</SHORT-NAME>
+              <DATA-TYPE-MAPS>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/MODE/ApplicationPrimitiveDataTypes/ENUM_ComMMode_PNC</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+              </DATA-TYPE-MAPS>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_ComMMode_PNC</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="0f75a9a4-de01-4394-ab2f-e1052a573adf">
+          <SHORT-NAME>SenderReceiverInterfaces</SHORT-NAME>
+          <ELEMENTS>
+            <SENDER-RECEIVER-INTERFACE UUID="b5f53221-c121-4911-a1c6-788c350359e2">
+              <SHORT-NAME>PduRouterRequestInterface</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <DATA-ELEMENTS>
+                <VARIABLE-DATA-PROTOTYPE UUID="b54c19bd-07fa-4123-b5b0-de24a5fa70da">
+                  <SHORT-NAME>PduRouter_Test</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/MODE/ApplicationPrimitiveDataTypes/ENUM_PduRouter</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+              </DATA-ELEMENTS>
+            </SENDER-RECEIVER-INTERFACE>
+            <SENDER-RECEIVER-INTERFACE UUID="18d297bf-335b-4d95-83a8-bddfc6abc426">
+              <SHORT-NAME>AppModeRequestInterface</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <DATA-ELEMENTS>
+                <VARIABLE-DATA-PROTOTYPE UUID="ada0a361-7c13-4df1-b707-eda3028e4eab">
+                  <SHORT-NAME>AppMode</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/MODE/ApplicationPrimitiveDataTypes/ENUM_AppMode</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+              </DATA-ELEMENTS>
+            </SENDER-RECEIVER-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="38319522-a76f-48e1-97aa-f8164d1c7412">
+          <SHORT-NAME>ModeSwitchInterfaces</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-SWITCH-INTERFACE UUID="695a1f6b-914f-4487-ba7a-53004e73d2c4">
+              <SHORT-NAME>WakeupEventInterface</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="921c8202-1086-46b9-9cda-9aea5cbc2bd1">
+                <SHORT-NAME>WakeupEvent</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_WakeupEvent</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="cd38fb5e-502c-43e7-88f0-04df99e491af">
+              <SHORT-NAME>InitStateInterface</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="208c995a-b99f-4e7c-9d5e-b0b239ccadc0">
+                <SHORT-NAME>InitState</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_InitState</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE UUID="da349836-675c-4fff-96db-d3fb2fd6b4f1">
+      <SHORT-NAME>MODE_LIN1</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="194611a5-880f-48ea-a20a-c94556fa5dbb">
+          <SHORT-NAME>CompuMethods</SHORT-NAME>
+          <ELEMENTS>
+            <COMPU-METHOD UUID="5ee0fec8-790f-496f-b0c0-7d5d6e7ae425">
+              <SHORT-NAME>ENUM_LinSchedule_LIN1_def</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_NULL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_NULL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_RPAS_NORMAL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_RPAS_NORMAL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_RPAS_CRC_COMPARE</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_RPAS_CRC_COMPARE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_PAS_NORMAL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_PAS_NORMAL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_PAS_CRC_COMPARE</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_PAS_CRC_COMPARE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_FRONT_PAS_NORMAL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">5</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">5</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_FRONT_PAS_NORMAL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_PAS_DIAG_IBU</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">6</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">6</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_PAS_DIAG_IBU</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_PAS_DIAG_FL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">7</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">7</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_PAS_DIAG_FL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_PAS_DIAG_FCL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">8</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">8</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_PAS_DIAG_FCL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_PAS_DIAG_FCR</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">9</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">9</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_PAS_DIAG_FCR</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_PAS_DIAG_FR</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">10</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">10</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_PAS_DIAG_FR</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_PAS_DIAG_RL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">11</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">11</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_PAS_DIAG_RL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_PAS_DIAG_RCL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">12</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">12</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_PAS_DIAG_RCL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_PAS_DIAG_RCR</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">13</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">13</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_PAS_DIAG_RCR</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_PAS_DIAG_RR</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">14</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">14</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_PAS_DIAG_RR</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_RPAS_VER_CHECK</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">15</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">15</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_RPAS_VER_CHECK</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_FPAS_VER_CHECK</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">16</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">16</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_FPAS_VER_CHECK</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_RPAS_TUNNING_WRITE</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">17</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">17</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_RPAS_TUNNING_WRITE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_RPAS_TEMP_COMP</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">18</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">18</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_RPAS_TEMP_COMP</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_FPAS_TUNNING_WRITE</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">19</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">19</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_FPAS_TUNNING_WRITE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_PAS_TEMP_COMP</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">20</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">20</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_PAS_TEMP_COMP</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_PAS_DIAG</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">21</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">21</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_PAS_DIAG</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN1_SCHEDULER_PAS_SENSOR_REQUEST</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">22</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">22</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN1_SCHEDULER_PAS_SENSOR_REQUEST</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="01e0a3fd-3244-426f-80f6-22d11afe8ff4">
+          <SHORT-NAME>ApplicationPrimitiveDataTypes</SHORT-NAME>
+          <ELEMENTS>
+            <APPLICATION-PRIMITIVE-DATA-TYPE UUID="33750e6e-0958-477d-a2bd-48e060a82319">
+              <SHORT-NAME>ENUM_LinSchedule_LIN1</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/MODE_LIN1/CompuMethods/ENUM_LinSchedule_LIN1_def</COMPU-METHOD-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="78605d28-33f1-4cb6-b840-e6c84721fb06">
+          <SHORT-NAME>ModeDeclarationGroups</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-DECLARATION-GROUP UUID="a3de41fe-426e-4755-9734-7e03ab0e1f06">
+              <SHORT-NAME>MDG_LinSchedule_LIN1</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1/NULL</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="88e84711-1148-4188-a7c8-f0d0ab077b77">
+                  <SHORT-NAME>NULL</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="c9fe231a-a3b1-41c5-8cc6-6204fdd79b8e">
+                  <SHORT-NAME>SCHEDULER_RPAS_NORMAL</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="3b9b999c-d962-4269-b2fd-d15ebb32826d">
+                  <SHORT-NAME>SCHEDULER_RPAS_CRC_COMPARE</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="f64dd53f-0c32-4729-a5f0-7bf82444959b">
+                  <SHORT-NAME>SCHEDULER_PAS_NORMAL</SHORT-NAME>
+                  <VALUE>3</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="88c37a1d-b142-4b87-aad4-e96ea583aa91">
+                  <SHORT-NAME>SCHEDULER_PAS_CRC_COMPARE</SHORT-NAME>
+                  <VALUE>4</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="743e8783-a8e4-43c8-8b40-769a646f2686">
+                  <SHORT-NAME>SCHEDULER_FRONT_PAS_NORMAL</SHORT-NAME>
+                  <VALUE>5</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="49102047-17db-48e3-bce6-866edb1ee821">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_IBU</SHORT-NAME>
+                  <VALUE>6</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="b739fde5-7abc-49bb-809c-d07a67e20c2f">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_FL</SHORT-NAME>
+                  <VALUE>7</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="ea4a0bfa-1d85-475d-bcd0-e1ff9416a057">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_FCL</SHORT-NAME>
+                  <VALUE>8</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="dec275ed-0e0b-4ecc-9207-3ed019a23d66">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_FCR</SHORT-NAME>
+                  <VALUE>9</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="d7980e7e-0575-4651-9564-35ffe89ae0e3">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_FR</SHORT-NAME>
+                  <VALUE>10</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="e9fb2054-f4d5-46a2-8792-bfde972367e6">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_RL</SHORT-NAME>
+                  <VALUE>11</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="43c2eb3c-19c4-4649-8ce2-e7dd1e004503">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_RCL</SHORT-NAME>
+                  <VALUE>12</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="facfb3d3-cccb-41d7-a172-b52b1656c2d7">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_RCR</SHORT-NAME>
+                  <VALUE>13</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="7d49af23-164f-4938-b245-7b270bea2da1">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_RR</SHORT-NAME>
+                  <VALUE>14</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="891ee4b4-07c8-4689-b042-a007d3f6c1ac">
+                  <SHORT-NAME>SCHEDULER_RPAS_VER_CHECK</SHORT-NAME>
+                  <VALUE>15</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="9ecb43f5-50b4-466a-a7be-17468a5f1744">
+                  <SHORT-NAME>SCHEDULER_FPAS_VER_CHECK</SHORT-NAME>
+                  <VALUE>16</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="090a4042-6294-4a14-b62b-59e0a9312c93">
+                  <SHORT-NAME>SCHEDULER_RPAS_TUNNING_WRITE</SHORT-NAME>
+                  <VALUE>17</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="125eb4b0-a6f9-4280-b923-3647b04fe5e2">
+                  <SHORT-NAME>SCHEDULER_RPAS_TEMP_COMP</SHORT-NAME>
+                  <VALUE>18</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="614d34e5-820c-4922-82eb-566b52552c5f">
+                  <SHORT-NAME>SCHEDULER_FPAS_TUNNING_WRITE</SHORT-NAME>
+                  <VALUE>19</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="708ddc03-06dc-483e-a0cc-0e04d30bacf6">
+                  <SHORT-NAME>SCHEDULER_PAS_TEMP_COMP</SHORT-NAME>
+                  <VALUE>20</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="45b6e584-5207-4c6b-88cb-461a26dfdee7">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG</SHORT-NAME>
+                  <VALUE>21</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="07becd82-ba92-44ef-95e9-eb6a3a684400">
+                  <SHORT-NAME>SCHEDULER_PAS_SENSOR_REQUEST</SHORT-NAME>
+                  <VALUE>22</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="96313ab2-bd76-4af2-a502-c03cd95b9b99">
+          <SHORT-NAME>DataTypeMappingSets</SHORT-NAME>
+          <ELEMENTS>
+            <DATA-TYPE-MAPPING-SET UUID="d078c862-6cb0-4d0f-9748-57bf31ebd04d">
+              <SHORT-NAME>MAP_LinSchedule_LIN1</SHORT-NAME>
+              <DATA-TYPE-MAPS>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/MODE_LIN1/ApplicationPrimitiveDataTypes/ENUM_LinSchedule_LIN1</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+              </DATA-TYPE-MAPS>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="c1f0d1f7-0c0f-40ee-97b8-c93656010066">
+          <SHORT-NAME>SenderReceiverInterfaces</SHORT-NAME>
+          <ELEMENTS>
+            <SENDER-RECEIVER-INTERFACE UUID="2af71f95-f842-431a-8a5f-8121ddb88a93">
+              <SHORT-NAME>LinScheduleRequestInterface_LIN1</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <DATA-ELEMENTS>
+                <VARIABLE-DATA-PROTOTYPE UUID="0f3d6d98-9bc2-4fb3-994c-a17e4251ce8e">
+                  <SHORT-NAME>LinSchedule_LIN1</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/MODE_LIN1/ApplicationPrimitiveDataTypes/ENUM_LinSchedule_LIN1</TYPE-TREF>
+                  <INIT-VALUE>
+                    <TEXT-VALUE-SPECIFICATION>
+                      <VALUE>0</VALUE>
+                    </TEXT-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </VARIABLE-DATA-PROTOTYPE>
+              </DATA-ELEMENTS>
+            </SENDER-RECEIVER-INTERFACE>
+            <SENDER-RECEIVER-INTERFACE UUID="3f08b27e-b1cb-4742-b996-22a5f0cf5789">
+              <SHORT-NAME>ComMModeRequestInterface_LIN1</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <DATA-ELEMENTS>
+                <VARIABLE-DATA-PROTOTYPE UUID="b8f528b3-9e16-44fe-9fec-cb0bd1ed2452">
+                  <SHORT-NAME>ComMMode_LIN1</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/MODE/ApplicationPrimitiveDataTypes/ENUM_ComMMode</TYPE-TREF>
+                  <INIT-VALUE>
+                    <TEXT-VALUE-SPECIFICATION>
+                      <VALUE>0</VALUE>
+                    </TEXT-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </VARIABLE-DATA-PROTOTYPE>
+              </DATA-ELEMENTS>
+            </SENDER-RECEIVER-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="5db6c400-c3cf-4acd-9d27-e17092472575">
+          <SHORT-NAME>ModeSwitchInterfaces</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-SWITCH-INTERFACE UUID="e165d4ea-9992-4508-ac00-86272f860839">
+              <SHORT-NAME>LinSMStateInterface_LIN1</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="11be6532-5348-4078-8b38-f6ddd67ac0dd">
+                <SHORT-NAME>LinSMState_LIN1</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_LinSMState</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="e165d4ea-9992-4508-ac00-86272f860839">
+              <SHORT-NAME>LinScheduleInterface_LIN1</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="bfae596e-9d37-4614-9983-7315b46d1d26">
+                <SHORT-NAME>LinSchedule_LIN1</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE_LIN1/ModeDeclarationGroups/MDG_LinSchedule_LIN1</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="e165d4ea-9992-4508-ac00-86272f860839">
+              <SHORT-NAME>ComMModeInterface_LIN1</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="421eeb20-47b9-4548-8dca-3a1c5f6da50c">
+                <SHORT-NAME>ComMMode_LIN1</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_ComMMode</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="e165d4ea-9992-4508-ac00-86272f860839">
+              <SHORT-NAME>PduGroupTxInterface_LIN1</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="5220a94c-c0a3-4b36-a51e-00d81a3370a0">
+                <SHORT-NAME>PduGroupTx_LIN1</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_PduGroup</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="e165d4ea-9992-4508-ac00-86272f860839">
+              <SHORT-NAME>PduGroupRxInterface_LIN1</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="0bf6430d-4484-48e7-8efc-f20bbca77d8f">
+                <SHORT-NAME>PduGroupRx_LIN1</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_PduGroup</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE UUID="28178faa-c1ef-4af1-a2be-9858c341a517">
+      <SHORT-NAME>MODE_LIN2</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="a9c12c73-6e50-4fdc-b6fd-60036bd935c8">
+          <SHORT-NAME>CompuMethods</SHORT-NAME>
+          <ELEMENTS>
+            <COMPU-METHOD UUID="77219e64-5fd8-4cf2-afa4-3f6b90bc02c4">
+              <SHORT-NAME>ENUM_LinSchedule_LIN2_def</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_NULL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_NULL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_RPAS_NORMAL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_RPAS_NORMAL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_RPAS_CRC_COMPARE</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_RPAS_CRC_COMPARE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_PAS_NORMAL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_PAS_NORMAL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_PAS_CRC_COMPARE</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_PAS_CRC_COMPARE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_FRONT_PAS_NORMAL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">5</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">5</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_FRONT_PAS_NORMAL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_PAS_DIAG_IBU</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">6</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">6</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_PAS_DIAG_IBU</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_PAS_DIAG_FL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">7</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">7</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_PAS_DIAG_FL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_PAS_DIAG_FCL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">8</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">8</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_PAS_DIAG_FCL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_PAS_DIAG_FCR</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">9</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">9</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_PAS_DIAG_FCR</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_PAS_DIAG_FR</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">10</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">10</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_PAS_DIAG_FR</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_PAS_DIAG_RL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">11</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">11</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_PAS_DIAG_RL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_PAS_DIAG_RCL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">12</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">12</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_PAS_DIAG_RCL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_PAS_DIAG_RCR</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">13</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">13</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_PAS_DIAG_RCR</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_PAS_DIAG_RR</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">14</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">14</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_PAS_DIAG_RR</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_RPAS_VER_CHECK</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">15</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">15</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_RPAS_VER_CHECK</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_FPAS_VER_CHECK</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">16</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">16</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_FPAS_VER_CHECK</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_RPAS_TUNNING_WRITE</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">17</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">17</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_RPAS_TUNNING_WRITE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_RPAS_TEMP_COMP</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">18</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">18</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_RPAS_TEMP_COMP</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_FPAS_TUNNING_WRITE</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">19</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">19</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_FPAS_TUNNING_WRITE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_PAS_TEMP_COMP</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">20</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">20</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_PAS_TEMP_COMP</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_PAS_DIAG</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">21</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">21</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_PAS_DIAG</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>LIN2_SCHEDULER_PAS_SENSOR_REQUEST</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">22</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">22</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>LIN2_SCHEDULER_PAS_SENSOR_REQUEST</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="2dc466a8-9ade-4da5-acd1-0d85714959b2">
+          <SHORT-NAME>ApplicationPrimitiveDataTypes</SHORT-NAME>
+          <ELEMENTS>
+            <APPLICATION-PRIMITIVE-DATA-TYPE UUID="4f49763a-2c6f-44ac-9a84-1db704244fb5">
+              <SHORT-NAME>ENUM_LinSchedule_LIN2</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/MODE_LIN2/CompuMethods/ENUM_LinSchedule_LIN2_def</COMPU-METHOD-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="cb35fb6d-67eb-4c2f-972c-5207a0729474">
+          <SHORT-NAME>ModeDeclarationGroups</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-DECLARATION-GROUP UUID="d6f651e1-24db-40ff-880b-d2fd0d150d3d">
+              <SHORT-NAME>MDG_LinSchedule_LIN2</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2/NULL</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="646ed5d9-f36e-4be6-905b-d127d90f484d">
+                  <SHORT-NAME>NULL</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="1b0d4fd2-37e1-4971-875c-69a89089496b">
+                  <SHORT-NAME>SCHEDULER_RPAS_NORMAL</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="de68ff0b-70c8-431a-b897-7f9c312e9915">
+                  <SHORT-NAME>SCHEDULER_RPAS_CRC_COMPARE</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="0c9e00b7-2283-4361-8bc4-762085d73a71">
+                  <SHORT-NAME>SCHEDULER_PAS_NORMAL</SHORT-NAME>
+                  <VALUE>3</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="60520f44-d2fb-4901-94ef-03c52cbe6c05">
+                  <SHORT-NAME>SCHEDULER_PAS_CRC_COMPARE</SHORT-NAME>
+                  <VALUE>4</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="2f6c7515-d40c-47a7-a9c8-81497fbeeb42">
+                  <SHORT-NAME>SCHEDULER_FRONT_PAS_NORMAL</SHORT-NAME>
+                  <VALUE>5</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="31dc45f0-e422-4e1b-8231-e17651f59bcd">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_IBU</SHORT-NAME>
+                  <VALUE>6</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="e9981f71-4b55-4766-95a1-697cb3f6b8eb">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_FL</SHORT-NAME>
+                  <VALUE>7</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="ee4938e6-9fca-4788-a5aa-ef790573f43f">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_FCL</SHORT-NAME>
+                  <VALUE>8</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="c391bad3-604a-49d3-9851-7c0d96e442ef">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_FCR</SHORT-NAME>
+                  <VALUE>9</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="439b6fb1-e444-4756-a1fe-8dc1fb9a4c2c">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_FR</SHORT-NAME>
+                  <VALUE>10</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="d893627c-a13a-4e20-ba4b-4d7523a5ab63">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_RL</SHORT-NAME>
+                  <VALUE>11</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="6d10aae4-ccf7-468d-9946-8e6ccb26d03f">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_RCL</SHORT-NAME>
+                  <VALUE>12</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="867d4f73-f626-4609-a393-2d560de2bf56">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_RCR</SHORT-NAME>
+                  <VALUE>13</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="8b98cb92-69f1-4424-873f-6f759154eb1b">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG_RR</SHORT-NAME>
+                  <VALUE>14</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="3e98e442-cf4e-4a5d-8a6d-170f5b6810cb">
+                  <SHORT-NAME>SCHEDULER_RPAS_VER_CHECK</SHORT-NAME>
+                  <VALUE>15</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="4b0c3e5c-c4b4-403b-b96b-b9d1cbd17445">
+                  <SHORT-NAME>SCHEDULER_FPAS_VER_CHECK</SHORT-NAME>
+                  <VALUE>16</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="cbe8b3c9-524b-4a08-bdab-a240cf4da12d">
+                  <SHORT-NAME>SCHEDULER_RPAS_TUNNING_WRITE</SHORT-NAME>
+                  <VALUE>17</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="c2d6cde1-abe2-4c63-b78e-06c80cf3a619">
+                  <SHORT-NAME>SCHEDULER_RPAS_TEMP_COMP</SHORT-NAME>
+                  <VALUE>18</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="c7a16663-bf51-4db0-8425-d3d3607ee936">
+                  <SHORT-NAME>SCHEDULER_FPAS_TUNNING_WRITE</SHORT-NAME>
+                  <VALUE>19</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="a071d82b-9158-415a-84d8-585606a3832c">
+                  <SHORT-NAME>SCHEDULER_PAS_TEMP_COMP</SHORT-NAME>
+                  <VALUE>20</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="6f915c06-9510-4b79-9590-4dd91185d07e">
+                  <SHORT-NAME>SCHEDULER_PAS_DIAG</SHORT-NAME>
+                  <VALUE>21</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="969fdbfd-871e-4be0-b96a-98a7c4543d34">
+                  <SHORT-NAME>SCHEDULER_PAS_SENSOR_REQUEST</SHORT-NAME>
+                  <VALUE>22</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="fab3bb77-f8e7-4714-9937-de3cc675c0bb">
+          <SHORT-NAME>DataTypeMappingSets</SHORT-NAME>
+          <ELEMENTS>
+            <DATA-TYPE-MAPPING-SET UUID="3cafbeed-75eb-4423-a280-01f8fa133480">
+              <SHORT-NAME>MAP_LinSchedule_LIN2</SHORT-NAME>
+              <DATA-TYPE-MAPS>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/MODE_LIN2/ApplicationPrimitiveDataTypes/ENUM_LinSchedule_LIN2</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+              </DATA-TYPE-MAPS>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="a985fa94-b4f2-4f41-a141-e0c93e3187c7">
+          <SHORT-NAME>SenderReceiverInterfaces</SHORT-NAME>
+          <ELEMENTS>
+            <SENDER-RECEIVER-INTERFACE UUID="76c6a61f-bffc-4c87-897b-a8b8292508ae">
+              <SHORT-NAME>LinScheduleRequestInterface_LIN2</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <DATA-ELEMENTS>
+                <VARIABLE-DATA-PROTOTYPE UUID="b60155dc-22a5-4523-b07c-73ef409dbfb2">
+                  <SHORT-NAME>LinSchedule_LIN2</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/MODE_LIN2/ApplicationPrimitiveDataTypes/ENUM_LinSchedule_LIN2</TYPE-TREF>
+                  <INIT-VALUE>
+                    <TEXT-VALUE-SPECIFICATION>
+                      <VALUE>0</VALUE>
+                    </TEXT-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </VARIABLE-DATA-PROTOTYPE>
+              </DATA-ELEMENTS>
+            </SENDER-RECEIVER-INTERFACE>
+            <SENDER-RECEIVER-INTERFACE UUID="95427838-f152-49b0-9103-499935395552">
+              <SHORT-NAME>ComMModeRequestInterface_LIN2</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <DATA-ELEMENTS>
+                <VARIABLE-DATA-PROTOTYPE UUID="516cf157-7523-48cb-b2fd-e35b90d5d66b">
+                  <SHORT-NAME>ComMMode_LIN2</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/MODE/ApplicationPrimitiveDataTypes/ENUM_ComMMode</TYPE-TREF>
+                  <INIT-VALUE>
+                    <TEXT-VALUE-SPECIFICATION>
+                      <VALUE>0</VALUE>
+                    </TEXT-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </VARIABLE-DATA-PROTOTYPE>
+              </DATA-ELEMENTS>
+            </SENDER-RECEIVER-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="d7c5b652-0da3-4282-96e6-be6f94907cce">
+          <SHORT-NAME>ModeSwitchInterfaces</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-SWITCH-INTERFACE UUID="7e665d7a-4d48-49b9-bc4e-f6f2a4d20af2">
+              <SHORT-NAME>LinSMStateInterface_LIN2</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="c5ddf791-9d31-46a1-a001-409d9f850e6b">
+                <SHORT-NAME>LinSMState_LIN2</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_LinSMState</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="7e665d7a-4d48-49b9-bc4e-f6f2a4d20af2">
+              <SHORT-NAME>LinScheduleInterface_LIN2</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="b818532b-7bee-42a3-889f-70c0bf3ded2a">
+                <SHORT-NAME>LinSchedule_LIN2</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE_LIN2/ModeDeclarationGroups/MDG_LinSchedule_LIN2</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="7e665d7a-4d48-49b9-bc4e-f6f2a4d20af2">
+              <SHORT-NAME>ComMModeInterface_LIN2</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="7323b37f-2ff0-4057-8939-1f4ce20a3c23">
+                <SHORT-NAME>ComMMode_LIN2</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_ComMMode</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="7e665d7a-4d48-49b9-bc4e-f6f2a4d20af2">
+              <SHORT-NAME>PduGroupTxInterface_LIN2</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="0ce1b7b8-dfd4-486f-87fe-115a9b6cf08d">
+                <SHORT-NAME>PduGroupTx_LIN2</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_PduGroup</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="7e665d7a-4d48-49b9-bc4e-f6f2a4d20af2">
+              <SHORT-NAME>PduGroupRxInterface_LIN2</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="face0386-36da-4b87-a7bd-e6841b0d7c1f">
+                <SHORT-NAME>PduGroupRx_LIN2</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_PduGroup</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE UUID="b167411c-8c3a-46ba-b407-7f8cbbe5d4d4">
+      <SHORT-NAME>MODE_FD_CAN1</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="9c7187f4-6176-417a-b68e-95be106ac50d">
+          <SHORT-NAME>ModeSwitchInterfaces</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-SWITCH-INTERFACE UUID="01388532-e5c5-4a3b-8929-fc0e6714a927">
+              <SHORT-NAME>CanSMBORStateInterface_FD_CAN1</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="4abaa073-984b-4f3a-99f9-0cc4bfec95a0">
+                <SHORT-NAME>CanSMBORState_FD_CAN1</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_CanSMBORState</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="01388532-e5c5-4a3b-8929-fc0e6714a927">
+              <SHORT-NAME>CanSMStateInterface_FD_CAN1</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="389ec78e-fdff-422e-851e-39e0cc57c38f">
+                <SHORT-NAME>CanSMState_FD_CAN1</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_CanSMState</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="01388532-e5c5-4a3b-8929-fc0e6714a927">
+              <SHORT-NAME>ComMModeInterface_FD_CAN1</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="1d49021b-536a-420c-92ed-3628f22274d3">
+                <SHORT-NAME>ComMMode_FD_CAN1</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_ComMMode</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="01388532-e5c5-4a3b-8929-fc0e6714a927">
+              <SHORT-NAME>PduGroupTxInterface_FD_CAN1_PNC32</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="646ec510-8046-45d0-a7b4-adbdf39c7707">
+                <SHORT-NAME>PduGroupTx_FD_CAN1_PNC32</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_PduGroup</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <MODE-SWITCH-INTERFACE UUID="01388532-e5c5-4a3b-8929-fc0e6714a927">
+              <SHORT-NAME>PduGroupRxInterface_FD_CAN1_PNC32</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="03aa8454-64b5-44dd-ace0-f2e41f01d336">
+                <SHORT-NAME>PduGroupRx_FD_CAN1_PNC32</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_PduGroup</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE UUID="f6759311-5fd0-447b-ac22-fca19d6787e7">
+      <SHORT-NAME>MODE_PNC32</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="25f9ab1d-83fb-4ccc-903e-584c38afef10">
+          <SHORT-NAME>SenderReceiverInterfaces</SHORT-NAME>
+          <ELEMENTS>
+            <SENDER-RECEIVER-INTERFACE UUID="f6156dbd-e21c-4840-90a8-17e6fb508959">
+              <SHORT-NAME>ComMModeRequestInterface_PNC32</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <DATA-ELEMENTS>
+                <VARIABLE-DATA-PROTOTYPE UUID="b8841825-0412-4c5e-bb82-4cd2e9e6174e">
+                  <SHORT-NAME>ComMMode_PNC32</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/MODE/ApplicationPrimitiveDataTypes/ENUM_ComMMode</TYPE-TREF>
+                  <INIT-VALUE>
+                    <TEXT-VALUE-SPECIFICATION>
+                      <VALUE>0</VALUE>
+                    </TEXT-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </VARIABLE-DATA-PROTOTYPE>
+              </DATA-ELEMENTS>
+            </SENDER-RECEIVER-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="87715cef-10e2-4b2f-966b-31fac79e703b">
+          <SHORT-NAME>ModeSwitchInterfaces</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-SWITCH-INTERFACE UUID="01388532-e5c5-4a3b-8929-fc0e6714a927">
+              <SHORT-NAME>ComMModeInterface_PNC32</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+              <MODE-GROUP UUID="abdbbe4d-8c67-4860-9735-9783f6fdc56c">
+                <SHORT-NAME>ComMMode_PNC32</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_ComMMode_PNC</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

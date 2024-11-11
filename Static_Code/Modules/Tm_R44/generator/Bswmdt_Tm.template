@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Bsw_Tm</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="7b527260-0a79-4788-b33a-687bb310d010">
+          <SHORT-NAME>BswImplementation_Tm</SHORT-NAME>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>1.0.4</SW-VERSION>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_Tm/Tm/BswInternalBehavior_Tm</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION>
+          <SHORT-NAME>Tm</SHORT-NAME>
+          <MODULE-ID>14</MODULE-ID>
+          <BSW-MODULE-DEPENDENCYS>
+            <BSW-MODULE-DEPENDENCY UUID="c3d7cb40-03fa-4d3a-aa92-84f2e83723dd">
+              <SHORT-NAME>BswModuleDependency_Gpt</SHORT-NAME>
+              <TARGET-MODULE-ID>100</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+            <BSW-MODULE-DEPENDENCY UUID="73e70335-801d-4592-a4ef-f1a729d0dde9">
+              <SHORT-NAME>BswModuleDependency_Det</SHORT-NAME>
+              <TARGET-MODULE-ID>15</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+          </BSW-MODULE-DEPENDENCYS>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR>
+              <SHORT-NAME>BswInternalBehavior_Tm</SHORT-NAME>
+              <ENTITYS>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCE_Tm_ResetTimer1us16bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_ResetTimer1us16bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="c6e0953c-0358-4798-827e-ab9b48010d97">
+                  <SHORT-NAME>BswCE_Tm_GetTimeSpan1us16bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_GetTimeSpan1us16bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="08a25811-91ee-48b3-8270-f2f342c7f19e">
+                  <SHORT-NAME>BswCE_Tm_ShiftTimer1us16bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_ShiftTimer1us16bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="9b8d3e49-e20f-47db-896c-d4e5814a64c1">
+                  <SHORT-NAME>BswCE_Tm_SyncTimer1us16bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_SyncTimer1us16bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="8ba5df0c-41b0-4f8d-a127-d285d281c790">
+                  <SHORT-NAME>BswCE_Tm_BusyWait1us16bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_BusyWait1us16bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="4a313947-a464-46f5-8d02-c969b0946104">
+                  <SHORT-NAME>BswCE_Tm_ResetTimer1us24bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_ResetTimer1us24bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="36b6ee0a-8574-4430-8f14-1bca0c12f66b">
+                  <SHORT-NAME>BswCE_Tm_GetTimeSpan1us24bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_GetTimeSpan1us24bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="2c4f7f74-899c-4bad-b6e5-5c9dd99cf6df">
+                  <SHORT-NAME>BswCE_Tm_ShiftTimer1us24bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_ShiftTimer1us24bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="ecd61cf8-6705-4f52-af33-8bb15dbe5997">
+                  <SHORT-NAME>BswCE_Tm_SyncTimer1us24bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_SyncTimer1us24bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="f40db482-9f7b-481d-90f7-54ac474fc6fa">
+                  <SHORT-NAME>BswCE_Tm_BusyWait1us24bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_BusyWait1us24bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="af6b19d9-9b3e-4166-bb6d-c9150e8a009e">
+                  <SHORT-NAME>BswCE_Tm_ResetTimer1us32bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_ResetTimer1us32bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="b3329cec-0942-447c-9212-429460218b35">
+                  <SHORT-NAME>BswCE_Tm_GetTimeSpan1us32bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_GetTimeSpan1us32bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="42aeb3bd-51e4-4dbe-81fa-ac486bcc195e">
+                  <SHORT-NAME>BswCE_Tm_ShiftTimer1us32bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_ShiftTimer1us32bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="e36abf1f-8e47-42ab-920b-1390ef63b771">
+                  <SHORT-NAME>BswCE_Tm_SyncTimer1us32bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_SyncTimer1us32bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="f13a941c-3f5c-4fee-a35f-a8a302a135d9">
+                  <SHORT-NAME>BswCE_Tm_BusyWait1us32bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_BusyWait1us32bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="fce810bf-e1b6-4158-9149-407996702fa3">
+                  <SHORT-NAME>BswCE_Tm_ResetTimer100us32bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_ResetTimer100us32bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="2eff069c-488e-47ba-a998-e31ceb6ea6ce">
+                  <SHORT-NAME>BswCE_Tm_GetTimeSpan100us32bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_GetTimeSpan100us32bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="fde6f204-0d68-416b-8f20-f65bc8a2a64f">
+                  <SHORT-NAME>BswCE_Tm_ShiftTimer100us32bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_ShiftTimer100us32bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="7907b820-d7a2-4680-9896-d26bbf037fe5">
+                  <SHORT-NAME>BswCE_Tm_SyncTimer100us32bit</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Tm/ImplementedEntries/Tm_SyncTimer100us32bit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+              </ENTITYS>
+              <DISTINGUISHED-PARTITIONS>
+                <BSW-DISTINGUISHED-PARTITION>
+                  <SHORT-NAME>BswDistinguishedPartition_Tm</SHORT-NAME>
+                </BSW-DISTINGUISHED-PARTITION>
+              </DISTINGUISHED-PARTITIONS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="72b4186a-f75a-4185-8470-c5a8e2fd5c91">
+          <SHORT-NAME>ImplementedEntries</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Tm_ResetTimer1us16bit</SHORT-NAME>
+              <SERVICE-ID>2</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="71536d76-5e9c-4ff0-b697-a5aaae24d68d">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="7475af07-c1c7-4ee0-b13d-3102a035b46e">
+                  <SHORT-NAME>TimerPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="d140cef1-f50e-4248-af88-f0bc99c0565b">
+              <SHORT-NAME>Tm_GetTimeSpan1us16bit</SHORT-NAME>
+              <SERVICE-ID>3</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="9504dfe5-cab0-45ba-b7dc-a6c822f3f930">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="6afca8f6-9c71-483e-baa2-1669691b018b">
+                  <SHORT-NAME>TimerPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="d25dad4a-e3df-4424-8d59-2620ead3f93c">
+                  <SHORT-NAME>TimeSpanPtr</SHORT-NAME>
+                  <CATEGORY>DATA_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="d8107570-ef2e-4c19-ba4e-2c04ece83d96">
+              <SHORT-NAME>Tm_ShiftTimer1us16bit</SHORT-NAME>
+              <SERVICE-ID>4</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="7c335e00-2b68-498f-8a6a-17555237aae9">
+                  <SHORT-NAME>TimerPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>INOUT</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="e2f86325-4976-4059-9246-e7378406c3be">
+                  <SHORT-NAME>TimeValue</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="abfbd5b8-04f4-4c1e-b049-20a5c1fe7028">
+              <SHORT-NAME>Tm_SyncTimer1us16bit</SHORT-NAME>
+              <SERVICE-ID>5</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="103ef01f-5628-4417-b164-0554a415f5b8">
+                  <SHORT-NAME>TimerDstPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="aa2e36e1-c329-45b0-be31-1485eaa2320b">
+                  <SHORT-NAME>TimerSrcPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="86f38a45-696f-4131-b06f-57ca89179b0b">
+              <SHORT-NAME>Tm_BusyWait1us16bit</SHORT-NAME>
+              <SERVICE-ID>6</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="67c349b9-a913-4ed5-8936-6f097040c9c3">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="d67167a6-68a5-4777-b405-dda95ec79a8a">
+                  <SHORT-NAME>WaitingTimeMin</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="c751f2d0-401b-466e-94ce-a7118cca7ef7">
+              <SHORT-NAME>Tm_ResetTimer1us24bit</SHORT-NAME>
+              <SERVICE-ID>7</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="8c1e010c-20fe-4f89-9062-a21ef4533748">
+                <SHORT-NAME>Std_ReturnType0</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="bf3edc68-70c4-4bf3-9358-31965ab0593e">
+                  <SHORT-NAME>TimerPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="8c6b95bb-04de-4ef8-ac12-f4fd7590a1fa">
+              <SHORT-NAME>Tm_GetTimeSpan1us24bit</SHORT-NAME>
+              <SERVICE-ID>8</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="b43350e8-8aaf-4d74-8a8f-c5b5041efcf7">
+                <SHORT-NAME>Std_ReturnType0</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="d376da80-9435-4378-895d-7ea8ba3aeb2a">
+                  <SHORT-NAME>TimerPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="fa62783c-b46f-4a35-985a-597f35761db6">
+                  <SHORT-NAME>TimeSpanPtr</SHORT-NAME>
+                  <CATEGORY>DATA_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="7e21c7e0-02e2-48c4-969f-0a5fa80578a1">
+              <SHORT-NAME>Tm_ShiftTimer1us24bit</SHORT-NAME>
+              <SERVICE-ID>9</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="80f64186-bbb3-4f6a-87e3-ed3c7796c28d">
+                  <SHORT-NAME>TimerPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>INOUT</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="a6a22871-0fd6-4ab6-8a69-97f067dae273">
+                  <SHORT-NAME>TimeValue</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="1897adf7-af5d-4e1e-b29b-e1a4e2a66329">
+              <SHORT-NAME>Tm_SyncTimer1us24bit</SHORT-NAME>
+              <SERVICE-ID>10</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="e4c9aeff-5dde-4c9a-9d9e-7a97a1f59636">
+                  <SHORT-NAME>TimerSrcPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="d18d5993-81b5-4895-9f0a-257b53c09fdf">
+                  <SHORT-NAME>TimerDstPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="16c8ba2a-ee1d-4b63-a710-295c6d5e6e6f">
+              <SHORT-NAME>Tm_BusyWait1us24bit</SHORT-NAME>
+              <SERVICE-ID>11</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="c8d729ea-48b5-42d3-bd89-e7aa4aed551a">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="0c70b443-07a5-4346-8be1-ee0f29027fd9">
+                  <SHORT-NAME>WaitingTimeMin</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="aabdf132-43be-4658-af8d-b57263be0d75">
+              <SHORT-NAME>Tm_ResetTimer1us32bit</SHORT-NAME>
+              <SERVICE-ID>12</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="56961765-9366-4de7-95f6-3a632ecb6b61">
+                <SHORT-NAME>Std_ReturnType0</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="b6c83e12-3fb2-4bc6-81b8-2977a4d9b89e">
+                  <SHORT-NAME>TimerPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="f028f2de-d9a3-4527-a201-3b4826d79f6e">
+              <SHORT-NAME>Tm_GetTimeSpan1us32bit</SHORT-NAME>
+              <SERVICE-ID>13</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="a38c1cc8-c274-451a-8eb1-c35d3c9727d4">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="16d795f0-b6e7-498d-9e8c-533eac6753b2">
+                  <SHORT-NAME>TimerPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="5642de10-3a06-474d-8716-6c448cac42fa">
+                  <SHORT-NAME>TimeSpanPtr</SHORT-NAME>
+                  <CATEGORY>DATA_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="e32223bf-641a-42f9-bbd3-c5ecd6ea051c">
+              <SHORT-NAME>Tm_ShiftTimer1us32bit</SHORT-NAME>
+              <SERVICE-ID>14</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="bef992a3-cde8-40a9-8519-7624e6f6f252">
+                  <SHORT-NAME>TimerPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>INOUT</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="320f2258-73e3-46e6-855a-06e063d0568e">
+                  <SHORT-NAME>TimeValue</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="d61a65ed-19fa-479a-a024-4fc5ee8632ca">
+              <SHORT-NAME>Tm_SyncTimer1us32bit</SHORT-NAME>
+              <SERVICE-ID>15</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="afba7c7d-2ac7-49ea-9b60-bff8690ab185">
+                  <SHORT-NAME>TimerSrcPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="33a3be6b-f281-45c2-bc74-3cf46439fc37">
+                  <SHORT-NAME>TimerDstPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="ff03f31b-b3cc-4d00-8c32-33e334952032">
+              <SHORT-NAME>Tm_BusyWait1us32bit</SHORT-NAME>
+              <SERVICE-ID>16</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="e257b20e-aa73-4349-b728-d120fee5d939">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="3cded379-63f0-462a-9b34-02ed5724f286">
+                  <SHORT-NAME>WaitingTimeMin</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="eb3b8576-66da-4f25-90c8-498f95aae54c">
+              <SHORT-NAME>Tm_ResetTimer100us32bit</SHORT-NAME>
+              <SERVICE-ID>17</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="00d33836-09d3-4261-b327-a8b62c4dbc12">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="65d27cb8-04fe-45d4-9c3e-52e74cbb66bf">
+                  <SHORT-NAME>TimerPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="e8461984-f88a-45f9-99bf-bbcddcc8faf1">
+              <SHORT-NAME>Tm_GetTimeSpan100us32bit</SHORT-NAME>
+              <SERVICE-ID>18</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="955d7ecd-5c1b-4b03-840d-761c2997c8c9">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="9b56bba4-12d0-45a4-ae68-65f280290bb4">
+                  <SHORT-NAME>TimerPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="003a6efd-9770-469f-a972-d7d592d4aa5b">
+                  <SHORT-NAME>TimeSpanPtr</SHORT-NAME>
+                  <CATEGORY>DATA_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="3b2b6e9a-e0cb-417a-b8a6-ed2ef0b2bc2b">
+              <SHORT-NAME>Tm_ShiftTimer100us32bit</SHORT-NAME>
+              <SERVICE-ID>19</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="1843bba9-5569-49bc-a84d-6e7181532426">
+                  <SHORT-NAME>TimerPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>INOUT</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="ae23ce48-5c07-4465-9cf5-ebec1f7334da">
+                  <SHORT-NAME>TimeValue</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="995dbe5d-dd02-4421-86e0-3e351af929cb">
+              <SHORT-NAME>Tm_SyncTimer100us32bit</SHORT-NAME>
+              <SERVICE-ID>20</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="17e80aa7-1ab5-4ff7-96c6-83e2839365f5">
+                  <SHORT-NAME>TimerSrcPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="b1f66ab9-4d8d-43b7-bbb8-3014cd0c7a69">
+                  <SHORT-NAME>TimerDstPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="412d8185-1c13-44c5-9436-4d56d7a80ad6">
+              <SHORT-NAME>Tm_GetVersionInfo</SHORT-NAME>
+              <SERVICE-ID>1</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="7475af07-c1c7-4ee0-b13d-3102a035b46e">
+                  <SHORT-NAME>VersionInfoPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="5404af12-2cd7-45ed-9251-c63261578ae4">
+          <SHORT-NAME>ExpectedEntries</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY UUID="fa9e570d-6b25-422d-aa8e-a286b2070c2a">
+              <SHORT-NAME>Gpt_GetPredefTimerValue</SHORT-NAME>
+              <SERVICE-ID>13</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="71536d76-5e9c-4ff0-b697-a5aaae24d68d">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="7475af07-c1c7-4ee0-b13d-3102a035b46e">
+                  <SHORT-NAME>PredefTimer</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="8954baab-7f2e-4acd-84b9-256faff76bd7">
+                  <SHORT-NAME>TimeValuePtr</SHORT-NAME>
+                  <DIRECTION>OUT</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="546fae13-dc36-4bb2-9d73-38a6f306d060">
+              <SHORT-NAME>Det_ReportRuntimeError</SHORT-NAME>
+              <SERVICE-ID>4</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="71536d76-5e9c-4ff0-b697-a5aaae24d68d">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="7475af07-c1c7-4ee0-b13d-3102a035b46e">
+                  <SHORT-NAME>ModuleId</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="5f187b52-c396-4a1a-bffc-af54b15f5cff">
+                  <SHORT-NAME>InstanceId</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="763f9caf-3d3b-45d7-a370-c5c7c4d3bda8">
+                  <SHORT-NAME>ApiId</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="2914273e-cbac-496d-9856-c9b33985d17c">
+                  <SHORT-NAME>ErrorId</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="a718b1ee-2037-4a9a-b961-b84d55630d36">
+              <SHORT-NAME>Det_ReportError</SHORT-NAME>
+              <SERVICE-ID>1</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="71536d76-5e9c-4ff0-b697-a5aaae24d68d">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="7475af07-c1c7-4ee0-b13d-3102a035b46e">
+                  <SHORT-NAME>ModuleId</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="5f187b52-c396-4a1a-bffc-af54b15f5cff">
+                  <SHORT-NAME>InstanceId</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="763f9caf-3d3b-45d7-a370-c5c7c4d3bda8">
+                  <SHORT-NAME>ApiId</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="2914273e-cbac-496d-9856-c9b33985d17c">
+                  <SHORT-NAME>ErrorId</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

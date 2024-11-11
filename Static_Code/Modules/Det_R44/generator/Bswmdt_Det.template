@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="311bdde3-f990-41ff-ad4b-b1946c0d1519">
+      <SHORT-NAME>Bsw_Det</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-MODULE-DESCRIPTION>
+          <SHORT-NAME>Det</SHORT-NAME>
+          <MODULE-ID>15</MODULE-ID>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR>
+              <SHORT-NAME>BswInternalBehavior_Det</SHORT-NAME>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA>
+                  <SHORT-NAME>RAM_DATA_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <ENTITYS>
+                <BSW-CALLED-ENTITY>
+                  <SHORT-NAME>BswCE_Det_ReportError</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Det/Det/BswInternalBehavior_Det/RAM_DATA_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Det/ImplementedEntries/DetSwComponents/Det_ReportError</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="7c35421a-b12c-4329-a084-0cbd759484bb">
+                  <SHORT-NAME>BswCE_Det_ReportRuntimeError</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Det/Det/BswInternalBehavior_Det/RAM_DATA_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Det/ImplementedEntries/DetSwComponents/Det_ReportRuntimeError</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="84c04e2d-6815-41f7-a4c6-a4475e81378d">
+                  <SHORT-NAME>BswCE_Det_ReportTransientFault</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Det/Det/BswInternalBehavior_Det/RAM_DATA_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Det/ImplementedEntries/DetSwComponents/Det_ReportTransientFault</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+              </ENTITYS>
+              <DISTINGUISHED-PARTITIONS>
+                <BSW-DISTINGUISHED-PARTITION>
+                  <SHORT-NAME>BswDistinguishedPartition_Det</SHORT-NAME>
+                </BSW-DISTINGUISHED-PARTITION>
+              </DISTINGUISHED-PARTITIONS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+        <BSW-IMPLEMENTATION>
+          <SHORT-NAME>BswImplementation_Det</SHORT-NAME>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>1.0.0</SW-VERSION>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_Det/Det/BswInternalBehavior_Det</BEHAVIOR-REF>
+          <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+            <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTRON/Det</VENDOR-SPECIFIC-MODULE-DEF-REF>
+          </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+        </BSW-IMPLEMENTATION>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="c6a8dd90-dbe6-4c79-9c10-547d97508e70">
+          <SHORT-NAME>ImplementedEntries</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="56600709-07b7-4e51-a052-75c41b25b433">
+              <SHORT-NAME>DetBswComponents</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-ENTRY UUID="a4d7f650-884f-4f49-a44c-57fc4165e613">
+                  <SHORT-NAME>Det_Init</SHORT-NAME>
+                  <SERVICE-ID>0</SERVICE-ID>
+                  <IS-REENTRANT>false</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="c86eedb9-4ec3-47f7-b3e6-4d415760d223">
+                      <SHORT-NAME>ConfigPtr</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="8166a366-e60a-4896-b24c-34a5da80f37f">
+                  <SHORT-NAME>Det_GetVersionInfo</SHORT-NAME>
+                  <SERVICE-ID>3</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="3cae5fc6-4deb-402e-827a-334826e9f34e">
+                      <SHORT-NAME>versionInfo</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="0da6339c-4e58-4217-a7c2-d7081c55f06c">
+                  <SHORT-NAME>Det_Start</SHORT-NAME>
+                  <SERVICE-ID>2</SERVICE-ID>
+                  <IS-REENTRANT>false</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="56600709-07b7-4e51-a052-75c41b25b433">
+              <SHORT-NAME>DetSwComponents</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-ENTRY UUID="ab87ce24-7233-4885-84cf-aa0a1e4176fb">
+                  <SHORT-NAME>Det_ReportError</SHORT-NAME>
+                  <SERVICE-ID>1</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="b621bf51-eafc-404e-a880-17962b6f34c7">
+                      <SHORT-NAME>ModuleId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="a64deee7-4505-4d8a-a4e5-82916f2b5771">
+                      <SHORT-NAME>InstanceId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="28b1fb45-6a90-4aea-9204-973811dbb723">
+                      <SHORT-NAME>ApiId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="382198ca-1c1c-4089-ba8c-02ac8716bc86">
+                      <SHORT-NAME>ErrorId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="f036f02f-6457-44f6-8331-c33c4c29746a">
+                  <SHORT-NAME>Det_ReportRuntimeError</SHORT-NAME>
+                  <SERVICE-ID>4</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="4631ee56-491a-461c-aa6e-82a62f711b7c">
+                      <SHORT-NAME>ErrorId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="b9705c1a-afa9-4835-9d05-8b6187d5c831">
+                      <SHORT-NAME>InstanceId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="f18709f7-ecf8-4ae7-8e54-5cd1ee3eed16">
+                      <SHORT-NAME>ModuleId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="1355bb60-067f-4102-861a-afa4631946c2">
+                      <SHORT-NAME>ApiId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="0e2fb8d2-c16b-4a18-8e0e-a53ed2083796">
+                  <SHORT-NAME>Det_ReportTransientFault</SHORT-NAME>
+                  <SERVICE-ID>1</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="e1062d7c-1b71-4751-9cf4-f44d9702e170">
+                      <SHORT-NAME>ErrorId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="f5746eda-11e1-4069-9941-b328724b3630">
+                      <SHORT-NAME>InstanceId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="81ae805c-2a39-4469-9f42-c867a9860976">
+                      <SHORT-NAME>ModuleId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG UUID="fd1a4803-cd3d-4ed9-80f5-195cb0604b5a">
+                      <SHORT-NAME>ApiId</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

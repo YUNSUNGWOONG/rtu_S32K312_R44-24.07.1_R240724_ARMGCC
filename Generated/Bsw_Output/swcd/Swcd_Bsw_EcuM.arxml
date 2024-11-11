@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+<AR-PACKAGES>
+    <AR-PACKAGE UUID="f0870057-d1f4-4a71-a3f2-3ba3e91fa5ab">
+      <SHORT-NAME>EcuM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="963e708e-e62b-46a6-a97a-e672c870f59a">
+          <SHORT-NAME>ServiceSwComponentTypes</SHORT-NAME>
+          <ELEMENTS>
+            <SERVICE-SW-COMPONENT-TYPE UUID="48dcca99-6b0c-4bfe-9454-42545214d7dd">
+              <SHORT-NAME>EcuM</SHORT-NAME>
+              <PORTS>
+                <P-PORT-PROTOTYPE UUID="010b7179-4224-4042-bc6a-44935bcf01c7">
+                  <SHORT-NAME>bootTarget</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_BootTarget/GetBootTarget</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_BootTarget/SelectBootTarget</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/EcuM/ClientServerInterfaces/EcuM_BootTarget</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="780c874a-3d16-4db3-9493-2f2b55e7ea70">
+                  <SHORT-NAME>currentMode</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/EcuM/ModeSwitchInterfaces/EcuM_CurrentMode/currentMode</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/EcuM/ModeSwitchInterfaces/EcuM_CurrentMode</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="ec9f7575-6cc1-4822-891c-90686eaae091">
+                  <SHORT-NAME>shutdownTarget</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_ShutdownTarget/GetLastShutdownTarget</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_ShutdownTarget/GetShutdownCause</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_ShutdownTarget/GetShutdownTarget</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_ShutdownTarget/GoDownHaltPoll</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_ShutdownTarget/SelectShutdownCause</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_ShutdownTarget/SelectShutdownTarget</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/EcuM/ClientServerInterfaces/EcuM_ShutdownTarget</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="79a5e154-bd83-4d90-b618-4a9b65c9c0c6">
+                  <SHORT-NAME>staterequest</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/ReleasePOST_RUN</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/ReleaseRUN</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/RequestOff</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/RequestPOST_RUN</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/RequestRUN</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/RequestReset</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/RequestSleep</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/EcuM/ClientServerInterfaces/EcuM_StateRequest</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="75f62ed9-6a08-430a-8b2e-74b555a11d25">
+                  <SHORT-NAME>time</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_Time/GetWakeupTime</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_Time/GetCurrentTime</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/EcuM/ClientServerInterfaces/EcuM_Time</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="25789772-4014-4ca0-a7f7-7c34cc88ea1e">
+                  <SHORT-NAME>wakeupSource</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_WakeupSource/DisableWakeupSources</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_WakeupSource/EnableWakeupSources</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_WakeupSource/ClearWakeupEvent</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/EcuM/ClientServerInterfaces/EcuM_WakeupSource</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="2a1f22a5-160b-42df-911e-0a826cdc7c4c">
+                  <SHORT-NAME>SwcIB_EcuM</SHORT-NAME>
+                  <DATA-TYPE-MAPPING-REFS>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/EcuM/DataTypeMappingSets/EcuModeMap</DATA-TYPE-MAPPING-REF>
+                  </DATA-TYPE-MAPPING-REFS>
+                  <EVENTS>
+                    <OPERATION-INVOKED-EVENT UUID="89de72a9-0ef5-457b-b0ef-92c729d72b89">
+                      <SHORT-NAME>OIE_ClearWakeupEvent</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/ClearWakeupEvent</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/wakeupSource</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_WakeupSource/ClearWakeupEvent</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="24dbf176-2770-4f76-b839-cec1087690b5">
+                      <SHORT-NAME>OIE_DisableWakeupSources</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/DisableWakeupSources</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/wakeupSource</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_WakeupSource/DisableWakeupSources</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="e8bffc14-f1c3-40ac-b9fc-46f1899a5d59">
+                      <SHORT-NAME>OIE_EnableWakeupSources</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/EnableWakeupSources</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/wakeupSource</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_WakeupSource/EnableWakeupSources</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="862bb068-cd60-4720-bbac-07724b17ec83">
+                      <SHORT-NAME>OIE_GetBootTarget</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/GetBootTarget</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/bootTarget</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_BootTarget/GetBootTarget</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="7dfd649d-5c44-4780-a26c-14899475d57f">
+                      <SHORT-NAME>OIE_GetCurrentTime</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/GetCurrentTime</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/time</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_Time/GetCurrentTime</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="2910d1e3-31c6-473a-a349-0e93d749f010">
+                      <SHORT-NAME>OIE_GetLastShutdownTarget</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/GetLastShutdownTarget</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/shutdownTarget</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_ShutdownTarget/GetLastShutdownTarget</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="5808bd68-5153-45f0-a41f-cdf272343bd4">
+                      <SHORT-NAME>OIE_GetShutdownCause</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/GetShutdownCause</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/shutdownTarget</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_ShutdownTarget/GetShutdownCause</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="fb5deb03-ec85-4b29-92ac-e45c5fcfb720">
+                      <SHORT-NAME>OIE_GetShutdownTarget</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/GetShutdownTarget</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/shutdownTarget</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_ShutdownTarget/GetShutdownTarget</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="d014a075-323d-41e5-98ac-3ab3df7a5154">
+                      <SHORT-NAME>OIE_GetWakeupTime</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/GetWakeupTime</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/time</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_Time/GetWakeupTime</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="b769d54a-14ab-4fd9-aff7-4d1f401d0301">
+                      <SHORT-NAME>OIE_GoDownHaltPoll</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/GoDownHaltPoll</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/shutdownTarget</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_ShutdownTarget/GoDownHaltPoll</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="af7277bb-03e5-4cc0-9165-9c367ff68459">
+                      <SHORT-NAME>OIE_ReleasePOST_RUN</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/ReleasePOST_RUN</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/staterequest</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/ReleasePOST_RUN</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="2fa36594-a1ce-407b-948f-5da623db50d1">
+                      <SHORT-NAME>OIE_ReleaseRUN</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/ReleaseRUN</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/staterequest</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/ReleaseRUN</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="70ffcf0f-03ed-4195-b71e-6367a5c5e211">
+                      <SHORT-NAME>OIE_RequestOff</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/RequestOff</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/staterequest</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/RequestOff</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="4868f78f-7300-43db-b375-744a04759c21">
+                      <SHORT-NAME>OIE_RequestPOST_RUN</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/RequestPOST_RUN</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/staterequest</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/RequestPOST_RUN</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="e1f036e6-08c0-4b49-aa8a-791aa95fc08f">
+                      <SHORT-NAME>OIE_RequestRUN</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/RequestRUN</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/staterequest</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/RequestRUN</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="0f6fe677-880c-4f09-b60c-2c8b06504315">
+                      <SHORT-NAME>OIE_RequestReset</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/RequestReset</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/staterequest</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/RequestReset</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="18c1ec8a-eedf-4cc9-be14-5d59b7e7198e">
+                      <SHORT-NAME>OIE_RequestSleep</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/RequestSleep</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/staterequest</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/RequestSleep</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="61fc3b30-ed86-4ffd-8382-3ede7babdf5c">
+                      <SHORT-NAME>OIE_SelectBootTarget</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/SelectBootTarget</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/bootTarget</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_BootTarget/SelectBootTarget</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="d49bdcda-0246-4b58-bda4-8bb5d593a502">
+                      <SHORT-NAME>OIE_SelectShutdownCause</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/SelectShutdownCause</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/shutdownTarget</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_ShutdownTarget/SelectShutdownCause</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="20ccbbf8-d30e-46d9-bcde-9f85ef466c77">
+                      <SHORT-NAME>OIE_SelectShutdownTarget</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM/SelectShutdownTarget</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/shutdownTarget</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_ShutdownTarget/SelectShutdownTarget</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="6a324315-b63b-4464-8d76-b2fbc7480780">
+                      <SHORT-NAME>ClearWakeupEvent</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_ClearWakeupEvent</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="993482f7-7de7-4cbb-aaf0-4c38c8720924">
+                      <SHORT-NAME>DisableWakeupSources</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_DisableWakeupSources</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="427cd0af-69a9-45fb-a348-e2e1e5f0a9a8">
+                      <SHORT-NAME>EnableWakeupSources</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_EnableWakeupSources</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="03bb3f98-ea89-4c1d-8e81-eca8ce59297f">
+                      <SHORT-NAME>GetBootTarget</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_GetBootTarget</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="83aab8b0-4ad0-4f58-8d46-f9fa3e1c8e6d">
+                      <SHORT-NAME>GetCurrentTime</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_GetCurrentTime</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="41c6bfd2-d960-49f6-a7a7-6cfc12d46a85">
+                      <SHORT-NAME>GetLastShutdownTarget</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_GetLastShutdownTarget</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="20c88414-4cad-4abf-ae6d-f986e2a2be7c">
+                      <SHORT-NAME>GetShutdownCause</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_GetShutdownCause</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="5e9a504f-0dc2-4dd9-b6f3-3714f0c3c95d">
+                      <SHORT-NAME>GetShutdownTarget</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_GetShutdownTarget</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="5d4a809e-05eb-4d0c-ba60-037509dfb922">
+                      <SHORT-NAME>GetWakeupTime</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_GetWakeupTime</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="ea67e746-60e1-4109-8c96-ecfaeb0d82ba">
+                      <SHORT-NAME>GoDownHaltPoll</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_GoDownHaltPoll</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="09bee3bc-587a-4785-ab68-e638fe4e16ff">
+                      <SHORT-NAME>ReleasePOST_RUN</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_ReleasePOST_RUN</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="4ec61d37-09fe-4ada-90cd-b3916ab9dac4">
+                      <SHORT-NAME>ReleaseRUN</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_ReleaseRUN</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="fe5bf526-4d5d-4790-b896-9a55675d2a1f">
+                      <SHORT-NAME>RequestOff</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_RequestOff</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="f67685fe-d886-4b4a-b9a2-a84cf76f81c8">
+                      <SHORT-NAME>RequestPOST_RUN</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_RequestPOST_RUN</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="30ea5302-fd68-40f4-b38f-4b520b8f774a">
+                      <SHORT-NAME>RequestRUN</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_RequestRUN</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="dfa4f4b6-1a67-453c-bc79-75815927e5e3">
+                      <SHORT-NAME>RequestReset</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_RequestReset</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="5045d6c9-a948-475c-bf1e-c2d30de829b7">
+                      <SHORT-NAME>RequestSleep</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_RequestSleep</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="73e3e098-c3f3-48f9-ad54-4cc7e78ae7f0">
+                      <SHORT-NAME>Rte_Switch_currentMode_currentMode</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT UUID="73f5acaa-85e6-4da9-9105-8889646d6de4">
+                          <SHORT-NAME>MSP_Rte_Switch_currentMode_currentMode</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EcuM/ServiceSwComponentTypes/EcuM/currentMode</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/EcuM/ModeSwitchInterfaces/EcuM_CurrentMode/currentMode</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>Rte_Switch_currentMode_currentMode</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="f496ccfa-7698-4102-aec4-d698ed1113dc">
+                      <SHORT-NAME>SelectBootTarget</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_SelectBootTarget</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="41e79377-65bb-4f71-88cb-f9a3b70a2d95">
+                      <SHORT-NAME>SelectShutdownCause</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_SelectShutdownCause</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="04570215-5c5c-4835-af01-10d829debd21">
+                      <SHORT-NAME>SelectShutdownTarget</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>EcuM_SelectShutdownTarget</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </SERVICE-SW-COMPONENT-TYPE>
+            <SWC-BSW-MAPPING UUID="b9f6b28b-4520-4d05-8b16-4c802281cfe4">
+              <SHORT-NAME>SwcBswMapping_EcuM</SHORT-NAME>
+              <BSW-BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM</BSW-BEHAVIOR-REF>
+              <SWC-BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM</SWC-BEHAVIOR-REF>
+            </SWC-BSW-MAPPING>
+            <SWC-IMPLEMENTATION UUID="5823abfb-64ba-4cd5-ba05-cca344f3c1a7">
+              <SHORT-NAME>SwcImplementation_EcuM</SHORT-NAME>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/EcuM/ServiceSwComponentTypes/SwcBswMapping_EcuM</SWC-BSW-MAPPING-REF>
+              <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/EcuM/ServiceSwComponentTypes/EcuM/SwcIB_EcuM</BEHAVIOR-REF>
+            </SWC-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES></AUTOSAR>

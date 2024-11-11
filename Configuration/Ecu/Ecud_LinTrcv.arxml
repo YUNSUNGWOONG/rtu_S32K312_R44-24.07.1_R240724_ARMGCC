@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="7cbc28f3-4ad2-4fd8-a3a2-bce43cebdd05">
+      <SHORT-NAME>AUTRON</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="3ccdcd2a-d94d-467a-8163-1d5a4831562e">
+          <SHORT-NAME>LinTrcv</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTRON/LinTrcv</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/Bsw_LinTrcv/BswImplementation_LinTrcv</MODULE-DESCRIPTION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="38ba868c-fbda-4842-a6af-922d80048d01">
+              <SHORT-NAME>LinTrcvGeneral</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2020-07-27T13:45:34Z" GID="LinTrcvDevErrorDetect">1</SD>
+                    <SD T="2020-07-27T13:45:45Z" GID="LinTrcvTimerType">None</SD>
+                    <SD T="2020-07-27T13:45:47Z" GID="LinTrcvVersionInfoApi">1</SD>
+                    <SD T="2020-07-27T13:45:54Z" GID="LinTrcvWaitTime">0.00005</SD>
+                    <SD T="2020-07-27T13:45:54Z" GID="LinTrcvWakeUpSupport">1</SD>
+                    <SD T="2020-08-27T12:06:11Z" GID="LinTrcvEcucPartitionRef">/AUTOSAR/EcuC/EcucPartitionCollection/EcucPartition_Main</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/LinTrcv/LinTrcvGeneral</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvGeneral/LinTrcvDevErrorDetect</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvGeneral/LinTrcvIndex</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvGeneral/LinTrcvVersionInfoApi</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvGeneral/LinTrcvWakeUpSupport</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvGeneral/LinTrcvTimerType</DEFINITION-REF>
+                  <VALUE>None</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvGeneral/LinTrcvWaitTime</DEFINITION-REF>
+                  <VALUE>0.00005</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/LinTrcv/LinTrcvGeneral/LinTrcvEcucPartitionRef</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPartitionCollection/EcucPartition_Main</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="c946bd4c-a99e-4a04-ada9-7ce478d3dd5a">
+              <SHORT-NAME>LIN1</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                    <SD T="2020-07-27T13:46:01Z" GID="LinTrcvChannelId">0</SD>
+                    <SD T="2020-07-27T13:46:01Z" GID="LinTrcvChannelUsed">1</SD>
+                    <SD T="2020-07-27T13:46:01Z" GID="LinTrcvWakeupByBusUsed">0</SD>
+                  </SDG>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2024-07-10T13:17:32Z" GID="LinTrcvWakeupByBusUsed">0</SD>
+                    <SD T="2024-07-10T13:18:20Z" GID="LinTrcvWakeupSourceRef" />
+                    <SD T="2024-05-13T22:28:08Z" GID="LinTrcvStandbyModeUsed">0</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/LinTrcv/LinTrcvChannel</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvChannelId</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvChannelUsed</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvWakeupByBusUsed</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvStandbyModeUsed</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="73e32aa3-daf6-40a9-a43b-4d2107861786">
+                  <SHORT-NAME>LinTrcvAccess</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="0b6c0e22-25df-4de1-b736-29a14b6b90d0">
+                      <SHORT-NAME>LinTrcvDioAccess</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="0896302a-b634-414a-8a72-dddde27cefec">
+                          <SHORT-NAME>LinTrcvDioChannelAccess_EN</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2020-07-27T13:46:58Z" GID="LinTrcvHardwareInterfaceName">EN</SD>
+                                <SD T="2024-07-10T11:13:16Z" GID="LinTrcvDioSymRefName">/Dio/Dio/DioConfig/DioPort_DL/DioChannel_PTD10</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess/LinTrcvHardwareInterfaceName</DEFINITION-REF>
+                              <VALUE>EN</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess/LinTrcvDioSymRefName</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_DL/DioChannel_PTD10</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="5bb08ec7-1a53-4012-a7ae-24df6ebbf61b">
+                          <SHORT-NAME>LinTrcvDioChannelAccess0</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2024-07-10T13:27:57Z" GID="LinTrcvHardwareInterfaceName">TX</SD>
+                                <SD T="2024-07-10T13:28:23Z" GID="LinTrcvDioSymRefName">/Dio/Dio/DioConfig/DioPort_BL/DioChannel_PTB1</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess/LinTrcvHardwareInterfaceName</DEFINITION-REF>
+                              <VALUE>TX</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess/LinTrcvDioSymRefName</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_BL/DioChannel_PTB1</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="051c9ccd-a594-40c8-9a42-34155e848302">
+                          <SHORT-NAME>LinTrcvDioChannelAccess1</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2024-07-10T13:27:59Z" GID="LinTrcvHardwareInterfaceName">RX</SD>
+                                <SD T="2024-07-10T13:28:32Z" GID="LinTrcvDioSymRefName">/Dio/Dio/DioConfig/DioPort_BL/DioChannel_PTB0</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess/LinTrcvHardwareInterfaceName</DEFINITION-REF>
+                              <VALUE>RX</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess/LinTrcvDioSymRefName</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_BL/DioChannel_PTB0</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="d3dbc5df-9e6b-4b9b-a434-c14b6500d1ee">
+              <SHORT-NAME>LIN2</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                    <SD T="2024-07-10T11:08:17Z" GID="LinTrcvChannelId">0</SD>
+                    <SD T="2024-07-10T11:08:17Z" GID="LinTrcvChannelUsed">1</SD>
+                    <SD T="2024-07-10T11:08:17Z" GID="LinTrcvWakeupByBusUsed">0</SD>
+                    <SD T="2024-07-10T11:08:17Z" GID="LinTrcvStandbyModeUsed">1</SD>
+                  </SDG>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2024-07-10T13:17:58Z" GID="LinTrcvStandbyModeUsed">0</SD>
+                    <SD T="2024-07-10T13:21:05Z" GID="LinTrcvChannelId">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/LinTrcv/LinTrcvChannel</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvChannelId</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvChannelUsed</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvWakeupByBusUsed</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvStandbyModeUsed</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="6d4270ae-9b38-4cfa-8f19-6b5c9ba3cf62">
+                  <SHORT-NAME>LinTrcvAccess</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="e7217317-a936-4040-8161-95e577229f7f">
+                      <SHORT-NAME>LinTrcvDioAccess</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="b304743e-6e6f-4abc-a8df-7949b17d6730">
+                          <SHORT-NAME>LinTrcvDioChannelAccess0</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2024-07-10T11:16:43Z" GID="LinTrcvHardwareInterfaceName">EN</SD>
+                                <SD T="2024-07-10T11:16:47Z" GID="LinTrcvDioSymRefName">/Dio/Dio/DioConfig/DioPort_DL/DioChannel_PTD11</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess/LinTrcvHardwareInterfaceName</DEFINITION-REF>
+                              <VALUE>EN</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess/LinTrcvDioSymRefName</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_DL/DioChannel_PTD11</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="77ef6b58-9778-4294-8fae-b75e8ce9969b">
+                          <SHORT-NAME>LinTrcvDioChannelAccess1</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2024-07-10T13:27:20Z" GID="LinTrcvHardwareInterfaceName">TX</SD>
+                                <SD T="2024-07-10T13:27:38Z" GID="LinTrcvDioSymRefName">/Dio/Dio/DioConfig/DioPort_BH/DioChannel_PTB27</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess/LinTrcvHardwareInterfaceName</DEFINITION-REF>
+                              <VALUE>TX</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess/LinTrcvDioSymRefName</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_BH/DioChannel_PTB27</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="20475bbe-2481-46bf-bb3d-a64851fe3992">
+                          <SHORT-NAME>LinTrcvDioChannelAccess2</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2024-07-10T13:27:22Z" GID="LinTrcvHardwareInterfaceName">RX</SD>
+                                <SD T="2024-07-10T13:27:48Z" GID="LinTrcvDioSymRefName">/Dio/Dio/DioConfig/DioPort_BH/DioChannel_PTB28</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess/LinTrcvHardwareInterfaceName</DEFINITION-REF>
+                              <VALUE>RX</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess/LinTrcvDioChannelAccess/LinTrcvDioSymRefName</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dio/Dio/DioConfig/DioPort_BH/DioChannel_PTB28</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

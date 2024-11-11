@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="a71105cd-57b1-4f7b-b410-3b454f2f67d1">
+      <SHORT-NAME>EcucModules</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="36e3f051-52b8-4bc4-9f31-9ae80510821f">
+          <SHORT-NAME>Fota</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTRON/Fota</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/Bsw_Fota/BswImplementation_Fota</MODULE-DESCRIPTION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="06e275a8-480b-489a-818c-72c9892bb763">
+              <SHORT-NAME>FotaGeneral</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2022-05-31T17:34:28Z" GID="FotaDevErrorDetect">1</SD>
+                    <SD T="2023-09-26T10:41:53Z" GID="FotaUserIncludeFiles" />
+                    <SD T="2022-06-10T10:06:58Z" GID="FotaMainfunctionPeriod">0.005</SD>
+                    <SD T="2024-08-07T02:06:58Z" GID="FotaMode">APP_MODE</SD>
+                    <SD T="2022-11-18T15:38:45Z" GID="StartUpCommandAddress">0x7003BFF0</SD>
+                    <SD T="2022-11-18T15:38:51Z" GID="StartUpCommandValue">0xA5430911</SD>
+                    <SD T="2022-12-08T16:15:47Z" GID="FotaPartitionFlagSecurityValue">0x90482442</SD>
+                    <SD T="2024-07-17T14:18:02Z" GID="FotaCommonRAMAddress">0x20400004</SD>
+                    <SD T="2024-03-24T12:36:30Z" GID="FotaTpBlockLength">514</SD>
+                    <SD T="2024-07-17T14:18:00Z" GID="FotaStartUpCommandAddress">0x20400000</SD>
+                    <SD T="2022-12-29T13:07:56Z" GID="FotaVersionInfoAPI">0</SD>
+                    <SD T="2022-12-30T11:03:30Z" GID="FotaARMArchitectureEcu">1</SD>
+                    <SD T="2024-08-07T02:06:56Z" GID="FotaBootManagerEnable">0</SD>
+                    <SD T="2023-05-29T15:12:37Z" GID="FotaSoftwareVersionCheckEnable">0</SD>
+                    <SD T="2023-08-07T23:03:40Z" GID="FotaCpdKeyValue">0x19801217</SD>
+                    <SD T="2023-09-26T10:35:32Z" GID="FotaDownGradeProtection">0</SD>
+                    <SD T="2023-11-28T10:18:02Z" GID="FotaMcuMemoryAccessType">FOTA_SINGLE_TYPE</SD>
+                    <SD T="2024-02-28T23:50:19Z" GID="FotaStandardSupport">FOTA_OTA_ES98765_01</SD>
+                    <SD T="2023-10-11T21:05:58Z" GID="FotaVersionLengthMaximum">0x7F</SD>
+                    <SD T="2023-10-30T02:54:01Z" GID="FotaLargeSector">0</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Fota/FotaGeneral</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaDevErrorDetect</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaMainfunctionPeriod</DEFINITION-REF>
+                  <VALUE>0.005</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaMode</DEFINITION-REF>
+                  <VALUE>APP_MODE</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaStartUpCommandAddress</DEFINITION-REF>
+                  <VALUE>0x20400000</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaStartUpCommandValue</DEFINITION-REF>
+                  <VALUE>0xA5430911</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaPartitionFlagSecurityValue</DEFINITION-REF>
+                  <VALUE>0x90482442</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaCommonRAMAddress</DEFINITION-REF>
+                  <VALUE>0x20400004</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaTpBlockLength</DEFINITION-REF>
+                  <VALUE>514</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaVersionInfoAPI</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaARMArchitectureEcu</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaBootManagerEnable</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaSoftwareVersionCheckEnable</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaCpdKeyValue</DEFINITION-REF>
+                  <VALUE>0x19801217</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaDownGradeProtection</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaMcuMemoryAccessType</DEFINITION-REF>
+                  <VALUE>FOTA_SINGLE_TYPE</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaStandardSupport</DEFINITION-REF>
+                  <VALUE>FOTA_OTA_ES98765_01</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaVersionLengthMaximum</DEFINITION-REF>
+                  <VALUE>0x7F</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Fota/FotaGeneral/FotaLargeSector</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="afd3a659-c043-4ea1-9514-9731e98c0379">
+              <SHORT-NAME>FotaSwUnit_RTSW</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                    <SD T="2022-10-20T22:16:50Z" GID="FotaUnitId">0</SD>
+                  </SDG>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2023-05-29T15:13:06Z" GID="FotaEcuSwUnit">0xF1B1</SD>
+                    <SD T="2023-05-29T15:13:09Z" GID="FotaSoftwareType">FOTA_RTSW_TYPE</SD>
+                    <SD T="2023-05-29T15:13:22Z" GID="FotaMemDriverRef">/EcucModules/Mem_76_Pfls/MemInstance0</SD>
+                    <SD T="2023-06-05T17:32:26Z" GID="FotaSwUnitIndex">0</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Fota/FotaSwUnit</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaEcuSwUnit</DEFINITION-REF>
+                  <VALUE>0xF1B1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaSoftwareType</DEFINITION-REF>
+                  <VALUE>FOTA_RTSW_TYPE</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaSwUnitIndex</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/Fota/FotaSwUnit/FotaMemDriverRef</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/EcucModules/Mem_76_Pfls/MemInstance0</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="71765c99-6722-4819-aa5b-ce172660fa19">
+                  <SHORT-NAME>FotaBlockInfo</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2024-03-19T14:24:18Z" GID="ModuleInfoAddress">0x00460020</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/ModuleInfoAddress</DEFINITION-REF>
+                      <VALUE>0x00460020</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="3e11e699-5edb-46fa-9cf6-1f894823de69">
+                      <SHORT-NAME>FotaBlock0_Meta</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2023-09-07T15:23:23Z" GID="BlockType">METADATA</SD>
+                            <SD T="2023-09-07T15:23:25Z" GID="BlockIndex">0</SD>
+                            <SD T="2023-09-07T15:23:31Z" GID="BlockStartAddress">0x1000</SD>
+                            <SD T="2023-09-07T15:23:36Z" GID="BlockEndAddress">0x1047</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockType</DEFINITION-REF>
+                          <VALUE>METADATA</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockIndex</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockStartAddress</DEFINITION-REF>
+                          <VALUE>0x1000</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockEndAddress</DEFINITION-REF>
+                          <VALUE>0x1047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="da11b6c3-afb2-4c6a-a08d-46ff0557e448">
+                          <SHORT-NAME>MetaDataInfo</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                                <SD T="2023-09-07T15:23:49Z" GID="MdBlockHeaderLength">8</SD>
+                                <SD T="2023-09-07T15:23:49Z" GID="MdBlockMetadataLength">48</SD>
+                                <SD T="2023-09-07T15:23:49Z" GID="MdBlockDecKeyMACLength">16</SD>
+                                <SD T="2023-09-07T15:23:49Z" GID="MetadataWriteToFlash">0</SD>
+                              </SDG>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2023-09-07T15:24:10Z" GID="CsmMetadataHashJob">/AUTRON/Csm/CsmJobs/Hash_SHA256_Sync</SD>
+                                <SD T="2023-09-07T15:24:27Z" GID="CsmKeyForKeyDerivationPassword">/AUTRON/Csm/CsmKeys/PBKDF2_Source_Key_PSK0</SD>
+                                <SD T="2023-09-07T15:24:34Z" GID="CsmKeyForKeyDerivationResult">/AUTRON/Csm/CsmKeys/PBKDF2_ExtractedKey</SD>
+                                <SD T="2023-09-07T15:24:49Z" GID="CsmDecryptKey">/AUTRON/Csm/CsmKeys/Decr_AES_CTR_Key0_swlib_Fota</SD>
+                                <SD T="2024-05-10T10:52:01Z" GID="CsmDecryptKeyVerifyJob">/AUTRON/Csm/CsmJobs/MacVer_AES_CMAC_key</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/MetaDataInfo</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/MetaDataInfo/MdBlockHeaderLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/MetaDataInfo/MdBlockMetadataLength</DEFINITION-REF>
+                              <VALUE>48</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/MetaDataInfo/MdBlockDecKeyMACLength</DEFINITION-REF>
+                              <VALUE>16</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/MetaDataInfo/MetadataWriteToFlash</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/MetaDataInfo/CsmMetadataHashJob</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Csm/CsmJobs/Hash_SHA256_Sync</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/MetaDataInfo/CsmKeyForKeyDerivationPassword</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Csm/CsmKeys/PBKDF2_Source_Key_PSK0</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/MetaDataInfo/CsmKeyForKeyDerivationResult</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Csm/CsmKeys/PBKDF2_ExtractedKey</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/MetaDataInfo/CsmDecryptKey</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Csm/CsmKeys/Decr_AES_CTR_Key0_swlib_Fota</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/MetaDataInfo/CsmDecryptKeyVerifyJob</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Csm/CsmJobs/MacVer_AES_CMAC_key</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="3e438d84-5e62-4c2f-9284-1e51d8c1475a">
+                      <SHORT-NAME>FotaBlock0_Fw0</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2022-11-17T11:16:05Z" GID="BlockType">FIRMWARE</SD>
+                            <SD T="2022-10-21T14:24:34Z" GID="BlockIndex">1</SD>
+                            <SD T="2024-03-19T14:24:30Z" GID="BlockStartAddress">0x460000</SD>
+                            <SD T="2024-03-19T14:24:32Z" GID="BlockEndAddress">0x4608FF</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockType</DEFINITION-REF>
+                          <VALUE>FIRMWARE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockIndex</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockStartAddress</DEFINITION-REF>
+                          <VALUE>0x460000</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockEndAddress</DEFINITION-REF>
+                          <VALUE>0x4608FF</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="abd1835b-00ea-47bc-a9c9-fe3a64483218">
+                          <SHORT-NAME>BlockProcessing</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2023-09-07T15:25:02Z" GID="IsEncrypted">1</SD>
+                                <SD T="2024-05-10T15:56:32Z" GID="CsmDecryptionAlgo" />
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockProcessing</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockProcessing/IsEncrypted</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="77d36c1f-77a2-4df2-95a3-6952d465c304">
+                      <SHORT-NAME>FotaBlock0_Fw1</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2022-11-17T11:16:07Z" GID="BlockType">FIRMWARE</SD>
+                            <SD T="2023-10-30T02:54:39Z" GID="BlockIndex">2</SD>
+                            <SD T="2024-03-19T14:24:40Z" GID="BlockStartAddress">0x460C00</SD>
+                            <SD T="2024-05-10T18:14:26Z" GID="BlockEndAddress">0x4DFFFF</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockType</DEFINITION-REF>
+                          <VALUE>FIRMWARE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockIndex</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockStartAddress</DEFINITION-REF>
+                          <VALUE>0x460C00</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockEndAddress</DEFINITION-REF>
+                          <VALUE>0x4DFFFF</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="3dc1b27c-cb68-42e9-b779-1127591cf3a0">
+                          <SHORT-NAME>BlockProcessing</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2023-09-07T15:25:06Z" GID="IsEncrypted">1</SD>
+                                <SD T="2024-05-10T14:39:02Z" GID="CsmDecryptionAlgo" />
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockProcessing</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockProcessing/IsEncrypted</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="dedc6a5e-dc2f-46fb-b45b-a073e8c5533f">
+                      <SHORT-NAME>FotaBlock_Partition</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2022-11-17T11:17:03Z" GID="BlockType">PARTITION_FLAG</SD>
+                            <SD T="2023-10-30T02:54:40Z" GID="BlockIndex">3</SD>
+                            <SD T="2024-03-19T14:25:39Z" GID="BlockStartAddress">0x460900</SD>
+                            <SD T="2024-03-19T14:25:43Z" GID="BlockEndAddress">0x4609FF</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockType</DEFINITION-REF>
+                          <VALUE>PARTITION_FLAG</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockIndex</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockStartAddress</DEFINITION-REF>
+                          <VALUE>0x460900</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockEndAddress</DEFINITION-REF>
+                          <VALUE>0x4609FF</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="2c8bd1c9-19f0-4ee5-83e8-17061e064580">
+                      <SHORT-NAME>FotaBlock0_Signature</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                            <SD T="2022-12-14T16:16:23Z" GID="BlockType">SIGNATURE</SD>
+                            <SD T="2024-03-19T14:25:53Z" GID="BlockStartAddress">0x460A00</SD>
+                            <SD T="2024-03-19T14:25:55Z" GID="BlockEndAddress">0x460BFF</SD>
+                            <SD T="2023-10-30T02:54:40Z" GID="BlockIndex">4</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockType</DEFINITION-REF>
+                          <VALUE>SIGNATURE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockStartAddress</DEFINITION-REF>
+                          <VALUE>0x460A00</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockEndAddress</DEFINITION-REF>
+                          <VALUE>0x460BFF</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/BlockIndex</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="a9c63987-9738-4e3b-86ce-5cf058a46eea">
+                          <SHORT-NAME>VerificationInfo</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                                <SD T="2022-12-14T16:19:57Z" GID="CsmAlgorithm">/AUTRON/Csm/CsmJobs/SignatureVerify_RSASSA_PKCS1_v1_5_Fota</SD>
+                                <SD T="2023-10-30T03:08:21Z" GID="TargetBlock">/EcucModules/Fota/FotaSwUnit_RTSW/FotaBlockInfo/FotaBlock0_Fw0,/EcucModules/Fota/FotaSwUnit_RTSW/FotaBlockInfo/FotaBlock0_Fw1</SD>
+                                <SD T="2023-05-29T15:23:34Z" GID="VerifyBufferUsed">0</SD>
+                                <SD T="2023-08-07T23:10:46Z" GID="VerifySizeOfOneCycle">512</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/VerificationInfo</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/VerificationInfo/VerifyBufferUsed</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/VerificationInfo/VerifySizeOfOneCycle</DEFINITION-REF>
+                              <VALUE>512</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/VerificationInfo/CsmAlgorithm</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTRON/Csm/CsmJobs/SignatureVerify_RSASSA_PKCS1_v1_5_Fota</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/VerificationInfo/TargetBlock</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/EcucModules/Fota/FotaSwUnit_RTSW/FotaBlockInfo/FotaBlock0_Fw0</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Fota/FotaSwUnit/FotaBlockInfo/FotaBlock/VerificationInfo/TargetBlock</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/EcucModules/Fota/FotaSwUnit_RTSW/FotaBlockInfo/FotaBlock0_Fw1</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="b5bf16b1-8a31-4d08-a58d-5beb1b303180">
+      <SHORT-NAME>EcucModules</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="1c168e56-67d7-47e6-967e-21d5f3046126">
+          <SHORT-NAME>Mem_76_Pfls</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTRON/Mem</DEFINITION-REF>
+          <ECUC-DEF-EDITION>4.4.7</ECUC-DEF-EDITION>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/Bsw_Mem/BswImplementation_Mem</MODULE-DESCRIPTION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="ed7afa77-3997-4633-aa92-b81da6d536ce">
+              <SHORT-NAME>MemGeneral</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2022-05-10T13:42:23Z" GID="MemDevErrorDetect">1</SD>
+                    <SD T="2022-05-27T11:08:58Z" GID="MemMainfunctionPeriod">0.005</SD>
+                    <SD T="2023-10-30T03:12:10Z" GID="MemUserIncludeFiles">Fota.h,Mem_76_Pfls_User_Callouts.h</SD>
+                    <SD T="2024-07-11T13:24:56Z" GID="MemProcessorSeries">S32K312</SD>
+                    <SD T="2023-10-11T13:02:09Z" GID="MemUseNvm">1</SD>
+                    <SD T="2023-10-30T17:30:25Z" GID="MemUseRamCode">0</SD>
+                    <SD T="2023-10-30T03:12:04Z" GID="MemDisableEccTrap">0</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Mem/MemGeneral</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Mem/MemGeneral/MemDevErrorDetect</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTRON/Mem/MemGeneral/MemMainfunctionPeriod</DEFINITION-REF>
+                  <VALUE>0.005</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTRON/Mem/MemGeneral/MemUserIncludeFiles</DEFINITION-REF>
+                  <VALUE>Fota.h</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTRON/Mem/MemGeneral/MemUserIncludeFiles</DEFINITION-REF>
+                  <VALUE>Mem_76_Pfls_User_Callouts.h</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Mem/MemGeneral/MemProcessorSeries</DEFINITION-REF>
+                  <VALUE>S32K312</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Mem/MemGeneral/MemUseNvm</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Mem/MemGeneral/MemDisableEccTrap</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Mem/MemGeneral/MemUseRamCode</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="b492af20-c2dc-4378-9ef9-6842394277da">
+              <SHORT-NAME>MemPublishedInformation</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                    <SD T="2022-08-08T17:40:38Z" GID="MemErasedValue">0x00000000</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Mem/MemPublishedInformation</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Mem/MemPublishedInformation/MemErasedValue</DEFINITION-REF>
+                  <VALUE>0x00000000</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="2296af22-02e1-425e-8229-48a5c0da56e3">
+              <SHORT-NAME>MemInstance0</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                    <SD T="2022-05-10T13:42:42Z" GID="MemInstanceId">0</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Mem/MemInstance</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Mem/MemInstance/MemInstanceId</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="b55e33d5-9853-44b9-9bc4-9911a0af2fde">
+                  <SHORT-NAME>MemSectorBatch0</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:DEFAULT_CONFIGURED">
+                        <SD T="2022-05-10T13:42:48Z" GID="MemNumberOfSectors">1</SD>
+                      </SDG>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2022-06-30T18:10:32Z" GID="MemReadPageSize">1</SD>
+                        <SD T="2023-05-29T15:34:12Z" GID="MemSpecifiedEraseCycles">4294967295</SD>
+                        <SD T="2024-03-20T10:28:22Z" GID="MemStartAddress">0x460000</SD>
+                        <SD T="2022-09-27T16:48:58Z" GID="MemWritePageSize">8</SD>
+                        <SD T="2022-09-22T15:18:18Z" GID="MemEraseSectorSize">8192</SD>
+                        <SD T="2024-03-20T10:29:58Z" GID="MemNumberOfSectors">186</SD>
+                        <SD T="2024-07-11T13:23:49Z" GID="MemAltStartAddress" />
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Mem/MemInstance/MemSectorBatch</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Mem/MemInstance/MemSectorBatch/MemNumberOfSectors</DEFINITION-REF>
+                      <VALUE>186</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Mem/MemInstance/MemSectorBatch/MemReadPageSize</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Mem/MemInstance/MemSectorBatch/MemWritePageSize</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Mem/MemInstance/MemSectorBatch/MemEraseSectorSize</DEFINITION-REF>
+                      <VALUE>8192</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Mem/MemInstance/MemSectorBatch/MemStartAddress</DEFINITION-REF>
+                      <VALUE>0x460000</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTRON/Mem/MemInstance/MemSectorBatch/MemSpecifiedEraseCycles</DEFINITION-REF>
+                      <VALUE>4294967295</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="22e08572-0b0a-4026-a57c-910f598b1b49">
+                  <SHORT-NAME>UserPreCalloutFunction0</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2022-12-29T12:39:33Z" GID="UserPreCalloutFunction">Mem_76_Pfls_CacheControlDisable_Callout</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Mem/MemInstance/UserPreCalloutFunction</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/AUTRON/Mem/MemInstance/UserPreCalloutFunction/UserPreCalloutFunction</DEFINITION-REF>
+                      <VALUE>Mem_76_Pfls_CacheControlDisable_Callout</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="07b0f6ef-d105-4695-b5eb-cedeb468055d">
+                  <SHORT-NAME>UserPostCalloutFunction0</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="ODIN_WRITER_TYPE:USER_CONFIGURED">
+                        <SD T="2022-12-29T12:42:02Z" GID="UserPostCalloutFunction">Mem_76_Pfls_CacheControlEnable_Callout</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/Mem/MemInstance/UserPostCalloutFunction</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/AUTRON/Mem/MemInstance/UserPostCalloutFunction/UserPostCalloutFunction</DEFINITION-REF>
+                      <VALUE>Mem_76_Pfls_CacheControlEnable_Callout</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

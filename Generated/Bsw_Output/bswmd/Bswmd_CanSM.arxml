@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="4ab9745b-0ad4-4453-a698-4d03c4d103a7">
+      <SHORT-NAME>Bsw_CanSM</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="d270b55b-d4da-4e7c-bc9c-909f01a8199b">
+          <SHORT-NAME>BswImplementation_CanSM</SHORT-NAME>
+          <CODE-DESCRIPTORS>
+            <CODE UUID="6d389d8c-4e54-4a3a-8d58-3bfb5383b2fa">
+              <SHORT-NAME>Code_CanSM</SHORT-NAME>
+              <ARTIFACT-DESCRIPTORS>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CanSM_Baudrate</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CanSM_CanIf</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CanSM_CanIf</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CanSM_Error</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CanSM_Internal</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CanSM_InternalTypes</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CanSM_Main</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CanSM_Mode</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CanSM_Ram</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CanSM_Ram</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CanSM_Types</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CanSM_Version</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CanSM_Version</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CanSM</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CanSM</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+              </ARTIFACT-DESCRIPTORS>
+            </CODE>
+          </CODE-DESCRIPTORS>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <RESOURCE-CONSUMPTION UUID="e0ac4f6d-0da4-4521-b69f-1090f4d08db1">
+            <SHORT-NAME>ResourceConsumption_CanSM</SHORT-NAME>
+          </RESOURCE-CONSUMPTION>
+          <SW-VERSION>1.0.9</SW-VERSION>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION UUID="55b38223-7d31-4586-b900-5037329b6197">
+          <SHORT-NAME>CanSM</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="_conversion">
+                <SDG GID="IMPLEMENTED-ENTRYS">
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_CheckTransceiverWakeFlagIndication</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_ClearTrcvWufFlagIndication</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_ConfirmPnAvailability</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_ControllerModeIndication</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_ControllerModeIndication</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_CurrentIcomConfiguration</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_DeInit</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_GetCurrentComMode</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/CanSM_GetVersionInfo</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_Init</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/CanSM_MainFunction</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_RequestComMode</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_SetBaudrate</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_SetEcuPassive</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_SetIcomConfiguration</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_StartWakeupSource</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_StopWakeupSource</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_TransceiverModeIndication</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_TxTimeoutException</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_CheckTransceiverWakeFlagIndication</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_ClearTrcvWufFlagIndication</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_ConfirmPnAvailability</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_ControllerBusOff</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_ControllerModeIndication</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_CurrentIcomConfiguration</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_DeInit</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_GetCurrentComMode</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/CanSM_GetVersionInfo</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_Init</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/CanSM_MainFunction</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_RequestComMode</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_SetBaudrate</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_SetEcuPassive</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_SetIcomConfiguration</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_StartWakeupSource</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_StopWakeupSource</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_TransceiverModeIndication</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SDG GID="BSW-MODULE-ENTRY-REF-CONDITIONAL">
+                    <SDG GID="BSW-MODULE-ENTRY-REF">
+                      <SD GID="_mixed">/Bsw_CanSM/Bsw_Entry/CanSM_TxTimeoutException</SD>
+                      <SD GID="DEST">BSW-MODULE-ENTRY</SD>
+                    </SDG>
+                    <SD GID="_mixed"/>
+                  </SDG>
+                  <SD GID="_mixed"/>
+                </SDG>
+                <SD GID="_path">IMPLEMENTED-ENTRYS@2/</SD>
+                <SD GID="_target">org.artop.aal.autosar430</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <IMPLEMENTED-ENTRYS>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_CheckTransceiverWakeFlagIndication</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_ClearTrcvWufFlagIndication</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_ConfirmPnAvailability</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_ControllerBusOff</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_ControllerModeIndication</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_DeInit</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_GetCurrentComMode</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_GetVersionInfo</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_Init</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_MainFunction</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_RequestComMode</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_StartWakeupSource</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_StopWakeupSource</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_TransceiverModeIndication</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_TxTimeoutException</BSW-MODULE-ENTRY-REF>
+            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+          </IMPLEMENTED-ENTRYS>
+          <MODULE-ID>140</MODULE-ID>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR UUID="34a59215-71ed-4aa1-b250-041a5177ca08">
+              <SHORT-NAME>BswInternalBehavior_CanSM</SHORT-NAME>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA UUID="082e87d8-1cad-46dd-abeb-aee2830fd0a3">
+                  <SHORT-NAME>BUSOFF_STATUS_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="18733ad4-a2a4-4ce0-9d22-fc14778fe1f1">
+                  <SHORT-NAME>MODE_STATUS_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <EXCLUSIVE-AREA-POLICYS>
+                <BSW-EXCLUSIVE-AREA-POLICY>
+                  <API-PRINCIPLE>COMMON</API-PRINCIPLE>
+                  <EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/MODE_STATUS_PROTECTION</EXCLUSIVE-AREA-REF>
+                </BSW-EXCLUSIVE-AREA-POLICY>
+                <BSW-EXCLUSIVE-AREA-POLICY>
+                  <API-PRINCIPLE>COMMON</API-PRINCIPLE>
+                  <EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/BUSOFF_STATUS_PROTECTION</EXCLUSIVE-AREA-REF>
+                </BSW-EXCLUSIVE-AREA-POLICY>
+              </EXCLUSIVE-AREA-POLICYS>
+              <ENTITYS>
+                <BSW-CALLED-ENTITY UUID="30de1477-6b02-4696-8a92-b3f9256784c7">
+                  <SHORT-NAME>BswCE_CanSM_CheckTransceiverWakeFlagIndication</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/MODE_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_CheckTransceiverWakeFlagIndication</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="ef885dab-721e-480f-9dc0-19c7b161f553">
+                  <SHORT-NAME>BswCE_CanSM_ClearTrcvWufFlagIndication</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/MODE_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_ClearTrcvWufFlagIndication</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="f10e6321-2650-4a15-a444-3a30780d2a5d">
+                  <SHORT-NAME>BswCE_CanSM_ConfirmPnAvailability</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/MODE_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_ConfirmPnAvailability</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="33326518-525a-465d-bb63-ee821f799a93">
+                  <SHORT-NAME>BswCE_CanSM_ControllerBusOff</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/BUSOFF_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_ControllerBusOff</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="709fc965-6f12-4f0e-a022-486fffede27a">
+                  <SHORT-NAME>BswCE_CanSM_ControllerModeIndication</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/BUSOFF_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/MODE_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_ControllerModeIndication</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="1f34d57d-ff43-4fd1-b391-97a5ab0535d0">
+                  <SHORT-NAME>BswCE_CanSM_DeInit</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/MODE_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_DeInit</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="74a15eb8-488d-49e3-9d89-1f40b7f5d8a9">
+                  <SHORT-NAME>BswCE_CanSM_GetCurrentComMode</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/BUSOFF_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/MODE_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_GetCurrentComMode</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="1d356f6f-34b6-448f-8ab2-897694054947">
+                  <SHORT-NAME>BswCE_CanSM_GetVersionInfo</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_GetVersionInfo</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="227131b6-2471-4c17-b32a-8c07ff15828f">
+                  <SHORT-NAME>BswCE_CanSM_Init</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_Init</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="56b79c01-a8fe-46ef-a446-440dae65d5b5">
+                  <SHORT-NAME>BswCE_CanSM_RequestComMode</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/MODE_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_RequestComMode</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="41d52f36-c707-404a-8891-c8abc54bab9e">
+                  <SHORT-NAME>BswCE_CanSM_StartWakeupSource</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/MODE_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_StartWakeupSource</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="62fd4ab1-c10a-4056-b8f0-a7d2d0e9f52e">
+                  <SHORT-NAME>BswCE_CanSM_StopWakeupSource</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/MODE_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_StopWakeupSource</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="689836b2-51bf-4d6c-94ff-320a0fd0a2bb">
+                  <SHORT-NAME>BswCE_CanSM_TransceiverModeIndication</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/MODE_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_TransceiverModeIndication</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="bb22b937-2d66-4ac2-9f80-81e375af4f99">
+                  <SHORT-NAME>BswCE_CanSM_TxTimeoutException</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/MODE_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_TxTimeoutException</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-SCHEDULABLE-ENTITY UUID="9bdbb689-832d-4056-92b7-7c73a129abd3">
+                  <SHORT-NAME>BswSE_CanSM_MainFunction</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/BUSOFF_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/MODE_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/BswModuleEntries/CanSM_MainFunction</IMPLEMENTED-ENTRY-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+              </ENTITYS>
+              <EVENTS>
+                <BSW-TIMING-EVENT UUID="eaeab073-6233-4ec4-91bb-37b6ae202aee">
+                  <SHORT-NAME>BswTE_CanSM_MainFunction</SHORT-NAME>
+                  <CONTEXT-LIMITATION-REFS>
+                    <CONTEXT-LIMITATION-REF DEST="BSW-DISTINGUISHED-PARTITION">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/BswDistinguishedPartition_CanSM</CONTEXT-LIMITATION-REF>
+                  </CONTEXT-LIMITATION-REFS>
+                  <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/BswSE_CanSM_MainFunction</STARTS-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </BSW-TIMING-EVENT>
+              </EVENTS>
+              <DISTINGUISHED-PARTITIONS>
+                <BSW-DISTINGUISHED-PARTITION>
+                  <SHORT-NAME>BswDistinguishedPartition_CanSM</SHORT-NAME>
+                </BSW-DISTINGUISHED-PARTITION>
+              </DISTINGUISHED-PARTITIONS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="09543624-4701-495a-9548-ddf75daf2770">
+          <SHORT-NAME>BswModuleEntries</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY UUID="da34ccc8-02de-4ce7-9540-638040c25ddb">
+              <SHORT-NAME>CanSM_CheckTransceiverWakeFlagIndication</SHORT-NAME>
+              <SERVICE-ID>10</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="b41d5791-208b-469c-bc73-8b41fb4cf97c">
+                  <SHORT-NAME>Transceiver</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="2ff6ae50-768d-43ea-9a17-70c8ac07fece">
+              <SHORT-NAME>CanSM_ClearTrcvWufFlagIndication</SHORT-NAME>
+              <SERVICE-ID>8</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="aae33908-77e0-409e-97fd-d8aae2ce461b">
+                  <SHORT-NAME>Transceiver</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="8203e087-b1c7-4fca-bb01-d240d79c7da4">
+              <SHORT-NAME>CanSM_ConfirmPnAvailability</SHORT-NAME>
+              <SERVICE-ID>6</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="686d2c08-5afb-4f6f-a52b-c9525a7811c6">
+                  <SHORT-NAME>TransceiverId</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SDG GID="DIRECTION">
+                          <SD GID="_mixed">IN</SD>
+                        </SDG>
+                        <SD GID="_path">DIRECTION@2/</SD>
+                        <SD GID="_target">org.artop.aal.autosar403</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="42883144-49db-451e-8f52-36a7dabe02c5">
+              <SHORT-NAME>CanSM_ControllerBusOff</SHORT-NAME>
+              <SERVICE-ID>4</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="f98b0850-19b3-498a-bd1e-11a20daafa3e">
+                  <SHORT-NAME>ControllerId</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="2bc56c9b-ab8d-4517-93b9-5a1895190943">
+              <SHORT-NAME>CanSM_ControllerModeIndication</SHORT-NAME>
+              <SERVICE-ID>7</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="e4a3bf21-d519-4168-85a1-df58dd7df40e">
+                  <SHORT-NAME>ControllerId</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SDG GID="DIRECTION">
+                          <SD GID="_mixed">IN</SD>
+                        </SDG>
+                        <SD GID="_path">DIRECTION@2/</SD>
+                        <SD GID="_target">org.artop.aal.autosar403</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="8514b249-4404-41e6-8771-2cffe2cfe940">
+                  <SHORT-NAME>ControllerMode</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Can_GeneralTypes/ImplementationDataTypes/Can_ControllerStateType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="cac01ecb-a212-4d98-9691-7e5a1f969eca">
+              <SHORT-NAME>CanSM_DeInit</SHORT-NAME>
+              <SERVICE-ID>20</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="393196c6-8ed7-4e97-9bf2-b9cadd50822d">
+              <SHORT-NAME>CanSM_GetCurrentComMode</SHORT-NAME>
+              <SERVICE-ID>3</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="02c71ebc-21cf-4bb3-9039-281775065d4f">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="6878bbd2-1585-4735-ae09-93ec183ec9e2">
+                  <SHORT-NAME>network</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SDG GID="DIRECTION">
+                          <SD GID="_mixed">IN</SD>
+                        </SDG>
+                        <SD GID="_path">DIRECTION@2/</SD>
+                        <SD GID="_target">org.artop.aal.autosar403</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/ComStack_Types/ImplementationDataTypes/NetworkHandleType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="3643881f-94f1-486a-b710-0a642598cd99">
+                  <SHORT-NAME>ComM_ModePtr</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SDG GID="DIRECTION">
+                          <SD GID="_mixed">OUT</SD>
+                        </SDG>
+                        <SD GID="_path">DIRECTION@2/</SD>
+                        <SD GID="_target">org.artop.aal.autosar403</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-ALIGNMENT>PTR</SW-ALIGNMENT>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_ComM/ImplementationDataTypes/ComM_ModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="210e3769-3e13-4faf-ba75-ee39d0476f8d">
+              <SHORT-NAME>CanSM_GetVersionInfo</SHORT-NAME>
+              <SERVICE-ID>1</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="fbbf130f-867d-4547-834e-6af2cc444b2a">
+                  <SHORT-NAME>VersionInfo</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SDG GID="DIRECTION">
+                          <SD GID="_mixed">OUT</SD>
+                        </SDG>
+                        <SD GID="_path">DIRECTION@2/</SD>
+                        <SD GID="_target">org.artop.aal.autosar403</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-ALIGNMENT>PTR</SW-ALIGNMENT>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_VersionInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="10f0f16e-8e6d-4a51-9a0f-34d9801c07bb">
+              <SHORT-NAME>CanSM_Init</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="4427f048-6210-43cb-97e6-d4ae0377cddc">
+                  <SHORT-NAME>ConfigPtr</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SDG GID="DIRECTION">
+                          <SD GID="_mixed">IN</SD>
+                        </SDG>
+                        <SD GID="_path">DIRECTION@3/</SD>
+                        <SD GID="_target">org.artop.aal.autosar403</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-ALIGNMENT>PTR</SW-ALIGNMENT>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Bsw_CanSM/ImplementationDataTypes/CanSM_ConfigType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="52b58cfe-dd24-412d-b417-103451e22d61">
+              <SHORT-NAME>CanSM_MainFunction</SHORT-NAME>
+              <SERVICE-ID>5</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="06d68f6c-fd22-49f1-a7ed-4c00795d47de">
+              <SHORT-NAME>CanSM_RequestComMode</SHORT-NAME>
+              <SERVICE-ID>2</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="388bca71-d96d-45bc-8e18-ed83d27eb670">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="d2625ef5-6111-4bbc-b031-d874045eb165">
+                  <SHORT-NAME>network</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/ComStack_Types/ImplementationDataTypes/NetworkHandleType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="e8c8bbc4-a81b-48b2-b37d-d9fc2d1e18ee">
+                  <SHORT-NAME>ComM_Mode</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_ComM/ImplementationDataTypes/ComM_ModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="b4f10a50-3abb-40c4-b3d1-b2c5941d4a19">
+              <SHORT-NAME>CanSM_StartWakeupSource</SHORT-NAME>
+              <SERVICE-ID>17</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="c22c45c1-cc62-4036-b663-1c6e0fad4a90">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="8e8f4b4a-a9a1-42f8-b7a2-a8ad592ab395">
+                  <SHORT-NAME>network</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/ComStack_Types/ImplementationDataTypes/NetworkHandleType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="5dcea392-a5e3-44f9-811d-f7570776673d">
+              <SHORT-NAME>CanSM_StopWakeupSource</SHORT-NAME>
+              <SERVICE-ID>18</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE UUID="5f9216fc-6ff5-4c1d-95c0-37c95a0a8afa">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="0bdf53ba-7d25-4e3c-902e-9f2c93c9c045">
+                  <SHORT-NAME>network</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/ComStack_Types/ImplementationDataTypes/NetworkHandleType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="5f769e8e-f8fe-4b1d-97b4-d2b98299b5d9">
+              <SHORT-NAME>CanSM_TransceiverModeIndication</SHORT-NAME>
+              <SERVICE-ID>9</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="eee1f2cb-c69e-4260-8f1b-b810d9a5759a">
+                  <SHORT-NAME>TransceiverId</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="f38972de-65a0-4bd2-b708-7aabe32104e3">
+                  <SHORT-NAME>TransceiverMode</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Can_GeneralTypes/ImplementationDataTypes/CanTrcv_TrcvModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY UUID="bbc5ed11-c34d-4904-9942-886b2d94b56e">
+              <SHORT-NAME>CanSM_TxTimeoutException</SHORT-NAME>
+              <SERVICE-ID>11</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="3565a570-cea1-4d2c-9c2c-420b63bfbb19">
+                  <SHORT-NAME>Channel</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="_conversion">
+                        <SDG GID="DIRECTION">
+                          <SD GID="_mixed">IN</SD>
+                        </SDG>
+                        <SD GID="_path">DIRECTION@2/</SD>
+                        <SD GID="_target">org.artop.aal.autosar403</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/ComStack_Types/ImplementationDataTypes/NetworkHandleType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

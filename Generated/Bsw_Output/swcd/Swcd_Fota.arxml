@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="547d8e49-9aba-4c90-a243-fbcb7785aeaf">
+      <SHORT-NAME>Fota</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="615235ec-9084-4874-98ac-775b6c86dc62">
+          <SHORT-NAME>ServiceSwComponentTypes</SHORT-NAME>
+          <ELEMENTS>
+            <SERVICE-SW-COMPONENT-TYPE UUID="1fd068cc-19ea-41f5-b143-a5fda6b04fe4">
+              <SHORT-NAME>Fota</SHORT-NAME>
+              <PORTS>
+                <R-PORT-PROTOTYPE UUID="fa22a13d-fbcb-4834-9e2c-6b3c65c4828d">
+                  <SHORT-NAME>Fota_StateRequest</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <CLIENT-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/RequestReset</OPERATION-REF>
+                    </CLIENT-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/EcuM/ClientServerInterfaces/EcuM_StateRequest</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="bf099ec7-6990-478f-835b-b76b6d3df06d">
+                  <SHORT-NAME>Swap_ServiceRequestNotification</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/ServiceRequestNotification/Confirmation</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                    <SERVER-COM-SPEC>
+                      <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/ServiceRequestNotification/Indication</OPERATION-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </SERVER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_Dcm/ClientServerInterfaces/ServiceRequestNotification</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="3c45f7a9-deb5-4bf4-b2fb-14dc01e0d07b">
+                  <SHORT-NAME>InternalBehavior</SHORT-NAME>
+                  <EVENTS>
+                    <OPERATION-INVOKED-EVENT UUID="c92f3d73-bb4e-4249-91b3-be15ed9ead45">
+                      <SHORT-NAME>OIE_Fota_ServiceRequest_SupplierNotification_Confirmation_Swap_ServiceRequestNotification_Confirmation</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Fota/ServiceSwComponentTypes/Fota/InternalBehavior/Fota_ServiceRequest_SupplierNotification_Confirmation</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Fota/ServiceSwComponentTypes/Fota/Swap_ServiceRequestNotification</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/ServiceRequestNotification/Confirmation</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="950ac373-77ee-44aa-bfdb-c2b2ab9aad33">
+                      <SHORT-NAME>OIE_Fota_SupplierNotification_ServiceRequest_Indication_Swap_ServiceRequestNotification_Indication</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Fota/ServiceSwComponentTypes/Fota/InternalBehavior/Fota_SupplierNotification_ServiceRequest_Indication</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Fota/ServiceSwComponentTypes/Fota/Swap_ServiceRequestNotification</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_Dcm/ClientServerInterfaces/ServiceRequestNotification/Indication</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                  </EVENTS>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="10e29806-ab5f-4f97-8e1b-fb33e3f10adb">
+                      <SHORT-NAME>Fota_ServiceRequest_SupplierNotification_Confirmation</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SERVER-CALL-POINTS>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="e37c7bef-82c3-4195-9c1e-ec346d3a8862">
+                          <SHORT-NAME>SSCP_Fota_ServiceRequest_SupplierNotification_Confirmation_Fota_StateRequest_RequestReset</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Fota/ServiceSwComponentTypes/Fota/Fota_StateRequest</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/EcuM/ClientServerInterfaces/EcuM_StateRequest/RequestReset</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                      </SERVER-CALL-POINTS>
+                      <SYMBOL>Fota_SupplierNotification_ServiceRequest_Confirmation</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="5ccd8e71-5d9d-4f85-9d78-9809a57e2ba8">
+                      <SHORT-NAME>Fota_SupplierNotification_ServiceRequest_Indication</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>Fota_SupplierNotification_ServiceRequest_Indication</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </SERVICE-SW-COMPONENT-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

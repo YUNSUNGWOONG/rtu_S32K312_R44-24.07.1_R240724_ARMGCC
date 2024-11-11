@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="b1eefac1-f517-4c92-8397-d05d2b92fffd">
+      <SHORT-NAME>Bsw_Com</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="f04a8cf0-f798-4172-9d35-dd6bd18f861e">
+          <SHORT-NAME>BswImplementation_Com</SHORT-NAME>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>1.1.11</SW-VERSION>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.4.0</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_Com/Com/BswInternalBehavior_Com</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION UUID="b15a880e-1045-4cc7-8618-54ec9f2f9d81">
+          <SHORT-NAME>Com</SHORT-NAME>
+          <CATEGORY>BSW_MODULE</CATEGORY>
+          <MODULE-ID>50</MODULE-ID>
+          <BSW-MODULE-DEPENDENCYS>
+            <BSW-MODULE-DEPENDENCY UUID="0284acb5-6cfe-4b36-9582-c085c669ceab">
+              <SHORT-NAME>BswModuleDependency_PduR</SHORT-NAME>
+              <TARGET-MODULE-ID>51</TARGET-MODULE-ID>
+            </BSW-MODULE-DEPENDENCY>
+          </BSW-MODULE-DEPENDENCYS>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR UUID="2de6e4e7-2486-4bf3-acf8-3c878c17c75b">
+              <SHORT-NAME>BswInternalBehavior_Com</SHORT-NAME>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA UUID="3aec6b9d-fe1a-4fcc-95dc-e3b1fff77ec4">
+                  <SHORT-NAME>RX_DM_STS_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="e9bc0229-6f6c-4673-96e0-dc8c38dde9b9">
+                  <SHORT-NAME>RX_IPDU_STS_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="01ef4463-4272-463f-9d6f-0f0439542137">
+                  <SHORT-NAME>TX_IPDU_STATUS_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="51bf0bc7-acf0-4402-9f8e-2c94e7823b8b">
+                  <SHORT-NAME>TX_IPDU_BUFFER_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="c38167b2-4f49-4e05-b369-d101ebda1382">
+                  <SHORT-NAME>RX_IPDU_DATA_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="14abd243-27d6-402b-9968-905fc1fc4322">
+                  <SHORT-NAME>TX_TMS_STATUS_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="6bca6518-b956-4927-b104-c7b89618154f">
+                  <SHORT-NAME>RX_FIFO_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="5eaba5b5-ae6d-4111-890d-68f4777caf18">
+                  <SHORT-NAME>TX_EXT_SIG_DATA_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="1377c9da-7763-4c96-bd72-bb859ac1f38b">
+                  <SHORT-NAME>RX_EXT_SIG_DATA_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="23f8c733-5f04-41b9-b34f-86c655da5a10">
+                  <SHORT-NAME>TX_IPDU_DATA_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="7ff2d755-0a65-4160-992c-34d73db89a8c">
+                  <SHORT-NAME>IPDU_COUNTER_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="422248c0-0f05-4d38-be99-a03a4af417eb">
+                  <SHORT-NAME>RX_GW_STS_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="a8ace044-1610-4f16-afa8-6dbc341e087c">
+                  <SHORT-NAME>TX_MDT_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="58ac3cd7-9b37-4c6c-8679-25a6ad9b35f0">
+                  <SHORT-NAME>SIG_DATA_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="b5d03abe-bea9-45cd-9f21-ef24b1d6622f">
+                  <SHORT-NAME>IPDU_GROUP_STATUS_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="e9fd9ce3-eca3-4c01-8924-f0ef78113e5d">
+                  <SHORT-NAME>SWITCH_CORE_PROTECTION_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <ENTITYS>
+                <BSW-SCHEDULABLE-ENTITY UUID="38b24681-1ccc-4093-8973-28af602c7aff">
+                  <SHORT-NAME>BswSE_Com_MainFunctionRx</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/IPDU_COUNTER_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_DM_STS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_EXT_SIG_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_FIFO_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_GW_STS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_IPDU_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_IPDU_STS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_EXT_SIG_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_IPDU_BUFFER_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_IPDU_DATA_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_IPDU_STATUS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_MDT_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_TMS_STATUS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/SIG_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/IPDU_GROUP_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.005</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Com/ImplementedEntries/ComSchedules/Com_MainFunctionRx</IMPLEMENTED-ENTRY-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+                <BSW-SCHEDULABLE-ENTITY UUID="01cb40e3-5f53-4a5c-85a6-c28b8de20f1e">
+                  <SHORT-NAME>BswSE_Com_MainFunctionTx</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/IPDU_COUNTER_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_DM_STS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_EXT_SIG_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_FIFO_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_GW_STS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_IPDU_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_IPDU_STS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_EXT_SIG_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_IPDU_BUFFER_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_IPDU_DATA_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_IPDU_STATUS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_MDT_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_TMS_STATUS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/SIG_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/IPDU_GROUP_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.005</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Com/ImplementedEntries/ComSchedules/Com_MainFunctionTx</IMPLEMENTED-ENTRY-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+                <BSW-SCHEDULABLE-ENTITY UUID="9b35037b-596f-46a5-a04a-87d19b247d09">
+                  <SHORT-NAME>BswSE_Com_MainFunctionRouteSignals</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/IPDU_COUNTER_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_DM_STS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_EXT_SIG_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_FIFO_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_GW_STS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_IPDU_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/RX_IPDU_STS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_EXT_SIG_DATA_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_IPDU_BUFFER_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_IPDU_DATA_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_IPDU_STATUS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_MDT_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/TX_TMS_STATUS_PROTECTION_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_Com/Com/BswInternalBehavior_Com/IPDU_GROUP_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.005</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_Com/ImplementedEntries/ComSchedules/Com_MainFunctionRouteSignals</IMPLEMENTED-ENTRY-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+              </ENTITYS>
+              <DISTINGUISHED-PARTITIONS>
+                <BSW-DISTINGUISHED-PARTITION>
+                  <SHORT-NAME>BswDistinguishedPartition_Com</SHORT-NAME>
+                </BSW-DISTINGUISHED-PARTITION>
+              </DISTINGUISHED-PARTITIONS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>DataTypeMappingSet</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="24b8bfa2-b595-498c-8e2f-8f3a1afeb3ee">
+          <SHORT-NAME>ExpectedEntries</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY UUID="56ad76d3-2ca3-44ba-87f9-d2a1a600ba29">
+              <SHORT-NAME>PduR_ComTransmit</SHORT-NAME>
+              <SERVICE-ID>73</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLOUT</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+              <RETURN-TYPE UUID="aefc0618-3cdf-4731-9fb7-5b7f1f8d975c">
+                <SHORT-NAME>Std_ReturnType</SHORT-NAME>
+                <DIRECTION>OUT</DIRECTION>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG UUID="27bdb12a-fcb7-4e08-aa24-2d7c4c81d102">
+                  <SHORT-NAME>TxPduId</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG UUID="724c7c68-3124-4ec1-b0a7-b78d43c364fb">
+                  <SHORT-NAME>PduInfoPtr</SHORT-NAME>
+                  <DIRECTION>IN</DIRECTION>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="f457f149-0171-4d42-8733-8aa55145d39c">
+          <SHORT-NAME>ImplementedEntries</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="84cf3f64-731e-4b27-b042-81660a5a5c70">
+              <SHORT-NAME>ComBswComponents</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-ENTRY UUID="e212f0d0-6208-44a0-96d7-d2e119cc3b63">
+                  <SHORT-NAME>Com_GetVersionInfo</SHORT-NAME>
+                  <SERVICE-ID>9</SERVICE-ID>
+                  <IS-REENTRANT>true</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="3cae5fc6-4deb-402e-827a-334826e9f34e">
+                      <SHORT-NAME>versionInfo</SHORT-NAME>
+                      <DIRECTION>OUT</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="46b3a764-73c5-4364-80e0-fc7f13b8dc07">
+                  <SHORT-NAME>Com_Init</SHORT-NAME>
+                  <SERVICE-ID>1</SERVICE-ID>
+                  <IS-REENTRANT>false</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG UUID="c86eedb9-4ec3-47f7-b3e6-4d415760d223">
+                      <SHORT-NAME>ConfigPtr</SHORT-NAME>
+                      <DIRECTION>IN</DIRECTION>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="76703b5e-f84f-4757-8cc4-5840983d167a">
+                  <SHORT-NAME>Com_Deinit</SHORT-NAME>
+                  <SERVICE-ID>2</SERVICE-ID>
+                  <IS-REENTRANT>false</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="4375dd7c-73e0-42fb-bd3e-0cbf577a68a2">
+              <SHORT-NAME>ComCallbacks</SHORT-NAME>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="dc4c884a-919c-47d2-b571-1549eefa30e2">
+              <SHORT-NAME>ComSchedules</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-ENTRY UUID="8b78b0e5-92ef-4434-9bfe-3bf0de6d4896">
+                  <SHORT-NAME>Com_MainFunctionRx</SHORT-NAME>
+                  <SERVICE-ID>24</SERVICE-ID>
+                  <IS-REENTRANT>false</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="b506a2a3-dc34-442d-bd76-3f38917b28df">
+                  <SHORT-NAME>Com_MainFunctionTx</SHORT-NAME>
+                  <SERVICE-ID>25</SERVICE-ID>
+                  <IS-REENTRANT>false</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="4e665967-1c03-46af-97e2-29a7960b003d">
+                  <SHORT-NAME>Com_MainFunctionRouteSignals</SHORT-NAME>
+                  <SERVICE-ID>27</SERVICE-ID>
+                  <IS-REENTRANT>false</IS-REENTRANT>
+                  <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                  <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <BSW-ENTRY-KIND>CONCRETE</BSW-ENTRY-KIND>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="d15b6366-a2cf-4d0e-bb5a-a80c36d0fde6">
+              <SHORT-NAME>ComSwComponents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="db03616f-c4b5-4272-b4d3-2a625a7132e6">
+          <SHORT-NAME>ModeDeclarationGroup</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="4927abd2-9ab0-4633-aeb7-3d767b17b566">
+          <SHORT-NAME>ModeSwitchInterface</SHORT-NAME>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+
